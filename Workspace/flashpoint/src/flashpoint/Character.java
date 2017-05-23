@@ -1,5 +1,5 @@
 package flashpoint;
-
+//Testing
 public class Character {
 
 	private Character[] Chararacers;
