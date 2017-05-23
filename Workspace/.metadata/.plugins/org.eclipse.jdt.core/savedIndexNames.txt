@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.129+/Users/lion/Documents/GIT/Workspace/.metadata/.plugins/org.eclipse.jdt.core
 518397319.index
 4158956476.index
@@ -26,3 +27,24 @@ INDEX VERSION 1.129+/Users/lion/Documents/GIT/Workspace/.metadata/.plugins/org.e
 1260736551.index
 3302703152.index
 2961435131.index
+=======
+INDEX VERSION 1.129+D:\Users\Lion\Desktop\GIT\Workspace\.metadata\.plugins\org.eclipse.jdt.core
+449440424.index
+1475717011.index
+194205294.index
+728505109.index
+2221491804.index
+2561179376.index
+2911469802.index
+1841280308.index
+1199826107.index
+30881555.index
+1525087677.index
+91472061.index
+3643810303.index
+843494433.index
+1539866187.index
+3314433690.index
+2997567257.index
+543038442.index
+>>>>>>> origin/master
