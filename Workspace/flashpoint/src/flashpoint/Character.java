@@ -1,5 +1,5 @@
 package flashpoint;
-//123
+
 public class Character {
 
 	private Character[] Chararacers;
