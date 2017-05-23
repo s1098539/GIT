@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 INDEX VERSION 1.129+D:\Users\Lion\Desktop\GIT\Workspace\.metadata\.plugins\org.eclipse.jdt.core
 1475717011.index
 1539866187.index
@@ -18,3 +19,7 @@ INDEX VERSION 1.129+D:\Users\Lion\Desktop\GIT\Workspace\.metadata\.plugins\org.e
 2911469802.index
 1199826107.index
 543038442.index
+=======
+INDEX VERSION 1.129+/Users/lion/Documents/GIT/Workspace/.metadata/.plugins/org.eclipse.jdt.core
+1286352871.index
+>>>>>>> Stashed changes
