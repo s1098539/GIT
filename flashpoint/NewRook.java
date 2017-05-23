@@ -1,0 +1,10 @@
+package flashpoint;
+
+public class NewRook {
+
+	public void run() {
+		// TODO - implement NewRook.run
+		throw new UnsupportedOperationException();
+	}
+
+}

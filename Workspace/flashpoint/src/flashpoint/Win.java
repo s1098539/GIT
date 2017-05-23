@@ -1,0 +1,12 @@
+package flashpoint;
+
+public class Win {
+
+	public int pVAsGered;
+
+	public void check() {
+		// TODO - implement Win.check
+		throw new UnsupportedOperationException();
+	}
+
+}

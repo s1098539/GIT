@@ -1,0 +1,17 @@
+package flashpoint;
+
+public class BrandspuitBediener {
+
+	private int AP;
+
+	public void brandspuitGebruiken() {
+		// TODO - implement BrandspuitBediener.brandspuitGebruiken
+		throw new UnsupportedOperationException();
+	}
+
+	public void reroll() {
+		// TODO - implement BrandspuitBediener.reroll
+		throw new UnsupportedOperationException();
+	}
+
+}

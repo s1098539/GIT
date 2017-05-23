@@ -1,0 +1,7 @@
+public interface Auto {
+
+	void links();
+
+	void rechts();
+
+}
