@@ -6,7 +6,7 @@ public class Bewegen {
     }
 
     public Vak[][] run(int richting, Vak[][]vakken, Speler speler, int x, int y) {
-		//hoi Joep
+		//heey lion
 
         switch (richting) {
             case 0: vakken[x][y].removeSpeler(speler);
