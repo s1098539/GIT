@@ -18,8 +18,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Workspace/flashpoint/src/flashpoint/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/Workspace/flashpoint/src/flashpoint/Speelveld.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+              <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding>
                 <element signature="e#143#144#0" expanded="true" />
                 <element signature="e#170#171#0" expanded="true" />
@@ -87,8 +87,8 @@
             <state relative-caret-position="34">
               <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding>
-                <marker date="1495662755490" expanded="true" signature="74:81" ph="{...}" />
-                <marker date="1495662755490" expanded="false" signature="118:129" ph=" { " />
+                <marker date="1495662796052" expanded="true" signature="73:80" ph="{...}" />
+                <marker date="1495662796052" expanded="false" signature="160:166" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -1393,11 +1393,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495634658330</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="move">
+      <created>1495662788049</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1495662788049</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2617000" />
+    <option name="totallyTimeSpent" value="2656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
@@ -1560,8 +1567,8 @@
         <state relative-caret-position="34">
           <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding>
-            <marker date="1495662755490" expanded="true" signature="74:81" ph="{...}" />
-            <marker date="1495662755490" expanded="false" signature="118:129" ph=" { " />
+            <marker date="1495662796052" expanded="true" signature="73:80" ph="{...}" />
+            <marker date="1495662796052" expanded="false" signature="160:166" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1631,7 +1638,7 @@
     <entry file="file://$PROJECT_DIR$/Workspace/flashpoint/src/flashpoint/Speelveld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding>
             <element signature="e#143#144#0" expanded="true" />
             <element signature="e#170#171#0" expanded="true" />
@@ -1645,8 +1652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Workspace/flashpoint/src/flashpoint/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
