@@ -5,8 +5,8 @@ public class Bewegen {
     public Bewegen() {
     }
 
-    public Vak[][] run(int richting, Vak[][]vakken, Speler speler) {
-        int[]positie = vindSpeler(vakken, speler);
+    public Vak[][] run(int richting, Speler speler, Vak[][]vakken) {
+        int[]positie = vindSpeler(speler, vakken);
         vakken[positie[0]][positie[1]].removeSpeler(speler);
         switch (richting) {
             case 0: vakken[positie[0]][positie[1]+1].addSpeler(speler);
@@ -17,12 +17,11 @@ public class Bewegen {
                 break;
             case 3: vakken[positie[0]-1][positie[1]].addSpeler(speler);
                 break;
-
         }
         return vakken;
 	}
 
-    public int[] vindSpeler(Vak[][]vakken, Speler speler) {
+    public int[] vindSpeler(Speler speler, Vak[][]vakken) {
         int[] positie = new int[2];
         for (int x = 0; x < 10; x++) {
             for (int y = 0; y < 10; y++) {
@@ -34,5 +33,4 @@ public class Bewegen {
         }
         return positie;
     }
-
 }
