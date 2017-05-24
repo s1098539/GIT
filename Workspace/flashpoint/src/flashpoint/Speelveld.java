@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Speelveld {
 
     public Speelveld() {
+        newVakken();
     }
 
     Vak[][]vakken = new Vak[10][8];

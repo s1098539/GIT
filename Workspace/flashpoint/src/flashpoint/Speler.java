@@ -2,14 +2,14 @@ package flashpoint;
 
 public class Speler {
 
-    public Speler(int naam, int character, int kleur) {
+    public Speler(String naam, /*Character character,*/ Kleur kleur) {
         this.naam = naam;
-        this.character = character;
+       // this.character = character;
         this.kleur = kleur;
     }
 
-    public int naam;
-	public int character;
-	public int kleur;
+    private String naam;
+	private Character character;
+	private  Kleur kleur;
 
 }
