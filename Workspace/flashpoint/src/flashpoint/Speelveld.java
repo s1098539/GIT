@@ -3,7 +3,7 @@ package flashpoint;
 import java.util.ArrayList;
 
 public class Speelveld {
-
+    //test
     public Vak[][]vakken = new Vak[10][8];
 
     public Speelveld() {
