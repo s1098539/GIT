@@ -12,6 +12,7 @@ public class Main {
 
         bewegen.run(2,speler);
         //test2357
+        //look at all the shit im testing
         System.out.println("x" + speler.getLocatieX() + " Y" +  speler.getLocatieY());
 
 
