@@ -7,5 +7,7 @@ public class Main {
         Speelveld speelveld = new Speelveld();
         SpelerActie spelerActie = new SpelerActie();
         spelerActie.createSpelerActies();
+        Speler speler = new Speler("Joep", Kleur.ROOD);
+
     }
 }
