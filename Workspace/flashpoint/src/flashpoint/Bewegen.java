@@ -7,7 +7,7 @@ public class Bewegen {
     public static void main(String[] args) {
 
     }
-    public Vak[][] test(int richting, Speler speler, Vak[][]vakken) {
+    public Vak[][] run(int richting, Speler speler, Vak[][]vakken) {
         int[]positie = vindSpeler(speler, vakken);
         vakken[positie[0]][positie[1]].removeSpeler(speler);
         switch (richting) {
@@ -26,7 +26,7 @@ public class Bewegen {
     public int[] vindSpeler(Speler speler, Vak[][]vakken) {
         int[] positie = new int[2];
         for (int x = 0; x < 10; x++) {
-            for (int y = 0; y < 10; y++) {
+            for (int y = 0; y < 8; y++) {
                 if (vakken[x][y].spelers.contains(speler)) {
                     positie[0] = x;
                     positie[1] = y;
