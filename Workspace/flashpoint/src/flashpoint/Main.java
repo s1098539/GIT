@@ -11,7 +11,7 @@ public class Main {
         speelveld.addSpeler(speler);
 
         bewegen.run(2,speler);
-
+        //test2357
         System.out.println("x" + speler.getLocatieX() + " Y" +  speler.getLocatieY());
 
 
