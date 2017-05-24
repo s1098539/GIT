@@ -2,8 +2,10 @@ package flashpoint;
 
 public class SpelerActie {
 
-	public void createSpelerActies() {
-        Bewegen bewegen = new Bewegen();
-	}
+    public SpelerActie() {
+    }
 
+    public void createSpelerActie() {
+        Bewegen bewegen = new Bewegen();
+    }
 }
