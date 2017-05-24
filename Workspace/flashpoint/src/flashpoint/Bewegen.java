@@ -1,38 +1,27 @@
 package flashpoint;
 
-public class Bewegen {
+public class Bewegen extends Speelveld{
 
     public Bewegen() {
     }
-    public static void main(String[] args) {
 
-    }
-    public Vak[][] run(int richting, Speler speler, Vak[][]vakken) {
-        int[]positie = vindSpeler(speler, vakken);
-        vakken[positie[0]][positie[1]].removeSpeler(speler);
+    public void run(int richting, Speler speler) {
+        super.removeSpeler(speler);
         switch (richting) {
-            case 0: vakken[positie[0]][positie[1]+1].addSpeler(speler);
+            case 0: //vakken[speler.getLocatieX()][speler.getLocatieY()+1].addSpeler(speler);
+            speler.setLocatieY(speler.getLocatieY()+1);
                 break;
-            case 1: vakken[positie[0]+1][positie[1]].addSpeler(speler);
+            case 1: //vakken[speler.getLocatieX()+1][speler.getLocatieY()].addSpeler(speler);
+                speler.setLocatieX(speler.getLocatieX()+1);
                 break;
-            case 2: vakken[positie[0]][positie[1]-1].addSpeler(speler);
+            case 2: //vakken[speler.getLocatieX()][speler.getLocatieY()-1].addSpeler(speler);
+                speler.setLocatieY(speler.getLocatieY()-1);
                 break;
-            case 3: vakken[positie[0]-1][positie[1]].addSpeler(speler);
+            case 3: //vakken[speler.getLocatieX()-1][speler.getLocatieY()].addSpeler(speler);
+                speler.setLocatieX(speler.getLocatieX()-1);
                 break;
         }
-        return vakken;
+        super.addSpeler(speler);
 	}
 
-    public int[] vindSpeler(Speler speler, Vak[][]vakken) {
-        int[] positie = new int[2];
-        for (int x = 0; x < 10; x++) {
-            for (int y = 0; y < 8; y++) {
-                if (vakken[x][y].spelers.contains(speler)) {
-                    positie[0] = x;
-                    positie[1] = y;
-                }
-            }
-        }
-        return positie;
-    }
 }

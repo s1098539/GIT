@@ -3,7 +3,7 @@ package flashpoint;
 import java.util.ArrayList;
 
 public class Speelveld {
-    //test
+
     public Vak[][]vakken = new Vak[10][8];
 
     public Speelveld() {
@@ -24,6 +24,14 @@ public class Speelveld {
 
     public Vak[][] getVakken() {
         return vakken;
+    }
+
+    public void addSpeler(Speler speler) {
+        vakken[speler.getLocatieX()][speler.getLocatieY()].addSpeler(speler);
+    }
+
+    public void removeSpeler(Speler speler) {
+        vakken[speler.getLocatieX()][speler.getLocatieY()].removeSpeler(speler);
     }
 
 }
