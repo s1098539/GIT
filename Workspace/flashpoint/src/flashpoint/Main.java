@@ -11,7 +11,7 @@ public class Main {
         Speler speler = new Speler("Joep", Kleur.ROOD);
         System.out.println("3");
         speelveld.getVakken()[2][2].addSpeler(speler);
-        bewegen.run(0,speler,speelveld.getVakken());
+        bewegen.test(0,speler,speelveld.getVakken());
         System.out.println("4");
 
     }

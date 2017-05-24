@@ -5,7 +5,7 @@ public class Bewegen {
     public Bewegen() {
     }
 
-    public Vak[][] run(int richting, Speler speler, Vak[][]vakken) {
+    public Vak[][] test(int richting, Speler speler, Vak[][]vakken) {
         int[]positie = vindSpeler(speler, vakken);
         vakken[positie[0]][positie[1]].removeSpeler(speler);
         switch (richting) {
