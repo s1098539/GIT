@@ -12,8 +12,12 @@ public class Vak {
     public Vak() {
     }
 
-    public void addSpeler() {
+    public void addSpeler(Speler speler) {
+        spelers.add(speler);
+    }
 
+    public void removeSpeler(Speler speler) {
+        spelers.remove(speler);
     }
 
 }
