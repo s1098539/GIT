@@ -4,10 +4,13 @@ import java.util.ArrayList;
 
 public class Speelveld {
 
-    Vak[][]vakken=new Vak[10][8];
+    public Speelveld() {
+    }
+
+    Vak[][]vakken = new Vak[10][8];
 
 	public void newVak(int x, int y) {
-		vakken[x][y] = new Vak();
+        vakken[x][y] = new Vak();
 	}
 
 	public void newVakken() {
@@ -18,4 +21,7 @@ public class Speelveld {
         }
     }
 
+    public Vak[][] getVakken() {
+        return vakken;
+    }
 }
