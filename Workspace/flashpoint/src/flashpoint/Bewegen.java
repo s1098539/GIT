@@ -4,7 +4,9 @@ public class Bewegen {
 
     public Bewegen() {
     }
+    public static void main(String[] args) {
 
+    }
     public Vak[][] test(int richting, Speler speler, Vak[][]vakken) {
         int[]positie = vindSpeler(speler, vakken);
         vakken[positie[0]][positie[1]].removeSpeler(speler);
