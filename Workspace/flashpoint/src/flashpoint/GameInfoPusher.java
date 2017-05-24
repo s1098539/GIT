@@ -2,7 +2,7 @@ package flashpoint;
 
 public class GameInfoPusher {
 
-	private int tekst;
+	private String tekst;
 
 	public void push() {
 		// TODO - implement GameInfoPusher.push
