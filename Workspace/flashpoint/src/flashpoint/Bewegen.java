@@ -6,7 +6,7 @@ public class Bewegen {
     }
 
     public Vak[][] run(int richting, Vak[][]vakken, Speler speler, int x, int y) {
-		//hoi Joep
+
 
         switch (richting) {
             case 0: vakken[x][y].removeSpeler(speler);
@@ -23,6 +23,19 @@ public class Bewegen {
         vakken[x][y].removeSpeler(speler);
 
         return vakken;
+    }
+
+    public int[] vindSpeler(Vak[][]vakken) {
+        int[]positie = new int [2];
+        for(int x = 0; x < 10; x++) {
+            for(int y = 0; y < 8 ; y++) {
+                if (vakken[x][y])
+            }
+        }
+
+
+
+        return positie;
     }
 
 }
