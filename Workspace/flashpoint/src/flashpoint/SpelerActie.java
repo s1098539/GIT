@@ -1,6 +1,6 @@
 package flashpoint;
 
-public class SpelerActie {
+public class SpelerActie{
 
     public SpelerActie() {
     }
