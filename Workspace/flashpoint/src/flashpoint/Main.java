@@ -13,7 +13,7 @@ public class Main {
         bewegen.run(2,speler);
         System.out.println("x" + speler.getLocatieX() + " Y" +  speler.getLocatieY());
 
-
+//random shit
 
 
     }
