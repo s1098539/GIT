@@ -4,9 +4,13 @@ public class Bewegen {
 
 	private int richting;
 
-	public void run() {
-		// TODO - implement Bewegen.run
-		throw new UnsupportedOperationException();
+    public Bewegen() {
+    }
+
+    public void run(int richting) {
+		switch (richting) {
+            case 0:
+        }
 	}
 
 }

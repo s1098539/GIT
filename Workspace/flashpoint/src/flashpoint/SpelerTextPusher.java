@@ -2,6 +2,11 @@ package flashpoint;
 
 public class SpelerTextPusher {
 
-	private int tekst;
+	private String tekst;
+
+	public void push() {
+		// TODO - implement SpelerTextPusher.push
+		throw new UnsupportedOperationException();
+	}
 
 }
