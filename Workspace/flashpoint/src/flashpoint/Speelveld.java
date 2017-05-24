@@ -26,4 +26,12 @@ public class Speelveld {
         return vakken;
     }
 
+    public void addSpeler(Speler speler) {
+        vakken[speler.getLocatieX()][speler.getLocatieY()].addSpeler(speler);
+    }
+
+    public void removeSpeler(Speler speler) {
+        vakken[speler.getLocatieX()][speler.getLocatieY()].removeSpeler(speler);
+    }
+
 }
