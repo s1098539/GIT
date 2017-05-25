@@ -16,6 +16,10 @@ public class Vak {
         return muren;
     }
 
+    public Deur[] getDeuren() {
+        return deuren;
+    }
+
     public void addSpeler(Speler speler) {
         spelers.add(speler);
     }
@@ -28,6 +32,10 @@ public class Vak {
         muren[richting] = new Muur();
     }
 
+    public void addDeur(int richting) {
+        deuren[richting] = new Deur();
+    }
+
     public int checkRichting(int richting) {
         //return int betekend:
         //0=muur, 1=muur(1schade), 2=muur(2schade)
@@ -37,32 +45,42 @@ public class Vak {
                 try {
                     return muren[0].getStatus();
                 }catch(NullPointerException e) {
-                    return 5;
+                    try {
+                        return deuren[0].getStatus();
+                    } catch (NullPointerException el) {
+                        return 5;
+                    }
                 }
             case 1:
                 try {
                     return muren[1].getStatus();
                 }catch(NullPointerException e) {
-                    return 5;
+                    try {
+                        return deuren[1].getStatus();
+                    } catch (NullPointerException el) {
+                        return 5;
+                    }
                 }
             case 2:
                 try {
                     return muren[2].getStatus();
                 }catch(NullPointerException e) {
-                    return 5;
+                    try {
+                        return deuren[2].getStatus();
+                    } catch (NullPointerException el) {
+                        return 5;
+                    }
                 }
             case 3:
                 try {
                     return muren[3].getStatus();
                 }catch(NullPointerException e) {
-                    return 5;
+                    try {
+                        return deuren[3].getStatus();
+                    } catch (NullPointerException el) {
+                        return 5;
+                    }
                 }
-
-
-
-
-
-
         }
         return 4;
     }

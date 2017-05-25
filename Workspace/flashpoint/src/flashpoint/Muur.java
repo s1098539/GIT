@@ -2,9 +2,13 @@ package flashpoint;
 
 public class Muur {
 
-	public int status = 0;
+	public int status = 0;      //0=geen schade, 1=1 schade, 2=2 schade
 
     public Muur() {
+    }
+
+    public Muur(int status) {
+        this.status = status;
     }
 
     public void schade(){
