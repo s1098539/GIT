@@ -34,7 +34,7 @@ public class Bewegen {
                 System.out.println("De richting "+richting+" is niet toegestaan");
         }
         speelveld.addSpeler(speler);
-        System.out.println(speler.getNaam() + " eind locatie X" + speler.getLocatieX() + " Y" +  speler.getLocatieY());
+        System.out.println(speler.getNaam() + " eind locatie: X" + speler.getLocatieX() + " Y" +  speler.getLocatieY());
     }
 
 }

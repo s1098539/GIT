@@ -16,12 +16,16 @@ public class Deur {
     }
 
     public void OpenSluiten(){
-        if(status == 3){
-            status = 4;
-            System.out.println("Een deur is geopened");
-        } else {
-            status = 3;
-            System.out.println("Een deur is gesloten");
+        try {
+            if(status == 3){
+                status = 4;
+                System.out.println("Een deur is geopened");
+            } else {
+                status = 3;
+                System.out.println("Een deur is gesloten");
+            }
+        } catch (NullPointerException e) {
+            System.out.println("Hier is geen deur");;
         }
     }
 }
