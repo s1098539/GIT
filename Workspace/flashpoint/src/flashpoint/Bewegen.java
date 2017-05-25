@@ -1,12 +1,12 @@
 package flashpoint;
 
-public class Bewegen extends Speelveld{
+public class Bewegen {
 
     public Bewegen() {
     }
 
-    public void run(int richting, Speler speler) {
-        super.removeSpeler(speler);
+    public void run(int richting, Speler speler, Speelveld speelveld) {
+        speelveld.removeSpeler(speler);
         switch (richting) {
             case 0: //vakken[speler.getLocatieX()][speler.getLocatieY()+1].addSpeler(speler);
             speler.setLocatieY(speler.getLocatieY()+1);
@@ -21,7 +21,7 @@ public class Bewegen extends Speelveld{
                 speler.setLocatieX(speler.getLocatieX()-1);
                 break;
         }
-        super.addSpeler(speler);
+        speelveld.addSpeler(speler);
 	}
 
 }

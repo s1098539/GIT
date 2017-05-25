@@ -10,7 +10,7 @@ public class Main {
         speler.setLocatieAll(2,2);
         speelveld.addSpeler(speler);
 
-        bewegen.run(2,speler);
+        bewegen.run(2,speler, speelveld);
         System.out.println("x" + speler.getLocatieX() + " Y" +  speler.getLocatieY());
 
 
