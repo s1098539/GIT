@@ -34,4 +34,8 @@ public class Speler {
         this.locatieX = locatieX;
         this.locatieY = locatieY;
     }
+
+    public String getNaam() {
+        return naam;
+    }
 }

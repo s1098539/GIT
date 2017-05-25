@@ -6,12 +6,15 @@ public class Main {
     public static void main(String[] args) {
         Speelveld speelveld = new Speelveld();
         Bewegen bewegen = new Bewegen();
-        Speler speler = new Speler("Joep", Kleur.ROOD);
-        speler.setLocatieAll(2,2);
-        speelveld.addSpeler(speler);
+        Speler speler1 = new Speler("Joep", Kleur.ROOD);
+        Speler speler2 = new Speler("Norddin", Kleur.BLAUW);
+        speler1.setLocatieAll(2,2);
+        speler2.setLocatieAll(4,7);
+        speelveld.addSpeler(speler1);
+        speelveld.addSpeler(speler2);
 
-        bewegen.run(2,speler, speelveld);
-        System.out.println("x" + speler.getLocatieX() + " Y" +  speler.getLocatieY());
+        bewegen.run(2,speler1, speelveld);
+        bewegen.run(1,speler2, speelveld);
 
 
 
