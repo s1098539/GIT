@@ -15,19 +15,23 @@ public class Main {
 
         speelveld.getVakken()[2][2].addDeur(0);
         speelveld.getVakken()[4][1].addMuur(1);
+        speelveld.getVakken()[5][1].addMuur(3);
 
         bewegen.run(0,speler1, speelveld);
         bewegen.run(0,speler1, speelveld);
         speelveld.getVakken()[2][2].getDeuren()[0].OpenSluiten();
         bewegen.run(0,speler1, speelveld);
 
+        Hakken hakken = new Hakken();
+
+
 
         bewegen.run(1,speler1, speelveld);
         bewegen.run(1,speler1, speelveld);
         bewegen.run(1,speler1, speelveld);
-        speelveld.getVakken()[4][1].getMuren()[1].schade();
+        hakken.run(1,speler1, speelveld);
         bewegen.run(1,speler1, speelveld);
-        speelveld.getVakken()[4][1].getMuren()[1].schade();
+        hakken.run(1,speler1, speelveld);
         bewegen.run(1,speler1, speelveld);
 
 
