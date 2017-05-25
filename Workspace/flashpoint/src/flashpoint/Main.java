@@ -16,6 +16,17 @@ public class Main {
         bewegen.run(2,speler1, speelveld);
         bewegen.run(1,speler2, speelveld);
 
+        Vak vak = new Vak();
+        vak.addMuur(3);
+        System.out.println(vak.checkRichting(3));
+        vak.getMuren()[3].schade();
+        System.out.println(vak.checkRichting(3));
+        vak.getMuren()[3].schade();
+        System.out.println(vak.checkRichting(3));
+        vak.getMuren()[3].schade();
+
+
+
 
 
 

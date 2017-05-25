@@ -1,6 +1,5 @@
 package flashpoint;
 
-import java.util.ArrayList;
 
 public class Speelveld {
 
