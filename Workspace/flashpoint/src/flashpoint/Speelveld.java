@@ -1,6 +1,8 @@
 package flashpoint;
 
 
+import javafx.scene.layout.GridPane;
+
 public class Speelveld {
 
     public Vak[][]vakken = new Vak[10][8];
@@ -25,12 +27,14 @@ public class Speelveld {
         return vakken;
     }
 
-    public void addSpeler(Speler speler) {
+    public void addSpeler(Speler speler, GridPane gridPane) {
         vakken[speler.getLocatieX()][speler.getLocatieY()].addSpeler(speler);
+        gridPane.add(speler.getImageView(),speler.getLocatieX(),speler.getLocatieY());
     }
 
-    public void removeSpeler(Speler speler) {
+    public void removeSpeler(Speler speler, GridPane gridPane) {
         vakken[speler.getLocatieX()][speler.getLocatieY()].removeSpeler(speler);
+        gridPane.getChildren().remove(speler.getImageView());
     }
 
 }

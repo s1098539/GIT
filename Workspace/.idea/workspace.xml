@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="568f7501-3345-43f6-8ca4-65d5dbed6afd" name="Default" comment="">
+    <list default="true" id="568f7501-3345-43f6-8ca4-65d5dbed6afd" name="Default" comment="Dobbelsteen klasse gemaakt en getest">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestView/out/production/TestView/sample/sampleController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestView/src/sample/sampleController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/Deur.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/Deur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/Dobbelsteen.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/Dobbelsteen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/flashpoint/bin1/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,27 +16,63 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Workspace$Main.coverage" NAME="Main Coverage Results" MODIFIED="1495809887799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>flashpoint.*</FILTER>
+    </SUITE>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.35585937">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+                <state relative-caret-position="595">
+                  <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="42" selection-end-column="47" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FXMLController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="415">
+                  <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sampleController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../TestView/src/sample/sampleController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Deur.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Deur.java">
+          <file leaf-file-name="Dobbelsteen.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Dobbelsteen.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="374">
-                  <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-                  <folding />
+                  <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+                  <folding>
+                    <element signature="e#167#168#0" expanded="true" />
+                    <element signature="e#211#212#0" expanded="true" />
+                    <element signature="e#339#340#0" expanded="true" />
+                    <element signature="e#374#375#0" expanded="true" />
+                    <element signature="e#404#405#0" expanded="true" />
+                    <element signature="e#433#434#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -45,38 +80,58 @@
           <file leaf-file-name="Speler.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+                <state relative-caret-position="629">
+                  <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#937#938#0" expanded="true" />
+                    <element signature="e#964#965#0" expanded="true" />
+                    <element signature="e#1003#1004#0" expanded="true" />
+                    <element signature="e#1035#1036#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Kleur.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Bewegen.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="FXML.fxml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="JavaFX-Scene-Builder">
+                <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Bewegen.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
+                <state relative-caret-position="527">
+                  <caret line="32" column="70" lean-forward="false" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Speelveld.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="510">
                   <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Hakken.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Muur.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Muur.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -92,48 +147,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Speelveld.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Kleur.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DeurOpenenSluiten.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-                  <folding>
-                    <marker date="1495747855248" expanded="true" signature="1337:1343" ph="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="DeurOpenenSluiten.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java">
+          <file leaf-file-name="Dobbelsteen.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Dobbelsteen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-                  <folding />
+                <state relative-caret-position="289">
+                  <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#339#340#0" expanded="true" />
+                    <element signature="e#374#375#0" expanded="true" />
+                    <element signature="e#404#405#0" expanded="true" />
+                    <element signature="e#433#434#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -146,6 +174,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -157,6 +186,11 @@
     </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Lion" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -167,14 +201,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/RMI.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Deur.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java" />
+        <option value="$PROJECT_DIR$/flashpoint/bin1/flashpoint/fxmlController" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Controller.java" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Dobbelsteen.java" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java" />
+        <option value="$PROJECT_DIR$/../TestView/src/sample/sampleController.java" />
       </list>
     </option>
   </component>
@@ -208,7 +248,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,10 +278,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Workspace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flashpoint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,7 +304,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="main&#9;FILE&#9;file://C:/Users/Lion/Desktop/GIT/Workspace/flashpoint/src/flashpoint/Main.java&#10;muur&#9;PSI&#9;JAVA://flashpoint.Muur&#10;deur&#9;PSI&#9;JAVA://flashpoint.Deur&#10;hak&#9;PSI&#9;JAVA://flashpoint.Hakken&#10;vak&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Vak.java&#10;speel&#9;PSI&#9;JAVA://flashpoint.Speelveld&#10;speler&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Speler.java" />
+    <property name="SearchEverywhereHistoryKey" value="kleur&#9;PSI&#9;JAVA://flashpoint.Kleur&#10;main&#9;FILE&#9;file://C:/Users/Lion/Desktop/GIT/Workspace/flashpoint/src/flashpoint/Main.java&#10;muur&#9;PSI&#9;JAVA://flashpoint.Muur&#10;deur&#9;PSI&#9;JAVA://flashpoint.Deur&#10;hak&#9;PSI&#9;JAVA://flashpoint.Hakken&#10;vak&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Vak.java&#10;speel&#9;PSI&#9;JAVA://flashpoint.Speelveld&#10;speler&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Speler.java" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -696,7 +750,16 @@
       <updated>1495545613148</updated>
       <workItem from="1495545618294" duration="2005000" />
       <workItem from="1495622998184" duration="6788000" />
-      <workItem from="1495745620200" duration="2462000" />
+      <workItem from="1495745620200" duration="3114000" />
+      <workItem from="1495784880436" duration="650000" />
+      <workItem from="1495791440217" duration="15000" />
+      <workItem from="1495794669261" duration="434000" />
+      <workItem from="1495795133742" duration="14000" />
+      <workItem from="1495795885461" duration="245000" />
+      <workItem from="1495796142786" duration="5980000" />
+      <workItem from="1495802143629" duration="1648000" />
+      <workItem from="1495805104374" duration="45000" />
+      <workItem from="1495809376001" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="aanpassinkje">
       <created>1495623641565</created>
@@ -726,11 +789,60 @@
       <option name="project" value="LOCAL" />
       <updated>1495746869509</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Zelfde als vorige push maar dan met deuren.&#10;En exceptions toegevoegd">
+      <created>1495748128152</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1495748128152</updated>
+    </task>
+    <task id="LOCAL-00006" summary=".">
+      <created>1495795944082</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1495795944082</updated>
+    </task>
+    <task id="LOCAL-00007" summary="FXML in t echte programma">
+      <created>1495796655722</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1495796655722</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Bewegen in de view">
+      <created>1495799046693</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1495799046693</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Acties in de juiste klasse gezet ipv alles in de controller">
+      <created>1495800782267</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1495800782267</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Speler kan nu niet van het veld lopen">
+      <created>1495802394902</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1495802394902</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Deuren op het spel geplaats (niet visueel) om te testen">
+      <created>1495805140644</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1495805140644</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11255000" />
+    <option name="totallyTimeSpent" value="21921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
@@ -739,32 +851,33 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15898438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -778,7 +891,15 @@
     <MESSAGE value="enum kleur aangemaakt, main speler aangemaakt, constructor veld aangepast" />
     <MESSAGE value="niet veel aangepast" />
     <MESSAGE value="Klassen Hakken gemaakt, het beschadigd nu de muur in de gekozen richting 2x, 1 keer op het veld zelf, en 1 keer op het veld er naast zodat de muur het zelfde blijft als je op het andere vak staat." />
-    <option name="LAST_COMMIT_MESSAGE" value="Klassen Hakken gemaakt, het beschadigd nu de muur in de gekozen richting 2x, 1 keer op het veld zelf, en 1 keer op het veld er naast zodat de muur het zelfde blijft als je op het andere vak staat." />
+    <MESSAGE value="Zelfde als vorige push maar dan met deuren.&#10;En exceptions toegevoegd" />
+    <MESSAGE value="." />
+    <MESSAGE value="FXML in t echte programma" />
+    <MESSAGE value="Bewegen in de view" />
+    <MESSAGE value="Acties in de juiste klasse gezet ipv alles in de controller" />
+    <MESSAGE value="Speler kan nu niet van het veld lopen" />
+    <MESSAGE value="Deuren op het spel geplaats (niet visueel) om te testen" />
+    <MESSAGE value="Dobbelsteen klasse gemaakt en getest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dobbelsteen klasse gemaakt en getest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -789,11 +910,34 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Deur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -801,7 +945,173 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding>
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Muur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Deur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding>
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Muur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding>
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -809,7 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,7 +1149,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="71" lean-forward="true" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -860,19 +1170,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Lose.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Win.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Muur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Deur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/bin1/flashpoint/fxmlController" />
+    <entry file="file://$PROJECT_DIR$/flashpoint/bin1/flashpoint/ChatBox.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -884,75 +1235,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Win.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="629">
+          <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding>
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Muur.java">
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Deur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="510">
           <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java">
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        <state relative-caret-position="204">
+          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="32" column="70" lean-forward="false" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="42" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TestView/src/sample/sampleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Dobbelsteen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
