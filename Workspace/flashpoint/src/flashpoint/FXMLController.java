@@ -22,6 +22,11 @@ public class FXMLController {
         speler1.setLocatieAll(2,4);
         gridpane.add(iv2,speler1.getLocatieX(),speler1.getLocatieY());
 
+        speelveld.getVakken()[2][2].addDeur(0);
+        speelveld.getVakken()[2][1].addDeur(2);
+        speelveld.getVakken()[4][1].addMuur(1);
+        speelveld.getVakken()[5][1].addMuur(3);
+
         btnLEFT.setOnAction((event) -> {
             System.out.println("LEFT");
             bewegen.run(3,speler1,speelveld,gridpane);
