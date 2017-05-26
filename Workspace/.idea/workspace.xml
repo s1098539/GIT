@@ -2,7 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="568f7501-3345-43f6-8ca4-65d5dbed6afd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/AIActie.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/AIActie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Auto.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Auto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Bewegen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Bewegen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Blussen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Blussen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandhaard.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandhaard.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandhaardHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandhaardHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitBediener.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitBediener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitGebruiken.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitGebruiken.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandweerliedenHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandweerliedenHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandweerwagen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandweerwagen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Character.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Character.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/ChatBox.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/ChatBox.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Commandant.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Commandant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Condition.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Condition.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Deur.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Deur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/DeurOpenenSluiten.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/DeurOpenenSluiten.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dobbelsteen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dobbelsteen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dokter.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dokter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/ExplosieHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/ExplosieHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Functiewissel.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Functiewissel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GS.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GS.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GSHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GSHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GameInfoPusher.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GameInfoPusher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Gaspakdrager.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Gaspakdrager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Hakken.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Hakken.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Lose.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Lose.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Mannetjesputter.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Mannetjesputter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Muur.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Muur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/NewRook.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/NewRook.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Object.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Object.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Oppakken.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Oppakken.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenGS.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenGS.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenPVA.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenPVA.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVA.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVA.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAAanvullen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAAanvullen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Reddingsspecialist.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Reddingsspecialist.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rijden.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rijden.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rook.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rook.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpecialistGS.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpecialistGS.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speelveld.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speelveld.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerActie.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerActie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerTextPusher.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerTextPusher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Taal.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Taal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/UitbreidenVuur.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/UitbreidenVuur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vak.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vak.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Verkenner.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Verkenner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/VonkoverslagHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/VonkoverslagHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vuur.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vuur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Win.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Win.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Ziekenwagen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Ziekenwagen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/fxml.fxml" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/fxml.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/flashpoint.iml" afterPath="$PROJECT_DIR$/flashpoint/flashpoint.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/flashpoint/bin1/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +74,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+            <state relative-caret-position="204">
+              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,126 +86,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FXMLController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FXMLController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+            <state relative-caret-position="272">
+              <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dobbelsteen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Dobbelsteen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Speler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-              <folding>
-                <element signature="e#507#508#0" expanded="false" />
-                <element signature="e#538#539#0" expanded="false" />
-                <element signature="e#583#584#0" expanded="false" />
-                <element signature="e#623#624#0" expanded="false" />
-                <element signature="e#655#656#0" expanded="false" />
-                <element signature="e#686#687#0" expanded="false" />
-                <element signature="e#731#732#0" expanded="false" />
-                <element signature="e#771#772#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kleur.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FXML.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-              <folding>
-                <marker date="1495819369212" expanded="true" signature="2438:2458" ph="..." />
-                <marker date="1495819369212" expanded="true" signature="2438:2472" ph="..." />
-                <marker date="1495819369212" expanded="true" signature="2438:3274" ph="..." />
-                <marker date="1495819369212" expanded="true" signature="2484:3260" ph="..." />
-                <marker date="1495819369212" expanded="true" signature="2566:3247" ph="..." />
-                <marker date="1495819369212" expanded="true" signature="2589:3231" ph="..." />
-                <marker date="1495819369212" expanded="true" signature="2759:3092" ph="..." />
-                <marker date="1495819369212" expanded="true" signature="2790:3068" ph="..." />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bewegen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="32" column="70" lean-forward="false" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Speelveld.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-              <folding>
-                <element signature="e#153#154#0" expanded="false" />
-                <element signature="e#180#181#0" expanded="false" />
-                <element signature="e#217#218#0" expanded="false" />
-                <element signature="e#254#255#0" expanded="false" />
-                <element signature="e#437#438#0" expanded="false" />
-                <element signature="e#466#467#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vak.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#112#120#0" expanded="false" />
-                <element signature="e#231#239#0" expanded="false" />
-                <element signature="e#299#300#0" expanded="false" />
-                <element signature="e#327#328#0" expanded="false" />
-                <element signature="e#360#361#0" expanded="false" />
-                <element signature="e#389#390#0" expanded="false" />
-                <element signature="e#433#434#0" expanded="false" />
-                <element signature="e#468#469#0" expanded="false" />
-                <element signature="e#515#516#0" expanded="false" />
-                <element signature="e#553#554#0" expanded="false" />
-                <element signature="e#594#595#0" expanded="false" />
-                <element signature="e#638#639#0" expanded="false" />
-                <element signature="e#679#680#0" expanded="false" />
-                <element signature="e#724#725#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -237,8 +178,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,7 +225,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,117 +235,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Gluon/SceneBuilder.lnk" />
     <property name="SearchEverywhereHistoryKey" value="kleur&#9;PSI&#9;JAVA://flashpoint.Kleur&#10;main&#9;FILE&#9;file://C:/Users/Lion/Desktop/GIT/Workspace/flashpoint/src/flashpoint/Main.java&#10;muur&#9;PSI&#9;JAVA://flashpoint.Muur&#10;deur&#9;PSI&#9;JAVA://flashpoint.Deur&#10;hak&#9;PSI&#9;JAVA://flashpoint.Hakken&#10;vak&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Vak.java&#10;speel&#9;PSI&#9;JAVA://flashpoint.Speelveld&#10;speler&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Speler.java" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/out/production/TestView/sample/fxml.fxml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/out/production/TestView/sample/sample.fxml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -862,6 +696,8 @@
       <workItem from="1495809376001" duration="1749000" />
       <workItem from="1495815438623" duration="465000" />
       <workItem from="1495815924821" duration="3452000" />
+      <workItem from="1495819620015" duration="134000" />
+      <workItem from="1495819837099" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="aanpassinkje">
       <created>1495623641565</created>
@@ -954,11 +790,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495817837598</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="idk">
+      <created>1495819419821</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1495819419821</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26619000" />
+    <option name="totallyTimeSpent" value="27239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
@@ -966,32 +809,32 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.4984375" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.4984375" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.4984375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15898438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1026,30 +869,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/DeurOpenenSluiten.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Deur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1061,16 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          <folding>
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#583#584#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#655#656#0" expanded="false" />
-            <element signature="e#686#687#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
-            <element signature="e#771#772#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1078,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,22 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#112#120#0" expanded="false" />
-            <element signature="e#231#239#0" expanded="false" />
-            <element signature="e#299#300#0" expanded="false" />
-            <element signature="e#327#328#0" expanded="false" />
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#389#390#0" expanded="false" />
-            <element signature="e#433#434#0" expanded="false" />
-            <element signature="e#468#469#0" expanded="false" />
-            <element signature="e#515#516#0" expanded="false" />
-            <element signature="e#553#554#0" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#724#725#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1169,16 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          <folding>
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#583#584#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#655#656#0" expanded="false" />
-            <element signature="e#686#687#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
-            <element signature="e#771#772#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1200,22 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#112#120#0" expanded="false" />
-            <element signature="e#231#239#0" expanded="false" />
-            <element signature="e#299#300#0" expanded="false" />
-            <element signature="e#327#328#0" expanded="false" />
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#389#390#0" expanded="false" />
-            <element signature="e#433#434#0" expanded="false" />
-            <element signature="e#468#469#0" expanded="false" />
-            <element signature="e#515#516#0" expanded="false" />
-            <element signature="e#553#554#0" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#724#725#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1245,7 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1270,16 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          <folding>
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#583#584#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#655#656#0" expanded="false" />
-            <element signature="e#686#687#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
-            <element signature="e#771#772#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1294,22 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#112#120#0" expanded="false" />
-            <element signature="e#231#239#0" expanded="false" />
-            <element signature="e#299#300#0" expanded="false" />
-            <element signature="e#327#328#0" expanded="false" />
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#389#390#0" expanded="false" />
-            <element signature="e#433#434#0" expanded="false" />
-            <element signature="e#468#469#0" expanded="false" />
-            <element signature="e#515#516#0" expanded="false" />
-            <element signature="e#553#554#0" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#724#725#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1339,7 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="71" lean-forward="true" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1351,13 +1089,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/RMI.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/AIActie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Lose.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1419,22 +1150,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#112#120#0" expanded="false" />
-            <element signature="e#231#239#0" expanded="false" />
-            <element signature="e#299#300#0" expanded="false" />
-            <element signature="e#327#328#0" expanded="false" />
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#389#390#0" expanded="false" />
-            <element signature="e#433#434#0" expanded="false" />
-            <element signature="e#468#469#0" expanded="false" />
-            <element signature="e#515#516#0" expanded="false" />
-            <element signature="e#553#554#0" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#724#725#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1442,7 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1450,16 +1164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding>
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#583#584#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#655#656#0" expanded="false" />
-            <element signature="e#686#687#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
-            <element signature="e#771#772#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1480,9 +1184,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Dobbelsteen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="374">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1497,6 +1200,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="32" column="70" lean-forward="false" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/bin1/flashpoint/AIActie.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/BrandhaardHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/AIActie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1504,16 +1229,9 @@
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding>
             <marker date="1495819369212" expanded="true" signature="2438:2458" ph="..." />
-            <marker date="1495819369212" expanded="true" signature="2438:2472" ph="..." />
-            <marker date="1495819369212" expanded="true" signature="2438:3274" ph="..." />
-            <marker date="1495819369212" expanded="true" signature="2484:3260" ph="..." />
-            <marker date="1495819369212" expanded="true" signature="2566:3247" ph="..." />
-            <marker date="1495819369212" expanded="true" signature="2589:3231" ph="..." />
-            <marker date="1495819369212" expanded="true" signature="2759:3092" ph="..." />
-            <marker date="1495819369212" expanded="true" signature="2790:3068" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1521,20 +1239,31 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
+    <entry file="file://$PROJECT_DIR$/flashpoint/bin1/flashpoint/FXML.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+        <state relative-caret-position="306">
+          <caret line="18" column="73" lean-forward="false" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        <state relative-caret-position="204">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1544,7 +1273,78 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>flashpoint</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">
