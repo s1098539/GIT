@@ -8,6 +8,7 @@ public class DeurOpenenSluiten {
     public void run(int richting, Speler speler, Speelveld speelveld) {
         try {
             speelveld.getVakken()[speler.getLocatieX()][speler.getLocatieY()].getDeuren()[richting].OpenSluiten();
+
         } catch (NullPointerException e) {
             System.out.println("Op het huidige veld geen deur");
         }

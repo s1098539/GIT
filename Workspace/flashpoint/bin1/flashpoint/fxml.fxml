@@ -422,7 +422,7 @@
                         </HBox>
                     </children>
                 </VBox>
-                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Special">
+                <Button fx:id="btnSpecial" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Special">
                     <font>
                         <Font name="Trebuchet MS" size="15.0" />
                     </font>

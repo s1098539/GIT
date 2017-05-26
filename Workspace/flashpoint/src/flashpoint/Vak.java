@@ -1,5 +1,10 @@
 package flashpoint;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
+
+
 import java.util.ArrayList;
 
 public class Vak {
@@ -32,8 +37,12 @@ public class Vak {
         muren[richting] = new Muur();
     }
 
-    public void addDeur(int richting) {
+    public ImageView addDeur(int richting) {
         deuren[richting] = new Deur();
+        ImageView x = new ImageView(new Image("GFX/DichteDeur.png"));
+        x.setFitHeight(30);
+        x.setFitWidth(30);
+        return x;
     }
 
     public int checkRichting(int richting) {
