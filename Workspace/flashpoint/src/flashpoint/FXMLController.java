@@ -14,7 +14,12 @@ public class FXMLController {
     @FXML private GridPane gridpane;
 
     @FXML private void initialize() {
-        ImageView iv2 = new ImageView(new Image("http://www.i2symbol.com/images/cool-letters/katakana/katakana_middle_dot_u30FB_icon_256x256.png"));
+        //ImageView iv2 = new ImageView(new Image("http://www.i2symbol.com/images/cool-letters/katakana/katakana_middle_dot_u30FB_icon_256x256.png"));
+        ImageView iv2 = new ImageView(new Image("GFX/(zee)Hond.png"));
+        int x = 85;
+        iv2.setFitHeight(x);
+        iv2.setFitWidth(x);
+
 
         Dobbelsteen dobbelsteen = new Dobbelsteen(8);
         dobbelsteen.gooi();

@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="568f7501-3345-43f6-8ca4-65d5dbed6afd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/flashpoint/bin1/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="306">
+              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FXMLController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FXMLController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="289">
+              <caret line="17" column="62" lean-forward="false" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,11 +50,9 @@
       <file leaf-file-name="FXML.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-              <folding>
-                <marker date="1495819369212" expanded="true" signature="2438:2458" ph="..." />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="13" column="248" lean-forward="false" selection-start-line="13" selection-start-column="248" selection-end-line="13" selection-end-column="248" />
+              <folding />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
@@ -68,6 +69,12 @@
         <option value="FxmlFile" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Grid</find>
+      <find>UP</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -98,14 +105,14 @@
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java" />
         <option value="$PROJECT_DIR$/flashpoint/bin1/flashpoint/fxmlController" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Controller.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Dobbelsteen.java" />
         <option value="$PROJECT_DIR$/../TestView/src/sample/sampleController.java" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" />
       </list>
     </option>
   </component>
@@ -186,6 +193,147 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/(zee)Hond.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/AP over.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Brandweerblauw.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Brandweergeel.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Brandweergroen.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Brandweerhelmen.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Brandweeroranje.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Brandweerrood.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Brandweerzwart.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/DichteDeur.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Egel.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Groenhaar.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Hipstersnor.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Hotspot.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Latifah.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Medkit.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Muur 1kapot.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Muur 2kapot.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Muur.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Obamanigua.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Oma.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/OpenDeur.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Paarshaar.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/PaarshaarHipster.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/RarebrilHipster.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Roodhaar.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Rook.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Snek.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Thumbs.db</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Vis.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Vlam.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/GFX/Vraagteken.png</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -645,7 +793,7 @@
       <workItem from="1495815924821" duration="3452000" />
       <workItem from="1495819620015" duration="134000" />
       <workItem from="1495819837099" duration="827000" />
-      <workItem from="1495820683624" duration="179000" />
+      <workItem from="1495820683624" duration="2738000" />
     </task>
     <task id="LOCAL-00001" summary="aanpassinkje">
       <created>1495623641565</created>
@@ -752,11 +900,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495820161652</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary=".">
+      <created>1495820871672</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1495820871672</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27945000" />
+    <option name="totallyTimeSpent" value="30504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
@@ -765,13 +920,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.4984375" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.4984375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286004" sideWeight="0.4984375" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34249473" sideWeight="0.4984375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -788,7 +944,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -806,7 +961,6 @@
     <MESSAGE value="niet veel aangepast" />
     <MESSAGE value="Klassen Hakken gemaakt, het beschadigd nu de muur in de gekozen richting 2x, 1 keer op het veld zelf, en 1 keer op het veld er naast zodat de muur het zelfde blijft als je op het andere vak staat." />
     <MESSAGE value="Zelfde als vorige push maar dan met deuren.&#10;En exceptions toegevoegd" />
-    <MESSAGE value="." />
     <MESSAGE value="FXML in t echte programma" />
     <MESSAGE value="Bewegen in de view" />
     <MESSAGE value="Acties in de juiste klasse gezet ipv alles in de controller" />
@@ -815,7 +969,8 @@
     <MESSAGE value="Dobbelsteen klasse gemaakt en getest" />
     <MESSAGE value="idk" />
     <MESSAGE value="Everything broke and got fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything broke and got fixed" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1143,6 +1298,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1191,13 +1347,21 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="62" lean-forward="false" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding>
-            <marker date="1495819369212" expanded="true" signature="2438:2458" ph="..." />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="248" lean-forward="false" selection-start-line="13" selection-start-column="248" selection-end-line="13" selection-end-column="248" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -1206,18 +1370,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="306">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
