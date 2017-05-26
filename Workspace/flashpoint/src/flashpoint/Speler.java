@@ -1,18 +1,23 @@
 package flashpoint;
 
+
+import javafx.scene.image.ImageView;
+
 public class Speler {
 
-    public Speler(String naam, /*Character character,*/ Kleur kleur) {
+    public Speler(String naam, /*Character character,*/ Kleur kleur, ImageView imageView) {
         this.naam = naam;
-       // this.character = character;
+        // this.character = character;
         this.kleur = kleur;
+        this.imageView = imageView;
     }
 
     private String naam;
-	private Character character;
-	private  Kleur kleur;
-	public int locatieX;
-	public int locatieY;
+    private Character character;
+    private Kleur kleur;
+    private ImageView imageView;
+    public int locatieX;
+    public int locatieY;
 
     public int getLocatieX() {
         return locatieX;
@@ -37,5 +42,9 @@ public class Speler {
 
     public String getNaam() {
         return naam;
+    }
+
+    public ImageView getImageView() {
+        return imageView;
     }
 }

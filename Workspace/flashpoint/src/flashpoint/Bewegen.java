@@ -1,12 +1,15 @@
 package flashpoint;
 
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
+
 public class Bewegen {
 
     public Bewegen() {
     }
 
-    public void run(int richting, Speler speler, Speelveld speelveld) {
-        speelveld.removeSpeler(speler);
+    public void run(int richting, Speler speler, Speelveld speelveld, GridPane gridPane) {
+        speelveld.removeSpeler(speler, gridPane);
         System.out.println(speler.getNaam() + " start locatie: X" + speler.getLocatieX() + " Y" +  speler.getLocatieY());
         int check;
         switch (richting) {
@@ -33,7 +36,7 @@ public class Bewegen {
             default:
                 System.out.println("De richting "+richting+" is niet toegestaan");
         }
-        speelveld.addSpeler(speler);
+        speelveld.addSpeler(speler, gridPane);
         System.out.println(speler.getNaam() + " eind locatie: X" + speler.getLocatieX() + " Y" +  speler.getLocatieY());
     }
 
