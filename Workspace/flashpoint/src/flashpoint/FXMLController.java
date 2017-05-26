@@ -14,7 +14,7 @@ public class FXMLController {
     @FXML private GridPane gridpane;
 
     @FXML private void initialize() {
-        ImageView iv2 = new ImageView(new Image("http://icons.iconarchive.com/icons/kidaubis-design/cool-heroes/128/Ironman-icon.png"));
+        ImageView iv2 = new ImageView(new Image("http://www.i2symbol.com/images/cool-letters/katakana/katakana_middle_dot_u30FB_icon_256x256.png"));
 
         Speelveld speelveld = new Speelveld();
         Bewegen bewegen = new Bewegen();
