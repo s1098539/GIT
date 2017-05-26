@@ -1,5 +1,6 @@
 package flashpoint;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -16,6 +17,7 @@ public class FXMLController {
     @FXML private Button btnRIGHT;
     @FXML private Button btnDOWN;
     @FXML private Button btnSpecial;
+    @FXML private Button btnEndTurn;
     @FXML private GridPane gridpane;
     View view = new View();
     Speelveld speelveld = new Speelveld();
@@ -80,6 +82,12 @@ public class FXMLController {
         btnSpecial.setOnAction((event) -> {
             System.out.println("Special");
             deurOpenenSluiten.run(0,speler1,speelveld);
+//            update();
+        });
+
+        btnEndTurn.setOnAction((event) -> {
+            System.out.println("End turn");
+            Platform.exit();
 //            update();
         });
     }
