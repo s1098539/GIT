@@ -2,61 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="568f7501-3345-43f6-8ca4-65d5dbed6afd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/AIActie.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/AIActie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Auto.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Auto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Bewegen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Bewegen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Blussen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Blussen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandhaard.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandhaard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandhaardHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandhaardHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitBediener.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitBediener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitGebruiken.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitGebruiken.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandweerliedenHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandweerliedenHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandweerwagen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandweerwagen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Character.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Character.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/ChatBox.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/ChatBox.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Commandant.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Commandant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Condition.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Condition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Deur.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Deur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/DeurOpenenSluiten.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/DeurOpenenSluiten.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dobbelsteen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dobbelsteen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dokter.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dokter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/ExplosieHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/ExplosieHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Functiewissel.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Functiewissel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GS.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GSHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GSHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GameInfoPusher.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/GameInfoPusher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Gaspakdrager.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Gaspakdrager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Hakken.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Hakken.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Lose.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Lose.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Mannetjesputter.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Mannetjesputter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Muur.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Muur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/NewRook.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/NewRook.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Object.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Object.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Oppakken.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Oppakken.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenGS.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenGS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenPVA.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenPVA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVA.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAAanvullen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAAanvullen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Reddingsspecialist.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Reddingsspecialist.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rijden.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rijden.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rook.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rook.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpecialistGS.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpecialistGS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speelveld.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speelveld.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerActie.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerActie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerTextPusher.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerTextPusher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Taal.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Taal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/UitbreidenVuur.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/UitbreidenVuur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vak.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vak.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Verkenner.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Verkenner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/VonkoverslagHandler.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/VonkoverslagHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vuur.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vuur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Win.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Win.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Ziekenwagen.class" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/Ziekenwagen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/fxml.fxml" afterPath="$PROJECT_DIR$/flashpoint/bin1/flashpoint/fxml.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/flashpoint.iml" afterPath="$PROJECT_DIR$/flashpoint/flashpoint.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/flashpoint/bin1/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,10 +20,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="136">
               <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,15 +32,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FXMLController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FXMLController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+            <state relative-caret-position="17">
+              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FXML.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <folding>
+                <marker date="1495819369212" expanded="true" signature="2438:2458" ph="..." />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -178,7 +139,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -209,24 +172,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Workspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flashpoint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -697,7 +644,8 @@
       <workItem from="1495815438623" duration="465000" />
       <workItem from="1495815924821" duration="3452000" />
       <workItem from="1495819620015" duration="134000" />
-      <workItem from="1495819837099" duration="300000" />
+      <workItem from="1495819837099" duration="827000" />
+      <workItem from="1495820683624" duration="179000" />
     </task>
     <task id="LOCAL-00001" summary="aanpassinkje">
       <created>1495623641565</created>
@@ -797,26 +745,33 @@
       <option name="project" value="LOCAL" />
       <updated>1495819419821</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Everything broke and got fixed">
+      <created>1495820161652</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1495820161652</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27239000" />
+    <option name="totallyTimeSpent" value="27945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.4984375" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.4984375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.4984375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -833,6 +788,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -858,7 +814,8 @@
     <MESSAGE value="Deuren op het spel geplaats (niet visueel) om te testen" />
     <MESSAGE value="Dobbelsteen klasse gemaakt en getest" />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="Everything broke and got fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything broke and got fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,7 +1171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,8 +1178,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/bin1/flashpoint/FXML.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="73" lean-forward="false" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
@@ -1239,31 +1204,20 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/bin1/flashpoint/FXML.fxml">
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="73" lean-forward="false" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        <state relative-caret-position="136">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        <state relative-caret-position="17">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
