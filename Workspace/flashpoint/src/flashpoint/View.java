@@ -4,59 +4,57 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
+import java.util.ArrayList;
+
 public class View {
-
-    int check;
-    ImageView muur = new ImageView(new Image("GFX/Muur.png"));
-    ImageView muur1kapot = new ImageView(new Image("GFX/Muur 1kapot.png"));
-    ImageView muur2kapot = new ImageView(new Image("GFX/Muur 2kapot.png"));
-    ImageView dichteDeur = new ImageView(new Image("GFX/DichteDeur.png"));
-    ImageView openDeur = new ImageView(new Image("GFX/OpenDeur.png"));
-
-
+    ArrayList<ImageView>IVs = new ArrayList<ImageView>();
 
     public void update(Speelveld speelveld, GridPane gridpane, int x, int y, int z) {
-    int p = 0;
-//        switch(speelveld.getVakken()[x][y].checkRichting(z)) {
-        switch(p) {
+
+        switch(speelveld.getVakken()[x][y].checkRichting(z)) {
             case 0:
                 try {
-                    muur.setFitHeight(30);
-                    muur.setFitWidth(30);
-                    gridpane.add(muur,x,y);
+                    IVs.add(new ImageView(new Image("GFX/Muur.png")));
+                    IVs.get(IVs.size()-1).setFitHeight(30);
+                    IVs.get(IVs.size()-1).setFitWidth(30);
+                    gridpane.add(IVs.get(IVs.size()-1),x,y);
                     break;
                 } catch (IllegalArgumentException e) {
                 }
             case 1:
                 try {
-                    muur1kapot.setFitHeight(30);
-                    muur1kapot.setFitWidth(30);
-                    gridpane.getChildren().add(muur1kapot);
+                    IVs.add(new ImageView(new Image("GFX/Muur 1kapot.png")));
+                    IVs.get(IVs.size()-1).setFitHeight(30);
+                    IVs.get(IVs.size()-1).setFitWidth(30);
+                    gridpane.add(IVs.get(IVs.size()-1),x,y);
                     break;
                 } catch (IllegalArgumentException e) {
                 }
             case 2:
                 try {
-                    muur2kapot.setFitHeight(30);
-                    muur2kapot.setFitWidth(30);
-                    gridpane.getChildren().add(muur2kapot);
+                    IVs.add(new ImageView(new Image("GFX/Muur 2kapot.png")));
+                    IVs.get(IVs.size()-1).setFitHeight(30);
+                    IVs.get(IVs.size()-1).setFitWidth(30);
+                    gridpane.add(IVs.get(IVs.size()-1),x,y);
                     break;
                 } catch (IllegalArgumentException e) {
                 }
 
             case 3:
                 try {
-                    dichteDeur.setFitHeight(30);
-                    dichteDeur.setFitWidth(30);
-                    gridpane.getChildren().add(dichteDeur);
+                    IVs.add(new ImageView(new Image("GFX/DichteDeur.png")));
+                    IVs.get(IVs.size()-1).setFitHeight(30);
+                    IVs.get(IVs.size()-1).setFitWidth(30);
+                    gridpane.add(IVs.get(IVs.size()-1),x,y);
                     break;
                 } catch (IllegalArgumentException e) {
                 }
             case 4:
                 try {
-                    openDeur.setFitHeight(30);
-                    openDeur.setFitWidth(30);
-                    gridpane.getChildren().add(openDeur);
+                    IVs.add(new ImageView(new Image("GFX/OpenDeur.png")));
+                    IVs.get(IVs.size()-1).setFitHeight(30);
+                    IVs.get(IVs.size()-1).setFitWidth(30);
+                    gridpane.add(IVs.get(IVs.size()-1),x,y);
                     break;
                 } catch (IllegalArgumentException e) {
                 }

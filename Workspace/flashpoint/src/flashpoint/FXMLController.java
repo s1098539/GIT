@@ -42,8 +42,8 @@ public class FXMLController {
         }
     }
 
-    private void update() {                                  //Unexpected visual behavior
-        for(int x=0; x<10; x++) {
+    private void update() {                                 //Might run in to memory problems (tried arraylist.clear() but made no difference
+        for(int x=0; x<10; x++) {                           //If you want to test this, at the moment it crashes if you put a door everywhere and open 3
             for(int y=0; y<8; y++) {
                 for(int z=0; z<4; z++) {
                     view.update(speelveld, gridpane, x,y,z);
@@ -67,50 +67,45 @@ public class FXMLController {
         speler1.setLocatieAll(2,4);
         gridpane.add(iv2,speler1.getLocatieX(),speler1.getLocatieY());
 
-        speelveld.getVakken()[3][3].addDeur(0);
-        speelveld.getVakken()[3][2].addDeur(2);
+        doorEverywhere();
+
+//        speelveld.getVakken()[3][3].addDeur(0);
+//        speelveld.getVakken()[3][2].addDeur(2);
 
 
-        speelveld.getVakken()[4][1].addMuur(1);
-        speelveld.getVakken()[5][1].addMuur(3);
+//        speelveld.getVakken()[4][1].addMuur(1);
+//        speelveld.getVakken()[5][1].addMuur(3);
 
 
         btnLEFT.setOnAction((event) -> {
             System.out.println("LEFT");
             bewegen.run(3,speler1,speelveld,gridpane);
-
-//            update();
         });
 
         btnRIGHT.setOnAction((event) -> {
             System.out.println("RIGHT");
             bewegen.run(1,speler1,speelveld,gridpane);
-//            update();
         });
 
         btnUP.setOnAction((event) -> {
             System.out.println("UP");
             bewegen.run(0,speler1,speelveld,gridpane);
-//            update();
         });
 
         btnDOWN.setOnAction((event) -> {
             System.out.println("DOWN");
             bewegen.run(2,speler1,speelveld,gridpane);
-//            update();
         });
 
         btnSpecial.setOnAction((event) -> {
             System.out.println("Special");
-//            deurOpenenSluiten.run(0,speler1,speelveld);
-            hakken.run(1,speler1,speelveld);
-//            update();
+            deurOpenenSluiten.run(1,speler1,speelveld);
+            update();
         });
 
         btnEndTurn.setOnAction((event) -> {
             System.out.println("End turn");
-            muurEverywhere();
-//            update();
+            update();
         });
     }
 }
