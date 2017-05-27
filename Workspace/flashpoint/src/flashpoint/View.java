@@ -16,8 +16,9 @@ public class View {
 
 
     public void update(Speelveld speelveld, GridPane gridpane, int x, int y, int z) {
-
-        switch(speelveld.getVakken()[x][y].checkRichting(z)) {
+    int p = 0;
+//        switch(speelveld.getVakken()[x][y].checkRichting(z)) {
+        switch(p) {
             case 0:
                 try {
                     muur.setFitHeight(30);

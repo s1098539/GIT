@@ -22,9 +22,29 @@ public class FXMLController {
     View view = new View();
     Speelveld speelveld = new Speelveld();
 
-    private void update() {                     //ArrayIndexOutOfBoundsException please fix me
+    private void doorEverywhere() {                         //Testing thing, zet op elke plek een deur
         for(int x=0; x<10; x++) {
-            for(int y=0; y<8; x++) {
+            for(int y=0; y<8; y++) {
+                for(int z=0; z<4; z++) {
+                    speelveld.getVakken()[x][y].addDeur(z);
+                }
+            }
+        }
+    }
+
+    private void muurEverywhere() {                         //Testing thing, zet op elke plek een muur
+        for(int x=0; x<10; x++) {
+            for(int y=0; y<8; y++) {
+                for(int z=0; z<4; z++) {
+                    speelveld.getVakken()[x][y].addMuur(z);
+                }
+            }
+        }
+    }
+
+    private void update() {                                  //Unexpected visual behavior
+        for(int x=0; x<10; x++) {
+            for(int y=0; y<8; y++) {
                 for(int z=0; z<4; z++) {
                     view.update(speelveld, gridpane, x,y,z);
                 }
@@ -39,6 +59,7 @@ public class FXMLController {
         iv2.setFitWidth(x);
 
         DeurOpenenSluiten deurOpenenSluiten = new DeurOpenenSluiten();
+        Hakken hakken = new Hakken();
 
 
         Bewegen bewegen = new Bewegen();
@@ -46,18 +67,18 @@ public class FXMLController {
         speler1.setLocatieAll(2,4);
         gridpane.add(iv2,speler1.getLocatieX(),speler1.getLocatieY());
 
-        gridpane.add(speelveld.getVakken()[2][2].addDeur(0),2,2);
-        gridpane.add(speelveld.getVakken()[2][1].addDeur(2),2,1);
+        speelveld.getVakken()[3][3].addDeur(0);
+        speelveld.getVakken()[3][2].addDeur(2);
 
 
         speelveld.getVakken()[4][1].addMuur(1);
         speelveld.getVakken()[5][1].addMuur(3);
 
 
-
         btnLEFT.setOnAction((event) -> {
             System.out.println("LEFT");
             bewegen.run(3,speler1,speelveld,gridpane);
+
 //            update();
         });
 
@@ -81,13 +102,14 @@ public class FXMLController {
 
         btnSpecial.setOnAction((event) -> {
             System.out.println("Special");
-            deurOpenenSluiten.run(0,speler1,speelveld);
+//            deurOpenenSluiten.run(0,speler1,speelveld);
+            hakken.run(1,speler1,speelveld);
 //            update();
         });
 
         btnEndTurn.setOnAction((event) -> {
             System.out.println("End turn");
-            Platform.exit();
+            muurEverywhere();
 //            update();
         });
     }
