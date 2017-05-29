@@ -120,9 +120,9 @@
                                 <Font size="17.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="50.0" prefWidth="149.0" text="LOGOTEXT" textFill="RED">
+                        <Label prefHeight="50.0" prefWidth="149.0" text="Opflikkering punt" textFill="RED">
                             <font>
-                                <Font size="27.0" />
+                                <Font size="19.0" />
                             </font>
                         </Label>
                     </children>
@@ -140,7 +140,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../GFX/Vraagteken.png" />
+                                <Image url="@../../GFX/Brandweerblauw.png" />
                             </image>
                         </ImageView>
                         <Label prefHeight="50.0" prefWidth="100.0" text="USER1" HBox.hgrow="ALWAYS">
@@ -163,7 +163,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../GFX/Vraagteken.png" />
+                                <Image url="@../../GFX/Brandweergeel.png" />
                             </image>
                         </ImageView>
                         <Label prefHeight="50.0" prefWidth="100.0" text="USER2" HBox.hgrow="ALWAYS">
@@ -180,7 +180,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../GFX/Vraagteken.png" />
+                                <Image url="@../../GFX/Brandweergroen.png" />
                             </image>
                         </ImageView>
                         <Label prefHeight="50.0" prefWidth="100.0" text="USER3" HBox.hgrow="ALWAYS">
@@ -197,7 +197,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../GFX/Vraagteken.png" />
+                                <Image url="@../../GFX/Brandweeroranje.png" />
                             </image>
                         </ImageView>
                         <Label prefHeight="50.0" prefWidth="100.0" text="USER4" HBox.hgrow="ALWAYS">
@@ -214,7 +214,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../GFX/Vraagteken.png" />
+                                <Image url="@../../GFX/Brandweerrood.png" />
                             </image>
                         </ImageView>
                         <Label prefHeight="50.0" prefWidth="100.0" text="USER5" HBox.hgrow="ALWAYS">
@@ -231,44 +231,10 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../GFX/Vraagteken.png" />
-                            </image>
-                        </ImageView>
-                        <Label prefHeight="50.0" prefWidth="100.0" text="USER5" HBox.hgrow="ALWAYS">
-                            <font>
-                                <Font size="25.0" />
-                            </font>
-                        </Label>
-                    </children>
-                    <VBox.margin>
-                        <Insets bottom="10.0" />
-                    </VBox.margin>
-                </HBox>
-                <HBox prefHeight="50.0" prefWidth="200.0">
-                    <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../GFX/Vraagteken.png" />
+                                <Image url="@../../GFX/Brandweerzwart.png" />
                             </image>
                         </ImageView>
                         <Label prefHeight="50.0" prefWidth="100.0" text="USER6" HBox.hgrow="ALWAYS">
-                            <font>
-                                <Font size="25.0" />
-                            </font>
-                        </Label>
-                    </children>
-                    <VBox.margin>
-                        <Insets bottom="10.0" />
-                    </VBox.margin>
-                </HBox>
-                <HBox prefHeight="50.0" prefWidth="200.0">
-                    <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../GFX/Vraagteken.png" />
-                            </image>
-                        </ImageView>
-                        <Label prefHeight="50.0" prefWidth="100.0" text="USER7" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -295,7 +261,7 @@
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../GFX/Vraagteken.png" />
+                                                <Image url="@../../GFX/Pick up.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
@@ -309,7 +275,7 @@
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../GFX/Vraagteken.png" />
+                                                <Image url="@../../GFX/Openen deur.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
@@ -333,7 +299,7 @@
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../GFX/Vraagteken.png" />
+                                                <Image url="@../../GFX/Brandblusser.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
@@ -347,7 +313,7 @@
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../GFX/Vraagteken.png" />
+                                                <Image url="@../../GFX/Hakken.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
@@ -368,7 +334,7 @@
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../GFX/Vraagteken.png" />
+                                                <Image url="@../../GFX/Rijden.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
@@ -382,7 +348,7 @@
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../GFX/Vraagteken.png" />
+                                                <Image url="@../../GFX/Wagenblussen.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
@@ -404,7 +370,7 @@
                                         <HBox prefHeight="50.0" prefWidth="50.0" />
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../GFX/Vraagteken.png" />
+                                                <Image url="@../../GFX/Rolswap.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">

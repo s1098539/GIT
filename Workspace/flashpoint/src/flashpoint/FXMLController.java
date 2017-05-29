@@ -57,10 +57,11 @@ public class FXMLController {
     }
 
     @FXML private void initialize() {
-        ImageView iv2 = new ImageView(new Image("GFX/achtergrond.png"));
-        int x = 75;
-        iv2.setFitHeight(x);
-        iv2.setFitWidth(x);
+        ImageView iv2 = new ImageView(new Image("GFX/Achtergrond.jpeg"));
+//        int x = 75;
+        iv2.setFitHeight(800);
+        iv2.setFitWidth(600);
+        iv2.setRotate(270);
 
         DeurOpenenSluiten deurOpenenSluiten = new DeurOpenenSluiten();
         Hakken hakken = new Hakken();
