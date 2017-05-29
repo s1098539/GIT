@@ -67,7 +67,7 @@ public class FXMLController {
         speler1.setLocatieAll(2,4);
         gridpane.add(iv2,speler1.getLocatieX(),speler1.getLocatieY());
 
-        doorEverywhere();
+        //doorEverywhere();
 
 //        speelveld.getVakken()[3][3].addDeur(0);
 //        speelveld.getVakken()[3][2].addDeur(2);
