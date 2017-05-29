@@ -34,6 +34,7 @@ public class FXMLController {
 
     private void muurEverywhere() {                         //Testing thing, zet op elke plek een muur
         for(int x=0; x<10; x++) {
+
             for(int y=0; y<8; y++) {
                 for(int z=0; z<4; z++) {
                     speelveld.getVakken()[x][y].addMuur(z);
