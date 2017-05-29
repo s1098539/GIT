@@ -53,7 +53,7 @@ public class FXMLController {
     }
 
     @FXML private void initialize() {
-        ImageView iv2 = new ImageView(new Image("GFX/(zee)Hond.png"));
+        ImageView iv2 = new ImageView(new Image("GFX/Snek.png"));
         int x = 75;
         iv2.setFitHeight(x);
         iv2.setFitWidth(x);
@@ -67,14 +67,13 @@ public class FXMLController {
         speler1.setLocatieAll(2,4);
         gridpane.add(iv2,speler1.getLocatieX(),speler1.getLocatieY());
 
-        //doorEverywhere();
 
-//        speelveld.getVakken()[3][3].addDeur(0);
-//        speelveld.getVakken()[3][2].addDeur(2);
+        speelveld.getVakken()[3][3].addDeur(0);
+        speelveld.getVakken()[3][2].addDeur(2);
 
 
-//        speelveld.getVakken()[4][1].addMuur(1);
-//        speelveld.getVakken()[5][1].addMuur(3);
+        speelveld.getVakken()[4][1].addMuur(1);
+        speelveld.getVakken()[5][1].addMuur(3);
 
 
         btnLEFT.setOnAction((event) -> {
@@ -99,8 +98,7 @@ public class FXMLController {
 
         btnSpecial.setOnAction((event) -> {
             System.out.println("Special");
-            deurOpenenSluiten.run(1,speler1,speelveld);
-            update();
+            deurOpenenSluiten.run(0,speler1,speelveld);
         });
 
         btnEndTurn.setOnAction((event) -> {
