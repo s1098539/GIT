@@ -21,6 +21,10 @@ public class Vak {
         return muren;
     }
 
+    public Muur getMuren(int richting) {
+        return muren[richting];
+    }
+
     public Deur[] getDeuren() {
         return deuren;
     }

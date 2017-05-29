@@ -15,16 +15,16 @@ public class Hakken {
         try {
             switch (richting) {
                 case 0:
-                    speelveld.getVakken()[speler.getLocatieX()][speler.getLocatieY()-1].getMuren()[2].schade();
+                    speelveld.getVakken()[speler.getLocatieX()][speler.getLocatieY()-1].getMuren(2).schade();
                     break;
                 case 1:
-                    speelveld.getVakken()[speler.getLocatieX()+1][speler.getLocatieY()].getMuren()[3].schade();
+                    speelveld.getVakken()[speler.getLocatieX()+1][speler.getLocatieY()].getMuren(3).schade();
                     break;
                 case 2:
-                    speelveld.getVakken()[speler.getLocatieX()][speler.getLocatieY()+1].getMuren()[0].schade();
+                    speelveld.getVakken()[speler.getLocatieX()][speler.getLocatieY()+1].getMuren(0).schade();
                     break;
                 case 3:
-                    speelveld.getVakken()[speler.getLocatieX()-1][speler.getLocatieY()].getMuren()[1].schade();
+                    speelveld.getVakken()[speler.getLocatieX()-1][speler.getLocatieY()].getMuren(1).schade();
                     break;
             }
         } catch (NullPointerException e) {
