@@ -54,9 +54,10 @@ public class FXMLController {
     }
 
     @FXML private void initialize() {
-        ImageView iv2 = new ImageView(new Image("GFX/Snek.png"));
-        int x = 75;
-        iv2.setFitHeight(x);
+        ImageView iv2 = new ImageView(new Image("gfx/bord.png"));
+        int x = 600;
+        int y = 480;
+        iv2.setFitHeight(y);
         iv2.setFitWidth(x);
 
         DeurOpenenSluiten deurOpenenSluiten = new DeurOpenenSluiten();

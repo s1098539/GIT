@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="568f7501-3345-43f6-8ca4-65d5dbed6afd" name="Default" comment="">
+    <list default="true" id="72e7dcb4-1fd8-4c1e-afc4-4e25a7366e26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java" afterPath="$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java" />
     </list>
-=======
-    <list default="true" id="568f7501-3345-43f6-8ca4-65d5dbed6afd" name="Default" comment="" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
     <ignored path="$PROJECT_DIR$/flashpoint/bin1/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,82 +16,35 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-<<<<<<< HEAD
-      <file leaf-file-name="Bewegen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
+    <leaf>
+      <file leaf-file-name="FXML.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-=======
-      <file leaf-file-name="Bewegen.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
+            <state relative-caret-position="253">
+              <caret line="201" column="17" lean-forward="false" selection-start-line="201" selection-start-column="17" selection-end-line="201" selection-end-column="17" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Speler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="85">
-=======
-            <state relative-caret-position="75">
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FXMLController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FXMLController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="1581">
-              <caret line="101" column="24" lean-forward="false" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+            <state relative-caret-position="209">
+              <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hakken.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vak.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-              <folding>
-                <element signature="e#577#578#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Speelveld.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-64">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-            <state relative-caret-position="870">
-              <caret line="66" column="10" lean-forward="false" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
+            <state relative-caret-position="68">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -103,15 +52,15 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>GFX</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>gfx</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
@@ -122,14 +71,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/RMI.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java" />
+        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml" />
         <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java" />
-        <option value="$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java" />
       </list>
     </option>
   </component>
@@ -140,15 +83,13 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="735" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -161,582 +102,12 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Workspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flashpoint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Workspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flashpoint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flashpoint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
-    <property name="SearchEverywhereHistoryKey" value="veld&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Speelveld.java&#10;getmure&#9;PSI&#9;JAVA://flashpoint.Vak#getMuren&#10;fxml&#9;PSI&#9;JAVA://flashpoint.FXMLController&#10;vak&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Vak.java&#10;speel&#9;PSI&#9;JAVA://flashpoint.Speelveld&#10;speler&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Speler.java" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../UML/vpp/AD.vpp</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../UML/vpp/DM.vpp</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../UML/vpp/UCD-Menu.vpp</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../UML/vpp/UCD_SpelerActies.vpp</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/.classpath</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/.gitignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/(zee)Hond.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/AP over.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Brandblusser.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Brandweerblauw.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Brandweergeel.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Brandweergroen.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Brandweerhelmen.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Brandweeroranje.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Brandweerrood.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Brandweerzwart.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/DichteDeur.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/DichteDeurBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/DichteDeurLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/DichteDeurOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/DichteDeurRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Egel.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Groenhaar.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Hakken.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Hipstersnor.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Hotspot.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Latifah.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Medkit.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 1kapot.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 1kapotBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 1kapotLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 1kapotOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 1kapotRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 2kapot.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 2kapotBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 2kapotLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 2kapotOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur 2kapotRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Muur.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/MuurBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/MuurLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/MuurOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/MuurRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Obamanigua.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Oma.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/OpenDeur.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/OpenDeurBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/OpenDeurLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/OpenDeurOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/OpenDeurRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Openen deur.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Paarshaar.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/PaarshaarHipster.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Pick up.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/RarebrilHipster.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Rijden.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Rolswap.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Roodhaar.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Rook.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Snek.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Thumbs.db</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Vis.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Vlam.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Vraagteken.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/GFX/Wagenblussen.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/bin/.project</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/AIActie.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Auto.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Bewegen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Blussen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Brandhaard.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/BrandhaardHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/BrandspuitBediener.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/BrandspuitGebruiken.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/BrandweerliedenHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Brandweerwagen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Character.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/ChatBox.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Commandant.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Condition.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Deur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/DeurOpenenSluiten.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Dobbelsteen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Dokter.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/ExplosieHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/FXML.fxml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/FXMLController.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Functiewissel.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/GS.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/GSHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/GameInfoPusher.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Gaspakdrager.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Hakken.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Kleur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Lose.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Main.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Mannetjesputter.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Muur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/NewRook.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Object.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Oppakken.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/OppakkenGS.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/OppakkenPVA.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/PVA.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/PVAAanvullen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/PVAHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Reddingsspecialist.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Rijden.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Rook.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/SpecialistGS.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Speelveld.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Speler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/SpelerActie.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/SpelerTextPusher.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Taal.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/UitbreidenVuur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Vak.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Verkenner.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/View.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/VonkoverslagHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Vuur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Win.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/flashpoint/Ziekenwagen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/src/flashpoint/FXML.fxml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Aangrenzende vakken.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Actie ondernemen.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Bewegen1.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/De P O I tegels aanvullen.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/DeurActie.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Doel van het Spel.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Doven.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Een spelronde.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Einde van de beurt.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Het Spelbord.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Het Speleinde.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Houwen.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Omvergeblazen brandweermannen.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Ontploffing2.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Ontploffingen gevolg Schokgolf.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Ontploffingen.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Ontploffingen1.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Overslaande brand.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Tweederangseffecten.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/Vuur laten uitbreiden.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/bewegen 4.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/bewegen2.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/txt/bewegen3.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Aangrenzende vakken.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Actie ondernemen.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Bewegen1.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Bewegen2.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Bewegen3.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/De POI tegels aanvullen.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/DeurActies.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Doel van het spel.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Doven.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Een spelronde.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Einde van de beurt.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Het Speleinde.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Houwen.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/IIPSEN WAV.zip</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Omvergeblazen brandweermannen.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Ontploffingen gevolg schokgolf.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Ontploffingen1.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Ontploffingen2.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Overslaande brand.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Tweederangseffecten.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/tts/wav/Vuur laten uitbreiden.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../flashpoint.zip</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.classpath</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/codeStyleSettings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/modules.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/vcs.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.mylyn/repositories.xml.zip</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/3.tree</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.css.swt.theme.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ui.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.java.ui.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.tigris.subversion.subclipse.tools.usage.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.core/.launches/nogeens.launch</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fdt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fdx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fnm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.frq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.nrm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.tii</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.tis</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/segments.gen</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/segments_1</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fdt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fdx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.tis</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_1.fdt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_1.fdx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_1.fnm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_1.frq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_1.nrm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_1.prx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_1.tii</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_1.tis</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/segments.gen</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/segments_2</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.fx.ide.css.cssext.ui/dialog_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.fx.ide.css.ui/dialog_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.launching/.install.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2017/5/21/refactorings.history</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.6.0.20150526-2032.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.intro/dialog_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.xtend.ide/dialog_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.xtend.ide/resource.change.registry</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.xtext.builder/builder.state</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.metadata/version.ini</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.project</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/caches/identified-project-coordinates.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/caches/manual-mappings.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_0.fdt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_0.fdx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_0.fnm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_0.frq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_0.nrm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_0.prx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_0.tii</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_0.tis</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/segments.gen</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/segments_1</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../5 Domain Model.vpp</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../5 Domain Model.vpp~3</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../5 Domain Model.vpp~4</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../5_Domain_Model.vpp.working</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Applicatie model.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/(zee)Hond.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/AP over.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Brandblusser.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Brandweerblauw.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Brandweergeel.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Brandweergroen.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Brandweerhelmen.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Brandweeroranje.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Brandweerrood.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Brandweerzwart.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/DichteDeur.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/DichteDeurBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/DichteDeurLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/DichteDeurOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/DichteDeurRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Egel.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Groenhaar.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Hakken.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Hipstersnor.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Hotspot.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Latifah.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Medkit.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 1kapot.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 1kapotBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 1kapotLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 1kapotOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 1kapotRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 2kapot.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 2kapotBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 2kapotLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 2kapotOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur 2kapotRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Muur.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/MuurBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/MuurLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/MuurOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/MuurRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Obamanigua.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Oma.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/OpenDeur.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/OpenDeurBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/OpenDeurLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/OpenDeurOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/OpenDeurRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Openen deur.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Paarshaar.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/PaarshaarHipster.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Pick up.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/RarebrilHipster.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Rijden.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Rolswap.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Roodhaar.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Rook.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Snek.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Thumbs.db</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Vis.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Vlam.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Vraagteken.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../GFX/Wagenblussen.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Probably not usable/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Probably not usable/.idea/modules.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Probably not usable/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Probably not usable/Probably not usable.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Probably not usable/src/Derp.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/.idea/compiler.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/.idea/description.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/.idea/encodings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/.idea/gradle.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/.idea/modules.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/.idea/uiDesigner.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/.idea/vcs.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/TestView.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/out/production/TestView/sample/Main.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/out/production/TestView/sample/fxml.fxml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/out/production/TestView/sample/sampleController.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/src/sample/Main.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/src/sample/sample.fxml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../TestView/src/sample/sampleController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin/src/flashpoint/RMI.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/AIActie.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Auto.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Bewegen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Blussen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandhaard.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandhaardHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitBediener.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandspuitGebruiken.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/BrandweerliedenHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Brandweerwagen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Character.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/ChatBox.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Commandant.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Condition.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Controller.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Deur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/DeurOpenenSluiten.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dobbelsteen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Dokter.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/ExplosieHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Functiewissel.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/GS.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/GSHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/GameInfoPusher.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Gaspakdrager.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Hakken.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Lose.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Mannetjesputter.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Muur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/NewRook.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Object.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Oppakken.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenGS.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/OppakkenPVA.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVA.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAAanvullen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/PVAHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Reddingsspecialist.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rijden.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Rook.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpecialistGS.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speelveld.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Speler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerActie.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/SpelerTextPusher.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Taal.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/UitbreidenVuur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vak.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Verkenner.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/VonkoverslagHandler.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Vuur.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Win.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/Ziekenwagen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/flashpoint/bin1/flashpoint/fxml.fxml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../kanslooss/.classpath</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../kanslooss/.project</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../kanslooss/.settings/org.eclipse.jdt.core.prefs</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../kanslooss/bin/kansloos/nietaankomen.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../kanslooss/bin/kansloos/nogeens.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../kanslooss/src/kansloos/nietaankomen.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../kanslooss/src/kansloos/nogeens.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="fxml&#9;PSI&#9;JAVA://flashpoint.FXMLController&#10;vak&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Vak.java&#10;speel&#9;PSI&#9;JAVA://flashpoint.Speelveld&#10;speler&#9;FILE&#9;file://C:/Users/Joep Oonk/GIT/Workspace/flashpoint/src/flashpoint/Speler.java" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -759,26 +130,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="flashpoint.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="flashpoint" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Bewegen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="flashpoint.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="flashpoint.Bewegen" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1028,7 +379,6 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1157,12 +507,6 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1178,139 +522,65 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="2">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Bewegen" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Bewegen" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="568f7501-3345-43f6-8ca4-65d5dbed6afd" name="Default" comment="" />
-      <created>1495545613148</created>
+      <changelist id="72e7dcb4-1fd8-4c1e-afc4-4e25a7366e26" name="Default" comment="" />
+      <created>1496148926769</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1495545613148</updated>
-      <workItem from="1495545618294" duration="2005000" />
-      <workItem from="1495622998184" duration="7829000" />
-      <workItem from="1496041714943" duration="574000" />
-      <workItem from="1496043012239" duration="242000" />
-<<<<<<< HEAD
-      <workItem from="1496043385288" duration="6730000" />
-      <workItem from="1496143693740" duration="138000" />
-=======
-      <workItem from="1496043385288" duration="2250000" />
-      <workItem from="1496143549145" duration="119000" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
+      <updated>1496148926769</updated>
+      <workItem from="1496148928121" duration="1040000" />
     </task>
-    <task id="LOCAL-00001" summary="aanpassinkje">
-      <created>1495623641565</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1495623641565</updated>
-    </task>
-    <task id="LOCAL-00002" summary="enum kleur aangemaakt, main speler aangemaakt, constructor veld aangepast">
-      <created>1495627361473</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1495627361473</updated>
-    </task>
-    <task id="LOCAL-00003" summary="niet veel aangepast">
-      <created>1495632274654</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1495632274654</updated>
-    </task>
-    <task id="LOCAL-00004" summary="GFX bijgewerkt.">
-      <created>1496054945365</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1496054945365</updated>
-    </task>
-    <task id="LOCAL-00005" summary="GFX bijgewerkt.">
-      <created>1496055040381</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1496055040381</updated>
-    </task>
-    <task id="LOCAL-00006" summary="GFX bijgewerkt.">
-      <created>1496055084151</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1496055084151</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="17518000" />
+    <option name="totallyTimeSpent" value="1040000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1370" height="735" extended-state="0" />
-=======
-    <option name="totallyTimeSpent" value="13019000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-<<<<<<< HEAD
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1318,13 +588,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="aanpassinkje" />
-    <MESSAGE value="enum kleur aangemaakt, main speler aangemaakt, constructor veld aangepast" />
-    <MESSAGE value="niet veel aangepast" />
-    <MESSAGE value="GFX bijgewerkt." />
-    <option name="LAST_COMMIT_MESSAGE" value="GFX bijgewerkt." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1335,163 +598,40 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="68">
-=======
-        <state relative-caret-position="60">
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java">
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXML.fxml">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="85">
-=======
-        <state relative-caret-position="75">
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="253">
+          <caret line="201" column="17" lean-forward="false" selection-start-line="201" selection-start-column="17" selection-end-line="201" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="1717">
-          <caret line="101" column="24" lean-forward="false" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+        <state relative-caret-position="209">
+          <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-        <state relative-caret-position="870">
-          <caret line="69" column="10" lean-forward="false" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Win.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/AIActie.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/RMI.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/AIActie.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Lose.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Win.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Kleur.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Main.java" />
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speler.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="68">
-=======
-        <state relative-caret-position="75">
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/FXMLController.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-=======
-        <state relative-caret-position="870">
-          <caret line="66" column="10" lean-forward="false" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Bewegen.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="1581">
-          <caret line="101" column="24" lean-forward="false" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Hakken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Vak.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashpoint/src/flashpoint/Speelveld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-        <state relative-caret-position="195">
-          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
->>>>>>> 5501c4ba350ef5c825bc86f19bf73d56be709aca
-          <folding />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
