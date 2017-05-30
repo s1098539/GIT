@@ -18,6 +18,9 @@ public class Vak {
     }
 
     public Muur[] getMuren() {
+        for (int i = 0; i<muren.length; i++) {
+            System.out.println(muren[i]);
+        }
         return muren;
     }
 

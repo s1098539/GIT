@@ -99,7 +99,7 @@ public class FXMLController {
 
         btnSpecial.setOnAction((event) -> {
             System.out.println("Special");
-            deurOpenenSluiten.run(0,speler1,speelveld);
+            hakken.run(1,speler1,speelveld);
         });
 
         btnEndTurn.setOnAction((event) -> {
