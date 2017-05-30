@@ -1,14 +1,11 @@
 package flashpoint;
 
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -57,11 +54,10 @@ public class FXMLController {
     }
 
     @FXML private void initialize() {
-        ImageView iv2 = new ImageView(new Image("GFX/Achtergrond.jpeg"));
-//        int x = 75;
-        iv2.setFitHeight(800);
-        iv2.setFitWidth(600);
-        iv2.setRotate(270);
+        ImageView iv2 = new ImageView(new Image("GFX/Snek.png"));
+        int x = 75;
+        iv2.setFitHeight(x);
+        iv2.setFitWidth(x);
 
         DeurOpenenSluiten deurOpenenSluiten = new DeurOpenenSluiten();
         Hakken hakken = new Hakken();
@@ -71,7 +67,6 @@ public class FXMLController {
         Speler speler1 = new Speler("Joep", Kleur.ROOD, iv2);
         speler1.setLocatieAll(2,4);
         gridpane.add(iv2,speler1.getLocatieX(),speler1.getLocatieY());
-
 
 
         speelveld.getVakken()[3][3].addDeur(0);
@@ -86,8 +81,6 @@ public class FXMLController {
             System.out.println("LEFT");
             bewegen.run(3,speler1,speelveld,gridpane);
         });
-
-
 
         btnRIGHT.setOnAction((event) -> {
             System.out.println("RIGHT");
