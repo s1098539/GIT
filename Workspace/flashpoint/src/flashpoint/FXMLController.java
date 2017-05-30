@@ -54,7 +54,7 @@ public class FXMLController {
     }
 
     @FXML private void initialize() {
-        ImageView iv2 = new ImageView(new Image("gfx/bord.png"));
+        ImageView iv2 = new ImageView(new Image("gfx/snek.png"));
         int x = 600;
         int y = 480;
         iv2.setFitHeight(y);
