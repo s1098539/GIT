@@ -50,7 +50,7 @@ public class Object {
         }
     }
 
-    class Vuur{
+    static class Vuur extends Object{
         ImageView imageView = new ImageView(new Image("gfx/Vuur.png"));
         String naam = "Vuur";
 

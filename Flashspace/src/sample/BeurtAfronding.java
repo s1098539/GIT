@@ -25,11 +25,22 @@ public class BeurtAfronding {
         d8.gooi();
         int x = d8.getWaarde();
         int y = d6.getWaarde();
-        if(veld.getVakken()[x][y].
+        if(veld.getVakken()[x][y].getObjecten()[6] == null){
+            Object.Rook rook = new Object.Rook();
+            veld.getVakken()[x][y].addObject(rook);
+        }
+        else if(veld.getVakken()[x][y].getObjecten()[6].getNaam() == "Rook"){
+            Object.Vuur vuur = new Object.Vuur();
+            veld.getVakken()[x][y].addObject(vuur);
+        }
+        else if(veld.getVakken()[x][y].getObjecten()[6].getNaam() == "Vuur"){
+            handleExplosie(x, y);
+        }
+
+//        if(veld.getVakken()[x][y].getObjecten()[6].getNaam() == "Rook")
 
 
-        Object.Rook rook = new Object.Rook();
-        veld.getVakken()[x][y].addObject(rook);
+
 
     }
 
@@ -39,10 +50,35 @@ public class BeurtAfronding {
 	}
 
 
-	public void handleExplosie() {
-		// TODO - implement BeurtAfronding.handleExplosie
-		throw new UnsupportedOperationException();
-	}
+	public void handleExplosie(int x, int y) {
+        int obstakel;
+        for(int i=0; i<4; i++) {
+            obstakel = veld.getVakken()[x][y].checkObstakels(i);
+                switch(obstakel){
+                    case 0 : veld.getVakken()[x][y].setObstakel(i, 1);
+                             switch(i){
+                                 case 0: veld.getVakken()[x][y-1].setObstakel(2, 1);
+                                 case 1: veld.getVakken()[x+1][y].setObstakel(3, 1);
+                                 case 2: veld.getVakken()[x][y+1].setObstakel(4, 1);
+                                 case 3: veld.getVakken()[x-1][y].setObstakel(1, 1);
+                             }
+                        break;
+                    case 1 : veld.getVakken()[x][y].setObstakel(i, 1);
+                             switch(i){
+                                 case 0: veld.getVakken()[x][y-1].setObstakel(2, 2);
+                                 case 1: veld.getVakken()[x+1][y].setObstakel(3, 2);
+                                 case 2: veld.getVakken()[x][y+1].setObstakel(4, 2);
+                                 case 3: veld.getVakken()[x-1][y].setObstakel(1, 2);
+                             }
+                        break;
+                    default:
+                        break;
+//                    case 2 : veld
+                }
+
+            }
+        }
+
 
 	public void handleVonkoverslag() {
 		// TODO - implement BeurtAfronding.handleVonkoverslag
