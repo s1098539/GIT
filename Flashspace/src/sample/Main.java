@@ -19,8 +19,8 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         Speelveld veld = new Speelveld();
-        Object.Rook rook = new Object.Rook();
-        veld.getVakken()[2][2].addObject(rook);
+        BeurtAfronding ba = new BeurtAfronding(veld);
+        ba.newRook();
         //launch(args);
 
     }

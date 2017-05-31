@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flashpoint.FXMLController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <top>
         <HBox prefHeight="50.0" prefWidth="700.0" BorderPane.alignment="CENTER">
             <children>
@@ -66,7 +66,7 @@
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../gfx/Muur%202kapot.png" />
+                                                <Image url="@../../gfx/Muur2kapot.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
@@ -267,7 +267,7 @@
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../gfx/Pick%20up.png" />
+                                                <Image url="@../../gfx/Pickup.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
@@ -281,7 +281,7 @@
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../gfx/Openen%20deur.png" />
+                                                <Image url="@../../gfx/Openendeur.png" />
                                             </image>
                                         </ImageView>
                                         <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
