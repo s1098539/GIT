@@ -1,16 +1,25 @@
+package sample;
+import java.util.Random;
+
 public class Dobbelsteen {
 
 	private int waarde;
 	private int aantalOgen;
 
-	public void rol() {
-		// TODO - implement Dobbelsteen.rol
-		throw new UnsupportedOperationException();
-	}
+    public Dobbelsteen(int aantalOgen) {
+        this.aantalOgen = aantalOgen;
+    }
 
-	public void flip() {
-		// TODO - implement Dobbelsteen.flip
-		throw new UnsupportedOperationException();
-	}
+    public void gooi() {
+        Random random = new Random();
+        waarde = random.nextInt(aantalOgen)+1;
+    }
 
+    public void flip() {
+        waarde = aantalOgen+1-waarde;
+    }
+
+    public int getWaarde() {
+        return waarde;
+    }
 }
