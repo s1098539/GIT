@@ -5,7 +5,7 @@ public class SpelerActie {
 //	private int BeweegActie;        Done (Lion)!!!
 //	private int DeurInteractie;     Done (Lion)!!!
 //	private int MuurInteractie;     Done (Lion)!!!
-//	private int BlusActie;
+//	private int BlusActie;          Working on it (Lion)
 //	private int OppakActie;
 //	private int RijActie;
 //	private int FunctiewisselActie;
@@ -19,8 +19,12 @@ public class SpelerActie {
     public SpelerActie(Speler speler, Speelveld speelveld) {
     }
 
+    public Vak spelerLocatieVak() {
+        return speelveld.getVak(speler.getX(),speler.getY());
+    }
+
     public void beweegwactie(int richting) {
-        Vak vak = speelveld.getVak(speler.getX(), speler.getY());
+        Vak vak = spelerLocatieVak();
         vak.removeSpeler(speler);
         switch(richting) {
             case 0: if(vak.checkObstakels(0)==2 || vak.checkObstakels(0)>3) {
@@ -40,7 +44,7 @@ public class SpelerActie {
     }
 
     public void deurInteractie(int richting) {
-        Vak vak = speelveld.getVak(speler.getX(), speler.getY());
+        Vak vak = spelerLocatieVak();
         switch (vak.checkObstakels(richting)) {
             case 3:
                 vak.setObstakel(richting, 4);
@@ -55,7 +59,7 @@ public class SpelerActie {
     }
 
     private void muurInteractie(int richting) {
-        Vak vak = speelveld.getVak(speler.getX(), speler.getY());
+        Vak vak = spelerLocatieVak();
         switch (vak.checkObstakels(richting)) {
             case 0:
                 vak.setObstakel(richting, 1);
@@ -84,6 +88,14 @@ public class SpelerActie {
             case 3:
                 speelveld.getVak(speler.getX() - 1, speler.getY()).setObstakel(0, obstakel);
                 break;
+        }
+    }
+
+    private void blusActie(int richting) {
+        Vak vak = spelerLocatieVak();
+        switch (richting) {
+            case 0:
+
         }
     }
 }
