@@ -4,6 +4,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Object {
+
     //Dit worden classes
 //	private int Vuur;
 //	private int Rook;
