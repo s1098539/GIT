@@ -26,6 +26,7 @@ public class Object {
                 break;
             case "Vuur": Vuur vuur = new Vuur();
                 break;
+            case "GevaarlijkeStof": GevaarlijkeStof gevaarlijkeStof = new GevaarlijkeStof();
         }
 	}
 
@@ -60,6 +61,27 @@ public class Object {
 
         public Vuur() {
         }
+    static class GevaarlijkeStof extends Object{
+        ImageView imageView = new ImageView(new Image("gfx/Vuur.png"));
+        String naam = "GevaarlijkeStof";
+    }
+
+    static class BrandHaard extends Object{
+        ImageView imageView = new ImageView(new Image("gfx/Brandhaard.png"));
+        String naam = "Brandhaard";
+    }
+    static class PersoonVanAandacht extends Object{
+        ImageView imageView = new ImageView(new Image("gfx/PersoonVanAandacht.png"));
+        String naam = "PersoonVanAandacht";
+    }
+    static class Ziekenwagen extends Object{
+        ImageView imageView = new ImageView(new Image("gfx/Ziekenwagen.png"));
+        String naam = "Ziekenwagen";
+    }
+    static class Brandweerwagen extends Object{
+        ImageView imageView = new ImageView(new Image("gfx/Brandweerwagen.png"));
+        String naam = "Brandweerwagen";
+    }
     }
 
 }
