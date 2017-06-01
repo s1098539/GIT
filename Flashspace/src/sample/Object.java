@@ -111,7 +111,6 @@ public class Object {
 
     static class PersoonVanAandacht extends Object{
         String naam = "PersoonVanAandacht";
-
         if (omgedraait) {
             ImageView imageView = new ImageView(new Image("gfx/PersoonVanAandacht.png"));
         } else {
