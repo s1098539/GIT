@@ -4,6 +4,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Object {
+//mee bezig norddin
 
     //Dit worden classes
 //	private int Vuur;
@@ -50,10 +51,16 @@ public class Object {
         return naam;
     }
 
-	public void persoonVanAandachtOmdraaien(boolean omgedraait) {
-        omgedraait = true;
+    public boolean getOmgedraait(){return this.active;}
+
+    public void setOmgedraait(boolean omgedraait) {
+        this.omgedraait = omgedraait;
+    }
+
+	public void persoonVanAandachtOmdraaien(PersoonVanAandacht persoonVanAandacht) {
+        omgedraait.setOmgedraait(true);
+        persoonVanAandacht = new PersoonVanAandacht(omgedraait);
 		// TODO - implement Object.persoonVanAandachtOmdraaien
-		throw new UnsupportedOperationException();
 	}
 
     static class Rook extends Object{
@@ -104,7 +111,8 @@ public class Object {
 
     static class PersoonVanAandacht extends Object{
         String naam = "PersoonVanAandacht";
-        if(boolean omgedraait == true   ) {
+
+        if (omgedraait) {
             ImageView imageView = new ImageView(new Image("gfx/PersoonVanAandacht.png"));
         } else {
             ImageView imageView = new ImageView(new Image("gfx/PersoonVanAandachtVerborgen.png"));
@@ -114,6 +122,8 @@ public class Object {
         }
 
         public PersoonVanAandacht(boolean omgedraait) {
+            this.omgedraait = omgedraait;
+
         }
     }
 
@@ -129,6 +139,7 @@ public class Object {
         }
     }
 
+
     static class Brandweerwagen extends Object{
         ImageView imageView = new ImageView(new Image("gfx/Brandweerwagen.png"));
         String naam = "Brandweerwagen";
@@ -137,10 +148,9 @@ public class Object {
             return naam;
         }
 
-        public BrandweerWagen() {
+        public Brandweerwagen() {
         }
     }
 
     }
 
-}
