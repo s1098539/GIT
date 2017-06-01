@@ -23,4 +23,8 @@ public class Speelveld {
     public Vak[][] getVakken() {
         return vakken;
     }
+
+    public Vak getVak(int x, int y) {
+        return vakken[x][y];
+    }
 }
