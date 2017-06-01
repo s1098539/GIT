@@ -16,7 +16,6 @@ public class Object {
 //	private int Brandweerwagen;
 
     String naam;
-    boolean omgedraait = false;
 
     public Object() {
     }
@@ -37,7 +36,7 @@ public class Object {
                 BrandHaard brandHaard = new BrandHaard();
                 break;
             case "PersoonVanAandacht":
-                PersoonVanAandacht persoonVanAandacht = new PersoonVanAandacht(omgedraait);
+                PersoonVanAandacht persoonVanAandacht = new PersoonVanAandacht();
                 break;
             case "Ziekenwagen":
                 Ziekenwagen ziekenwagen = new Ziekenwagen();
@@ -50,18 +49,6 @@ public class Object {
 	public String getNaam() {
         return naam;
     }
-
-    public boolean getOmgedraait(){return this.active;}
-
-    public void setOmgedraait(boolean omgedraait) {
-        this.omgedraait = omgedraait;
-    }
-
-	public void persoonVanAandachtOmdraaien(PersoonVanAandacht persoonVanAandacht) {
-        omgedraait.setOmgedraait(true);
-        persoonVanAandacht = new PersoonVanAandacht(omgedraait);
-		// TODO - implement Object.persoonVanAandachtOmdraaien
-	}
 
     static class Rook extends Object{
         ImageView imageView = new ImageView(new Image("gfx/Rook.png"));
@@ -111,19 +98,25 @@ public class Object {
 
     static class PersoonVanAandacht extends Object{
         String naam = "PersoonVanAandacht";
-        if (omgedraait) {
-            ImageView imageView = new ImageView(new Image("gfx/PersoonVanAandacht.png"));
-        } else {
-            ImageView imageView = new ImageView(new Image("gfx/PersoonVanAandachtVerborgen.png"));
+        boolean omgedraait =false ;
+        ImageView imageView = new ImageView(new Image("gfx/PersoonVanAandachtVerborgen.png"));
+
+        public PersoonVanAandacht() {
+        }
+
+        public boolean isOmgedraait() {
+            return omgedraait;
+        }
+
+        public void persoonVanAandachtOmdraaien() {
+            omgedraait = true;
+            imageView = new ImageView(new Image("gfx/PersoonVanAandacht.png"));
+
         }
         public String getNaam() {
             return naam;
         }
 
-        public PersoonVanAandacht(boolean omgedraait) {
-            this.omgedraait = omgedraait;
-
-        }
     }
 
     static class Ziekenwagen extends Object{
