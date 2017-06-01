@@ -137,10 +137,10 @@ public class Object {
             return naam;
         }
 
-        public BrandweerWagen() {
+        public Brandweerwagen() {
         }
-    }
 
     }
 
 }
+
