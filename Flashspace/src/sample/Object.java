@@ -36,7 +36,7 @@ public class Object {
                 BrandHaard brandHaard = new BrandHaard();
                 break;
             case "PersoonVanAandacht":
-                PersoonVanAandacht persoonVanAandacht = new PersoonVanAandacht();
+                PersoonVanAandacht persoonVanAandacht = new PersoonVanAandacht(omgedraait);
                 break;
             case "Ziekenwagen":
                 Ziekenwagen ziekenwagen = new Ziekenwagen();
