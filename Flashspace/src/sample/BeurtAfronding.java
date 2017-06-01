@@ -43,7 +43,7 @@ public class BeurtAfronding {
 	}
 
 
-	public void handleExplosie(int x, int y) {
+	public void handleExplosie(int x, int y) {//Work in progress - Joep
         int obstakel;
         boolean doorgaan;
         int teller;
@@ -51,14 +51,51 @@ public class BeurtAfronding {
             teller = 0;
             doorgaan = true;
             if (richting == 0){
-                while (y >= 0 && doorgaan) {
+                while ((y - teller > 0) && doorgaan) {
                     obstakel = veld.getVakken()[x][y - teller].checkObstakels(richting);
                     if (obstakel < 2 || obstakel == 3) {
                         schade(richting, x, y);
                         doorgaan = false;
-                    } else if (y>1) {
+                    } else if (y-teller>0) {
                         teller++;
                         veld.getVakken()[x][y - teller].addObject(new Object.Vuur());
+                    }
+                }
+            }
+            if (richting == 1){
+                while ((x + teller < 9) && doorgaan) {
+                    obstakel = veld.getVakken()[x + teller][y].checkObstakels(richting);
+                    if (obstakel < 2 || obstakel == 3) {
+                        schade(richting, x+teller, y);
+                        doorgaan = false;
+                    } else if (x+teller<9) {
+                        teller++;
+                        veld.getVakken()[x+teller][y].addObject(new Object.Vuur());
+                    }
+                }
+            }
+            if (richting == 2){
+                while ((y + teller < 7) && doorgaan) {
+                    obstakel = veld.getVakken()[x][y + teller].checkObstakels(richting);
+                    if (obstakel < 2 || obstakel == 3) {
+                        schade(richting, x, y+teller);
+                        doorgaan = false;
+                    } else if (y+teller>0) {
+                        teller++;
+                        veld.getVakken()[x][y + teller].addObject(new Object.Vuur());
+                    }
+                }
+            }
+            if (richting == 3){
+                while ((x - teller > 0) && doorgaan) {
+                    obstakel = veld.getVakken()[x + teller][y].checkObstakels(richting);
+                    if (obstakel < 2 || obstakel == 3) {
+                        schade(richting, x - teller, y);
+                        doorgaan = false;
+                    }
+                    else if (x-teller>0) {
+                        teller++;
+                        veld.getVakken()[x-teller][y].addObject(new Object.Vuur());
                     }
                 }
             }
