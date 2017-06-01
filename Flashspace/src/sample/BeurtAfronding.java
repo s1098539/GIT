@@ -103,14 +103,6 @@ public class BeurtAfronding {
     }
 
 
-//        for(int richting = 0; richting<4; richting++){
-//            while (obstakel != 0 || obstakel != 1 || obstakel != 3) {
-//                obstakel = veld.getVakken()[x][y].checkObstakels(richting);
-//           }
-//        }
-
-
-        }
 
     public void schade(int richting, int x, int y){
         int obstakel = veld.getVakken()[x][y].checkObstakels(richting);
