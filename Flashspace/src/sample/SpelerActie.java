@@ -5,7 +5,7 @@ public class SpelerActie {
 //	private int BeweegActie;        Done (Lion)!!!
 //	private int DeurInteractie;     Done (Lion)!!!
 //	private int MuurInteractie;     Done (Lion)!!!
-//	private int BlusActie;          Working on it (Lion)
+//	private int BlusActie;          Done (Lion)!!!
 //	private int OppakActie;
 //	private int RijActie;
 //	private int FunctiewisselActie;
@@ -15,6 +15,7 @@ public class SpelerActie {
 
     Speler speler;
     Speelveld speelveld;
+    Vak vak;
 
     public SpelerActie(Speler speler, Speelveld speelveld) {
     }
@@ -92,10 +93,26 @@ public class SpelerActie {
     }
 
     private void blusActie(int richting) {
-        Vak vak = spelerLocatieVak();
         switch (richting) {
             case 0:
-
+                vak = speelveld.getVak(speler.getX(), speler.getY()-1);
+                break;
+            case 1:
+                vak = speelveld.getVak(speler.getX()+1, speler.getY());
+                break;
+            case 2:
+                vak = speelveld.getVak(speler.getX(), speler.getY()+1);
+                break;
+            case 3:
+                vak = speelveld.getVak(speler.getX()-1, speler.getY());
+                break;
+        }
+        if(vak.getObjecten()[6].getNaam().equals("Vuur")){
+            vak.addObject(new Object.Rook());
+        }
+        if(vak.getObjecten()[6].getNaam().equals("Rook")) {
+            vak.getObjecten()[6] = null;
         }
     }
 }
+
