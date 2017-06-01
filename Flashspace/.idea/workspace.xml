@@ -1,196 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0443b15d-02da-4eb8-aaef-1f5cf9a57f21" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/Flashspace.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/description.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/ant.xml" afterPath="$PROJECT_DIR$/../.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/compiler.xml" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/description.html" afterPath="$PROJECT_DIR$/../.idea/description.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/encodings.xml" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/gradle.xml" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/modules.xml" afterPath="$PROJECT_DIR$/../.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/vcs.xml" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="0443b15d-02da-4eb8-aaef-1f5cf9a57f21" name="Default" comment="Beweeg actie is klaar">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/Character.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/ChatBox.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/SpelerActie.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/Taal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/BeurtAfronding.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Controller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Dobbelsteen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Rook.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Vuur.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Richting.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Speelveld.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Vak.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flashspace.iml" afterPath="$PROJECT_DIR$/Flashspace.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/Flashspace.iml" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/Flashspace.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/compiler.xml" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/description.html" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/description.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/encodings.xml" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/gradle.xml" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/misc.xml" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/modules.xml" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/vcs.xml" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Flashspace/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/Flashspace.iml" afterPath="$PROJECT_DIR$/out/production/Flashspace/Flashspace.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/src/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/Flashspace/src/sample/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/BeurtAfronding.java" afterPath="$PROJECT_DIR$/src/sample/BeurtAfronding.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Character.java" afterPath="$PROJECT_DIR$/src/sample/Character.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/ChatBox.java" afterPath="$PROJECT_DIR$/src/sample/ChatBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Dobbelsteen.java" afterPath="$PROJECT_DIR$/src/sample/Dobbelsteen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Object.java" afterPath="$PROJECT_DIR$/src/sample/Object.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Richting.java" afterPath="$PROJECT_DIR$/src/sample/Richting.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Speelveld.java" afterPath="$PROJECT_DIR$/src/sample/Speelveld.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Speler.java" afterPath="$PROJECT_DIR$/src/sample/Speler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SpelerActie.java" afterPath="$PROJECT_DIR$/src/sample/SpelerActie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Taal.java" afterPath="$PROJECT_DIR$/src/sample/Taal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Vak.java" afterPath="$PROJECT_DIR$/src/sample/Vak.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Workspace/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Workspace/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/../Workspace/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../Workspace/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Workspace/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.log" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/13/300e8492c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/13/300e8492c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/1b/701e35aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/1b/701e35aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/21/401e7392c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/21/401e7392c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/27/004d6692c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/27/004d6692c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2a/a0ea7892c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2a/a0ea7892c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2c/80b637aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2c/80b637aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2c/d0b28092c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2c/d0b28092c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2e/e0867992c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2e/e0867992c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/34/20057f92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/34/20057f92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/3c/d00c7292c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/3c/d00c7292c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4/b0186392c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4/b0186392c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/48/50d47092c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/48/50d47092c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4b/e0a47492c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4b/e0a47492c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/52/b06b6a92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/52/b06b6a92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/53/904e3aaac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/53/904e3aaac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/54/6000f096ae3f0017139396d39e006f76" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/54/6000f096ae3f0017139396d39e006f76" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/55/c0c77692c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/55/c0c77692c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/5e/2006bf6aaf3f0017139396d39e006f76" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/5e/2006bf6aaf3f0017139396d39e006f76" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/60/90168092c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/60/90168092c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/61/505f32aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/61/505f32aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/6e/c07033aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/6e/c07033aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7/90ac6792c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7/90ac6792c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/71/101639aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/71/101639aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7c/308234aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7c/308234aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/83/d0238392c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/83/d0238392c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/88/007e36aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/88/007e36aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/90/e0516d92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/90/e0516d92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/91/a0626592c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/91/a0626592c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/94/70cf6992c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/94/70cf6992c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/97/e0e06a92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/97/e0e06a92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/9b/60838492c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/9b/60838492c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/9e/20768192c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/9e/20768192c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/9f/e0b4015fb43f00171913e88d70ce1955" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/9f/e0b4015fb43f00171913e88d70ce1955" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a2/80d432aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a2/80d432aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a3/60128292c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a3/60128292c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a4/00998392c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a4/00998392c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b/f0065190d63f0017177ce51fbe8390ce" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b/f0065190d63f0017177ce51fbe8390ce" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b1/401a37aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b1/401a37aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b1/70577d92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b1/70577d92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b1/90e17392c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b1/90e17392c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b2/70b16e92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b2/70b16e92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b3/20237a92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b3/20237a92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ba/306baeccb63f00171f0d89dd77c391e8" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ba/306baeccb63f00171f0d89dd77c391e8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/be/d01ec307c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/be/d01ec307c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/c3/f0e533aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/c3/f0e533aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/cc/60d939aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/cc/60d939aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/cd/10036492c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/cd/10036492c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/d3/408f7592c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/d3/408f7592c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/dd/10387092c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/dd/10387092c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/dd/309836b0c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/dd/309836b0c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/df/40e96692c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/df/40e96692c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e0/908e6c92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e0/908e6c92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e2/10ef1315c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e2/10ef1315c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e7/b04d6f92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e7/b04d6f92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/eb/409712d0d63f00171a8c9c142871ddfe" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/eb/409712d0d63f00171a8c9c142871ddfe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/eb/f0c738aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/eb/f0c738aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ed/806330aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ed/806330aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ee/80a36292c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ee/80a36292c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/f6/10e56892c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/f6/10e56892c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/f7/d07045fcd63f0017177ce51fbe8390ce" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/f7/d07045fcd63f0017177ce51fbe8390ce" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/fb/a0cc7d92c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/fb/a0cc7d92c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/fc/f07431aac33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/fc/f07431aac33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ff/40076292c33f001710b6c08e43572a74" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ff/40076292c33f001710b6c08e43572a74" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/flashpoint/org.eclipse.egit.core/GitProjectData.properties" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/flashpoint/org.eclipse.egit.core/GitProjectData.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.css.swt.theme.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.css.swt.theme.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.pde.api.tools.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.pde.api.tools.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.tigris.subversion.subclipse.tools.usage.prefs" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.tigris.subversion.subclipse.tools.usage.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.equinox.p2.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.equinox.p2.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.fx.ide.css.cssext.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.fx.ide.css.cssext.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.fx.ide.css.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.fx.ide.css.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.core/indexNamesMap.txt" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.core/indexNamesMap.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2017/5/21/refactorings.history" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2017/5/21/refactorings.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2017/5/21/refactorings.index" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2017/5/21/refactorings.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/flashpoint/2017/5/21/refactorings.history" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/flashpoint/2017/5/21/refactorings.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/.local_targets/1495557885830.target" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/.local_targets/1495557885830.target" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/.local_targets/1495558168044.target" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/.local_targets/1495558168044.target" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/.local_targets/1495560055976.target" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/.local_targets/1495560055976.target" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/SavedExternalPluginList.txt" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.pde.core/SavedExternalPluginList.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ui.intro/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ui.intro/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.tigris.subversion.subclipse.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Workspace/.metadata/.plugins/org.tigris.subversion.subclipse.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/.metadata/version.ini" afterPath="$PROJECT_DIR$/../Workspace/.metadata/version.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/bin/.classpath" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/bin/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/bin/.gitignore" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/bin/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/bin/bin/.project" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/bin/bin/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/bin/flashpoint.iml" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/bin/flashpoint.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/bin/flashpoint/FXML.fxml" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/bin/flashpoint/FXML.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/bin/src/flashpoint/FXML.fxml" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/bin/src/flashpoint/FXML.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/.classpath" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/.project" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatListen.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatListen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatListenInterface.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatListenInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatSend.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatSend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatServer.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatServerInterface.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatServerInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatView.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/ChatView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/Message.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/Scrapbook.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/chatApp/src/Scrapbook.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/.idea/flashpoint.iml" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/.idea/flashpoint.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/FXML.fxml" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/FXML.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/FXMLController.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/FXMLController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/Hakken.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/Hakken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/Vak.java" afterPath="$PROJECT_DIR$/../Workspace/flashpoint/src/flashpoint/Vak.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -202,23 +32,77 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BeurtAfronding.java" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BeurtAfronding.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="112" column="64" lean-forward="true" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
+            <state relative-caret-position="1445">
+              <caret line="112" column="64" lean-forward="false" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpelerActie.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SpelerActie.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+            <state relative-caret-position="15">
+              <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Speler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Speler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+              <folding>
+                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#414#415#0" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#917#918#0" expanded="true" />
+                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#972#973#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kleur.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Kleur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Speelveld.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Speelveld.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+              <folding>
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -226,8 +110,8 @@
       <file leaf-file-name="Vak.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -236,7 +120,7 @@
       <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="60">
               <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
@@ -244,6 +128,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -257,6 +148,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/sample/BeurtAfronding.java" />
+        <option value="$PROJECT_DIR$/src/sample/Speelveld.java" />
+        <option value="$PROJECT_DIR$/src/sample/Character.java" />
+        <option value="$PROJECT_DIR$/src/sample/Kleur.java" />
+        <option value="$PROJECT_DIR$/src/sample/Vak.java" />
+        <option value="$PROJECT_DIR$/src/sample/Speler.java" />
+        <option value="$PROJECT_DIR$/src/sample/SpelerActie.java" />
       </list>
     </option>
   </component>
@@ -267,9 +164,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -288,6 +184,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -320,8 +218,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -349,6 +245,61 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -372,6 +323,160 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -393,12 +498,80 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Flashspace" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -429,6 +602,22 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -441,51 +630,99 @@
       <option name="presentableId" value="Default" />
       <updated>1496306440448</updated>
       <workItem from="1496306446324" duration="3988000" />
+      <workItem from="1496310618737" duration="4384000" />
     </task>
+    <task id="LOCAL-00001" summary="Had een speler nodig dus die hebben we nu \o/">
+      <created>1496311005635</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1496311005635</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Enum kleur">
+      <created>1496313265628</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1496313265628</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3988000" />
+    <option name="totallyTimeSpent" value="8372000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.246875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Had een speler nodig dus die hebben we nu \o/" />
+    <MESSAGE value="Enum kleur" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enum kleur" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -496,6 +733,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -504,26 +749,106 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="60">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="112" column="64" lean-forward="true" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
+        <state relative-caret-position="1445">
+          <caret line="112" column="64" lean-forward="false" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Speelveld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Kleur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Speler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
           <folding />
         </state>
       </provider>

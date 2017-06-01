@@ -15,6 +15,7 @@ public class Object {
 //	private int Brandweerwagen;
 
     String naam;
+    boolean omgedraait = false;
 
     public Object() {
     }
@@ -22,10 +23,26 @@ public class Object {
 
 	public void createObjects(String objectNaam) {
 		switch(objectNaam) {
-            case "Rook": Rook rook = new Rook();
+            case "Rook":
+                Rook rook = new Rook();
                 break;
-            case "Vuur": Vuur vuur = new Vuur();
+            case "Vuur":
+                Vuur vuur = new Vuur();
                 break;
+            case "GevaarlijkeStof":
+                GevaarlijkeStof gevaarlijkeStof = new GevaarlijkeStof();
+                break;
+            case "Brandhaard":
+                BrandHaard brandHaard = new BrandHaard();
+                break;
+            case "PersoonVanAandacht":
+                PersoonVanAandacht persoonVanAandacht = new PersoonVanAandacht(omgedraait);
+                break;
+            case "Ziekenwagen":
+                Ziekenwagen ziekenwagen = new Ziekenwagen();
+                break;
+            case "brandweerwagen":
+                Brandweerwagen brandweerwagen = new Brandweerwagen();
         }
 	}
 
@@ -33,7 +50,8 @@ public class Object {
         return naam;
     }
 
-	public void persoonVanAandachtOmdraaien() {
+	public void persoonVanAandachtOmdraaien(boolean omgedraait) {
+        omgedraait = true;
 		// TODO - implement Object.persoonVanAandachtOmdraaien
 		throw new UnsupportedOperationException();
 	}
@@ -50,7 +68,7 @@ public class Object {
         }
     }
 
-    static class Vuur extends Object{
+    static class Vuur extends Object {
         ImageView imageView = new ImageView(new Image("gfx/Vuur.png"));
         String naam = "Vuur";
 
@@ -60,6 +78,69 @@ public class Object {
 
         public Vuur() {
         }
+    }
+    static class GevaarlijkeStof extends Object {
+        ImageView imageView = new ImageView(new Image("gfx/GevaarlijkeStof.png"));
+        String naam = "gevaarlijkeStof";
+
+        public String getNaam() {
+            return naam;
+        }
+
+        public GevaarlijkeStof() {
+        }
+    }
+    static class BrandHaard extends Object{
+        ImageView imageView = new ImageView(new Image("gfx/Brandhaard.png"));
+        String naam = "Brandhaard";
+
+        public String getNaam() {
+            return naam;
+        }
+
+        public BrandHaard() {
+        }
+    }
+
+    static class PersoonVanAandacht extends Object{
+        String naam = "PersoonVanAandacht";
+        if(boolean omgedraait == true   ) {
+            ImageView imageView = new ImageView(new Image("gfx/PersoonVanAandacht.png"));
+        } else {
+            ImageView imageView = new ImageView(new Image("gfx/PersoonVanAandachtVerborgen.png"));
+        }
+        public String getNaam() {
+            return naam;
+        }
+
+        public PersoonVanAandacht(boolean omgedraait) {
+        }
+    }
+
+    static class Ziekenwagen extends Object{
+        ImageView imageView = new ImageView(new Image("gfx/Ziekenwagen.png"));
+        String naam = "Ziekenwagen";
+
+        public String getNaam() {
+            return naam;
+        }
+
+        public Ziekenwagen() {
+        }
+    }
+
+    static class Brandweerwagen extends Object{
+        ImageView imageView = new ImageView(new Image("gfx/Brandweerwagen.png"));
+        String naam = "Brandweerwagen";
+
+        public String getNaam() {
+            return naam;
+        }
+
+        public BrandweerWagen() {
+        }
+    }
+
     }
 
 }

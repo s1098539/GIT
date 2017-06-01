@@ -1,3 +1,4 @@
+package sample;
 public class Character {
 
 	private int Verkenner;
