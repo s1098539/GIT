@@ -3,7 +3,7 @@ public class SpelerActie {
 
 //    Dit worden functies
 //	private int BeweegActie;        Done (Lion)!!!
-//	private int DeurInteractie;
+//	private int DeurInteractie;     Done (Lion)!!!
 //	private int MuurInteractie;
 //	private int BlusActie;
 //	private int OppakActie;
@@ -38,4 +38,36 @@ public class SpelerActie {
         }
         speelveld.getVak(speler.getX(), speler.getY()).addSpeler(speler);
     }
+
+    public void DeurInteractie(int richting) {
+        Vak vak = speelveld.getVak(speler.getX(), speler.getY());
+        switch (vak.checkObstakels(richting)) {
+            case 3:
+                vak.setObstakel(richting, 4);
+                DeurInteractieloop(richting);
+                break;
+            case 4:
+                vak.setObstakel(richting, 3);
+                DeurInteractieloop(richting);
+            default:
+                System.out.println("404 deur not found");
+        }
+    }
+
+    private void DeurInteractieloop(int richting) {
+        switch (richting) {
+            case 0:
+                speelveld.getVak(speler.getX(), speler.getY() - 1).setObstakel(2, 4);
+                break;
+            case 1:
+                speelveld.getVak(speler.getX() + 1, speler.getY()).setObstakel(2, 4);
+                break;
+            case 2:
+                speelveld.getVak(speler.getX(), speler.getY() + 1).setObstakel(2, 4);
+                break;
+            case 3:
+                speelveld.getVak(speler.getX() - 1, speler.getY()).setObstakel(2, 4);
+                break;
+            }
+        }
 }
