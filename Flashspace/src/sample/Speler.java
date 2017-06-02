@@ -6,6 +6,7 @@ public class Speler {
 	public Kleur kleur;
 	public int x;
 	public int y;
+    public Object rugtas;
 
     public Speler(String naam, Character character, Kleur kleur, int x, int y) {
         this.naam = naam;
@@ -53,5 +54,13 @@ public class Speler {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public Object getRugtas() {
+        return rugtas;
+    }
+
+    public void setRugtas(Object rugtas) {
+        this.rugtas = rugtas;
     }
 }

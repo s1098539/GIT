@@ -173,6 +173,28 @@ public class SpelerActie {
             }
         }
     }
+
+    public void oppakActie(String object){
+        int x =speler.getX();
+        int y = speler.getY();
+        Vak vak = speelveld.getVak(x,y);
+        if (speler.getRugtas()== null){
+            switch(object){
+                case "PersoonVanAandacht": speler.setRugtas(vak.getObjecten()[8]);
+                    break;
+                case "GevaarlijkeStof": speler.setRugtas(vak.getObjecten()[8]);
+            }
+        }
+        else if (speler.getRugtas().getNaam().equals("GevaarlijkeStof")){
+            vak.addObject(new Object.GevaarlijkeStof());
+            speler.setRugtas(null);
+        }
+        else if (speler.getRugtas().getNaam().equals("PersoonVanAandacht")){
+            vak.addObject(new Object.PersoonVanAandacht());
+            speler.setRugtas(null);
+        }
+
+    }
 }
 
 
