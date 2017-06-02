@@ -73,10 +73,10 @@ public class Vak {
             case "Vuur": objecten[6] = object;
                 System.out.println(objecten[6]);
                 break;
-            case "GS": objecten[8] = object;
+            case "GevaarlijkeStof": objecten[8] = object;
                 System.out.println(objecten[8]);
                 break;
-            case "PVA": objecten[2] = object;
+            case "PersoonVanAandacht": objecten[2] = object;
                 System.out.println(objecten[2]);
                 break;
         }

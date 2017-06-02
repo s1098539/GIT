@@ -75,7 +75,7 @@ public class Object {
     }
     static class GevaarlijkeStof extends Object {
         ImageView imageView = new ImageView(new Image("gfx/GevaarlijkeStof.png"));
-        String naam = "gevaarlijkeStof";
+        String naam = "GevaarlijkeStof";
 
         public String getNaam() {
             return naam;
