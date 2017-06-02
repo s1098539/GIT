@@ -9,13 +9,15 @@ public class SpelerActie {
 //	private int OppakActie;
 //	private int RijActie;
 //	private int FunctiewisselActie;
-//	private int BrandweerwagenSpuitActie;
+//	private int BrandweerwagenSpuitActie;       Done (Lion)!!!
 //	private int OppakkenPersoonVanAandachtActie;
 //	private int OppakkenGevaarlijkeStofActie;
 
     Speler speler;
     Speelveld speelveld;
     Vak vak;
+    Dobbelsteen d6 = new Dobbelsteen(6);
+    Dobbelsteen d8 = new Dobbelsteen(8);
 
     public SpelerActie(Speler speler, Speelveld speelveld) {
     }
@@ -114,5 +116,60 @@ public class SpelerActie {
             vak.getObjecten()[6] = null;
         }
     }
+
+    public void BrandweerwagenSpuitActie(int kwadrant) {
+        d6.gooi();
+        d8.gooi();
+        switch(kwadrant) {
+            case 0: if(d6.getWaarde()<4) {
+                        d6.flip();
+                    }
+                    if(d8.getWaarde()<5) {
+                        d8.flip();
+                    }
+
+                break;
+            case 1: if(d6.getWaarde()<4) {
+                    d6.flip();
+                    }
+                    if(d8.getWaarde()>4) {
+                    d8.flip();
+                    }
+                break;
+            case 2: if(d6.getWaarde()>3) {
+                d6.flip();
+            }
+                if(d8.getWaarde()>4) {
+                    d8.flip();
+                }
+                break;
+            case 3: if(d6.getWaarde()>3) {
+                d6.flip();
+            }
+                if(d8.getWaarde()<5) {
+                    d8.flip();
+                }
+                break;
+        }
+        int x = d8.getWaarde();
+        int y = d6.getWaarde();
+        vak = speelveld.getVak(x,y);
+        vak.getObjecten()[6] = null;
+        for(int i = 0; i < 4; i++) {
+            if(vak.checkObstakels(i)==2 || vak.checkObstakels(i)>3) {
+                switch (i) {
+                    case 0: speelveld.getVak(x,y-1).getObjecten()[6] = null;
+                        break;
+                    case 1: speelveld.getVak(x+1,y).getObjecten()[6] = null;
+                        break;
+                    case 2: speelveld.getVak(x,y+2).getObjecten()[6] = null;
+                        break;
+                    case 3: speelveld.getVak(x-1,y).getObjecten()[6] = null;
+                }
+            }
+
+        }
+    }
 }
+
 
