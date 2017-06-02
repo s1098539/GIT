@@ -79,8 +79,6 @@ public class BeurtAfronding {
         }
     }
 
-
-
 	public void handleExplosie(int x, int y) {// Joep
         boolean doorgaan;
         int teller;
@@ -227,7 +225,7 @@ public class BeurtAfronding {
 
 }
 
-    public void schadeLoop(int richting, int obstakel, int x, int y) {
+    private void schadeLoop(int richting, int obstakel, int x, int y) {
         switch(richting) {
             case 0:
                 veld.getVak(x,y-1).setObstakel(2, obstakel);
