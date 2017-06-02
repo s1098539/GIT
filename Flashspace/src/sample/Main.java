@@ -18,9 +18,10 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        Speelveld veld = new Speelveld();
-        BeurtAfronding ba = new BeurtAfronding(veld);
+
         launch(args);
+
+
 
     }
 }

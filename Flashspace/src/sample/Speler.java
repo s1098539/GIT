@@ -8,9 +8,9 @@ public class Speler {
 	public int y;
     public Object rugtas;
 
-    public Speler(String naam, Character character, Kleur kleur, int x, int y) {
+    public Speler(String naam, /*Character character,*/ Kleur kleur, int x, int y) {
         this.naam = naam;
-        this.character = character;
+//        this.character = character;
         this.kleur = kleur;
         this.x = x;
         this.y = y;

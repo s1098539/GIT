@@ -20,34 +20,34 @@ public class Vak {
 
     public void addSpeler(Speler speler) {
         switch(speler.getKleur()) {
-            case Blauw: spelers[0]=speler;
+            case BLAUW: spelers[0]=speler;
                 break;
-            case Geel: spelers[1]=speler;
+            case GEEL: spelers[1]=speler;
                 break;
-            case Groen: spelers[2]=speler;
+            case GROEN: spelers[2]=speler;
                 break;
-            case Oranje: spelers[3]=speler;
+            case ORANJE: spelers[3]=speler;
                 break;
-            case Rood: spelers[4]=speler;
+            case ROOD: spelers[4]=speler;
                 break;
-            case Zwart: spelers[5]=speler;
+            case ZWART: spelers[5]=speler;
                 break;
         }
     }
 
     public void removeSpeler(Speler speler) {
         switch(speler.getKleur()) {
-            case Blauw: spelers[0]=null;
+            case BLAUW: spelers[0]=null;
                 break;
-            case Geel: spelers[1]=null;
+            case GEEL: spelers[1]=null;
                 break;
-            case Groen: spelers[2]=null;
+            case GROEN: spelers[2]=null;
                 break;
-            case Oranje: spelers[3]=null;
+            case ORANJE: spelers[3]=null;
                 break;
-            case Rood: spelers[4]=null;
+            case ROOD: spelers[4]=null;
                 break;
-            case Zwart: spelers[5]=null;
+            case ZWART: spelers[5]=null;
                 break;
         }
     }

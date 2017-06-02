@@ -16,6 +16,7 @@ public class Object {
 //	private int Brandweerwagen;
 
     String naam;
+    ImageView imageView;
 
     public Object() {
     }
@@ -49,9 +50,12 @@ public class Object {
 	public String getNaam() {
         return naam;
     }
+    public ImageView getImageView() {
+        return imageView;
+    }
 
     static class Rook extends Object{
-        ImageView imageView = new ImageView(new Image("gfx/Rook.png"));
+        ImageView imageView = new ImageView(new Image("sample/gfx/Rook.png"));
         String naam = "Rook";
 
         public String getNaam() {
@@ -60,10 +64,14 @@ public class Object {
 
         public Rook() {
         }
+
+        public ImageView getImageView() {
+            return imageView;
+        }
     }
 
     static class Vuur extends Object {
-        ImageView imageView = new ImageView(new Image("gfx/Vuur.png"));
+        ImageView imageView = new ImageView(new Image("sample/gfx/Vlam.png"));
         String naam = "Vuur";
 
         public String getNaam() {
@@ -71,6 +79,10 @@ public class Object {
         }
 
         public Vuur() {
+        }
+
+        public ImageView getImageView() {
+            return imageView;
         }
     }
     static class GevaarlijkeStof extends Object {

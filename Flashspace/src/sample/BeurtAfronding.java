@@ -80,8 +80,10 @@ public class BeurtAfronding {
     public void newRook() {
         d6.gooi();
         d8.gooi();
-        int x = d8.getWaarde();
-        int y = d6.getWaarde();
+//        int x = d8.getWaarde();
+//        int y = d6.getWaarde();
+        int x = 2;
+        int y = 3;
         if (veld.getVak(x,y).getObjecten()[6] == null) {
             Object.Rook rook = new Object.Rook();
             veld.getVak(x,y).addObject(rook);
