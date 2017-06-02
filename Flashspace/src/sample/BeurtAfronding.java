@@ -40,8 +40,7 @@ public class BeurtAfronding {
 
 
 
-	public void handleExplosie(int x, int y) {//Work in progress - Joep
-        int obstakel;
+	public void handleExplosie(int x, int y) {// Joep
         boolean doorgaan;
         int teller;
         Vak vak;
