@@ -6,7 +6,7 @@ public class BeurtAfronding {
 //	private int NewRook;            done Joep
 //	private int ExplosieHandler;    done Joep
 //	private int VonkoverslagHandler;     done Lion
-//	private int BrandhaardHandler;
+//	private int BrandhaardHandler;          working on it (Lion)
 //	private int BrandweerliedenHandler;
 //	private int PersoonVanAandachtHandler;
 //	private int GevaarlijkeStofHandler;     Done Lion
@@ -21,9 +21,9 @@ public class BeurtAfronding {
         this.veld = veld;
     }
 
-    public void handleBrandhaard() {
-
-    }
+//    public void handleBrandhaard() {
+//        veld.getVak(d8.getWaarde())
+//    }
 
 
     public void handleGevaarlijkeStof() {
