@@ -8,7 +8,7 @@ public class SpelerActie {
 //	private int BlusActie;          Done (Lion)!!!
 //	private int OppakActie;
 //	private int RijActie;
-//	private int FunctiewisselActie;
+//	private int FunctiewisselActie; Done (Lion)!!!
 //	private int BrandweerwagenSpuitActie;       Done (Lion)!!!
 //	private int OppakkenPersoonVanAandachtActie;
 //	private int OppakkenGevaarlijkeStofActie;
@@ -24,6 +24,10 @@ public class SpelerActie {
 
     public Vak spelerLocatieVak() {
         return speelveld.getVak(speler.getX(),speler.getY());
+    }
+
+    public void functiewisselActie(Character character) {
+        speler.setCharacter(character);
     }
 
     public void beweegwactie(int richting) {
@@ -167,7 +171,6 @@ public class SpelerActie {
                     case 3: speelveld.getVak(x-1,y).getObjecten()[6] = null;
                 }
             }
-
         }
     }
 }
