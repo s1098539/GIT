@@ -30,7 +30,7 @@ public class SpelerActie {
         speler.setCharacter(character);
     }
 
-    public void beweegwactie(int richting) {
+    public void beweegwActie(int richting) {
         Vak vak = spelerLocatieVak();
         vak.removeSpeler(speler);
         switch(richting) {
@@ -65,7 +65,7 @@ public class SpelerActie {
         }
     }
 
-    private void muurInteractie(int richting) {
+    public void muurInteractie(int richting) {
         Vak vak = spelerLocatieVak();
         switch (vak.checkObstakels(richting)) {
             case 0:
@@ -98,7 +98,7 @@ public class SpelerActie {
         }
     }
 
-    private void blusActie(int richting) {
+    public void blusActie(int richting) {
         switch (richting) {
             case 0:
                 vak = speelveld.getVak(speler.getX(), speler.getY()-1);
