@@ -34,16 +34,21 @@ public class Controller {
         veld.getVak(5,5).addObject(new Object.Vuur());
         veld.getVak(5,6).addObject(new Object.Rook());
 
-        update();
+            update();
     }
 
     public void update() {
         for(int x = 0; x <10; x++) {
             for (int y = 0; y < 8; y++) {
                 for (int z = 0; z < 9; z++) {
+
+                        try {
+                            fp[x][y].getChildren().remove(z);
+                        } catch (RuntimeException e) {}
                     try {
                         fp[x][y].getChildren().add(veld.getVak(x, y).getObjecten()[z].getImageView());
                     } catch (NullPointerException e) {}
+
                 }
             }
         }
