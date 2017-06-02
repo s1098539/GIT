@@ -6,6 +6,7 @@ public class Dobbelsteen {
 	private int waarde;
 	private int aantalOgen;
 
+
     public Dobbelsteen(int aantalOgen) {
         this.aantalOgen = aantalOgen;
     }

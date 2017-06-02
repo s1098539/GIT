@@ -21,6 +21,9 @@ public class BeurtAfronding {
     }
 
 
+    public void vonkoverslagHandler() {
+
+    }
 
     public void newRook() {
         d6.gooi();
