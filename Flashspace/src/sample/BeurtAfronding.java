@@ -28,19 +28,14 @@ public class BeurtAfronding {
         if (veld.getVakken()[x][y].getObjecten()[6] == null) {
             Object.Rook rook = new Object.Rook();
             veld.getVakken()[x][y].addObject(rook);
-        } else if (veld.getVakken()[x][y].getObjecten()[6].getNaam() == "Rook") {
+        } else if (veld.getVakken()[x][y].getObjecten()[6].getNaam().equals("Vuur")) {
             Object.Vuur vuur = new Object.Vuur();
             veld.getVakken()[x][y].addObject(vuur);
-        } else if (veld.getVakken()[x][y].getObjecten()[6].getNaam() == "Vuur") {
+        } else if (veld.getVakken()[x][y].getObjecten()[6].getNaam().equals("Vuur")) {
             handleExplosie(x, y);
         }
     }
 
-
-	public void createBeurtAfrondingen() {
-		// TODO - implement BeurtAfronding.createBeurtAfrondingen
-		throw new UnsupportedOperationException();
-	}
 
 
 	public void handleExplosie(int x, int y) {//Work in progress - Joep
@@ -48,19 +43,30 @@ public class BeurtAfronding {
         boolean doorgaan;
         int teller;
         for(int richting = 0; richting<4; richting++) {
-            teller = 0;
             doorgaan = true;
+            teller = 0;
             if (richting == 0){
-                while ((y - teller > 0) && doorgaan) {
-                    obstakel = veld.getVakken()[x][y - teller].checkObstakels(richting);
-                    if (obstakel < 2 || obstakel == 3) {
-                        schade(richting, x, y);
-                        doorgaan = false;
-                    } else if (y-teller>0) {
-                        teller++;
-                        veld.getVakken()[x][y - teller].addObject(new Object.Vuur());
-                    }
+                obstakel = veld.getVakken()[x][y].checkObstakels(richting);
+                if (obstakel < 2 || obstakel == 3) {
+                    schade(richting, x, y);
+                    //doorgaan = false;
                 }
+                else{
+                    do {
+
+                        obstakel = veld.getVakken()[x][y-teller].checkObstakels(richting);
+
+                        if (y - teller >0 && (obstakel == 2 || obstakel == 4 || obstakel == 5)) {
+                            veld.getVakken()[x][y - teller].addObject(new Object.Vuur());
+
+                        }
+                        teller++;
+
+                    } while (veld.getVakken()[x][y-teller].getObjecten()[6].getNaam().equals("Vuur"));
+
+            }
+
+
             }
             if (richting == 1){
                 while ((x + teller < 9) && doorgaan) {
@@ -102,7 +108,65 @@ public class BeurtAfronding {
         }
     }
 
-
+//    public void bomberMan(int x, int y) {//Work in progress - Joep
+//        int obstakel;
+//        boolean doorgaan;
+//        int teller;
+//        for(int richting = 0; richting<4; richting++) {
+//            teller = 0;
+//            doorgaan = true;
+//            if (richting == 0){
+//                while ((y - teller > 0) && doorgaan) {
+//                    obstakel = veld.getVakken()[x][y - teller].checkObstakels(richting);
+//                    if (obstakel < 2 || obstakel == 3) {
+//                        schade(richting, x, y);
+//                        doorgaan = false;
+//                    } else if (y-teller>0) {
+//                        teller++;
+//                        veld.getVakken()[x][y - teller].addObject(new Object.Vuur());
+//                    }
+//                }
+//            }
+//            if (richting == 1){
+//                while ((x + teller < 9) && doorgaan) {
+//                    obstakel = veld.getVakken()[x + teller][y].checkObstakels(richting);
+//                    if (obstakel < 2 || obstakel == 3) {
+//                        schade(richting, x+teller, y);
+//                        doorgaan = false;
+//                    } else if (x+teller<9) {
+//                        teller++;
+//                        veld.getVakken()[x+teller][y].addObject(new Object.Vuur());
+//                    }
+//                }
+//            }
+//            if (richting == 2){
+//                while ((y + teller < 7) && doorgaan) {
+//                    obstakel = veld.getVakken()[x][y + teller].checkObstakels(richting);
+//                    if (obstakel < 2 || obstakel == 3) {
+//                        schade(richting, x, y+teller);
+//                        doorgaan = false;
+//                    } else if (y+teller>0) {
+//                        teller++;
+//                        veld.getVakken()[x][y + teller].addObject(new Object.Vuur());
+//                    }
+//                }
+//            }
+//            if (richting == 3){
+//                while ((x - teller > 0) && doorgaan) {
+//                    obstakel = veld.getVakken()[x + teller][y].checkObstakels(richting);
+//                    if (obstakel < 2 || obstakel == 3) {
+//                        schade(richting, x - teller, y);
+//                        doorgaan = false;
+//                    }
+//                    else if (x-teller>0) {
+//                        teller++;
+//                        veld.getVakken()[x-teller][y].addObject(new Object.Vuur());
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
 
     public void schade(int richting, int x, int y){
         int obstakel = veld.getVakken()[x][y].checkObstakels(richting);
@@ -139,9 +203,9 @@ public class BeurtAfronding {
                 break;
         }
         }
+
 	public void handleVonkoverslag() {
-		// TODO - implement BeurtAfronding.handleVonkoverslag
-		throw new UnsupportedOperationException();
+
 	}
 
 	public void handleBrandhaard() {
