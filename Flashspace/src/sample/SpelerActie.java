@@ -6,7 +6,7 @@ public class SpelerActie {
 //	private int DeurInteractie;     Done (Lion)!!!
 //	private int MuurInteractie;     Done (Lion)!!!
 //	private int BlusActie;          Done (Lion)!!!
-//	private int OppakActie;
+//	private int OppakActie;         busy (joep)
 //	private int RijActie;
 //	private int FunctiewisselActie; Done (Lion)!!!
 //	private int BrandweerwagenSpuitActie;       Done (Lion)!!!
