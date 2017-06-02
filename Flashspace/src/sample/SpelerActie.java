@@ -162,13 +162,13 @@ public class SpelerActie {
         for(int i = 0; i < 4; i++) {
             if(vak.checkObstakels(i)==2 || vak.checkObstakels(i)>3) {
                 switch (i) {
-                    case 0: speelveld.getVak(x,y-1).getObjecten()[6] = null;
+                    case 0: speelveld.getVak(x,y-1).removeObject(6);
                         break;
-                    case 1: speelveld.getVak(x+1,y).getObjecten()[6] = null;
+                    case 1: speelveld.getVak(x+1,y).removeObject(6);
                         break;
-                    case 2: speelveld.getVak(x,y+2).getObjecten()[6] = null;
+                    case 2: speelveld.getVak(x,y+2).removeObject(6);
                         break;
-                    case 3: speelveld.getVak(x-1,y).getObjecten()[6] = null;
+                    case 3: speelveld.getVak(x-1,y).removeObject(6);
                 }
             }
         }

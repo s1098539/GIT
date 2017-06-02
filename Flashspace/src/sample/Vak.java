@@ -76,6 +76,10 @@ public class Vak {
         }
 //        objecten[2] = ;
     }
+
+    public void removeObject(int index) {
+        objecten[index] = null;
+    }
 }
 
 //	private int Vuur;

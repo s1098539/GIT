@@ -13,6 +13,7 @@ public class BeurtAfronding {
 //	private int PersoonVanAandachtAanvuller;
 //	private int WinLoseConditionChecker;
     Speelveld veld;
+    Vak vak;
 	Dobbelsteen d6 = new Dobbelsteen(6);
     Dobbelsteen d8 = new Dobbelsteen(8);
 
@@ -22,7 +23,44 @@ public class BeurtAfronding {
 
 
     public void vonkoverslagHandler() {
-
+        boolean loop = true;
+        while(loop) {
+            loop = false;
+            for (int x = 0; x < 10; x++) {
+                for (int y = 0; y < 8; y++) {
+                    vak = veld.getVak(x, y);
+                    if (vak.getObjecten()[6].getNaam().equals("Vuur")) {
+                        for (int i = 0; i < 4; i++)
+                            if (vak.checkObstakels(i) == 2 || vak.checkObstakels(i) > 3) {
+                                switch (i) {
+                                    case 0:
+                                        if (y > 0 && veld.getVak(x, y - 1).getObjecten()[6].equals("Rook")) {
+                                            veld.getVak(x, y - 1).addObject(new Object.Vuur());
+                                            loop = true;
+                                        }
+                                        break;
+                                    case 1:
+                                        if (x < 9 && veld.getVak(x + 1, y).getObjecten()[6].equals("Rook")) {
+                                            veld.getVak(x, y - 1).addObject(new Object.Vuur());
+                                        }
+                                        break;
+                                    case 2:
+                                        if (y < 7 && veld.getVak(x, y + 1).getObjecten()[6].equals("Rook")) {
+                                            veld.getVak(x, y - 1).addObject(new Object.Vuur());
+                                        }
+                                        break;
+                                    case 3:
+                                        if (x > 0 && veld.getVak(x - 1, y).getObjecten()[6].equals("Rook")) {
+                                            veld.getVak(x, y - 1).addObject(new Object.Vuur());
+                                            loop = true;
+                                        }
+                                        break;
+                                }
+                            }
+                    }
+                }
+            }
+        }
     }
 
     public void newRook() {
