@@ -16,10 +16,6 @@ public class Controller {
     @FXML
     public void initialize() {
         System.out.println("test");
-//        ImageView iv = new Object.Vuur().getImageView();
-//        iv.setFitWidth(20);
-//        iv.setFitHeight(20);
-//        fp.getChildren().add(iv);
 
         for(int x = 0; x <10; x++) {
             for (int y = 0; y < 8; y++) {
@@ -41,14 +37,12 @@ public class Controller {
         for(int x = 0; x <10; x++) {
             for (int y = 0; y < 8; y++) {
                 for (int z = 0; z < 9; z++) {
-
-                        try {
-                            fp[x][y].getChildren().remove(z);
-                        } catch (RuntimeException e) {}
-                    try {
+                    if (z == 0) {
+                        fp[x][y].getChildren().clear();
+                    }
+                    if (veld.getVak(x,y).getObjecten()[z] != null) {
                         fp[x][y].getChildren().add(veld.getVak(x, y).getObjecten()[z].getImageView());
-                    } catch (NullPointerException e) {}
-
+                    }
                 }
             }
         }
