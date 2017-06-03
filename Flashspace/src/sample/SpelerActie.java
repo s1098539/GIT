@@ -20,7 +20,11 @@ public class SpelerActie {
     Dobbelsteen d8 = new Dobbelsteen(8);
 
     public SpelerActie(Speler speler, Speelveld speelveld) {
+        this.speler = speler;
+        this.speelveld = speelveld;
     }
+
+
 
     public Vak spelerLocatieVak() {
         return speelveld.getVak(speler.getX(),speler.getY());
@@ -169,7 +173,7 @@ public class SpelerActie {
                         break;
                     case 1: speelveld.getVak(x+1,y).removeObject(6);
                         break;
-                    case 2: speelveld.getVak(x,y+2).removeObject(6);
+                    case 2: speelveld.getVak(x,y+1).removeObject(6);
                         break;
                     case 3: speelveld.getVak(x-1,y).removeObject(6);
                 }

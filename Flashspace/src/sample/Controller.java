@@ -23,31 +23,32 @@ public class Controller {
                 gridpane.add(fp[x][y],x,y);
             }
         }
-        for(int c=1; c<9; c++){
-            veld.getVakken()[c][2].setObstakel(0,1);
-        }
+//        for(int c=1; c<9; c++){
+//            veld.getVakken()[c][2].setObstakel(0,1);
+//        }
         BeurtAfronding ba = new BeurtAfronding(veld);
         Speler speler = new Speler("Lion", Kleur.BLAUW, 4,3);
         SpelerActie sa = new SpelerActie(speler, veld);
 
 
-        /*for(int x = 0; x <10; x++) {
-            for (int y = 0; y < 8; y++) {
-                veld.getVak(x, y).addObject(new Object.Rook());
-            }
-        }*/
-
         for(int x = 0; x <10; x++) {
             for (int y = 0; y < 8; y++) {
-                veld.getVak(x, y).addObject(new Object.BrandHaard());
+                veld.getVak(x, y).addObject(new Object.Vuur());
             }
         }
 
-        for(int x = 0; x <10; x++) {
-            for (int y = 0; y < 8; y++) {
-                veld.getVak(x, y).addObject(new Object.PersoonVanAandacht());
-            }
-        }
+//        for(int x = 0; x <10; x++) {
+//            for (int y = 0; y < 8; y++) {
+//                veld.getVak(x, y).addObject(new Object.BrandHaard());
+//            }
+//        }
+
+//        for(int x = 0; x <10; x++) {
+//            for (int y = 0; y < 8; y++) {
+//                veld.getVak(x, y).addObject(new Object.PersoonVanAandacht());
+//            }
+//        }
+
 //        for(int x = 0; x <10; x++) {
 //            for (int y = 0; y < 8; y++) {
 //                for (int z = 0; z < 4; z++) {
@@ -56,10 +57,11 @@ public class Controller {
 //            }
 //        }
 
-        //for (int i = 0; i < 20; i++) {
-        //    ba.newRook();
-       // }
+        for (int i = 0; i < 1; i++) {
+            ba.newRook();
+        }
         makeWalls();
+        sa.BrandweerwagenSpuitActie(1);
         update();
     }
 
