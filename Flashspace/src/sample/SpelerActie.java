@@ -9,7 +9,7 @@ public class SpelerActie {
 //	private int OppakActie;         busy (joep)
 //	private int RijActie;
 //	private int FunctiewisselActie; Done (Lion)!!!
-//	private int BrandweerwagenSpuitActie;       Done (Lion)!!!
+//	private int BrandweerwagenSpuitActie;       Done (Lion)!!!  Getest door Lion (10/10)
 //	private int OppakkenPersoonVanAandachtActie;
 //	private int OppakkenGevaarlijkeStofActie;
 
@@ -129,7 +129,7 @@ public class SpelerActie {
         d6.gooi();
         d8.gooi();
         switch(kwadrant) {
-            case 0: if(d6.getWaarde()<4) {
+            case 2: if(d6.getWaarde()<4) {
                         d6.flip();
                     }
                     if(d8.getWaarde()<5) {
@@ -137,21 +137,21 @@ public class SpelerActie {
                     }
 
                 break;
-            case 1: if(d6.getWaarde()<4) {
+            case 3: if(d6.getWaarde()<4) {
                     d6.flip();
                     }
                     if(d8.getWaarde()>4) {
                     d8.flip();
                     }
                 break;
-            case 2: if(d6.getWaarde()>3) {
+            case 0: if(d6.getWaarde()>3) {
                 d6.flip();
             }
                 if(d8.getWaarde()>4) {
                     d8.flip();
                 }
                 break;
-            case 3: if(d6.getWaarde()>3) {
+            case 1: if(d6.getWaarde()>3) {
                 d6.flip();
             }
                 if(d8.getWaarde()<5) {
