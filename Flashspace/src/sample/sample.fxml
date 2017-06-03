@@ -122,7 +122,7 @@
                                 <Font size="17.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="50.0" prefWidth="149.0" text="Opflikkering punt" textFill="RED">
+                        <Label prefHeight="50.0" prefWidth="149.0" text="Flash point" textFill="RED">
                             <font>
                                 <Font size="19.0" />
                             </font>

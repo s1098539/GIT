@@ -66,18 +66,29 @@ public class Vak {
 
     public void addObject(Object object) {
         switch(object.getNaam()){
-
+            case "Brandhaard": objecten[0] = object;
+                break;
             case "Rook": objecten[6] = object;
-                System.out.println(objecten[6]);
                 break;
             case "Vuur": objecten[6] = object;
-                System.out.println(objecten[6]);
                 break;
             case "GevaarlijkeStof": objecten[8] = object;
-                System.out.println(objecten[8]);
                 break;
             case "PersoonVanAandacht": objecten[2] = object;
-                System.out.println(objecten[2]);
+                break;
+        }
+
+    }
+
+    public void addMuur(Object object, int richting) {
+        switch(richting){
+            case 0: objecten[1] = object;
+                break;
+            case 1: objecten[5] = object;
+                break;
+            case 2: objecten[7] = object;
+                break;
+            case 3: objecten[3] = object;
                 break;
         }
 

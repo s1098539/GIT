@@ -157,8 +157,11 @@ public class SpelerActie {
         }
         int x = d8.getWaarde();
         int y = d6.getWaarde();
+        System.out.println(x);
+        System.out.println(y);
         vak = speelveld.getVak(x,y);
-        vak.getObjecten()[6] = null;
+
+        vak.removeObject(6);
         for(int i = 0; i < 4; i++) {
             if(vak.checkObstakels(i)==2 || vak.checkObstakels(i)>3) {
                 switch (i) {
