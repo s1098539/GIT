@@ -84,13 +84,47 @@ public class BeurtAfronding {
         int y = d6.getWaarde();
         if (veld.getVak(x,y).getObjecten()[6] == null) {
             veld.getVak(x,y).addObject(new Object.Rook());
+            System.out.println("newrook"+x+"\t"+y);
         } else if (veld.getVak(x,y).getObjecten()[6].getNaam().equals("Rook")) {
             veld.getVak(x,y).addObject(new Object.Vuur());
+            System.out.println("newVuur"+x+"\t"+y);
         } else if (veld.getVak(x,y).getObjecten()[6].getNaam().equals("Vuur")) {
-            handleExplosie(x, y);
+            System.out.println("newrookexplosie"+x+"\t"+y);
+            //testexplosie(x, y);
         }
     }
+    public void testexplosie(int x, int y){
+        boolean doorgaan;
+        int teller;
+        Vak vak;
+        teller = 0;
+        doorgaan = true;
+        //vak = veld.getVak(x, (y - teller));
+        try {
+            while (doorgaan && ((y - teller) >= 1)) {
+                vak = veld.getVak(x, (y - teller));
+                if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
+                    System.out.println("schade"+x+"\t"+(y-teller));
+                    schade(0, x, (y - teller));
+                    doorgaan = false;
+                    System.out.println("waarde van de muur: "+vak.checkObstakels(0));
+                }
 
+                else {
+                    teller++;
+                    vak = veld.getVak(x, (y - teller));
+                    if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
+                        doorgaan = false;
+                        vak.addObject(new Object.Vuur());
+                        System.out.println("vuur"+x+"\t"+(y-(teller-1)));
+                    }
+                }
+               // System.out.println("explosieboven"+x+"\t"+y+"\t"+(y-teller));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 	public void handleExplosie(int x, int y) {// Joep
         boolean doorgaan;
         int teller;
@@ -99,24 +133,26 @@ public class BeurtAfronding {
             for (int richting = 0; richting < 4; richting++) {
                 teller = 0;
                 doorgaan = true;
-                while (richting == 0 && doorgaan && y - teller > 0) {
-                    vak = veld.getVak(x, y - teller);
+                while (richting == 0 && doorgaan && (y - teller) > 0) {
+                    vak = veld.getVak(x, (y - teller));
                     if (vak.checkObstakels(richting) == 2 || vak.checkObstakels(richting) > 3) {
                         teller++;
+                        System.out.println(teller);
                         if (!vak.getObjecten()[6].getNaam().equals("Vuur")) {
                             doorgaan = false;
                         }
                         vak.addObject(new Object.Vuur());
+                        System.out.println("vuur"+x+"\t"+(y-(teller-1)));
 
                     }
                     else {
                         schade(richting, x, (y - teller));
                         doorgaan = false;
                     }
-                    System.out.println("explosie");
+                    System.out.println("explosieboven"+x+"\t"+y+"\t"+(y-teller));
                 }
-                while (richting == 1 && doorgaan && x + teller < 9) {
-                    vak = veld.getVak(x+teller, y);
+                while (richting == 1 && doorgaan && (x + teller) < 9) {
+                    vak = veld.getVak((x+teller), y);
                     if (vak.checkObstakels(richting) == 2 || vak.checkObstakels(richting) > 3) {
                         teller++;
                         if (!vak.getObjecten()[6].getNaam().equals("Vuur")) {
@@ -125,13 +161,13 @@ public class BeurtAfronding {
                         vak.addObject(new Object.Vuur());
                     }
                     else {
-                        schade(richting, x+teller, y);
+                        schade(richting, (x+teller), y);
                         doorgaan = false;
                     }
-                    System.out.println("explosie");
+                    System.out.println("explosierechts"+x+"\t"+y+"\t"+(x+teller));
                 }
-                while (richting == 2 && doorgaan && y + teller < 7 ) {
-                    vak = veld.getVak(x, y + teller);
+                while (richting == 2 && doorgaan && (y + teller) < 7 ) {
+                    vak = veld.getVak(x, (y + teller));
                     if (vak.checkObstakels(richting) == 2 || vak.checkObstakels(richting) > 3) {
                         teller++;
                         if (!vak.getObjecten()[6].getNaam().equals("Vuur")) {
@@ -143,10 +179,10 @@ public class BeurtAfronding {
                         schade(richting, x, (y + teller));
                         doorgaan = false;
                     }
-                    System.out.println("explosie");
+                    System.out.println("explosieonder"+x+"\t"+y+"\t"+(y+teller));
                 }
-                while (richting == 3 && doorgaan && x - teller > 0 ) {
-                    vak = veld.getVak(x - teller, y);
+                while (richting == 3 && doorgaan && (x - teller) > 0 ) {
+                    vak = veld.getVak((x - teller), y);
                     if (vak.checkObstakels(richting) == 2 || vak.checkObstakels(richting) > 3) {
                         teller++;
                         if (!vak.getObjecten()[6].getNaam().equals("Vuur")) {
@@ -155,10 +191,10 @@ public class BeurtAfronding {
                         vak.addObject(new Object.Vuur());
                     }
                     else {
-                        schade(richting, x - teller, y);
+                        schade(richting, (x - teller), y);
                         doorgaan = false;
                     }
-                    System.out.println("explosie");
+                    System.out.println("explosielinks"+x+"\t"+y+"\t"+(x-teller));
                 }
             }
         } catch (Exception e) {
