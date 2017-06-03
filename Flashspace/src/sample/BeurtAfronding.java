@@ -5,7 +5,7 @@ public class BeurtAfronding {
     //Dit worden classes
 //	private int NewRook;            done Joep
 //	private int ExplosieHandler;    done Joep
-//	private int VonkoverslagHandler;     done Lion
+//	private int VonkoverslagHandler;     done Lion      tested by Lion (10/10)
 //	private int BrandhaardHandler;          working on it (Lion)
 //	private int BrandweerliedenHandler;
 //	private int PersoonVanAandachtHandler;
@@ -43,35 +43,35 @@ public class BeurtAfronding {
             for (int x = 0; x < 10; x++) {
                 for (int y = 0; y < 8; y++) {
                     vak = veld.getVak(x, y);
-                    if (vak.getObjecten()[6].getNaam().equals("Vuur")) {
-                        for (int i = 0; i < 4; i++)
-                            if (vak.checkObstakels(i) == 2 || vak.checkObstakels(i) > 3) {
-                                switch (i) {
-                                    case 0:
-                                        if (y > 0 && veld.getVak(x, y - 1).getObjecten()[6].equals("Rook")) {
-                                            veld.getVak(x, y - 1).addObject(new Object.Vuur());
-                                            loop = true;
-                                        }
-                                        break;
-                                    case 1:
-                                        if (x < 9 && veld.getVak(x + 1, y).getObjecten()[6].equals("Rook")) {
-                                            veld.getVak(x, y - 1).addObject(new Object.Vuur());
-                                        }
-                                        break;
-                                    case 2:
-                                        if (y < 7 && veld.getVak(x, y + 1).getObjecten()[6].equals("Rook")) {
-                                            veld.getVak(x, y - 1).addObject(new Object.Vuur());
-                                        }
-                                        break;
-                                    case 3:
-                                        if (x > 0 && veld.getVak(x - 1, y).getObjecten()[6].equals("Rook")) {
-                                            veld.getVak(x, y - 1).addObject(new Object.Vuur());
-                                            loop = true;
-                                        }
-                                        break;
+                        if (vak.getObjecten()[6] != null && vak.getObjecten()[6].getNaam().equals("Vuur")) {
+                            for (int i = 0; i < 4; i++)
+                                if (vak.checkObstakels(i) == 2 || vak.checkObstakels(i) > 3) {
+                                    switch (i) {
+                                        case 0:
+                                            if (y > 0 && veld.getVak(x, y - 1).getObjecten()[6] != null && veld.getVak(x, y - 1).getObjecten()[6].getNaam().equals("Rook")) {
+                                                veld.getVak(x, y - 1).addObject(new Object.Vuur());
+                                                loop = true;
+                                            }
+                                            break;
+                                        case 1:
+                                            if (x < 9 && veld.getVak(x+1,y).getObjecten()[6] != null && veld.getVak(x + 1, y).getObjecten()[6].getNaam().equals("Rook")) {
+                                                    veld.getVak(x + 1, y).addObject(new Object.Vuur());
+                                            }
+                                            break;
+                                        case 2:
+                                            if (y < 7 && veld.getVak(x, y + 1).getObjecten()[6] != null && veld.getVak(x, y + 1).getObjecten()[6].getNaam().equals("Rook")) {
+                                                veld.getVak(x, y + 1).addObject(new Object.Vuur());
+                                            }
+                                            break;
+                                        case 3:
+                                            if (x > 0 && veld.getVak(x - 1, y).getObjecten()[6] != null && veld.getVak(x - 1, y).getObjecten()[6].getNaam().equals("Rook")) {
+                                                    veld.getVak(x - 1, y).addObject(new Object.Vuur());
+                                                loop = true;
+                                            }
+                                            break;
+                                    }
                                 }
-                            }
-                    }
+                        }
                 }
             }
         }
