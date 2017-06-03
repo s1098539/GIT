@@ -90,41 +90,10 @@ public class BeurtAfronding {
             System.out.println("newVuur"+x+"\t"+y);
         } else if (veld.getVak(x,y).getObjecten()[6].getNaam().equals("Vuur")) {
             System.out.println("newrookexplosie"+x+"\t"+y);
-            //testexplosie(x, y);
+            handleExplosie(x,y);
         }
     }
-    public void testexplosie(int x, int y){
-        boolean doorgaan;
-        int teller;
-        Vak vak;
-        teller = 0;
-        doorgaan = true;
-        //vak = veld.getVak(x, (y - teller));
-        try {
-            while (doorgaan && ((y - teller) >= 1)) {
-                vak = veld.getVak(x, (y - teller));
-                if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
-                    System.out.println("schade"+x+"\t"+(y-teller));
-                    schade(0, x, (y - teller));
-                    doorgaan = false;
-                    System.out.println("waarde van de muur: "+vak.checkObstakels(0));
-                }
 
-                else {
-                    teller++;
-                    vak = veld.getVak(x, (y - teller));
-                    if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
-                        doorgaan = false;
-                        vak.addObject(new Object.Vuur());
-                        System.out.println("vuur"+x+"\t"+(y-(teller-1)));
-                    }
-                }
-               // System.out.println("explosieboven"+x+"\t"+y+"\t"+(y-teller));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 	public void handleExplosie(int x, int y) {// Joep
         boolean doorgaan;
         int teller;
@@ -133,68 +102,69 @@ public class BeurtAfronding {
             for (int richting = 0; richting < 4; richting++) {
                 teller = 0;
                 doorgaan = true;
-                while (richting == 0 && doorgaan && (y - teller) > 0) {
+                while (richting == 0 && doorgaan && ((y - teller) >= 1)) {
                     vak = veld.getVak(x, (y - teller));
-                    if (vak.checkObstakels(richting) == 2 || vak.checkObstakels(richting) > 3) {
-                        teller++;
-                        System.out.println(teller);
-                        if (!vak.getObjecten()[6].getNaam().equals("Vuur")) {
-                            doorgaan = false;
-                        }
-                        vak.addObject(new Object.Vuur());
-                        System.out.println("vuur"+x+"\t"+(y-(teller-1)));
+                    if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
+                        schade(0, x, (y - teller));
+                        doorgaan = false;
+                    }
 
-                    }
                     else {
-                        schade(richting, x, (y - teller));
-                        doorgaan = false;
+                        teller++;
+                        vak = veld.getVak(x, (y - teller));
+                        if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
+                            doorgaan = false;
+                            vak.addObject(new Object.Vuur());
+                        }
                     }
-                    System.out.println("explosieboven"+x+"\t"+y+"\t"+(y-teller));
                 }
-                while (richting == 1 && doorgaan && (x + teller) < 9) {
+                while (richting == 1 && doorgaan && ((x + teller) <= 8)) {
                     vak = veld.getVak((x+teller), y);
-                    if (vak.checkObstakels(richting) == 2 || vak.checkObstakels(richting) > 3) {
-                        teller++;
-                        if (!vak.getObjecten()[6].getNaam().equals("Vuur")) {
-                            doorgaan = false;
-                        }
-                        vak.addObject(new Object.Vuur());
-                    }
-                    else {
-                        schade(richting, (x+teller), y);
+                    if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
+                        schade(0, (x+teller), y);
                         doorgaan = false;
                     }
-                    System.out.println("explosierechts"+x+"\t"+y+"\t"+(x+teller));
+
+                    else {
+                        teller++;
+                        vak = veld.getVak((x+teller), y);
+                        if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
+                            doorgaan = false;
+                            vak.addObject(new Object.Vuur());
+                        }
+                    }
                 }
-                while (richting == 2 && doorgaan && (y + teller) < 7 ) {
-                    vak = veld.getVak(x, (y + teller));
-                    if (vak.checkObstakels(richting) == 2 || vak.checkObstakels(richting) > 3) {
-                        teller++;
-                        if (!vak.getObjecten()[6].getNaam().equals("Vuur")) {
-                            doorgaan = false;
-                        }
-                        vak.addObject(new Object.Vuur());
-                    }
-                    else {
-                        schade(richting, x, (y + teller));
+                while (richting == 2 && doorgaan && ((y + teller) <= 6)) {
+                    vak = veld.getVak(x, (y - teller));
+                    if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
+                        schade(0, x, (y - teller));
                         doorgaan = false;
                     }
-                    System.out.println("explosieonder"+x+"\t"+y+"\t"+(y+teller));
+
+                    else {
+                        teller++;
+                        vak = veld.getVak(x, (y + teller));
+                        if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
+                            doorgaan = false;
+                            vak.addObject(new Object.Vuur());
+                        }
+                    }
                 }
-                while (richting == 3 && doorgaan && (x - teller) > 0 ) {
-                    vak = veld.getVak((x - teller), y);
-                    if (vak.checkObstakels(richting) == 2 || vak.checkObstakels(richting) > 3) {
-                        teller++;
-                        if (!vak.getObjecten()[6].getNaam().equals("Vuur")) {
-                            doorgaan = false;
-                        }
-                        vak.addObject(new Object.Vuur());
-                    }
-                    else {
-                        schade(richting, (x - teller), y);
+                while (richting == 3 && doorgaan && ((x - teller) >= 1)) {
+                    vak = veld.getVak((x+teller), y);
+                    if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
+                        schade(0, (x+teller), y);
                         doorgaan = false;
                     }
-                    System.out.println("explosielinks"+x+"\t"+y+"\t"+(x-teller));
+
+                    else {
+                        teller++;
+                        vak = veld.getVak((x-teller), y);
+                        if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
+                            doorgaan = false;
+                            vak.addObject(new Object.Vuur());
+                        }
+                    }
                 }
             }
         } catch (Exception e) {
