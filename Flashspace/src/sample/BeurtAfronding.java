@@ -91,13 +91,15 @@ public class BeurtAfronding {
         d8.gooi();
         int x = d8.getWaarde();
         int y = d6.getWaarde();
-        if (veld.getVak(x,y).getObjecten()[6] == null) {
-            veld.getVak(x,y).addObject(new Object.Rook());
+        vak = veld.getVak(x,y);
+        obj = vak.getObjecten()[6];
+        if (obj == null) {
+            vak.addObject(new Object.Rook());
             System.out.println("newrook"+x+"\t"+y);
-        } else if (veld.getVak(x,y).getObjecten()[6].getNaam().equals("Rook")) {
-            veld.getVak(x,y).addObject(new Object.Vuur());
+        } else if (obj.getNaam().equals("Rook")) {
+            vak.addObject(new Object.Vuur());
             System.out.println("newVuur"+x+"\t"+y);
-        } else if (veld.getVak(x,y).getObjecten()[6].getNaam().equals("Vuur")) {
+        } else {
             System.out.println("newrookexplosie"+x+"\t"+y);
             handleExplosie(x,y);
         }

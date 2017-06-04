@@ -94,7 +94,7 @@ public class Controller {
 
 
         ba.handleVonkoverslag();
-
+        ba.newRook();
         view.update();
 
 
