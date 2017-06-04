@@ -4,7 +4,7 @@ public class BeurtAfronding {
 
     //Dit worden classes
 //	private int NewRook;            done Joep
-//	private int ExplosieHandler;    done Joep
+//	private int ExplosieHandler;    done Joep           tested by Lion (niet te veel moeite in gestoken in t testen maar denk dat t met die 2 foutjes die ik heb gevonden moet werken)
 //	private int VonkoverslagHandler;     done Lion      tested by Lion (10/10)
 //	private int BrandhaardHandler;          working on it (Lion)
 //	private int BrandweerliedenHandler;
@@ -113,7 +113,7 @@ public class BeurtAfronding {
                     else {
                         teller++;
                         vak = veld.getVak(x, (y - teller));
-                        if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
+                        if (vak.getObjecten()[6]==null || !"Vuur".equals(vak.getObjecten()[6].getNaam())) {
                             doorgaan = false;
                             vak.addObject(new Object.Vuur());
                         }
@@ -129,14 +129,14 @@ public class BeurtAfronding {
                     else {
                         teller++;
                         vak = veld.getVak((x+teller), y);
-                        if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
+                        if (vak.getObjecten()[6]==null || !"Vuur".equals(vak.getObjecten()[6].getNaam())) {
                             doorgaan = false;
                             vak.addObject(new Object.Vuur());
                         }
                     }
                 }
                 while (richting == 2 && doorgaan && ((y + teller) <= 6)) {
-                    vak = veld.getVak(x, (y - teller));
+                    vak = veld.getVak(x, (y + teller));
                     if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
                         schade(0, x, (y - teller));
                         doorgaan = false;
@@ -145,14 +145,14 @@ public class BeurtAfronding {
                     else {
                         teller++;
                         vak = veld.getVak(x, (y + teller));
-                        if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
+                        if (vak.getObjecten()[6]==null || !"Vuur".equals(vak.getObjecten()[6].getNaam())) {
                             doorgaan = false;
                             vak.addObject(new Object.Vuur());
                         }
                     }
                 }
                 while (richting == 3 && doorgaan && ((x - teller) >= 1)) {
-                    vak = veld.getVak((x+teller), y);
+                    vak = veld.getVak((x-teller), y);
                     if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
                         schade(0, (x+teller), y);
                         doorgaan = false;
@@ -161,7 +161,7 @@ public class BeurtAfronding {
                     else {
                         teller++;
                         vak = veld.getVak((x-teller), y);
-                        if (!"Vuur".equals(vak.getObjecten()[6].getNaam())) {
+                        if (vak.getObjecten()[6]==null || !"Vuur".equals(vak.getObjecten()[6].getNaam())) {
                             doorgaan = false;
                             vak.addObject(new Object.Vuur());
                         }
