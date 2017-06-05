@@ -216,6 +216,8 @@ public class Object {
         public int x;
         public int y;
         public Object rugtas;
+        public ImageView imageView;
+
 
         public Speler(String spelerNaam, /*Character character,*/ Kleur kleur, int x, int y) {
             this.spelerNaam = spelerNaam;
@@ -223,22 +225,23 @@ public class Object {
             this.kleur = kleur;
             this.x = x;
             this.y = y;
-            ImageView imageView = new ImageView();
+
             switch(kleur) {
-//                case BLAUW: ImageView imageView = new ImageView(new Image("sample/gfx/Brandweerblauw.png",20,20,true,true));
-//                    break;
-//                case GEEL: ImageView imageView = new ImageView(new Image("sample/gfx/Brandweergeel.png",20,20,true,true));
-//                    break;
-//                case GROEN: ImageView imageView = new ImageView(new Image("sample/gfx/Brandweergroen.png",20,20,true,true));
-//                    break;
-                case ORANJE: imageView.setImage(new Image("sample/gfx/Brandweeroranje.png"));
+                case BLAUW: imageView = new ImageView(new Image("sample/gfx/Brandweerblauw.png",20,20,true,true));
                     break;
-                case ROOD: imageView.setImage(new Image("sample/gfx/Brandweerrood.png"));
+                case GEEL: imageView = new ImageView(new Image("sample/gfx/Brandweergeel.png",20,20,true,true));
                     break;
-                case ZWART: imageView.setImage(new Image("sample/gfx/Brandweerzwart.png"));
+                case GROEN: imageView = new ImageView(new Image("sample/gfx/Brandweergroen.png",20,20,true,true));
+                    break;
+                case ORANJE: imageView = new ImageView(new Image("sample/gfx/Brandweeroranje.png",20,20,true,true));
+                    break;
+                case ROOD: imageView = new ImageView(new Image("sample/gfx/Brandweerrood.png",20,20,true,true));
+                    break;
+                case ZWART: imageView = new ImageView(new Image("sample/gfx/Brandweerzwart.png",20,20,true,true));
                     break;
             }
         }
+
 
         public String getNaam() {
             return naam;
