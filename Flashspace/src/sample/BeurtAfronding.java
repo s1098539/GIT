@@ -29,10 +29,14 @@ public class BeurtAfronding {
 
 
     public void handleGevaarlijkeStof() {
+        Vak vak;
         for(int x = 1; x < 9; x++) {
-            for(int y = 1; y < 7; x++) {
-                if(veld.getVak(x,y).getObjecten()[8].getNaam().equals("GS")) {
+            for(int y = 1; y < 7; y++) {
+                vak=veld.getVak(x,y);
+                if(vak.getObjecten()[8]!= null &&
+                    (vak.getObjecten()[6] != null && vak.getObjecten()[6].getNaam().equals("Vuur"))) {
                     handleExplosie(x,y);
+                    vak.removeObject(8);
                 }
             }
         }

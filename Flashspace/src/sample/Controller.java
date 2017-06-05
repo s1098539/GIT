@@ -173,8 +173,10 @@ public class Controller {
             System.out.println(hakken);
         });
         btnSpecial.setOnAction(event -> {
-            for (int vaak = 0; vaak < 1; vaak++) {
-                ba.handleExplosie(3,3);
+            for (int vaak = 0; vaak < 3; vaak++) {
+                ba.newRook();
+                ba.handleVonkoverslag();
+                ba.handleGevaarlijkeStof();
                 view.update();
             }
         });
