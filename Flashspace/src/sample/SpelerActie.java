@@ -13,13 +13,13 @@ public class SpelerActie {
 //	private int OppakkenPersoonVanAandachtActie;
 //	private int OppakkenGevaarlijkeStofActie;
 
-    Speler speler;
+    Object.Speler speler;
     Speelveld speelveld;
     Vak vak;
     Dobbelsteen d6 = new Dobbelsteen(6);
     Dobbelsteen d8 = new Dobbelsteen(8);
 
-    public SpelerActie(Speler speler, Speelveld speelveld) {
+    public SpelerActie(Object.Speler speler, Speelveld speelveld) {
         this.speler = speler;
         this.speelveld = speelveld;
     }
