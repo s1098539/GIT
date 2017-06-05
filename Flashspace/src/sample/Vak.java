@@ -76,8 +76,8 @@ public class Vak {
                 break;
             case "PersoonVanAandacht": objecten[2] = object;
                 break;
+            case "Speler": objecten[4] = object;
         }
-
     }
 
     public void addMuur(Object object, int richting) {
