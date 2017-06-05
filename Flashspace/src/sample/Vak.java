@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Vak {
 
     public Object[] objecten = new Object[9];
-    public Speler[] spelers = new Speler[6];
+    public Object.Speler[] spelers = new Object.Speler[6];
     // Richtingen: obstakels[0] = boven, obstakels [1] = rechts etc.
     // obstakels: 0 = muur, 1 = muur(1schade), 2 = muur(2schade), 3=deur(gesloten), 4=deur(open), 5=empty
 	public int[] obstakels;
@@ -18,7 +18,7 @@ public class Vak {
         }
     }
 
-    public void addSpeler(Speler speler) {
+    public void addSpeler(Object.Speler speler) {
         switch(speler.getKleur()) {
             case BLAUW: spelers[0]=speler;
                 break;
@@ -35,7 +35,7 @@ public class Vak {
         }
     }
 
-    public void removeSpeler(Speler speler) {
+    public void removeSpeler(Object.Speler speler) {
         switch(speler.getKleur()) {
             case BLAUW: spelers[0]=null;
                 break;
