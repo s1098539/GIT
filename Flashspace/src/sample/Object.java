@@ -137,6 +137,11 @@ public class Object {
 
         public GevaarlijkeStof() {
         }
+
+        @Override
+        public ImageView getImageView() {
+            return imageView;
+        }
     }
     static class BrandHaard extends Object{
         ImageView imageView = new ImageView(new Image("sample/gfx/Hotspot.png",20,20,true,true));

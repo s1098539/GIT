@@ -73,6 +73,8 @@ public class Controller {
             }
         }
 
+        veld.getVak(2,2).addObject(new Object.GevaarlijkeStof());
+
 
 
 
