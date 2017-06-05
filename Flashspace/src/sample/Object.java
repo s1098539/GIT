@@ -3,6 +3,8 @@ package sample;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import static sample.Kleur.BLAUW;
+
 public class Object {
 //mee bezig norddin
 
@@ -90,6 +92,23 @@ public class Object {
         }
 
         public Muur() {
+        }
+    }
+
+    static class Deur extends Object {
+        ImageView imageView;
+        String naam = "Deur";
+
+        @Override
+        public ImageView getImageView() {
+            return imageView;
+        }
+
+        public Deur(ImageView imageView) {
+            this.imageView = imageView;
+        }
+
+        public Deur() {
         }
     }
 
@@ -191,18 +210,35 @@ public class Object {
     static class Speler extends Object{
 
         public String naam;
+        public String spelerNaam;
         public Character character;
         public Kleur kleur;
         public int x;
         public int y;
         public Object rugtas;
 
-        public Speler(String naam, /*Character character,*/ Kleur kleur, int x, int y) {
-            this.naam = naam;
+        public Speler(String spelerNaam, /*Character character,*/ Kleur kleur, int x, int y) {
+            this.spelerNaam = spelerNaam;
 //        this.character = character;
             this.kleur = kleur;
             this.x = x;
             this.y = y;
+            String naam = "Speler";
+            ImageView imageView = new ImageView();
+            switch(getKleur()) {
+                case BLAUW: imageView.setImage(new Image("sample/gfx/Brandweerblauw.png"));
+                    break;
+                case GEEL: imageView.setImage(new Image("sample/gfx/Brandweergeel.png"));
+                    break;
+                case GROEN: imageView.setImage(new Image("sample/gfx/Brandweergroen.png"));
+                    break;
+                case ORANJE: imageView.setImage(new Image("sample/gfx/Brandweeroranje.png"));
+                    break;
+                case ROOD: imageView.setImage(new Image("sample/gfx/Brandweerrood.png"));
+                    break;
+                case ZWART: imageView.setImage(new Image("sample/gfx/Brandweerzwart.png"));
+                    break;
+            }
         }
 
         public String getNaam() {
@@ -251,6 +287,10 @@ public class Object {
 
         public void setRugtas(Object rugtas) {
             this.rugtas = rugtas;
+        }
+
+        public ImageView getImageView() {
+            return imageView;
         }
     }
 

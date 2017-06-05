@@ -54,12 +54,12 @@ public class Controller {
 //        for(int x = 0; x <10; x++) {
 //            for (int y = 0; y < 8; y++) {
 //                for (int z = 0; z < 4; z++) {
-//                    veld.getVak(x, y).setObstakel(z, 0);
+//                    veld.getVak(x, y).setObstakel(z, 3);
 //                }
 //            }
 //        }
 
-//        view.makeWalls();
+        view.makeObstakels();
 
 
 
