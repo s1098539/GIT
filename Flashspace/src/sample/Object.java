@@ -209,7 +209,7 @@ public class Object {
 
     static class Speler extends Object{
 
-        public String naam;
+        public String naam = "Speler";
         public String spelerNaam;
         public Character character;
         public Kleur kleur;
@@ -223,15 +223,14 @@ public class Object {
             this.kleur = kleur;
             this.x = x;
             this.y = y;
-            String naam = "Speler";
             ImageView imageView = new ImageView();
-            switch(getKleur()) {
-                case BLAUW: imageView.setImage(new Image("sample/gfx/Brandweerblauw.png"));
-                    break;
-                case GEEL: imageView.setImage(new Image("sample/gfx/Brandweergeel.png"));
-                    break;
-                case GROEN: imageView.setImage(new Image("sample/gfx/Brandweergroen.png"));
-                    break;
+            switch(kleur) {
+//                case BLAUW: ImageView imageView = new ImageView(new Image("sample/gfx/Brandweerblauw.png",20,20,true,true));
+//                    break;
+//                case GEEL: ImageView imageView = new ImageView(new Image("sample/gfx/Brandweergeel.png",20,20,true,true));
+//                    break;
+//                case GROEN: ImageView imageView = new ImageView(new Image("sample/gfx/Brandweergroen.png",20,20,true,true));
+//                    break;
                 case ORANJE: imageView.setImage(new Image("sample/gfx/Brandweeroranje.png"));
                     break;
                 case ROOD: imageView.setImage(new Image("sample/gfx/Brandweerrood.png"));

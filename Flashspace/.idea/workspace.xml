@@ -1,45 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0443b15d-02da-4eb8-aaef-1f5cf9a57f21" name="Default" comment="Speler is nu een object">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Speler.class" afterPath="" />
+    <list default="true" id="0443b15d-02da-4eb8-aaef-1f5cf9a57f21" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Controller.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$BrandHaard.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$BrandHaard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Brandweerwagen.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Brandweerwagen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$GevaarlijkeStof.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$GevaarlijkeStof.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$PersoonVanAandacht.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$PersoonVanAandacht.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Rook.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Rook.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Vuur.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Vuur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Ziekenwagen.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Ziekenwagen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Object.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/SpelerActie.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/SpelerActie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Vak.class" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/Vak.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurBoven.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurBoven.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurLinks.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurLinks.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurOnder.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurOnder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurRechts.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurRechts.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotBoven.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotBoven.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotLinks.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotLinks.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotOnder.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotOnder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotRechts.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotRechts.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotBoven.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotBoven.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotLinks.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotLinks.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotOnder.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotOnder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotRechts.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotRechts.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurBoven.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurBoven.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurLinks.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurLinks.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurOnder.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurOnder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurRechts.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurRechts.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurBoven.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurBoven.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurLinks.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurLinks.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurOnder.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurOnder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurRechts.png" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurRechts.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Bord.jpg" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Bord.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Thumbs.db" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Object.java" afterPath="$PROJECT_DIR$/src/sample/Object.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Vak.java" afterPath="$PROJECT_DIR$/src/sample/Vak.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/View.java" afterPath="$PROJECT_DIR$/src/sample/View.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +33,8 @@
       <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="110" column="23" lean-forward="true" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
+            <state relative-caret-position="174">
+              <caret line="225" column="50" lean-forward="false" selection-start-line="225" selection-start-column="50" selection-end-line="225" selection-end-column="50" />
               <folding>
                 <element signature="e#1817#1818#0" expanded="true" />
                 <element signature="e#1852#1853#0" expanded="true" />
@@ -92,8 +60,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="163">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,8 +82,8 @@
       <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="149" column="38" lean-forward="true" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="38" />
+            <state relative-caret-position="111">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,7 +94,7 @@
       <file leaf-file-name="Speler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Speler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-495">
+            <state relative-caret-position="-625">
               <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
@@ -158,8 +126,8 @@
       <file leaf-file-name="Vak.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1040">
-              <caret line="78" column="48" lean-forward="false" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+            <state relative-caret-position="807">
+              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -219,8 +187,8 @@
         <option value="$PROJECT_DIR$/src/sample/Speler.java" />
         <option value="$PROJECT_DIR$/src/sample/SpelerActie.java" />
         <option value="$PROJECT_DIR$/src/sample/Vak.java" />
-        <option value="$PROJECT_DIR$/src/sample/Object.java" />
         <option value="$PROJECT_DIR$/src/sample/View.java" />
+        <option value="$PROJECT_DIR$/src/sample/Object.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
@@ -310,26 +278,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/DichteDeurBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/DichteDeurLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/DichteDeurOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/DichteDeurRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Muur1kapotBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Muur1kapotLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Muur1kapotOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Muur1kapotRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Muur2kapotBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Muur2kapotLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Muur2kapotOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Muur2kapotRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/MuurBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/MuurLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/MuurOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/MuurRechts.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/OpenDeurBoven.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/OpenDeurLinks.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/OpenDeurOnder.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/OpenDeurRechts.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Bord.jpg</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/gfx/Thumbs.db</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -877,7 +826,7 @@
       <workItem from="1496518346712" duration="4219000" />
       <workItem from="1496524663202" duration="9454000" />
       <workItem from="1496571409591" duration="2899000" />
-      <workItem from="1496652730373" duration="6479000" />
+      <workItem from="1496652730373" duration="8164000" />
     </task>
     <task id="LOCAL-00001" summary="Schade toegevoegd">
       <created>1496310547879</created>
@@ -991,11 +940,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496656109264</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Implemented deur in view.&#10;Bezig met speler in view te krijgen">
+      <created>1496659500080</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1496659500080</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60502000" />
+    <option name="totallyTimeSpent" value="62187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -1087,7 +1043,8 @@
     <MESSAGE value="Fixed explosiehandler (denk ik)" />
     <MESSAGE value="Vonko net iets efficienter gemaakt en DRY toegepast." />
     <MESSAGE value="Speler is nu een object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Speler is nu een object" />
+    <MESSAGE value="Implemented deur in view.&#10;Bezig met speler in view te krijgen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented deur in view.&#10;Bezig met speler in view te krijgen" />
   </component>
   <component name="WindowStateProjectService">
     <state width="227" height="590" key="Git.Branch.Popup" />
@@ -1331,34 +1288,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Speler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-495">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1241">
           <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="78" column="48" lean-forward="false" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1373,10 +1306,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Speler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-625">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="807">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="110" column="23" lean-forward="true" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
+        <state relative-caret-position="174">
+          <caret line="225" column="50" lean-forward="false" selection-start-line="225" selection-start-column="50" selection-end-line="225" selection-end-column="50" />
           <folding>
             <element signature="e#1817#1818#0" expanded="true" />
             <element signature="e#1852#1853#0" expanded="true" />
@@ -1390,18 +1339,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="149" column="38" lean-forward="true" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="38" />
+        <state relative-caret-position="111">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="163">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

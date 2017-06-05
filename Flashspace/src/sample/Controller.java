@@ -15,11 +15,13 @@ public class Controller {
     ImageView[]ivarray = new ImageView[720];
     private View view = new View(fp,veld);
     private BeurtAfronding ba = new BeurtAfronding(veld);
-    private Object.Speler speler = new Object.Speler("Lion", Kleur.BLAUW, 4,3);
+    private Object.Speler speler = new Object.Speler("Lion", Kleur.ORANJE, 4,3);
     SpelerActie sa = new SpelerActie(speler, veld);
 
     @FXML
     public void initialize() {
+//        veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+
 
         System.out.println("test");
         for(int x = 0; x <10; x++) {
