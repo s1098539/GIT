@@ -94,10 +94,10 @@ public class SpelerActie {
                 speelveld.getVak(speler.getX() + 1, speler.getY()).setObstakel(3, obstakel);
                 break;
             case 2:
-                speelveld.getVak(speler.getX(), speler.getY() + 1).setObstakel(4, obstakel);
+                speelveld.getVak(speler.getX(), speler.getY() + 1).setObstakel(0, obstakel);
                 break;
             case 3:
-                speelveld.getVak(speler.getX() - 1, speler.getY()).setObstakel(0, obstakel);
+                speelveld.getVak(speler.getX() - 1, speler.getY()).setObstakel(1, obstakel);
                 break;
         }
     }

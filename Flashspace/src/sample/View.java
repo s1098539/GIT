@@ -22,6 +22,7 @@ public class View {
     }
 
     public void update() {
+        makeObstakels();
         int count = 0;
         for(int x = 0; x <10; x++) {
             for (int y = 0; y < 8; y++) {
@@ -94,36 +95,36 @@ public class View {
                                     makeWallsAssistent(x, y, z, "sample/gfx/Muur2kapotRechts.png");
                                     break;
                             }
-                        case 3:
-                            switch(z) {
-                                case 0:
-                                    makeDoorsAssistent(x, y, z, "sample/gfx/DichteDeurOnder.png");
-                                    break;
-                                case 1:
-                                    makeDoorsAssistent(x, y, z, "sample/gfx/DichteDeurLinks.png");
-                                    break;
-                                case 2:
-                                    makeDoorsAssistent(x, y, z, "sample/gfx/DichteDeurBoven.png");
-                                    break;
-                                case 3:
-                                    makeDoorsAssistent(x, y, z, "sample/gfx/DichteDeurRechts.png");
-                                    break;
-                            }
-                        case 4:
-                            switch(z) {
-                                case 0:
-                                    makeDoorsAssistent(x, y, z, "sample/gfx/OpenDeurOnder.png");
-                                    break;
-                                case 1:
-                                    makeDoorsAssistent(x, y, z, "sample/gfx/OpenDeurLinks.png");
-                                    break;
-                                case 2:
-                                    makeDoorsAssistent(x, y, z, "sample/gfx/OpenDeurBoven.png");
-                                    break;
-                                case 3:
-                                    makeDoorsAssistent(x, y, z, "sample/gfx/OpenDeurRechts.png");
-                                    break;
-                            }
+//                        case 3:
+//                            switch(z) {
+//                                case 0:
+//                                    makeDoorsAssistent(x, y, z, "sample/gfx/DichteDeurOnder.png");
+//                                    break;
+//                                case 1:
+//                                    makeDoorsAssistent(x, y, z, "sample/gfx/DichteDeurLinks.png");
+//                                    break;
+//                                case 2:
+//                                    makeDoorsAssistent(x, y, z, "sample/gfx/DichteDeurBoven.png");
+//                                    break;
+//                                case 3:
+//                                    makeDoorsAssistent(x, y, z, "sample/gfx/DichteDeurRechts.png");
+//                                    break;
+//                            }
+//                        case 4:
+//                            switch(z) {
+//                                case 0:
+//                                    makeDoorsAssistent(x, y, z, "sample/gfx/OpenDeurOnder.png");
+//                                    break;
+//                                case 1:
+//                                    makeDoorsAssistent(x, y, z, "sample/gfx/OpenDeurLinks.png");
+//                                    break;
+//                                case 2:
+//                                    makeDoorsAssistent(x, y, z, "sample/gfx/OpenDeurBoven.png");
+//                                    break;
+//                                case 3:
+//                                    makeDoorsAssistent(x, y, z, "sample/gfx/OpenDeurRechts.png");
+//                                    break;
+//                            }
                     }
                 }
             }
@@ -132,15 +133,19 @@ public class View {
 
     private void makeWallsAssistent(int x, int y, int z, String png) {
         if (z ==0) {
+            veld.getVak(x,y).removeObject(1);
             veld.getVak(x,y).addMuur(new Object.Muur(new ImageView(new Image(png,20,20,false,true))),z);
         }
         if (z ==1) {
+            veld.getVak(x,y).removeObject(5);
             veld.getVak(x,y).addMuur(new Object.Muur(new ImageView(new Image(png,20,20,false,true))),z);
         }
         if (z ==2) {
+            veld.getVak(x,y).removeObject(7);
             veld.getVak(x,y).addMuur(new Object.Muur(new ImageView(new Image(png,20,20,false,true))),z);
         }
         if (z ==3) {
+            veld.getVak(x,y).removeObject(3);
             veld.getVak(x,y).addMuur(new Object.Muur(new ImageView(new Image(png,20,20,false,true))),z);
         }
     }

@@ -18,6 +18,8 @@ public class Controller {
     private Button btnRIGHT;
     @FXML
     private Button btnDOWN;
+    @FXML
+    private ImageView imgHakken;
 
     private FlowPane[][]fp = new FlowPane[10][8];
     private Speelveld veld = new Speelveld();
@@ -26,6 +28,7 @@ public class Controller {
     private BeurtAfronding ba = new BeurtAfronding(veld);
     private Object.Speler speler = new Object.Speler("Lion", Kleur.ZWART, 4,3);
     SpelerActie sa = new SpelerActie(speler, veld);
+    private Boolean hakken = false;
 
     @FXML
     public void initialize() {
@@ -62,15 +65,15 @@ public class Controller {
 //            }
 //        }
 //
-//        for(int x = 0; x <10; x++) {
-//            for (int y = 0; y < 8; y++) {
-//                for (int z = 0; z < 4; z++) {
-//                    veld.getVak(x, y).setObstakel(z, 3);
-//                }
-//            }
-//        }
+        for(int x = 0; x <10; x++) {
+            for (int y = 0; y < 8; y++) {
+                for (int z = 0; z < 4; z++) {
+                    veld.getVak(x, y).setObstakel(z, 0);
+                }
+            }
+        }
 
-        view.makeObstakels();
+
 
 
 
@@ -111,32 +114,61 @@ public class Controller {
 
 
         btnUP.setOnAction(event -> {
-            veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-            sa.beweegwActie(0);
-            veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            if (hakken) {
+                sa.muurInteractie(0);
+            } else {
+                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
+                sa.beweegwActie(0);
+                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            }
+
             view.update();
         });
 
         btnLEFT.setOnAction(event -> {
-            veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-            sa.beweegwActie(3);
-            veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            if (hakken) {
+                sa.muurInteractie(3);
+            } else {
+                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
+                sa.beweegwActie(3);
+                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            }
             view.update();
         });
 
         btnRIGHT.setOnAction(event -> {
-            veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-            sa.beweegwActie(1);
-            veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            if(hakken) {
+                sa.muurInteractie(1);
+            }else {
+                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
+                sa.beweegwActie(1);
+                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
+            }
             view.update();
         });
 
         btnDOWN.setOnAction(event -> {
-            veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-            sa.beweegwActie(2);
-            veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            if(hakken) {
+                sa.muurInteractie(2);
+            }else {
+                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
+                sa.beweegwActie(2);
+                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
+            }
             view.update();
         });
+
+        imgHakken.setOnMouseClicked(event -> {
+            if(hakken) {
+                hakken = false;
+            } else {
+                hakken = true;
+            }
+            System.out.println(hakken);
+        });
+
+
+
 
     }
 }
