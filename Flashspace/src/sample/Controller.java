@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
@@ -9,6 +10,14 @@ import javafx.scene.layout.GridPane;
 public class Controller {
     @FXML
     private GridPane gridpane;
+    @FXML
+    private Button btnUP;
+    @FXML
+    private Button btnLEFT;
+    @FXML
+    private Button btnRIGHT;
+    @FXML
+    private Button btnDOWN;
 
     private FlowPane[][]fp = new FlowPane[10][8];
     private Speelveld veld = new Speelveld();
@@ -100,6 +109,34 @@ public class Controller {
         ba.newRook();
         view.update();
 
+
+        btnUP.setOnAction(event -> {
+            veld.getVak(speler.getX(),speler.getY()).removeObject(4);
+            sa.beweegwActie(0);
+            veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            view.update();
+        });
+
+        btnLEFT.setOnAction(event -> {
+            veld.getVak(speler.getX(),speler.getY()).removeObject(4);
+            sa.beweegwActie(3);
+            veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            view.update();
+        });
+
+        btnRIGHT.setOnAction(event -> {
+            veld.getVak(speler.getX(),speler.getY()).removeObject(4);
+            sa.beweegwActie(1);
+            veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            view.update();
+        });
+
+        btnDOWN.setOnAction(event -> {
+            veld.getVak(speler.getX(),speler.getY()).removeObject(4);
+            sa.beweegwActie(2);
+            veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+            view.update();
+        });
 
     }
 }
