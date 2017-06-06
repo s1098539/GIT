@@ -110,8 +110,8 @@ public class Controller {
 
 
 
-       // ba.handleVonkoverslag();
-       // ba.newRook();
+        // ba.handleVonkoverslag();
+        // ba.newRook();
         view.update();
 
 
@@ -168,6 +168,7 @@ public class Controller {
             }
             System.out.println(hakken);
         });
+
         btnSpecial.setOnAction(event -> {
             for (int vaak = 0; vaak < 3; vaak++) {
                 ba.newRook();

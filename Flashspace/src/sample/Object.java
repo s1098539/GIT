@@ -24,8 +24,8 @@ public class Object {
     }
 
 
-	public void createObjects(String objectNaam) {
-		switch(objectNaam) {
+    public void createObjects(String objectNaam) {
+        switch(objectNaam) {
             case "Rook":
                 Rook rook = new Rook();
                 break;
@@ -49,13 +49,13 @@ public class Object {
             case "Muur":
                 Muur muur = new Muur();
         }
-	}
+    }
 
-	public void createObjects(String objectNaam, ImageView imageView) {
+    public void createObjects(String objectNaam, ImageView imageView) {
         Muur muur = new Muur(imageView);
     }
 
-	public String getNaam() {
+    public String getNaam() {
         return naam;
     }
     public ImageView getImageView() {

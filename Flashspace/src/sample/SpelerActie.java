@@ -39,7 +39,7 @@ public class SpelerActie {
         vak.removeSpeler(speler);
         switch(richting) {
             case 0: if(speler.getY()>0 && (vak.checkObstakels(0)==2 || vak.checkObstakels(0)>3)) {
-                    speler.setY(speler.getY()-1);
+                speler.setY(speler.getY()-1);
             }   break;
             case 1: if(speler.getX()<9 && (vak.checkObstakels(1)==2 || vak.checkObstakels(1)>3)) {
                 speler.setX(speler.getX()+1);
@@ -73,6 +73,7 @@ public class SpelerActie {
         Vak vak = spelerLocatieVak();
         switch (vak.checkObstakels(richting)) {
             case 0:
+
                 vak.setObstakel(richting, 1);
                 obstakelInteractieloop(richting,1);
                 break;
@@ -130,19 +131,19 @@ public class SpelerActie {
         d8.gooi();
         switch(kwadrant) {
             case 2: if(d6.getWaarde()<4) {
-                        d6.flip();
-                    }
-                    if(d8.getWaarde()<5) {
-                        d8.flip();
-                    }
+                d6.flip();
+            }
+                if(d8.getWaarde()<5) {
+                    d8.flip();
+                }
 
                 break;
             case 3: if(d6.getWaarde()<4) {
-                    d6.flip();
-                    }
-                    if(d8.getWaarde()>4) {
+                d6.flip();
+            }
+                if(d8.getWaarde()>4) {
                     d8.flip();
-                    }
+                }
                 break;
             case 0: if(d6.getWaarde()>3) {
                 d6.flip();

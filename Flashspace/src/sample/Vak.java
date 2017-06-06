@@ -8,7 +8,7 @@ public class Vak {
     public Object.Speler[] spelers = new Object.Speler[6];
     // Richtingen: obstakels[0] = boven, obstakels [1] = rechts etc.
     // obstakels: 0 = muur, 1 = muur(1schade), 2 = muur(2schade), 3=deur(gesloten), 4=deur(open), 5=empty
-	public int[] obstakels;
+    public int[] obstakels;
 
     public Vak() {
         Object object = new Object();
