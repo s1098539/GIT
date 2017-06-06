@@ -16,7 +16,7 @@ public class BeurtAfronding {
     Vak vak;
     Vak vak2;
     Object obj;
-	Dobbelsteen d6 = new Dobbelsteen(6);
+    Dobbelsteen d6 = new Dobbelsteen(6);
     Dobbelsteen d8 = new Dobbelsteen(8);
 
     public BeurtAfronding(Speelveld veld) {
@@ -34,7 +34,7 @@ public class BeurtAfronding {
             for(int y = 1; y < 7; y++) {
                 vak=veld.getVak(x,y);
                 if(vak.getObjecten()[8]!= null &&
-                    (vak.getObjecten()[6] != null && vak.getObjecten()[6].getNaam().equals("Vuur"))) {
+                        (vak.getObjecten()[6] != null && vak.getObjecten()[6].getNaam().equals("Vuur"))) {
                     handleExplosie(x,y);
                     vak.removeObject(8);
                 }
@@ -109,7 +109,7 @@ public class BeurtAfronding {
         }
     }
 
-	public void handleExplosie(int x, int y) {// Joep
+    public void handleExplosie(int x, int y) {// Joep
         boolean doorgaan;
         int teller;
         Vak vak;
@@ -265,7 +265,7 @@ public class BeurtAfronding {
                 break;
         }
 
-}
+    }
 
     private void schadeLoop(int richting, int obstakel, int x, int y) {
         switch(richting) {
@@ -284,24 +284,24 @@ public class BeurtAfronding {
         }
     }
 
-	public void handleBrandweerlieden() {
-		// TODO - implement BeurtAfronding.handleBrandweerlieden
-		throw new UnsupportedOperationException();
-	}
+    public void handleBrandweerlieden() {
+        // TODO - implement BeurtAfronding.handleBrandweerlieden
+        throw new UnsupportedOperationException();
+    }
 
-	public void handlePersoonVanAandacht() {
-		// TODO - implement BeurtAfronding.handlePersoonVanAandacht
-		throw new UnsupportedOperationException();
-	}
+    public void handlePersoonVanAandacht() {
+        // TODO - implement BeurtAfronding.handlePersoonVanAandacht
+        throw new UnsupportedOperationException();
+    }
 
-	public void vulPersoonVanAandachtAan() {
-		// TODO - implement BeurtAfronding.vulPersoonVanAandachtAan
-		throw new UnsupportedOperationException();
-	}
+    public void vulPersoonVanAandachtAan() {
+        // TODO - implement BeurtAfronding.vulPersoonVanAandachtAan
+        throw new UnsupportedOperationException();
+    }
 
-	public void checkWinLoseCondition() {
-		// TODO - implement BeurtAfronding.checkWinLoseCondition
-		throw new UnsupportedOperationException();
-	}
+    public void checkWinLoseCondition() {
+        // TODO - implement BeurtAfronding.checkWinLoseCondition
+        throw new UnsupportedOperationException();
+    }
 
 }
