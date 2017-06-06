@@ -274,7 +274,7 @@
                                 </HBox>
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgOpenendeur" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Openendeur.png" />
                                             </image>

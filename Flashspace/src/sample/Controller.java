@@ -20,6 +20,8 @@ public class Controller {
     private Button btnDOWN;
     @FXML
     private ImageView imgHakken;
+    @FXML
+    private Button btnSpecial;
 
     private FlowPane[][]fp = new FlowPane[10][8];
     private Speelveld veld = new Speelveld();
@@ -81,37 +83,39 @@ public class Controller {
 
 
         //Vonko naar boven test (linker verticale lijn)
-        veld.getVak(3, 0).addObject(new Object.Rook());
-        veld.getVak(3, 1).addObject(new Object.Rook());
-        veld.getVak(3, 2).addObject(new Object.Rook());
-        veld.getVak(3,3).addObject(new Object.Rook());
-        veld.getVak(3, 4).addObject(new Object.Rook());
-        veld.getVak(3, 5).addObject(new Object.Vuur());
+        veld.getVak(9, 7).addObject(new Object.GevaarlijkeStof());
+//        veld.getVak(3, 0).addObject(new Object.Rook());
+//        veld.getVak(3, 1).addObject(new Object.Rook());
+//        veld.getVak(3, 2).addObject(new Object.Rook());
+//        veld.getVak(3,3).addObject(new Object.Rook());
+//        veld.getVak(3, 4).addObject(new Object.Rook());
+//        veld.getVak(3, 5).addObject(new Object.Vuur());
+//
+//        //Vonko naar beneden test (rechter verticale lijn)
+//        veld.getVak(5, 0).addObject(new Object.Vuur());
+//        veld.getVak(5, 1).addObject(new Object.Rook());
+//        veld.getVak(5, 2).addObject(new Object.Rook());
+//        veld.getVak(5,3).addObject(new Object.Rook());
+//        veld.getVak(5, 4).addObject(new Object.Rook());
+//        veld.getVak(5, 5).addObject(new Object.Rook());
+//
+//        //Vonko naar links test (linker horizontale lijn)
+//        veld.getVak(0, 7).addObject(new Object.Rook());
+//        veld.getVak(1, 7).addObject(new Object.Rook());
+//        veld.getVak(2, 7).addObject(new Object.Rook());
+//        veld.getVak(3, 7).addObject(new Object.Rook());
+//        veld.getVak(4, 7).addObject(new Object.Vuur());
+//
+//        //Vonka naar rechts test (rechter horizontale lijn)
+//        veld.getVak(6, 7).addObject(new Object.Vuur());
+//        veld.getVak(7, 7).addObject(new Object.Rook());
+//        veld.getVak(8, 7).addObject(new Object.Rook());
+//        veld.getVak(9, 7).addObject(new Object.Rook());
 
-        //Vonko naar beneden test (rechter verticale lijn)
-        veld.getVak(5, 0).addObject(new Object.Vuur());
-        veld.getVak(5, 1).addObject(new Object.Rook());
-        veld.getVak(5, 2).addObject(new Object.Rook());
-        veld.getVak(5,3).addObject(new Object.Rook());
-        veld.getVak(5, 4).addObject(new Object.Rook());
-        veld.getVak(5, 5).addObject(new Object.Rook());
-
-        //Vonko naar links test (linker horizontale lijn)
-        veld.getVak(0, 7).addObject(new Object.Rook());
-        veld.getVak(1, 7).addObject(new Object.Rook());
-        veld.getVak(2, 7).addObject(new Object.Rook());
-        veld.getVak(3, 7).addObject(new Object.Rook());
-        veld.getVak(4, 7).addObject(new Object.Vuur());
-
-        //Vonka naar rechts test (rechter horizontale lijn)
-        veld.getVak(6, 7).addObject(new Object.Vuur());
-        veld.getVak(7, 7).addObject(new Object.Rook());
-        veld.getVak(8, 7).addObject(new Object.Rook());
-        veld.getVak(9, 7).addObject(new Object.Rook());
 
 
-        ba.handleVonkoverslag();
-        ba.newRook();
+       // ba.handleVonkoverslag();
+       // ba.newRook();
         view.update();
 
 
@@ -168,7 +172,14 @@ public class Controller {
             }
             System.out.println(hakken);
         });
-
+        btnSpecial.setOnAction(event -> {
+            for (int vaak = 0; vaak < 3; vaak++) {
+                ba.newRook();
+                ba.handleVonkoverslag();
+                ba.handleGevaarlijkeStof();
+                view.update();
+            }
+        });
 
 
 

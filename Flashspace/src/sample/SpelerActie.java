@@ -73,6 +73,7 @@ public class SpelerActie {
         Vak vak = spelerLocatieVak();
         switch (vak.checkObstakels(richting)) {
             case 0:
+
                 vak.setObstakel(richting, 1);
                 obstakelInteractieloop(richting,1);
                 break;

@@ -29,10 +29,14 @@ public class BeurtAfronding {
 
 
     public void handleGevaarlijkeStof() {
+        Vak vak;
         for(int x = 1; x < 9; x++) {
-            for(int y = 1; y < 7; x++) {
-                if(veld.getVak(x,y).getObjecten()[8].getNaam().equals("GS")) {
+            for(int y = 1; y < 7; y++) {
+                vak=veld.getVak(x,y);
+                if(vak.getObjecten()[8]!= null &&
+                    (vak.getObjecten()[6] != null && vak.getObjecten()[6].getNaam().equals("Vuur"))) {
                     handleExplosie(x,y);
+                    vak.removeObject(8);
                 }
             }
         }
@@ -115,8 +119,8 @@ public class BeurtAfronding {
                 doorgaan = true;
                 while (richting == 0 && doorgaan && ((y - teller) >= 1)) {
                     vak = veld.getVak(x, (y - teller));
-                    if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
-                        schade(0, x, (y - teller));
+                    if ((vak.checkObstakels(richting) < 2) || (vak.checkObstakels(richting) == 3)){
+                        schade(richting, x, (y - teller));
                         doorgaan = false;
                     }
 
@@ -131,8 +135,8 @@ public class BeurtAfronding {
                 }
                 while (richting == 1 && doorgaan && ((x + teller) <= 8)) {
                     vak = veld.getVak((x+teller), y);
-                    if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
-                        schade(0, (x+teller), y);
+                    if ((vak.checkObstakels(richting) < 2) || (vak.checkObstakels(richting) == 3)){
+                        schade(richting, (x+teller), y);
                         doorgaan = false;
                     }
 
@@ -147,8 +151,8 @@ public class BeurtAfronding {
                 }
                 while (richting == 2 && doorgaan && ((y + teller) <= 6)) {
                     vak = veld.getVak(x, (y + teller));
-                    if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
-                        schade(0, x, (y - teller));
+                    if ((vak.checkObstakels(richting) < 2) || (vak.checkObstakels(0) == 3)){
+                        schade(richting, x, (y + teller));
                         doorgaan = false;
                     }
 
@@ -163,8 +167,8 @@ public class BeurtAfronding {
                 }
                 while (richting == 3 && doorgaan && ((x - teller) >= 1)) {
                     vak = veld.getVak((x-teller), y);
-                    if ((vak.checkObstakels(0) < 2) || (vak.checkObstakels(0) == 3)){
-                        schade(0, (x+teller), y);
+                    if ((vak.checkObstakels(richting) < 2) || (vak.checkObstakels(richting) == 3)){
+                        schade(richting, (x-teller), y);
                         doorgaan = false;
                     }
 
@@ -204,7 +208,7 @@ public class BeurtAfronding {
                     }
                 }
             }
-            if (richting == 1){
+            else if (richting == 1){
                 while ((x + teller < 9) && doorgaan) {
                     obstakel = veld.getVakken()[x + teller][y].checkObstakels(richting);
                     if (obstakel < 2 || obstakel == 3) {
@@ -216,7 +220,7 @@ public class BeurtAfronding {
                     }
                 }
             }
-            if (richting == 2){
+            else if (richting == 2){
                 while ((y + teller < 7) && doorgaan) {
                     obstakel = veld.getVakken()[x][y + teller].checkObstakels(richting);
                     if (obstakel < 2 || obstakel == 3) {
@@ -228,7 +232,7 @@ public class BeurtAfronding {
                     }
                 }
             }
-            if (richting == 3){
+            else if (richting == 3){
                 while ((x - teller > 0) && doorgaan) {
                     obstakel = veld.getVakken()[x + teller][y].checkObstakels(richting);
                     if (obstakel < 2 || obstakel == 3) {
@@ -252,7 +256,7 @@ public class BeurtAfronding {
                 schadeLoop(richting,1,x,y);
                 break;
             case 1:
-                veld.getVak(x,y).setObstakel(richting, 1);
+                veld.getVak(x,y).setObstakel(richting, 2);
                 schadeLoop(richting,2,x,y);
                 break;
             case 3:
@@ -272,7 +276,7 @@ public class BeurtAfronding {
                 veld.getVak(x+1,y).setObstakel(3, obstakel);
                 break;
             case 2:
-                veld.getVak(x,y+1).setObstakel(4, obstakel);
+                veld.getVak(x,y+1).setObstakel(0, obstakel);
                 break;
             case 3:
                 veld.getVak(x-1,y).setObstakel(1, obstakel);
