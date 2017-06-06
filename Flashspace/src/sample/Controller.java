@@ -1,11 +1,18 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package sample;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import sample.Object.GevaarlijkeStof;
+import sample.Object.Speler;
 
 public class Controller {
     @FXML
@@ -22,166 +29,109 @@ public class Controller {
     private ImageView imgHakken;
     @FXML
     private Button btnSpecial;
-
-    private FlowPane[][]fp = new FlowPane[10][8];
+    private FlowPane[][] fp = new FlowPane[10][8];
     private Speelveld veld = new Speelveld();
-    ImageView[]ivarray = new ImageView[720];
-    private View view = new View(fp,veld);
-    private BeurtAfronding ba = new BeurtAfronding(veld);
-    private Object.Speler speler = new Object.Speler("Lion", Kleur.ZWART, 4,3);
-    SpelerActie sa = new SpelerActie(speler, veld);
-    private Boolean hakken = false;
+    ImageView[] ivarray = new ImageView[720];
+    private View view;
+    private BeurtAfronding ba;
+    private Speler speler;
+    SpelerActie sa;
+    private Boolean hakken;
+
+    public Controller() {
+        this.view = new View(this.fp, this.veld);
+        this.ba = new BeurtAfronding(this.veld);
+        this.speler = new Speler("Lion", Kleur.ZWART, 4, 3);
+        this.sa = new SpelerActie(this.speler, this.veld);
+        this.hakken = Boolean.valueOf(false);
+    }
 
     @FXML
     public void initialize() {
-        veld.getVak(speler.getX(),speler.getY()).addObject(speler);
-
-
+        this.veld.getVak(this.speler.getX(), this.speler.getY()).addObject(this.speler);
         System.out.println("test");
-        for(int x = 0; x <10; x++) {
-            for (int y = 0; y < 8; y++) {
-                fp[x][y] = new FlowPane();
-                gridpane.add(fp[x][y],x,y);
+
+        int x;
+        int y;
+        for(x = 0; x < 10; ++x) {
+            for(y = 0; y < 8; ++y) {
+                this.fp[x][y] = new FlowPane();
+                this.gridpane.add(this.fp[x][y], x, y);
             }
         }
 
-//        for(int c=1; c<9; c++){
-//            veld.getVakken()[c][2].setObstakel(0,1);
-//        }
-//
-//        for(int x = 0; x <10; x++) {
-//            for (int y = 0; y < 8; y++) {
-//                veld.getVak(x, y).addObject(new Object.Vuur());
-//            }
-//        }
-//
-//        for(int x = 0; x <10; x++) {
-//            for (int y = 0; y < 8; y++) {
-//                veld.getVak(x, y).addObject(new Object.BrandHaard());
-//            }
-//        }
-//
-//        for(int x = 0; x <10; x++) {
-//            for (int y = 0; y < 8; y++) {
-//                veld.getVak(x, y).addObject(new Object.PersoonVanAandacht());
-//            }
-//        }
-//
-        for(int x = 0; x <10; x++) {
-            for (int y = 0; y < 8; y++) {
-                for (int z = 0; z < 4; z++) {
-                    veld.getVak(x, y).setObstakel(z, 0);
+        for(x = 0; x < 10; ++x) {
+            for(y = 0; y < 8; ++y) {
+                for(int z = 0; z < 4; ++z) {
+                    this.veld.getVak(x, y).setObstakel(z, 0);
                 }
             }
         }
 
-        veld.getVak(2,2).addObject(new Object.GevaarlijkeStof());
-
-
-
-
-
-
-        //Vonko naar boven test (linker verticale lijn)
-        veld.getVak(9, 7).addObject(new Object.GevaarlijkeStof());
-//        veld.getVak(3, 0).addObject(new Object.Rook());
-//        veld.getVak(3, 1).addObject(new Object.Rook());
-//        veld.getVak(3, 2).addObject(new Object.Rook());
-//        veld.getVak(3,3).addObject(new Object.Rook());
-//        veld.getVak(3, 4).addObject(new Object.Rook());
-//        veld.getVak(3, 5).addObject(new Object.Vuur());
-//
-//        //Vonko naar beneden test (rechter verticale lijn)
-//        veld.getVak(5, 0).addObject(new Object.Vuur());
-//        veld.getVak(5, 1).addObject(new Object.Rook());
-//        veld.getVak(5, 2).addObject(new Object.Rook());
-//        veld.getVak(5,3).addObject(new Object.Rook());
-//        veld.getVak(5, 4).addObject(new Object.Rook());
-//        veld.getVak(5, 5).addObject(new Object.Rook());
-//
-//        //Vonko naar links test (linker horizontale lijn)
-//        veld.getVak(0, 7).addObject(new Object.Rook());
-//        veld.getVak(1, 7).addObject(new Object.Rook());
-//        veld.getVak(2, 7).addObject(new Object.Rook());
-//        veld.getVak(3, 7).addObject(new Object.Rook());
-//        veld.getVak(4, 7).addObject(new Object.Vuur());
-//
-//        //Vonka naar rechts test (rechter horizontale lijn)
-//        veld.getVak(6, 7).addObject(new Object.Vuur());
-//        veld.getVak(7, 7).addObject(new Object.Rook());
-//        veld.getVak(8, 7).addObject(new Object.Rook());
-//        veld.getVak(9, 7).addObject(new Object.Rook());
-
-
-
-       // ba.handleVonkoverslag();
-       // ba.newRook();
-        view.update();
-
-
-        btnUP.setOnAction(event -> {
-            if (hakken) {
-                sa.muurInteractie(0);
+        this.veld.getVak(2, 2).addObject(new GevaarlijkeStof());
+        this.veld.getVak(9, 7).addObject(new GevaarlijkeStof());
+        this.view.update();
+        this.btnUP.setOnAction((event) -> {
+            if(this.hakken.booleanValue()) {
+                this.sa.muurInteractie(0);
             } else {
-                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-                sa.beweegwActie(0);
-                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+                this.veld.getVak(this.speler.getX(), this.speler.getY()).removeObject(4);
+                this.sa.beweegwActie(0);
+                this.veld.getVak(this.speler.getX(), this.speler.getY()).addObject(this.speler);
             }
 
-            view.update();
+            this.view.update();
         });
-
-        btnLEFT.setOnAction(event -> {
-            if (hakken) {
-                sa.muurInteractie(3);
+        this.btnLEFT.setOnAction((event) -> {
+            if(this.hakken.booleanValue()) {
+                this.sa.muurInteractie(3);
             } else {
-                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-                sa.beweegwActie(3);
-                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+                this.veld.getVak(this.speler.getX(), this.speler.getY()).removeObject(4);
+                this.sa.beweegwActie(3);
+                this.veld.getVak(this.speler.getX(), this.speler.getY()).addObject(this.speler);
             }
-            view.update();
-        });
 
-        btnRIGHT.setOnAction(event -> {
-            if(hakken) {
-                sa.muurInteractie(1);
-            }else {
-                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
-                sa.beweegwActie(1);
-                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
-            }
-            view.update();
+            this.view.update();
         });
-
-        btnDOWN.setOnAction(event -> {
-            if(hakken) {
-                sa.muurInteractie(2);
-            }else {
-                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
-                sa.beweegwActie(2);
-                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
-            }
-            view.update();
-        });
-
-        imgHakken.setOnMouseClicked(event -> {
-            if(hakken) {
-                hakken = false;
+        this.btnRIGHT.setOnAction((event) -> {
+            if(this.hakken.booleanValue()) {
+                this.sa.muurInteractie(1);
             } else {
-                hakken = true;
+                this.veld.getVak(this.speler.getX(), this.speler.getY()).removeObject(4);
+                this.sa.beweegwActie(1);
+                this.veld.getVak(this.speler.getX(), this.speler.getY()).addObject(this.speler);
             }
-            System.out.println(hakken);
+
+            this.view.update();
         });
-        btnSpecial.setOnAction(event -> {
-            for (int vaak = 0; vaak < 3; vaak++) {
-                ba.newRook();
-                ba.handleVonkoverslag();
-                ba.handleGevaarlijkeStof();
-                view.update();
+        this.btnDOWN.setOnAction((event) -> {
+            if(this.hakken.booleanValue()) {
+                this.sa.muurInteractie(2);
+            } else {
+                this.veld.getVak(this.speler.getX(), this.speler.getY()).removeObject(4);
+                this.sa.beweegwActie(2);
+                this.veld.getVak(this.speler.getX(), this.speler.getY()).addObject(this.speler);
             }
+
+            this.view.update();
         });
+        this.imgHakken.setOnMouseClicked((event) -> {
+            if(this.hakken.booleanValue()) {
+                this.hakken = Boolean.valueOf(false);
+            } else {
+                this.hakken = Boolean.valueOf(true);
+            }
 
+            System.out.println(this.hakken);
+        });
+        this.btnSpecial.setOnAction((event) -> {
+            for(int vaak = 0; vaak < 3; ++vaak) {
+                this.ba.newRook();
+                this.ba.handleVonkoverslag();
+                this.ba.handleGevaarlijkeStof();
+                this.view.update();
+            }
 
-
+        });
     }
 }
