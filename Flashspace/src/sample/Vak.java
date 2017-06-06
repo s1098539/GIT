@@ -6,8 +6,53 @@ import static sample.Kleur.*;
 
 public class Vak {
     boolean hotspot = false;
+
+    public boolean isHotspot() {
+        return hotspot;
+    }
+
+    public void setHotspot(boolean hotspot) {
+        this.hotspot = hotspot;
+    }
+
+    public boolean isPersoon() {
+        return persoon;
+    }
+
+    public void setPersoon(boolean persoon) {
+        this.persoon = persoon;
+    }
+
+    public boolean isVuur() {
+        return vuur;
+    }
+
+    public void setVuur(boolean vuur) {
+        this.vuur = vuur;
+    }
+
+    public boolean isRook() {
+        return rook;
+    }
+
+    public void setRook(boolean rook) {
+        this.rook = rook;
+    }
+
+    public boolean isStoffen() {
+        return stoffen;
+    }
+
+    public void setStoffen(boolean stoffen) {
+        this.stoffen = stoffen;
+    }
+
     boolean persoon = false;
-    Speler[] spelers = new Speler[6];
+    boolean vuur = false;
+    boolean rook = false;
+    boolean stoffen = false;
+    boolean niks = false;
+    Kleur[] kleuren = new Kleur[6];
 
 
 
@@ -15,6 +60,14 @@ public class Vak {
     Status rechts;
     Status onder;
     Status links;
+
+    public boolean isNiks() {
+        return niks;
+    }
+
+    public void setNiks(boolean niks) {
+        this.niks = niks;
+    }
 
     public Status getRechts() {
         return rechts;
@@ -48,6 +101,26 @@ public class Vak {
         this.boven = boven;
     }
 
+    public void vuurPlaats(Fiche fiche) {
+        switch(fiche) {
+            case ROOK:
+                setRook(true);
+                setVuur(false);
+                setRook(false);
+                break;
+            case VUUR:
+                setVuur(true);
+                setRook(false);
+                setNiks(false);
+                break;
+            case NIKS:
+                setNiks(true);
+                setRook(false);
+                setVuur(false);
+                break;
+        }
+    }
+
 
     //    public enum onder {
 //        MUUR, MUUR1, MUUR2, DEURO, DEURD, LEEG
@@ -74,45 +147,45 @@ public class Vak {
         }
     }
 
-    public void addSpeler(Speler speler) {
-        switch (speler.getKleur()) {
+    public void addSpeler(Kleur kleur) {
+        switch (kleur) {
             case BLAUW:
-                spelers[0] = speler;
+                kleuren[0] = kleur;
                 break;
             case GEEL:
-                spelers[1] = speler;
+                kleuren[1] = kleur;
                 break;
             case GROEN:
-                spelers[2] = speler;
+                kleuren[2] = kleur;
                 break;
             case ORANJE:
-                spelers[3] = speler;
+                kleuren[3] = kleur;
                 break;
             case ROOD:
-                spelers[4] = speler;
+                kleuren[4] = kleur;
                 break;
             case ZWART:
-                spelers[5] = speler;
+                kleuren[5] = kleur;
                 break;
         }
     }
 
-//    public void removeSpeler(OSpeler speler) {
-//        switch(speler.getKleur()) {
-//            case BLAUW: spelers[0]=null;
-//                break;
-//            case GEEL: spelers[1]=null;
-//                break;
-//            case GROEN: spelers[2]=null;
-//                break;
-//            case ORANJE: spelers[3]=null;
-//                break;
-//            case ROOD: spelers[4]=null;
-//                break;
-//            case ZWART: spelers[5]=null;
-//                break;
-//        }
-//    }
+    public void removeSpeler(Kleur kleur) {
+        switch(kleur) {
+            case BLAUW: kleuren[0]=null;
+                break;
+            case GEEL: kleuren[1]=null;
+                break;
+            case GROEN: kleuren[2]=null;
+                break;
+            case ORANJE: kleuren[3]=null;
+                break;
+            case ROOD: kleuren[4]=null;
+                break;
+            case ZWART: kleuren[5]=null;
+                break;
+        }
+    }
 
     public void setObstakel(int richting, int obstakel) {
         obstakels[richting] = obstakel;
