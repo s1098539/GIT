@@ -1,8 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6533006-44b4-419e-9fe3-5c81e205ba99" name="Default" comment="">
+    <list default="true" id="daa11c6d-4e26-475a-8806-9b48a516d470" name="Default" comment="explosie&quot;afgemaakt&quot; door gebrekkige view weet ik niet of hij werkt(no offense lion)">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/ChatBox.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/Taal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/BeurtAfronding.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Character.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Controller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Dobbelsteen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Kleur.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$BrandHaard.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Brandweerwagen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Deur.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$GevaarlijkeStof.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Muur.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$PersoonVanAandacht.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Rook.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Speler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Vuur.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object$Ziekenwagen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Object.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Speelveld.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/SpelerActie.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Vak$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/Vak.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/View.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/(zee)Hond.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/AP over.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Bord.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Brandblusser.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Brandweerblauw.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Brandweergeel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Brandweergroen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Brandweerhelmen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Brandweeroranje.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Brandweerrood.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Brandweerzwart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeur.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurBoven.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurLinks.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurOnder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/DichteDeurRechts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Egel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Groenhaar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Hakken.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Hipstersnor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Hotspot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Latifah.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Medkit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotBoven.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotLinks.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotOnder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur1kapotRechts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotBoven.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotLinks.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotOnder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Muur2kapotRechts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurBoven.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurLinks.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurOnder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/MuurRechts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Obamanigua.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Oma.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeur.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurBoven.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurLinks.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurOnder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/OpenDeurRechts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Openendeur.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Paarshaar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/PaarshaarHipster.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Pickup.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/RarebrilHipster.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Rijden.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Rolswap.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Roodhaar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Rook.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Snek.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Vis.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Vlam.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Vraagteken.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Wagenblussen.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flashspace/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/Flashspace/sample/sample.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Vak.java" afterPath="$PROJECT_DIR$/src/sample/Vak.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +101,96 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="238">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeurtAfronding.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1751">
+              <caret line="103" column="12" lean-forward="false" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Speler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Speler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-223">
               <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vak.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+              <folding>
+                <element signature="method#vuurPlaats#0;class#Vak#0" expanded="false" />
+                <element signature="e#1876#1877#0" expanded="true" />
+                <element signature="e#1910#1911#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1377">
+              <caret line="86" column="21" lean-forward="false" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Speelveld.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Speelveld.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7429">
+              <caret line="437" column="18" lean-forward="false" selection-start-line="437" selection-start-column="18" selection-end-line="437" selection-end-column="18" />
+              <folding>
+                <marker date="1496777127649" expanded="true" signature="23526:25542" ph="..." />
+                <marker date="1496777127649" expanded="true" signature="23526:25561" ph="..." />
+                <marker date="1496777127649" expanded="true" signature="23526:25575" ph="..." />
+                <marker date="1496777127649" expanded="true" signature="23526:25589" ph="..." />
+                <marker date="1496777127649" expanded="true" signature="23635:25521" ph="..." />
+                <marker date="1496777127649" expanded="true" signature="23673:24672" ph="..." />
+                <marker date="1496777127649" expanded="true" signature="24707:25495" ph="..." />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1955">
+              <caret line="115" column="55" lean-forward="false" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -27,12 +198,44 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>oran</find>
+      <find>oranje</find>
+      <find>gridpane</find>
+      <find>flowpane</find>
+      <find>flow</find>
+      <find>.png</find>
+      <find>fp</find>
+      <find>f</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="test" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/sample/SpelerActie.java" />
+        <option value="$PROJECT_DIR$/src/sample/Speler.java" />
+        <option value="$PROJECT_DIR$/src/sample/Kleur.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Object.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/BeurtAfronding.java" />
+        <option value="$PROJECT_DIR$/src/sample/Vak.java" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -42,12 +245,31 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Duplicates</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -63,6 +285,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -96,13 +319,15 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="SearchEverywhereHistoryKey" value="handleexp&#9;PSI&#9;JAVA://sample.BeurtAfronding#handleExplosie" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -118,13 +343,26 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/BeurtAfronding.class</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Controller.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Object$BrandHaard.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Object$Brandweerwagen.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Object$GevaarlijkeStof.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Object$PersoonVanAandacht.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Object$Ziekenwagen.class</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/SpelerActie.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Thumbs.db</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/sample.fxml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/BeurtAfronding.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/Character.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/Controller.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/Main.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/Object.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/Speelveld.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/Speler.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/SpelerActie.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/Vak.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/View.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/sample.fxml</PATH>
         </FILE-GROUP>
@@ -134,6 +372,15 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Object$1.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Object$Deur.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Object$Muur.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/Object$Speler.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/View.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Empty.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Flashspace/sample/gfx/GevaarlijkeStof.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/Fiche.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sample/Status.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -141,6 +388,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/../UML/vpp/DomainModel.vpp</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -243,9 +491,9 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -253,7 +501,9 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Flashspace" />
       <envs />
-      <method />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -659,60 +909,159 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b6533006-44b4-419e-9fe3-5c81e205ba99" name="Default" comment="" />
-      <created>1496671832451</created>
+      <changelist id="daa11c6d-4e26-475a-8806-9b48a516d470" name="Default" comment="" />
+      <created>1496306440448</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1496671832451</updated>
-      <workItem from="1496671835296" duration="726000" />
-      <workItem from="1496742197673" duration="256000" />
+      <updated>1496306440448</updated>
+      <workItem from="1496306446324" duration="13531000" />
+      <workItem from="1496351599619" duration="248000" />
+      <workItem from="1496426380269" duration="8517000" />
+      <workItem from="1496479503865" duration="52000" />
+      <workItem from="1496479614867" duration="2994000" />
+      <workItem from="1496489358385" duration="190000" />
+      <workItem from="1496514500267" duration="693000" />
+      <workItem from="1496516741798" duration="1814000" />
+      <workItem from="1496520410653" duration="1168000" />
+      <workItem from="1496581561626" duration="1471000" />
+      <workItem from="1496680967700" duration="644000" />
+      <workItem from="1496696083058" duration="327000" />
+      <workItem from="1496777089796" duration="1070000" />
     </task>
-    <task id="LOCAL-00001" summary="for fucks sake joep">
-      <created>1496742444753</created>
+    <task id="LOCAL-00001" summary="Schade toegevoegd">
+      <created>1496310547879</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1496742444753</updated>
+      <updated>1496310547879</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Handle explosion bezig">
+      <created>1496319007382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1496319007383</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Handle explosion &quot;klaar&quot;">
+      <created>1496320597059</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1496320597059</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Made a view!!!!">
+      <created>1496434111096</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496434111096</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Made the view even better">
+      <created>1496434891102</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1496434891102</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Serious improvement on the view update function">
+      <created>1496481937925</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1496481937925</updated>
+    </task>
+    <task id="LOCAL-00007" summary="20px rook en vuur. kleine loop in controller voor rook spawn. kleine aanpassing in explosiehandler. werkt nog niet.">
+      <created>1496490288187</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1496490288187</updated>
+    </task>
+    <task id="LOCAL-00008" summary="opnieuw bezig met explosie. heb het ge-overhauled.">
+      <created>1496514602656</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1496514602656</updated>
+    </task>
+    <task id="LOCAL-00009" summary="explosie&quot;afgemaakt&quot; door gebrekkige view weet ik niet of hij werkt(no offense lion)">
+      <created>1496519265379</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1496519265379</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="982000" />
+    <option name="totallyTimeSpent" value="51286000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329776" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32870865" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329776" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24634655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -721,11 +1070,21 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="for fucks sake joep" />
-    <option name="LAST_COMMIT_MESSAGE" value="for fucks sake joep" />
+    <MESSAGE value="Schade toegevoegd" />
+    <MESSAGE value="Handle explosion bezig" />
+    <MESSAGE value="Handle explosion &quot;klaar&quot;" />
+    <MESSAGE value="Made a view!!!!" />
+    <MESSAGE value="Made the view even better" />
+    <MESSAGE value="Serious improvement on the view update function" />
+    <MESSAGE value="20px rook en vuur. kleine loop in controller voor rook spawn. kleine aanpassing in explosiehandler. werkt nog niet." />
+    <MESSAGE value="opnieuw bezig met explosie. heb het ge-overhauled." />
+    <MESSAGE value="explosie&quot;afgemaakt&quot; door gebrekkige view weet ik niet of hij werkt(no offense lion)" />
+    <option name="LAST_COMMIT_MESSAGE" value="explosie&quot;afgemaakt&quot; door gebrekkige view weet ik niet of hij werkt(no offense lion)" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -733,7 +1092,247 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding>
+            <element signature="method#vuurPlaats#0;class#Vak#0" expanded="false" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1910#1911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7769">
+          <caret line="457" column="32" lean-forward="false" selection-start-line="457" selection-start-column="32" selection-end-line="457" selection-end-column="32" />
+          <folding>
+            <marker date="1496777127649" expanded="true" signature="23526:25542" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25561" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25575" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25589" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23635:25521" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23673:24672" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="24707:25495" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/gfx/Vlam.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="60" column="43" lean-forward="false" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding>
+            <element signature="method#vuurPlaats#0;class#Vak#0" expanded="false" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1910#1911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7769">
+          <caret line="457" column="32" lean-forward="false" selection-start-line="457" selection-start-column="32" selection-end-line="457" selection-end-column="32" />
+          <folding>
+            <marker date="1496777127649" expanded="true" signature="23526:25542" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25561" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25575" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25589" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23635:25521" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23673:24672" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="24707:25495" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/gfx/Vlam.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding>
+            <element signature="method#vuurPlaats#0;class#Vak#0" expanded="false" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1910#1911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="80" column="23" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7769">
+          <caret line="457" column="32" lean-forward="false" selection-start-line="457" selection-start-column="32" selection-end-line="457" selection-end-column="32" />
+          <folding>
+            <marker date="1496777127649" expanded="true" signature="23526:25542" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25561" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25575" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25589" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23635:25521" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23673:24672" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="24707:25495" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/gfx/Vlam.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="104" column="4" lean-forward="false" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="method#vuurPlaats#0;class#Vak#0" expanded="false" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1910#1911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -741,11 +1340,201 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="method#vuurPlaats#0;class#Vak#0" expanded="false" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1910#1911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ChatBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Dobbelsteen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Richting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Taal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Kleur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SpelerActie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/gfx/Rook.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/gfx/Vis.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/gfx/Vlam.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Flashspace/sample/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1042">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Flashspace/sample/gfx/Vlam.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="3174" column="0" lean-forward="false" selection-start-line="3174" selection-start-column="0" selection-end-line="3174" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="238">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/image/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15759">
+          <caret line="1109" column="0" lean-forward="false" selection-start-line="1109" selection-start-column="0" selection-end-line="1109" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7429">
+          <caret line="437" column="18" lean-forward="false" selection-start-line="437" selection-start-column="18" selection-end-line="437" selection-end-column="18" />
+          <folding>
+            <marker date="1496777127649" expanded="true" signature="23526:25542" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25561" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25575" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23526:25589" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23635:25521" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="23673:24672" ph="..." />
+            <marker date="1496777127649" expanded="true" signature="24707:25495" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="115" column="55" lean-forward="false" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Speelveld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="86" column="21" lean-forward="false" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/BeurtAfronding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="103" column="12" lean-forward="false" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Speler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-223">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Vak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding>
+            <element signature="method#vuurPlaats#0;class#Vak#0" expanded="false" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1910#1911#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

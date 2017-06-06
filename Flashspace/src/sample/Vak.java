@@ -27,16 +27,32 @@ public class Vak {
         return vuur;
     }
 
-    public void setVuur(boolean vuur) {
-        this.vuur = vuur;
-    }
-
     public boolean isRook() {
         return rook;
     }
 
-    public void setRook(boolean rook) {
-        this.rook = rook;
+    public boolean isNiks() {
+        return niks;
+    }
+
+    public void vuurPlaats(Fiche fiche) {
+        switch(fiche) {
+            case ROOK:
+                this.rook=true;
+                this.vuur=false;
+                this.niks=false;
+                break;
+            case VUUR:
+                this.rook=false;
+                this.vuur=true;
+                this.niks=false;
+                break;
+            case NIKS:
+                this.rook=false;
+                this.vuur=false;
+                this.niks=true;
+                break;
+        }
     }
 
     public boolean isStoffen() {
@@ -61,21 +77,13 @@ public class Vak {
     Status onder;
     Status links;
 
-    public boolean isNiks() {
-        return niks;
-    }
 
-    public void setNiks(boolean niks) {
-        this.niks = niks;
-    }
 
     public Status getRechts() {
         return rechts;
     }
 
-    public void setRechts(Status rechts) {
-        this.rechts = rechts;
-    }
+    public void setRechts(Status rechts) {this.rechts = rechts;}
 
     public Status getOnder() {
         return onder;
@@ -101,25 +109,7 @@ public class Vak {
         this.boven = boven;
     }
 
-    public void vuurPlaats(Fiche fiche) {
-        switch(fiche) {
-            case ROOK:
-                setRook(true);
-                setVuur(false);
-                setRook(false);
-                break;
-            case VUUR:
-                setVuur(true);
-                setRook(false);
-                setNiks(false);
-                break;
-            case NIKS:
-                setNiks(true);
-                setRook(false);
-                setVuur(false);
-                break;
-        }
-    }
+
 
 
     //    public enum onder {
