@@ -1,10 +1,201 @@
-//package sample;
-//
-//import javafx.scene.image.Image;
-//import javafx.scene.image.ImageView;
-//import javafx.scene.layout.FlowPane;
-//
-//public class View {
+package sample;
+
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
+
+public class View{
+    FlowPane[]flowPanes = new FlowPane[80];
+    ImageView[]imageViews = new ImageView[720];
+
+    Image empty = new Image("sample/gfx/Empty.png",20,20,false,true);
+    Image hotspot = new Image("sample/gfx/Hotspot.png",20,20,false,true);
+    Image persoon = new Image("sample/gfx/Vraagteken.png",20,20,false,true);
+    Image vlam = new Image("sample/gfx/Vlam.png",20,20,false,true);
+    Image rook = new Image("sample/gfx/Rook.png",20,20,false,true);
+    Image gevaarlijkeStof = new Image("sample/gfx/GevaarlijkeStof.png",20,20,false,true);
+    Image dichteDeurLinks = new Image("sample/gfx/DichteDeurLinks.png",20,20,false,true);
+    Image dichteDeurOnder = new Image("sample/gfx/DichteDeurOnder.png",20,20,false,true);
+    Image dichteDeurBoven = new Image("sample/gfx/DichteDeurBoven.png",20,20,false,true);
+    Image dichteDeurRechts = new Image("sample/gfx/DichteDeurRechts.png",20,20,false,true);
+    Image openDeurLinks = new Image("sample/gfx/OpenDeurLinks.png",20,20,false,true);
+    Image openDeurOnder = new Image("sample/gfx/OpenDeurOnder.png",20,20,false,true);
+    Image openDeurBoven = new Image("sample/gfx/OpenDeurBoven.png",20,20,false,true);
+    Image openDeurRechts = new Image("sample/gfx/OpenDeurRechts.png",20,20,false,true);
+    Image muurBoven = new Image("sample/gfx/MuurBoven.png",20,20,false,true);
+    Image muurLinks = new Image("sample/gfx/MuurLinks.png",20,20,false,true);
+    Image muurOnder = new Image("sample/gfx/MuurOnder.png",20,20,false,true);
+    Image muurRechts = new Image("sample/gfx/MuurRechts.png",20,20,false,true);
+    Image muur1kapotBoven = new Image("sample/gfx/Muur1kapotBoven.png",20,20,false,true);
+    Image muur1kapotLinks = new Image("sample/gfx/Muur1kapotLinks.png",20,20,false,true);
+    Image muur1kapotOnder = new Image("sample/gfx/Muur1kapotOnder.png",20,20,false,true);
+    Image muur1kapotRechts = new Image("sample/gfx/Muur1kapotRechts.png",20,20,false,true);
+    Image muur2kapotBoven = new Image("sample/gfx/Muur2kapotBoven.png",20,20,false,true);
+    Image muur2kapotLinks = new Image("sample/gfx/Muur2kapotLinks.png",20,20,false,true);
+    Image muur2kapotOnder = new Image("sample/gfx/Muur2kapotOnder.png",20,20,false,true);
+    Image muur2kapotRechts = new Image("sample/gfx/Muur2kapotRechts.png",20,20,false,true);
+
+
+
+
+
+    void imageViewsFactory() {
+        for(int i = 0; i<720; i++) {
+            imageViews[i] = new ImageView();
+        }
+    }
+
+    public FlowPane[] getFlowPanes() {
+        return flowPanes;
+    }
+
+    public void flowPanesFactory() {
+        int u = 0;
+        for(int i = 0; i<80; i++) {
+            flowPanes[i] = new FlowPane();
+            for (int q = 0; q<9; q++) {
+                flowPanes[i].getChildren().add(imageViews[u]);
+                u++;
+            }
+        }
+    }
+
+    public void imageSetter(Speelveld veld) {
+        int q = 0;
+        for(int y = 0; y<8; y++) {
+            for (int x = 0; x < 10; x++) {
+
+                //Hotspot
+                if(veld.getVak(x,y).isHotspot()) {
+                    imageViews[q].setImage(hotspot);
+                } else {
+                    imageViews[q].setImage(empty);
+                }
+                q++;
+
+                //Obstakel boven
+                switch (veld.getVak(x,y).boven) {
+                    case MUUR: imageViews[q].setImage(muurOnder);
+                        break;
+                    case MUUR1: imageViews[q].setImage(muur1kapotOnder);
+                        break;
+                    case MUUR2: imageViews[q].setImage(muur2kapotOnder);
+                        break;
+                    case DEURO: imageViews[q].setImage(openDeurOnder);
+                        break;
+                    case DEURD: imageViews[q].setImage(dichteDeurOnder);
+                        break;
+                    case LEEG: imageViews[q].setImage(empty);
+                        break;
+                }
+                q++;
+
+                //Persoon!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Deze wordt denk ik anders maar voor nu werkt die ff goed genoeg
+                if(veld.getVak(x,y).isPersoon()) {
+                    imageViews[q].setImage(persoon);
+                } else {
+                    imageViews[q].setImage(empty);
+                }
+                q++;
+
+                //Obstakel links!
+                switch (veld.getVak(x,y).links) {
+                    case MUUR: imageViews[q].setImage(muurRechts);
+                        break;
+                    case MUUR1: imageViews[q].setImage(muur1kapotRechts);
+                        break;
+                    case MUUR2: imageViews[q].setImage(muur2kapotRechts);
+                        break;
+                    case DEURO: imageViews[q].setImage(openDeurRechts);
+                        break;
+                    case DEURD: imageViews[q].setImage(dichteDeurRechts);
+                        break;
+                    case LEEG: imageViews[q].setImage(empty);
+                        break;
+                }
+                q++;
+
+                //Spelers!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Weet nog ff niet hoe
+                if(false) {
+
+                } else {
+                    imageViews[q].setImage(empty);
+                }
+                q++;
+
+                //Obstakel rechts
+                switch (veld.getVak(x,y).rechts) {
+                    case MUUR: imageViews[q].setImage(muurLinks);
+                        break;
+                    case MUUR1: imageViews[q].setImage(muur1kapotLinks);
+                        break;
+                    case MUUR2: imageViews[q].setImage(muur2kapotLinks);
+                        break;
+                    case DEURO: imageViews[q].setImage(openDeurLinks);
+                        break;
+                    case DEURD: imageViews[q].setImage(dichteDeurLinks);
+                        break;
+                    case LEEG: imageViews[q].setImage(empty);
+                        break;
+                }
+                q++;
+
+                //Vuur plaats
+                if(veld.getVak(x,y).isVuur()) {
+                   imageViews[q].setImage(vlam);
+                } else if(veld.getVak(x,y).isRook()) {
+                    imageViews[q].setImage(rook);
+                } else {
+                    imageViews[q].setImage(empty);
+                }
+                q++;
+
+                //Obstakel onder
+                switch (veld.getVak(x,y).onder) {
+                    case MUUR: imageViews[q].setImage(muurBoven);
+                        break;
+                    case MUUR1: imageViews[q].setImage(muur1kapotBoven);
+                        break;
+                    case MUUR2: imageViews[q].setImage(muur2kapotBoven);
+                        break;
+                    case DEURO: imageViews[q].setImage(openDeurBoven);
+                        break;
+                    case DEURD: imageViews[q].setImage(dichteDeurBoven);
+                        break;
+                    case LEEG: imageViews[q].setImage(empty);
+                        break;
+                }
+                q++;
+
+                //Stoffen
+                if(veld.getVak(x,y).isStoffen()) {
+                    imageViews[q].setImage(gevaarlijkeStof);
+                } else {
+                    imageViews[q].setImage(empty);
+                }
+                q++;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    ImageView[]ivarray = new ImageView[720];
 //    FlowPane[][]fp;
 //    Speelveld veld;
@@ -168,4 +359,4 @@
 //            veld.getVak(x,y).addMuur(new Object.Deur(new ImageView(new Image(png,20,20,false,true))),z);
 //        }
 //    }
-//}
+}

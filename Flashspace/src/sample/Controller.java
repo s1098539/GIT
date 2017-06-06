@@ -1,30 +1,39 @@
-//package sample;
-//
-//import javafx.fxml.FXML;
-//import javafx.scene.control.Button;
-//import javafx.scene.image.Image;
-//import javafx.scene.image.ImageView;
-//import javafx.scene.layout.FlowPane;
-//import javafx.scene.layout.GridPane;
-//
-//public class Controller {
-//    @FXML
-//    private GridPane gridpane;
-//    @FXML
-//    private Button btnUP;
-//    @FXML
-//    private Button btnLEFT;
-//    @FXML
-//    private Button btnRIGHT;
-//    @FXML
-//    private Button btnDOWN;
-//    @FXML
-//    private ImageView imgHakken;
-//    @FXML
-//    private ImageView imgOpenendeur;
-//    @FXML
-//    private Button btnSpecial;
-//
+package sample;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+
+public class Controller {
+    @FXML
+    private GridPane gridpane;
+    @FXML
+    private Button btnUP;
+    @FXML
+    private Button btnLEFT;
+    @FXML
+    private Button btnRIGHT;
+    @FXML
+    private Button btnDOWN;
+    @FXML
+    private ImageView imgHakken;
+    @FXML
+    private ImageView imgOpenendeur;
+    @FXML
+    private Button btnSpecial;
+
+    public GridPane getGridpane() {
+        return gridpane;
+    }
+
+    public void setGridpane(GridPane gridpane) {
+        this.gridpane = gridpane;
+    }
+
+    //
 //    private FlowPane[][]fp = new FlowPane[10][8];
 //    private Speelveld veld = new Speelveld();
 //    ImageView[]ivarray = new ImageView[720];
@@ -35,8 +44,36 @@
 //    private Boolean hakken = false;
 //    private Boolean openendeur;
 //
-//    @FXML
-//    public void initialize() {
+    @FXML
+    public void initialize() {
+        Speelveld veld = new Speelveld();
+        for(int x = 0; x<10; x++) {
+            for(int y = 0; y<8; y++) {
+                veld.getVak(x,y).vuurPlaats(Fiche.VUUR);
+                veld.getVak(x,y).setHotspot(true);
+                veld.getVak(x,y).setPersoon(true);
+                veld.getVak(x,y).setStoffen(true);
+                veld.getVak(x,y).setBoven(Status.DEURO);
+                veld.getVak(x,y).setOnder(Status.DEURO);
+                veld.getVak(x,y).setLinks(Status.DEURO);
+                veld.getVak(x,y).setRechts(Status.DEURO);
+            }
+        }
+        View view = new View();
+        view.imageViewsFactory();
+        System.out.println("hoi");
+        view.flowPanesFactory();
+        int teller = 0;
+        for(int x = 0; x<10; x++) {
+            for(int y = 0; y<8; y++) {
+                gridpane.add(view.getFlowPanes()[teller],x,y);
+                teller++;
+            }
+        }
+            view.imageSetter(veld);
+
+
+
 ////        veld.getVak(speler.getX(),speler.getY()).addObject(speler);
 //
 //
@@ -189,5 +226,5 @@
 //
 //
 //
-//    }
-//}
+    }
+}

@@ -6,6 +6,17 @@ import static sample.Kleur.*;
 
 public class Vak {
     boolean hotspot = false;
+    boolean persoon = false;
+    boolean vuur = false;
+    boolean rook = false;
+    boolean stoffen = false;
+    boolean niks = false;
+    Kleur[] kleuren = new Kleur[6];
+
+    Status boven;
+    Status rechts;
+    Status onder;
+    Status links;
 
     public boolean isHotspot() {
         return hotspot;
@@ -63,20 +74,6 @@ public class Vak {
         this.stoffen = stoffen;
     }
 
-    boolean persoon = false;
-    boolean vuur = false;
-    boolean rook = false;
-    boolean stoffen = false;
-    boolean niks = false;
-    Kleur[] kleuren = new Kleur[6];
-
-
-
-    Status boven;
-    Status rechts;
-    Status onder;
-    Status links;
-
 
 
     public Status getRechts() {
@@ -108,22 +105,6 @@ public class Vak {
     public void setBoven(Status boven) {
         this.boven = boven;
     }
-
-
-
-
-    //    public enum onder {
-//        MUUR, MUUR1, MUUR2, DEURO, DEURD, LEEG
-//    }
-//
-//    public enum links {
-//        MUUR, MUUR1, MUUR2, DEURO, DEURD, LEEG
-//    }
-//
-//    public enum rechts {
-//        MUUR, MUUR1, MUUR2, DEURO, DEURD, LEEG
-//    }
-
 
     // Richtingen: obstakels[0] = boven, obstakels [1] = rechts etc.
     // obstakels: 0 = muur, 1 = muur(1schade), 2 = muur(2schade), 3=deur(gesloten), 4=deur(open), 5=empty
