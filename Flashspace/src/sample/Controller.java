@@ -44,6 +44,9 @@ public class Controller {
                 gridpane.add(fp[x][y],x,y);
             }
         }
+        veld.setMuren();
+
+
 
 //        for(int c=1; c<9; c++){
 //            veld.getVakken()[c][2].setObstakel(0,1);
@@ -67,13 +70,6 @@ public class Controller {
 //            }
 //        }
 //
-        for(int x = 0; x <10; x++) {
-            for (int y = 0; y < 8; y++) {
-                for (int z = 0; z < 4; z++) {
-                    veld.getVak(x, y).setObstakel(z, 0);
-                }
-            }
-        }
 
         veld.getVak(2,2).addObject(new Object.GevaarlijkeStof());
 
