@@ -19,7 +19,14 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        launch(args);
+//        launch(args);
+        Vak vak = new Vak();
+        vak.setBoven(Status.MUUR2);
+        if(vak.getBoven().isBegaanbaar() == false) {
+            System.out.println("nee");
+        } else {
+            System.out.println("ja");
+        }
 
     }
 }
