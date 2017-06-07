@@ -34,8 +34,12 @@ public class View{
     Image muur2kapotLinks = new Image("sample/gfx/Muur2kapotLinks.png",20,20,false,true);
     Image muur2kapotOnder = new Image("sample/gfx/Muur2kapotOnder.png",20,20,false,true);
     Image muur2kapotRechts = new Image("sample/gfx/Muur2kapotRechts.png",20,20,false,true);
-
-
+    Image brandweerBlauw = new Image("sample/gfx/Brandweerblauw.png",20,20,false,true);
+    Image brandweerGeel = new Image("sample/gfx/Brandweergeel.png",20,20,false,true);
+    Image brandweerGroen = new Image("sample/gfx/Brandweergroen.png",20,20,false,true);
+    Image brandweerOranje = new Image("sample/gfx/Brandweeroranje.png",20,20,false,true);
+    Image brandweerRood = new Image("sample/gfx/Brandweerrood.png",20,20,false,true);
+    Image brandweerZwart = new Image("sample/gfx/Brandweerzwart.png",20,20,false,true);
 
 
 
@@ -60,7 +64,7 @@ public class View{
         }
     }
 
-    public void imageSetter(Speelveld veld) {
+    public void imageSetter(Speelveld veld, Speler speler) {
         int q = 0;
         for(int y = 0; y<8; y++) {
             for (int x = 0; x < 10; x++) {
@@ -115,9 +119,25 @@ public class View{
                 }
                 q++;
 
-                //Spelers!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Weet nog ff niet hoe
-                if(false) {
-
+                //Spelers
+                if(speler.getX()==x && speler.getY()==y) {
+                    switch(speler.getKleur()) {
+                        case GEEL: imageViews[q].setImage(brandweerGeel);
+                            break;
+                        case ROOD: imageViews[q].setImage(brandweerRood);
+                            break;
+                        case BLAUW: imageViews[q].setImage(brandweerBlauw);
+                            break;
+                        case GROEN: imageViews[q].setImage(brandweerGroen);
+                            break;
+                        case ZWART: imageViews[q].setImage(brandweerZwart);
+                            break;
+                        case ORANJE: imageViews[q].setImage(brandweerOranje);
+                            break;
+                        default:
+                            System.out.println("How did this even happen :|");
+                            break;
+                    }
                 } else {
                     imageViews[q].setImage(empty);
                 }
