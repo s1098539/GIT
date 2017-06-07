@@ -155,12 +155,10 @@ public class Speler {
                     break;
             }
             if(vak.isVuur()){
-                vak.setRook(true);
-                vak.setVuur(false);
+                vak.vuurPlaats(Fiche.ROOK);
             }
             if(vak.isRook()) {
-                vak.setRook(false);
-                vak.setNiks(true);
+                vak.vuurPlaats(Fiche.NIKS);
             }
         }
     

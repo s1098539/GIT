@@ -110,6 +110,7 @@ public class Vak {
     // obstakels: 0 = muur, 1 = muur(1schade), 2 = muur(2schade), 3=deur(gesloten), 4=deur(open), 5=empty
     public int[] obstakels;
 
+
     public Vak() {
         Object object = new Object();
         obstakels = new int[4];

@@ -33,10 +33,9 @@
 //        for(int x = 1; x < 9; x++) {
 //            for(int y = 1; y < 7; y++) {
 //                vak=veld.getVak(x,y);
-//                if(vak.getObjecten()[8]!= null &&
-//                        (vak.getObjecten()[6] != null && vak.getObjecten()[6].getNaam().equals("Vuur"))) {
+//                if(vak.isStoffen() && vak.isVuur()) {
 //                    handleExplosie(x,y);
-//                    vak.removeObject(8);
+//                    vak.setStoffen(false);
 //                }
 //            }
 //        }
@@ -96,12 +95,11 @@
 //        int x = d8.getWaarde();
 //        int y = d6.getWaarde();
 //        vak = veld.getVak(x,y);
-//        obj = vak.getObjecten()[6];
-//        if (obj == null) {
-//            vak.addObject(new Object.Rook());
+//        if (vak.isNiks()) {
+//            vak.vuurPlaats(Fiche.ROOK);
 //            System.out.println("newrook"+x+"\t"+y);
-//        } else if (obj.getNaam().equals("Rook")) {
-//            vak.addObject(new Object.Vuur());
+//        } else if (vak.isRook()) {
+//            vak.vuurPlaats(Fiche.VUUR);
 //            System.out.println("newVuur"+x+"\t"+y);
 //        } else {
 //            System.out.println("newrookexplosie"+x+"\t"+y);
@@ -113,77 +111,73 @@
 //        boolean doorgaan;
 //        int teller;
 //        Vak vak;
-//        try {
-//            for (int richting = 0; richting < 4; richting++) {
-//                teller = 0;
-//                doorgaan = true;
-//                while (richting == 0 && doorgaan && ((y - teller) >= 1)) {
+//        for (int richting = 0; richting < 4; richting++) {
+//            teller = 0;
+//            doorgaan = true;
+//            while (richting == 0 && doorgaan && ((y - teller) >= 1)) {
+//                vak = veld.getVak(x, (y - teller));
+//                if (!vak.boven.isBegaanbaar()){
+//                    schade(richting, x, (y - teller));
+//                    doorgaan = false;
+//                }
+//
+//                else {
+//                    teller++;
 //                    vak = veld.getVak(x, (y - teller));
-//                    if ((vak.checkObstakels(richting) < 2) || (vak.checkObstakels(richting) == 3)){
-//                        schade(richting, x, (y - teller));
+//                    if (!vak.isVuur()) {
 //                        doorgaan = false;
-//                    }
-//
-//                    else {
-//                        teller++;
-//                        vak = veld.getVak(x, (y - teller));
-//                        if (vak.getObjecten()[6]==null || !"Vuur".equals(vak.getObjecten()[6].getNaam())) {
-//                            doorgaan = false;
-//                            vak.addObject(new Object.Vuur());
-//                        }
-//                    }
-//                }
-//                while (richting == 1 && doorgaan && ((x + teller) <= 8)) {
-//                    vak = veld.getVak((x+teller), y);
-//                    if ((vak.checkObstakels(richting) < 2) || (vak.checkObstakels(richting) == 3)){
-//                        schade(richting, (x+teller), y);
-//                        doorgaan = false;
-//                    }
-//
-//                    else {
-//                        teller++;
-//                        vak = veld.getVak((x+teller), y);
-//                        if (vak.getObjecten()[6]==null || !"Vuur".equals(vak.getObjecten()[6].getNaam())) {
-//                            doorgaan = false;
-//                            vak.addObject(new Object.Vuur());
-//                        }
-//                    }
-//                }
-//                while (richting == 2 && doorgaan && ((y + teller) <= 6)) {
-//                    vak = veld.getVak(x, (y + teller));
-//                    if ((vak.checkObstakels(richting) < 2) || (vak.checkObstakels(0) == 3)){
-//                        schade(richting, x, (y + teller));
-//                        doorgaan = false;
-//                    }
-//
-//                    else {
-//                        teller++;
-//                        vak = veld.getVak(x, (y + teller));
-//                        if (vak.getObjecten()[6]==null || !"Vuur".equals(vak.getObjecten()[6].getNaam())) {
-//                            doorgaan = false;
-//                            vak.addObject(new Object.Vuur());
-//                        }
-//                    }
-//                }
-//                while (richting == 3 && doorgaan && ((x - teller) >= 1)) {
-//                    vak = veld.getVak((x-teller), y);
-//                    if ((vak.checkObstakels(richting) < 2) || (vak.checkObstakels(richting) == 3)){
-//                        schade(richting, (x-teller), y);
-//                        doorgaan = false;
-//                    }
-//
-//                    else {
-//                        teller++;
-//                        vak = veld.getVak((x-teller), y);
-//                        if (vak.getObjecten()[6]==null || !"Vuur".equals(vak.getObjecten()[6].getNaam())) {
-//                            doorgaan = false;
-//                            vak.addObject(new Object.Vuur());
-//                        }
+//                        vak.vuurPlaats(Fiche.VUUR);
 //                    }
 //                }
 //            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
+//            while (richting == 1 && doorgaan && ((x + teller) <= 8)) {
+//                vak = veld.getVak((x+teller), y);
+//                if (!vak.rechts.isBegaanbaar()){
+//                    schade(richting, (x+teller), y);
+//                    doorgaan = false;
+//                }
+//
+//                else {
+//                    teller++;
+//                    vak = veld.getVak((x+teller), y);
+//                    if (!vak.isVuur()) {
+//                        doorgaan = false;
+//                        vak.vuurPlaats(Fiche.VUUR);
+//                    }
+//                }
+//            }
+//            while (richting == 2 && doorgaan && ((y + teller) <= 6)) {
+//                vak = veld.getVak(x, (y + teller));
+//                if (!vak.onder.isBegaanbaar()){
+//                    schade(richting, x, (y + teller));
+//                    doorgaan = false;
+//                }
+//
+//                else {
+//                    teller++;
+//                    vak = veld.getVak(x, (y + teller));
+//                    if (!vak.isVuur()) {
+//                        doorgaan = false;
+//                        vak.vuurPlaats(Fiche.VUUR);
+//                    }
+//                }
+//            }
+//            while (richting == 3 && doorgaan && ((x - teller) >= 1)) {
+//                vak = veld.getVak((x-teller), y);
+//                if (!vak.links.isBegaanbaar()){
+//                    schade(richting, (x-teller), y);
+//                    doorgaan = false;
+//                }
+//
+//                else {
+//                    teller++;
+//                    vak = veld.getVak((x-teller), y);
+//                    if (!vak.isVuur()) {
+//                        doorgaan = false;
+//                        vak.vuurPlaats(Fiche.VUUR);
+//                    }
+//                }
+//            }
 //        }
 //    }
 //
@@ -204,7 +198,7 @@
 //                        doorgaan = false;
 //                    } else if (y-teller>0) {
 //                        teller++;
-//                        veld.getVakken()[x][y - teller].addObject(new Object.Vuur());
+//                        veld.getVakken()[x][y - teller].vuurPlaats(Fiche.VUUR);
 //                    }
 //                }
 //            }
@@ -216,7 +210,7 @@
 //                        doorgaan = false;
 //                    } else if (x+teller<9) {
 //                        teller++;
-//                        veld.getVakken()[x+teller][y].addObject(new Object.Vuur());
+//                        veld.getVakken()[x+teller][y].vuurPlaats(Fiche.VUUR);
 //                    }
 //                }
 //            }
@@ -228,7 +222,7 @@
 //                        doorgaan = false;
 //                    } else if (y+teller>0) {
 //                        teller++;
-//                        veld.getVakken()[x][y + teller].addObject(new Object.Vuur());
+//                        veld.getVakken()[x][y + teller].vuurPlaats(Fiche.VUUR);
 //                    }
 //                }
 //            }
@@ -241,7 +235,7 @@
 //                    }
 //                    else if (x-teller>0) {
 //                        teller++;
-//                        veld.getVakken()[x-teller][y].addObject(new Object.Vuur());
+//                        veld.getVakken()[x-teller][y].vuurPlaats(Fiche.VUUR);
 //                    }
 //                }
 //            }
