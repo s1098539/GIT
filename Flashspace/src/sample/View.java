@@ -119,7 +119,7 @@ public class View{
                 }
                 q++;
 
-                //Spelers!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Weet nog ff niet hoe
+                //Spelers
                 if(speler.getX()==x && speler.getY()==y) {
                     switch(speler.getKleur()) {
                         case GEEL: imageViews[q].setImage(brandweerGeel);

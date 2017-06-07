@@ -60,13 +60,13 @@ public class Controller {
             }
         }
         View view = new View();
-        Speler speler = new Speler("Joep", Kleur.GEEL, 4,4, veld);
+        Speler speler = new Speler("Joep", Kleur.GEEL, 2,7, veld);
         view.imageViewsFactory();
         System.out.println("hoi");
         view.flowPanesFactory();
         int teller = 0;
-        for(int x = 0; x<10; x++) {
-            for(int y = 0; y<8; y++) {
+        for(int y = 0; y<8; y++) {
+            for(int x = 0; x<10; x++) {
                 gridpane.add(view.getFlowPanes()[teller],x,y);
                 teller++;
             }
