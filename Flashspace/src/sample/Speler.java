@@ -2,7 +2,7 @@ package sample;
 public class Speler {
 
 	public String naam;
-	public Character character;
+	public Rol rol;
 	public Kleur kleur;
 	public int x;
 	public int y;
@@ -29,20 +29,16 @@ public class Speler {
         this.naam = naam;
     }
 
-    public Character getCharacter() {
-        return character;
+    public Rol getRol() {
+        return rol;
     }
 
-    public void setCharacter(Character character) {
-        this.character = character;
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
 
     public Kleur getKleur() {
         return kleur;
-    }
-
-    public void setKleur(Kleur kleur) {
-        this.kleur = kleur;
     }
 
     public int getX() {
@@ -70,7 +66,7 @@ public class Speler {
     }
 
     public void beweegwActie(int richting) {
-        Vak vak = veld.getVak(x,y);
+        vak = veld.getVak(x,y);
         vak.removeSpeler(kleur);
         switch(richting) {
             case 0: if(y>0 && (vak.checkObstakels(0)==2 || vak.checkObstakels(0)>3)) {
@@ -90,7 +86,7 @@ public class Speler {
         }
     
         public void deurInteractie(int richting) {
-            Vak vak = veld.getVak(x,y);
+            vak = veld.getVak(x,y);
             switch (vak.checkObstakels(richting)) {
                 case 3:
                     vak.setObstakel(richting, 4);
@@ -105,7 +101,7 @@ public class Speler {
         }
     
         public void muurInteractie(int richting) {
-            Vak vak = veld.getVak(x,y);
+            vak = veld.getVak(x,y);
             switch (vak.checkObstakels(richting)) {
                 case 0:
     
@@ -139,7 +135,6 @@ public class Speler {
         }
     
         public void blusActie(int richting) {
-
             switch (richting) {
                 case 0:
                     vak = veld.getVak(x, y-1);

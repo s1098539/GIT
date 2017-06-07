@@ -28,20 +28,20 @@ public class BeurtAfronding {
 //    }
 
 
-    public void handleGevaarlijkeStof() {
+    public void hanteerStoffen() {
         Vak vak;
         for(int x = 1; x < 9; x++) {
             for(int y = 1; y < 7; y++) {
                 vak=veld.getVak(x,y);
                 if(vak.isStoffen() && vak.isVuur()) {
-                    handleExplosie(x,y);
+                    hanteerExplosie(x,y);
                     vak.setStoffen(false);
                 }
             }
         }
     }
 
-    public void handleVonkoverslag() {
+    public void hanteerVonkoverslag() {
         boolean loop = true;
         while(loop) {
             loop = false;
@@ -87,7 +87,7 @@ public class BeurtAfronding {
         }
     }
 
-    public void newRook() {
+    public void nieuwRook() {
         d6.gooi();
         d8.gooi();
         int x = d8.getWaarde();
@@ -101,11 +101,11 @@ public class BeurtAfronding {
             System.out.println("newVuur"+x+"\t"+y);
         } else {
             System.out.println("newrookexplosie"+x+"\t"+y);
-            handleExplosie(x,y);
+            hanteerExplosie(x,y);
         }
     }
 
-    public void handleExplosie(int x, int y) {// Joep
+    public void hanteerExplosie(int x, int y) {// Joep
         boolean doorgaan;
         int teller;
         Vak vak;
@@ -237,22 +237,22 @@ public class BeurtAfronding {
     }                               //its beautiful but useless made by joseph
 
 
-    public void handleBrandweerlieden() {
+    public void hanteerBrandweerlieden() {
         // TODO - implement BeurtAfronding.handleBrandweerlieden
         throw new UnsupportedOperationException();
     }
 
-    public void handlePersoonVanAandacht() {
+    public void hanteerPersoon() {
         // TODO - implement BeurtAfronding.handlePersoonVanAandacht
         throw new UnsupportedOperationException();
     }
 
-    public void vulPersoonVanAandachtAan() {
+    public void nieuwPersoon() {
         // TODO - implement BeurtAfronding.vulPersoonVanAandachtAan
         throw new UnsupportedOperationException();
     }
 
-    public void checkWinLoseCondition() {
+    public void winControle() {
         // TODO - implement BeurtAfronding.checkWinLoseCondition
         throw new UnsupportedOperationException();
     }
