@@ -11,7 +11,7 @@ public enum Status {
     public boolean isBegaanbaar() {
         return begaanbaar;
     }
-
+    //
     Status(boolean begaanbaar, int index) {
         this.begaanbaar = begaanbaar;
         this.index = index;
