@@ -74,7 +74,61 @@ public class Vak {
         this.stoffen = stoffen;
     }
 
-
+    public void schadeStatus(Richting richting) {
+        switch(richting) {
+            case BOVEN:
+                switch(boven) {
+                    case MUUR: setBoven(Status.MUUR1);
+                        break;
+                    case MUUR1: setBoven(Status.MUUR2);
+                        break;
+                    case DEURD: setBoven(Status.LEEG);
+                        break;
+                    default:
+                        System.out.println("Stop breaking my code thanks.");
+                        break;
+                }
+            case RECHTS:
+                switch(rechts) {
+                    case MUUR: setRechts(Status.MUUR1);
+                        break;
+                    case MUUR1: setRechts(Status.MUUR2);
+                        break;
+                    case DEURD: setRechts(Status.LEEG);
+                        break;
+                    default:
+                        System.out.println("Stop breaking my code thanks.");
+                        break;
+                }
+            case ONDER:
+                switch(onder) {
+                    case MUUR: setOnder(Status.MUUR1);
+                        break;
+                    case MUUR1: setOnder(Status.MUUR2);
+                        break;
+                    case DEURD: setOnder(Status.LEEG);
+                        break;
+                    default:
+                        System.out.println("Stop breaking my code thanks.");
+                        break;
+                }
+            case LINKS:
+                switch(links) {
+                    case MUUR: setLinks(Status.MUUR1);
+                        break;
+                    case MUUR1: setLinks(Status.MUUR2);
+                        break;
+                    case DEURD: setLinks(Status.LEEG);
+                        break;
+                    default:
+                        System.out.println("Stop breaking my code thanks.");
+                        break;
+                }
+            default:
+                System.out.println("Still trying to break my code aren't you?");
+                break;
+        }
+    }
 
     public Status getRechts() {
         return rechts;
