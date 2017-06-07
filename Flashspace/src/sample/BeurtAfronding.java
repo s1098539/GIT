@@ -111,13 +111,13 @@ public class BeurtAfronding {
         boolean doorgaan;
         int teller;
         Vak vak;
-        for (int richting = 0; richting < 4; richting++) {
+        for (Richting richting: Richting.values()) {
             teller = 0;
             doorgaan = true;
-            while (richting == 0 && doorgaan && ((y - teller) >= 1)) {
+            while (richting == Richting.BOVEN && doorgaan && ((y - teller) >= 1)) {
                 vak = veld.getVak(x, (y - teller));
                 if (!vak.boven.isBegaanbaar()){
-                    schade(richting, x, (y - teller));
+                    veld.schade(x, y-teller, richting);
                     doorgaan = false;
                 }
 
@@ -130,10 +130,10 @@ public class BeurtAfronding {
                     }
                 }
             }
-            while (richting == 1 && doorgaan && ((x + teller) <= 8)) {
+            while (richting == Richting.RECHTS && doorgaan && ((x + teller) <= 8)) {
                 vak = veld.getVak((x+teller), y);
                 if (!vak.rechts.isBegaanbaar()){
-                    schade(richting, (x+teller), y);
+                    veld.schade((x+teller), y, richting);
                     doorgaan = false;
                 }
 
@@ -146,10 +146,10 @@ public class BeurtAfronding {
                     }
                 }
             }
-            while (richting == 2 && doorgaan && ((y + teller) <= 6)) {
+            while (richting == Richting.ONDER && doorgaan && ((y + teller) <= 6)) {
                 vak = veld.getVak(x, (y + teller));
                 if (!vak.onder.isBegaanbaar()){
-                    schade(richting, x, (y + teller));
+                    veld.schade(x, (y + teller), richting);
                     doorgaan = false;
                 }
 
@@ -162,10 +162,10 @@ public class BeurtAfronding {
                     }
                 }
             }
-            while (richting == 3 && doorgaan && ((x - teller) >= 1)) {
+            while (richting == Richting.LINKS && doorgaan && ((x - teller) >= 1)) {
                 vak = veld.getVak((x-teller), y);
                 if (!vak.links.isBegaanbaar()){
-                    schade(richting, (x-teller), y);
+                    veld.schade((x-teller), y, richting);
                     doorgaan = false;
                 }
 
