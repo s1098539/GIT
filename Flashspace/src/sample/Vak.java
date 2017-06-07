@@ -18,6 +18,16 @@ public class Vak {
     Status onder;
     Status links;
 
+    public Status obstakelRichting (Richting richting){
+        switch(richting){
+            case BOVEN: return boven;
+            case RECHTS: return rechts;
+            case ONDER: return onder;
+            case LINKS: return links;
+            default: return null;
+        }
+    }
+
     public boolean isHotspot() {
         return hotspot;
     }

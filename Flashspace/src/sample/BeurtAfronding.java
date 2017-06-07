@@ -48,36 +48,34 @@ public class BeurtAfronding {
             for (int x = 0; x < 10; x++) {
                 for (int y = 0; y < 8; y++) {
                     vak = veld.getVak(x,y);
-                    obj = vak.getObjecten()[6];
-                    if (obj != null && obj.getNaam().equals("Vuur")) {
-                        for (int i = 0; i < 4; i++) {
-                            if (vak.checkObstakels(i) == 2 || vak.checkObstakels(i) > 3) {
-                                switch (i) {
-                                    case 0:
+                    if (vak.isVuur()) {
+                        for (Richting richting: Richting.values()) {
+                            if (vak.obstakelRichting(richting).isBegaanbaar()) {
+                                switch (richting) {
+                                    case BOVEN:
                                         if (y > 0) {
                                             vak2 = veld.getVak(x, y - 1);
                                         }
                                         break;
-                                    case 1:
+                                    case RECHTS:
                                         if (x < 9) {
                                             vak2 = veld.getVak(x + 1, y);
                                         }
                                         break;
-                                    case 2:
+                                    case ONDER:
                                         if (y < 7) {
                                             vak2 = veld.getVak(x, y + 1);
                                         }
                                         break;
-                                    case 3:
+                                    case LINKS:
                                         if (x > 0) {
                                             vak2 = veld.getVak(x - 1, y);
                                         }
                                         break;
                                 }
-                                obj = vak2.getObjecten()[6];
-                                if (obj != null && obj.getNaam().equals("Rook")) {
-                                    vak2.addObject(new Object.Vuur());
-                                    if (i%3==0) {
+                                if (vak2.isRook()) {
+                                    vak2.vuurPlaats(Fiche.VUUR);
+                                    if (richting==Richting.BOVEN || richting==Richting.LINKS) {
                                         loop = true;
                                     }
                                 }
@@ -187,55 +185,51 @@ public class BeurtAfronding {
         int obstakel;
         boolean doorgaan;
         int teller;
-        for(int richting = 0; richting<4; richting++) {
+        for(Richting richting: Richting.values()) {
             teller = 0;
             doorgaan = true;
-            if (richting == 0){
+            if (richting == Richting.BOVEN){
                 while ((y - teller > 0) && doorgaan) {
-                    obstakel = veld.getVakken()[x][y - teller].checkObstakels(richting);
-                    if (obstakel < 2 || obstakel == 3) {
-                        schade(richting, x, y);
+                    if (!vak.boven.isBegaanbaar()) {
+                        veld.schade(x, y-teller, richting);
                         doorgaan = false;
                     } else if (y-teller>0) {
                         teller++;
-                        veld.getVakken()[x][y - teller].vuurPlaats(Fiche.VUUR);
+                        veld.getVak(x,y - teller).vuurPlaats(Fiche.VUUR);
                     }
                 }
             }
-            else if (richting == 1){
+            else if (richting == Richting.RECHTS){
                 while ((x + teller < 9) && doorgaan) {
-                    obstakel = veld.getVakken()[x + teller][y].checkObstakels(richting);
-                    if (obstakel < 2 || obstakel == 3) {
-                        schade(richting, x+teller, y);
+                    if (!vak.rechts.isBegaanbaar()) {
+                        veld.schade(x+teller, y, richting);
                         doorgaan = false;
                     } else if (x+teller<9) {
                         teller++;
-                        veld.getVakken()[x+teller][y].vuurPlaats(Fiche.VUUR);
+                        veld.getVak(x+teller,y).vuurPlaats(Fiche.VUUR);
                     }
                 }
             }
-            else if (richting == 2){
+            else if (richting == Richting.ONDER){
                 while ((y + teller < 7) && doorgaan) {
-                    obstakel = veld.getVakken()[x][y + teller].checkObstakels(richting);
-                    if (obstakel < 2 || obstakel == 3) {
-                        schade(richting, x, y+teller);
+                    if (!vak.onder.isBegaanbaar()) {
+                        veld.schade(x, y+teller, richting);
                         doorgaan = false;
                     } else if (y+teller>0) {
                         teller++;
-                        veld.getVakken()[x][y + teller].vuurPlaats(Fiche.VUUR);
+                        veld.getVak(x,y + teller).vuurPlaats(Fiche.VUUR);
                     }
                 }
             }
-            else if (richting == 3){
+            else if (richting == Richting.LINKS){
                 while ((x - teller > 0) && doorgaan) {
-                    obstakel = veld.getVakken()[x + teller][y].checkObstakels(richting);
-                    if (obstakel < 2 || obstakel == 3) {
-                        schade(richting, x - teller, y);
+                    if (!vak.links.isBegaanbaar()) {
+                        veld.schade(x - teller, y, richting);
                         doorgaan = false;
                     }
                     else if (x-teller>0) {
                         teller++;
-                        veld.getVakken()[x-teller][y].vuurPlaats(Fiche.VUUR);
+                        veld.getVak(x-teller,y).vuurPlaats(Fiche.VUUR);
                     }
                 }
             }
