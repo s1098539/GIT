@@ -83,51 +83,50 @@ public class Speler {
         }
     }
     
-        public void deurInteractie(int richting) {
+        public void deurInteractie(Richting richting) {
             vak = veld.getVak(x,y);
-            switch (vak.checkObstakels(richting)) {
-                case 3:
-                    vak.setObstakel(richting, 4);
-                    obstakelInteractieloop(richting,4);
-                    break;
-                case 4:
-                    vak.setObstakel(richting, 3);
-                    obstakelInteractieloop(richting,3);
-                default:
-                    System.out.println("404 deur not found");
+            if (vak.getObstakelRichting(richting)==Status.DEURD){
+                vak.setObstakelRichting(richting, Status.DEURO);
+                obstakelInteractieloop(richting, Status.DEURO);
+            }
+            else if(vak.getObstakelRichting(richting)==Status.DEURO){
+                vak.setObstakelRichting(richting, Status.DEURD);
+                obstakelInteractieloop(richting, Status.DEURD);
+            }
+            else {
+                System.out.println("404 deur not found");
             }
         }
     
-        public void muurInteractie(int richting) {
+        public void muurInteractie(Richting richting) {
             vak = veld.getVak(x,y);
-            switch (vak.checkObstakels(richting)) {
-                case 0:
-    
-                    vak.setObstakel(richting, 1);
-                    obstakelInteractieloop(richting,1);
+            switch (vak.getObstakelRichting(richting)) {
+                case MUUR:
+                    vak.setObstakelRichting(richting, Status.MUUR1);
+                    obstakelInteractieloop(richting, Status.MUUR1);
                     break;
-                case 1:
-                    vak.setObstakel(richting, 2);
-                    obstakelInteractieloop(richting,2);
+                case MUUR1:
+                    vak.setObstakelRichting(richting, Status.MUUR2);
+                    obstakelInteractieloop(richting, Status.MUUR2);
                     break;
                 default:
                     System.out.println("404 muur not found");
             }
         }
     
-        private void obstakelInteractieloop(int richting, int obstakel) {
+        private void obstakelInteractieloop(Richting richting, Status status) {
             switch (richting) {
-                case 0:
-                    veld.getVak(x, y - 1).setObstakel(2, obstakel);
+                case BOVEN:
+                    veld.getVak(x, y - 1).setObstakelRichting(Richting.ONDER,status);
                     break;
-                case 1:
-                    veld.getVak(x + 1, y).setObstakel(3, obstakel);
+                case RECHTS:
+                    veld.getVak(x + 1, y).setObstakelRichting(Richting.LINKS, status);
                     break;
-                case 2:
-                    veld.getVak(x, y + 1).setObstakel(0, obstakel);
+                case ONDER:
+                    veld.getVak(x, y + 1).setObstakelRichting(Richting.BOVEN, status);
                     break;
-                case 3:
-                    veld.getVak(x - 1, y).setObstakel(1, obstakel);
+                case LINKS:
+                    veld.getVak(x - 1, y).setObstakelRichting(Richting.RECHTS, status);
                     break;
             }
         }

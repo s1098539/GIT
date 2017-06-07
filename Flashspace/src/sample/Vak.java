@@ -18,13 +18,25 @@ public class Vak {
     Status onder = Status.LEEG;
     Status links = Status.LEEG;
 
-    public Status obstakelRichting (Richting richting){
+    public Status getObstakelRichting (Richting richting){
         switch(richting){
             case BOVEN: return boven;
             case RECHTS: return rechts;
             case ONDER: return onder;
             case LINKS: return links;
             default: return null;
+        }
+    }
+    public void setObstakelRichting(Richting richting, Status status){
+        switch(richting){
+            case BOVEN: boven = status;
+                break;
+            case RECHTS: rechts = status;
+                break;
+            case ONDER: onder = status;
+                break;
+            case LINKS: links = status;
+                break;
         }
     }
 

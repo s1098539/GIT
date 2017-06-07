@@ -33,6 +33,9 @@ public class Controller {
         this.gridpane = gridpane;
     }
 
+    Boolean hakken = false;
+    Boolean deurinteractie = false;
+
     //
 //    private FlowPane[][]fp = new FlowPane[10][8];
 //    private Speelveld veld = new Speelveld();
@@ -185,14 +188,13 @@ public class Controller {
         });
 
         btnRIGHT.setOnAction(event -> {
-//            if(hakken) {
-//                sa.muurInteractie(1);
-//            }else {
-//                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
-//                sa.beweegwActie(1);
-//                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
-//            }
-            speler.beweegwActie(Richting.RECHTS);
+            if(hakken) {
+                speler.muurInteractie(Richting.RECHTS);
+            }else if(deurinteractie){
+                speler.deurInteractie(Richting.RECHTS);
+            } else {
+                speler.beweegwActie(Richting.RECHTS);
+            }
             view.imageSetter(veld,speler);
         });
 
@@ -208,29 +210,36 @@ public class Controller {
             view.imageSetter(veld,speler);
         });
 
-////        imgHakken.setOnMouseClicked(event -> {
-////            if(hakken) {
-////                hakken = false;
-////            } else {
-////                hakken = true;
-////            }
-////            System.out.println(hakken);
-////        });
-////
-////        imgOpenendeur.setOnMouseClicked(event -> {
-////
-////        });
-////
-////        btnSpecial.setOnAction(event -> {
-////            for (int vaak = 0; vaak < 3; vaak++) {
-////                ba.newRook();
-////                ba.handleVonkoverslag();
-////                ba.handleGevaarlijkeStof();
-////                view.update();
-////            }
-////        });
+        imgHakken.setOnMouseClicked(event -> {
+            if(hakken) {
+                hakken = false;
+            } else {
+                hakken = true;
+                deurinteractie = false;
+            }
+            System.out.println(hakken);
+        });
+
+        imgOpenendeur.setOnMouseClicked(event -> {
+            if(deurinteractie) {
+                deurinteractie = false;
+            } else {
+                hakken = false;
+                deurinteractie = true;
+            }
+            System.out.println(deurinteractie);
+        });
 //
-//
-//
+//        btnSpecial.setOnAction(event -> {
+//            for (int vaak = 0; vaak < 3; vaak++) {
+//                speler.newRook();
+//                speler.handleVonkoverslag();
+//                speler.handleGevaarlijkeStof();
+//                view.imageSetter(veld,speler);
+//            }
+//        });
+
+
+
     }
 }

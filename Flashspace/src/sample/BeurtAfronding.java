@@ -50,7 +50,7 @@ public class BeurtAfronding {
                     vak = veld.getVak(x,y);
                     if (vak.isVuur()) {
                         for (Richting richting: Richting.values()) {
-                            if (vak.obstakelRichting(richting).isBegaanbaar()) {
+                            if (vak.getObstakelRichting(richting).isBegaanbaar()) {
                                 switch (richting) {
                                     case BOVEN:
                                         if (y > 0) {
