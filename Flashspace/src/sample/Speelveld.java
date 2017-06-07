@@ -27,6 +27,29 @@ public class Speelveld {
     public Vak getVak(int x, int y) {
         return vakken[x][y];
     }
+
+    public void schade(int x, int y, Richting richting) {
+        Vak vak = getVak(x,y);
+        switch (richting) {
+            case BOVEN:
+                vak.schadeStatus(richting);
+                getVak(x,y-1).schadeStatus(Richting.ONDER);
+                break;
+            case RECHTS:
+                vak.schadeStatus(richting);
+                getVak(x+1,y).schadeStatus(Richting.LINKS);
+                break;
+            case ONDER:
+                vak.schadeStatus(richting);
+                getVak(x,y+1).schadeStatus(Richting.BOVEN);
+                break;
+            case LINKS:
+                vak.schadeStatus(richting);
+                getVak(x-1,y).schadeStatus(Richting.RECHTS);
+                break;
+        }
+    }
+
     public void setMuren(){
         //buitenmuren horizontaal
         for(int x = 1; x <9; x++) {

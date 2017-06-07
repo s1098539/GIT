@@ -220,6 +220,8 @@ public class Vak {
     public int checkObstakels(int richting) {
         return obstakels[richting];
     }
+
+
 }
 
 //    public Object[] getObjecten() {
