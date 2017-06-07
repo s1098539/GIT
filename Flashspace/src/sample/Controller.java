@@ -60,6 +60,7 @@ public class Controller {
             }
         }
         View view = new View();
+        Speler speler = new Speler("Joep", Kleur.GEEL, 4,4, veld);
         view.imageViewsFactory();
         System.out.println("hoi");
         view.flowPanesFactory();
@@ -70,7 +71,7 @@ public class Controller {
                 teller++;
             }
         }
-            view.imageSetter(veld);
+            view.imageSetter(veld, speler);
 
 
 
