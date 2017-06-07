@@ -78,6 +78,7 @@ public class View{
                 q++;
 
                 //Obstakel boven
+
                 switch (veld.getVak(x,y).boven) {
                     case MUUR: imageViews[q].setImage(muurOnder);
                         break;
@@ -103,6 +104,7 @@ public class View{
                 q++;
 
                 //Obstakel links!
+
                 switch (veld.getVak(x,y).links) {
                     case MUUR: imageViews[q].setImage(muurRechts);
                         break;
@@ -117,6 +119,7 @@ public class View{
                     case LEEG: imageViews[q].setImage(empty);
                         break;
                 }
+
                 q++;
 
                 //Spelers
@@ -158,6 +161,7 @@ public class View{
                     case LEEG: imageViews[q].setImage(empty);
                         break;
                 }
+
                 q++;
 
                 //Vuur plaats

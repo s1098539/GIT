@@ -13,10 +13,10 @@ public class Vak {
     boolean niks = false;
     Kleur[] kleuren = new Kleur[6];
 
-    Status boven;
-    Status rechts;
-    Status onder;
-    Status links;
+    Status boven = Status.LEEG;
+    Status rechts = Status.LEEG;
+    Status onder = Status.LEEG;
+    Status links = Status.LEEG;
 
     public Status obstakelRichting (Richting richting){
         switch(richting){

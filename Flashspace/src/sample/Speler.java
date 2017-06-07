@@ -65,25 +65,23 @@ public class Speler {
         this.rugtas = rugtas;
     }
 
-    public void beweegwActie(int richting) {
-        vak = veld.getVak(x,y);
-        vak.removeSpeler(kleur);
+    public void beweegwActie(Richting richting) {
+        Vak vak = veld.getVak(x,y);
         switch(richting) {
-            case 0: if(y>0 && (vak.checkObstakels(0)==2 || vak.checkObstakels(0)>3)) {
+            case BOVEN: if(y>0 && vak.boven.isBegaanbaar()) {
                 y--;
             }   break;
-            case 1: if(getX()<9 && (vak.checkObstakels(1)==2 || vak.checkObstakels(1)>3)) {
+            case RECHTS: if(x<9 && vak.rechts.isBegaanbaar()) {
                 x++;
             }   break;
-            case 2: if(y<7 && (vak.checkObstakels(2)==2 || vak.checkObstakels(2)>3)) {
+            case ONDER: if(y<7 && vak.onder.isBegaanbaar()) {
                 y++;
             }   break;
-            case 3: if(x>0 && (vak.checkObstakels(3)==2 || vak.checkObstakels(3)>3)) {
+            case LINKS: if(x>0 && vak.links.isBegaanbaar()) {
                 x--;
             }   break;
         }
-        veld.getVak(x,y).addSpeler(kleur);
-        }
+    }
     
         public void deurInteractie(int richting) {
             vak = veld.getVak(x,y);

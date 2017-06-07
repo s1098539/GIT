@@ -47,20 +47,21 @@ public class Controller {
     @FXML
     public void initialize() {
         Speelveld veld = new Speelveld();
-        for(int x = 0; x<10; x++) {
+/*        for(int x = 0; x<10; x++) {
             for(int y = 0; y<8; y++) {
-                veld.getVak(x,y).vuurPlaats(Fiche.VUUR);
+                veld.getVak(x,y).vuurPlaats(Fiche.ROOK);
                 veld.getVak(x,y).setHotspot(true);
                 veld.getVak(x,y).setPersoon(true);
-                veld.getVak(x,y).setStoffen(true);
-                veld.getVak(x,y).setBoven(Status.DEURO);
-                veld.getVak(x,y).setOnder(Status.DEURO);
-                veld.getVak(x,y).setLinks(Status.DEURO);
-                veld.getVak(x,y).setRechts(Status.DEURO);
-            }
-        }
+                veld.getVak(x,y).setStoffen(true);*/
+//                veld.getVak(x,y).setBoven(Status.LEEG);
+//                veld.getVak(x,y).setOnder(Status.LEEG);
+//                veld.getVak(x,y).setLinks(Status.LEEG);
+//                veld.getVak(x,y).setRechts(Status.LEEG);
+            //}
+       // }
+
         View view = new View();
-        Speler speler = new Speler("Joep", Kleur.GEEL, 2,7, veld);
+        Speler speler = new Speler("Joep", Kleur.GROEN, 2,7, veld);
         view.imageViewsFactory();
         System.out.println("hoi");
         view.flowPanesFactory();
@@ -71,7 +72,8 @@ public class Controller {
                 teller++;
             }
         }
-            view.imageSetter(veld, speler);
+        veld.setMuren();
+        view.imageSetter(veld, speler);
 
 
 
@@ -158,51 +160,54 @@ public class Controller {
 //        vak.setBoven(Vak.Status.MUUR1);
 //        System.out.println(vak.getBoven());
 //
-////        btnUP.setOnAction(event -> {
-////            if (hakken) {
-////                sa.muurInteractie(0);
-////            } else {
-////                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-////                sa.beweegwActie(0);
-////                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
-////            }
-////
-////            view.update();
-////        });
-////
-////        btnLEFT.setOnAction(event -> {
-////            if (hakken) {
-////                sa.muurInteractie(3);
-////            } else {
-////                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-////                sa.beweegwActie(3);
-////                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
-////            }
-////            view.update();
-////        });
-////
-////        btnRIGHT.setOnAction(event -> {
-////            if(hakken) {
-////                sa.muurInteractie(1);
-////            }else {
-////                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
-////                sa.beweegwActie(1);
-////                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
-////            }
-////            view.update();
-////        });
-////
-////        btnDOWN.setOnAction(event -> {
-////            if(hakken) {
-////                sa.muurInteractie(2);
-////            }else {
-////                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
-////                sa.beweegwActie(2);
-////                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
-////            }
-////            view.update();
-////        });
-////
+        btnUP.setOnAction(event -> {
+//            if (hakken) {
+//                sa.muurInteractie(0);
+//            } else {
+//                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
+//                sa.beweegwActie(0);
+//                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+//            }
+            speler.beweegwActie(Richting.BOVEN);
+            view.imageSetter(veld, speler);
+        });
+
+        btnLEFT.setOnAction(event -> {
+//            if (hakken) {
+//                sa.muurInteractie(3);
+//            } else {
+//                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
+//                sa.beweegwActie(3);
+//                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
+//            }
+            speler.beweegwActie(Richting.LINKS);
+            view.imageSetter(veld, speler);
+        });
+
+        btnRIGHT.setOnAction(event -> {
+//            if(hakken) {
+//                sa.muurInteractie(1);
+//            }else {
+//                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
+//                sa.beweegwActie(1);
+//                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
+//            }
+            speler.beweegwActie(Richting.RECHTS);
+            view.imageSetter(veld,speler);
+        });
+
+        btnDOWN.setOnAction(event -> {
+//            if(hakken) {
+//                sa.muurInteractie(2);
+//            }else {
+//                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
+//                sa.beweegwActie(2);
+//                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
+//            }
+            speler.beweegwActie(Richting.ONDER);
+            view.imageSetter(veld,speler);
+        });
+
 ////        imgHakken.setOnMouseClicked(event -> {
 ////            if(hakken) {
 ////                hakken = false;

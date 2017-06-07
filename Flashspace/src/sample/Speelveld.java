@@ -53,94 +53,94 @@ public class Speelveld {
     public void setMuren(){
         //buitenmuren horizontaal
         for(int x = 1; x <9; x++) {
-            getVak(x,0).setObstakel(2,0);
-            getVak(x,1).setObstakel(0,0);
-            getVak(x,6).setObstakel(2,0);
-            getVak(x,7).setObstakel(0,0);
+            getVak(x,0).setOnder(Status.MUUR);
+            getVak(x,1).setBoven(Status.MUUR);
+            getVak(x,6).setOnder(Status.MUUR);
+            getVak(x,7).setBoven(Status.MUUR);
 
         }
         //buitenmuren verticaal
         for (int y = 1; y < 7; y++) {
-            getVak(0,y).setObstakel(1,0);
-            getVak(1,y).setObstakel(3,0);
-            getVak(8,y).setObstakel(1,0);
-            getVak(9,y).setObstakel(3,0);
+            getVak(0,y).setRechts(Status.MUUR);
+            getVak(1,y).setLinks(Status.MUUR);
+            getVak(8,y).setRechts(Status.MUUR);
+            getVak(9,y).setLinks(Status.MUUR);
 
         }
         //scheidingswand woonkamer
-        getVak(1,2).setObstakel(2,0);
-        getVak(1,3).setObstakel(0,0);
-        getVak(2,2).setObstakel(2,0);
-        getVak(2,3).setObstakel(0,0);
+        getVak(1,2).setOnder(Status.MUUR);
+        getVak(1,3).setBoven(Status.MUUR);
+        getVak(2,2).setOnder(Status.MUUR);
+        getVak(2,3).setBoven(Status.MUUR);
 
         //muur tussen woonkamer en slaapkamer + keuken
         for (int j = 1; j<7;j++){
-            getVak(j,4).setObstakel(2,0);
-            getVak(j,5).setObstakel(0,0);
-            getVak(j,4).setObstakel(2,0);
-            getVak(j,5).setObstakel(0,0);
+            getVak(j,4).setOnder(Status.MUUR);
+            getVak(j,5).setBoven(Status.MUUR);
+            getVak(j,4).setOnder(Status.MUUR);
+            getVak(j,5).setBoven(Status.MUUR);
         }
         //muur tussen woonkamer en badkamer + bergruimte
         for (int k = 1; k<4;k++){
-            getVak(3,k).setObstakel(1,0);
-            getVak(4,k).setObstakel(3,0);
-            getVak(3,k).setObstakel(1,0);
-            getVak(4,k).setObstakel(3,0);
+            getVak(3,k).setRechts(Status.MUUR);
+            getVak(4,k).setLinks(Status.MUUR);
+            getVak(3,k).setRechts(Status.MUUR);
+            getVak(4,k).setLinks(Status.MUUR);
         }
         //muur tussen bergruimte en badkamer
-        getVak(4,1).setObstakel(2,0);
-        getVak(4,2).setObstakel(0,0);
-        getVak(5,1).setObstakel(2,0);
-        getVak(5,2).setObstakel(0,0);
+        getVak(4,1).setOnder(Status.MUUR);
+        getVak(4,2).setBoven(Status.MUUR);
+        getVak(5,1).setOnder(Status.MUUR);
+        getVak(5,2).setBoven(Status.MUUR);
 
         //overige horizontale muren
-        getVak(4,3).setObstakel(2,0);
-        getVak(4,4).setObstakel(0,0);
-        getVak(7,3).setObstakel(2,0);
-        getVak(7,4).setObstakel(0,0);
-        getVak(8,3).setObstakel(2,0);
-        getVak(8,4).setObstakel(0,0);
+        getVak(4,3).setOnder(Status.MUUR);
+        getVak(4,4).setBoven(Status.MUUR);
+        getVak(7,3).setOnder(Status.MUUR);
+        getVak(7,4).setBoven(Status.MUUR);
+        getVak(8,3).setOnder(Status.MUUR);
+        getVak(8,4).setBoven(Status.MUUR);
 
         //verticale muur tussen slaapkamer en keuken
-        getVak(3,5).setObstakel(1,0);
-        getVak(4,5).setObstakel(3,0);
-        getVak(3,6).setObstakel(1,0);
-        getVak(4,6).setObstakel(3,0);
+        getVak(3,5).setRechts(Status.MUUR);
+        getVak(4,5).setLinks(Status.MUUR);
+        getVak(3,6).setRechts(Status.MUUR);
+        getVak(4,6).setLinks(Status.MUUR);
 
         //verticale muur tussen slaapkamers
-        getVak(6,5).setObstakel(1,0);
-        getVak(7,5).setObstakel(3,0);
-        getVak(6,6).setObstakel(1,0);
-        getVak(7,6).setObstakel(3,0);
+        getVak(6,5).setRechts(Status.MUUR);
+        getVak(7,5).setLinks(Status.MUUR);
+        getVak(6,6).setRechts(Status.MUUR);
+        getVak(7,6).setLinks(Status.MUUR);
 
         //overige muur
-        getVak(5,2).setObstakel(1,0);
-        getVak(6,2).setObstakel(3,0);
+        getVak(5,2).setRechts(Status.MUUR);
+        getVak(6,2).setLinks(Status.MUUR);
 
         //verticale deuren
-        getVak(5,1).setObstakel(1,3);
-        getVak(6,1).setObstakel(3,3);
-        getVak(5,3).setObstakel(1,3);
-        getVak(6,3).setObstakel(3,3);
-        getVak(6,4).setObstakel(1,3);
-        getVak(7,4).setObstakel(3,3);
+        getVak(5,1).setRechts(Status.DEURD);
+        getVak(6,1).setLinks(Status.DEURD);
+        getVak(5,3).setRechts(Status.DEURD);
+        getVak(6,3).setLinks(Status.DEURD);
+        getVak(6,4).setRechts(Status.DEURD);
+        getVak(7,4).setLinks(Status.DEURD);
 
         //horizontale deuren
-        getVak(5,4).setObstakel(0,3);
-        getVak(5,3).setObstakel(2,3);
-        getVak(6,4).setObstakel(0,3);
-        getVak(6,3).setObstakel(2,3);
-        getVak(6,5).setObstakel(0,3);
-        getVak(6,4).setObstakel(2,3);
-        getVak(3,5).setObstakel(0,3);
-        getVak(3,4).setObstakel(2,3);
+        getVak(5,4).setBoven(Status.DEURD);
+        getVak(5,3).setOnder(Status.DEURD);
+        getVak(6,4).setBoven(Status.DEURD);
+        getVak(6,3).setOnder(Status.DEURD);
+        getVak(6,5).setBoven(Status.DEURD);
+        getVak(6,4).setOnder(Status.DEURD);
+        getVak(3,5).setBoven(Status.DEURD);
+        getVak(3,4).setOnder(Status.DEURD);
 
         //buitenmuren waar deuren horen leeg maken
-        getVak(0,3).setObstakel(1,5);
-        getVak(1,3).setObstakel(3,5);
+        getVak(0,3).setRechts(Status.LEEG);
+        getVak(1,3).setLinks(Status.LEEG);
 
-        getVak(3,7).setObstakel(0,5);
-        getVak(3,6).setObstakel(2,5);
+        getVak(3,7).setBoven(Status.LEEG);
+        getVak(3,6).setOnder(Status.LEEG);
 
 
 
