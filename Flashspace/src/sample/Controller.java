@@ -21,6 +21,8 @@ public class Controller {
     @FXML
     private ImageView imgOpenendeur;
     @FXML
+    private ImageView imgBrandblusser;
+    @FXML
     private Button btnSpecial;
 
     public GridPane getGridpane() {
@@ -33,6 +35,7 @@ public class Controller {
 
     Boolean hakken = false;
     Boolean deurinteractie = false;
+    Boolean brandblusser = false;
 
     //
 //    private FlowPane[][]fp = new FlowPane[10][8];
@@ -63,6 +66,7 @@ public class Controller {
 
         View view = new View();
         Speler speler = new Speler("Joep", Kleur.GROEN, 2,7, veld);
+        BeurtAfronding ba = new BeurtAfronding(veld);
         view.imageViewsFactory();
         System.out.println("hoi");
         view.flowPanesFactory();
@@ -74,6 +78,7 @@ public class Controller {
             }
         }
         veld.setMuren();
+        veld.getVak(3,3).vuurPlaats(Fiche.VUUR);
         view.imageSetter(veld, speler);
 
 
@@ -166,6 +171,8 @@ public class Controller {
                 speler.muurInteractie(Richting.BOVEN);
             }else if(deurinteractie){
                 speler.deurInteractie(Richting.BOVEN);
+            }else if(brandblusser){
+                speler.blusActie(Richting.BOVEN);
             } else {
                 speler.beweegwActie(Richting.BOVEN);
             }
@@ -177,6 +184,8 @@ public class Controller {
                 speler.muurInteractie(Richting.LINKS);
             }else if(deurinteractie){
                 speler.deurInteractie(Richting.LINKS);
+            }else if(brandblusser){
+                speler.blusActie(Richting.LINKS);
             } else {
                 speler.beweegwActie(Richting.LINKS);
             }
@@ -188,6 +197,8 @@ public class Controller {
                 speler.muurInteractie(Richting.RECHTS);
             }else if(deurinteractie){
                 speler.deurInteractie(Richting.RECHTS);
+            }else if(brandblusser){
+                speler.blusActie(Richting.RECHTS);
             } else {
                 speler.beweegwActie(Richting.RECHTS);
             }
@@ -199,6 +210,8 @@ public class Controller {
                 speler.muurInteractie(Richting.ONDER);
             }else if(deurinteractie){
                 speler.deurInteractie(Richting.ONDER);
+            }else if(brandblusser){
+                speler.blusActie(Richting.ONDER);
             } else {
                 speler.beweegwActie(Richting.ONDER);
             }
@@ -211,6 +224,7 @@ public class Controller {
             } else {
                 hakken = true;
                 deurinteractie = false;
+                brandblusser = false;
             }
             System.out.println(hakken);
         });
@@ -221,18 +235,31 @@ public class Controller {
             } else {
                 hakken = false;
                 deurinteractie = true;
+                brandblusser = false;
             }
             System.out.println(deurinteractie);
         });
-//
-//        btnSpecial.setOnAction(event -> {
-//            for (int vaak = 0; vaak < 3; vaak++) {
-//                speler.newRook();
-//                speler.handleVonkoverslag();
-//                speler.handleGevaarlijkeStof();
-//                view.imageSetter(veld,speler);
-//            }
-//        });
+
+        imgBrandblusser.setOnMouseClicked(event -> {
+            if(brandblusser) {
+                brandblusser = false;
+            } else {
+                hakken = false;
+                deurinteractie = false;
+                brandblusser = true;
+            }
+            System.out.println(deurinteractie);
+        });
+
+        btnSpecial.setOnAction(event -> {
+            for (int vaak = 0; vaak < 3; vaak++) {
+
+                ba.nieuwRook();
+                ba.hanteerVonkoverslag();
+                ba.hanteerStoffen();
+                view.imageSetter(veld,speler);
+            }
+        });
 
 
 
