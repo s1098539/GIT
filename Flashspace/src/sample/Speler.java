@@ -195,16 +195,16 @@ public class Speler {
             vak = veld.getVak(x,y);
     
             vak.vuurPlaats(Fiche.NIKS);
-            for(int i = 0; i < 4; i++) {
-                if(vak.checkObstakels(i)==2 || vak.checkObstakels(i)>3) {
-                    switch (i) {
-                        case 0: veld.getVak(x,y-1).vuurPlaats(Fiche.NIKS);
+            for(Richting richting: Richting.values()) {
+                if(vak.getObstakelRichting(richting).isBegaanbaar()) {
+                    switch (richting) {
+                        case BOVEN: veld.getVak(x,y-1).vuurPlaats(Fiche.NIKS);
                             break;
-                        case 1: veld.getVak(x+1,y).vuurPlaats(Fiche.NIKS);
+                        case RECHTS: veld.getVak(x+1,y).vuurPlaats(Fiche.NIKS);
                             break;
-                        case 2: veld.getVak(x,y+1).vuurPlaats(Fiche.NIKS);
+                        case ONDER: veld.getVak(x,y+1).vuurPlaats(Fiche.NIKS);
                             break;
-                        case 3: veld.getVak(x-1,y).vuurPlaats(Fiche.NIKS);
+                        case LINKS: veld.getVak(x-1,y).vuurPlaats(Fiche.NIKS);
                     }
                 }
             }
