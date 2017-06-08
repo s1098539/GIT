@@ -99,7 +99,7 @@ public class BeurtAfronding {
         } else if (vak.isRook()) {
             vak.vuurPlaats(Fiche.VUUR);
             System.out.println("newVuur"+x+"\t"+y);
-        } else {
+        } else if (vak.isVuur()){
             System.out.println("newrookexplosie"+x+"\t"+y);
             hanteerExplosie(x,y);
         }
