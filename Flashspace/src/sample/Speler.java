@@ -131,18 +131,18 @@ public class Speler {
             }
         }
     
-        public void blusActie(int richting) {
+        public void blusActie(Richting richting) {
             switch (richting) {
-                case 0:
+                case BOVEN:
                     vak = veld.getVak(x, y-1);
                     break;
-                case 1:
+                case RECHTS:
                     vak = veld.getVak(x+1, y);
                     break;
-                case 2:
+                case ONDER:
                     vak = veld.getVak(x, y+1);
                     break;
-                case 3:
+                case LINKS:
                     vak = veld.getVak(x-1, y);
                     break;
             }
