@@ -132,21 +132,22 @@ public class Speler {
         }
     
         public void blusActie(Richting richting) {
-            switch (richting) {
-                case BOVEN:
-                    vak = veld.getVak(x, y-1);
-                    break;
-                case RECHTS:
-                    vak = veld.getVak(x+1, y);
-                    break;
-                case ONDER:
-                    vak = veld.getVak(x, y+1);
-                    break;
-                case LINKS:
-                    vak = veld.getVak(x-1, y);
-                    break;
-            }
+            vak = veld.getVak(x,y);
             if (vak.getObstakelRichting(richting).isBegaanbaar()) {
+                switch (richting) {
+                    case BOVEN:
+                        vak = veld.getVak(x, y-1);
+                        break;
+                    case RECHTS:
+                        vak = veld.getVak(x+1, y);
+                        break;
+                    case ONDER:
+                        vak = veld.getVak(x, y+1);
+                        break;
+                    case LINKS:
+                        vak = veld.getVak(x-1, y);
+                        break;
+                }
                 if(vak.isRook()) {
                     vak.vuurPlaats(Fiche.NIKS);
                 }
