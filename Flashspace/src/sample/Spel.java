@@ -1,6 +1,8 @@
 package sample;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Spel {
 
@@ -25,10 +27,23 @@ public class Spel {
     int hotspots;
     ArrayList<Speler> spelers = new ArrayList<Speler>();
     int murenkapot = 0;
+    ArrayList<Personen> personenlijst = new ArrayList<Personen>();
+
 
     public Spel(Speelveld veld, int hotspots) {
         this.veld = veld;
         this.hotspots = hotspots;
+        for(Personen persoon: Personen.values()){
+            personenlijst.add(persoon);
+        }
+        long seed = System.nanoTime();
+        Collections.shuffle(personenlijst, new Random(seed));
+
+    }
+    public void personenout(){
+        for(Personen p: personenlijst){
+            System.out.println(p);
+        }
     }
 
     public void addSpeler(Speler speler) throws Throwable{
@@ -40,7 +55,7 @@ public class Spel {
         }
     }
 
-    public void handleBrandhaard() {
+    public void hanteerBrandhaard() {
         if(vak.isHotspot()) {
             spawnBrandhaard = true;
             nieuwRook();
@@ -129,7 +144,7 @@ public class Spel {
             System.out.println("newrookexplosie"+x+"\t"+y);
             hanteerExplosie(x,y);
         }
-        handleBrandhaard();
+        hanteerBrandhaard();
     }
 
     public void hanteerExplosie(int x, int y) {// Joep

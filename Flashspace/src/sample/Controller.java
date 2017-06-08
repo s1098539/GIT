@@ -66,7 +66,7 @@ public class Controller {
 
         View view = new View();
         Speler speler = new Speler("Joep", Kleur.GROEN, 2,7, veld);
-        BeurtAfronding ba = new BeurtAfronding(veld, 6);
+        Spel ba = new Spel(veld, 6);
         view.imageViewsFactory();
         System.out.println("hoi");
         view.flowPanesFactory();
