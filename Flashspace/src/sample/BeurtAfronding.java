@@ -18,14 +18,26 @@ public class BeurtAfronding {
     Object obj;
     Dobbelsteen d6 = new Dobbelsteen(6);
     Dobbelsteen d8 = new Dobbelsteen(8);
+    int hotspots;
 
-    public BeurtAfronding(Speelveld veld) {
+    public BeurtAfronding(Speelveld veld, int hotspots) {
         this.veld = veld;
+        this.hotspots = hotspots;
     }
 
-//    public void handleBrandhaard() {
-//        veld.getVak(d8.getWaarde())
-//    }
+    boolean spawnBrandhaard = false;
+    public void handleBrandhaard() {
+        if(vak.isHotspot()) {
+            spawnBrandhaard = true;
+            nieuwRook();
+        } else if(spawnBrandhaard){
+            if(hotspots>0) {
+                vak.setHotspot(true);
+                hotspots--;
+            }
+            spawnBrandhaard = false;
+        }
+    }
 
 
     public void hanteerStoffen() {
@@ -104,6 +116,7 @@ public class BeurtAfronding {
             System.out.println("newrookexplosie"+x+"\t"+y);
             hanteerExplosie(x,y);
         }
+        handleBrandhaard();
     }
 
     public void hanteerExplosie(int x, int y) {// Joep

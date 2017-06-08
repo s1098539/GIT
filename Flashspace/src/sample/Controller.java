@@ -77,6 +77,7 @@ public class Controller {
                 teller++;
             }
         }
+        veld.getVak(5,5).setHotspot(true);
         veld.setMuren();
         veld.getVak(3,3).vuurPlaats(Fiche.VUUR);
         view.imageSetter(veld, speler);
@@ -252,13 +253,15 @@ public class Controller {
         });
 
         btnSpecial.setOnAction(event -> {
-            for (int vaak = 0; vaak < 3; vaak++) {
-
-                ba.nieuwRook();
-                ba.hanteerVonkoverslag();
-                ba.hanteerStoffen();
-                view.imageSetter(veld,speler);
-            }
+//            for (int vaak = 0; vaak < 3; vaak++) {
+//
+//                ba.nieuwRook();
+//                ba.hanteerVonkoverslag();
+//                ba.hanteerStoffen();
+//                view.imageSetter(veld,speler);
+//            }
+            ba.nieuwRook();
+            view.imageSetter(veld,speler);
         });
 
 
