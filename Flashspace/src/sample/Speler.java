@@ -146,11 +146,16 @@ public class Speler {
                     vak = veld.getVak(x-1, y);
                     break;
             }
-            if(vak.isRook()) {
-                vak.vuurPlaats(Fiche.NIKS);
+            if (vak.getObstakelRichting(richting).isBegaanbaar()) {
+                if(vak.isRook()) {
+                    vak.vuurPlaats(Fiche.NIKS);
+                }
+                else if(vak.isVuur()){
+                    vak.vuurPlaats(Fiche.ROOK);
+                }
             }
-            else if(vak.isVuur()){
-                vak.vuurPlaats(Fiche.ROOK);
+            else{
+                System.out.println("hier zit een muur oid");
             }
 
         }

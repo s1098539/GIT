@@ -114,9 +114,6 @@ public class Vak {
                         break;
                     case DEURD: setBoven(Status.LEEG);
                         break;
-                    default:
-                        System.out.println("Stop breaking my code thanks.");
-                        break;
                 }
                 break;
             case RECHTS:
