@@ -6,8 +6,8 @@ public class BeurtAfronding {
 //	private int NewRook;            done Joep
 //	private int ExplosieHandler;    done Joep           tested by Lion (niet te veel moeite in gestoken in t testen maar denk dat t met die 2 foutjes die ik heb gevonden moet werken)
 //	private int VonkoverslagHandler;     done Lion      tested by Lion (10/10)
-//	private int BrandhaardHandler;          working on it (Lion)
-//	private int BrandweerliedenHandler;
+//	private int BrandhaardHandler;          done Lion
+//	private int BrandweerliedenHandler;     joep work in progress
 //	private int PersoonVanAandachtHandler;
 //	private int GevaarlijkeStofHandler;     Done Lion
 //	private int PersoonVanAandachtAanvuller;
@@ -15,7 +15,6 @@ public class BeurtAfronding {
     Speelveld veld;
     Vak vak;
     Vak vak2;
-    Object obj;
     Dobbelsteen d6 = new Dobbelsteen(6);
     Dobbelsteen d8 = new Dobbelsteen(8);
     int hotspots;
@@ -252,8 +251,7 @@ public class BeurtAfronding {
 
 
     public void hanteerBrandweerlieden() {
-        // TODO - implement BeurtAfronding.handleBrandweerlieden
-        throw new UnsupportedOperationException();
+
     }
 
     public void hanteerPersoon() {
