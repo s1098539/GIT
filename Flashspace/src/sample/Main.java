@@ -18,10 +18,10 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         View view = new View();
-        Speelveld speelveld = new Speelveld();
-        BeurtAfronding beurtAfronding = new BeurtAfronding(speelveld,6);
-        Speler speler = new Speler("Joepin",Kleur.GROEN,3,4,speelveld);
-        Controller controller = new Controller(view,beurtAfronding,speelveld,speler);
+//        Speelveld speelveld = new Speelveld();
+//        BeurtAfronding beurtAfronding = new BeurtAfronding(speelveld,6);
+//        Speler speler = new Speler("Joepin",Kleur.GROEN,3,4,speelveld);
+        Controller controller = new Controller(view/*,beurtAfronding,speelveld,speler*/);
         launch(args);
     }
 }

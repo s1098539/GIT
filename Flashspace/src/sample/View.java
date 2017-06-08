@@ -1,5 +1,5 @@
 package sample;
-
+;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -9,9 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 
-import java.awt.event.ActionListener;
-
-public class View {
+public class View{
     @FXML
     private GridPane gridpane;
     @FXML
@@ -37,24 +35,30 @@ public class View {
     Speler speler2 = new Speler("Norddin",Kleur.ORANJE,3,4,veld);
 
     public View() {
-        imageViewsFactory();
-        flowPanesFactory();
+//        imageViewsFactory();
+//        flowPanesFactory();
     }
 
     public void initialize() {
-        imageSetter(veld,speler2);
+//        imageSetter(veld,speler2);
+        addListener(new Listener());
+    }
 
-        btnUP.setOnAction(event -> {
+    public void addListener(EventHandler<ActionEvent> listenForbtnUP) {
+        System.out.println("I got to this part");
+        btnUP.setOnAction(listenForbtnUP);
+        System.out.println("And this part");
+    }
 
-        });
-
+    public class Listener implements EventHandler<ActionEvent> {
+        @Override
+        public void handle(ActionEvent event) {
+            System.out.println("This works");
+        }
     }
 
 
 
-    public void addCalculationListener(EventHandler listenForCalcButton) {
-        btnUP.setOnAction(listenForCalcButton);
-    }
 
     Image empty = new Image("sample/gfx/Empty.png", 20, 20, false, true);
     Image hotspot = new Image("sample/gfx/Hotspot.png", 20, 20, false, true);
