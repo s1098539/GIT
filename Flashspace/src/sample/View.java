@@ -144,6 +144,27 @@ public class View{
                 } else {
                     imageViews[q].setImage(empty);
                 }
+//                for(int i = 0; i<6; i++) {
+//                    if(veld.getVak(x,y).getKleuren(i) != null) {
+//                        switch(veld.getVak(x,y).getKleuren(i)) {
+//                            case GEEL: imageViews[q].setImage(brandweerGeel);
+//                                break;
+//                            case ROOD: imageViews[q].setImage(brandweerRood);
+//                                break;
+//                            case BLAUW: imageViews[q].setImage(brandweerBlauw);
+//                                break;
+//                            case GROEN: imageViews[q].setImage(brandweerGroen);
+//                                break;
+//                            case ZWART: imageViews[q].setImage(brandweerZwart);
+//                                break;
+//                            case ORANJE: imageViews[q].setImage(brandweerOranje);
+//                                break;
+//                            default:
+//                                System.out.println("How did this even happen :|");
+//                                break;
+//                        }
+//                    }
+//                }
                 q++;
 
                 //Obstakel rechts

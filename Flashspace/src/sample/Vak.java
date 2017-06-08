@@ -40,6 +40,14 @@ public class Vak {
         }
     }
 
+    public Kleur getKleuren(int index) {
+        return kleuren[index];
+    }
+
+    public void setKleuren(Kleur kleur, int index) {
+        this.kleuren[index] = kleur;
+    }
+
     public boolean isHotspot() {
         return hotspot;
     }

@@ -2,9 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 
 public class Controller {
@@ -164,27 +162,25 @@ public class Controller {
 //        System.out.println(vak.getBoven());
 //
         btnUP.setOnAction(event -> {
-//            if (hakken) {
-//                sa.muurInteractie(0);
-//            } else {
-//                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-//                sa.beweegwActie(0);
-//                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
-//            }
-            speler.beweegwActie(Richting.BOVEN);
-            view.imageSetter(veld, speler);
+            if(hakken) {
+                speler.muurInteractie(Richting.BOVEN);
+            }else if(deurinteractie){
+                speler.deurInteractie(Richting.BOVEN);
+            } else {
+                speler.beweegwActie(Richting.BOVEN);
+            }
+            view.imageSetter(veld,speler);
         });
 
         btnLEFT.setOnAction(event -> {
-//            if (hakken) {
-//                sa.muurInteractie(3);
-//            } else {
-//                veld.getVak(speler.getX(),speler.getY()).removeObject(4);
-//                sa.beweegwActie(3);
-//                veld.getVak(speler.getX(),speler.getY()).addObject(speler);
-//            }
-            speler.beweegwActie(Richting.LINKS);
-            view.imageSetter(veld, speler);
+            if(hakken) {
+                speler.muurInteractie(Richting.LINKS);
+            }else if(deurinteractie){
+                speler.deurInteractie(Richting.LINKS);
+            } else {
+                speler.beweegwActie(Richting.LINKS);
+            }
+            view.imageSetter(veld,speler);
         });
 
         btnRIGHT.setOnAction(event -> {
@@ -199,14 +195,13 @@ public class Controller {
         });
 
         btnDOWN.setOnAction(event -> {
-//            if(hakken) {
-//                sa.muurInteractie(2);
-//            }else {
-//                veld.getVak(speler.getX(), speler.getY()).removeObject(4);
-//                sa.beweegwActie(2);
-//                veld.getVak(speler.getX(), speler.getY()).addObject(speler);
-//            }
-            speler.beweegwActie(Richting.ONDER);
+            if(hakken) {
+                speler.muurInteractie(Richting.ONDER);
+            }else if(deurinteractie){
+                speler.deurInteractie(Richting.ONDER);
+            } else {
+                speler.beweegwActie(Richting.ONDER);
+            }
             view.imageSetter(veld,speler);
         });
 
