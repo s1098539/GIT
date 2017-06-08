@@ -41,21 +41,21 @@ public class View{
 
     public void initialize() {
 //        imageSetter(veld,speler2);
-        addListener(new Listener());
+//        addListener(new Listener());
     }
 
     public void addListener(EventHandler<ActionEvent> listenForbtnUP) {
-        System.out.println("I got to this part");
+        System.out.println("I got to this part1");
         btnUP.setOnAction(listenForbtnUP);
-        System.out.println("And this part");
+        System.out.println("I got to this part2");
     }
 
-    public class Listener implements EventHandler<ActionEvent> {
-        @Override
-        public void handle(ActionEvent event) {
-            System.out.println("This works");
-        }
-    }
+//    public class Listener implements EventHandler<ActionEvent> {
+//        @Override
+//        public void handle(ActionEvent event) {
+//            System.out.println("It works1");
+//        }
+//    }
 
 
 

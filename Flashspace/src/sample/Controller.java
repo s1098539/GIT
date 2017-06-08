@@ -25,14 +25,15 @@ public class Controller{
         //this.beurtAfronding = beurtAfronding;
         //this.speelveld = speelveld;
         //this.speler = speler;
-//        this.view.addListener(new Listener());
+
+        this.view.addListener(new Listener());
 
 
     }
     public class Listener implements EventHandler<ActionEvent> {
         @Override
         public void handle(ActionEvent event) {
-            System.out.println("But this doesn't");
+            System.out.println("It works2");
         }
     }
 }
