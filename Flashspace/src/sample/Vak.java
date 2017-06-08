@@ -10,7 +10,7 @@ public class Vak {
     boolean vuur = false;
     boolean rook = false;
     boolean stoffen = false;
-    boolean niks = false;
+    boolean niks = true;
     Kleur[] kleuren = new Kleur[6];
 
     Status boven = Status.LEEG;
@@ -118,6 +118,7 @@ public class Vak {
                         System.out.println("Stop breaking my code thanks.");
                         break;
                 }
+                break;
             case RECHTS:
                 switch(rechts) {
                     case MUUR: setRechts(Status.MUUR1);
@@ -130,6 +131,7 @@ public class Vak {
                         System.out.println("Stop breaking my code thanks.");
                         break;
                 }
+                break;
             case ONDER:
                 switch(onder) {
                     case MUUR: setOnder(Status.MUUR1);
@@ -142,6 +144,7 @@ public class Vak {
                         System.out.println("Stop breaking my code thanks.");
                         break;
                 }
+                break;
             case LINKS:
                 switch(links) {
                     case MUUR: setLinks(Status.MUUR1);
@@ -154,6 +157,7 @@ public class Vak {
                         System.out.println("Stop breaking my code thanks.");
                         break;
                 }
+                break;
             default:
                 System.out.println("Still trying to break my code aren't you?");
                 break;

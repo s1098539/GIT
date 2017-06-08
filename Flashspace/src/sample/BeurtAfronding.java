@@ -93,6 +93,7 @@ public class BeurtAfronding {
         int x = d8.getWaarde();
         int y = d6.getWaarde();
         vak = veld.getVak(x,y);
+        System.out.println(x+" "+y);
         if (vak.isNiks()) {
             vak.vuurPlaats(Fiche.ROOK);
             System.out.println("newrook"+x+"\t"+y);
