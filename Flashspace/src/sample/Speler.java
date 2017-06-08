@@ -146,12 +146,13 @@ public class Speler {
                     vak = veld.getVak(x-1, y);
                     break;
             }
-            if(vak.isVuur()){
-                vak.vuurPlaats(Fiche.ROOK);
-            }
             if(vak.isRook()) {
                 vak.vuurPlaats(Fiche.NIKS);
             }
+            else if(vak.isVuur()){
+                vak.vuurPlaats(Fiche.ROOK);
+            }
+
         }
     
         public void BrandweerwagenSpuitActie(int kwadrant) {
