@@ -20,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.View">
     <top>
         <HBox prefHeight="50.0" prefWidth="700.0" BorderPane.alignment="CENTER">
             <children>
@@ -304,7 +304,7 @@
                             <children>
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgBrandblusser" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Brandblusser.png" />
                                             </image>
