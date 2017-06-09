@@ -19,7 +19,7 @@ public class Vak {
         personen.remove(0);
         return tempPers;
     }
-//hoi
+
     public void setPersonen(Persoon persoon) {
         if(personen.size()<4) {
             personen.add(persoon);
