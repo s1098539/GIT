@@ -1,8 +1,6 @@
-package sample;
+package Flashpoint;
 
 import java.util.ArrayList;
-
-import static sample.Kleur.*;
 
 public class Vak {
     boolean hotspot = false;
@@ -14,11 +12,13 @@ public class Vak {
     Kleur[] kleuren = new Kleur[6];
     ArrayList<Persoon>personen = new ArrayList<>();
 
-    public Persoon getPersonen() {
+    public Persoon getPersoon() {
         Persoon tempPers = personen.get(0);
         personen.remove(0);
         return tempPers;
     }
+
+
 
     public void setPersonen(Persoon persoon) {
         if(personen.size()<4) {

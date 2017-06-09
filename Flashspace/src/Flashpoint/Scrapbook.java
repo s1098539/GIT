@@ -1,7 +1,4 @@
-package sample;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
+package Flashpoint;
 
 
 public class Scrapbook implements Runnable {

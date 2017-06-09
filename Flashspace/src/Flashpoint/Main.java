@@ -1,4 +1,4 @@
-package sample;
+package Flashpoint;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,17 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.net.MalformedURLException;
-import java.rmi.NotBoundException;
-import java.rmi.RemoteException;
-
 public class Main extends Application {
 
 
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ViewSpel.fxml"));
         primaryStage.setTitle("Flash point");
         primaryStage.setScene(new Scene(root, 1200, 700));
         primaryStage.show();

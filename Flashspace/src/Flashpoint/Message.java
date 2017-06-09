@@ -1,4 +1,4 @@
-package sample;
+package Flashpoint;
 import java.io.Serializable;
 
 /**

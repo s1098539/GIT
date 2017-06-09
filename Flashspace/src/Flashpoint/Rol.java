@@ -1,4 +1,4 @@
-package sample;
+package Flashpoint;
 
 /**
  * Created by Joep Oonk on 7-6-2017.

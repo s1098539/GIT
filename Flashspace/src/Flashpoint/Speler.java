@@ -1,4 +1,4 @@
-package sample;
+package Flashpoint;
 public class Speler {
 
 	public String naam;

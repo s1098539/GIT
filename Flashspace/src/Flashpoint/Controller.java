@@ -1,4 +1,4 @@
-package sample;
+package Flashpoint;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -7,7 +7,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +14,6 @@ import java.util.Optional;
 
 import java.io.PrintStream;
 
-import java.net.MalformedURLException;
-import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
 public class Controller {
@@ -95,7 +92,7 @@ public class Controller {
 //    private FlowPane[][]fp = new FlowPane[10][8];
 //    private Speelveld veld = new Speelveld();
 //    ImageView[]ivarray = new ImageView[720];
-//    private View view = new View(fp,veld);
+//    private ViewSpeelveld view = new ViewSpeelveld(fp,veld);
 //    private BeurtAfronding ba = new BeurtAfronding(veld);
 ////    private Object.Speler speler = new Object.Speler("Lion", Kleur.ZWART, 4,3);
 ////    SpelerActie sa = new SpelerActie(speler, veld);
@@ -118,7 +115,7 @@ public class Controller {
         //}
         // }
 
-        View view = new View();
+        ViewSpeelveld view = new ViewSpeelveld();
         Speler speler = new Speler("Joep", Kleur.GROEN, 2,7, veld);
         Spel ba = new Spel(veld, 6);
         view.imageViewsFactory();
