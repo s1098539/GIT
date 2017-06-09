@@ -12,6 +12,21 @@ public class Vak {
     boolean stoffen = false;
     boolean niks = true;
     Kleur[] kleuren = new Kleur[6];
+    ArrayList<Persoon>personen = new ArrayList<>();
+
+    public Persoon getPersonen() {
+        Persoon tempPers = personen.get(0);
+        personen.remove(0);
+        return tempPers;
+    }
+
+    public void setPersonen(Persoon persoon) {
+        if(personen.size()<4) {
+            personen.add(persoon);
+        } else {
+            System.out.println("Limit reached");
+        }
+    }
 
     Status boven = Status.LEEG;
     Status rechts = Status.LEEG;
