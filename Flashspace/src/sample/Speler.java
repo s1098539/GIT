@@ -70,15 +70,19 @@ public class Speler {
         switch(richting) {
             case BOVEN: if(y>0 && vak.boven.isBegaanbaar()) {
                 y--;
+                System.out.println("*De speler loopt naar: " + getX() + "," + getY() + "*");
             }   break;
             case RECHTS: if(x<9 && vak.rechts.isBegaanbaar()) {
                 x++;
+                System.out.println("*De speler loopt naar: " + getX() + "," + getY() + "*");
             }   break;
             case ONDER: if(y<7 && vak.onder.isBegaanbaar()) {
                 y++;
+                System.out.println("*De speler loopt naar: " + getX() + "," + getY() + "*");
             }   break;
             case LINKS: if(x>0 && vak.links.isBegaanbaar()) {
                 x--;
+                System.out.println("*De speler loopt naar: " + getX() + "," + getY() + "*");
             }   break;
         }
     }

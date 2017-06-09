@@ -1,9 +1,23 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import java.io.PrintStream;
+
+import java.net.MalformedURLException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 
 public class Controller {
     @FXML
@@ -24,6 +38,46 @@ public class Controller {
     private ImageView imgBrandblusser;
     @FXML
     private Button btnSpecial;
+    @FXML
+    private TextArea chatArea;
+    @FXML
+    private TextField textInput;
+    @FXML
+    private Button stuur;
+    @FXML
+    private VBox vboxchat;
+    @FXML
+    private HBox chatSize;
+    @FXML
+    private Button groterChat;
+    @FXML
+    private Button kleinerChat;
+    @FXML
+    private StackPane stackpane;
+    @FXML
+    TextInputDialog dialog = new TextInputDialog("");
+    @FXML
+    TextInputDialog dialog2 = new TextInputDialog("");
+    @FXML
+    private VBox chatVenster;
+    @FXML
+    private HBox minMaxknoppen;
+    @FXML
+    private HBox stuurKnopEnTextField;
+    @FXML
+    private Button chatTop;
+    @FXML
+    private Button options;
+    @FXML
+    private Button veranderKlasse;
+    @FXML
+    private Button quit;
+
+
+    List<String> choices = new ArrayList<>();
+
+    String localMessage = "";
+
 
     public GridPane getGridpane() {
         return gridpane;
@@ -49,7 +103,7 @@ public class Controller {
 //    private Boolean openendeur;
 //
     @FXML
-    public void initialize() {
+    public void initialize() throws Exception {
         Speelveld veld = new Speelveld();
 /*        for(int x = 0; x<10; x++) {
             for(int y = 0; y<8; y++) {
@@ -61,12 +115,12 @@ public class Controller {
 //                veld.getVak(x,y).setOnder(Status.LEEG);
 //                veld.getVak(x,y).setLinks(Status.LEEG);
 //                veld.getVak(x,y).setRechts(Status.LEEG);
-            //}
-       // }
+        //}
+        // }
 
         View view = new View();
         Speler speler = new Speler("Joep", Kleur.GROEN, 2,7, veld);
-        BeurtAfronding ba = new BeurtAfronding(veld);
+        Spel ba = new Spel(veld, 6);
         view.imageViewsFactory();
         System.out.println("hoi");
         view.flowPanesFactory();
@@ -167,6 +221,109 @@ public class Controller {
 //        vak.setBoven(Vak.Status.MUUR1);
 //        System.out.println(vak.getBoven());
 //
+
+
+
+        ChatServer chat = new ChatServer();
+
+        chatArea.setEditable(false);
+        chatArea.setScrollTop(Double.MAX_VALUE);
+
+        //dialoog 1
+        dialog.setHeaderText("Voer het IP-adres van de host in");
+        dialog.setContentText("IP-adres:");
+        Optional<String> ipadress = dialog.showAndWait();
+        String host = ipadress.get();
+
+        //dialoog 2
+        dialog2.setHeaderText("Voer je naam in");
+        dialog2.setContentText("Naam: ");
+        Optional<String> naam = dialog2.showAndWait();
+        String username = naam.get();
+
+        ChatListen chatlisten = new ChatListen(host);
+        ChatSend sender = new ChatSend(host, username, localMessage);
+
+        //Keuzes toevoegen aan de arraylist die we gaan gebruiken voor de choicedialog.
+        choices.add("Commandant");
+        choices.add("Verkenner");
+        choices.add("Mannetjesputter");
+        choices.add("Reddingsspecialist");
+        choices.add("SpecialistG.S");
+        choices.add("BrandspuitBediener");
+        choices.add("Gaspakdrager");
+        choices.add("Dokter");
+
+        //De choicedialog maken
+        ChoiceDialog<String> dialog3 = new ChoiceDialog<>("Keuze", choices);
+        dialog3.setTitle("Choice Dialog");
+        dialog3.setHeaderText("Kies je klasse");
+        dialog3.setContentText("Klasse:");
+
+        //Klasse veranderen knop
+        veranderKlasse.setOnAction(e -> {
+            Optional<String> keuzeKlasse = dialog3.showAndWait();
+            if (keuzeKlasse.isPresent() && keuzeKlasse.get() != "Keuze"){
+                String klasse = keuzeKlasse.get();
+                System.out.println("Je hebt gekozen voor de klasse: " + klasse);
+            }
+        });
+
+        //Quit knop
+        quit.setOnAction(e -> {
+            System.exit(0);
+        });
+
+        //Chat groter maken
+        groterChat.setOnAction(e -> {
+            stuur.setPrefHeight(30);
+            textInput.setPrefHeight(30);
+            chatArea.setPrefHeight(500);
+            chatArea.setScrollTop(Double.MAX_VALUE);
+        });
+        //Chat kleiner maken
+        kleinerChat.setOnAction(e -> {
+            stuur.setPrefHeight(0);
+            textInput.setPrefHeight(0);
+            chatArea.setPrefHeight(70);
+            chatArea.setScrollTop(Double.MAX_VALUE);
+        });
+
+        //chat invoer
+        textInput.setOnAction(e -> {
+            String localMessage = textInput.getText();
+            try {
+                sender.sendMessageObject(username, localMessage);
+            } catch (Exception e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+            }
+            textInput.setText("");
+        });
+        //stuurknop chat
+        stuur.setOnAction(e -> {
+            String localMessage = textInput.getText();
+            try {
+                sender.sendMessageObject(username, localMessage);
+            } catch (RemoteException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+            }
+            textInput.setText("");
+        });
+        /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
+        system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
+        System.setOut(new PrintStream(System.out) {
+            @Override
+            public void write(byte[] buf, int off, int len) {
+                super.write(buf, off, len);
+
+                String msg = new String(buf, off, len);
+
+                chatArea.appendText(msg);
+            }
+        });
+
         btnUP.setOnAction(event -> {
             if(hakken) {
                 speler.muurInteractie(Richting.BOVEN);
@@ -222,12 +379,14 @@ public class Controller {
         imgHakken.setOnMouseClicked(event -> {
             if(hakken) {
                 hakken = false;
+                System.out.println("Hakken is uitgeschakeld");
             } else {
                 hakken = true;
                 deurinteractie = false;
                 brandblusser = false;
+                System.out.println("Hakken is ingeschakeld");
             }
-            System.out.println(hakken);
+
         });
 
         imgOpenendeur.setOnMouseClicked(event -> {

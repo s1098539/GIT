@@ -6,7 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.net.MalformedURLException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+
 public class Main extends Application {
+
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{

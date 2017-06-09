@@ -1,32 +1,55 @@
 package sample;
-public class BeurtAfronding {
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class Spel {
 
 
     //Dit worden classes
 //	private int NewRook;            done Joep
 //	private int ExplosieHandler;    done Joep           tested by Lion (niet te veel moeite in gestoken in t testen maar denk dat t met die 2 foutjes die ik heb gevonden moet werken)
 //	private int VonkoverslagHandler;     done Lion      tested by Lion (10/10)
-//	private int BrandhaardHandler;          working on it (Lion)
-//	private int BrandweerliedenHandler;
+//	private int BrandhaardHandler;          done Lion
+//	private int BrandweerliedenHandler;     joep work in progress
 //	private int PersoonVanAandachtHandler;
 //	private int GevaarlijkeStofHandler;     Done Lion
 //	private int PersoonVanAandachtAanvuller;
 //	private int WinLoseConditionChecker;
+//  addspeler done Joep
     Speelveld veld;
     Vak vak;
     Vak vak2;
-    Object obj;
+    boolean spawnBrandhaard = false;
     Dobbelsteen d6 = new Dobbelsteen(6);
     Dobbelsteen d8 = new Dobbelsteen(8);
     int hotspots;
+    ArrayList<Speler> spelers = new ArrayList<Speler>();
+    int murenkapot = 0;
+    ArrayList<Persoon> personenlijst = new ArrayList<Persoon>();
 
-    public BeurtAfronding(Speelveld veld, int hotspots) {
+
+    public Spel(Speelveld veld, int hotspots) {
         this.veld = veld;
         this.hotspots = hotspots;
+        for(Persoon persoon: Persoon.values()){
+            personenlijst.add(persoon);
+        }
+        long seed = System.nanoTime();
+        Collections.shuffle(personenlijst, new Random(seed));
     }
 
-    boolean spawnBrandhaard = false;
-    public void handleBrandhaard() {
+    public void addSpeler(Speler speler) throws Throwable{
+        if(spelers.size()<7) {
+            spelers.add(speler);
+        }
+        else{
+            throw new Exception("Limit reached");
+        }
+    }
+
+    public void hanteerBrandhaard() {
         if(vak.isHotspot()) {
             spawnBrandhaard = true;
             nieuwRook();
@@ -38,7 +61,6 @@ public class BeurtAfronding {
             spawnBrandhaard = false;
         }
     }
-
 
     public void hanteerStoffen() {
         Vak vak;
@@ -116,7 +138,7 @@ public class BeurtAfronding {
             System.out.println("newrookexplosie"+x+"\t"+y);
             hanteerExplosie(x,y);
         }
-        handleBrandhaard();
+        hanteerBrandhaard();
     }
 
     public void hanteerExplosie(int x, int y) {// Joep
@@ -130,6 +152,7 @@ public class BeurtAfronding {
                 vak = veld.getVak(x, (y - teller));
                 if (!vak.boven.isBegaanbaar()){
                     veld.schade(x, y-teller, richting);
+                    murenkapot++;
                     doorgaan = false;
                 }
 
@@ -146,6 +169,7 @@ public class BeurtAfronding {
                 vak = veld.getVak((x+teller), y);
                 if (!vak.rechts.isBegaanbaar()){
                     veld.schade((x+teller), y, richting);
+                    murenkapot++;
                     doorgaan = false;
                 }
 
@@ -162,6 +186,7 @@ public class BeurtAfronding {
                 vak = veld.getVak(x, (y + teller));
                 if (!vak.onder.isBegaanbaar()){
                     veld.schade(x, (y + teller), richting);
+                    murenkapot++;
                     doorgaan = false;
                 }
 
@@ -178,6 +203,7 @@ public class BeurtAfronding {
                 vak = veld.getVak((x-teller), y);
                 if (!vak.links.isBegaanbaar()){
                     veld.schade((x-teller), y, richting);
+                    murenkapot++;
                     doorgaan = false;
                 }
 
@@ -193,8 +219,6 @@ public class BeurtAfronding {
         }
     }
 
-
-
     public void bomberMan(int x, int y) {//Work in progress - Joep
         int obstakel;
         boolean doorgaan;
@@ -204,10 +228,11 @@ public class BeurtAfronding {
             doorgaan = true;
             if (richting == Richting.BOVEN){
                 while ((y - teller > 0) && doorgaan) {
+                    vak = veld.getVak(x,y-teller);
                     if (!vak.boven.isBegaanbaar()) {
                         veld.schade(x, y-teller, richting);
                         doorgaan = false;
-                    } else if (y-teller>0) {
+                    } else {
                         teller++;
                         veld.getVak(x,y - teller).vuurPlaats(Fiche.VUUR);
                     }
@@ -215,10 +240,11 @@ public class BeurtAfronding {
             }
             else if (richting == Richting.RECHTS){
                 while ((x + teller < 9) && doorgaan) {
+                    vak = veld.getVak(x+teller,y);
                     if (!vak.rechts.isBegaanbaar()) {
                         veld.schade(x+teller, y, richting);
                         doorgaan = false;
-                    } else if (x+teller<9) {
+                    } else {
                         teller++;
                         veld.getVak(x+teller,y).vuurPlaats(Fiche.VUUR);
                     }
@@ -226,10 +252,11 @@ public class BeurtAfronding {
             }
             else if (richting == Richting.ONDER){
                 while ((y + teller < 7) && doorgaan) {
+                    vak = veld.getVak(x,y+teller);
                     if (!vak.onder.isBegaanbaar()) {
                         veld.schade(x, y+teller, richting);
                         doorgaan = false;
-                    } else if (y+teller>0) {
+                    } else {
                         teller++;
                         veld.getVak(x,y + teller).vuurPlaats(Fiche.VUUR);
                     }
@@ -237,11 +264,12 @@ public class BeurtAfronding {
             }
             else if (richting == Richting.LINKS){
                 while ((x - teller > 0) && doorgaan) {
+                    vak = veld.getVak(x-teller,y);
                     if (!vak.links.isBegaanbaar()) {
                         veld.schade(x - teller, y, richting);
                         doorgaan = false;
                     }
-                    else if (x-teller>0) {
+                    else {
                         teller++;
                         veld.getVak(x-teller,y).vuurPlaats(Fiche.VUUR);
                     }
@@ -250,20 +278,27 @@ public class BeurtAfronding {
         }
     }                               //its beautiful but useless made by joseph
 
-
     public void hanteerBrandweerlieden() {
-        // TODO - implement BeurtAfronding.handleBrandweerlieden
-        throw new UnsupportedOperationException();
     }
 
     public void hanteerPersoon() {
-        // TODO - implement BeurtAfronding.handlePersoonVanAandacht
-        throw new UnsupportedOperationException();
     }
 
     public void nieuwPersoon() {
-        // TODO - implement BeurtAfronding.vulPersoonVanAandachtAan
-        throw new UnsupportedOperationException();
+        d6.gooi();
+        d8.gooi();
+        int x = d8.getWaarde();
+        int y = d6.getWaarde();
+        int[] locatie = new int[2];
+        vak = veld.getVak(x,y);
+        while(vak.isVuur()){
+            locatie = veld.volgPijl(x,y);
+            x = locatie[0];
+            y = locatie[1];
+            vak = veld.getVak(x,y);
+        }
+
+
     }
 
     public void winControle() {

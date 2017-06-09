@@ -97,6 +97,7 @@ public class View{
 
                 //Persoon!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Deze wordt denk ik anders maar voor nu werkt die ff goed genoeg
                 if(veld.getVak(x,y).isPersoon()) {
+
                     imageViews[q].setImage(persoon);
                 } else {
                     imageViews[q].setImage(empty);
