@@ -70,6 +70,8 @@ public class Controller {
     private Button options;
     @FXML
     private Button veranderKlasse;
+    @FXML
+    private Button quit;
 
 
     List<String> choices = new ArrayList<>();
@@ -265,6 +267,11 @@ public class Controller {
                 String klasse = keuzeKlasse.get();
                 System.out.println("Je hebt gekozen voor de klasse: " + klasse);
             }
+        });
+
+        //Quit knop
+        quit.setOnAction(e -> {
+            System.exit(0);
         });
 
         //Chat groter maken
