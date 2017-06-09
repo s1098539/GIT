@@ -27,13 +27,13 @@ public class Spel {
     int hotspots;
     ArrayList<Speler> spelers = new ArrayList<Speler>();
     int murenkapot = 0;
-    ArrayList<Personen> personenlijst = new ArrayList<Personen>();
+    ArrayList<Persoon> personenlijst = new ArrayList<Persoon>();
 
 
     public Spel(Speelveld veld, int hotspots) {
         this.veld = veld;
         this.hotspots = hotspots;
-        for(Personen persoon: Personen.values()){
+        for(Persoon persoon: Persoon.values()){
             personenlijst.add(persoon);
         }
         long seed = System.nanoTime();
