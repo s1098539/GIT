@@ -24,6 +24,8 @@ public class Controller {
     private ImageView imgBrandblusser;
     @FXML
     private Button btnSpecial;
+    @FXML
+    private Button btnEndTurn;
 
     public GridPane getGridpane() {
         return gridpane;
@@ -261,6 +263,12 @@ public class Controller {
 //                view.imageSetter(veld,speler);
 //            }
             ba.nieuwRook();
+            ba.hanteerVonkoverslag();
+            ba.hanteerStoffen();
+            view.imageSetter(veld,speler);
+        });
+        btnEndTurn.setOnAction(event -> {
+            ba.nieuwPersoon();
             view.imageSetter(veld,speler);
         });
 

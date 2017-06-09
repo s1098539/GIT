@@ -145,4 +145,70 @@ public class Speelveld {
 
 
     }
+
+    public int[] volgPijl(int x, int y){
+        if(y==1 && x < 9 && x > 0){
+            y = 2;
+        }
+        else if(y==6 && x < 9 && x > 0){
+            y = 5;
+        }
+        if(x==1 && y < 6 && y > 1){
+            x = 2;
+        }
+        if(x==8 && y < 6 && y > 1){
+            x = 7;
+        }
+        else if (y==2 || y==5){
+            if (x == 3){
+                x--;
+            }
+            else if (x==6){
+                x++;
+            }
+            else if (y == 2 && (x==4 || x == 5)){
+                y++;
+            }
+            else if (y == 5 && (x==4 || x == 5)){
+                y--;
+            }
+        }
+        else if (x==2 || x==7){
+            if (y==3){
+                y--;
+            }
+            else if (y == 4){
+                y++;
+            }
+            else if (x==2 && y==2){
+                x++;
+                y++;
+            }
+            else if (x==2 && y==5){
+                x++;
+                y--;
+            }
+            else if (x==5 && y==2){
+                x--;
+                y++;
+            }
+            else if (x==5 && y==5){
+                x--;
+                y--;
+            }
+        }
+        else if (y==3 && x < 7 && x > 3) {
+            x--;
+        }
+        else if (y==4 && x < 6 && x > 2) {
+            x++;
+        }
+        else if (y==3 && x==3){
+            y++;
+        }
+        else if (y==4 && x==6){
+            y--;
+        }
+        return new int[]{x,y};
+    }
 }

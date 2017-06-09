@@ -38,12 +38,6 @@ public class Spel {
         }
         long seed = System.nanoTime();
         Collections.shuffle(personenlijst, new Random(seed));
-
-    }
-    public void personenout(){
-        for(Personen p: personenlijst){
-            System.out.println(p);
-        }
     }
 
     public void addSpeler(Speler speler) throws Throwable{
@@ -234,6 +228,7 @@ public class Spel {
             doorgaan = true;
             if (richting == Richting.BOVEN){
                 while ((y - teller > 0) && doorgaan) {
+                    vak = veld.getVak(x,y-teller);
                     if (!vak.boven.isBegaanbaar()) {
                         veld.schade(x, y-teller, richting);
                         doorgaan = false;
@@ -245,6 +240,7 @@ public class Spel {
             }
             else if (richting == Richting.RECHTS){
                 while ((x + teller < 9) && doorgaan) {
+                    vak = veld.getVak(x+teller,y);
                     if (!vak.rechts.isBegaanbaar()) {
                         veld.schade(x+teller, y, richting);
                         doorgaan = false;
@@ -256,6 +252,7 @@ public class Spel {
             }
             else if (richting == Richting.ONDER){
                 while ((y + teller < 7) && doorgaan) {
+                    vak = veld.getVak(x,y+teller);
                     if (!vak.onder.isBegaanbaar()) {
                         veld.schade(x, y+teller, richting);
                         doorgaan = false;
@@ -267,6 +264,7 @@ public class Spel {
             }
             else if (richting == Richting.LINKS){
                 while ((x - teller > 0) && doorgaan) {
+                    vak = veld.getVak(x-teller,y);
                     if (!vak.links.isBegaanbaar()) {
                         veld.schade(x - teller, y, richting);
                         doorgaan = false;
@@ -281,15 +279,26 @@ public class Spel {
     }                               //its beautiful but useless made by joseph
 
     public void hanteerBrandweerlieden() {
-
     }
 
     public void hanteerPersoon() {
     }
 
     public void nieuwPersoon() {
-        // TODO - implement BeurtAfronding.vulPersoonVanAandachtAan
-        throw new UnsupportedOperationException();
+        d6.gooi();
+        d8.gooi();
+        int x = d8.getWaarde();
+        int y = d6.getWaarde();
+        int[] locatie = new int[2];
+        vak = veld.getVak(x,y);
+        while(vak.isVuur()){
+            locatie = veld.volgPijl(x,y);
+            x = locatie[0];
+            y = locatie[1];
+            vak = veld.getVak(x,y);
+        }
+
+
     }
 
     public void winControle() {
