@@ -1,8 +1,8 @@
 package sample;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.scene.control.Button;
 
 public class Controller{
 
@@ -31,10 +31,12 @@ public class Controller{
 
     }
     public class Listener implements EventHandler<ActionEvent> {
+
         @Override
         public void handle(ActionEvent event) {
-            System.out.println("It works2");
+            System.out.println("It works");
         }
+
     }
 }
 

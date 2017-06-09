@@ -1,6 +1,7 @@
 package sample;
 ;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -40,22 +41,17 @@ public class View{
     }
 
     public void initialize() {
-//        imageSetter(veld,speler2);
-//        addListener(new Listener());
+        //btnUP.setOnAction(new Controller.Listener());
     }
 
     public void addListener(EventHandler<ActionEvent> listenForbtnUP) {
-        System.out.println("I got to this part1");
+        System.out.println("part1");
+        System.out.println(listenForbtnUP);
+        Button button = new Button();
         btnUP.setOnAction(listenForbtnUP);
-        System.out.println("I got to this part2");
+        System.out.println("part2");
     }
 
-//    public class Listener implements EventHandler<ActionEvent> {
-//        @Override
-//        public void handle(ActionEvent event) {
-//            System.out.println("It works1");
-//        }
-//    }
 
 
 
