@@ -2,8 +2,10 @@ package View;
 
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -18,15 +20,15 @@ public class LobbyView extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         Button oke = new Button("OKE");
+        TextField text = new TextField();
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(oke);
+        vbox.getChildren().addAll(text, oke);
+        vbox.setAlignment(Pos.CENTER);
 
+        BorderPane pane = new BorderPane();
 
-        BorderPane borderPane = new BorderPane();
+        pane.setCenter(vbox);
 
-        borderPane.setCenter(vbox);
-
-        Pane pane = new Pane(borderPane);
         Scene scene = new Scene(pane, 300, 300);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Lobby");
