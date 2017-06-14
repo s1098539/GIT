@@ -36,8 +36,6 @@ public class Controller {
     @FXML
     private ImageView imgOpenendeur;
     @FXML
-    private ImageView btnEnd;
-    @FXML
     private ImageView imgBrandblusser;
     @FXML
     private ImageView imgRijden;

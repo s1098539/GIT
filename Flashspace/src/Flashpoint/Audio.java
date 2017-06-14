@@ -13,7 +13,6 @@ public class Audio {
     }
 
     public void audioPlayer(String s) throws Exception {
-//          Thread audio = new Thread();
         InputStream in = new FileInputStream(s);
         AudioStream audioStream = new AudioStream(in);
         AudioPlayer.player.start(audioStream);
