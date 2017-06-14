@@ -1,25 +1,26 @@
 package View;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 
-/**
- * Created by lion on 14-06-17.
- */
+import java.io.IOException;
 
-public class SpelView extends Application {
+public class SpelView {
+Scene scene;
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("SpelView.fxml"));
-        Scene scene = new Scene(root, 1200, 700);
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Flashpoint");
-        primaryStage.show();
+    public SpelView() {
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("SpelView.fxml"));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        scene = new Scene(root, 1200, 700);
     }
 
-
+    public Scene getScene() {
+        return scene;
+    }
 }

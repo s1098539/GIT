@@ -10,6 +10,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import Main.Main;
 
 /**
  * Created by Joep Oonk on 14-6-2017.
@@ -27,7 +28,7 @@ public class SpeelveldController {
     @FXML
     private Button btnDOWN;
     @FXML
-    private Button btnET;
+    private Button btnEndTurn;
     @FXML
     private ImageView imgHakken;
     @FXML
@@ -80,8 +81,24 @@ public class SpeelveldController {
     private Button quit;
 
     public void initialize() throws Exception {
+        btnDOWN.setOnAction(event -> {
+            System.out.println("DOWN");
+        });
+
+        btnLEFT.setOnAction(event -> {
+            System.out.println("LEFT");
+        });
+
+        btnRIGHT.setOnAction(event -> {
+            System.out.println("RIGHT");
+        });
+
+        btnUP.setOnAction(event -> {
+            System.out.println("UP");
+        });
+
         quit.setOnAction(event ->{
-            System.out.println("test");
+            System.out.println("QUIT");
         });
     }
 }
