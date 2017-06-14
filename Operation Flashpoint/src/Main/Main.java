@@ -12,6 +12,7 @@ import static javafx.application.Application.launch;
  */
 public class Main {
     public static void main(String[] args) {
-        Application.launch(LobbyView.class, args);
+//        Application.launch(LobbyView.class, args);
+        Application.launch(SpelView.class, args);
     }
 }
