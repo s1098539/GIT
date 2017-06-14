@@ -4,15 +4,12 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
  * Created by lion on 14-06-17.
  */
+
 public class SpelView extends Application {
 
     @Override
@@ -23,4 +20,6 @@ public class SpelView extends Application {
         primaryStage.setTitle("Flashpoint");
         primaryStage.show();
     }
+
+
 }
