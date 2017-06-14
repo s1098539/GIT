@@ -447,7 +447,7 @@
                      </font></Button>
                     </bottom>
                 </BorderPane>
-                <Button fx:id="btnEndTurn" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="End Turn">
+                <Button fx:id="btnET" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="End Turn">
                     <font>
                         <Font name="Trebuchet MS" size="15.0" />
                     </font>
