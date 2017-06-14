@@ -16,6 +16,8 @@ import java.io.PrintStream;
 
 import java.rmi.RemoteException;
 
+import static java.lang.Thread.sleep;
+
 public class Controller {
     @FXML
     private GridPane gridpane;
@@ -33,6 +35,14 @@ public class Controller {
     private ImageView imgOpenendeur;
     @FXML
     private ImageView imgBrandblusser;
+    @FXML
+    private ImageView imgRijden;
+    @FXML
+    private ImageView imgWagenblussen;
+    @FXML
+    private ImageView imgPickup;
+//    @FXML
+//    private ImageView imgRolswap;
     @FXML
     private Button btnSpecial;
     @FXML
@@ -319,6 +329,128 @@ public class Controller {
 
                 chatArea.appendText(msg);
             }
+        });
+
+        Audio up = new Audio();
+        Audio down = new Audio();
+        Audio left = new Audio();
+        Audio right = new Audio();
+        Audio hak = new Audio();
+        Audio deur = new Audio();
+        Audio blussen = new Audio();
+        Audio rijden = new Audio();
+        Audio wagenblussen = new Audio();
+        Audio pickup = new Audio();
+
+        imgPickup.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 4000;
+                pickup.playOppakkenKostGeenAP();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgWagenblussen.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 4300;
+                wagenblussen.playBrandspuitBedienen4AP();
+                sleep(sleepTimer);
+                wagenblussen.playBrandspuitbedienerKost2AP();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgRijden.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 4500;
+                int sleepTimer2 = 5500;
+                rijden.playRijdenKost2AP();
+                sleep(sleepTimer);
+                rijden.playRijdenMeerijdenKostGeenAP();
+                sleep(sleepTimer2);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgHakken.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 3000;
+                hak.playHakken2AP();
+                sleep(sleepTimer);
+                hak.playHakken1APReddingsspecialist();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgOpenendeur.setOnContextMenuRequested  (event -> {
+            try {
+                int sleepTimer = 4500;
+                deur.playDeurActies();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgBrandblusser.setOnContextMenuRequested  (event -> {
+            try {
+                int sleepTimer = 3000;
+                blussen.playVuurBlussen2AP();
+                sleep(sleepTimer);
+                blussen.playVuurNaarRook1AP();
+                sleep(sleepTimer);
+                blussen.playRookBlussen1AP();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnUP.setOnContextMenuRequested  (event -> {
+            try {
+                up.playBewegen1AP();
+                int sleepTimer = 2501;
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnDOWN.setOnContextMenuRequested  (event -> {
+            try {
+                down.playBewegen1AP();
+                int sleepTimer = 2502;
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnLEFT.setOnContextMenuRequested(event -> {
+            try{
+                left.playBewegen1AP();
+                int sleepTimer = 2503;
+                sleep(sleepTimer);
+            }   catch (Exception e){
+        e.printStackTrace();
+    }
+});
+
+        btnRIGHT.setOnContextMenuRequested(event -> {
+        try{
+        right.playBewegen1AP();
+        int sleepTimer = 2504;
+        sleep(sleepTimer);
+        }   catch (Exception e){
+        e.printStackTrace();
+        }
         });
 
         btnUP.setOnAction(event -> {

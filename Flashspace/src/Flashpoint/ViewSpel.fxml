@@ -277,7 +277,7 @@
                             <children>
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgPickup" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Pickup.png" />
                                             </image>
@@ -350,7 +350,7 @@
                             <children>
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgRijden" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Rijden.png" />
                                             </image>
@@ -364,7 +364,7 @@
                                 </HBox>
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgWagenblussen" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Wagenblussen.png" />
                                             </image>
@@ -386,7 +386,7 @@
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
                                         <HBox prefHeight="50.0" prefWidth="50.0" />
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView  fx:id="imgRolswap" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Rolswap.png" />
                                             </image>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -20,13 +22,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Flashpoint.Controller">
     <top>
         <HBox prefHeight="50.0" prefWidth="700.0" BorderPane.alignment="CENTER">
             <children>
                 <HBox prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="117.0" text="Options" />
+                        <Button fx:id="options" mnemonicParsing="false" prefHeight="50.0" prefWidth="117.0" text="Options" />
                         <HBox prefHeight="50.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
                         <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="M" textAlignment="CENTER" />
                     </children>
@@ -135,15 +137,18 @@
                     </children>
                 </HBox>
             </children>
+         <BorderPane.margin>
+            <Insets left="5.0" top="5.0" />
+         </BorderPane.margin>
         </HBox>
     </top>
     <left>
-        <VBox prefHeight="500.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+        <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
             <padding>
                 <Insets top="25.0" />
             </padding>
             <children>
-                <HBox prefHeight="50.0" prefWidth="200.0">
+                <HBox prefHeight="50.0" prefWidth="100.0">
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -251,12 +256,18 @@
                         <Insets bottom="10.0" />
                     </VBox.margin>
                 </HBox>
+            <HBox fx:id="chatSize" prefHeight="100.0" prefWidth="200.0" />
+            <StackPane fx:id="stackpane" alignment="CENTER_LEFT" maxHeight="400.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="320.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </StackPane>
             </children>
+         <BorderPane.margin>
+            <Insets left="5.0" />
+         </BorderPane.margin>
         </VBox>
     </left>
-    <bottom>
-        <HBox prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-    </bottom>
     <right>
         <VBox prefHeight="600.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
@@ -266,7 +277,7 @@
                             <children>
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgPickup" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Pickup.png" />
                                             </image>
@@ -304,7 +315,7 @@
                             <children>
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgBrandblusser" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Brandblusser.png" />
                                             </image>
@@ -339,7 +350,7 @@
                             <children>
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgRijden" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Rijden.png" />
                                             </image>
@@ -353,7 +364,7 @@
                                 </HBox>
                                 <HBox prefHeight="50.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgWagenblussen" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@gfx/Wagenblussen.png" />
                                             </image>
@@ -395,6 +406,13 @@
                         </HBox>
                     </children>
                 </VBox>
+            <Button fx:id="veranderKlasse" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" text="Verander klasse">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow height="8.56" radius="3.0025000000000004" spread="0.62" width="5.45" />
+               </effect></Button>
                 <Button fx:id="btnSpecial" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Special">
                     <font>
                         <Font name="Trebuchet MS" size="15.0" />
@@ -405,16 +423,28 @@
                 </Button>
                 <BorderPane cacheShape="false" prefHeight="200.0" prefWidth="200.0">
                     <top>
-                        <Button fx:id="btnUP" mnemonicParsing="false" prefHeight="75.0" prefWidth="50.0" text="UP" BorderPane.alignment="CENTER" />
+                        <Button fx:id="btnUP" mnemonicParsing="false" prefHeight="64.0" prefWidth="50.0" text="🢁" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Button>
                     </top>
                     <left>
-                        <Button fx:id="btnLEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="75.0" text="LEFT" BorderPane.alignment="CENTER" />
+                        <Button fx:id="btnLEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="64.0" text="🢁🢁🢁🢁🢀" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Button>
                     </left>
                     <right>
-                        <Button fx:id="btnRIGHT" mnemonicParsing="false" prefHeight="50.0" prefWidth="75.0" text="RIGHT" BorderPane.alignment="CENTER" />
+                        <Button fx:id="btnRIGHT" mnemonicParsing="false" prefHeight="50.0" prefWidth="64.0" text="🢁🢁🢀🢁🢁🢁🢀🢁🢀🢁🢁🢀🢁🢀🢂 " BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Button>
                     </right>
                     <bottom>
-                        <Button fx:id="btnDOWN" mnemonicParsing="false" prefHeight="75.0" prefWidth="50.0" text="DN" BorderPane.alignment="CENTER" />
+                        <Button fx:id="btnDOWN" mnemonicParsing="false" prefHeight="64.0" prefWidth="55.0" text="🢁🢁🢀🢁🢀🢂🢁🢁🢁🢀🢁🢀🢂🢁🢀🢁🢁🢀🢁🢀🢂🢁🢀🢂🢁🢁🢀🢁🢀🢂🢁🢀🢂🢃" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font></Button>
                     </bottom>
                 </BorderPane>
                 <Button fx:id="btnEndTurn" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="End Turn">
@@ -422,12 +452,17 @@
                         <Font name="Trebuchet MS" size="15.0" />
                     </font>
                     <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets bottom="5.0" top="10.0" />
                     </VBox.margin>
                 </Button>
+            <Button fx:id="quit" mnemonicParsing="false" text="Quit game">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="100.0" />
+               </VBox.margin>
+            </Button>
             </children>
             <BorderPane.margin>
-                <Insets />
+                <Insets right="5.0" />
             </BorderPane.margin>
             <padding>
                 <Insets top="25.0" />
@@ -435,7 +470,7 @@
         </VBox>
     </right>
     <center>
-      <StackPane BorderPane.alignment="CENTER">
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="602.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </BorderPane.margin>
@@ -443,7 +478,11 @@
             <ImageView fitHeight="481.0" fitWidth="601.0" pickOnBounds="true">
                <image>
                   <Image url="@gfx/Bord.jpg" />
-               </image></ImageView>
+               </image>
+               <StackPane.margin>
+                  <Insets bottom="25.0" />
+               </StackPane.margin>
+            </ImageView>
               <GridPane fx:id="gridpane" maxHeight="480.0" maxWidth="600.0" minHeight="480.0" minWidth="600.0" prefHeight="480.0" prefWidth="600.0">
                   <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -467,7 +506,71 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   </rowConstraints>
+               <StackPane.margin>
+                  <Insets bottom="25.0" />
+               </StackPane.margin>
               </GridPane>
+            <VBox fx:id="chatVenster" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="173.0" prefWidth="350.0" StackPane.alignment="BOTTOM_LEFT">
+               <StackPane.margin>
+                  <Insets left="-330.0" />
+               </StackPane.margin>
+               <children>
+                  <HBox fx:id="minMaxknoppen" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="360.0">
+                     <children>
+                        <Button fx:id="chatTop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="294.0" text="Chat" wrapText="true">
+                           <effect>
+                              <ColorAdjust brightness="-0.3">
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </ColorAdjust>
+                           </effect></Button>
+                        <Button fx:id="kleinerChat" mnemonicParsing="false" text="_">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <effect>
+                              <ColorAdjust brightness="-0.3">
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </ColorAdjust>
+                           </effect>
+                        </Button>
+                        <Button fx:id="groterChat" mnemonicParsing="false" text="❐">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <effect>
+                              <ColorAdjust brightness="-0.3">
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </ColorAdjust>
+                           </effect></Button>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="chatArea" maxHeight="-Infinity" maxWidth="500.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="355.0">
+                     <VBox.margin>
+                        <Insets bottom="-20.0" />
+                     </VBox.margin></TextArea>
+                  <HBox fx:id="stuurKnopEnTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="360.0">
+                     <children>
+                        <TextField fx:id="textInput" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#initialize" prefHeight="0.0" prefWidth="300.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></TextField>
+                        <Button fx:id="stuur" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#initialize" prefHeight="0.0" text="stuur">
+                           <HBox.margin>
+                              <Insets left="1.0" />
+                           </HBox.margin></Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
          </children>
       </StackPane>
     </center>
