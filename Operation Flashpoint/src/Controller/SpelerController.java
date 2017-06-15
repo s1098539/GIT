@@ -55,15 +55,4 @@ public class SpelerController {
     @FXML private void brandweerwagenActie(){
         System.out.println("Actie: Gebruik brandweerwagen");
     }
-
-    @FXML private Kleur getActieveSpelerKleur(Spel actieveSpeler){
-        return Spel.getActieveSpeler();
-    }
-
-    @FXML private Rol getActieveSpelerRol(Speler speler, Kleur kleur){
-        speler.getRol();
-    }
-
-
-
 }
