@@ -1,13 +1,13 @@
 package Model;
 import java.util.Random;
 
-public class DobbelsteenController {
+public class Dobbelsteen {
 
     private int waarde;
     private int aantalOgen;
 
 
-    public DobbelsteenController(int aantalOgen) {
+    public Dobbelsteen(int aantalOgen) {
         this.aantalOgen = aantalOgen;
     }
 
