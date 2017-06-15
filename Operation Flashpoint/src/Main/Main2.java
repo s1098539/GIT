@@ -18,6 +18,7 @@ public class Main2 extends Application{
         primaryStage.setScene(spelView.getScene());
         primaryStage.setTitle("Flash point");
         primaryStage.show();
+        System.out.println("The Application has started.");
     }
 
 }
