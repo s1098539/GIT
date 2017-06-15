@@ -24,8 +24,7 @@ public class Main2 extends Application{
         System.out.println("The Application has started.");
         //TODO DEBUG
 
-        Speler test = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
-
+//        Speler test = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
 
     }
 

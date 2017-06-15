@@ -1,9 +1,5 @@
 package Controller;
 
-/**
- * Created by Joep Oonk on 14-6-2017.
- */
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -93,6 +89,7 @@ public class SpelController {
     SpelerController spelerC;
     DobbelsteenController dobbelC;
 
+    // Lion, verbind deze controller met 3 andere
     public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC) {
         this.veldC = veldC;
         this.spelerC = spelerC;
