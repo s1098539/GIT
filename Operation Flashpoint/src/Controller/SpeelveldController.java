@@ -1,11 +1,7 @@
 package Controller;
 
 
-import Model.Fiche;
-import Model.Richting;
-import Model.Speelveld;
-import Model.Status;
-import Model.Kleur;
+import Model.*;
 
 import java.util.ArrayList;
 
@@ -71,6 +67,70 @@ public class SpeelveldController {
             default:
                 System.out.println("Unexpected Richting input: " + richting);
                 return false;
+        }
+    }
+    // Lion, handeld obstakels voor explosies en hakken
+    private void doeBeschadiging(int x, int y, Richting richting) {
+        Vak vak = speelveld.getVakken()[x][y];
+        if (y>0) {
+            switch(vak.getBoven()) {
+                case MUUR:  vak.setBoven(Status.MUUR1);
+                            speelveld.getVakken()[x][y-1].setOnder(Status.MUUR1);
+                    break;
+                case MUUR1: vak.setBoven(Status.MUUR2);
+                            speelveld.getVakken()[x][y-1].setOnder(Status.MUUR2);
+                    break;
+                case DEURD: vak.setBoven(Status.LEEG);
+                            speelveld.getVakken()[x][y-1].setOnder(Status.LEEG);
+                    break;
+                default:
+                    System.out.println("Unexpected obstakel");
+            }
+        }
+        if (x<9) {
+            switch(vak.getRechts()) {
+                case MUUR:  vak.setRechts(Status.MUUR1);
+                            speelveld.getVakken()[x+1][y].setLinks(Status.MUUR1);
+                    break;
+                case MUUR1: vak.setRechts(Status.MUUR2);
+                            speelveld.getVakken()[x+1][y].setLinks(Status.MUUR2);
+                    break;
+                case DEURD: vak.setRechts(Status.LEEG);
+                            speelveld.getVakken()[x+1][y].setLinks(Status.LEEG);
+                    break;
+                default:
+                    System.out.println("Unexpected obstakel");
+            }
+        }
+        if (y<7) {
+            switch(vak.getOnder()) {
+                case MUUR:  vak.setOnder(Status.MUUR1);
+                            speelveld.getVakken()[x][y+1].setBoven(Status.MUUR1);
+                    break;
+                case MUUR1: vak.setOnder(Status.MUUR2);
+                            speelveld.getVakken()[x][y+1].setBoven(Status.MUUR2);
+                    break;
+                case DEURD: vak.setOnder(Status.LEEG);
+                            speelveld.getVakken()[x][y+1].setBoven(Status.LEEG);
+                    break;
+                default:
+                    System.out.println("Unexpected obstakel");
+            }
+        }
+        if (x>0) {
+            switch(vak.getLinks()) {
+                case MUUR:  vak.setLinks(Status.MUUR1);
+                            speelveld.getVakken()[x-1][y].setRechts(Status.MUUR1);
+                    break;
+                case MUUR1: vak.setLinks(Status.MUUR2);
+                            speelveld.getVakken()[x-1][y].setRechts(Status.MUUR2);
+                    break;
+                case DEURD: vak.setLinks(Status.LEEG);
+                            speelveld.getVakken()[x-1][y].setRechts(Status.LEEG);
+                    break;
+                default:
+                    System.out.println("Unexpected obstakel");
+            }
         }
     }
 }
