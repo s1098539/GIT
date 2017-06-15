@@ -2,15 +2,32 @@ package Controller;
 
 
 import Model.*;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
 
 public class SpeelveldController {
     Speelveld speelveld = new Speelveld();
+    SpelController spelController = new SpelController();
+    FlowPane[]flowPanes = new FlowPane[80];
+
 
     public SpeelveldController() {
 
     }
+
+    //Lion, zet in elke gridpane spot(op het speelveld) een flowpane
+    private void addFlowPanesToGridPane() {
+        int i = 0;
+        for(int y = 0; y<8; y++) {
+            for(int x = 0; x<10; x++) {
+                spelController.getGridpane().add(flowPanes[i],x,y);
+                i++;
+            }
+        }
+    }
+
     // Lion, geeft terug of een vak een bepaalde eigenschap heeft of niet.
     private boolean checkVakEigenschappen(int x, int y, Fiche fiche) {
         switch(fiche) {
