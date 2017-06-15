@@ -79,6 +79,17 @@ public class SpelController {
     @FXML
     private Button quit;
 
+    public GridPane getGridpane() {
+        return gridpane;
+    }
+
+    public void setGridpane(GridPane gridpane) {
+        this.gridpane = gridpane;
+    }
+
+    public SpelController() {
+    }
+
     public void initialize() throws Exception {
         btnDOWN.setOnAction(event -> {
             System.out.println("DOWN");
