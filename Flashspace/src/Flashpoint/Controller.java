@@ -30,6 +30,8 @@ public class Controller {
     @FXML
     private Button btnDOWN;
     @FXML
+    private Button btnET;
+    @FXML
     private ImageView imgHakken;
     @FXML
     private ImageView imgOpenendeur;
@@ -41,8 +43,8 @@ public class Controller {
     private ImageView imgWagenblussen;
     @FXML
     private ImageView imgPickup;
-//    @FXML
-//    private ImageView imgRolswap;
+    @FXML
+    private ImageView imgRolswap;
     @FXML
     private Button btnSpecial;
     @FXML
@@ -341,6 +343,43 @@ public class Controller {
         Audio rijden = new Audio();
         Audio wagenblussen = new Audio();
         Audio pickup = new Audio();
+        Audio rolswap = new Audio();
+        Audio special = new Audio();
+        Audio et = new Audio();
+
+        btnET.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 3000;
+                et.playEindigtZetKnop();
+                sleep(sleepTimer);
+                et.playEindigZetAPOvergebleven();
+                sleep(sleepTimer);
+                et.playEindigZetVolgendeSpelerKrijgtBeurt();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnSpecial.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 4000;
+                special.playKlasseSpecial();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgRolswap.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 4000;
+                rolswap.playRolWisselen2AP();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
 
         imgPickup.setOnContextMenuRequested  (event -> {
             try{
@@ -355,10 +394,13 @@ public class Controller {
         imgWagenblussen.setOnContextMenuRequested  (event -> {
             try{
                 int sleepTimer = 4300;
+                int sleepTimer2= 6000;
                 wagenblussen.playBrandspuitBedienen4AP();
                 sleep(sleepTimer);
                 wagenblussen.playBrandspuitbedienerKost2AP();
                 sleep(sleepTimer);
+                wagenblussen.playBrandspuitbedienerReroll();
+                sleep(sleepTimer2);
             } catch (Exception e){
                 e.printStackTrace();
             }
@@ -392,7 +434,7 @@ public class Controller {
         imgOpenendeur.setOnContextMenuRequested  (event -> {
             try {
                 int sleepTimer = 4500;
-                deur.playDeurActies();
+                deur.playDeurOpenenSluiten1AP();
                 sleep(sleepTimer);
             } catch (Exception e){
                 e.printStackTrace();
@@ -415,9 +457,20 @@ public class Controller {
 
         btnUP.setOnContextMenuRequested  (event -> {
             try {
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
                 up.playBewegen1AP();
-                int sleepTimer = 2501;
-                sleep(sleepTimer);
+                sleep(sleepTimer1);
+                up.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                up.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                up.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                up.playVuurBewegen2AP();
+                sleep(sleepTimer4);
             } catch (Exception e){
                 e.printStackTrace();
             }
@@ -425,9 +478,20 @@ public class Controller {
 
         btnDOWN.setOnContextMenuRequested  (event -> {
             try {
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
                 down.playBewegen1AP();
-                int sleepTimer = 2502;
-                sleep(sleepTimer);
+                sleep(sleepTimer1);
+                down.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                down.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                down.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                down.playVuurBewegen2AP();
+                sleep(sleepTimer4);
             } catch (Exception e){
                 e.printStackTrace();
             }
@@ -435,9 +499,20 @@ public class Controller {
 
         btnLEFT.setOnContextMenuRequested(event -> {
             try{
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
                 left.playBewegen1AP();
-                int sleepTimer = 2503;
-                sleep(sleepTimer);
+                sleep(sleepTimer1);
+                left.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                left.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                left.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                left.playVuurBewegen2AP();
+                sleep(sleepTimer4);
             }   catch (Exception e){
         e.printStackTrace();
     }
@@ -445,9 +520,20 @@ public class Controller {
 
         btnRIGHT.setOnContextMenuRequested(event -> {
         try{
-        right.playBewegen1AP();
-        int sleepTimer = 2504;
-        sleep(sleepTimer);
+            int sleepTimer1 = 2501;
+            int sleepTimer2 = 7500;
+            int sleepTimer3 = 9500;
+            int sleepTimer4 = 3500;
+            right.playBewegen1AP();
+            sleep(sleepTimer1);
+            right.playBewegenPvaGS2AP();
+            sleep(sleepTimer2);
+            right.playBewegenReddingsspecialist3EP();
+            sleep(sleepTimer2);
+            right.playDokterBehandelenBewegenGeenExtraAP();
+            sleep(sleepTimer3);
+            right.playVuurBewegen2AP();
+            sleep(sleepTimer4);
         }   catch (Exception e){
         e.printStackTrace();
         }

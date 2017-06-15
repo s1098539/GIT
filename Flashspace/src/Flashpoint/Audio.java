@@ -6,14 +6,13 @@ import sun.audio.AudioStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-public class Audio{
+public class Audio {
 
 
-    public Audio(){
+    public Audio() {
     }
 
-    public void audioPlayer(String s) throws Exception{
-//          Thread audio = new Thread();
+    public void audioPlayer(String s) throws Exception {
         InputStream in = new FileInputStream(s);
         AudioStream audioStream = new AudioStream(in);
         AudioPlayer.player.start(audioStream);
@@ -21,403 +20,347 @@ public class Audio{
 
     //GUI WAV
 
-    public void playSchade1() throws Exception
-    {
-        String schade1= "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/1schade.wav";
+    public void playSchade1() throws Exception {
+        String schade1 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/1schade.wav";
         audioPlayer(schade1);
     }
 
-    public void playSchade2 () throws Exception
-    {
+    public void playSchade2() throws Exception {
         String schade2 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/2schade.wav";
         audioPlayer(schade2);
     }
 
-    public void playSchade3 () throws Exception
-    {
-        String schade3= "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/3schade.wav";
+    public void playSchade3() throws Exception {
+        String schade3 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/3schade.wav";
         audioPlayer(schade3);
     }
 
-    public void playSchade4 () throws Exception
-    {
-        String schade4= "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/4schade.wav";
+    public void playSchade4() throws Exception {
+        String schade4 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/4schade.wav";
         audioPlayer(schade4);
     }
 
-    public void playSchade5 () throws Exception
-    {
-        String schade5= "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/5schade.wav";
+    public void playSchade5() throws Exception {
+        String schade5 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/5schade.wav";
         audioPlayer(schade5);
     }
 
-    public void playSchade6 () throws Exception
-    {
-        String schade6= "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/6schade.wav";
+    public void playSchade6() throws Exception {
+        String schade6 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/6schade.wav";
         audioPlayer(schade6);
     }
 
-    public void playSchade7 () throws Exception
-    {
+    public void playSchade7() throws Exception {
 
         String schade7 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/7schade.wav";
         audioPlayer(schade7);
     }
 
-    public void playSchade8 () throws Exception
-    {
+    public void playSchade8() throws Exception {
         String schade8 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/8schade.wav";
         audioPlayer(schade8);
     }
 
-    public void playSchade9 () throws Exception
-    {
+    public void playSchade9() throws Exception {
 
         String schade9 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/9schade.wav";
         audioPlayer(schade9);
     }
 
-    public void playSchade10 () throws Exception
-    {
+    public void playSchade10() throws Exception {
 
         String schade10 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/10schade.wav";
         audioPlayer(schade10);
     }
 
-    public void playSchade11 () throws Exception
-    {
+    public void playSchade11() throws Exception {
 
         String schade11 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/11schade.wav";
         audioPlayer(schade11);
     }
 
-    public void playSchade12 () throws Exception
-    {
+    public void playSchade12() throws Exception {
 
         String schade12 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/12schade.wav";
         audioPlayer(schade12);
     }
 
-    public void playSchade13 () throws Exception
-    {
+    public void playSchade13() throws Exception {
 
         String schade13 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/13schade.wav";
         audioPlayer(schade13);
     }
 
-    public void playSchade14 () throws Exception
-    {
+    public void playSchade14() throws Exception {
 
         String schade14 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/14schade.wav";
         audioPlayer(schade14);
     }
 
-    public void playSchade15 () throws Exception
-    {
+    public void playSchade15() throws Exception {
 
         String schade15 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/15schade.wav";
         audioPlayer(schade15);
     }
 
-    public void playSchade16 () throws Exception
-    {
+    public void playSchade16() throws Exception {
 
         String schade16 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/16schade.wav";
         audioPlayer(schade16);
     }
 
-    public void playSchade17 () throws Exception
-    {
+    public void playSchade17() throws Exception {
 
         String schade17 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/17schade.wav";
         audioPlayer(schade17);
     }
 
-    public void playSchade18 () throws Exception
-    {
+    public void playSchade18() throws Exception {
 
         String schade18 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/18schade.wav";
         audioPlayer(schade18);
     }
 
-    public void playSchade19 () throws Exception
-    {
+    public void playSchade19() throws Exception {
 
         String schade19 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/19schade.wav";
         audioPlayer(schade19);
     }
 
-    public void playSchade20 () throws Exception
-    {
+    public void playSchade20() throws Exception {
 
         String schade20 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/20schade.wav";
         audioPlayer(schade20);
     }
 
-    public void playSchade21 () throws Exception
-    {
+    public void playSchade21() throws Exception {
 
         String schade21 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/21schade.wav";
         audioPlayer(schade21);
     }
 
-    public void playSchade22 () throws Exception
-    {
+    public void playSchade22() throws Exception {
 
         String schade22 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/22schade.wav";
         audioPlayer(schade22);
 
     }
 
-    public void playSchade23 () throws Exception
-    {
+    public void playSchade23() throws Exception {
 
         String schade23 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/23schade.wav";
         audioPlayer(schade23);
     }
 
-    public void playSchade24  () throws Exception
-    {
+    public void playSchade24() throws Exception {
         String schade24 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/24schade.wav";
         audioPlayer(schade24);
     }
 
-    public void playAp1 ()throws Exception
-    {
+    public void playAp1() throws Exception {
         String ap1 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/1AP.wav";
         audioPlayer(ap1);
     }
 
-    public void playAp2 ()throws Exception
-    {
+    public void playAp2() throws Exception {
         String ap2 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/2AP.wav";
         audioPlayer(ap2);
     }
 
-    public void playAp3 ()throws Exception
-    {
+    public void playAp3() throws Exception {
         String ap3 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/3AP.wav";
         audioPlayer(ap3);
     }
 
-    public void playAp4 ()throws Exception
-    {
+    public void playAp4() throws Exception {
         String ap4 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/4AP.wav";
         audioPlayer(ap4);
     }
 
-    public void playAp5 ()throws Exception
-    {
+    public void playAp5() throws Exception {
         String ap5 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/5AP.wav";
         audioPlayer(ap5);
     }
 
-    public void playAp6 ()throws Exception
-    {
+    public void playAp6() throws Exception {
         String ap6 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/6AP.wav";
         audioPlayer(ap6);
     }
 
-    public void playAp7 ()throws Exception
-    {
+    public void playAp7() throws Exception {
         String ap7 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/7AP.wav";
         audioPlayer(ap7);
     }
 
-    public void playAp8 ()throws Exception
-    {
+    public void playAp8() throws Exception {
         String ap8 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/8AP.wav";
         audioPlayer(ap8);
     }
 
-    public void playAp9 ()throws Exception
-    {
+    public void playAp9() throws Exception {
         String ap9 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/9AP.wav";
         audioPlayer(ap9);
     }
 
-    public void playEp1 ()throws Exception
-    {
+    public void playEp1() throws Exception {
         String ep1 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/1EP.wav";
         audioPlayer(ep1);
     }
 
-    public void playEp2 ()throws Exception
-    {
+    public void playEp2() throws Exception {
         String ep2 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/2EP.wav";
         audioPlayer(ep2);
     }
 
-    public void playEp3 ()throws Exception
-    {
+    public void playEp3() throws Exception {
         String ep3 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/3EP.wav";
         audioPlayer(ep3);
     }
 
-    public void playPva1 ()throws Exception
-    {
+    public void playPva1() throws Exception {
         String pva1 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/1pva.wav";
         audioPlayer(pva1);
     }
 
-    public void playPva2 ()throws Exception
-    {
+    public void playPva2() throws Exception {
         String pva2 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/2pva.wav";
         audioPlayer(pva2);
     }
 
-    public void playPva3 ()throws Exception
-    {
+    public void playPva3() throws Exception {
         String pva3 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/3pva.wav";
         audioPlayer(pva3);
     }
 
-    public void playPva4 ()throws Exception
-    {
+    public void playPva4() throws Exception {
 
         String pva4 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/4pva.wav";
         audioPlayer(pva4);
     }
 
-    public void playPva5 ()throws Exception
-    {
+    public void playPva5() throws Exception {
 
         String pva5 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/5pva.wav";
         audioPlayer(pva5);
     }
 
-    public void playPva6 ()throws Exception
-    {
+    public void playPva6() throws Exception {
 
         String pva6 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/6pva.wav";
         audioPlayer(pva6);
     }
 
-    public void playPva7 ()throws Exception
-    {
+    public void playPva7() throws Exception {
 
         String pva7 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/7pva.wav";
         audioPlayer(pva7);
     }
 
-    public void playPva8 ()throws Exception
-    {
+    public void playPva8() throws Exception {
 
         String pva8 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/8pva.wav";
         audioPlayer(pva8);
     }
 
-    public void playPva9 ()throws Exception
-    {
+    public void playPva9() throws Exception {
 
         String pva9 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/9pva.wav";
         audioPlayer(pva9);
     }
 
-    public void playPva10 ()throws Exception
-    {
+    public void playPva10() throws Exception {
 
         String pva10 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/10pva.wav";
         audioPlayer(pva10);
     }
 
-    public void playBrandhaarden1 ()throws Exception
-    {
+    public void playBrandhaarden1() throws Exception {
 
         String brandhaarden1 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/1Haard.wav";
         audioPlayer(brandhaarden1);
     }
 
-    public void playBrandhaarden2 ()throws Exception
-    {
+    public void playBrandhaarden2() throws Exception {
 
         String brandhaarden2 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/2haard.wav";
         InputStream in = new FileInputStream(brandhaarden2);
         audioPlayer(brandhaarden2);
     }
 
-    public void playBrandhaarden3 ()throws Exception
-    {
+    public void playBrandhaarden3() throws Exception {
 
         String brandhaarden3 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/3haard.wav";
         audioPlayer(brandhaarden3);
     }
 
-    public void playBrandhaarden4 ()throws Exception
-    {
+    public void playBrandhaarden4() throws Exception {
 
         String brandhaarden4 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/4haard.wav";
         audioPlayer(brandhaarden4);
     }
 
-    public void playBrandhaarden5 ()throws Exception
-    {
+    public void playBrandhaarden5() throws Exception {
 
         String brandhaarden5 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/5haard.wav";
         audioPlayer(brandhaarden5);
     }
 
-    public void playBrandhaarden6 ()throws Exception
-    {
+    public void playBrandhaarden6() throws Exception {
 
         String brandhaarden6 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/6haard.wav";
         audioPlayer(brandhaarden6);
     }
 
-    public void playBewegen1AP ()throws Exception
-    {
+    public void playBewegen1AP() throws Exception {
 
         String bewegen1 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/Bewegen1AP.wav";
         audioPlayer(bewegen1);
     }
 
-    public void playBewegenPvaGS2AP ()throws Exception
-    {
+    public void playBewegenPvaGS2AP() throws Exception {
 
         String bewegen2 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/BewegenPvaGS2AP.wav";
         audioPlayer(bewegen2);
     }
 
 
-    public void playBewegenReddingsspecialist3EP ()throws Exception
-    {
+    public void playBewegenReddingsspecialist3EP() throws Exception {
 
         String bewegen3 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/BewegenReddingsspecialist3EP.wav";
         audioPlayer(bewegen3);
     }
 
 
-    public void playBrandspuitBedienen4AP ()throws Exception
-    {
+    public void playBrandspuitBedienen4AP() throws Exception {
 
         String brandspuit1 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/BrandspuitBedienen4AP.wav";
         audioPlayer(brandspuit1);
     }
 
-    public void playBrandspuitbedienerKost2AP ()throws Exception
-    {
+    public void playBrandspuitbedienerKost2AP() throws Exception {
 
         String brandspuit2 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/BrandspuitbedienerKost2AP.wav";
         audioPlayer(brandspuit2);
 
     }
 
-    public void playBrandspuitbedienerReroll()throws Exception
-    {
+    public void playBrandspuitbedienerReroll() throws Exception {
 
         String brandspuit3 = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/BrandspuitbedienerReroll.wav";
         audioPlayer(brandspuit3);
 
     }
 
-    public void DeurOpenenSluiten1AP()throws Exception
-    {
+    public void playDeurOpenenSluiten1AP() throws Exception {
 
         String deur = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/DeurOpenenSluiten1AP.wav";
         audioPlayer(deur);
-
     }
 
+    public void playRolWisselen2AP() throws Exception {
+        String rolWissel = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/RolWisselen2AP.wav";
+        audioPlayer(rolWissel);
+    }
 
     public void playDokterBehandelenBewegenGeenExtraAP() throws Exception
     {
@@ -480,8 +423,8 @@ public class Audio{
     {
         String klasse = "C:/Users/Acer/Desktop/IIPSEN/TTS/GUI WAV Format/KlasseSpecial.wav";
         audioPlayer(klasse);
-
     }
+
 
     public void playOppakkenKostGeenAP() throws Exception
     {
@@ -633,10 +576,10 @@ public class Audio{
         audioPlayer(bewegenSpel3);
     }
 
-    public void playDeurActies() throws Exception
+    public void playDeurRegels() throws Exception
     {
 
-        String deurActies = "C:/Users/Acer/Desktop/IIPSEN/TTS/Spelregels WAV Format/DeurActies.wav";
+        String deurActies = "C:/Users/Acer/Desktop/IIPSEN/TTS/Spelregels WAV Format/DeurOpenenSluiten1AP.wav";
         audioPlayer(deurActies);
     }
 
