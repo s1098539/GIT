@@ -11,12 +11,17 @@ import javafx.scene.control.Button;
  * Created by Sam van Schaik on 14-6-2017.
  */
 public class SpelerController {
+    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
+
+
     @FXML private Button hakken;
 
 
-    //TODO eweeg Acties
+    //TODO Beweeg Acties
     @FXML private void beweegNoord(){
         System.out.println("Beweeg: Noord");
+
+
     }
 
     @FXML private void beweegWest(){

@@ -1,9 +1,13 @@
 package Model;
 
+import Controller.SpelerController;
+
 /**
  * Created by Sam van Schaik
  */
 public class Speler {
+
+
     //Speler informatie
     String naam;
     Kleur kleur;
@@ -107,6 +111,8 @@ public class Speler {
     public void setSlechtziendmodus(boolean slechtziendmodus) {
         this.slechtziendmodus = slechtziendmodus;
     }
+
+
 
 
 }
