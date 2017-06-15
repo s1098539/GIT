@@ -61,14 +61,14 @@ public class SpeelveldController {
 
     Speelveld speelveld = new Speelveld();
 
-    SpelController spelController;
-    SpelerController spelerController;
-    DobbelsteenController dobbelsteenController;
+    SpelController spelC;
+    SpelerController spelerC;
+    DobbelsteenController dobbelC;
 
-    public void setControllers(SpelController spelController, SpelerController spelerController, DobbelsteenController dobbelsteenController) {
-        this.spelController = spelController;
-        this.spelerController = spelerController;
-        this.dobbelsteenController = dobbelsteenController;
+    public void setControllers(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC) {
+        this.spelC = spelC;
+        this.spelerC = spelerC;
+        this.dobbelC = dobbelC;
     }
 
     public SpeelveldController() {
@@ -78,7 +78,7 @@ public class SpeelveldController {
     private void flowpanesAndImageViewsFactory() {
         for(int y = 0; y<8; y++) {
             for(int x = 0; x<10; x++) {
-                spelController.getGridpane().add(flowPanes[x][y],x,y);
+                spelC.getGridpane().add(flowPanes[x][y],x,y);
                 for (int z = 0; z<9; z++) {
                     flowPanes[x][y].getChildren().add(z,imageViews[x][y][z]);
                 }

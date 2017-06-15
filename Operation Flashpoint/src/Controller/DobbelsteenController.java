@@ -5,14 +5,14 @@ package Controller;
  */
 public class DobbelsteenController {
 
-    SpeelveldController speelveldController;
-    SpelController spelController;
-    SpelerController spelerController;
+    SpeelveldController veldC;
+    SpelController spelC;
+    SpelerController spelerC;
 
-    public void setControllers(SpeelveldController speelveldController, SpelController spelController, SpelerController spelerController) {
-        this.speelveldController = speelveldController;
-        this.spelController = spelController;
-        this.spelerController = spelerController;
+    public void setControllers(SpeelveldController veldC, SpelController spelC, SpelerController spelerC) {
+        this.veldC = veldC;
+        this.spelC = spelC;
+        this.spelerC = spelerC;
     }
 
     public DobbelsteenController() {

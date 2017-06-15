@@ -10,15 +10,15 @@ import Controller.SpelerController;
  */
 public class Main3 {
     public static void main(String[] args) {
-        SpeelveldController speelveldController = new SpeelveldController();
-        SpelController spelController = new SpelController();
-        SpelerController spelerController = new SpelerController();
-        DobbelsteenController dobbelsteenController = new DobbelsteenController();
+        SpeelveldController veldC = new SpeelveldController();
+        SpelController spelC = new SpelController();
+        SpelerController spelerC = new SpelerController();
+        DobbelsteenController dobbelC = new DobbelsteenController();
 
-        speelveldController.setControllers(spelController,spelerController,dobbelsteenController);
-        spelController.setControllers(speelveldController,spelerController,dobbelsteenController);
-        spelerController.setControllers(speelveldController,spelController,dobbelsteenController);
-        dobbelsteenController.setControllers(speelveldController,spelController,spelerController);
+        veldC.setControllers(spelC,spelerC,dobbelC);
+        spelC.setControllers(veldC,spelerC,dobbelC);
+        spelerC.setControllers(veldC,spelC,dobbelC);
+        dobbelC.setControllers(veldC,spelC,spelerC);
 
 
 

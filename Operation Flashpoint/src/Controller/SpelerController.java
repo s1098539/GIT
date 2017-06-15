@@ -2,7 +2,6 @@ package Controller;
 
 import Model.Kleur;
 import Model.Rol;
-import Model.Spel;
 import Model.Speler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,14 +12,14 @@ import javafx.scene.control.Button;
 public class SpelerController {
     Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
 
-    SpeelveldController speelveldController;
-    SpelController spelController;
-    DobbelsteenController dobbelsteenController;
+    SpeelveldController veldC;
+    SpelController spelC;
+    DobbelsteenController dobbelC;
 
-    public void setControllers(SpeelveldController speelveldController, SpelController spelController, DobbelsteenController dobbelsteenController) {
-        this.speelveldController = speelveldController;
-        this.spelController = spelController;
-        this.dobbelsteenController = dobbelsteenController;
+    public void setControllers(SpeelveldController veldC, SpelController spelC, DobbelsteenController dobbelC) {
+        this.veldC = veldC;
+        this.spelC = spelC;
+        this.dobbelC = dobbelC;
     }
 
     @FXML private Button hakken;
