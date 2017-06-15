@@ -69,6 +69,104 @@ public class SpeelveldController {
                 return false;
         }
     }
+
+    //Lion/Joep, Zet alle muren en deuren op de goeie plek om het spel te beginnen
+    public void setMap(){
+        //buitenmuren horizontaal
+        for(int x = 1; x <9; x++) {
+            speelveld.getVakken()[x][0].setOnder(Status.MUUR);
+            speelveld.getVakken()[x][1].setBoven(Status.MUUR);
+            speelveld.getVakken()[x][6].setOnder(Status.MUUR);
+            speelveld.getVakken()[x][7].setBoven(Status.MUUR);
+
+        }
+        //buitenmuren verticaal
+        for (int y = 1; y < 7; y++) {
+            speelveld.getVakken()[0][y].setRechts(Status.MUUR);
+            speelveld.getVakken()[1][y].setLinks(Status.MUUR);
+            speelveld.getVakken()[8][y].setRechts(Status.MUUR);
+            speelveld.getVakken()[9][y].setLinks(Status.MUUR);
+
+        }
+        //scheidingswand woonkamer
+        speelveld.getVakken()[1][2].setOnder(Status.MUUR);
+        speelveld.getVakken()[1][3].setBoven(Status.MUUR);
+        speelveld.getVakken()[2][2].setOnder(Status.MUUR);
+        speelveld.getVakken()[2][3].setBoven(Status.MUUR);
+
+        //muur tussen woonkamer en slaapkamer + keuken
+        for (int j = 1; j<7;j++){
+            speelveld.getVakken()[j][4].setOnder(Status.MUUR);
+            speelveld.getVakken()[j][5].setBoven(Status.MUUR);
+            speelveld.getVakken()[j][4].setOnder(Status.MUUR);
+            speelveld.getVakken()[j][5].setBoven(Status.MUUR);
+        }
+        //muur tussen woonkamer en badkamer + bergruimte
+        for (int k = 1; k<4;k++){
+            speelveld.getVakken()[3][k].setRechts(Status.MUUR);
+            speelveld.getVakken()[4][k].setLinks(Status.MUUR);
+            speelveld.getVakken()[3][k].setRechts(Status.MUUR);
+            speelveld.getVakken()[4][k].setLinks(Status.MUUR);
+        }
+        //muur tussen bergruimte en badkamer
+        speelveld.getVakken()[4][1].setOnder(Status.MUUR);
+        speelveld.getVakken()[4][2].setBoven(Status.MUUR);
+        speelveld.getVakken()[5][1].setOnder(Status.MUUR);
+        speelveld.getVakken()[5][2].setBoven(Status.MUUR);
+
+        //overige horizontale muren
+        speelveld.getVakken()[4][3].setOnder(Status.MUUR);
+        speelveld.getVakken()[4][4].setBoven(Status.MUUR);
+        speelveld.getVakken()[7][3].setOnder(Status.MUUR);
+        speelveld.getVakken()[7][4].setBoven(Status.MUUR);
+        speelveld.getVakken()[8][3].setOnder(Status.MUUR);
+        speelveld.getVakken()[8][4].setBoven(Status.MUUR);
+
+        //verticale muur tussen slaapkamer en keuken
+        speelveld.getVakken()[3][5].setRechts(Status.MUUR);
+        speelveld.getVakken()[4][5].setLinks(Status.MUUR);
+        speelveld.getVakken()[3][6].setRechts(Status.MUUR);
+        speelveld.getVakken()[4][6].setLinks(Status.MUUR);
+
+        //verticale muur tussen slaapkamers
+        speelveld.getVakken()[6][5].setRechts(Status.MUUR);
+        speelveld.getVakken()[7][5].setLinks(Status.MUUR);
+        speelveld.getVakken()[6][6].setRechts(Status.MUUR);
+        speelveld.getVakken()[7][6].setLinks(Status.MUUR);
+
+        //overige muur
+        speelveld.getVakken()[5][2].setRechts(Status.MUUR);
+        speelveld.getVakken()[6][2].setLinks(Status.MUUR);
+
+        //verticale deuren
+        speelveld.getVakken()[5][1].setRechts(Status.DEURD);
+        speelveld.getVakken()[6][1].setLinks(Status.DEURD);
+        speelveld.getVakken()[5][3].setRechts(Status.DEURD);
+        speelveld.getVakken()[6][3].setLinks(Status.DEURD);
+        speelveld.getVakken()[6][4].setRechts(Status.DEURD);
+        speelveld.getVakken()[7][4].setLinks(Status.DEURD);
+
+        //horizontale deuren
+        speelveld.getVakken()[5][4].setBoven(Status.DEURD);
+        speelveld.getVakken()[5][3].setOnder(Status.DEURD);
+        speelveld.getVakken()[6][4].setBoven(Status.DEURD);
+        speelveld.getVakken()[6][3].setOnder(Status.DEURD);
+        speelveld.getVakken()[6][5].setBoven(Status.DEURD);
+        speelveld.getVakken()[6][4].setOnder(Status.DEURD);
+        speelveld.getVakken()[3][5].setBoven(Status.DEURD);
+        speelveld.getVakken()[3][4].setOnder(Status.DEURD);
+
+        //buitenmuren waar deuren horen leeg maken
+        speelveld.getVakken()[0][3].setRechts(Status.LEEG);
+        speelveld.getVakken()[1][3].setLinks(Status.LEEG);
+
+        speelveld.getVakken()[3][7].setBoven(Status.LEEG);
+        speelveld.getVakken()[3][6].setOnder(Status.LEEG);
+
+
+
+    }
+
     // Lion, handeld obstakels voor explosies en hakken
     private void doeBeschadiging(int x, int y, Richting richting) {
         Vak vak = speelveld.getVakken()[x][y];
