@@ -1,5 +1,8 @@
 package Main;
 
+import Model.Kleur;
+import Model.Rol;
+import Model.Speler;
 import View.SpelView;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -19,6 +22,10 @@ public class Main2 extends Application{
         primaryStage.setTitle("Flash point");
         primaryStage.show();
         System.out.println("The Application has started.");
+        //TODO DEBUG
+
+        Speler rafe = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
+
     }
 
 }

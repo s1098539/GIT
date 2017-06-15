@@ -107,4 +107,6 @@ public class Speler {
     public void setSlechtziendmodus(boolean slechtziendmodus) {
         this.slechtziendmodus = slechtziendmodus;
     }
+
+
 }
