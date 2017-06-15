@@ -96,7 +96,20 @@ public class SpeelveldController {
         }
 
         // Obstakel boven
-        ImageSetterObstakelLoop(x,y,1,speelveld.getVakken()[x][y].getBoven());
+        switch (speelveld.getVakken()[x][y].getBoven()) {
+            case MUUR: imageViews[x][y][1].setImage(muurOnder);
+                break;
+            case MUUR1: imageViews[x][y][1].setImage(muur1kapotOnder);
+                break;
+            case MUUR2: imageViews[x][y][1].setImage(muur2kapotOnder);
+                break;
+            case DEURO: imageViews[x][y][1].setImage(openDeurOnder);
+                break;
+            case DEURD: imageViews[x][y][1].setImage(dichteDeurOnder);
+                break;
+            case LEEG: imageViews[x][y][1].setImage(empty);
+                break;
+        }
 
         // Persoon
         if(speelveld.getVakken()[x][y].getPersonen().isEmpty()) {
@@ -132,7 +145,20 @@ public class SpeelveldController {
         }
 
         // Obstakel links
-        ImageSetterObstakelLoop(x,y,3,speelveld.getVakken()[x][y].getLinks());
+        switch (speelveld.getVakken()[x][y].getLinks()) {
+            case MUUR: imageViews[x][y][3].setImage(muurRechts);
+                break;
+            case MUUR1: imageViews[x][y][3].setImage(muur1kapotRechts);
+                break;
+            case MUUR2: imageViews[x][y][3].setImage(muur2kapotRechts);
+                break;
+            case DEURO: imageViews[x][y][3].setImage(openDeurRechts);
+                break;
+            case DEURD: imageViews[x][y][3].setImage(dichteDeurRechts);
+                break;
+            case LEEG: imageViews[x][y][3].setImage(empty);
+                break;
+        }
 
         // Spelers
         for(int i = 0; i < 6; i++) {
@@ -161,7 +187,20 @@ public class SpeelveldController {
         }
 
         // Obstakel rechts
-        ImageSetterObstakelLoop(x,y,5,speelveld.getVakken()[x][y].getRechts());
+        switch (speelveld.getVakken()[x][y].getRechts()) {
+            case MUUR: imageViews[x][y][5].setImage(muurLinks);
+                break;
+            case MUUR1: imageViews[x][y][5].setImage(muur1kapotLinks);
+                break;
+            case MUUR2: imageViews[x][y][5].setImage(muur2kapotLinks);
+                break;
+            case DEURO: imageViews[x][y][5].setImage(openDeurLinks);
+                break;
+            case DEURD: imageViews[x][y][5].setImage(dichteDeurLinks);
+                break;
+            case LEEG: imageViews[x][y][5].setImage(empty);
+                break;
+        }
 
         // Vuur plaats
         if(speelveld.getVakken()[x][y].isVuur()) {
@@ -173,7 +212,20 @@ public class SpeelveldController {
         }
 
         // Obstakel onder
-        ImageSetterObstakelLoop(x,y,7,speelveld.getVakken()[x][y].getOnder());
+        switch (speelveld.getVakken()[x][y].getOnder()) {
+            case MUUR: imageViews[x][y][7].setImage(muurBoven);
+                break;
+            case MUUR1: imageViews[x][y][7].setImage(muur1kapotBoven);
+                break;
+            case MUUR2: imageViews[x][y][7].setImage(muur2kapotBoven);
+                break;
+            case DEURO: imageViews[x][y][7].setImage(openDeurBoven);
+                break;
+            case DEURD: imageViews[x][y][7].setImage(dichteDeurBoven);
+                break;
+            case LEEG: imageViews[x][y][7].setImage(empty);
+                break;
+        }
 
         // Stoffen
         if(speelveld.getVakken()[x][y].isStoffen()) {
@@ -182,22 +234,6 @@ public class SpeelveldController {
             imageViews[x][y][8].setImage(empty);
         }
 
-    }
-    private void ImageSetterObstakelLoop(int x, int y, int z, Status status) {
-        switch (status) {
-            case MUUR: imageViews[x][y][z].setImage(muurOnder);
-                break;
-            case MUUR1: imageViews[x][y][z].setImage(muur1kapotOnder);
-                break;
-            case MUUR2: imageViews[x][y][z].setImage(muur2kapotOnder);
-                break;
-            case DEURO: imageViews[x][y][z].setImage(openDeurOnder);
-                break;
-            case DEURD: imageViews[x][y][z].setImage(dichteDeurOnder);
-                break;
-            case LEEG: imageViews[x][y][z].setImage(empty);
-                break;
-        }
     }
 
     // Lion, geeft terug of een vak een bepaalde eigenschap heeft of niet.
