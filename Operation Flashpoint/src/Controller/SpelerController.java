@@ -1,6 +1,8 @@
 package Controller;
 
+import Model.Kleur;
 import Model.Rol;
+import Model.Spel;
 import Model.Speler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,7 +14,7 @@ public class SpelerController {
     @FXML private Button hakken;
 
 
-    //Beweeg Acties
+    //TODO eweeg Acties
     @FXML private void beweegNoord(){
         System.out.println("Beweeg: Noord");
     }
@@ -29,7 +31,7 @@ public class SpelerController {
         System.out.println("Beweeg: Oost");
     }
 
-    //Spel Acties
+    //TODO Spel Acties
     @FXML private void hakActie(){
         System.out.println("Actie: Hakken");
     }
@@ -54,19 +56,14 @@ public class SpelerController {
         System.out.println("Actie: Gebruik brandweerwagen");
     }
 
-    @FXML private void veranderRol(){
-        System.out.println("Actie: Verander rol");
+    @FXML private Kleur getActieveSpelerKleur(Spel actieveSpeler){
+        return Spel.getActieveSpeler();
     }
 
-    //Speciale Acties
-    //TODO THIS NEEDS TO REQUEST THE CURRENT PLAYER HIS ROLE AND ASIGN THE CORRECT ACTION
-    @FXML private void specialeActie(){
-
+    @FXML private Rol getActieveSpelerRol(Speler speler, Kleur kleur){
+        speler.getRol();
     }
 
-    @FXML private void commandeerActie(){
-
-    }
 
 
 }

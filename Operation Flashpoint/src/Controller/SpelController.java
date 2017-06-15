@@ -91,22 +91,6 @@ public class SpelController {
     }
 
     public void initialize() throws Exception {
-        btnDOWN.setOnAction(event -> {
-            System.out.println("DOWN");
-        });
-
-        btnLEFT.setOnAction(event -> {
-            System.out.println("LEFT");
-        });
-
-        btnRIGHT.setOnAction(event -> {
-            System.out.println("RIGHT");
-        });
-
-        btnUP.setOnAction(event -> {
-            System.out.println("UP");
-        });
-
         quit.setOnAction(event ->{
             System.out.println("QUIT");
         });
