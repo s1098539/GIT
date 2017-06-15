@@ -57,4 +57,20 @@ public class SpeelveldController {
         return kleuren;
     }
 
+    // Lion, geeft true als de gekozen richting geen hinderend obstakel bevat.
+    private boolean checkDoorgaanbaar(int x, int y, Richting richting) {
+        switch(richting) {
+            case BOVEN:
+                return speelveld.getVakken()[x][y].getBoven().isBegaanbaar();
+            case LINKS:
+                return speelveld.getVakken()[x][y].getLinks().isBegaanbaar();
+            case ONDER:
+                return speelveld.getVakken()[x][y].getOnder().isBegaanbaar();
+            case RECHTS:
+                return speelveld.getVakken()[x][y].getRechts().isBegaanbaar();
+            default:
+                System.out.println("Unexpected Richting input: " + richting);
+                return false;
+        }
+    }
 }
