@@ -50,7 +50,7 @@ public class SpelerController {
         System.out.println("Actie: Beweeg Voertuig");
     }
 
-    @FXML private void brandweerwagenActie{
+    @FXML private void brandweerwagenActie(){
         System.out.println("Actie: Gebruik brandweerwagen");
     }
 
