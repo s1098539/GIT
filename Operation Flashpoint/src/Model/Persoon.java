@@ -16,4 +16,19 @@ public enum Persoon {
     }
     Persoon(boolean omgedraaid){this.omgedraaid = omgedraaid;}
 
+    public boolean isGered() {
+        return gered;
+    }
+
+    public void setGered(boolean gered) {
+        this.gered = gered;
+    }
+
+    public boolean isOmgedraaid() {
+        return omgedraaid;
+    }
+
+    public void setOmgedraaid(boolean omgedraaid) {
+        this.omgedraaid = omgedraaid;
+    }
 }

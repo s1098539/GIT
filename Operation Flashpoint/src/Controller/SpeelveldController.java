@@ -48,6 +48,17 @@ public class SpeelveldController {
     Image brandweerOranje = new Image("Resources/GFX/Brandweeroranje.png",20,20,false,true);
     Image brandweerRood = new Image("Resources/GFX/Brandweerrood.png",20,20,false,true);
     Image brandweerZwart = new Image("Resources/GFX/Brandweerzwart.png",20,20,false,true);
+    Image oma = new Image("Resources/GFX/Oma.png",20,20,false,true);
+    Image vis = new Image("Resources/GFX/Vis.png",20,20,false,true);
+    Image egel = new Image("Resources/GFX/Egel.png",20,20,false,true);
+    Image hond = new Image("Resources/GFX/(zee)Hond.png",20,20,false,true);
+    Image snek = new Image("Resources/GFX/Snek.png",20,20,false,true);
+    Image latifah = new Image("Resources/GFX/Latifah.png",20,20,false,true);
+    Image roodhaar = new Image("Resources/GFX/Roodhaar.png",20,20,false,true);
+    Image groenhaar = new Image("Resources/GFX/Groenhaar.png",20,20,false,true);
+    Image obamanigue = new Image("Resources/GFX/Obamanigue.png",20,20,false,true);
+    Image hipstersnor = new Image("Resources/GFX/Hipstersnor.png",20,20,false,true);
+
 
 
 
@@ -77,27 +88,107 @@ public class SpeelveldController {
         }
 
         // Obstakel boven
-        switch (speelveld.getVakken()[x][y].getBoven()) {
-            case MUUR: imageViews[x][y][1].setImage(muurOnder);
-                break;
-            case MUUR1: imageViews[x][y][1].setImage(muur1kapotOnder);
-                break;
-            case MUUR2: imageViews[x][y][1].setImage(muur2kapotOnder);
-                break;
-            case DEURO: imageViews[x][y][1].setImage(openDeurOnder);
-                break;
-            case DEURD: imageViews[x][y][1].setImage(dichteDeurOnder);
-                break;
-            case LEEG: imageViews[x][y][1].setImage(empty);
-                break;
-        }
+        ImageSetterObstakelLoop(x,y,1,speelveld.getVakken()[x][y].getBoven());
 
         // Persoon
-        if(speelveld.getVakken()[x][y].isPersoon()) {
-
-            imageViews[q].setImage(persoon);
+        if(speelveld.getVakken()[x][y].getPersonen().isEmpty()) {
+            imageViews[x][y][2].setImage(empty);
         } else {
-            imageViews[q].setImage(empty);
+            if (!speelveld.getVakken()[x][y].getPersonen().get(0).isOmgedraaid()) {
+                imageViews[x][y][2].setImage(empty);
+            } else {
+                switch(speelveld.getVakken()[x][y].getPersonen().get(0)) {
+                    case OMA: imageViews[x][y][2].setImage(oma);
+                    break;
+                    case VIS: imageViews[x][y][2].setImage(vis);
+                    break;
+                    case EGEL: imageViews[x][y][2].setImage(egel);
+                    break;
+                    case HOND: imageViews[x][y][2].setImage(hond);
+                    break;
+                    case SNEK: imageViews[x][y][2].setImage(snek);
+                    break;
+                    case LATIFAH: imageViews[x][y][2].setImage(latifah);
+                    break;
+                    case ROODHAAR: imageViews[x][y][2].setImage(roodhaar);
+                    break;
+                    case GROENHAAR: imageViews[x][y][2].setImage(groenhaar);
+                    break;
+                    case OBAMANIGUA: imageViews[x][y][2].setImage(obamanigue);
+                    break;
+                    case HIPSTERSNOR: imageViews[x][y][2].setImage(hipstersnor);
+                    break;
+                    default: imageViews[x][y][2].setImage(empty);
+                }
+            }
+        }
+
+        // Obstakel links
+        ImageSetterObstakelLoop(x,y,3,speelveld.getVakken()[x][y].getLinks());
+
+        // Spelers
+        for(int i = 0; i < 6; i++) {
+            if (speelveld.getVakken()[x][y].getKleuren()[i]!=null) {
+                switch(speelveld.getVakken()[x][y].getKleuren()[i]) {
+                    case GEEL: imageViews[x][y][4].setImage(brandweerGeel);
+                        i+=5;
+                        break;
+                    case ROOD: imageViews[x][y][4].setImage(brandweerRood);
+                        i+=5;
+                        break;
+                    case BLAUW: imageViews[x][y][4].setImage(brandweerBlauw);
+                        i+=5;
+                        break;
+                    case GROEN: imageViews[x][y][4].setImage(brandweerGroen);
+                        i+=5;
+                        break;
+                    case ZWART: imageViews[x][y][4].setImage(brandweerZwart);
+                        i+=5;
+                        break;
+                    case ORANJE: imageViews[x][y][4].setImage(brandweerOranje);
+                        i+=5;
+                        break;
+                }
+            }
+        }
+
+        // Obstakel rechts
+        ImageSetterObstakelLoop(x,y,5,speelveld.getVakken()[x][y].getRechts());
+
+        // Vuur plaats
+        if(speelveld.getVakken()[x][y].isVuur()) {
+            imageViews[x][y][6].setImage(vlam);
+        } else if(speelveld.getVakken()[x][y].isRook()) {
+            imageViews[x][y][6].setImage(rook);
+        } else {
+            imageViews[x][y][6].setImage(empty);
+        }
+
+        // Obstakel onder
+        ImageSetterObstakelLoop(x,y,7,speelveld.getVakken()[x][y].getOnder());
+
+        // Stoffen
+        if(speelveld.getVakken()[x][y].isStoffen()) {
+            imageViews[x][y][8].setImage(gevaarlijkeStof);
+        } else {
+            imageViews[x][y][8].setImage(empty);
+        }
+
+    }
+    private void ImageSetterObstakelLoop(int x, int y, int z, Status status) {
+        switch (status) {
+            case MUUR: imageViews[x][y][z].setImage(muurOnder);
+                break;
+            case MUUR1: imageViews[x][y][z].setImage(muur1kapotOnder);
+                break;
+            case MUUR2: imageViews[x][y][z].setImage(muur2kapotOnder);
+                break;
+            case DEURO: imageViews[x][y][z].setImage(openDeurOnder);
+                break;
+            case DEURD: imageViews[x][y][z].setImage(dichteDeurOnder);
+                break;
+            case LEEG: imageViews[x][y][z].setImage(empty);
+                break;
         }
     }
 
@@ -129,7 +220,6 @@ public class SpeelveldController {
                 System.out.println("Unexpected Richting input: " + richting);
                 return null;
         }
-
     }
 
     // Lion, kijkt of een speler zich op een bepaald vak bevind en geeft al die speler kleuren terug in een arraylist
