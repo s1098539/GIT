@@ -2,29 +2,102 @@ package Controller;
 
 
 import Model.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
+
+import static Model.Status.*;
+
 
 public class SpeelveldController {
     Speelveld speelveld = new Speelveld();
     SpelController spelController = new SpelController();
-    FlowPane[]flowPanes = new FlowPane[80];
+    FlowPane[][]flowPanes = new FlowPane[10][8];
+    ImageView[][][]imageViews = new ImageView[10][8][9];
+    Image empty = new Image("Resources/GFX/Empty.png",20,20,false,true);
+    Image hotspot = new Image("Resources/GFX/Hotspot.png",20,20,false,true);
+    Image persoon = new Image("Resources/GFX/Vraagteken.png",20,20,false,true);
+    Image vlam = new Image("Resources/GFX/Vlam.png",20,20,false,true);
+    Image rook = new Image("Resources/GFX/Rook.png",20,20,false,true);
+    Image gevaarlijkeStof = new Image("Resources/GFX/GevaarlijkeStof.png",20,20,false,true);
+    Image dichteDeurLinks = new Image("Resources/GFX/DichteDeurLinks.png",20,20,false,true);
+    Image dichteDeurOnder = new Image("Resources/GFX/DichteDeurOnder.png",20,20,false,true);
+    Image dichteDeurBoven = new Image("Resources/GFX/DichteDeurBoven.png",20,20,false,true);
+    Image dichteDeurRechts = new Image("Resources/GFX/DichteDeurRechts.png",20,20,false,true);
+    Image openDeurLinks = new Image("Resources/GFX/OpenDeurLinks.png",20,20,false,true);
+    Image openDeurOnder = new Image("Resources/GFX/OpenDeurOnder.png",20,20,false,true);
+    Image openDeurBoven = new Image("Resources/GFX/OpenDeurBoven.png",20,20,false,true);
+    Image openDeurRechts = new Image("Resources/GFX/OpenDeurRechts.png",20,20,false,true);
+    Image muurBoven = new Image("Resources/GFX/MuurBoven.png",20,20,false,true);
+    Image muurLinks = new Image("Resources/GFX/MuurLinks.png",20,20,false,true);
+    Image muurOnder = new Image("Resources/GFX/MuurOnder.png",20,20,false,true);
+    Image muurRechts = new Image("Resources/GFX/MuurRechts.png",20,20,false,true);
+    Image muur1kapotBoven = new Image("Resources/GFX/Muur1kapotBoven.png",20,20,false,true);
+    Image muur1kapotLinks = new Image("Resources/GFX/Muur1kapotLinks.png",20,20,false,true);
+    Image muur1kapotOnder = new Image("Resources/GFX/Muur1kapotOnder.png",20,20,false,true);
+    Image muur1kapotRechts = new Image("Resources/GFX/Muur1kapotRechts.png",20,20,false,true);
+    Image muur2kapotBoven = new Image("Resources/GFX/Muur2kapotBoven.png",20,20,false,true);
+    Image muur2kapotLinks = new Image("Resources/GFX/Muur2kapotLinks.png",20,20,false,true);
+    Image muur2kapotOnder = new Image("Resources/GFX/Muur2kapotOnder.png",20,20,false,true);
+    Image muur2kapotRechts = new Image("Resources/GFX/Muur2kapotRechts.png",20,20,false,true);
+    Image brandweerBlauw = new Image("Resources/GFX/Brandweerblauw.png",20,20,false,true);
+    Image brandweerGeel = new Image("Resources/GFX/Brandweergeel.png",20,20,false,true);
+    Image brandweerGroen = new Image("Resources/GFX/Brandweergroen.png",20,20,false,true);
+    Image brandweerOranje = new Image("Resources/GFX/Brandweeroranje.png",20,20,false,true);
+    Image brandweerRood = new Image("Resources/GFX/Brandweerrood.png",20,20,false,true);
+    Image brandweerZwart = new Image("Resources/GFX/Brandweerzwart.png",20,20,false,true);
+
 
 
     public SpeelveldController() {
 
     }
 
-    //Lion, zet in elke gridpane spot(op het speelveld) een flowpane
-    private void addFlowPanesToGridPane() {
-        int i = 0;
+    //Lion, zet in elke gridpane spot(op het speelveld) een flowpane, en in elke flowpane 9 image views
+    private void flowpanesAndImageViewsFactory() {
         for(int y = 0; y<8; y++) {
             for(int x = 0; x<10; x++) {
-                spelController.getGridpane().add(flowPanes[i],x,y);
-                i++;
+                spelController.getGridpane().add(flowPanes[x][y],x,y);
+                for (int z = 0; z<9; z++) {
+                    flowPanes[x][y].getChildren().add(z,imageViews[x][y][z]);
+                }
             }
+        }
+    }
+
+    // Lion, gaat de eigenschappen af van een bepaald vak en laad het goede plaatje in de image View
+    private void ImageSetter(int x, int y) {
+        // Hotspot
+        if(speelveld.getVakken()[x][y].isHotspot()) {
+            imageViews[x][y][0].setImage(hotspot);
+        } else {
+            imageViews[x][y][0].setImage(empty);
+        }
+
+        // Obstakel boven
+        switch (speelveld.getVakken()[x][y].getBoven()) {
+            case MUUR: imageViews[x][y][1].setImage(muurOnder);
+                break;
+            case MUUR1: imageViews[x][y][1].setImage(muur1kapotOnder);
+                break;
+            case MUUR2: imageViews[x][y][1].setImage(muur2kapotOnder);
+                break;
+            case DEURO: imageViews[x][y][1].setImage(openDeurOnder);
+                break;
+            case DEURD: imageViews[x][y][1].setImage(dichteDeurOnder);
+                break;
+            case LEEG: imageViews[x][y][1].setImage(empty);
+                break;
+        }
+
+        // Persoon
+        if(speelveld.getVakken()[x][y].isPersoon()) {
+
+            imageViews[q].setImage(persoon);
+        } else {
+            imageViews[q].setImage(empty);
         }
     }
 
@@ -91,94 +164,94 @@ public class SpeelveldController {
     public void setMap(){
         //buitenmuren horizontaal
         for(int x = 1; x <9; x++) {
-            speelveld.getVakken()[x][0].setOnder(Status.MUUR);
-            speelveld.getVakken()[x][1].setBoven(Status.MUUR);
-            speelveld.getVakken()[x][6].setOnder(Status.MUUR);
-            speelveld.getVakken()[x][7].setBoven(Status.MUUR);
+            speelveld.getVakken()[x][0].setOnder(MUUR);
+            speelveld.getVakken()[x][1].setBoven(MUUR);
+            speelveld.getVakken()[x][6].setOnder(MUUR);
+            speelveld.getVakken()[x][7].setBoven(MUUR);
 
         }
         //buitenmuren verticaal
         for (int y = 1; y < 7; y++) {
-            speelveld.getVakken()[0][y].setRechts(Status.MUUR);
-            speelveld.getVakken()[1][y].setLinks(Status.MUUR);
-            speelveld.getVakken()[8][y].setRechts(Status.MUUR);
-            speelveld.getVakken()[9][y].setLinks(Status.MUUR);
+            speelveld.getVakken()[0][y].setRechts(MUUR);
+            speelveld.getVakken()[1][y].setLinks(MUUR);
+            speelveld.getVakken()[8][y].setRechts(MUUR);
+            speelveld.getVakken()[9][y].setLinks(MUUR);
 
         }
         //scheidingswand woonkamer
-        speelveld.getVakken()[1][2].setOnder(Status.MUUR);
-        speelveld.getVakken()[1][3].setBoven(Status.MUUR);
-        speelveld.getVakken()[2][2].setOnder(Status.MUUR);
-        speelveld.getVakken()[2][3].setBoven(Status.MUUR);
+        speelveld.getVakken()[1][2].setOnder(MUUR);
+        speelveld.getVakken()[1][3].setBoven(MUUR);
+        speelveld.getVakken()[2][2].setOnder(MUUR);
+        speelveld.getVakken()[2][3].setBoven(MUUR);
 
         //muur tussen woonkamer en slaapkamer + keuken
         for (int j = 1; j<7;j++){
-            speelveld.getVakken()[j][4].setOnder(Status.MUUR);
-            speelveld.getVakken()[j][5].setBoven(Status.MUUR);
-            speelveld.getVakken()[j][4].setOnder(Status.MUUR);
-            speelveld.getVakken()[j][5].setBoven(Status.MUUR);
+            speelveld.getVakken()[j][4].setOnder(MUUR);
+            speelveld.getVakken()[j][5].setBoven(MUUR);
+            speelveld.getVakken()[j][4].setOnder(MUUR);
+            speelveld.getVakken()[j][5].setBoven(MUUR);
         }
         //muur tussen woonkamer en badkamer + bergruimte
         for (int k = 1; k<4;k++){
-            speelveld.getVakken()[3][k].setRechts(Status.MUUR);
-            speelveld.getVakken()[4][k].setLinks(Status.MUUR);
-            speelveld.getVakken()[3][k].setRechts(Status.MUUR);
-            speelveld.getVakken()[4][k].setLinks(Status.MUUR);
+            speelveld.getVakken()[3][k].setRechts(MUUR);
+            speelveld.getVakken()[4][k].setLinks(MUUR);
+            speelveld.getVakken()[3][k].setRechts(MUUR);
+            speelveld.getVakken()[4][k].setLinks(MUUR);
         }
         //muur tussen bergruimte en badkamer
-        speelveld.getVakken()[4][1].setOnder(Status.MUUR);
-        speelveld.getVakken()[4][2].setBoven(Status.MUUR);
-        speelveld.getVakken()[5][1].setOnder(Status.MUUR);
-        speelveld.getVakken()[5][2].setBoven(Status.MUUR);
+        speelveld.getVakken()[4][1].setOnder(MUUR);
+        speelveld.getVakken()[4][2].setBoven(MUUR);
+        speelveld.getVakken()[5][1].setOnder(MUUR);
+        speelveld.getVakken()[5][2].setBoven(MUUR);
 
         //overige horizontale muren
-        speelveld.getVakken()[4][3].setOnder(Status.MUUR);
-        speelveld.getVakken()[4][4].setBoven(Status.MUUR);
-        speelveld.getVakken()[7][3].setOnder(Status.MUUR);
-        speelveld.getVakken()[7][4].setBoven(Status.MUUR);
-        speelveld.getVakken()[8][3].setOnder(Status.MUUR);
-        speelveld.getVakken()[8][4].setBoven(Status.MUUR);
+        speelveld.getVakken()[4][3].setOnder(MUUR);
+        speelveld.getVakken()[4][4].setBoven(MUUR);
+        speelveld.getVakken()[7][3].setOnder(MUUR);
+        speelveld.getVakken()[7][4].setBoven(MUUR);
+        speelveld.getVakken()[8][3].setOnder(MUUR);
+        speelveld.getVakken()[8][4].setBoven(MUUR);
 
         //verticale muur tussen slaapkamer en keuken
-        speelveld.getVakken()[3][5].setRechts(Status.MUUR);
-        speelveld.getVakken()[4][5].setLinks(Status.MUUR);
-        speelveld.getVakken()[3][6].setRechts(Status.MUUR);
-        speelveld.getVakken()[4][6].setLinks(Status.MUUR);
+        speelveld.getVakken()[3][5].setRechts(MUUR);
+        speelveld.getVakken()[4][5].setLinks(MUUR);
+        speelveld.getVakken()[3][6].setRechts(MUUR);
+        speelveld.getVakken()[4][6].setLinks(MUUR);
 
         //verticale muur tussen slaapkamers
-        speelveld.getVakken()[6][5].setRechts(Status.MUUR);
-        speelveld.getVakken()[7][5].setLinks(Status.MUUR);
-        speelveld.getVakken()[6][6].setRechts(Status.MUUR);
-        speelveld.getVakken()[7][6].setLinks(Status.MUUR);
+        speelveld.getVakken()[6][5].setRechts(MUUR);
+        speelveld.getVakken()[7][5].setLinks(MUUR);
+        speelveld.getVakken()[6][6].setRechts(MUUR);
+        speelveld.getVakken()[7][6].setLinks(MUUR);
 
         //overige muur
-        speelveld.getVakken()[5][2].setRechts(Status.MUUR);
-        speelveld.getVakken()[6][2].setLinks(Status.MUUR);
+        speelveld.getVakken()[5][2].setRechts(MUUR);
+        speelveld.getVakken()[6][2].setLinks(MUUR);
 
         //verticale deuren
-        speelveld.getVakken()[5][1].setRechts(Status.DEURD);
-        speelveld.getVakken()[6][1].setLinks(Status.DEURD);
-        speelveld.getVakken()[5][3].setRechts(Status.DEURD);
-        speelveld.getVakken()[6][3].setLinks(Status.DEURD);
-        speelveld.getVakken()[6][4].setRechts(Status.DEURD);
-        speelveld.getVakken()[7][4].setLinks(Status.DEURD);
+        speelveld.getVakken()[5][1].setRechts(DEURD);
+        speelveld.getVakken()[6][1].setLinks(DEURD);
+        speelveld.getVakken()[5][3].setRechts(DEURD);
+        speelveld.getVakken()[6][3].setLinks(DEURD);
+        speelveld.getVakken()[6][4].setRechts(DEURD);
+        speelveld.getVakken()[7][4].setLinks(DEURD);
 
         //horizontale deuren
-        speelveld.getVakken()[5][4].setBoven(Status.DEURD);
-        speelveld.getVakken()[5][3].setOnder(Status.DEURD);
-        speelveld.getVakken()[6][4].setBoven(Status.DEURD);
-        speelveld.getVakken()[6][3].setOnder(Status.DEURD);
-        speelveld.getVakken()[6][5].setBoven(Status.DEURD);
-        speelveld.getVakken()[6][4].setOnder(Status.DEURD);
-        speelveld.getVakken()[3][5].setBoven(Status.DEURD);
-        speelveld.getVakken()[3][4].setOnder(Status.DEURD);
+        speelveld.getVakken()[5][4].setBoven(DEURD);
+        speelveld.getVakken()[5][3].setOnder(DEURD);
+        speelveld.getVakken()[6][4].setBoven(DEURD);
+        speelveld.getVakken()[6][3].setOnder(DEURD);
+        speelveld.getVakken()[6][5].setBoven(DEURD);
+        speelveld.getVakken()[6][4].setOnder(DEURD);
+        speelveld.getVakken()[3][5].setBoven(DEURD);
+        speelveld.getVakken()[3][4].setOnder(DEURD);
 
         //buitenmuren waar deuren horen leeg maken
-        speelveld.getVakken()[0][3].setRechts(Status.LEEG);
-        speelveld.getVakken()[1][3].setLinks(Status.LEEG);
+        speelveld.getVakken()[0][3].setRechts(LEEG);
+        speelveld.getVakken()[1][3].setLinks(LEEG);
 
-        speelveld.getVakken()[3][7].setBoven(Status.LEEG);
-        speelveld.getVakken()[3][6].setOnder(Status.LEEG);
+        speelveld.getVakken()[3][7].setBoven(LEEG);
+        speelveld.getVakken()[3][6].setOnder(LEEG);
 
 
 
@@ -189,14 +262,14 @@ public class SpeelveldController {
         Vak vak = speelveld.getVakken()[x][y];
         if (y>0) {
             switch(vak.getBoven()) {
-                case MUUR:  vak.setBoven(Status.MUUR1);
-                            speelveld.getVakken()[x][y-1].setOnder(Status.MUUR1);
+                case MUUR:  vak.setBoven(MUUR1);
+                            speelveld.getVakken()[x][y-1].setOnder(MUUR1);
                     break;
-                case MUUR1: vak.setBoven(Status.MUUR2);
-                            speelveld.getVakken()[x][y-1].setOnder(Status.MUUR2);
+                case MUUR1: vak.setBoven(MUUR2);
+                            speelveld.getVakken()[x][y-1].setOnder(MUUR2);
                     break;
-                case DEURD: vak.setBoven(Status.LEEG);
-                            speelveld.getVakken()[x][y-1].setOnder(Status.LEEG);
+                case DEURD: vak.setBoven(LEEG);
+                            speelveld.getVakken()[x][y-1].setOnder(LEEG);
                     break;
                 default:
                     System.out.println("Unexpected obstakel");
@@ -204,14 +277,14 @@ public class SpeelveldController {
         }
         if (x<9) {
             switch(vak.getRechts()) {
-                case MUUR:  vak.setRechts(Status.MUUR1);
-                            speelveld.getVakken()[x+1][y].setLinks(Status.MUUR1);
+                case MUUR:  vak.setRechts(MUUR1);
+                            speelveld.getVakken()[x+1][y].setLinks(MUUR1);
                     break;
-                case MUUR1: vak.setRechts(Status.MUUR2);
-                            speelveld.getVakken()[x+1][y].setLinks(Status.MUUR2);
+                case MUUR1: vak.setRechts(MUUR2);
+                            speelveld.getVakken()[x+1][y].setLinks(MUUR2);
                     break;
-                case DEURD: vak.setRechts(Status.LEEG);
-                            speelveld.getVakken()[x+1][y].setLinks(Status.LEEG);
+                case DEURD: vak.setRechts(LEEG);
+                            speelveld.getVakken()[x+1][y].setLinks(LEEG);
                     break;
                 default:
                     System.out.println("Unexpected obstakel");
@@ -219,14 +292,14 @@ public class SpeelveldController {
         }
         if (y<7) {
             switch(vak.getOnder()) {
-                case MUUR:  vak.setOnder(Status.MUUR1);
-                            speelveld.getVakken()[x][y+1].setBoven(Status.MUUR1);
+                case MUUR:  vak.setOnder(MUUR1);
+                            speelveld.getVakken()[x][y+1].setBoven(MUUR1);
                     break;
-                case MUUR1: vak.setOnder(Status.MUUR2);
-                            speelveld.getVakken()[x][y+1].setBoven(Status.MUUR2);
+                case MUUR1: vak.setOnder(MUUR2);
+                            speelveld.getVakken()[x][y+1].setBoven(MUUR2);
                     break;
-                case DEURD: vak.setOnder(Status.LEEG);
-                            speelveld.getVakken()[x][y+1].setBoven(Status.LEEG);
+                case DEURD: vak.setOnder(LEEG);
+                            speelveld.getVakken()[x][y+1].setBoven(LEEG);
                     break;
                 default:
                     System.out.println("Unexpected obstakel");
@@ -234,14 +307,14 @@ public class SpeelveldController {
         }
         if (x>0) {
             switch(vak.getLinks()) {
-                case MUUR:  vak.setLinks(Status.MUUR1);
-                            speelveld.getVakken()[x-1][y].setRechts(Status.MUUR1);
+                case MUUR:  vak.setLinks(MUUR1);
+                            speelveld.getVakken()[x-1][y].setRechts(MUUR1);
                     break;
-                case MUUR1: vak.setLinks(Status.MUUR2);
-                            speelveld.getVakken()[x-1][y].setRechts(Status.MUUR2);
+                case MUUR1: vak.setLinks(MUUR2);
+                            speelveld.getVakken()[x-1][y].setRechts(MUUR2);
                     break;
-                case DEURD: vak.setLinks(Status.LEEG);
-                            speelveld.getVakken()[x-1][y].setRechts(Status.LEEG);
+                case DEURD: vak.setLinks(LEEG);
+                            speelveld.getVakken()[x-1][y].setRechts(LEEG);
                     break;
                 default:
                     System.out.println("Unexpected obstakel");
