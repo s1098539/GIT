@@ -89,6 +89,20 @@ public class SpelController {
 
 
 
+    SpeelveldController speelveldController;
+    SpelerController spelerController;
+    DobbelsteenController dobbelsteenController;
+
+    public void setControllers(SpeelveldController speelveldController, SpelerController spelerController, DobbelsteenController dobbelsteenController) {
+        this.speelveldController = speelveldController;
+        this.spelerController = spelerController;
+        this.dobbelsteenController = dobbelsteenController;
+    }
+
+    public SpelController(SpeelveldController speelveldController) {
+        this.speelveldController = speelveldController;
+    }
+
     public SpelController() {
     }
 

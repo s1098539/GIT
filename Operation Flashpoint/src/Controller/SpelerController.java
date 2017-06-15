@@ -13,6 +13,15 @@ import javafx.scene.control.Button;
 public class SpelerController {
     Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
 
+    SpeelveldController speelveldController;
+    SpelController spelController;
+    DobbelsteenController dobbelsteenController;
+
+    public void setControllers(SpeelveldController speelveldController, SpelController spelController, DobbelsteenController dobbelsteenController) {
+        this.speelveldController = speelveldController;
+        this.spelController = spelController;
+        this.dobbelsteenController = dobbelsteenController;
+    }
 
     @FXML private Button hakken;
 

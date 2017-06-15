@@ -12,8 +12,6 @@ import static Model.Status.*;
 
 
 public class SpeelveldController {
-    Speelveld speelveld = new Speelveld();
-    SpelController spelController = new SpelController();
     FlowPane[][]flowPanes = new FlowPane[10][8];
     ImageView[][][]imageViews = new ImageView[10][8][9];
     Image empty = new Image("Resources/GFX/Empty.png",20,20,false,true);
@@ -61,9 +59,19 @@ public class SpeelveldController {
 
 
 
+    Speelveld speelveld = new Speelveld();
+
+    SpelController spelController;
+    SpelerController spelerController;
+    DobbelsteenController dobbelsteenController;
+
+    public void setControllers(SpelController spelController, SpelerController spelerController, DobbelsteenController dobbelsteenController) {
+        this.spelController = spelController;
+        this.spelerController = spelerController;
+        this.dobbelsteenController = dobbelsteenController;
+    }
 
     public SpeelveldController() {
-
     }
 
     //Lion, zet in elke gridpane spot(op het speelveld) een flowpane, en in elke flowpane 9 image views
@@ -203,7 +211,7 @@ public class SpeelveldController {
             case PERSOON: if(speelveld.getVakken()[x][y].getPersonen().isEmpty()) {return false;}
                             return true;
             default:
-                System.out.println("Unexpected Fiche input: " + fiche);
+                System.out.println("Unexpected Fiche input: " + fiche + " SpeelveldController.checkVakEigenschappen");
                 return false;
         }
 
@@ -217,7 +225,7 @@ public class SpeelveldController {
             case ONDER: return speelveld.getVakken()[x][y].getOnder();
             case RECHTS: return speelveld.getVakken()[x][y].getRechts();
             default:
-                System.out.println("Unexpected Richting input: " + richting);
+                System.out.println("Unexpected Richting input: " + richting + " SpeelveldController.checkVakObstakel");
                 return null;
         }
     }
@@ -245,7 +253,7 @@ public class SpeelveldController {
             case RECHTS:
                 return speelveld.getVakken()[x][y].getRechts().isBegaanbaar();
             default:
-                System.out.println("Unexpected Richting input: " + richting);
+                System.out.println("Unexpected Richting input: " + richting + " SpeelveldController.checkDoorgaanbaar");
                 return false;
         }
     }
@@ -350,65 +358,81 @@ public class SpeelveldController {
     // Lion, handeld obstakels voor explosies en hakken
     private void doeBeschadiging(int x, int y, Richting richting) {
         Vak vak = speelveld.getVakken()[x][y];
-        if (y>0) {
-            switch(vak.getBoven()) {
-                case MUUR:  vak.setBoven(MUUR1);
+        switch(richting) {
+            case BOVEN:
+                if (y>0) {
+                    switch(vak.getBoven()) {
+                        case MUUR:  vak.setBoven(MUUR1);
                             speelveld.getVakken()[x][y-1].setOnder(MUUR1);
-                    break;
-                case MUUR1: vak.setBoven(MUUR2);
+                            break;
+                        case MUUR1: vak.setBoven(MUUR2);
                             speelveld.getVakken()[x][y-1].setOnder(MUUR2);
-                    break;
-                case DEURD: vak.setBoven(LEEG);
+                            break;
+                        case DEURD: vak.setBoven(LEEG);
                             speelveld.getVakken()[x][y-1].setOnder(LEEG);
-                    break;
-                default:
-                    System.out.println("Unexpected obstakel");
-            }
-        }
-        if (x<9) {
-            switch(vak.getRechts()) {
-                case MUUR:  vak.setRechts(MUUR1);
+                            break;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Boven)");
+                    }
+                }
+                break;
+            case RECHTS:
+                if (x<9) {
+                    switch(vak.getRechts()) {
+                        case MUUR:  vak.setRechts(MUUR1);
                             speelveld.getVakken()[x+1][y].setLinks(MUUR1);
-                    break;
-                case MUUR1: vak.setRechts(MUUR2);
+                            break;
+                        case MUUR1: vak.setRechts(MUUR2);
                             speelveld.getVakken()[x+1][y].setLinks(MUUR2);
-                    break;
-                case DEURD: vak.setRechts(LEEG);
+                            break;
+                        case DEURD: vak.setRechts(LEEG);
                             speelveld.getVakken()[x+1][y].setLinks(LEEG);
-                    break;
-                default:
-                    System.out.println("Unexpected obstakel");
-            }
-        }
-        if (y<7) {
-            switch(vak.getOnder()) {
-                case MUUR:  vak.setOnder(MUUR1);
+                            break;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Rechts)");
+                    }
+                }
+                break;
+            case LINKS:
+                if (y<7) {
+                    switch(vak.getOnder()) {
+                        case MUUR:  vak.setOnder(MUUR1);
                             speelveld.getVakken()[x][y+1].setBoven(MUUR1);
-                    break;
-                case MUUR1: vak.setOnder(MUUR2);
+                            break;
+                        case MUUR1: vak.setOnder(MUUR2);
                             speelveld.getVakken()[x][y+1].setBoven(MUUR2);
-                    break;
-                case DEURD: vak.setOnder(LEEG);
+                            break;
+                        case DEURD: vak.setOnder(LEEG);
                             speelveld.getVakken()[x][y+1].setBoven(LEEG);
-                    break;
-                default:
-                    System.out.println("Unexpected obstakel");
-            }
-        }
-        if (x>0) {
-            switch(vak.getLinks()) {
-                case MUUR:  vak.setLinks(MUUR1);
+                            break;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Links)");
+                    }
+                }
+                break;
+            case ONDER:
+                if (x>0) {
+                    switch(vak.getLinks()) {
+                        case MUUR:  vak.setLinks(MUUR1);
                             speelveld.getVakken()[x-1][y].setRechts(MUUR1);
-                    break;
-                case MUUR1: vak.setLinks(MUUR2);
+                            break;
+                        case MUUR1: vak.setLinks(MUUR2);
                             speelveld.getVakken()[x-1][y].setRechts(MUUR2);
-                    break;
-                case DEURD: vak.setLinks(LEEG);
+                            break;
+                        case DEURD: vak.setLinks(LEEG);
                             speelveld.getVakken()[x-1][y].setRechts(LEEG);
-                    break;
-                default:
-                    System.out.println("Unexpected obstakel");
-            }
+                            break;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Onder)");
+                    }
+                }
+                break;
+            default:
+                System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeBeschadiging.default");
         }
+
+
+
+
     }
 }
