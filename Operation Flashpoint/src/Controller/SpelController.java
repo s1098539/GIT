@@ -1,5 +1,9 @@
 package Controller;
 
+/**
+ * Created by Joep Oonk on 14-6-2017.
+ */
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -12,6 +16,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 public class SpelController {
+
     @FXML
     private GridPane gridpane;
     @FXML
@@ -74,30 +79,12 @@ public class SpelController {
     private Button veranderKlasse;
     @FXML
     private Button quit;
-
     public GridPane getGridpane() {
         return gridpane;
     }
 
     public void setGridpane(GridPane gridpane) {
         this.gridpane = gridpane;
-    }
-
-
-
-    SpeelveldController veldC;
-    SpelerController spelerC;
-    DobbelsteenController dobbelC;
-
-    // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC) {
-        this.veldC = veldC;
-        this.spelerC = spelerC;
-        this.dobbelC = dobbelC;
-    }
-
-    public SpelController(SpeelveldController veldC) {
-        this.veldC = veldC;
     }
 
     public SpelController() {
@@ -108,4 +95,50 @@ public class SpelController {
             System.out.println("QUIT");
         });
     }
+
+    //beurtAfhandelers
+    public void nieuwRook(){
+
+    }
+
+    //Kijkt of er stoffen zijn die van het spel af kunnen worden gehaald.
+    public void checkStoffen() {
+
+    }
+
+    //Kijkt of er ergens de condities voor een explosie zijn behaald, en hanteert dan deze explosie.
+    public void checkExplosies(){
+
+    }
+
+    //Kijkt of er ergens de condities voor een vonkoverslag zijn  behaald, en hanteert dan deze explosie.
+    public void checkVonkoverslagen(){
+
+    }
+
+    //Kijkt of er 3 personen op het bord aanwezig zijn, al is dit niet het geval, dan worden deze bijgevult
+    public void checkPersonen(){
+
+    }
+
+    public void addStoffen(){
+
+    }
+
+    public void addPersoon(){
+
+    }
+
+    public void addVuur(){
+
+    }
+
+    public void checkWin(){
+
+    }
+
+    public void checkVerlies(){
+
+    }
+
 }
