@@ -10,6 +10,7 @@ import java.io.IOException;
 public class SpelView {
 Scene scene;
 
+    // Lion, Zet SpelView.fxml in een scene en stelt spelC in als controller
     public SpelView(SpelController spelC) {
         Parent root = null;
         FXMLLoader loader = new FXMLLoader(

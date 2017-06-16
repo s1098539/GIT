@@ -157,6 +157,7 @@ public class SpeelveldController {
         }
 
         // Spelers
+        veld.getImageViews()[x][y][4].setImage(veld.getEmpty());
         for(int i = 0; i < 6; i++) {
             if (veld.getVakken()[x][y].getKleuren()[i]!=null) {
                 switch(veld.getVakken()[x][y].getKleuren()[i]) {
@@ -293,6 +294,9 @@ public class SpeelveldController {
     //Lion/Joep, Zet alle muren en deuren op de goeie plek om het spel te beginnen
     public void setMap(){
         //buitenmuren horizontaal
+        veld.getVakken()[9][7].setHotspot(true);
+        veld.getVakken()[9][7].setStoffen(true);
+        veld.getVakken()[9][7].setVuur(true);
         for(int x = 1; x <9; x++) {
             veld.getVakken()[x][0].setOnder(MUUR);
             veld.getVakken()[x][1].setBoven(MUUR);

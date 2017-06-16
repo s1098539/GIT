@@ -243,6 +243,10 @@ public class Speelveld {
 
     }
 
+    public void print() {
+        System.out.println("SPEELVELD");
+    }
+
     public Vak[][] getVakken() {
         return vakken;
     }
