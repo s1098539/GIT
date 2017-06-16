@@ -7,6 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by Joep Oonk on 14-6-2017.
  */
+//dit zal ook wel nodig zijn
 public class Lobby {
     private String ip;
     private Kleur[] kleur;

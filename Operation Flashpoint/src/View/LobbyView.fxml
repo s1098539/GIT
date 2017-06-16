@@ -7,7 +7,7 @@
 
 <BorderPane prefHeight="266.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LobbyController">
    <center>
-      <VBox alignment="CENTER" prefHeight="221.0" prefWidth="389.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="221.0" id="dit slaat nergens op" prefWidth="389.0" BorderPane.alignment="CENTER">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vul hier de IP van de host in">
                <font>

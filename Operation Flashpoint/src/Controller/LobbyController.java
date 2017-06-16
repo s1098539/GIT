@@ -18,6 +18,7 @@ import java.util.ResourceBundle;
 /**
  * Created by Joep Oonk on 14-6-2017.
  */
+//beetje erbij
 public class LobbyController extends Application {
     Lobby model = new Lobby();
     @FXML
