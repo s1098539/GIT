@@ -48,8 +48,8 @@ public class LobbyController extends Application {
         stage.setTitle("Lobby");
         stage.show();
     }
-    public static void main(String[] args) {
-        launch(args);
+    public void Launch(){
+        LobbyController.launch(LobbyController.class);
     }
 
     @FXML
@@ -86,8 +86,12 @@ public class LobbyController extends Application {
 
     }
     @FXML
-    public void setNaam(){
-        System.out.println("eindelijk");
+    public void setNaam() throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/View/SpelView.fxml"));
+        stage = (Stage) btnNaam.getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
