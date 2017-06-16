@@ -10,14 +10,20 @@ import java.util.ArrayList;
 public class Lobby {
     private String ip;
     private Kleur[] kleur;
+    int welkespeler=0;
+    Kleur SpelerKleur;
 
 
     public String getIp() {
         return ip;
     }
-
     public void setIp(String ip) {
         this.ip = ip;
+    }
+    public Kleur getKleur(){
+        SpelerKleur = kleur[welkespeler];
+        welkespeler++;
+        return SpelerKleur;
     }
 
     public Lobby (){
