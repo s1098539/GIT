@@ -11,9 +11,9 @@ Scene scene;
 
     public SpelView() {
         Parent root = null;
+
         try {
             root = FXMLLoader.load(getClass().getResource("SpelView.fxml"));
-
         } catch (IOException e) {
             e.printStackTrace();
         }

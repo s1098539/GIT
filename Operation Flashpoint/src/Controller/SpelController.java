@@ -1,6 +1,9 @@
 package Controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -11,7 +14,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
-public class SpelController {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class SpelController implements Initializable {
+
+    @FXML
+    private StackPane stackPane;
     @FXML
     private GridPane gridpane;
     @FXML
@@ -55,8 +65,6 @@ public class SpelController {
     @FXML
     private Button kleinerChat;
     @FXML
-    private StackPane stackpane;
-    @FXML
     TextInputDialog dialog = new TextInputDialog("");
     @FXML
     TextInputDialog dialog2 = new TextInputDialog("");
@@ -75,16 +83,6 @@ public class SpelController {
     @FXML
     private Button quit;
 
-    public GridPane getGridpane() {
-        return gridpane;
-    }
-
-    public void setGridpane(GridPane gridpane) {
-        this.gridpane = gridpane;
-    }
-
-
-
     SpeelveldController veldC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
@@ -96,16 +94,29 @@ public class SpelController {
         this.dobbelC = dobbelC;
     }
 
-    public SpelController(SpeelveldController veldC) {
-        this.veldC = veldC;
+    public SpelController() throws IOException {
+
     }
 
-    public SpelController() {
+    public void run() {
+        System.out.print("run: ");
+        System.out.println(getStackPane());
     }
 
     public void initialize() throws Exception {
-        quit.setOnAction(event ->{
-            System.out.println("QUIT");
-        });
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        System.out.print("initialize: ");
+        System.out.println(getStackPane());
+    }
+
+    public StackPane getStackPane() {
+        return stackPane;
+    }
+
+    public void setStackPane(StackPane stackPane) {
+        this.stackPane = stackPane;
     }
 }

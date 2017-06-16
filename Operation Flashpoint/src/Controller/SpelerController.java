@@ -12,6 +12,9 @@ import javafx.scene.control.Button;
 public class SpelerController {
     Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
 
+    public SpelerController() {
+    }
+
     SpeelveldController veldC;
     SpelController spelC;
     DobbelsteenController dobbelC;

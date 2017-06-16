@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -18,7 +25,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SpelController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SpelController">
     <top>
         <HBox prefHeight="50.0" prefWidth="700.0" BorderPane.alignment="CENTER">
             <children>
@@ -253,7 +260,7 @@
                     </VBox.margin>
                 </HBox>
                 <HBox fx:id="chatSize" prefHeight="100.0" prefWidth="200.0" />
-                <StackPane fx:id="stackpane" alignment="CENTER_LEFT" maxHeight="400.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="320.0">
+                <StackPane alignment="CENTER_LEFT" maxHeight="400.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="320.0">
                     <VBox.margin>
                         <Insets bottom="20.0" />
                     </VBox.margin>
@@ -412,25 +419,25 @@
                 </Button>
                 <BorderPane cacheShape="false" prefHeight="200.0" prefWidth="200.0">
                     <top>
-                        <Button fx:id="btnUP" mnemonicParsing="false" prefHeight="64.0" prefWidth="50.0" text="🢁" BorderPane.alignment="CENTER">
+                        <Button fx:id="btnUP" mnemonicParsing="false" prefHeight="64.0" prefWidth="50.0" text="ð¢" BorderPane.alignment="CENTER">
                             <font>
                                 <Font size="22.0" />
                             </font></Button>
                     </top>
                     <left>
-                        <Button fx:id="btnLEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="64.0" text="🢀" BorderPane.alignment="CENTER">
+                        <Button fx:id="btnLEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="64.0" text="ð¢ð¢" BorderPane.alignment="CENTER">
                             <font>
                                 <Font size="22.0" />
                             </font></Button>
                     </left>
                     <right>
-                        <Button fx:id="btnRIGHT" mnemonicParsing="false" prefHeight="50.0" prefWidth="64.0" text="🢂 " BorderPane.alignment="CENTER">
+                        <Button fx:id="btnRIGHT" mnemonicParsing="false" prefHeight="50.0" prefWidth="64.0" text="ð¢ð¢ð¢ " BorderPane.alignment="CENTER">
                             <font>
                                 <Font size="22.0" />
                             </font></Button>
                     </right>
                     <bottom>
-                        <Button fx:id="btnDOWN" mnemonicParsing="false" prefHeight="64.0" prefWidth="55.0" text="🢃" BorderPane.alignment="CENTER">
+                        <Button fx:id="btnDOWN" mnemonicParsing="false" prefHeight="64.0" prefWidth="55.0" text="ð¢ð¢ð¢ð¢" BorderPane.alignment="CENTER">
                             <font>
                                 <Font name="System Bold Italic" size="24.0" />
                             </font></Button>
@@ -459,7 +466,7 @@
         </VBox>
     </right>
     <center>
-        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="602.0" BorderPane.alignment="CENTER">
+        <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="602.0" BorderPane.alignment="CENTER">
             <BorderPane.margin>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </BorderPane.margin>
@@ -526,7 +533,7 @@
                                         </ColorAdjust>
                                     </effect>
                                 </Button>
-                                <Button fx:id="groterChat" mnemonicParsing="false" text="❐">
+                                <Button fx:id="groterChat" mnemonicParsing="false" text="â">
                                     <HBox.margin>
                                         <Insets />
                                     </HBox.margin>

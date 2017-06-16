@@ -2,6 +2,9 @@ package Controller;
 
 
 import Model.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
 
@@ -10,7 +13,7 @@ import static Model.Status.*;
 public class SpeelveldController {
 
 
-    Speelveld veld = new Speelveld();
+    Speelveld veld;
 
     SpelController spelC;
     SpelerController spelerC;
@@ -24,13 +27,53 @@ public class SpeelveldController {
     }
 
     public SpeelveldController() {
+
+    }
+
+    public SpeelveldController(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC) {
+        this.spelC = spelC;
+        this.spelerC = spelerC;
+        this.dobbelC = dobbelC;
+    }
+
+    // Lion, dit is het eerste wat deze controller doet, dit stond eerst in de constructor maar dit gaf problemen
+    //          aangezien de controller bij het aanmaken nog niet was verbonden met de andere controllers
+    public void run() {
+        FactoryVakken fv = new FactoryVakken();
+        fv.createVakken();
+        veld = new Speelveld();
+        veld.setVakken(fv.getVakken());
+        veld.setGridPane(new GridPane());
+        veld.getGridPane().setPrefWidth(700);
+        veld.getGridPane().setPrefHeight(640);
+        flowpanesAndImageViewsFactory();
+        flowpanesAndImageViewsPlaatser();
+        setMap();
+        for(int y = 0; y<8; y++) {
+            for (int x = 0; x < 10; x++) {
+                ImageSetter(x,y);
+            }
+        }
+    }
+
+
+    // Lion, maakt alle flowpanes en imageviews aan
+    private void flowpanesAndImageViewsFactory() {
+        for(int y = 0; y<8; y++) {
+            for (int x = 0; x < 10; x++) {
+                veld.getFlowPanes()[x][y]=new FlowPane();
+                for(int z = 0; z < 9 ; z++) {
+                    veld.getImageViews()[x][y][z] = new ImageView();
+                }
+            }
+        }
     }
 
     //Lion, zet in elke gridpane spot(op het veld) een flowpane, en in elke flowpane 9 image views
-    private void flowpanesAndImageViewsFactory() {
+    private void flowpanesAndImageViewsPlaatser() {
         for(int y = 0; y<8; y++) {
             for(int x = 0; x<10; x++) {
-                spelC.getGridpane().add(veld.getFlowPanes()[x][y],x,y);
+                veld.getGridPane().add(veld.getFlowPanes()[x][y],x,y);
                 for (int z = 0; z<9; z++) {
                     veld.getFlowPanes()[x][y].getChildren().add(z,veld.getImageViews()[x][y][z]);
                 }
@@ -418,9 +461,9 @@ public class SpeelveldController {
             default:
                 System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeBeschadiging.default");
         }
+    }
 
-
-
-
+    public Speelveld getVeld() {
+        return veld;
     }
 }
