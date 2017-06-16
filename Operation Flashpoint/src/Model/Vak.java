@@ -13,10 +13,20 @@ public class Vak{
     boolean niks = true;
     Kleur[] kleuren = new Kleur[6];
     ArrayList<Persoon> personen = new ArrayList<>();
-    Status boven = Status.LEEG;
-    Status rechts = Status.LEEG;
-    Status onder = Status.LEEG;
-    Status links = Status.LEEG;
+    public Status boven = Status.LEEG;
+    public Status rechts = Status.LEEG;
+    public Status onder = Status.LEEG;
+    public Status links = Status.LEEG;
+
+    public Status getObstakelRichting (Richting richting){
+        switch(richting){
+            case BOVEN: return boven;
+            case RECHTS: return rechts;
+            case ONDER: return onder;
+            case LINKS: return links;
+            default: return null;
+        }
+    }
 
     public boolean isHotspot() {
         return hotspot;

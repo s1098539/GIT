@@ -1,5 +1,8 @@
 package Controller;
 
+import Model.Fiche;
+import Model.Richting;
+import Model.Vak;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -33,7 +36,7 @@ public class SpelController implements Initializable {
     @FXML
     private Button btnDOWN;
     @FXML
-    private Button btnEndTurn;
+    private Button btnET;
     @FXML
     private ImageView imgHakken;
     @FXML
@@ -83,6 +86,12 @@ public class SpelController implements Initializable {
     @FXML
     private Button quit;
 
+    int murenkapot = 0;
+    Vak vak;
+    boolean spawnBrandhaard;
+    int hotspots = 6;
+
+
     SpeelveldController veldC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
@@ -99,18 +108,22 @@ public class SpelController implements Initializable {
     }
 
     public void run() {
-        System.out.print("run: ");
-        System.out.println(getStackPane());
         stackPane.getChildren().add(veldC.getVeld().getGridPane());
     }
 
     public void initialize() throws Exception {
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.print("initialize: ");
-        System.out.println(getStackPane());
+        btnET.setOnAction(event -> {
+            for(int i = 0; i<3; i++) {
+                nieuwRook();
+            }
+            veldC.ImageSetterALL();
+        });
+
     }
 
     public StackPane getStackPane() {
@@ -120,4 +133,215 @@ public class SpelController implements Initializable {
     public void setStackPane(StackPane stackPane) {
         this.stackPane = stackPane;
     }
+
+    public void nieuwRook() {
+        dobbelC.d6.gooi();
+        dobbelC.d8.gooi();
+        int x = dobbelC.d8.getWaarde();
+        int y = dobbelC.d6.getWaarde();
+        vak = veldC.veld.getVakken()[x][y];
+        System.out.println(x+" "+y);
+        if (vak.isNiks()) {
+            vak.setNiks(false);
+            vak.setRook(true);
+            vak.setVuur(false);
+            System.out.println("nieuwRook "+x+" "+y);
+        } else if (vak.isRook()) {
+            vak.setNiks(false);
+            vak.setRook(false);
+            vak.setVuur(true);
+            System.out.println("nieuwVuur "+x+" "+y);
+        } else if (vak.isVuur()){
+            System.out.println("newExplosie "+x+" "+y);
+            checkExplosie(x,y);
+        }
+       checkBrandhaard();
+    }
+
+    public void checkBrandhaard() {
+        if(vak.isHotspot()) {
+            spawnBrandhaard = true;
+            nieuwRook();
+        } else if(spawnBrandhaard){
+            if(hotspots>0) {
+                vak.setHotspot(true);
+                hotspots--;
+            }
+            spawnBrandhaard = false;
+        }
+    }
+
+    public void checkStoffen() {
+        Vak vak;
+        for(int x = 1; x < 9; x++) {
+            for(int y = 1; y < 7; y++) {
+                vak=veldC.veld.getVakken()[x][y];
+                if(vak.isStoffen() && vak.isVuur()) {
+                    checkExplosie(x,y);
+                    vak.setStoffen(false);
+                }
+            }
+        }
+    }
+
+    public void checkExplosie(int x, int y) {// Joep
+        boolean doorgaan;
+        int teller;
+        Vak vak;
+        for (Richting richting: Richting.values()) {
+            teller = 0;
+            doorgaan = true;
+            while (richting == Richting.BOVEN && doorgaan && ((y - teller) >= 1)) {
+                vak = veldC.veld.getVakken()[x][y-teller];
+                if (!vak.boven.isBegaanbaar()){
+                    veldC.doeBeschadiging(x, y-teller, richting);
+                    murenkapot++;
+                    doorgaan = false;
+                }
+
+                else {
+                    teller++;
+                    vak = veldC.veld.getVakken()[x][y-teller];
+                    if (!vak.isVuur()) {
+                        doorgaan = false;
+                        vak.setNiks(false);
+                        vak.setRook(false);
+                        vak.setVuur(true);
+                    }
+                }
+            }
+            while (richting == Richting.RECHTS && doorgaan && ((x + teller) <= 8)) {
+                vak = veldC.veld.getVakken()[x+teller][y];
+                if (!vak.rechts.isBegaanbaar()){
+                    veldC.doeBeschadiging((x+teller), y, richting);
+                    murenkapot++;
+                    doorgaan = false;
+                }
+
+                else {
+                    teller++;
+                    vak = veldC.veld.getVakken()[x+teller][y];
+                    if (!vak.isVuur()) {
+                        doorgaan = false;
+                        vak.setNiks(false);
+                        vak.setRook(false);
+                        vak.setVuur(true);
+                    }
+                }
+            }
+            while (richting == Richting.ONDER && doorgaan && ((y + teller) <= 6)) {
+                vak = veldC.veld.getVakken()[x][y+teller];
+                if (!vak.onder.isBegaanbaar()){
+                    veldC.doeBeschadiging(x, (y + teller), richting);
+                    murenkapot++;
+                    doorgaan = false;
+                }
+
+                else {
+                    teller++;
+                    vak = veldC.veld.getVakken()[x][y+teller];
+                    if (!vak.isVuur()) {
+                        doorgaan = false;
+                        vak.setNiks(false);
+                        vak.setRook(false);
+                        vak.setVuur(true);
+                    }
+                }
+            }
+            while (richting == Richting.LINKS && doorgaan && ((x - teller) >= 1)) {
+                vak = veldC.veld.getVakken()[x-teller][y];
+                if (!vak.links.isBegaanbaar()){
+                    veldC.doeBeschadiging((x-teller), y, richting);
+                    murenkapot++;
+                    doorgaan = false;
+                }
+
+                else {
+                    teller++;
+                    vak = veldC.veld.getVakken()[x-teller][y];
+                    if (!vak.isVuur()) {
+                        doorgaan = false;
+                        vak.setNiks(false);
+                        vak.setRook(false);
+                        vak.setVuur(true);
+                    }
+                }
+            }
+        }
+    }
+
+    public void checkVonkoverslag() {
+        Vak vak;
+        Vak vak2 = null;
+        boolean loop = true;
+        while(loop) {
+            loop = false;
+            for (int x = 0; x < 10; x++) {
+                for (int y = 0; y < 8; y++) {
+                    vak = veldC.veld.getVakken()[x][y];
+                    if (vak.isVuur()) {
+                        for (Richting richting: Richting.values()) {
+                            if (vak.getObstakelRichting(richting).isBegaanbaar()) {
+                                switch (richting) {
+                                    case BOVEN:
+                                        if (y > 0) {
+                                            vak2 = veldC.veld.getVakken()[x][y-1];
+                                        }
+                                        break;
+                                    case RECHTS:
+                                        if (x < 9) {
+                                            vak2 = veldC.veld.getVakken()[x+1][y];
+                                        }
+                                        break;
+                                    case ONDER:
+                                        if (y < 7) {
+                                            vak2 = veldC.veld.getVakken()[x][y+1];
+                                        }
+                                        break;
+                                    case LINKS:
+                                        if (x > 0) {
+                                            vak2 = veldC.veld.getVakken()[x-1][y];
+                                        }
+                                        break;
+                                }
+                                if (vak2.isRook()) {
+                                    vak2.setNiks(false);
+                                    vak2.setRook(false);
+                                    vak2.setVuur(true);
+                                    if (richting==Richting.BOVEN || richting==Richting.LINKS) {
+                                        loop = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void addPersoon() {
+        dobbelC.d6.gooi();
+        dobbelC.d8.gooi();
+        int x = dobbelC.d8.getWaarde();
+        int y = dobbelC.d6.getWaarde();
+        int[] locatie = new int[2];
+        vak = veldC.veld.getVakken()[x][y];
+        while(vak.isVuur()){
+            locatie = veldC.volgPijl(x,y);
+            x = locatie[0];
+            y = locatie[1];
+            vak = veldC.veld.getVakken()[x][y];
+        }
+
+
+    }
+
+    //TODO checkPersonen()
+
+    //TODO checkWin()
+
+    //TODO checkVerlies()
+
+
 }
