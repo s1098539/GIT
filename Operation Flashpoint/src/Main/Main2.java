@@ -22,15 +22,14 @@ public class Main2 extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
-        SpelView spelView = new SpelView();
+        SpelController spelC = new SpelController();
+        SpelView spelView = new SpelView(spelC);
         primaryStage.setScene(spelView.getScene());
         primaryStage.setTitle("Flash point");
         primaryStage.show();
         System.out.println("The Application has started.");
 
         SpeelveldController veldC = new SpeelveldController();
-        SpelController spelC = new SpelController();
         SpelerController spelerC = new SpelerController();
         DobbelsteenController dobbelC = new DobbelsteenController();
 
@@ -39,18 +38,7 @@ public class Main2 extends Application{
         spelerC.setControllers(veldC,spelC,dobbelC);
         dobbelC.setControllers(veldC,spelC,spelerC);
 
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("SpelView.fxml")
-        );
-        loader.setController(spelC);
-
         veldC.run();
-        spelC.run();
-
-
-//        spelC.getMainStackPane();
-
-
 
 //        Speler test = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
 

@@ -54,6 +54,7 @@ public class SpeelveldController {
                 ImageSetter(x,y);
             }
         }
+        spelC.run();
     }
 
 

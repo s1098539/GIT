@@ -1,5 +1,6 @@
 package View;
 
+import Controller.SpelController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,11 +10,14 @@ import java.io.IOException;
 public class SpelView {
 Scene scene;
 
-    public SpelView() {
+    public SpelView(SpelController spelC) {
         Parent root = null;
-
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("SpelView.fxml")
+        );
+        loader.setController(spelC);
         try {
-            root = FXMLLoader.load(getClass().getResource("SpelView.fxml"));
+            root = (Parent) loader.load();
         } catch (IOException e) {
             e.printStackTrace();
         }

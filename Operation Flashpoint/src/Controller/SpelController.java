@@ -101,6 +101,7 @@ public class SpelController implements Initializable {
     public void run() {
         System.out.print("run: ");
         System.out.println(getStackPane());
+        stackPane.getChildren().add(veldC.getVeld().getGridPane());
     }
 
     public void initialize() throws Exception {
