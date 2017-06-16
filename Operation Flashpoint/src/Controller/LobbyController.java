@@ -48,8 +48,8 @@ public class LobbyController extends Application {
         stage.setTitle("Lobby");
         stage.show();
     }
-    public static void main(String[] args) {
-        launch(args);
+    public void Launch(){
+        LobbyController.launch(LobbyController.class);
     }
 
     @FXML
