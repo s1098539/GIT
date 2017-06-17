@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Richting;
+import Model.Rol;
 import Model.Vak;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,8 +16,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static Model.Rol.BRANDSPUITBEDIENER;
+import static Model.Rol.REDDINGSSPECIALIST;
+
 public class SpelController implements Initializable {
 
+    @FXML private Label blusTxt;
+    @FXML private Label hakTxt;
+    @FXML private Label spuitTxt;
     @FXML private Label APLabel;
     @FXML private Label EPLabel;
     @FXML private StackPane stackPane;
@@ -371,8 +378,18 @@ public class SpelController implements Initializable {
     }
 
     public void updatePunten() {
-        APLabel.setText(Integer.toString(spelerC.getTest2().getActiepunten()));
-        EPLabel.setText(Integer.toString(spelerC.getTest2().getExtrapunten()));
+        APLabel.setText(" " + Integer.toString(spelerC.getTest2().getActiepunten()));
+        EPLabel.setText(" " + Integer.toString(spelerC.getTest2().getExtrapunten()));
+        if(spelerC.getTest2().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
+        else spuitTxt.setText(" 4");
+        if(spelerC.getTest2().getRol()==REDDINGSSPECIALIST) {
+            hakTxt.setText(" 1");
+            blusTxt.setText(" 2");
+        } else {
+            hakTxt.setText(" 2");
+            blusTxt.setText(" 1");
+        }
+
     }
 
     //TODO checkPersonen()

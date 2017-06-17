@@ -261,7 +261,7 @@
                                     <Image url="@../Resources/GFX/Vraagteken.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="APLabel" prefHeight="50.0" prefWidth="50.0" text="findMeSenpai">
+                              <Label fx:id="APLabel" prefHeight="50.0" prefWidth="50.0" text=" 0">
                                  <font>
                                     <Font size="25.0" />
                                  </font>
@@ -275,7 +275,7 @@
                                     <Image url="@../Resources/GFX/Vraagteken.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="EPLabel" prefHeight="50.0" prefWidth="50.0" text="findmesenpai2">
+                              <Label fx:id="EPLabel" prefHeight="50.0" prefWidth="50.0" text=" 0">
                                  <font>
                                     <Font size="25.0" />
                                  </font>
@@ -296,7 +296,7 @@
                                                 <Image url="@../Resources/GFX/Pickup.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label prefHeight="50.0" prefWidth="50.0" text=" 0">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
@@ -310,7 +310,7 @@
                                                 <Image url="@../Resources/GFX/Openendeur.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label prefHeight="50.0" prefWidth="50.0" text=" 1">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
@@ -334,7 +334,7 @@
                                                 <Image url="@../Resources/GFX/Brandblusser.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label fx:id="blusTxt" prefHeight="50.0" prefWidth="50.0" text=" 0">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
@@ -348,7 +348,7 @@
                                                 <Image url="@../Resources/GFX/Hakken.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label fx:id="hakTxt" prefHeight="50.0" prefWidth="50.0" text=" 0">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
@@ -369,7 +369,7 @@
                                                 <Image url="@../Resources/GFX/Rijden.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label prefHeight="50.0" prefWidth="50.0" text=" 2">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
@@ -383,7 +383,7 @@
                                                 <Image url="@../Resources/GFX/Wagenblussen.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label fx:id="spuitTxt" prefHeight="50.0" prefWidth="50.0" text=" 0">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
@@ -405,7 +405,7 @@
                                                 <Image url="@../Resources/GFX/Rolswap.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label prefHeight="50.0" prefWidth="50.0" text=" 2">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
