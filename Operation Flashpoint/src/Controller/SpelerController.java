@@ -3,13 +3,16 @@ package Controller;
 import Model.*;
 
 import static Model.Richting.*;
+import static Model.Rol.GASPAKDRAGER;
+import static Model.Rol.MANNETJESPUTTER;
+import static Model.Rol.REDDINGSSPECIALIST;
 
 
 /**
  * Created by Sam van Schaik on 14-6-2017.
  */
 public class SpelerController {
-    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, Rol.REDDINGSSPECIALIST, true);
+    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, REDDINGSSPECIALIST, true);
     Vak vak;
 
 
@@ -166,7 +169,11 @@ public class SpelerController {
         int x = test2.getX();
         int y = test2.getY();
         vak = veldC.veld.getVakken()[x][y];
-        if (vak.getObstakelRichting(richting).isBegaanbaar()) {
+        if (vak.getObstakelRichting(richting).isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== GASPAKDRAGER && test2.getExtrapunten()>0)) && (test2.getRol()!=REDDINGSSPECIALIST || test2.getActiepunten()>1)){
+            if(test2.getRol()==REDDINGSSPECIALIST) test2.setActiepunten(test2.getActiepunten()-1);
+            if(test2.getRol()==GASPAKDRAGER && test2.getExtrapunten()>0) test2.setExtraPunten(test2.getExtrapunten()-1);
+            else test2.setActiepunten(test2.getActiepunten()-1);
+
             switch (richting) {
                 case BOVEN:
                     vak = veldC.veld.getVakken()[x][y-1];
@@ -204,29 +211,29 @@ public class SpelerController {
         veldC.removeSpeler(test2.getKleur(),test2.getX(),test2.getY());
         veldC.ImageSetter(test2.getX(),test2.getY());
         switch(richting) {
-            case BOVEN: if(test2.getY()>0 && vak.boven.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
-                if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
+            case BOVEN: if(test2.getY()>0 && vak.boven.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
+                if(test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
                     test2.setExtraPunten(test2.getExtrapunten()-1);
                 } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setY(test2.getY()-1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
-            case RECHTS: if(test2.getX()<9 && vak.rechts.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
-                if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
+            case RECHTS: if(test2.getX()<9 && vak.rechts.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
+                if(test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
                     test2.setExtraPunten(test2.getExtrapunten()-1);
                 } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setX(test2.getX()+1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
-            case ONDER: if(test2.getY()<7 && vak.onder.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
-                if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
+            case ONDER: if(test2.getY()<7 && vak.onder.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
+                if(test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
                     test2.setExtraPunten(test2.getExtrapunten()-1);
                 } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setY(test2.getY()+1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
-            case LINKS: if(test2.getX()>0 && vak.links.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
-                if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
+            case LINKS: if(test2.getX()>0 && vak.links.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
+                if(test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
                     test2.setExtraPunten(test2.getExtrapunten()-1);
                 } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setX(test2.getX()-1);
@@ -241,8 +248,8 @@ public class SpelerController {
     public void resetPunten() {
         test2.setActiepunten(test2.getActiepunten()+4);
         if(test2.getActiepunten()>7) test2.setActiepunten(7);
-        if(test2.getRol()==Rol.GASPAKDRAGER) test2.setActiepunten(test2.getActiepunten()-1);
-        if(test2.getRol()==Rol.MANNETJESPUTTER) test2.setActiepunten(test2.getActiepunten()+1);
+        if(test2.getRol()==GASPAKDRAGER) test2.setActiepunten(test2.getActiepunten()-1);
+        if(test2.getRol()==MANNETJESPUTTER) test2.setActiepunten(test2.getActiepunten()+1);
 
         switch(test2.getRol()) {
             case REDDINGSSPECIALIST: test2.setExtraPunten(3);
