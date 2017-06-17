@@ -14,7 +14,6 @@ public class DobbelsteenController {
     ChatController chatC;
     SpelController spelC;
 
-
     // Lion, verbind deze controller met 3 andere
     public void setControllers(SpeelveldController veldC, SpelController spelC, SpelerController spelerC, ChatController chatC) {
         this.veldC = veldC;

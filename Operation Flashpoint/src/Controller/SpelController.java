@@ -162,7 +162,6 @@ public class SpelController implements Initializable {
     }
 
 
-
     // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
     public void endTurn() {
         for(int i = 0; i<3; i++) {

@@ -15,7 +15,6 @@ public class SpelerController {
     Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, REDDINGSSPECIALIST, true);
     Vak vak;
 
-
     // Toggles waar door de richting toetsen voor andere functies kunnen worden gebruikt.
     boolean openendeur = false;
     boolean brandblusser = false;
@@ -29,7 +28,6 @@ public class SpelerController {
     DobbelsteenController dobbelC;
     ChatController chatC;
     SpelController spelC;
-
 
     // Lion, verbind deze controller met 3 andere
     public void setControllers(SpeelveldController veldC, SpelController spelC, DobbelsteenController dobbelC, ChatController chatC) {

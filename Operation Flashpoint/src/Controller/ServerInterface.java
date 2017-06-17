@@ -2,12 +2,8 @@ package Controller;
 import Model.Message;
 import java.rmi.*;
 
-/**
- * Interface for Server class
-z
- * @author Koen Warner, 2016
- *
- */
+//server interface
+
 public interface ServerInterface extends Remote {
 
     // send an message object to all other clients

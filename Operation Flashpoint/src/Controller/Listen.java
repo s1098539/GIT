@@ -6,20 +6,11 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import Model.Message;
 
-/**
- * Listen for messages from the server
- *
- * Usage:
- * 	java -cp bin Listen [host]
- * 	vanuit project directory RMIChat
- * 	host is optioneel: default is "127.0.0.1"
- *
- * @author Koen Warner, 2016
- */
+//listen to messages from server
+
 public class Listen extends UnicastRemoteObject implements ListenInterface {
 
 	private static final long serialVersionUID = 1L;
-
 
 	protected Listen(String serverAddress) throws RemoteException {
 		super();

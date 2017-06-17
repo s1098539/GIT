@@ -8,17 +8,8 @@ import Model.Message;
 /**
  *
  * Send a message to the server.
- *
- * Sending a serializable object
- * Usage:
- * 	java Send [host] [username] [nessage]
- * 	vanuit project directory RMIChat
- * 	host is optioneel: default is "127.0.0.1"
- * 	username is optioneel: default is "Unknown"
- * 	message is optioneel: default is "no message"
- *
- * @author Koen Warner, 2016
- */
+*/
+
 public class Send {
 
 	private ServerInterface server = null;

@@ -4,10 +4,7 @@ import Model.Message;
 
 /**
  * Interface for ChatClient
-z
- * @author Koen Warner, 2016
- *
- */
+*/
 
 public interface ListenInterface extends Remote {
 
