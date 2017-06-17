@@ -1,9 +1,6 @@
 package Main;
 
-import Controller.DobbelsteenController;
-import Controller.SpeelveldController;
-import Controller.SpelController;
-import Controller.SpelerController;
+import Controller.*;
 import Model.Kleur;
 import Model.Rol;
 import Model.Speler;
@@ -32,11 +29,13 @@ public class Main2 extends Application{
         SpeelveldController veldC = new SpeelveldController();
         SpelerController spelerC = new SpelerController();
         DobbelsteenController dobbelC = new DobbelsteenController();
+        ChatController chatC = new ChatController();
 
-        veldC.setControllers(spelC,spelerC,dobbelC);
-        spelC.setControllers(veldC,spelerC,dobbelC);
-        spelerC.setControllers(veldC,spelC,dobbelC);
-        dobbelC.setControllers(veldC,spelC,spelerC);
+        veldC.setControllers(spelC,spelerC,dobbelC,chatC);
+        spelC.setControllers(veldC,spelerC,dobbelC,chatC);
+        spelerC.setControllers(veldC,spelC,dobbelC,chatC);
+        dobbelC.setControllers(veldC,spelC,spelerC,chatC);
+        chatC.setControllers(spelC,veldC,spelerC,dobbelC);
 
         veldC.run();
 

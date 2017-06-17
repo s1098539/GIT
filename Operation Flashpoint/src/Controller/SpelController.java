@@ -57,16 +57,42 @@ public class SpelController implements Initializable {
     SpeelveldController veldC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
+    ChatController chatC;
+
+    public TextArea getChatArea() {
+        return chatArea;
+    }
+
+    public TextField getTextInput() {
+        return textInput;
+    }
+
+    public Button getStuur() {
+        return stuur;
+    }
+
+    public Button getGroterChat() {
+        return groterChat;
+    }
+
+    public Button getKleinerChat() {
+        return kleinerChat;
+    }
+
+    public Button getQuit() {
+        return quit;
+    }
 
     public SpelController() throws IOException {
 
     }
 
     // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC) {
+    public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC) {
         this.veldC = veldC;
         this.spelerC = spelerC;
         this.dobbelC = dobbelC;
+        this.chatC = chatC;
     }
 
     // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
@@ -114,7 +140,18 @@ public class SpelController implements Initializable {
         imgHakken.setOnMouseClicked(event -> {
             spelerC.btnhakken();
         });
-
+        stuur.setOnAction(event -> {
+            chatC.sendMessage();
+        });
+        textInput.setOnAction(event -> {
+            chatC.sendMessage();
+        });
+        groterChat.setOnAction(event -> {
+            chatC.groterChat();
+        });
+        kleinerChat.setOnAction(event -> {
+            chatC.kleinerChat();
+        });
     }
 
 

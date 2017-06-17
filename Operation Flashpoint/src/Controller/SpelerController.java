@@ -26,14 +26,17 @@ public class SpelerController {
     }
 
     SpeelveldController veldC;
-    SpelController spelC;
     DobbelsteenController dobbelC;
+    ChatController chatC;
+    SpelController spelC;
+
 
     // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpeelveldController veldC, SpelController spelC, DobbelsteenController dobbelC) {
+    public void setControllers(SpeelveldController veldC, SpelController spelC, DobbelsteenController dobbelC, ChatController chatC) {
         this.veldC = veldC;
         this.spelC = spelC;
         this.dobbelC = dobbelC;
+        this.chatC = chatC;
     }
 
     public void noord(){

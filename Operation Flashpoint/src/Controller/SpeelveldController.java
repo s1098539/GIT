@@ -16,16 +16,18 @@ public class SpeelveldController {
     SpelController spelC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
+    ChatController chatC;
 
     public SpeelveldController() {
 
     }
 
     // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC) {
+    public void setControllers(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC) {
         this.spelC = spelC;
         this.spelerC = spelerC;
         this.dobbelC = dobbelC;
+        this.chatC = chatC;
     }
 
     // Lion, dit is het eerste wat deze controller doet, dit stond eerst in de constructor maar dit gaf problemen
