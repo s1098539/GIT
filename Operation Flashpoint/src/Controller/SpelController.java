@@ -4,10 +4,7 @@ import Model.Richting;
 import Model.Vak;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -20,6 +17,8 @@ import java.util.ResourceBundle;
 
 public class SpelController implements Initializable {
 
+    @FXML private Label APLabel;
+    @FXML private Label EPLabel;
     @FXML private StackPane stackPane;
     @FXML private GridPane gridpane;
     @FXML private Button btnUP;
@@ -127,6 +126,7 @@ public class SpelController implements Initializable {
         checkVonkoverslag();
         checkStoffen();
         veldC.ImageSetterALL();
+        spelerC.resetPunten();
     }
 
     public void nieuwRook() {
@@ -330,6 +330,11 @@ public class SpelController implements Initializable {
         }
 
 
+    }
+
+    public void updatePunten() {
+        APLabel.setText(Integer.toString(spelerC.getTest2().getActiepunten()));
+        EPLabel.setText(Integer.toString(spelerC.getTest2().getExtrapunten()));
     }
 
     //TODO checkPersonen()

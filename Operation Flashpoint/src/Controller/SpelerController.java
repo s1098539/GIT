@@ -10,7 +10,7 @@ import static Model.Richting.*;
  * Created by Sam van Schaik on 14-6-2017.
  */
 public class SpelerController {
-    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
+    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 4, 3, Rol.REDDINGSSPECIALIST, true);
     Vak vak;
 
     // Toggles waar door de richting toetsen voor andere functies kunnen worden gebruikt.
@@ -51,6 +51,7 @@ public class SpelerController {
             hakActie(BOVEN);
             veldC.ImageSetterAround(test2.getX(),test2.getY());
         }
+        spelC.updatePunten();
     }
 
     public void west(){
@@ -72,6 +73,7 @@ public class SpelerController {
             hakActie(LINKS);
             veldC.ImageSetterAround(test2.getX(),test2.getY());
         }
+        spelC.updatePunten();
     }
 
     public void zuid(){
@@ -93,6 +95,7 @@ public class SpelerController {
             hakActie(ONDER);
             veldC.ImageSetterAround(test2.getX(),test2.getY());
         }
+        spelC.updatePunten();
     }
 
     public void oost(){
@@ -114,6 +117,7 @@ public class SpelerController {
             hakActie(RECHTS);
             veldC.ImageSetterAround(test2.getX(),test2.getY());
         }
+        spelC.updatePunten();
     }
 
     public void btnOpenenDeur() {
@@ -199,24 +203,47 @@ public class SpelerController {
         veldC.removeSpeler(test2.getKleur(),test2.getX(),test2.getY());
         veldC.ImageSetter(test2.getX(),test2.getY());
         switch(richting) {
-            case BOVEN: if(test2.getY()>0 && vak.boven.isBegaanbaar()) {
+            case BOVEN: if(test2.getY()>0 && vak.boven.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
+                if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
+                    test2.setExtrapunten(test2.getExtrapunten()-1);
+                } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setY(test2.getY()-1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
-            case RECHTS: if(test2.getX()<9 && vak.rechts.isBegaanbaar()) {
+            case RECHTS: if(test2.getX()<9 && vak.rechts.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
+                if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
+                    test2.setExtrapunten(test2.getExtrapunten()-1);
+                } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setX(test2.getX()+1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
-            case ONDER: if(test2.getY()<7 && vak.onder.isBegaanbaar()) {
+            case ONDER: if(test2.getY()<7 && vak.onder.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
+                if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
+                    test2.setExtrapunten(test2.getExtrapunten()-1);
+                } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setY(test2.getY()+1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
-            case LINKS: if(test2.getX()>0 && vak.links.isBegaanbaar()) {
+            case LINKS: if(test2.getX()>0 && vak.links.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
+                if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
+                    test2.setExtrapunten(test2.getExtrapunten()-1);
+                } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setX(test2.getX()-1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
         }
         veldC.addSpeler(test2.getKleur(),test2.getX(),test2.getY());
         veldC.ImageSetter(test2.getX(),test2.getY());
+    }
+
+    public void resetPunten() {
+        test2.setExtrapunten(3);
+        test2.setActiepunten(test2.getActiepunten()+4);
+        if(test2.getActiepunten()>7) test2.setActiepunten(7);
+        spelC.updatePunten();
+    }
+
+    public Speler getTest2() {
+        return test2;
     }
 }
