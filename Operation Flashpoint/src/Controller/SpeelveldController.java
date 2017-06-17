@@ -12,25 +12,17 @@ import static Model.Status.*;
 
 public class SpeelveldController {
 
-
     Speelveld veld;
-
     SpelController spelC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
-
-    // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC) {
-        this.spelC = spelC;
-        this.spelerC = spelerC;
-        this.dobbelC = dobbelC;
-    }
 
     public SpeelveldController() {
 
     }
 
-    public SpeelveldController(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC) {
+    // Lion, verbind deze controller met 3 andere
+    public void setControllers(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC) {
         this.spelC = spelC;
         this.spelerC = spelerC;
         this.dobbelC = dobbelC;
@@ -56,7 +48,6 @@ public class SpeelveldController {
         }
         spelC.run();
     }
-
 
     // Lion, maakt alle flowpanes en imageviews aan
     private void flowpanesAndImageViewsFactory() {
@@ -394,9 +385,6 @@ public class SpeelveldController {
 
         veld.getVakken()[3][7].setBoven(LEEG);
         veld.getVakken()[3][6].setOnder(LEEG);
-
-
-
     }
 
     // Lion, handeld obstakels voor explosies en hakken
@@ -542,6 +530,7 @@ public class SpeelveldController {
         return new int[]{x,y};
     }
 
+    // Getters and Setters down below
     public Speelveld getVeld() {
         return veld;
     }

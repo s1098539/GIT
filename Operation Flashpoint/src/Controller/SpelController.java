@@ -23,78 +23,48 @@ import java.util.ResourceBundle;
 
 public class SpelController implements Initializable {
 
-    @FXML
-    private StackPane stackPane;
-    @FXML
-    private GridPane gridpane;
-    @FXML
-    private Button btnUP;
-    @FXML
-    private Button btnLEFT;
-    @FXML
-    private Button btnRIGHT;
-    @FXML
-    private Button btnDOWN;
-    @FXML
-    private Button btnET;
-    @FXML
-    private ImageView imgHakken;
-    @FXML
-    private ImageView imgOpenendeur;
-    @FXML
-    private ImageView imgBrandblusser;
-    @FXML
-    private ImageView imgRijden;
-    @FXML
-    private ImageView imgWagenblussen;
-    @FXML
-    private ImageView imgPickup;
-    @FXML
-    private ImageView imgRolswap;
-    @FXML
-    private Button btnSpecial;
-    @FXML
-    private TextArea chatArea;
-    @FXML
-    private TextField textInput;
-    @FXML
-    private Button stuur;
-    @FXML
-    private VBox vboxchat;
-    @FXML
-    private HBox chatSize;
-    @FXML
-    private Button groterChat;
-    @FXML
-    private Button kleinerChat;
-    @FXML
-    TextInputDialog dialog = new TextInputDialog("");
-    @FXML
-    TextInputDialog dialog2 = new TextInputDialog("");
-    @FXML
-    private VBox chatVenster;
-    @FXML
-    private HBox minMaxknoppen;
-    @FXML
-    private HBox stuurKnopEnTextField;
-    @FXML
-    private Button chatTop;
-    @FXML
-    private Button options;
-    @FXML
-    private Button veranderKlasse;
-    @FXML
-    private Button quit;
-
+    @FXML private StackPane stackPane;
+    @FXML private GridPane gridpane;
+    @FXML private Button btnUP;
+    @FXML private Button btnLEFT;
+    @FXML private Button btnRIGHT;
+    @FXML private Button btnDOWN;
+    @FXML private Button btnET;
+    @FXML private ImageView imgHakken;
+    @FXML private ImageView imgOpenendeur;
+    @FXML private ImageView imgBrandblusser;
+    @FXML private ImageView imgRijden;
+    @FXML private ImageView imgWagenblussen;
+    @FXML private ImageView imgPickup;
+    @FXML private ImageView imgRolswap;
+    @FXML private Button btnSpecial;
+    @FXML private TextArea chatArea;
+    @FXML private TextField textInput;
+    @FXML private Button stuur;
+    @FXML private VBox vboxchat;
+    @FXML private HBox chatSize;
+    @FXML private Button groterChat;
+    @FXML private Button kleinerChat;
+    @FXML TextInputDialog dialog = new TextInputDialog("");
+    @FXML TextInputDialog dialog2 = new TextInputDialog("");
+    @FXML private VBox chatVenster;
+    @FXML private HBox minMaxknoppen;
+    @FXML private HBox stuurKnopEnTextField;
+    @FXML private Button chatTop;
+    @FXML private Button options;
+    @FXML private Button veranderKlasse;
+    @FXML private Button quit;
     int murenkapot = 0;
     Vak vak;
     boolean spawnBrandhaard;
     int hotspots = 6;
-
-
     SpeelveldController veldC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
+
+    public SpelController() throws IOException {
+
+    }
 
     // Lion, verbind deze controller met 3 andere
     public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC) {
@@ -103,35 +73,51 @@ public class SpelController implements Initializable {
         this.dobbelC = dobbelC;
     }
 
-    public SpelController() throws IOException {
-
-    }
-
+    // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
         stackPane.getChildren().add(veldC.getVeld().getGridPane());
     }
 
+    // Lion, keep this one EMPTY and DON'T REMOVE
     public void initialize() throws Exception {
 
     }
 
+    // Lion, Alle set on action komt hier in
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         btnET.setOnAction(event -> {
-            for(int i = 0; i<3; i++) {
-                nieuwRook();
-            }
-            veldC.ImageSetterALL();
+            endTurn();
+        });
+
+        btnUP.setOnAction(event -> {
+            spelerC.beweegNoord();
+        });
+
+        btnRIGHT.setOnAction(event -> {
+            spelerC.beweegOost();
+        });
+
+        btnDOWN.setOnAction(event -> {
+            spelerC.beweegZuid();
+        });
+
+        btnLEFT.setOnAction(event -> {
+            spelerC.beweegWest();
         });
 
     }
 
-    public StackPane getStackPane() {
-        return stackPane;
-    }
 
-    public void setStackPane(StackPane stackPane) {
-        this.stackPane = stackPane;
+
+    // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
+    public void endTurn() {
+        for(int i = 0; i<3; i++) {
+            nieuwRook();
+        }
+        checkVonkoverslag();
+        checkStoffen();
+        veldC.ImageSetterALL();
     }
 
     public void nieuwRook() {
@@ -342,6 +328,4 @@ public class SpelController implements Initializable {
     //TODO checkWin()
 
     //TODO checkVerlies()
-
-
 }

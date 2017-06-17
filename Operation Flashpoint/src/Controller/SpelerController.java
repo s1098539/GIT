@@ -1,8 +1,6 @@
 package Controller;
 
-import Model.Kleur;
-import Model.Rol;
-import Model.Speler;
+import Model.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
@@ -30,22 +28,24 @@ public class SpelerController {
 
 
     //TODO Beweeg Acties
-    @FXML private void beweegNoord(){
+    public void beweegNoord(){
         System.out.println("Beweeg: Noord");
-
-
+        beweegwActie(Richting.BOVEN);
     }
 
-    @FXML private void beweegWest(){
+    public void beweegWest(){
         System.out.println("Beweeg: West");
+        beweegwActie(Richting.LINKS);
     }
 
-    @FXML private void beweegZuid(){
+    public void beweegZuid(){
         System.out.println("Beweeg: Zuid");
+        beweegwActie(Richting.ONDER);
     }
 
-    @FXML private void beweegOost(){
+    public void beweegOost(){
         System.out.println("Beweeg: Oost");
+        beweegwActie(Richting.RECHTS);
     }
 
     //TODO Spel Acties
@@ -71,5 +71,28 @@ public class SpelerController {
 
     @FXML private void brandweerwagenActie(){
         System.out.println("Actie: Gebruik brandweerwagen");
+    }
+
+    public void beweegwActie(Richting richting) {
+        Vak vak = veldC.veld.getVakken()[test2.getX()][test2.getY()];
+        switch(richting) {
+            case BOVEN: if(test2.getY()>0 && vak.boven.isBegaanbaar()) {
+                test2.setY(test2.getY()-1);
+                System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
+            }   break;
+            case RECHTS: if(test2.getX()<9 && vak.rechts.isBegaanbaar()) {
+                test2.setX(test2.getX()+1);
+                System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
+            }   break;
+            case ONDER: if(test2.getY()<7 && vak.onder.isBegaanbaar()) {
+                test2.setY(test2.getY()+1);
+                System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
+            }   break;
+            case LINKS: if(test2.getX()>0 && vak.links.isBegaanbaar()) {
+                test2.setX(test2.getX()-1);
+                System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
+            }   break;
+        }
+        veldC.ImageSetterALL();
     }
 }
