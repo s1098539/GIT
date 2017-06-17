@@ -1,12 +1,9 @@
 package Controller;
 
-import Model.Fiche;
 import Model.Richting;
 import Model.Vak;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -91,19 +88,31 @@ public class SpelController implements Initializable {
         });
 
         btnUP.setOnAction(event -> {
-            spelerC.beweegNoord();
+            spelerC.noord();
         });
 
         btnRIGHT.setOnAction(event -> {
-            spelerC.beweegOost();
+            spelerC.oost();
         });
 
         btnDOWN.setOnAction(event -> {
-            spelerC.beweegZuid();
+            spelerC.zuid();
         });
 
         btnLEFT.setOnAction(event -> {
-            spelerC.beweegWest();
+            spelerC.west();
+        });
+
+        imgOpenendeur.setOnMouseClicked(event -> {
+            spelerC.btnOpenenDeur();
+        });
+
+        imgBrandblusser.setOnMouseClicked(event -> {
+            spelerC.btnBrandblusser();
+        });
+
+        imgHakken.setOnMouseClicked(event -> {
+            spelerC.btnhakken();
         });
 
     }

@@ -73,6 +73,7 @@ public class SpeelveldController {
         }
     }
 
+    // Lion, update de volledige view van het speelveld
     public void ImageSetterALL() {
         for(int y = 0; y<8; y++) {
             for (int x = 0; x < 10; x++) {
@@ -81,8 +82,17 @@ public class SpeelveldController {
         }
     }
 
+    // Lion, update het vak dat is gegeven en alles dat hier tegen aan ligt
+    public void ImageSetterAround(int x, int y) {
+        ImageSetter(x,y);
+        if(x<9)ImageSetter(x+1,y);
+        if(x>0)ImageSetter(x-1,y);
+        if(y<7)ImageSetter(x,y+1);
+        if(y>0)ImageSetter(x,y-1);
+    }
+
     // Lion, gaat de eigenschappen af van een bepaald vak en laad het goede plaatje in de image View
-    private void ImageSetter(int x, int y) {
+    public void ImageSetter(int x, int y) {
         // Hotspot
         if(veld.getVakken()[x][y].isHotspot()) {
             veld.getImageViews()[x][y][0].setImage(veld.getHotspot());
@@ -387,6 +397,71 @@ public class SpeelveldController {
         veld.getVakken()[3][6].setOnder(LEEG);
     }
 
+    public void doeDeur(int x, int y, Richting richting) {
+        Vak vak = veld.getVakken()[x][y];
+        switch(richting) {
+            case BOVEN:
+                if (y>0) {
+                    switch(vak.getBoven()) {
+                        case DEURD: vak.setBoven(DEURO);
+                            veld.getVakken()[x][y-1].setOnder(DEURO);
+                            break;
+                        case DEURO: vak.setBoven(DEURD);
+                            veld.getVakken()[x][y-1].setOnder(DEURD);
+                            break;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Boven)");
+                    }
+                }
+                break;
+            case RECHTS:
+                if (x<9) {
+                    switch(vak.getRechts()) {
+                        case DEURD: vak.setRechts(DEURO);
+                            veld.getVakken()[x+1][y].setLinks(DEURO);
+                            break;
+                        case DEURO: vak.setRechts(DEURD);
+                            veld.getVakken()[x+1][y].setLinks(DEURD);
+                            break;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Rechts)");
+                    }
+                }
+                break;
+            case LINKS:
+                if (y<7) {
+                    switch(vak.getOnder()) {
+                        case DEURD: vak.setRechts(DEURO);
+                            veld.getVakken()[x][y+1].setLinks(DEURO);
+                            break;
+                        case DEURO: vak.setRechts(DEURD);
+                            veld.getVakken()[x][y+1].setLinks(DEURD);
+                            break;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Links)");
+                    }
+                }
+                break;
+            case ONDER:
+                if (x>0) {
+                    switch(vak.getLinks()) {
+                        case DEURD: vak.setRechts(DEURO);
+                            veld.getVakken()[x-1][y].setLinks(DEURO);
+                            break;
+                        case DEURO: vak.setRechts(DEURD);
+                            veld.getVakken()[x-1][y].setLinks(DEURD);
+                            break;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Onder)");
+                    }
+                }
+                break;
+            default:
+                System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeDeur.default");
+        }
+    }
+
+
     // Lion, handeld obstakels voor explosies en hakken
     public void doeBeschadiging(int x, int y, Richting richting) {
         Vak vak = veld.getVakken()[x][y];
@@ -529,6 +604,27 @@ public class SpeelveldController {
         }
         return new int[]{x,y};
     }
+
+    public void addSpeler(Kleur kleur, int x, int y) {
+        for(int i = 0; i < 6; i++) {
+            if (veld.getVakken()[x][y].getKleuren()[i] == null) {
+                veld.getVakken()[x][y].getKleuren()[i] = kleur;
+                i+=6;
+            }
+        }
+    }
+
+    public void removeSpeler(Kleur kleur, int x, int y) {
+        for(int i = 0; i < 6; i++) {
+            if (veld.getVakken()[x][y].getKleuren()[i] == kleur) {
+                veld.getVakken()[x][y].getKleuren()[i] = null;
+                i+=6;
+            }
+        }
+    }
+
+
+
 
     // Getters and Setters down below
     public Speelveld getVeld() {
