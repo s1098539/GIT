@@ -72,6 +72,7 @@ public class SpelController implements Initializable {
     // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
         stackPane.getChildren().add(veldC.getVeld().getGridPane());
+        spelerC.resetPunten();
     }
 
     // Lion, keep this one EMPTY and DON'T REMOVE

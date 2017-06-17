@@ -26,14 +26,12 @@ public class Speler {
     boolean slechtziendmodus;
 
     //Constructors
-    public Speler(String naam, Kleur kleur, String ip, int x, int y, int actiepunten, int extrapunten, Rol rol, boolean slechtziendmodus) {
+    public Speler(String naam, Kleur kleur, String ip, int x, int y, Rol rol, boolean slechtziendmodus) {
         this.naam = naam;
         this.kleur = kleur;
         this.ip = ip;
         this.x = x;
         this.y = y;
-        this.actiepunten = actiepunten;
-        this.extrapunten = extrapunten;
         this.rol = rol;
         this.slechtziendmodus = slechtziendmodus;
     }
@@ -100,7 +98,7 @@ public class Speler {
         this.actiepunten = actiepunten;
     }
 
-    public void setExtrapunten(int extrapunten) {
+    public void setExtraPunten(int extrapunten) {
         this.extrapunten = extrapunten;
     }
 

@@ -1,7 +1,6 @@
 package Controller;
 
 import Model.*;
-import javafx.fxml.FXML;
 
 import static Model.Richting.*;
 
@@ -10,8 +9,9 @@ import static Model.Richting.*;
  * Created by Sam van Schaik on 14-6-2017.
  */
 public class SpelerController {
-    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 4, 3, Rol.REDDINGSSPECIALIST, true);
+    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, Rol.REDDINGSSPECIALIST, true);
     Vak vak;
+
 
     // Toggles waar door de richting toetsen voor andere functies kunnen worden gebruikt.
     boolean openendeur = false;
@@ -19,6 +19,7 @@ public class SpelerController {
     boolean hakken = false;
 
     public SpelerController() {
+
     }
 
     SpeelveldController veldC;
@@ -205,28 +206,28 @@ public class SpelerController {
         switch(richting) {
             case BOVEN: if(test2.getY()>0 && vak.boven.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
                 if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
-                    test2.setExtrapunten(test2.getExtrapunten()-1);
+                    test2.setExtraPunten(test2.getExtrapunten()-1);
                 } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setY(test2.getY()-1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
             case RECHTS: if(test2.getX()<9 && vak.rechts.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
                 if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
-                    test2.setExtrapunten(test2.getExtrapunten()-1);
+                    test2.setExtraPunten(test2.getExtrapunten()-1);
                 } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setX(test2.getX()+1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
             case ONDER: if(test2.getY()<7 && vak.onder.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
                 if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
-                    test2.setExtrapunten(test2.getExtrapunten()-1);
+                    test2.setExtraPunten(test2.getExtrapunten()-1);
                 } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setY(test2.getY()+1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
             }   break;
             case LINKS: if(test2.getX()>0 && vak.links.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
                 if(test2.getRol()==Rol.REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
-                    test2.setExtrapunten(test2.getExtrapunten()-1);
+                    test2.setExtraPunten(test2.getExtrapunten()-1);
                 } else test2.setActiepunten(test2.getActiepunten()-1);
                 test2.setX(test2.getX()-1);
                 System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
@@ -236,10 +237,24 @@ public class SpelerController {
         veldC.ImageSetter(test2.getX(),test2.getY());
     }
 
+    // Lion, reset AP en EP bij het eindigen van een beurt.
     public void resetPunten() {
-        test2.setExtrapunten(3);
         test2.setActiepunten(test2.getActiepunten()+4);
         if(test2.getActiepunten()>7) test2.setActiepunten(7);
+        if(test2.getRol()==Rol.GASPAKDRAGER) test2.setActiepunten(test2.getActiepunten()-1);
+        if(test2.getRol()==Rol.MANNETJESPUTTER) test2.setActiepunten(test2.getActiepunten()+1);
+
+        switch(test2.getRol()) {
+            case REDDINGSSPECIALIST: test2.setExtraPunten(3);
+                break;
+            case GASPAKDRAGER: test2.setExtraPunten(3);
+                break;
+            case COMMANDANT: test2.setExtraPunten(2);
+                break;
+            default: test2.setExtraPunten(0);
+        }
+
+
         spelC.updatePunten();
     }
 
