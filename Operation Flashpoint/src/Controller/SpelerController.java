@@ -1,6 +1,12 @@
 package Controller;
 
 import Model.*;
+import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 import static Model.Richting.*;
 import static Model.Rol.GASPAKDRAGER;
@@ -266,6 +272,20 @@ public class SpelerController {
         spelC.updatePunten();
     }
 
+    public void openHandleiding() {
+        Stage stage = new Stage();
+        BorderPane borderPane = new BorderPane();
+        ScrollPane scrollpane = new ScrollPane();
+
+        Image gebruikershandleiding = new Image("resources/gfx/gebruikershandleiding.jpg",2390,796,true,true);
+        ImageView imageview = new ImageView(gebruikershandleiding);
+        scrollpane.setContent(imageview);
+        borderPane.setCenter(scrollpane);
+        Scene scene = new Scene(borderPane, 1190, 815);
+        stage.setScene(scene);
+        stage.setTitle("Gebruikershandleiding");
+        stage.show();
+    }
     public Speler getTest2() {
         return test2;
     }

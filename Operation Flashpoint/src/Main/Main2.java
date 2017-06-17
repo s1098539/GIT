@@ -9,6 +9,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 
+import java.io.PrintStream;
+
 import static javafx.application.Application.launch;
 
 
@@ -36,6 +38,20 @@ public class Main2 extends Application{
         spelerC.setControllers(veldC,spelC,dobbelC,chatC);
         dobbelC.setControllers(veldC,spelC,spelerC,chatC);
         chatC.setControllers(spelC,veldC,spelerC,dobbelC);
+
+        /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
+        system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
+
+        System.setOut(new PrintStream(System.out) {
+            @Override
+            public void write(byte[] buf, int off, int len) {
+                super.write(buf, off, len);
+
+                String msg = new String(buf, off, len);
+
+                spelC.getChatArea().appendText(msg);
+            }
+        });
 
         veldC.run();
 

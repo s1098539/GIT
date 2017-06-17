@@ -58,5 +58,7 @@ public class ChatController {
         spelC.getTextInput().setText("");
     }
 
+
+
 }
 

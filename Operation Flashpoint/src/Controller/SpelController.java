@@ -57,6 +57,8 @@ public class SpelController implements Initializable {
     @FXML private Button options;
     @FXML private Button veranderKlasse;
     @FXML private Button quit;
+    @FXML private Button gebruikershandleiding;
+
     int murenkapot = 0;
     Vak vak;
     boolean spawnBrandhaard;
@@ -158,6 +160,9 @@ public class SpelController implements Initializable {
         });
         kleinerChat.setOnAction(event -> {
             chatC.kleinerChat();
+        });
+        gebruikershandleiding.setOnAction(event -> {
+            spelerC.openHandleiding();
         });
     }
 
