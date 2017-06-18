@@ -133,11 +133,11 @@ public class SpelerController {
     // Er word gekeken welke rol een speler heeft en verwijst verolgens door naar de bijpassende specla methode.
     public void special() {
         switch(test2.getRol()) {
-            case VERKENNER:
+            case VERKENNER:     //TODO
                 break;
-            case COMMANDANT:
+            case COMMANDANT:    //TODO
                 break;
-            case DOKTER:
+            case DOKTER:        //TODO
                 break;
             case SPECSTOFFEN: onschadelijkMaken();
                 break;
