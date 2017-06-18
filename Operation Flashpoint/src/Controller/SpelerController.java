@@ -129,8 +129,9 @@ public class SpelerController {
         spelC.updatePunten();
     }
 
+    // Lion, Als in SpelC op de special knop word gedrukt gaat deze functie lopen
+    // Er word gekeken welke rol een speler heeft en verwijst verolgens door naar de bijpassende specla methode.
     public void special() {
-
         switch(test2.getRol()) {
             case VERKENNER:
                 break;
@@ -144,6 +145,7 @@ public class SpelerController {
         }
     }
 
+    // Lion, dit is de special methode van specStoffen, indien mogelijk word een stoffen fiche verwijderd.
     private void onschadelijkMaken() {
         int x = test2.getX();
         int y = test2.getY();
