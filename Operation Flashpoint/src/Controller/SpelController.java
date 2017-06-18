@@ -164,6 +164,9 @@ public class SpelController implements Initializable {
         gebruikershandleiding.setOnAction(event -> {
             spelerC.openHandleiding();
         });
+        btnSpecial.setOnAction(event -> {
+            spelerC.special();
+        });
     }
 
 

@@ -9,16 +9,14 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import static Model.Richting.*;
-import static Model.Rol.GASPAKDRAGER;
-import static Model.Rol.MANNETJESPUTTER;
-import static Model.Rol.REDDINGSSPECIALIST;
+import static Model.Rol.*;
 
 
 /**
  * Created by Sam van Schaik on 14-6-2017.
  */
 public class SpelerController {
-    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, REDDINGSSPECIALIST, true);
+    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, SPECSTOFFEN, true);
     Vak vak;
 
     // Toggles waar door de richting toetsen voor andere functies kunnen worden gebruikt.
@@ -131,6 +129,33 @@ public class SpelerController {
         spelC.updatePunten();
     }
 
+    public void special() {
+
+        switch(test2.getRol()) {
+            case VERKENNER:
+                break;
+            case COMMANDANT:
+                break;
+            case DOKTER:
+                break;
+            case SPECSTOFFEN: onschadelijkMaken();
+                break;
+            default: System.out.println("Mom things im special :(");
+        }
+    }
+
+    private void onschadelijkMaken() {
+        int x = test2.getX();
+        int y = test2.getY();
+        if(test2.getActiepunten()>1 && veldC.getVeld().getVakken()[x][y].isStoffen()) {
+            veldC.getVeld().getVakken()[x][y].setStoffen(false);
+            test2.setActiepunten(test2.getActiepunten()-2);
+            spelC.updatePunten();
+            veldC.ImageSetter(x,y);
+        }
+    }
+
+
     public void btnOpenenDeur() {
         openendeur ^= true;
         brandblusser = false;
@@ -176,8 +201,8 @@ public class SpelerController {
         int x = test2.getX();
         int y = test2.getY();
         vak = veldC.veld.getVakken()[x][y];
-        if (vak.getObstakelRichting(richting).isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== GASPAKDRAGER && test2.getExtrapunten()>0)) && (test2.getRol()!=REDDINGSSPECIALIST || test2.getActiepunten()>1)){
-            if(test2.getRol()==REDDINGSSPECIALIST) test2.setActiepunten(test2.getActiepunten()-1);
+        if (vak.getObstakelRichting(richting).isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== GASPAKDRAGER && test2.getExtrapunten()>0)) && ((test2.getRol()!=REDDINGSSPECIALIST && test2.getRol()!=DOKTER) || test2.getActiepunten()>1)){
+            if(test2.getRol()==REDDINGSSPECIALIST || test2.getRol()==DOKTER) test2.setActiepunten(test2.getActiepunten()-1);
             if(test2.getRol()==GASPAKDRAGER && test2.getExtrapunten()>0) test2.setExtraPunten(test2.getExtrapunten()-1);
             else test2.setActiepunten(test2.getActiepunten()-1);
 
@@ -277,7 +302,7 @@ public class SpelerController {
         BorderPane borderPane = new BorderPane();
         ScrollPane scrollpane = new ScrollPane();
 
-        Image gebruikershandleiding = new Image("resources/gfx/gebruikershandleiding.jpg",2390,796,true,true);
+        Image gebruikershandleiding = new Image("Resources/GFX/gebruikershandleiding.jpg",2390,796,true,true);
         ImageView imageview = new ImageView(gebruikershandleiding);
         scrollpane.setContent(imageview);
         borderPane.setCenter(scrollpane);
