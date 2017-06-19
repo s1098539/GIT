@@ -58,6 +58,7 @@ public class SpelerController {
             System.out.println("Hakken: Noord");
             hakActie(BOVEN);
             veldC.ImageSetterAround(speler.getX(),speler.getY());
+            spelC.updatePunten();
         }
         spelC.updatePunten();
     }
@@ -202,8 +203,8 @@ public class SpelerController {
         int x = speler.getX();
         int y = speler.getY();
         vak = veldC.veld.getVakken()[x][y];
-        if (vak.getObstakelRichting(richting).isBegaanbaar() && (speler.getActiepunten()>0 || 
-                (speler.getRol()== GASPAKDRAGER && speler.getExtrapunten()>0)) && ((speler.getRol()!=REDDINGSSPECIALIST 
+        if (vak.getObstakelRichting(richting).isBegaanbaar() && (speler.getActiepunten()>0 ||
+                (speler.getRol()== GASPAKDRAGER && speler.getExtrapunten()>0)) && ((speler.getRol()!=REDDINGSSPECIALIST
                 && speler.getRol()!=DOKTER) || speler.getActiepunten()>1)){
             if(speler.getRol()==REDDINGSSPECIALIST || speler.getRol()==DOKTER) speler.setActiepunten(speler.getActiepunten()-1);
             if(speler.getRol()==GASPAKDRAGER && speler.getExtrapunten()>0) speler.setExtraPunten(speler.getExtrapunten()-1);
@@ -299,8 +300,6 @@ public class SpelerController {
                 break;
             default: speler.setExtraPunten(0);
         }
-
-
         spelC.updatePunten();
     }
 

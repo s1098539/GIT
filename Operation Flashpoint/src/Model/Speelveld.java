@@ -5,6 +5,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 
+import java.util.ArrayList;
+
 public class Speelveld {
     Vak [][] vakken;
     GridPane gridPane;
@@ -54,6 +56,16 @@ public class Speelveld {
     Image groenhaar = new Image("Resources/GFX/Groenhaar.png",20,20,false,true);
     Image obamanigua = new Image("Resources/GFX/Obamanigua.png",20,20,false,true);
     Image hipstersnor = new Image("Resources/GFX/Hipstersnor.png",20,20,false,true);
+
+    ArrayList<Persoon> personenlijst = new ArrayList<Persoon>();
+
+    public ArrayList<Persoon> getPersonenlijst() {
+        return personenlijst;
+    }
+
+    public void setPersonenlijst(ArrayList<Persoon> personenlijst) {
+        this.personenlijst = personenlijst;
+    }
 
     public FlowPane[][] getFlowPanes() {
         return flowPanes;

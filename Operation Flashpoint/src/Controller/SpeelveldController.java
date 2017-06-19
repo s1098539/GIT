@@ -43,11 +43,7 @@ public class SpeelveldController {
         flowpanesAndImageViewsFactory();
         flowpanesAndImageViewsPlaatser();
         setMap();
-        for(int y = 0; y<8; y++) {
-            for (int x = 0; x < 10; x++) {
-                ImageSetterALL();
-            }
-        }
+        ImageSetterALL();
         spelC.run();
     }
 
@@ -477,10 +473,12 @@ public class SpeelveldController {
                             case MUUR:
                                 vak.setBoven(MUUR1);
                                 veld.getVakken()[x][y - 1].setOnder(MUUR1);
+                                spelC.spel.addBeschadiging();
                                 break;
                             case MUUR1:
                                 vak.setBoven(MUUR2);
                                 veld.getVakken()[x][y - 1].setOnder(MUUR2);
+                                spelC.spel.addBeschadiging();
                                 break;
                             case DEURD:
                                 vak.setBoven(LEEG);

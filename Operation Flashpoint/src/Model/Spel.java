@@ -64,7 +64,11 @@ public class Spel {
     }
 
     public void addBeschadiging(){
-        setBeschadigingCounter(getBeschadigingCounter() + 1);
+        beschadigingCounter++;
+    }
+
+    public void deductBeschadiging(){
+        beschadigingCounter--;
     }
 
     public int getGeredCounter() {

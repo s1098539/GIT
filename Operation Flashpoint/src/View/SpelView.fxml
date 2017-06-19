@@ -35,6 +35,7 @@
                 </HBox>
                 <HBox prefHeight="50.0" prefWidth="600.0">
                     <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
                         <HBox prefHeight="50.0" prefWidth="311.0">
                             <children>
                                 <HBox prefHeight="100.0" prefWidth="200.0">
@@ -44,7 +45,7 @@
                                                 <Image url="@../Resources/GFX/Hotspot.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label fx:id="HotspotLebel" prefHeight="50.0" prefWidth="50.0" text="X/X">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
@@ -58,7 +59,7 @@
                                                 <Image url="@../Resources/GFX/Vraagteken.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label fx:id="GeredLabel" prefHeight="50.0" prefWidth="50.0" text="X/X">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
@@ -72,7 +73,7 @@
                                                 <Image url="@../Resources/GFX/Muur1kapot.png" />
                                             </image>
                                         </ImageView>
-                                        <Label prefHeight="75.0" prefWidth="94.0" text="X/X">
+                                        <Label fx:id="BeschadigingLabel" prefHeight="75.0" prefWidth="94.0" text="X/X">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
@@ -84,34 +85,8 @@
                         <HBox prefHeight="50.0" prefWidth="25.0" HBox.hgrow="ALWAYS" />
                         <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="191.0">
                             <children>
-                                <HBox prefHeight="50.0" prefWidth="98.0">
-                                    <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../Resources/GFX/Vraagteken.png" />
-                                            </image>
-                                        </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="46.0" text="X/X">
-                                            <font>
-                                                <Font size="25.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </HBox>
-                                <HBox prefHeight="50.0" prefWidth="119.0">
-                                    <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../Resources/GFX/Vraagteken.png" />
-                                            </image>
-                                        </ImageView>
-                                        <Label prefHeight="50.0" prefWidth="50.0" text="X/X">
-                                            <font>
-                                                <Font size="25.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </HBox>
+                                <HBox prefHeight="50.0" prefWidth="98.0" />
+                                <HBox prefHeight="50.0" prefWidth="119.0" />
                             </children>
                         </HBox>
                     </children>

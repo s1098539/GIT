@@ -1,6 +1,10 @@
 package Controller;
 
-import Model.*;
+import Model.Persoon;
+import Model.Richting;
+import Model.Rol;
+import Model.Spel;
+import Model.Vak;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -13,6 +17,8 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import static Model.Rol.BRANDSPUITBEDIENER;
@@ -57,6 +63,9 @@ public class SpelController implements Initializable {
     @FXML private Button veranderKlasse;
     @FXML private Button quit;
     @FXML private Button gebruikershandleiding;
+    @FXML private Label BeschadigingLabel;
+    @FXML private Label HotspotLabel;
+    @FXML private Label GeredLabel;
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -64,6 +73,7 @@ public class SpelController implements Initializable {
     SpelerController spelerC;
     DobbelsteenController dobbelC;
     ChatController chatC;
+    SpraakController spraakC;
 
     public TextArea getChatArea() {
         return chatArea;
@@ -94,17 +104,24 @@ public class SpelController implements Initializable {
     }
 
     // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC) {
+    public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC, SpraakController spraakC) {
         this.veldC = veldC;
         this.spelerC = spelerC;
         this.dobbelC = dobbelC;
         this.chatC = chatC;
+        this.spraakC = spraakC;
     }
 
     // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
         stackPane.getChildren().add(veldC.getVeld().getGridPane());
         spelerC.resetPunten();
+
+        for(Persoon persoon: Persoon.values()){
+            veldC.getVeld().getPersonenlijst().add(persoon);
+        }
+        long seed = System.nanoTime();
+        Collections.shuffle(veldC.getVeld().getPersonenlijst(), new Random(seed));
     }
 
     // Lion, keep this one EMPTY and DON'T REMOVE
@@ -168,7 +185,6 @@ public class SpelController implements Initializable {
     //Door: Sam, don't hate if its wrong ok
     Spel spel = new Spel(6,0,0);
 
-
     // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
     public void endTurn() {
         for(int i = 0; i<3; i++) {
@@ -176,6 +192,7 @@ public class SpelController implements Initializable {
         }
         checkVonkoverslag();
         checkStoffen();
+        checkPersonen();
         veldC.ImageSetterALL();
         spelerC.resetPunten();
     }
@@ -386,6 +403,7 @@ public class SpelController implements Initializable {
     public void updatePunten() {
         APLabel.setText(" " + Integer.toString(spelerC.getSpeler().getActiepunten()));
         EPLabel.setText(" " + Integer.toString(spelerC.getSpeler().getExtrapunten()));
+        BeschadigingLabel.setText(Integer.toString(spel.getBeschadigingCounter()));
         if(spelerC.getSpeler().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
         else spuitTxt.setText(" 4");
         if(spelerC.getSpeler().getRol()==REDDINGSSPECIALIST) {
@@ -411,8 +429,21 @@ public class SpelController implements Initializable {
     }
 
     //TODO checkPersonen()
+    public void checkPersonen() {
+        int count = 0;
+        for(int x = 0; x < 10; x++) {
+            for (int y = 0; y < 8; y++) {
+                vak = veldC.veld.getVakken()[x][y];
+                if (vak.getPersonen().size() > 0 && vak.isVuur()) {
+                    count += vak.getPersonen().size();
+                    vak.getPersonen().clear();
+                }
+            }
+        }
+        for(int i = 0; i>count; i++) addPersoon();
+    }
 
-    //TODO checkWin()
+    // checkWin()
 
     //TODO checkVerlies()
 }

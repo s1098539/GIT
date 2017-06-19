@@ -3,6 +3,7 @@ package Main;
 import Controller.*;
 import Model.Kleur;
 import Model.Rol;
+import Model.Spel;
 import Model.Speler;
 import View.SpelView;
 import javafx.application.Application;
@@ -32,13 +33,15 @@ public class Main2 extends Application{
         SpelerController spelerC = new SpelerController();
         DobbelsteenController dobbelC = new DobbelsteenController();
         ChatController chatC = new ChatController();
+        SpraakController spraakC = new SpraakController();
         LobbyController lobbyC = new LobbyController(spelerC);
 
         veldC.setControllers(spelC,spelerC,dobbelC,chatC);
-        spelC.setControllers(veldC,spelerC,dobbelC,chatC);
+        spelC.setControllers(veldC,spelerC,dobbelC,chatC,spraakC);
         spelerC.setControllers(veldC,spelC,dobbelC,chatC);
         dobbelC.setControllers(veldC,spelC,spelerC,chatC);
         chatC.setControllers(spelC,veldC,spelerC,dobbelC);
+        spraakC.setController(spelC);
 
         /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
         system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
