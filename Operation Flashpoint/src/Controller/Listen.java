@@ -12,7 +12,7 @@ public class Listen extends UnicastRemoteObject implements ListenInterface {
 
 	private static final long serialVersionUID = 1L;
 
-	protected Listen(String serverAddress) throws RemoteException {
+	public Listen(String serverAddress) throws RemoteException {
 		super();
 		System.out.println("Listen: Chat listener v2.0 starting up...");
 		ServerInterface server = null;
