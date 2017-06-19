@@ -450,8 +450,8 @@ public class SpelController implements Initializable {
             y = locatie[1];
             vak = veldC.veld.getVakken()[x][y];
         }
-
-
+        vak.getPersonen().add(veldC.getVeld().getPersonenlijst().get(0));
+        veldC.getVeld().getPersonenlijst().remove(0);
     }
 
     public void updatePunten() {
@@ -470,7 +470,7 @@ public class SpelController implements Initializable {
 
     }
 
-    //TODO checkPersonen()
+    // L, verwijderd personen die op vuur staan en vervangd deze met nieuwe.
     public void checkPersonen() {
         int count = 0;
         for(int x = 0; x < 10; x++) {
