@@ -295,8 +295,6 @@ public class SpelerController {
                 break;
             default: test2.setExtraPunten(0);
         }
-
-
         spelC.updatePunten();
     }
 

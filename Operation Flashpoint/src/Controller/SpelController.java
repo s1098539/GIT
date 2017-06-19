@@ -72,6 +72,7 @@ public class SpelController implements Initializable {
     SpelerController spelerC;
     DobbelsteenController dobbelC;
     ChatController chatC;
+    SpraakController spraakC;
 
     public TextArea getChatArea() {
         return chatArea;
@@ -102,11 +103,12 @@ public class SpelController implements Initializable {
     }
 
     // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC) {
+    public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC, SpraakController spraakC) {
         this.veldC = veldC;
         this.spelerC = spelerC;
         this.dobbelC = dobbelC;
         this.chatC = chatC;
+        this.spraakC = spraakC;
     }
 
     // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.

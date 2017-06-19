@@ -11,7 +11,7 @@ public class SpraakController {
 
     }
 
-    private void setController(SpelController spelC) {
+    public void setController(SpelController spelC) {
         this.spelC = spelC;
     }
 }
