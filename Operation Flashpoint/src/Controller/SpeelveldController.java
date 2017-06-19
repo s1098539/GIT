@@ -2,6 +2,9 @@ package Controller;
 
 
 import Model.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
 
@@ -9,28 +12,62 @@ import static Model.Status.*;
 
 public class SpeelveldController {
 
-
-    Speelveld veld = new Speelveld();
-
+    Speelveld veld;
     SpelController spelC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
+    ChatController chatC;
+
+    public SpeelveldController() {
+
+    }
 
     // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC) {
+    public void setControllers(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC) {
         this.spelC = spelC;
         this.spelerC = spelerC;
         this.dobbelC = dobbelC;
+        this.chatC = chatC;
     }
 
-    public SpeelveldController() {
+    // Lion, dit is het eerste wat deze controller doet, dit stond eerst in de constructor maar dit gaf problemen
+    //          aangezien de controller bij het aanmaken nog niet was verbonden met de andere controllers
+    public void run() {
+        FactoryVakken fv = new FactoryVakken();
+        fv.createVakken();
+        veld = new Speelveld();
+        veld.setVakken(fv.getVakken());
+        veld.setGridPane(new GridPane());
+        veld.getGridPane().setPrefWidth(700);
+        veld.getGridPane().setPrefHeight(640);
+        flowpanesAndImageViewsFactory();
+        flowpanesAndImageViewsPlaatser();
+        setMap();
+        for(int y = 0; y<8; y++) {
+            for (int x = 0; x < 10; x++) {
+                ImageSetterALL();
+            }
+        }
+        spelC.run();
+    }
+
+    // Lion, maakt alle flowpanes en imageviews aan
+    private void flowpanesAndImageViewsFactory() {
+        for(int y = 0; y<8; y++) {
+            for (int x = 0; x < 10; x++) {
+                veld.getFlowPanes()[x][y]=new FlowPane();
+                for(int z = 0; z < 9 ; z++) {
+                    veld.getImageViews()[x][y][z] = new ImageView();
+                }
+            }
+        }
     }
 
     //Lion, zet in elke gridpane spot(op het veld) een flowpane, en in elke flowpane 9 image views
-    private void flowpanesAndImageViewsFactory() {
+    private void flowpanesAndImageViewsPlaatser() {
         for(int y = 0; y<8; y++) {
             for(int x = 0; x<10; x++) {
-                spelC.getGridpane().add(veld.getFlowPanes()[x][y],x,y);
+                veld.getGridPane().add(veld.getFlowPanes()[x][y],x,y);
                 for (int z = 0; z<9; z++) {
                     veld.getFlowPanes()[x][y].getChildren().add(z,veld.getImageViews()[x][y][z]);
                 }
@@ -38,8 +75,26 @@ public class SpeelveldController {
         }
     }
 
+    // Lion, update de volledige view van het speelveld
+    public void ImageSetterALL() {
+        for(int y = 0; y<8; y++) {
+            for (int x = 0; x < 10; x++) {
+                ImageSetter(x,y);
+            }
+        }
+    }
+
+    // Lion, update het vak dat is gegeven en alles dat hier tegen aan ligt
+    public void ImageSetterAround(int x, int y) {
+        ImageSetter(x,y);
+        if(x<9)ImageSetter(x+1,y);
+        if(x>0)ImageSetter(x-1,y);
+        if(y<7)ImageSetter(x,y+1);
+        if(y>0)ImageSetter(x,y-1);
+    }
+
     // Lion, gaat de eigenschappen af van een bepaald vak en laad het goede plaatje in de image View
-    private void ImageSetter(int x, int y) {
+    public void ImageSetter(int x, int y) {
         // Hotspot
         if(veld.getVakken()[x][y].isHotspot()) {
             veld.getImageViews()[x][y][0].setImage(veld.getHotspot());
@@ -113,6 +168,7 @@ public class SpeelveldController {
         }
 
         // Spelers
+        veld.getImageViews()[x][y][4].setImage(veld.getEmpty());
         for(int i = 0; i < 6; i++) {
             if (veld.getVakken()[x][y].getKleuren()[i]!=null) {
                 switch(veld.getVakken()[x][y].getKleuren()[i]) {
@@ -249,6 +305,9 @@ public class SpeelveldController {
     //Lion/Joep, Zet alle muren en deuren op de goeie plek om het spel te beginnen
     public void setMap(){
         //buitenmuren horizontaal
+        veld.getVakken()[9][7].setHotspot(true);
+        veld.getVakken()[9][7].setStoffen(true);
+        veld.getVakken()[9][7].setVuur(true);
         for(int x = 1; x <9; x++) {
             veld.getVakken()[x][0].setOnder(MUUR);
             veld.getVakken()[x][1].setBoven(MUUR);
@@ -338,89 +397,265 @@ public class SpeelveldController {
 
         veld.getVakken()[3][7].setBoven(LEEG);
         veld.getVakken()[3][6].setOnder(LEEG);
-
-
-
     }
 
-    // Lion, handeld obstakels voor explosies en hakken
-    private void doeBeschadiging(int x, int y, Richting richting) {
+    public void doeDeur(int x, int y, Richting richting) {
         Vak vak = veld.getVakken()[x][y];
         switch(richting) {
             case BOVEN:
                 if (y>0) {
                     switch(vak.getBoven()) {
-                        case MUUR:  vak.setBoven(MUUR1);
-                            veld.getVakken()[x][y-1].setOnder(MUUR1);
+                        case DEURD: vak.setBoven(DEURO);
+                            veld.getVakken()[x][y-1].setOnder(DEURO);
                             break;
-                        case MUUR1: vak.setBoven(MUUR2);
-                            veld.getVakken()[x][y-1].setOnder(MUUR2);
-                            break;
-                        case DEURD: vak.setBoven(LEEG);
-                            veld.getVakken()[x][y-1].setOnder(LEEG);
+                        case DEURO: vak.setBoven(DEURD);
+                            veld.getVakken()[x][y-1].setOnder(DEURD);
                             break;
                         default:
-                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Boven)");
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Boven)");
                     }
                 }
                 break;
             case RECHTS:
                 if (x<9) {
                     switch(vak.getRechts()) {
-                        case MUUR:  vak.setRechts(MUUR1);
-                            veld.getVakken()[x+1][y].setLinks(MUUR1);
+                        case DEURD: vak.setRechts(DEURO);
+                            veld.getVakken()[x+1][y].setLinks(DEURO);
                             break;
-                        case MUUR1: vak.setRechts(MUUR2);
-                            veld.getVakken()[x+1][y].setLinks(MUUR2);
-                            break;
-                        case DEURD: vak.setRechts(LEEG);
-                            veld.getVakken()[x+1][y].setLinks(LEEG);
+                        case DEURO: vak.setRechts(DEURD);
+                            veld.getVakken()[x+1][y].setLinks(DEURD);
                             break;
                         default:
-                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Rechts)");
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Rechts)");
                     }
                 }
                 break;
             case LINKS:
                 if (y<7) {
                     switch(vak.getOnder()) {
-                        case MUUR:  vak.setOnder(MUUR1);
-                            veld.getVakken()[x][y+1].setBoven(MUUR1);
+                        case DEURD: vak.setRechts(DEURO);
+                            veld.getVakken()[x][y+1].setLinks(DEURO);
                             break;
-                        case MUUR1: vak.setOnder(MUUR2);
-                            veld.getVakken()[x][y+1].setBoven(MUUR2);
-                            break;
-                        case DEURD: vak.setOnder(LEEG);
-                            veld.getVakken()[x][y+1].setBoven(LEEG);
+                        case DEURO: vak.setRechts(DEURD);
+                            veld.getVakken()[x][y+1].setLinks(DEURD);
                             break;
                         default:
-                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Links)");
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Links)");
                     }
                 }
                 break;
             case ONDER:
                 if (x>0) {
                     switch(vak.getLinks()) {
-                        case MUUR:  vak.setLinks(MUUR1);
-                            veld.getVakken()[x-1][y].setRechts(MUUR1);
+                        case DEURD: vak.setRechts(DEURO);
+                            veld.getVakken()[x-1][y].setLinks(DEURO);
                             break;
-                        case MUUR1: vak.setLinks(MUUR2);
-                            veld.getVakken()[x-1][y].setRechts(MUUR2);
-                            break;
-                        case DEURD: vak.setLinks(LEEG);
-                            veld.getVakken()[x-1][y].setRechts(LEEG);
+                        case DEURO: vak.setRechts(DEURD);
+                            veld.getVakken()[x-1][y].setLinks(DEURD);
                             break;
                         default:
-                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Onder)");
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Onder)");
                     }
                 }
                 break;
             default:
-                System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeBeschadiging.default");
+                System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeDeur.default");
         }
+    }
+
+
+    // Lion, handeld obstakels voor explosies en hakken
+    public void doeBeschadiging(int x, int y, Richting richting) {
+        Vak vak = veld.getVakken()[x][y];
+        if(spelerC.getTest2().getActiepunten()>1 || (spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST && spelerC.getTest2().getActiepunten()>0)) {
+            spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-2);
+            if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+1);
+            switch (richting) {
+                case BOVEN:
+                    if (y > 0) {
+                        switch (vak.getBoven()) {
+                            case MUUR:
+                                vak.setBoven(MUUR1);
+                                veld.getVakken()[x][y - 1].setOnder(MUUR1);
+                                break;
+                            case MUUR1:
+                                vak.setBoven(MUUR2);
+                                veld.getVakken()[x][y - 1].setOnder(MUUR2);
+                                break;
+                            case DEURD:
+                                vak.setBoven(LEEG);
+                                veld.getVakken()[x][y - 1].setOnder(LEEG);
+                                break;
+                            default:
+                                System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Boven)");
+                                spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
+                                if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+                        }
+                    }
+                    break;
+                case RECHTS:
+                    if (x < 9) {
+                        switch (vak.getRechts()) {
+                            case MUUR:
+                                vak.setRechts(MUUR1);
+                                veld.getVakken()[x + 1][y].setLinks(MUUR1);
+                                break;
+                            case MUUR1:
+                                vak.setRechts(MUUR2);
+                                veld.getVakken()[x + 1][y].setLinks(MUUR2);
+                                break;
+                            case DEURD:
+                                vak.setRechts(LEEG);
+                                veld.getVakken()[x + 1][y].setLinks(LEEG);
+                                break;
+                            default:
+                                System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Rechts)");
+                                spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
+                                if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+                        }
+                    }
+                    break;
+                case LINKS:
+                    if (x>0) {
+                        switch (vak.getLinks()) {
+                            case MUUR:
+                                vak.setLinks(MUUR1);
+                                veld.getVakken()[x-1][y].setRechts(MUUR1);
+                                break;
+                            case MUUR1:
+                                vak.setLinks(MUUR2);
+                                veld.getVakken()[x-1][y].setRechts(MUUR2);
+                                break;
+                            case DEURD:
+                                vak.setLinks(LEEG);
+                                veld.getVakken()[x-1][y].setRechts(LEEG);
+                                break;
+                            default:
+                                System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Links)");
+                                spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
+                                if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+                        }
+                    }
+                    break;
+                case ONDER:
+                    if (y < 7) {
+                        switch (vak.getOnder()) {
+                            case MUUR:
+                                vak.setOnder(MUUR1);
+                                veld.getVakken()[x][y+1].setBoven(MUUR1);
+                                break;
+                            case MUUR1:
+                                vak.setOnder(MUUR2);
+                                veld.getVakken()[x][y+1].setBoven(MUUR2);
+                                break;
+                            case DEURD:
+                                vak.setOnder(LEEG);
+                                veld.getVakken()[x][y+1].setBoven(LEEG);
+                                break;
+                            default:
+                                System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Onder)");
+                                spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
+                                if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+                        }
+                    }
+                    break;
+                default:
+                    System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeBeschadiging.default");
+                    spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
+                    if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+            }
+        }
+    }
+
+    public int[] volgPijl(int x, int y){
+        if(y==1 && x < 9 && x > 0){
+            y = 2;
+        }
+        else if(y==6 && x < 9 && x > 0){
+            y = 5;
+        }
+        if(x==1 && y < 6 && y > 1){
+            x = 2;
+        }
+        if(x==8 && y < 6 && y > 1){
+            x = 7;
+        }
+        else if (y==2 || y==5){
+            if (x == 3){
+                x--;
+            }
+            else if (x==6){
+                x++;
+            }
+            else if (y == 2 && (x==4 || x == 5)){
+                y++;
+            }
+            else if (y == 5 && (x==4 || x == 5)){
+                y--;
+            }
+        }
+        else if (x==2 || x==7){
+            if (y==3){
+                y--;
+            }
+            else if (y == 4){
+                y++;
+            }
+            else if (x==2 && y==2){
+                x++;
+                y++;
+            }
+            else if (x==2 && y==5){
+                x++;
+                y--;
+            }
+            else if (x==5 && y==2){
+                x--;
+                y++;
+            }
+            else if (x==5 && y==5){
+                x--;
+                y--;
+            }
+        }
+        else if (y==3 && x < 7 && x > 3) {
+            x--;
+        }
+        else if (y==4 && x < 6 && x > 2) {
+            x++;
+        }
+        else if (y==3 && x==3){
+            y++;
+        }
+        else if (y==4 && x==6){
+            y--;
+        }
+        return new int[]{x,y};
+    }
+
+    public void addSpeler(Kleur kleur, int x, int y) {
+        for(int i = 0; i < 6; i++) {
+            if (veld.getVakken()[x][y].getKleuren()[i] == null) {
+                veld.getVakken()[x][y].getKleuren()[i] = kleur;
+                i+=6;
+            }
+        }
+    }
+
+    public void removeSpeler(Kleur kleur, int x, int y) {
+        for(int i = 0; i < 6; i++) {
+            if (veld.getVakken()[x][y].getKleuren()[i] == kleur) {
+                veld.getVakken()[x][y].getKleuren()[i] = null;
+                i+=6;
+            }
+        }
+    }
 
 
 
 
+    // Getters and Setters down below
+    public Speelveld getVeld() {
+        return veld;
     }
 }

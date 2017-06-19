@@ -1,7 +1,13 @@
 package Controller;
+import java.rmi.*;
+import Model.Message;
 
 /**
- * Created by Joep Oonk on 14-6-2017.
- */
-public interface ListenInterface {
+ * Interface for ChatClient
+*/
+
+public interface ListenInterface extends Remote {
+
+	// Registry ChatClient with server, to be able to receive message from the server
+	void update(Message message)  throws RemoteException;
 }

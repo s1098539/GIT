@@ -1,11 +1,15 @@
 package Main;
 
+import Controller.*;
 import Model.Kleur;
 import Model.Rol;
 import Model.Speler;
 import View.SpelView;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+
+import java.io.PrintStream;
 
 import static javafx.application.Application.launch;
 
@@ -17,12 +21,39 @@ public class Main2 extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        SpelView spelView = new SpelView();
+        SpelController spelC = new SpelController();
+        SpelView spelView = new SpelView(spelC);
         primaryStage.setScene(spelView.getScene());
         primaryStage.setTitle("Flash point");
         primaryStage.show();
         System.out.println("The Application has started.");
-        //TODO DEBUG
+
+        SpeelveldController veldC = new SpeelveldController();
+        SpelerController spelerC = new SpelerController();
+        DobbelsteenController dobbelC = new DobbelsteenController();
+        ChatController chatC = new ChatController();
+
+        veldC.setControllers(spelC,spelerC,dobbelC,chatC);
+        spelC.setControllers(veldC,spelerC,dobbelC,chatC);
+        spelerC.setControllers(veldC,spelC,dobbelC,chatC);
+        dobbelC.setControllers(veldC,spelC,spelerC,chatC);
+        chatC.setControllers(spelC,veldC,spelerC,dobbelC);
+
+        /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
+        system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
+
+        System.setOut(new PrintStream(System.out) {
+            @Override
+            public void write(byte[] buf, int off, int len) {
+                super.write(buf, off, len);
+
+                String msg = new String(buf, off, len);
+
+                spelC.getChatArea().appendText(msg);
+            }
+        });
+
+        veldC.run();
 
 //        Speler test = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
 

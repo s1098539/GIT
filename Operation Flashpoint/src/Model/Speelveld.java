@@ -3,16 +3,15 @@ package Model;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 
-/**
- * Created by Joep Oonk on 14-6-2017.
- */
 public class Speelveld {
-    FactoryVakken factoryVakken = new FactoryVakken();
-    Vak [][] vakken = factoryVakken.getVakken();
+    Vak [][] vakken;
+    GridPane gridPane;
 
     FlowPane[][]flowPanes = new FlowPane[10][8];
     ImageView[][][]imageViews = new ImageView[10][8][9];
+
     Image empty = new Image("Resources/GFX/Empty.png",20,20,false,true);
     Image hotspot = new Image("Resources/GFX/Hotspot.png",20,20,false,true);
     Image persoon = new Image("Resources/GFX/Vraagteken.png",20,20,false,true);
@@ -232,8 +231,20 @@ public class Speelveld {
         return hipstersnor;
     }
 
+    public GridPane getGridPane() {
+        return gridPane;
+    }
+
+    public void setGridPane(GridPane gridPane) {
+        this.gridPane = gridPane;
+    }
+
     public Speelveld() {
 
+    }
+
+    public void print() {
+        System.out.println("SPEELVELD");
     }
 
     public Vak[][] getVakken() {
