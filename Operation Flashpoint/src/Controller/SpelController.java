@@ -1,10 +1,6 @@
 package Controller;
 
-import Model.Persoon;
-import Model.Richting;
-import Model.Rol;
-import Model.Spel;
-import Model.Vak;
+import Model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -17,6 +13,7 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.Collections;
@@ -455,15 +452,12 @@ public class SpelController implements Initializable {
     }
 
     public void updatePunten() {
-        APLabel.setText(" " + Integer.toString(spelerC.getTest2().getActiepunten()));
-        EPLabel.setText(" " + Integer.toString(spelerC.getTest2().getExtrapunten()));
-        HotspotLabel.setText(Integer.toString(spel.getHotspotCounter()));
+        APLabel.setText(" " + Integer.toString(spelerC.getSpeler().getActiepunten()));
+        EPLabel.setText(" " + Integer.toString(spelerC.getSpeler().getExtrapunten()));
         BeschadigingLabel.setText(Integer.toString(spel.getBeschadigingCounter()));
-        GeredLabel.setText(Integer.toString(spel.getGeredCounter()));
-        //TODO DoodLabel
-        if(spelerC.getTest2().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
+        if(spelerC.getSpeler().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
         else spuitTxt.setText(" 4");
-        if(spelerC.getTest2().getRol()==REDDINGSSPECIALIST) {
+        if(spelerC.getSpeler().getRol()==REDDINGSSPECIALIST) {
             hakTxt.setText(" 1");
             blusTxt.setText(" 2");
         } else {
@@ -471,6 +465,18 @@ public class SpelController implements Initializable {
             blusTxt.setText(" 1");
         }
 
+    }
+    public void maakSpeler(String naam, Kleur kleur){
+        spel.setSpelers(new Speler(naam, kleur));
+    }
+    public Speler getHuidigeSpeler(){
+        return spel.getHuidigeSpeler();
+    }
+    public void setHuidigeSpeler(Speler speler){
+        spel.setHuidigeSpeler(speler);
+    }
+    public ArrayList<Speler> getSpelers(){
+        return spel.getSpelers();
     }
 
     // L, verwijderd personen die op vuur staan en vervangd deze met nieuwe.

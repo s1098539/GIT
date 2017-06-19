@@ -36,6 +36,11 @@ public class Speler {
         this.slechtziendmodus = slechtziendmodus;
     }
 
+    public Speler(String naam, Kleur kleur) {
+        this.naam = naam;
+        this.kleur = kleur;
+    }
+
     //Getters
     public String getNaam() {
         return naam;
