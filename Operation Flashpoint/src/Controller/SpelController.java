@@ -2,6 +2,7 @@ package Controller;
 
 import Model.Richting;
 import Model.Rol;
+import Model.Spel;
 import Model.Vak;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -59,10 +60,8 @@ public class SpelController implements Initializable {
     @FXML private Button quit;
     @FXML private Button gebruikershandleiding;
 
-    int murenkapot = 0;
     Vak vak;
     boolean spawnBrandhaard;
-    int hotspots = 6;
     SpeelveldController veldC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
@@ -168,6 +167,8 @@ public class SpelController implements Initializable {
             spelerC.special();
         });
     }
+    //Door: Sam, don't hate if its wrong ok
+    Spel spel = new Spel(6,0,0);
 
 
     // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
@@ -187,19 +188,19 @@ public class SpelController implements Initializable {
         int x = dobbelC.d8.getWaarde();
         int y = dobbelC.d6.getWaarde();
         vak = veldC.veld.getVakken()[x][y];
-        System.out.println(x+" "+y);
+        System.out.println(x + " " + y);
         if (vak.isNiks()) {
             vak.setNiks(false);
             vak.setRook(true);
             vak.setVuur(false);
-            System.out.println("nieuwRook "+x+" "+y);
+            System.out.println("nieuwRook " + x + " " + y);
         } else if (vak.isRook()) {
             vak.setNiks(false);
             vak.setRook(false);
             vak.setVuur(true);
-            System.out.println("nieuwVuur "+x+" "+y);
+            System.out.println("nieuwVuur " + x + " " + y);
         } else if (vak.isVuur()){
-            System.out.println("newExplosie "+x+" "+y);
+            System.out.println("newExplosie " + x + " " + y);
             checkExplosie(x,y);
         }
        checkBrandhaard();
@@ -210,9 +211,9 @@ public class SpelController implements Initializable {
             spawnBrandhaard = true;
             nieuwRook();
         } else if(spawnBrandhaard){
-            if(hotspots>0) {
+            if(spel.getHotspotCounter() > 0) {
                 vak.setHotspot(true);
-                hotspots--;
+                spel.deductHotspot();
             }
             spawnBrandhaard = false;
         }
@@ -242,7 +243,7 @@ public class SpelController implements Initializable {
                 vak = veldC.veld.getVakken()[x][y-teller];
                 if (!vak.boven.isBegaanbaar()){
                     veldC.doeBeschadiging(x, y-teller, richting);
-                    murenkapot++;
+                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -261,7 +262,7 @@ public class SpelController implements Initializable {
                 vak = veldC.veld.getVakken()[x+teller][y];
                 if (!vak.rechts.isBegaanbaar()){
                     veldC.doeBeschadiging((x+teller), y, richting);
-                    murenkapot++;
+                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -280,7 +281,7 @@ public class SpelController implements Initializable {
                 vak = veldC.veld.getVakken()[x][y+teller];
                 if (!vak.onder.isBegaanbaar()){
                     veldC.doeBeschadiging(x, (y + teller), richting);
-                    murenkapot++;
+                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -299,7 +300,7 @@ public class SpelController implements Initializable {
                 vak = veldC.veld.getVakken()[x-teller][y];
                 if (!vak.links.isBegaanbaar()){
                     veldC.doeBeschadiging((x-teller), y, richting);
-                    murenkapot++;
+                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 

@@ -8,6 +8,23 @@ public class Spel {
     int hotspotCounter;
     int beschadigingCounter;
     int geredCounter;
+    int hotspots;
+
+    public int getHotspots() {
+        return hotspots;
+    }
+
+    public void setHotspots(int hotspots) {
+        this.hotspots = hotspots;
+    }
+
+    public void addHotspot(){
+        setHotspotCounter(getHotspots() + 1);
+    }
+
+    public void deductHotspot(){
+        setHotspotCounter(getHotspots() - 1);
+    }
 
     public int getHotspotCounter() {
         return hotspotCounter;
@@ -25,12 +42,20 @@ public class Spel {
         this.beschadigingCounter = beschadigingCounter;
     }
 
+    public void addBeschadiging(){
+        setBeschadigingCounter(getBeschadigingCounter() + 1);
+    }
+
     public int getGeredCounter() {
         return geredCounter;
     }
 
     public void setGeredCounter(int geredCounter) {
         this.geredCounter = geredCounter;
+    }
+
+    public void addGered(){
+
     }
 
     public Spel(int hotspotCounter, int beschadigingCounter, int geredCounter) {
