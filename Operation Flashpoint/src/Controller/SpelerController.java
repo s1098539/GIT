@@ -16,7 +16,7 @@ import static Model.Rol.*;
  * Created by Sam van Schaik on 14-6-2017.
  */
 public class SpelerController {
-    Speler speler;
+    Speler speler=new Speler("sjaak", Kleur.BLAUW);
 
     public void setSpeler() {
         speler = spelC.getHuidigeSpeler();
@@ -286,7 +286,17 @@ public class SpelerController {
             }   break;
         }
         veldC.addSpeler(speler.getKleur(),speler.getX(),speler.getY());
+        persoonOmdraaien();
         veldC.ImageSetter(speler.getX(),speler.getY());
+    }
+
+    private void persoonOmdraaien() {
+        vak = veldC.getVeld().getVakken()[speler.getX()][speler.getY()];
+        if(!vak.getPersonen().isEmpty()) {
+            for(int i = 0; i < vak.getPersonen().size(); i++) {
+                vak.getPersonen().get(0).setOmgedraaid(true);
+            }
+        }
     }
 
     // Lion, reset AP en EP bij het eindigen van een beurt.
