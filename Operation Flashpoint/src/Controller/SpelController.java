@@ -457,7 +457,10 @@ public class SpelController implements Initializable {
     public void updatePunten() {
         APLabel.setText(" " + Integer.toString(spelerC.getTest2().getActiepunten()));
         EPLabel.setText(" " + Integer.toString(spelerC.getTest2().getExtrapunten()));
+        HotspotLabel.setText(Integer.toString(spel.getHotspotCounter()));
         BeschadigingLabel.setText(Integer.toString(spel.getBeschadigingCounter()));
+        GeredLabel.setText(Integer.toString(spel.getGeredCounter()));
+        //TODO DoodLabel
         if(spelerC.getTest2().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
         else spuitTxt.setText(" 4");
         if(spelerC.getTest2().getRol()==REDDINGSSPECIALIST) {

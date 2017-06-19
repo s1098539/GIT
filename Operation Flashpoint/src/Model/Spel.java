@@ -8,8 +8,9 @@ public class Spel {
     int hotspotCounter;
     int beschadigingCounter;
     int geredCounter;
-    int hotspots;
     int doodCounter;
+
+    int hotspots;
 
     public int getDoodCounter() {
         return doodCounter;
