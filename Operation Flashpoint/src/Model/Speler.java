@@ -25,17 +25,6 @@ public class Speler {
 
     boolean slechtziendmodus;
 
-    //Constructors
-    public Speler(String naam, Kleur kleur, String ip, int x, int y, Rol rol, boolean slechtziendmodus) {
-        this.naam = naam;
-        this.kleur = kleur;
-        this.ip = ip;
-        this.x = x;
-        this.y = y;
-        this.rol = rol;
-        this.slechtziendmodus = slechtziendmodus;
-    }
-
     public Speler(String naam, Kleur kleur) {
         this.naam = naam;
         this.kleur = kleur;

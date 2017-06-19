@@ -320,11 +320,5 @@ public class SpelerController {
     public Speler getSpeler() {
         return speler;
     }
-    public void setNaam(String naam){
-        speler.setNaam(naam);
-    }
-    public void setKleur(Kleur kleur){
-        speler.setKleur(kleur);
-    }
 
 }
