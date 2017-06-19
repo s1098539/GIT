@@ -33,11 +33,21 @@ public class LobbyController extends Application {
     private TextField naamText;
     @FXML
     private Button btnHelpNaam;
+    @FXML
+    private Button btnReady;
+    @FXML
+    private Button btnHelpReady;
     Parent root;
     Scene scene;
     Stage stage;
-    public LobbyController(){
+    SpelerController spelerC;
+    SpelController spelC;
+    public LobbyController(SpelerController spelerC, SpelController spelC){
+        this.spelerC = spelerC;
+        this.spelC = spelC;
+    }
 
+    public LobbyController() {
     }
 
     @Override
@@ -73,10 +83,7 @@ public class LobbyController extends Application {
         return model.getKleur();
 
     }
-    public void setSpelerKleur(){
-        //SpelerController.setKleur(getSpelerKleur());
 
-    }
     public void getIP(){
         System.out.println(model.getIp());
     }
@@ -87,12 +94,23 @@ public class LobbyController extends Application {
     }
     @FXML
     public void setNaam() throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/View/SpelView.fxml"));
+        spelC.maakSpeler(naamText.getText(), getSpelerKleur());
+        Parent root = FXMLLoader.load(getClass().getResource("/View/ReadyView.fxml"));
         stage = (Stage) btnNaam.getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
 
+    }
+    @FXML
+    public void setReady() throws IOException{
+        spelC.setHuidigeSpeler(spelC.getSpelers().get(spelC.getSpelers().size()-1));
+        btnReady.setText("Ready");
+        System.out.println("oke");
+    }
+    @FXML
+    public void readyHelp(){
+        System.out.println("deze werkt ook");
     }
 
 

@@ -467,9 +467,9 @@ public class SpeelveldController {
     // Lion, handeld obstakels voor explosies en hakken
     public void doeBeschadiging(int x, int y, Richting richting) {
         Vak vak = veld.getVakken()[x][y];
-        if(spelerC.getTest2().getActiepunten()>1 || (spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST && spelerC.getTest2().getActiepunten()>0)) {
-            spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-2);
-            if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+1);
+        if(spelerC.getSpeler().getActiepunten()>1 || (spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST && spelerC.getSpeler().getActiepunten()>0)) {
+            spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-2);
+            if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+1);
             switch (richting) {
                 case BOVEN:
                     if (y > 0) {
@@ -488,8 +488,8 @@ public class SpeelveldController {
                                 break;
                             default:
                                 System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Boven)");
-                                spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
-                                if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+                                spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
+                                if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
                         }
                     }
                     break;
@@ -510,8 +510,8 @@ public class SpeelveldController {
                                 break;
                             default:
                                 System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Rechts)");
-                                spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
-                                if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+                                spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
+                                if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
                         }
                     }
                     break;
@@ -532,8 +532,8 @@ public class SpeelveldController {
                                 break;
                             default:
                                 System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Links)");
-                                spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
-                                if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+                                spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
+                                if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
                         }
                     }
                     break;
@@ -554,15 +554,15 @@ public class SpeelveldController {
                                 break;
                             default:
                                 System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Onder)");
-                                spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
-                                if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+                                spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
+                                if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
                         }
                     }
                     break;
                 default:
                     System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeBeschadiging.default");
-                    spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()+2);
-                    if(spelerC.getTest2().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getTest2().setActiepunten(spelerC.getTest2().getActiepunten()-1);
+                    spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
+                    if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
             }
         }
     }

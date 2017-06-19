@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -7,9 +8,9 @@
 
 <BorderPane prefHeight="266.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LobbyController">
     <center>
-        <VBox alignment="CENTER" id="vbox" prefHeight="221.0" prefWidth="389.0" BorderPane.alignment="CENTER">
+        <VBox id="vbox" alignment="CENTER" prefHeight="221.0" prefWidth="389.0" BorderPane.alignment="CENTER">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vul hier je naam in">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wanneer iedereen ready is, start het spel">
                     <font>
                         <Font name="Arial" size="12.0" />
                     </font>
@@ -17,19 +18,14 @@
                         <Insets bottom="40.0" />
                     </VBox.margin>
                 </Text>
-                <TextField id="naamTextField" fx:id="naamText" alignment="CENTER" maxWidth="-Infinity" prefHeight="25.0" prefWidth="150.0">
-                    <VBox.margin>
-                        <Insets bottom="20.0" />
-                    </VBox.margin>
-                </TextField>
-                <Button id="btnVolgende" fx:id="btnNaam" mnemonicParsing="false" onAction="#setNaam" text="Volgende" />
+                <Button id="btnReady" fx:id="btnReady" mnemonicParsing="false" onAction="#setReady" prefHeight="92.0" prefWidth="152.0" text="Niet Ready" />
             </children>
         </VBox>
     </center>
     <top>
         <HBox alignment="TOP_RIGHT" prefHeight="55.0" prefWidth="389.0" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="btnHelpNaam" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#naamHelp" text="Help" HBox.hgrow="ALWAYS">
+                <Button fx:id="btnHelpReady" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#readyHelp" text="Help" HBox.hgrow="ALWAYS">
                     <font>
                         <Font size="23.0" />
                     </font>

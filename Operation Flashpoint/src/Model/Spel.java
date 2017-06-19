@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.ArrayList;
+
 /**
  * Created by Sam van Schaik
  */
@@ -9,6 +11,25 @@ public class Spel {
     int beschadigingCounter;
     int geredCounter;
     int hotspots;
+    ArrayList<Speler> spelers = new ArrayList<>();
+    Speler huidigeSpeler;
+
+    public Speler getHuidigeSpeler() {
+        return huidigeSpeler;
+    }
+
+    public void setHuidigeSpeler(Speler huidigeSpeler) {
+        this.huidigeSpeler = huidigeSpeler;
+    }
+
+    public void setSpelers(Speler speler) {
+        if (spelers.size()<7) {
+            this.spelers.add(speler);
+        }
+    }
+    public ArrayList<Speler> getSpelers(){
+        return spelers;
+    }
 
     public int getHotspots() {
         return hotspots;

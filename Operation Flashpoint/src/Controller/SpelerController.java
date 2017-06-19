@@ -16,7 +16,7 @@ import static Model.Rol.*;
  * Created by Sam van Schaik on 14-6-2017.
  */
 public class SpelerController {
-    Speler test2 = new Speler("Sam", Kleur.ROOD, "127", 0, 0, SPECSTOFFEN, true);
+    Speler speler;
     Vak vak;
 
     // Toggles waar door de richting toetsen voor andere functies kunnen worden gebruikt.
@@ -25,7 +25,6 @@ public class SpelerController {
     boolean hakken = false;
 
     public SpelerController() {
-
     }
 
     SpeelveldController veldC;
@@ -53,12 +52,12 @@ public class SpelerController {
         else if(brandblusser) {
             System.out.println("Blussen: Noord");
             blussenActie(BOVEN);
-            veldC.ImageSetterAround(test2.getX(),test2.getY());
+            veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
         else if(hakken) {
             System.out.println("Hakken: Noord");
             hakActie(BOVEN);
-            veldC.ImageSetterAround(test2.getX(),test2.getY());
+            veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
         spelC.updatePunten();
     }
@@ -75,12 +74,12 @@ public class SpelerController {
         else if(brandblusser) {
             System.out.println("Blussen: West");
             blussenActie(LINKS);
-            veldC.ImageSetterAround(test2.getX(),test2.getY());
+            veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
         else if(hakken) {
             System.out.println("Hakken: West");
             hakActie(LINKS);
-            veldC.ImageSetterAround(test2.getX(),test2.getY());
+            veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
         spelC.updatePunten();
     }
@@ -97,12 +96,12 @@ public class SpelerController {
         else if(brandblusser) {
             System.out.println("Blussen: Zuid");
             blussenActie(ONDER);
-            veldC.ImageSetterAround(test2.getX(),test2.getY());
+            veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
         else if(hakken) {
             System.out.println("Hakken: Zuid");
             hakActie(ONDER);
-            veldC.ImageSetterAround(test2.getX(),test2.getY());
+            veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
         spelC.updatePunten();
     }
@@ -119,12 +118,12 @@ public class SpelerController {
         else if(brandblusser) {
             System.out.println("Blussen: Oost");
             blussenActie(RECHTS);
-            veldC.ImageSetterAround(test2.getX(),test2.getY());
+            veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
         else if(hakken) {
             System.out.println("Hakken: Oost");
             hakActie(RECHTS);
-            veldC.ImageSetterAround(test2.getX(),test2.getY());
+            veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
         spelC.updatePunten();
     }
@@ -132,7 +131,7 @@ public class SpelerController {
     // Lion, Als in SpelC op de special knop word gedrukt gaat deze functie lopen
     // Er word gekeken welke rol een speler heeft en verwijst verolgens door naar de bijpassende specla methode.
     public void special() {
-        switch(test2.getRol()) {
+        switch(speler.getRol()) {
             case VERKENNER:     //TODO
                 break;
             case COMMANDANT:    //TODO
@@ -147,11 +146,11 @@ public class SpelerController {
 
     // Lion, dit is de special methode van specStoffen, indien mogelijk word een stoffen fiche verwijderd.
     private void onschadelijkMaken() {
-        int x = test2.getX();
-        int y = test2.getY();
-        if(test2.getActiepunten()>1 && veldC.getVeld().getVakken()[x][y].isStoffen()) {
+        int x = speler.getX();
+        int y = speler.getY();
+        if(speler.getActiepunten()>1 && veldC.getVeld().getVakken()[x][y].isStoffen()) {
             veldC.getVeld().getVakken()[x][y].setStoffen(false);
-            test2.setActiepunten(test2.getActiepunten()-2);
+            speler.setActiepunten(speler.getActiepunten()-2);
             spelC.updatePunten();
             veldC.ImageSetter(x,y);
         }
@@ -188,25 +187,27 @@ public class SpelerController {
     }
 
     private void hakActie(Richting richting) {
-        veldC.doeBeschadiging(test2.getX(),test2.getY(),richting);
+        veldC.doeBeschadiging(speler.getX(),speler.getY(),richting);
     }
 
     private void deurActie(Richting richting) {
-        int x = test2.getX();
-        int y = test2.getY();
+        int x = speler.getX();
+        int y = speler.getY();
         veldC.doeDeur(x,y,richting);
     }
 
 
 
     public void blussenActie(Richting richting) {
-        int x = test2.getX();
-        int y = test2.getY();
+        int x = speler.getX();
+        int y = speler.getY();
         vak = veldC.veld.getVakken()[x][y];
-        if (vak.getObstakelRichting(richting).isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== GASPAKDRAGER && test2.getExtrapunten()>0)) && ((test2.getRol()!=REDDINGSSPECIALIST && test2.getRol()!=DOKTER) || test2.getActiepunten()>1)){
-            if(test2.getRol()==REDDINGSSPECIALIST || test2.getRol()==DOKTER) test2.setActiepunten(test2.getActiepunten()-1);
-            if(test2.getRol()==GASPAKDRAGER && test2.getExtrapunten()>0) test2.setExtraPunten(test2.getExtrapunten()-1);
-            else test2.setActiepunten(test2.getActiepunten()-1);
+        if (vak.getObstakelRichting(richting).isBegaanbaar() && (speler.getActiepunten()>0 || 
+                (speler.getRol()== GASPAKDRAGER && speler.getExtrapunten()>0)) && ((speler.getRol()!=REDDINGSSPECIALIST 
+                && speler.getRol()!=DOKTER) || speler.getActiepunten()>1)){
+            if(speler.getRol()==REDDINGSSPECIALIST || speler.getRol()==DOKTER) speler.setActiepunten(speler.getActiepunten()-1);
+            if(speler.getRol()==GASPAKDRAGER && speler.getExtrapunten()>0) speler.setExtraPunten(speler.getExtrapunten()-1);
+            else speler.setActiepunten(speler.getActiepunten()-1);
 
             switch (richting) {
                 case BOVEN:
@@ -241,58 +242,62 @@ public class SpelerController {
 
     // Lion, verplaats de speler in de gewenste richting indien mogelijk.
     private void beweegwActie(Richting richting) {
-        Vak vak = veldC.veld.getVakken()[test2.getX()][test2.getY()];
-        veldC.removeSpeler(test2.getKleur(),test2.getX(),test2.getY());
-        veldC.ImageSetter(test2.getX(),test2.getY());
+        Vak vak = veldC.veld.getVakken()[speler.getX()][speler.getY()];
+        veldC.removeSpeler(speler.getKleur(),speler.getX(),speler.getY());
+        veldC.ImageSetter(speler.getX(),speler.getY());
         switch(richting) {
-            case BOVEN: if(test2.getY()>0 && vak.boven.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
-                if(test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
-                    test2.setExtraPunten(test2.getExtrapunten()-1);
-                } else test2.setActiepunten(test2.getActiepunten()-1);
-                test2.setY(test2.getY()-1);
-                System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
+            case BOVEN: if(speler.getY()>0 && vak.boven.isBegaanbaar() && (speler.getActiepunten()>0 ||
+                    (speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0))) {
+                if(speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0) {
+                    speler.setExtraPunten(speler.getExtrapunten()-1);
+                } else speler.setActiepunten(speler.getActiepunten()-1);
+                speler.setY(speler.getY()-1);
+                System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
             }   break;
-            case RECHTS: if(test2.getX()<9 && vak.rechts.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
-                if(test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
-                    test2.setExtraPunten(test2.getExtrapunten()-1);
-                } else test2.setActiepunten(test2.getActiepunten()-1);
-                test2.setX(test2.getX()+1);
-                System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
+            case RECHTS: if(speler.getX()<9 && vak.rechts.isBegaanbaar() && (speler.getActiepunten()>0 ||
+                    (speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0))) {
+                if(speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0) {
+                    speler.setExtraPunten(speler.getExtrapunten()-1);
+                } else speler.setActiepunten(speler.getActiepunten()-1);
+                speler.setX(speler.getX()+1);
+                System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
             }   break;
-            case ONDER: if(test2.getY()<7 && vak.onder.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
-                if(test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
-                    test2.setExtraPunten(test2.getExtrapunten()-1);
-                } else test2.setActiepunten(test2.getActiepunten()-1);
-                test2.setY(test2.getY()+1);
-                System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
+            case ONDER: if(speler.getY()<7 && vak.onder.isBegaanbaar() && (speler.getActiepunten()>0 ||
+                    (speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0))) {
+                if(speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0) {
+                    speler.setExtraPunten(speler.getExtrapunten()-1);
+                } else speler.setActiepunten(speler.getActiepunten()-1);
+                speler.setY(speler.getY()+1);
+                System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
             }   break;
-            case LINKS: if(test2.getX()>0 && vak.links.isBegaanbaar() && (test2.getActiepunten()>0 || (test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0))) {
-                if(test2.getRol()== REDDINGSSPECIALIST && test2.getExtrapunten()>0) {
-                    test2.setExtraPunten(test2.getExtrapunten()-1);
-                } else test2.setActiepunten(test2.getActiepunten()-1);
-                test2.setX(test2.getX()-1);
-                System.out.println("*De speler loopt naar: " + test2.getX() + "," + test2.getY() + "*");
+            case LINKS: if(speler.getX()>0 && vak.links.isBegaanbaar() && (speler.getActiepunten()>0 ||
+                    (speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0))) {
+                if(speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0) {
+                    speler.setExtraPunten(speler.getExtrapunten()-1);
+                } else speler.setActiepunten(speler.getActiepunten()-1);
+                speler.setX(speler.getX()-1);
+                System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
             }   break;
         }
-        veldC.addSpeler(test2.getKleur(),test2.getX(),test2.getY());
-        veldC.ImageSetter(test2.getX(),test2.getY());
+        veldC.addSpeler(speler.getKleur(),speler.getX(),speler.getY());
+        veldC.ImageSetter(speler.getX(),speler.getY());
     }
 
     // Lion, reset AP en EP bij het eindigen van een beurt.
     public void resetPunten() {
-        test2.setActiepunten(test2.getActiepunten()+4);
-        if(test2.getActiepunten()>7) test2.setActiepunten(7);
-        if(test2.getRol()==GASPAKDRAGER) test2.setActiepunten(test2.getActiepunten()-1);
-        if(test2.getRol()==MANNETJESPUTTER) test2.setActiepunten(test2.getActiepunten()+1);
+        speler.setActiepunten(speler.getActiepunten()+4);
+        if(speler.getActiepunten()>7) speler.setActiepunten(7);
+        if(speler.getRol()==GASPAKDRAGER) speler.setActiepunten(speler.getActiepunten()-1);
+        if(speler.getRol()==MANNETJESPUTTER) speler.setActiepunten(speler.getActiepunten()+1);
 
-        switch(test2.getRol()) {
-            case REDDINGSSPECIALIST: test2.setExtraPunten(3);
+        switch(speler.getRol()) {
+            case REDDINGSSPECIALIST: speler.setExtraPunten(3);
                 break;
-            case GASPAKDRAGER: test2.setExtraPunten(3);
+            case GASPAKDRAGER: speler.setExtraPunten(3);
                 break;
-            case COMMANDANT: test2.setExtraPunten(2);
+            case COMMANDANT: speler.setExtraPunten(2);
                 break;
-            default: test2.setExtraPunten(0);
+            default: speler.setExtraPunten(0);
         }
 
 
@@ -313,7 +318,14 @@ public class SpelerController {
         stage.setTitle("Gebruikershandleiding");
         stage.show();
     }
-    public Speler getTest2() {
-        return test2;
+    public Speler getSpeler() {
+        return speler;
     }
+    public void setNaam(String naam){
+        speler.setNaam(naam);
+    }
+    public void setKleur(Kleur kleur){
+        speler.setKleur(kleur);
+    }
+
 }
