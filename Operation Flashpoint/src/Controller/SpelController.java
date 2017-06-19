@@ -283,7 +283,6 @@ public class SpelController implements Initializable {
         } else if(spawnBrandhaard){
             if(spel.getHotspotCounter() > 0) {
                 vak.setHotspot(true);
-                spel.deductHotspot();
             }
             spawnBrandhaard = false;
         }
