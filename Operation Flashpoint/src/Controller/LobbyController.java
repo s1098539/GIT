@@ -105,13 +105,24 @@ public class LobbyController extends Application {
     @FXML
     public void setReady() throws IOException{
         spelC.setHuidigeSpeler(spelC.getSpelers().get(spelC.getSpelers().size()-1));
+        model.setReady(spelC.getHuidigeSpeler());
         btnReady.setText("Ready");
         System.out.println("oke");
+        if(checkReady()){
+            System.out.println("oke iedereen ready");
+        }
     }
     @FXML
     public void readyHelp(){
         System.out.println("deze werkt ook");
     }
-
+    private boolean checkReady(){
+        if (spelC.getSpelers().size() == model.getAantalReady()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
 }

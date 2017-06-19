@@ -13,6 +13,7 @@ public class Lobby {
     private Kleur[] kleur;
     int welkespeler=0;
     Kleur SpelerKleur;
+    ArrayList<Speler> ready = new ArrayList<>();
 
 
     public String getIp() {
@@ -34,6 +35,11 @@ public class Lobby {
                 kleur[i] = k;
             }
         }
-
+    }
+    public void setReady(Speler speler){
+        ready.add(speler);
+    }
+    public int getAantalReady(){
+        return ready.size();
     }
 }

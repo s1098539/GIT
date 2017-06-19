@@ -17,6 +17,11 @@ import static Model.Rol.*;
  */
 public class SpelerController {
     Speler speler;
+
+    public void setSpeler() {
+        speler = spelC.getHuidigeSpeler();
+    }
+
     Vak vak;
 
     // Toggles waar door de richting toetsen voor andere functies kunnen worden gebruikt.
