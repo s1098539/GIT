@@ -11,6 +11,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 
 import java.io.PrintStream;
+import java.net.MalformedURLException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 
 import static javafx.application.Application.launch;
 
@@ -37,14 +40,29 @@ public class Main2 extends Application{
         LobbyController lobbyC = new LobbyController(spelerC);
 
         veldC.setControllers(spelC,spelerC,dobbelC,chatC);
-        spelC.setControllers(veldC,spelerC,dobbelC,chatC,spraakC);
+        spelC.setControllers(veldC,spelerC,dobbelC,chatC,spelC,spraakC);
         spelerC.setControllers(veldC,spelC,dobbelC,chatC);
         dobbelC.setControllers(veldC,spelC,spelerC,chatC);
-        chatC.setControllers(spelC,veldC,spelerC,dobbelC);
+        chatC.setControllers(spelC,veldC,spelerC,dobbelC,chatC);
         spraakC.setController(spelC);
 
         /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
         system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
+        String serverAddress = "145.101.88.129";
+        String host = serverAddress;
+        String username = "test";
+        String localMessage = "";
+        try {
+            Server server = new Server();
+            Listen chatlisten = new Listen(host);
+            Send sender = new Send(host, username, localMessage);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (NotBoundException e) {
+            e.printStackTrace();
+        }
 
         System.setOut(new PrintStream(System.out) {
             @Override

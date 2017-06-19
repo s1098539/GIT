@@ -32,7 +32,7 @@ public class SpeelveldController {
 
     // Lion, dit is het eerste wat deze controller doet, dit stond eerst in de constructor maar dit gaf problemen
     //          aangezien de controller bij het aanmaken nog niet was verbonden met de andere controllers
-    public void run() {
+    public void run() throws Exception {
         FactoryVakken fv = new FactoryVakken();
         fv.createVakken();
         veld = new Speelveld();

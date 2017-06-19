@@ -64,7 +64,7 @@ public class Send {
 	public Send(String host, String usernamej, String message) throws RemoteException, MalformedURLException, NotBoundException  {
 		// Get reference to remote object, i.e. the server object (which will consume the message)
 		this.server = (ServerInterface) Naming.lookup("//" + host +"/ChatService");
-		System.out.println("Send: looked up server in RMI Registry; \'ChatService\'");
+		//System.out.println("Send: looked up server in RMI Registry; \'ChatService\'");
 	}
 
 	/**

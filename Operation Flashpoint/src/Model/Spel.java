@@ -30,6 +30,19 @@ public class Spel {
     public ArrayList<Speler> getSpelers(){
         return spelers;
     }
+    int doodCounter;
+
+    public int getDoodCounter() {
+        return doodCounter;
+    }
+
+    public void setDoodCounter(int doodCounter) {
+        this.doodCounter = doodCounter;
+    }
+
+    public void addDood(){
+        doodCounter ++;
+    }
 
     public int getHotspots() {
         return hotspots;
@@ -40,11 +53,11 @@ public class Spel {
     }
 
     public void addHotspot(){
-        setHotspotCounter(getHotspots() + 1);
+        hotspotCounter ++;
     }
 
     public void deductHotspot(){
-        setHotspotCounter(getHotspots() - 1);
+        hotspotCounter --;
     }
 
     public int getHotspotCounter() {

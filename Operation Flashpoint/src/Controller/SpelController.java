@@ -15,8 +15,11 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.util.Collections;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -69,11 +72,50 @@ public class SpelController implements Initializable {
 
     Vak vak;
     boolean spawnBrandhaard;
+    int hotspots = 6;
+    String localMessage = "";
+    String host = "127.0.0.1";
+    String username = "";
+    Send sender;
+
     SpeelveldController veldC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
     ChatController chatC;
     SpraakController spraakC;
+    SpelController spelC;
+
+    public Send getSender() {
+        return sender;
+    }
+
+    public void setSender(Send sender) {
+        this.sender = sender;
+    }
+
+    public String getLocalMessage() {
+        return localMessage;
+    }
+
+    public void setLocalMessage(String localMessage) {
+        this.localMessage = localMessage;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public TextArea getChatArea() {
         return chatArea;
@@ -99,16 +141,19 @@ public class SpelController implements Initializable {
         return quit;
     }
 
+
+
     public SpelController() throws IOException {
 
     }
 
     // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC, SpraakController spraakC) {
+    public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC, SpelController spelC, SpraakController spraakC) {
         this.veldC = veldC;
         this.spelerC = spelerC;
         this.dobbelC = dobbelC;
         this.chatC = chatC;
+        this.spelC = spelC;
         this.spraakC = spraakC;
     }
 
@@ -116,6 +161,17 @@ public class SpelController implements Initializable {
     public void run() {
         stackPane.getChildren().add(veldC.getVeld().getGridPane());
         spelerC.resetPunten();
+
+        try {
+            Send sender = new Send(host, username, localMessage);
+            setSender(sender);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (NotBoundException e) {
+            e.printStackTrace();
+        }
 
         for(Persoon persoon: Persoon.values()){
             veldC.getVeld().getPersonenlijst().add(persoon);
@@ -164,10 +220,10 @@ public class SpelController implements Initializable {
             spelerC.btnhakken();
         });
         stuur.setOnAction(event -> {
-            chatC.sendMessage();
+            chatC.stuurBericht();
         });
-        textInput.setOnAction(event -> {
-            chatC.sendMessage();
+        textInput.setOnAction(e -> {
+            chatC.stuurBericht();
         });
         groterChat.setOnAction(event -> {
             chatC.groterChat();
@@ -203,7 +259,7 @@ public class SpelController implements Initializable {
         int x = dobbelC.d8.getWaarde();
         int y = dobbelC.d6.getWaarde();
         vak = veldC.veld.getVakken()[x][y];
-        System.out.println(x + " " + y);
+        System.out.println(x+" "+y);
         if (vak.isNiks()) {
             vak.setNiks(false);
             vak.setRook(true);
@@ -228,7 +284,6 @@ public class SpelController implements Initializable {
         } else if(spawnBrandhaard){
             if(spel.getHotspotCounter() > 0) {
                 vak.setHotspot(true);
-                spel.deductHotspot();
             }
             spawnBrandhaard = false;
         }
@@ -396,8 +451,8 @@ public class SpelController implements Initializable {
             y = locatie[1];
             vak = veldC.veld.getVakken()[x][y];
         }
-
-
+        vak.getPersonen().add(veldC.getVeld().getPersonenlijst().get(0));
+        veldC.getVeld().getPersonenlijst().remove(0);
     }
 
     public void updatePunten() {
@@ -428,7 +483,7 @@ public class SpelController implements Initializable {
         return spel.getSpelers();
     }
 
-    //TODO checkPersonen()
+    // L, verwijderd personen die op vuur staan en vervangd deze met nieuwe.
     public void checkPersonen() {
         int count = 0;
         for(int x = 0; x < 10; x++) {

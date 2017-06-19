@@ -1,5 +1,8 @@
 package Controller;
 
+import javafx.scene.control.TextField;
+
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,24 +18,22 @@ public class ChatController {
     SpelerController spelerC;
     DobbelsteenController dobbelC;
     SpelController spelC;
+    ChatController chatC;
+
 
 
     // Lion, verbind deze controller met 3 andere
-    public void setControllers(SpelController spelC, SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC) {
+    public void setControllers(SpelController spelC, SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC) {
         this.veldC = veldC;
         this.spelC = spelC;
         this.spelerC = spelerC;
         this.dobbelC = dobbelC;
+        this.chatC = chatC;
 
     }
 
     /* moet nog chatlisten en chatserver object maken, hiervoor moeten we eerst een textinputdialog maken/lobby maken
     om de host in een string op te kunnen slaan */
-
-    String username;
-    String localMessage = "";
-    Send sender;
-    List<String> choices = new ArrayList<>();
 
 
     //chat groter maken
@@ -48,17 +49,15 @@ public class ChatController {
     }
 
     //berichten sturen
-    public void sendMessage() {
-        String localMessage = spelC.getTextInput().getText();
+    public void stuurBericht() {
+        spelC.setLocalMessage(spelC.getTextInput().getText());
         try {
-            sender.sendMessageObject(username, localMessage);
+            spelC.getSender().sendMessageObject(spelC.getUsername(), spelC.getLocalMessage());
         } catch (Exception e1) {
             e1.printStackTrace();
         }
         spelC.getTextInput().setText("");
     }
-
-
 
 }
 

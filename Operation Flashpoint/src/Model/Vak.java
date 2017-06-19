@@ -30,6 +30,7 @@ public class Vak{
 
     public boolean isHotspot() {
         return hotspot;
+
     }
 
     public void setHotspot(boolean hotspot) {
