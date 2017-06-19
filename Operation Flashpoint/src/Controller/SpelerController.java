@@ -59,6 +59,7 @@ public class SpelerController {
             System.out.println("Hakken: Noord");
             hakActie(BOVEN);
             veldC.ImageSetterAround(test2.getX(),test2.getY());
+            spelC.updatePunten();
         }
         spelC.updatePunten();
     }

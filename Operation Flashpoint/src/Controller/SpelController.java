@@ -59,6 +59,9 @@ public class SpelController implements Initializable {
     @FXML private Button veranderKlasse;
     @FXML private Button quit;
     @FXML private Button gebruikershandleiding;
+    @FXML private Label BeschadigingLabel;
+    @FXML private Label HotspotLabel;
+    @FXML private Label GeredLabel;
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -169,7 +172,6 @@ public class SpelController implements Initializable {
     }
     //Door: Sam, don't hate if its wrong ok
     Spel spel = new Spel(6,0,0);
-
 
     // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
     public void endTurn() {
@@ -388,6 +390,7 @@ public class SpelController implements Initializable {
     public void updatePunten() {
         APLabel.setText(" " + Integer.toString(spelerC.getTest2().getActiepunten()));
         EPLabel.setText(" " + Integer.toString(spelerC.getTest2().getExtrapunten()));
+        BeschadigingLabel.setText(Integer.toString(spel.getBeschadigingCounter()));
         if(spelerC.getTest2().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
         else spuitTxt.setText(" 4");
         if(spelerC.getTest2().getRol()==REDDINGSSPECIALIST) {
