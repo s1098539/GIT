@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Persoon;
 import Model.Richting;
 import Model.Rol;
 import Model.Spel;
@@ -15,6 +16,8 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Collections;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import static Model.Rol.BRANDSPUITBEDIENER;
@@ -110,6 +113,12 @@ public class SpelController implements Initializable {
     public void run() {
         stackPane.getChildren().add(veldC.getVeld().getGridPane());
         spelerC.resetPunten();
+
+        for(Persoon persoon: Persoon.values()){
+            veldC.getVeld().getPersonenlijst().add(persoon);
+        }
+        long seed = System.nanoTime();
+        Collections.shuffle(veldC.getVeld().getPersonenlijst(), new Random(seed));
     }
 
     // Lion, keep this one EMPTY and DON'T REMOVE
@@ -180,6 +189,7 @@ public class SpelController implements Initializable {
         }
         checkVonkoverslag();
         checkStoffen();
+        checkPersonen();
         veldC.ImageSetterALL();
         spelerC.resetPunten();
     }
@@ -404,8 +414,21 @@ public class SpelController implements Initializable {
     }
 
     //TODO checkPersonen()
+    public void checkPersonen() {
+        int count = 0;
+        for(int x = 0; x < 10; x++) {
+            for (int y = 0; y < 8; y++) {
+                vak = veldC.veld.getVakken()[x][y];
+                if (vak.getPersonen().size() > 0 && vak.isVuur()) {
+                    count += vak.getPersonen().size();
+                    vak.getPersonen().clear();
+                }
+            }
+        }
+        for(int i = 0; i>count; i++) addPersoon();
+    }
 
-    //TODO checkWin()
+    // checkWin()
 
     //TODO checkVerlies()
 }

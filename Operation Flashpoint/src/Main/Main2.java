@@ -32,6 +32,7 @@ public class Main2 extends Application{
         SpelerController spelerC = new SpelerController();
         DobbelsteenController dobbelC = new DobbelsteenController();
         ChatController chatC = new ChatController();
+        SpraakController spraakC = new SpraakController();
 
         veldC.setControllers(spelC,spelerC,dobbelC,chatC);
         spelC.setControllers(veldC,spelerC,dobbelC,chatC);
