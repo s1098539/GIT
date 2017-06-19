@@ -1,10 +1,6 @@
 package Controller;
 
-import Model.Persoon;
-import Model.Richting;
-import Model.Rol;
-import Model.Spel;
-import Model.Vak;
+import Model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
