@@ -2,11 +2,15 @@ package Controller;
 
 import Model.*;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.Optional;
 
 import static Model.Richting.*;
 import static Model.Rol.*;
@@ -185,8 +189,51 @@ public class SpelerController {
     private void brandweerwagenActie(){
         System.out.println("Actie: Gebruik brandweerwagen");
     }
-    private void oppakkenActie(){
-        System.out.println("Actie: Oppakken");
+
+    public void oppakkenActie(){
+        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
+        if(speler.isStof() || speler.getPersoon() !=null){
+            if(speler.isStof()){
+                speler.setStof(false);
+                vak.setStoffen(true);
+            }
+            else{
+                vak.setPersonen(speler.getPersoon());
+                speler.setPersoon(null);
+            }
+        }
+
+        else if(vak.isStoffen() && !vak.getPersonen().isEmpty()){
+            ArrayList<String> keuzes = new ArrayList<>();
+            keuzes.add("Gevaarlijke stoffen");
+            keuzes.add("Persoon van aandacht");
+            //De choicedialog maken
+            ChoiceDialog<String> oppakkeus = new ChoiceDialog<>("Oppak object", keuzes);
+            oppakkeus.setTitle("Object kiezen");
+            oppakkeus.setHeaderText("Kies het object dat je wilt oppakken");
+            oppakkeus.setContentText("Object:");
+
+            Optional<String> keuzeObject = oppakkeus.showAndWait();
+            if (keuzeObject.isPresent() && keuzeObject.get() != "Oppak object"){
+                if (keuzeObject.get() == "Gevaarlijke stoffen"){
+                    speler.setStof(true);
+                    vak.setStoffen(false);
+                }
+                else {
+                    speler.setPersoon(vak.getPersonen().get(0));
+                    vak.getPersonen().remove(0);
+                }
+            }
+        }
+        else if (vak.isStoffen()){
+            speler.setStof(true);
+            vak.setStoffen(false);
+        }
+        else if (!vak.getPersonen().isEmpty()){
+            speler.setPersoon(vak.getPersonen().get(0));
+            vak.getPersonen().remove(0);
+        }
+        veldC.ImageSetter(speler.getX(),speler.getY());
     }
 
     private void hakActie(Richting richting) {

@@ -240,6 +240,9 @@ public class SpelController implements Initializable {
         imgRolswap.setOnMouseClicked(event -> {
             veranderKlasse();
         });
+        imgPickup.setOnMouseClicked(event -> {
+            spelerC.oppakkenActie();
+        });
 
     }
     //Door: Sam, don't hate if its wrong ok
