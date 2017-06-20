@@ -28,65 +28,107 @@
             <children>
                 <HBox prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Button fx:id="options" mnemonicParsing="false" prefHeight="50.0" prefWidth="75.0" text="Options" />
-                        <HBox prefHeight="50.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
-                        <Button fx:id="gebruikershandleiding" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" text="Handleiding" textAlignment="CENTER" />
+                        <Button fx:id="options" mnemonicParsing="false" prefHeight="50.0" prefWidth="152.0" text="Options">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+                        <Button fx:id="gebruikershandleiding" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="📖" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
                     </children>
                 </HBox>
-                <HBox prefHeight="50.0" prefWidth="600.0">
+                <HBox prefHeight="50.0" prefWidth="805.0">
                     <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0" />
-                        <HBox prefHeight="50.0" prefWidth="311.0">
+                        <HBox prefHeight="50.0" prefWidth="745.0" HBox.hgrow="ALWAYS">
                             <children>
-                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                <HBox prefHeight="50.0" prefWidth="125.0">
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@../Resources/GFX/Hotspot.png" />
                                             </image>
                                         </ImageView>
-                                        <Label fx:id="HotspotLebel" prefHeight="50.0" prefWidth="50.0" text="X/X">
+                                        <Label fx:id="HotspotLebel" prefHeight="50.0" prefWidth="75.0" text="0 / 6">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
                                         </Label>
                                     </children>
                                 </HBox>
-                                <HBox prefHeight="100.0" prefWidth="200.0">
-                                    <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../Resources/GFX/Vraagteken.png" />
-                                            </image>
-                                        </ImageView>
-                                        <Label fx:id="GeredLabel" prefHeight="50.0" prefWidth="50.0" text="X/X">
-                                            <font>
-                                                <Font size="25.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </HBox>
-                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                <HBox prefHeight="100.0" prefWidth="175.0">
                                     <children>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@../Resources/GFX/Muur1kapot.png" />
                                             </image>
                                         </ImageView>
-                                        <Label fx:id="BeschadigingLabel" prefHeight="75.0" prefWidth="94.0" text="X/X">
+                                        <Label fx:id="BeschadigingLabel" prefHeight="50.0" prefWidth="125.0" text="00 / 24">
+                                            <font>
+                                                <Font size="25.0" />
+                                            </font>
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="50.0" prefWidth="125.0">
+                                    <children>
+                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Resources/GFX/Vraagteken_gered.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label fx:id="GeredLabel" minWidth="74.0" prefHeight="50.0" prefWidth="74.0" text="0 / 7">
                                             <font>
                                                 <Font size="25.0" />
                                             </font>
                                         </Label>
                                     </children>
                                 </HBox>
-                            </children>
+                        <HBox prefHeight="50.0" prefWidth="125.0">
+                           <children>
+                              <ImageView fx:id="doodCounter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resources/GFX/Vraagteken_dood.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="GeredLabel1" prefHeight="50.0" prefWidth="92.0" text="0 / 3">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
                         </HBox>
-                        <HBox prefHeight="50.0" prefWidth="25.0" HBox.hgrow="ALWAYS" />
-                        <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="191.0">
-                            <children>
-                                <HBox prefHeight="50.0" prefWidth="98.0" />
-                                <HBox prefHeight="50.0" prefWidth="119.0" />
+                        <HBox prefHeight="50.0" prefWidth="119.0">
+                           <children>
+                              <ImageView fx:id="imgOpenendeur1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resources/GFX/EP.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="EPLabel" prefHeight="50.0" prefWidth="79.0" text=" 0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="125.0">
+                           <children>
+                              <ImageView fx:id="imgPickup1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resources/GFX/AP.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="APLabel" prefHeight="50.0" prefWidth="72.0" text=" 0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
                             </children>
                         </HBox>
                     </children>
@@ -116,7 +158,7 @@
                                 <Image url="@../Resources/GFX/Brandweerblauw.png" />
                             </image>
                         </ImageView>
-                        <Label prefHeight="50.0" prefWidth="100.0" text="USER1" HBox.hgrow="ALWAYS">
+                        <Label fx:id="user1" prefHeight="50.0" prefWidth="100.0" text="USER1" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -139,7 +181,7 @@
                                 <Image url="@../Resources/GFX/Brandweergeel.png" />
                             </image>
                         </ImageView>
-                        <Label prefHeight="50.0" prefWidth="100.0" text="USER2" HBox.hgrow="ALWAYS">
+                        <Label fx:id="user2" prefHeight="50.0" prefWidth="100.0" text="USER2" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -156,7 +198,7 @@
                                 <Image url="@../Resources/GFX/Brandweergroen.png" />
                             </image>
                         </ImageView>
-                        <Label prefHeight="50.0" prefWidth="100.0" text="USER3" HBox.hgrow="ALWAYS">
+                        <Label fx:id="user3" prefHeight="50.0" prefWidth="100.0" text="USER3" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -173,7 +215,7 @@
                                 <Image url="@../Resources/GFX/Brandweeroranje.png" />
                             </image>
                         </ImageView>
-                        <Label prefHeight="50.0" prefWidth="100.0" text="USER4" HBox.hgrow="ALWAYS">
+                        <Label fx:id="user4" prefHeight="50.0" prefWidth="100.0" text="USER4" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -190,7 +232,7 @@
                                 <Image url="@../Resources/GFX/Brandweerrood.png" />
                             </image>
                         </ImageView>
-                        <Label prefHeight="50.0" prefWidth="100.0" text="USER5" HBox.hgrow="ALWAYS">
+                        <Label fx:id="user5" prefHeight="50.0" prefWidth="100.0" text="USER5" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -207,7 +249,7 @@
                                 <Image url="@../Resources/GFX/Brandweerzwart.png" />
                             </image>
                         </ImageView>
-                        <Label prefHeight="50.0" prefWidth="100.0" text="USER6" HBox.hgrow="ALWAYS">
+                        <Label fx:id="user6" prefHeight="50.0" prefWidth="100.0" text="USER6" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -238,30 +280,7 @@
                      <children>
                         <HBox prefHeight="50.0" prefWidth="200.0">
                            <children>
-                              <ImageView fx:id="imgPickup1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Resources/GFX/Vraagteken.png" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="APLabel" prefHeight="50.0" prefWidth="50.0" text=" 0">
-                                 <font>
-                                    <Font size="25.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="50.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fx:id="imgOpenendeur1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Resources/GFX/Vraagteken.png" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="EPLabel" prefHeight="50.0" prefWidth="50.0" text=" 0">
-                                 <font>
-                                    <Font size="25.0" />
-                                 </font>
-                              </Label>
+                                    <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="191.0" />
                            </children>
                         </HBox>
                      </children>
