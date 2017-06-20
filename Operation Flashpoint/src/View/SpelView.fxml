@@ -155,7 +155,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Resources/GFX/Brandweerblauw.png" />
+                                <Image url="@../Resources/GFX/Brandweerblauw50px.png" />
                             </image>
                         </ImageView>
                         <Label fx:id="user1" prefHeight="50.0" prefWidth="100.0" text="USER1" HBox.hgrow="ALWAYS">
@@ -178,7 +178,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Resources/GFX/Brandweergeel.png" />
+                                <Image url="@../Resources/GFX/Brandweergeel50px.png" />
                             </image>
                         </ImageView>
                         <Label fx:id="user2" prefHeight="50.0" prefWidth="100.0" text="USER2" HBox.hgrow="ALWAYS">
@@ -195,7 +195,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Resources/GFX/Brandweergroen.png" />
+                                <Image url="@../Resources/GFX/Brandweergroen50px.png" />
                             </image>
                         </ImageView>
                         <Label fx:id="user3" prefHeight="50.0" prefWidth="100.0" text="USER3" HBox.hgrow="ALWAYS">
@@ -212,7 +212,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Resources/GFX/Brandweeroranje.png" />
+                                <Image url="@../Resources/GFX/Brandweeroranje50px.png" />
                             </image>
                         </ImageView>
                         <Label fx:id="user4" prefHeight="50.0" prefWidth="100.0" text="USER4" HBox.hgrow="ALWAYS">
@@ -229,7 +229,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Resources/GFX/Brandweerrood.png" />
+                                <Image url="@../Resources/GFX/Brandweerrood50px.png" />
                             </image>
                         </ImageView>
                         <Label fx:id="user5" prefHeight="50.0" prefWidth="100.0" text="USER5" HBox.hgrow="ALWAYS">
@@ -246,7 +246,7 @@
                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Resources/GFX/Brandweerzwart.png" />
+                                <Image url="@../Resources/GFX/Brandweerzwart50px.png" />
                             </image>
                         </ImageView>
                         <Label fx:id="user6" prefHeight="50.0" prefWidth="100.0" text="USER6" HBox.hgrow="ALWAYS">
