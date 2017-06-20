@@ -32,19 +32,15 @@ public class SpraakController {
     public void playEindigZet() throws Exception{
         int waitTime = 3000;
         audioPlayer(audio.getEindig1());
-        audio.wait(waitTime);
+
         audioPlayer(audio.getEindig2());
-        audio.wait(waitTime);
+
         audioPlayer(audio.getEindig3());
-        audio.wait(waitTime);
+
     }
 
     public void playHakken() throws Exception{
-        int waitTime=3000;
         audioPlayer(audio.getHakken1());
-        audio.wait(waitTime);
-        audioPlayer(audio.getHakken2());
-        audio.wait(waitTime);
     }
 
 }
