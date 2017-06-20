@@ -154,8 +154,8 @@ public class SpelerController {
     private void onschadelijkMaken() {
         int x = speler.getX();
         int y = speler.getY();
-        if(speler.getActiepunten()>1 && veldC.getVeld().getVakken()[x][y].isStoffen()) {
-            veldC.getVeld().getVakken()[x][y].setStoffen(false);
+        if(speler.getActiepunten()>1 && veldC.getVeldD().getVakken()[x][y].isStoffen()) {
+            veldC.getVeldD().getVakken()[x][y].setStoffen(false);
             speler.setActiepunten(speler.getActiepunten()-2);
             spelC.updatePunten();
             veldC.ImageSetter(x,y);
@@ -207,7 +207,7 @@ public class SpelerController {
     public void blussenActie(Richting richting) {
         int x = speler.getX();
         int y = speler.getY();
-        vak = veldC.veld.getVakken()[x][y];
+        vak = veldC.veldD.getVakken()[x][y];
         if (vak.getObstakelRichting(richting).isBegaanbaar() && (speler.getActiepunten()>0 ||
                 (speler.getRol()== GASPAKDRAGER && speler.getExtrapunten()>0)) && ((speler.getRol()!=REDDINGSSPECIALIST
                 && speler.getRol()!=DOKTER) || speler.getActiepunten()>1)){
@@ -217,16 +217,16 @@ public class SpelerController {
 
             switch (richting) {
                 case BOVEN:
-                    vak = veldC.veld.getVakken()[x][y-1];
+                    vak = veldC.veldD.getVakken()[x][y-1];
                     break;
                 case RECHTS:
-                    vak = veldC.veld.getVakken()[x+1][y];
+                    vak = veldC.veldD.getVakken()[x+1][y];
                     break;
                 case ONDER:
-                    vak = veldC.veld.getVakken()[x][y+1];
+                    vak = veldC.veldD.getVakken()[x][y+1];
                     break;
                 case LINKS:
-                    vak = veldC.veld.getVakken()[x-1][y];
+                    vak = veldC.veldD.getVakken()[x-1][y];
                     break;
             }
             if(vak.isRook()) {
@@ -248,7 +248,7 @@ public class SpelerController {
 
     // Lion, verplaats de speler in de gewenste richting indien mogelijk.
     private void beweegwActie(Richting richting) {
-        Vak vak = veldC.veld.getVakken()[speler.getX()][speler.getY()];
+        Vak vak = veldC.veldD.getVakken()[speler.getX()][speler.getY()];
         veldC.removeSpeler(speler.getKleur(),speler.getX(),speler.getY());
         veldC.ImageSetter(speler.getX(),speler.getY());
         switch(richting) {
@@ -291,7 +291,7 @@ public class SpelerController {
     }
 
     private void persoonOmdraaien() {
-        vak = veldC.getVeld().getVakken()[speler.getX()][speler.getY()];
+        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
         if(!vak.getPersonen().isEmpty()) {
             for(int i = 0; i < vak.getPersonen().size(); i++) {
                 vak.getPersonen().get(0).setOmgedraaid(true);

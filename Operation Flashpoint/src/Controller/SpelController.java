@@ -155,7 +155,7 @@ public class SpelController implements Initializable {
 
     // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
-        stackPane.getChildren().add(veldC.getVeld().getGridPane());
+        stackPane.getChildren().add(veldC.getVeldI().getGridPane());
         spelerC.resetPunten();
 
         try {
@@ -170,10 +170,10 @@ public class SpelController implements Initializable {
         }
 
         for(Persoon persoon: Persoon.values()){
-            veldC.getVeld().getPersonenlijst().add(persoon);
+            veldC.getVeldD().getPersonenlijst().add(persoon);
         }
         long seed = System.nanoTime();
-        Collections.shuffle(veldC.getVeld().getPersonenlijst(), new Random(seed));
+        Collections.shuffle(veldC.getVeldD().getPersonenlijst(), new Random(seed));
     }
 
     // Lion, keep this one EMPTY and DON'T REMOVE
@@ -254,7 +254,7 @@ public class SpelController implements Initializable {
         dobbelC.d8.gooi();
         int x = dobbelC.d8.getWaarde();
         int y = dobbelC.d6.getWaarde();
-        vak = veldC.veld.getVakken()[x][y];
+        vak = veldC.veldD.getVakken()[x][y];
         System.out.println(x+" "+y);
         if (vak.isNiks()) {
             vak.setNiks(false);
@@ -289,7 +289,7 @@ public class SpelController implements Initializable {
         Vak vak;
         for(int x = 1; x < 9; x++) {
             for(int y = 1; y < 7; y++) {
-                vak=veldC.veld.getVakken()[x][y];
+                vak=veldC.veldD.getVakken()[x][y];
                 if(vak.isStoffen() && vak.isVuur()) {
                     checkExplosie(x,y);
                     vak.setStoffen(false);
@@ -306,7 +306,7 @@ public class SpelController implements Initializable {
             teller = 0;
             doorgaan = true;
             while (richting == Richting.BOVEN && doorgaan && ((y - teller) >= 1)) {
-                vak = veldC.veld.getVakken()[x][y-teller];
+                vak = veldC.veldD.getVakken()[x][y-teller];
                 if (!vak.boven.isBegaanbaar()){
                     veldC.doeBeschadiging(x, y-teller, richting);
                     spel.addBeschadiging();
@@ -315,7 +315,7 @@ public class SpelController implements Initializable {
 
                 else {
                     teller++;
-                    vak = veldC.veld.getVakken()[x][y-teller];
+                    vak = veldC.veldD.getVakken()[x][y-teller];
                     if (!vak.isVuur()) {
                         doorgaan = false;
                         vak.setNiks(false);
@@ -325,7 +325,7 @@ public class SpelController implements Initializable {
                 }
             }
             while (richting == Richting.RECHTS && doorgaan && ((x + teller) <= 8)) {
-                vak = veldC.veld.getVakken()[x+teller][y];
+                vak = veldC.veldD.getVakken()[x+teller][y];
                 if (!vak.rechts.isBegaanbaar()){
                     veldC.doeBeschadiging((x+teller), y, richting);
                     spel.addBeschadiging();
@@ -334,7 +334,7 @@ public class SpelController implements Initializable {
 
                 else {
                     teller++;
-                    vak = veldC.veld.getVakken()[x+teller][y];
+                    vak = veldC.veldD.getVakken()[x+teller][y];
                     if (!vak.isVuur()) {
                         doorgaan = false;
                         vak.setNiks(false);
@@ -344,7 +344,7 @@ public class SpelController implements Initializable {
                 }
             }
             while (richting == Richting.ONDER && doorgaan && ((y + teller) <= 6)) {
-                vak = veldC.veld.getVakken()[x][y+teller];
+                vak = veldC.veldD.getVakken()[x][y+teller];
                 if (!vak.onder.isBegaanbaar()){
                     veldC.doeBeschadiging(x, (y + teller), richting);
                     spel.addBeschadiging();
@@ -353,7 +353,7 @@ public class SpelController implements Initializable {
 
                 else {
                     teller++;
-                    vak = veldC.veld.getVakken()[x][y+teller];
+                    vak = veldC.veldD.getVakken()[x][y+teller];
                     if (!vak.isVuur()) {
                         doorgaan = false;
                         vak.setNiks(false);
@@ -363,7 +363,7 @@ public class SpelController implements Initializable {
                 }
             }
             while (richting == Richting.LINKS && doorgaan && ((x - teller) >= 1)) {
-                vak = veldC.veld.getVakken()[x-teller][y];
+                vak = veldC.veldD.getVakken()[x-teller][y];
                 if (!vak.links.isBegaanbaar()){
                     veldC.doeBeschadiging((x-teller), y, richting);
                     spel.addBeschadiging();
@@ -372,7 +372,7 @@ public class SpelController implements Initializable {
 
                 else {
                     teller++;
-                    vak = veldC.veld.getVakken()[x-teller][y];
+                    vak = veldC.veldD.getVakken()[x-teller][y];
                     if (!vak.isVuur()) {
                         doorgaan = false;
                         vak.setNiks(false);
@@ -392,29 +392,29 @@ public class SpelController implements Initializable {
             loop = false;
             for (int x = 0; x < 10; x++) {
                 for (int y = 0; y < 8; y++) {
-                    vak = veldC.veld.getVakken()[x][y];
+                    vak = veldC.veldD.getVakken()[x][y];
                     if (vak.isVuur()) {
                         for (Richting richting: Richting.values()) {
                             if (vak.getObstakelRichting(richting).isBegaanbaar()) {
                                 switch (richting) {
                                     case BOVEN:
                                         if (y > 0) {
-                                            vak2 = veldC.veld.getVakken()[x][y-1];
+                                            vak2 = veldC.veldD.getVakken()[x][y-1];
                                         }
                                         break;
                                     case RECHTS:
                                         if (x < 9) {
-                                            vak2 = veldC.veld.getVakken()[x+1][y];
+                                            vak2 = veldC.veldD.getVakken()[x+1][y];
                                         }
                                         break;
                                     case ONDER:
                                         if (y < 7) {
-                                            vak2 = veldC.veld.getVakken()[x][y+1];
+                                            vak2 = veldC.veldD.getVakken()[x][y+1];
                                         }
                                         break;
                                     case LINKS:
                                         if (x > 0) {
-                                            vak2 = veldC.veld.getVakken()[x-1][y];
+                                            vak2 = veldC.veldD.getVakken()[x-1][y];
                                         }
                                         break;
                                 }
@@ -440,15 +440,15 @@ public class SpelController implements Initializable {
         int x = dobbelC.d8.getWaarde();
         int y = dobbelC.d6.getWaarde();
         int[] locatie = new int[2];
-        vak = veldC.veld.getVakken()[x][y];
+        vak = veldC.veldD.getVakken()[x][y];
         while(vak.isVuur()){
             locatie = veldC.volgPijl(x,y);
             x = locatie[0];
             y = locatie[1];
-            vak = veldC.veld.getVakken()[x][y];
+            vak = veldC.veldD.getVakken()[x][y];
         }
-        vak.getPersonen().add(veldC.getVeld().getPersonenlijst().get(0));
-        veldC.getVeld().getPersonenlijst().remove(0);
+        vak.getPersonen().add(veldC.getVeldD().getPersonenlijst().get(0));
+        veldC.getVeldD().getPersonenlijst().remove(0);
     }
 
     public void updatePunten() {
@@ -485,7 +485,7 @@ public class SpelController implements Initializable {
         int count = 0;
         for(int x = 0; x < 10; x++) {
             for (int y = 0; y < 8; y++) {
-                vak = veldC.veld.getVakken()[x][y];
+                vak = veldC.veldD.getVakken()[x][y];
                 if (vak.getPersonen().size() > 0 && vak.isVuur()) {
                     count += vak.getPersonen().size();
                     vak.getPersonen().clear();
