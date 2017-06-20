@@ -461,6 +461,7 @@ public class SpelController implements Initializable {
     public void updatePunten() {
         APLabel.setText(" " + Integer.toString(spelerC.getSpeler().getActiepunten()));
         EPLabel.setText(" " + Integer.toString(spelerC.getSpeler().getExtrapunten()));
+        BeschadigingLabel.setText(" " + Integer.toString((int)spelC.spel.getBeschadigingCounter())+" / 24");
         if(spelerC.getSpeler().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
         else spuitTxt.setText(" 4");
         if(spelerC.getSpeler().getRol()==REDDINGSSPECIALIST) {
@@ -526,9 +527,8 @@ public class SpelController implements Initializable {
             System.out.println("Je hebt gekozen voor de klasse: " + klasse);
         }
     }
-
-    public void addBeschadiging() {
-        spel.setBeschadigingCounter(spel.getBeschadigingCounter()+1);
+    public void addBeschadigingCount() {
+        spel.setBeschadigingCounter(spel.getBeschadigingCounter()+.5);
     }
 }
 

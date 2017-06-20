@@ -245,9 +245,11 @@ public class SpelerController {
         if(speler.getRol()==REDDINGSSPECIALIST) {
             if(speler.getActiepunten()>0 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
                 speler.setActiepunten(speler.getActiepunten()-1);
+                spelC.addBeschadigingCount();
             }
         } else if(speler.getActiepunten()>1 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
                     speler.setActiepunten(speler.getActiepunten()-2);
+                    spelC.addBeschadigingCount();
         }
     }
 

@@ -478,7 +478,7 @@
         </VBox>
     </right>
     <center>
-        <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="602.0" BorderPane.alignment="CENTER">
+        <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <BorderPane.margin>
                 <Insets bottom="60.0" left="10.0" right="10.0" top="10.0" />
             </BorderPane.margin>
