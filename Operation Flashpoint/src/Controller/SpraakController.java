@@ -1,8 +1,9 @@
 package Controller;
 
-/**
- * Created by Joep Oonk on 14-6-2017.
- */
+import Model.Spraak;
+
+import static java.lang.Thread.sleep;
+
 public class SpraakController {
 
     SpelController spelC;

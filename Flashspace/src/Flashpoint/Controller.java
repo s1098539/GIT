@@ -1,6 +1,7 @@
 package Flashpoint;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -8,6 +9,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -15,10 +17,11 @@ import java.util.Optional;
 import java.io.PrintStream;
 
 import java.rmi.RemoteException;
+import java.util.ResourceBundle;
 
 import static java.lang.Thread.sleep;
 
-public class Controller {
+public class Controller implements Initializable {
     @FXML
     private GridPane gridpane;
     @FXML
@@ -111,8 +114,16 @@ public class Controller {
 //    private Boolean hakken = false;
 //    private Boolean openendeur;
 //
+
     @FXML
     public void initialize() throws Exception {
+    }
+
+    ;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
         Speelveld veld = new Speelveld();
 /*        for(int x = 0; x<10; x++) {
             for(int y = 0; y<8; y++) {
@@ -128,24 +139,327 @@ public class Controller {
         // }
 
         ViewSpeelveld view = new ViewSpeelveld();
-        Speler speler = new Speler("Joep", Kleur.GROEN, 2,7, veld);
+        Speler speler = new Speler("Joep", Kleur.GROEN, 2, 7, veld);
         Spel ba = new Spel(veld, 6);
         view.imageViewsFactory();
         System.out.println("hoi");
         view.flowPanesFactory();
         int teller = 0;
-        for(int y = 0; y<8; y++) {
-            for(int x = 0; x<10; x++) {
-                gridpane.add(view.getFlowPanes()[teller],x,y);
+        for (int y = 0; y < 8; y++) {
+            for (int x = 0; x < 10; x++) {
+                gridpane.add(view.getFlowPanes()[teller], x, y);
                 teller++;
             }
         }
-        veld.getVak(5,5).setHotspot(true);
+        veld.getVak(5, 5).setHotspot(true);
         veld.setMuren();
-        veld.getVak(3,3).vuurPlaats(Fiche.VUUR);
+        veld.getVak(3, 3).vuurPlaats(Fiche.VUUR);
         view.imageSetter(veld, speler);
 
+        Audio up = new Audio();
+        Audio down = new Audio();
+        Audio left = new Audio();
+        Audio right = new Audio();
+        Audio hak = new Audio();
+        Audio deur = new Audio();
+        Audio blussen = new Audio();
+        Audio rijden = new Audio();
+        Audio wagenblussen = new Audio();
+        Audio pickup = new Audio();
+        Audio rolswap = new Audio();
+        Audio special = new Audio();
+        Audio et = new Audio();
 
+        btnET.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer = 3000;
+                et.playEindigtZetKnop();
+                sleep(sleepTimer);
+                et.playEindigZetAPOvergebleven();
+                sleep(sleepTimer);
+                et.playEindigZetVolgendeSpelerKrijgtBeurt();
+                sleep(sleepTimer);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        btnSpecial.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer = 4000;
+                special.playKlasseSpecial();
+                sleep(sleepTimer);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        imgRolswap.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer = 4000;
+                rolswap.playRolWisselen2AP();
+                sleep(sleepTimer);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        imgPickup.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer = 4000;
+                pickup.playOppakkenKostGeenAP();
+                sleep(sleepTimer);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        imgWagenblussen.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer = 4300;
+                int sleepTimer2 = 6000;
+                wagenblussen.playBrandspuitBedienen4AP();
+                sleep(sleepTimer);
+                wagenblussen.playBrandspuitbedienerKost2AP();
+                sleep(sleepTimer);
+                wagenblussen.playBrandspuitbedienerReroll();
+                sleep(sleepTimer2);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        imgRijden.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer = 4500;
+                int sleepTimer2 = 5500;
+                rijden.playRijdenKost2AP();
+                sleep(sleepTimer);
+                rijden.playRijdenMeerijdenKostGeenAP();
+                sleep(sleepTimer2);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        imgHakken.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer = 3000;
+                hak.playHakken2AP();
+                sleep(sleepTimer);
+                hak.playHakken1APReddingsspecialist();
+                sleep(sleepTimer);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        imgOpenendeur.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer = 4500;
+                deur.playDeurOpenenSluiten1AP();
+                sleep(sleepTimer);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        imgBrandblusser.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer = 3000;
+                blussen.playVuurBlussen2AP();
+                sleep(sleepTimer);
+                blussen.playVuurNaarRook1AP();
+                sleep(sleepTimer);
+                blussen.playRookBlussen1AP();
+                sleep(sleepTimer);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        btnUP.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
+                up.playBewegen1AP();
+                sleep(sleepTimer1);
+                up.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                up.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                up.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                up.playVuurBewegen2AP();
+                sleep(sleepTimer4);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        btnDOWN.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
+                down.playBewegen1AP();
+                sleep(sleepTimer1);
+                down.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                down.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                down.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                down.playVuurBewegen2AP();
+                sleep(sleepTimer4);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        btnLEFT.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
+                left.playBewegen1AP();
+                sleep(sleepTimer1);
+                left.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                left.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                left.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                left.playVuurBewegen2AP();
+                sleep(sleepTimer4);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        btnRIGHT.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
+                right.playBewegen1AP();
+                sleep(sleepTimer1);
+                right.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                right.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                right.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                right.playVuurBewegen2AP();
+                sleep(sleepTimer4);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        btnUP.setOnAction(event -> {
+            if (hakken) {
+                speler.muurInteractie(Richting.BOVEN);
+            } else if (deurinteractie) {
+                speler.deurInteractie(Richting.BOVEN);
+            } else if (brandblusser) {
+                speler.blusActie(Richting.BOVEN);
+            } else {
+                speler.beweegwActie(Richting.BOVEN);
+            }
+            view.imageSetter(veld, speler);
+        });
+
+        btnLEFT.setOnAction(event -> {
+            if (hakken) {
+                speler.muurInteractie(Richting.LINKS);
+            } else if (deurinteractie) {
+                speler.deurInteractie(Richting.LINKS);
+            } else if (brandblusser) {
+                speler.blusActie(Richting.LINKS);
+            } else {
+                speler.beweegwActie(Richting.LINKS);
+            }
+            view.imageSetter(veld, speler);
+        });
+
+        btnRIGHT.setOnAction(event -> {
+            if (hakken) {
+                speler.muurInteractie(Richting.RECHTS);
+            } else if (deurinteractie) {
+                speler.deurInteractie(Richting.RECHTS);
+            } else if (brandblusser) {
+                speler.blusActie(Richting.RECHTS);
+            } else {
+                speler.beweegwActie(Richting.RECHTS);
+            }
+            view.imageSetter(veld, speler);
+        });
+
+        btnDOWN.setOnAction(event -> {
+            if (hakken) {
+                speler.muurInteractie(Richting.ONDER);
+            } else if (deurinteractie) {
+                speler.deurInteractie(Richting.ONDER);
+            } else if (brandblusser) {
+                speler.blusActie(Richting.ONDER);
+            } else {
+                speler.beweegwActie(Richting.ONDER);
+            }
+            view.imageSetter(veld, speler);
+        });
+
+        imgHakken.setOnMouseClicked(event -> {
+            if (hakken) {
+                hakken = false;
+                System.out.println("Hakken is uitgeschakeld");
+            } else {
+                hakken = true;
+                deurinteractie = false;
+                brandblusser = false;
+                System.out.println("Hakken is ingeschakeld");
+            }
+
+        });
+
+        imgOpenendeur.setOnMouseClicked(event -> {
+            if (deurinteractie) {
+                deurinteractie = false;
+            } else {
+                hakken = false;
+                deurinteractie = true;
+                brandblusser = false;
+            }
+            System.out.println(deurinteractie);
+        });
+
+        imgBrandblusser.setOnMouseClicked(event -> {
+            if (brandblusser) {
+                brandblusser = false;
+            } else {
+                hakken = false;
+                deurinteractie = false;
+                brandblusser = true;
+            }
+            System.out.println(deurinteractie);
+        });
+
+        btnSpecial.setOnAction(event -> {
+//            for (int vaak = 0; vaak < 3; vaak++) {
+//
+//                ba.nieuwRook();
+//                ba.hanteerVonkoverslag();
+//                ba.hanteerStoffen();
+//                view.imageSetter(veld,speler);
+//            }
+            ba.nieuwRook();
+            view.imageSetter(veld, speler);
+        });
 
 ////        veld.getVak(speler.getX(),speler.getY()).addObject(speler);
 //
@@ -231,10 +545,6 @@ public class Controller {
 //        System.out.println(vak.getBoven());
 //
 
-
-
-        ChatServer chat = new ChatServer();
-
         chatArea.setEditable(false);
         chatArea.setScrollTop(Double.MAX_VALUE);
 
@@ -249,9 +559,7 @@ public class Controller {
         dialog2.setContentText("Naam: ");
         Optional<String> naam = dialog2.showAndWait();
         String username = naam.get();
-
-        ChatListen chatlisten = new ChatListen(host);
-        ChatSend sender = new ChatSend(host, username, localMessage);
+        ;
 
         //Keuzes toevoegen aan de arraylist die we gaan gebruiken voor de choicedialog.
         choices.add("Commandant");
@@ -272,373 +580,10 @@ public class Controller {
         //Klasse veranderen knop
         veranderKlasse.setOnAction(e -> {
             Optional<String> keuzeKlasse = dialog3.showAndWait();
-            if (keuzeKlasse.isPresent() && keuzeKlasse.get() != "Keuze"){
+            if (keuzeKlasse.isPresent() && keuzeKlasse.get() != "Keuze") {
                 String klasse = keuzeKlasse.get();
                 System.out.println("Je hebt gekozen voor de klasse: " + klasse);
             }
         });
-
-        //Quit knop
-        quit.setOnAction(e -> {
-            System.exit(0);
-        });
-
-        //Chat groter maken
-        groterChat.setOnAction(e -> {
-            stuur.setPrefHeight(30);
-            textInput.setPrefHeight(30);
-            chatArea.setPrefHeight(500);
-            chatArea.setScrollTop(Double.MAX_VALUE);
-        });
-        //Chat kleiner maken
-        kleinerChat.setOnAction(e -> {
-            stuur.setPrefHeight(0);
-            textInput.setPrefHeight(0);
-            chatArea.setPrefHeight(70);
-            chatArea.setScrollTop(Double.MAX_VALUE);
-        });
-
-        //chat invoer
-        textInput.setOnAction(e -> {
-            String localMessage = textInput.getText();
-            try {
-                sender.sendMessageObject(username, localMessage);
-            } catch (Exception e1) {
-                // TODO Auto-generated catch block
-                e1.printStackTrace();
-            }
-            textInput.setText("");
-        });
-        //stuurknop chat
-        stuur.setOnAction(e -> {
-            String localMessage = textInput.getText();
-            try {
-                sender.sendMessageObject(username, localMessage);
-            } catch (RemoteException e1) {
-                // TODO Auto-generated catch block
-                e1.printStackTrace();
-            }
-            textInput.setText("");
-        });
-        /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
-        system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
-        System.setOut(new PrintStream(System.out) {
-            @Override
-            public void write(byte[] buf, int off, int len) {
-                super.write(buf, off, len);
-
-                String msg = new String(buf, off, len);
-
-                chatArea.appendText(msg);
-            }
-        });
-
-        Audio up = new Audio();
-        Audio down = new Audio();
-        Audio left = new Audio();
-        Audio right = new Audio();
-        Audio hak = new Audio();
-        Audio deur = new Audio();
-        Audio blussen = new Audio();
-        Audio rijden = new Audio();
-        Audio wagenblussen = new Audio();
-        Audio pickup = new Audio();
-        Audio rolswap = new Audio();
-        Audio special = new Audio();
-        Audio et = new Audio();
-
-        btnET.setOnContextMenuRequested  (event -> {
-            try{
-                int sleepTimer = 3000;
-                et.playEindigtZetKnop();
-                sleep(sleepTimer);
-                et.playEindigZetAPOvergebleven();
-                sleep(sleepTimer);
-                et.playEindigZetVolgendeSpelerKrijgtBeurt();
-                sleep(sleepTimer);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        btnSpecial.setOnContextMenuRequested  (event -> {
-            try{
-                int sleepTimer = 4000;
-                special.playKlasseSpecial();
-                sleep(sleepTimer);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        imgRolswap.setOnContextMenuRequested  (event -> {
-            try{
-                int sleepTimer = 4000;
-                rolswap.playRolWisselen2AP();
-                sleep(sleepTimer);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        imgPickup.setOnContextMenuRequested  (event -> {
-            try{
-                int sleepTimer = 4000;
-                pickup.playOppakkenKostGeenAP();
-                sleep(sleepTimer);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        imgWagenblussen.setOnContextMenuRequested  (event -> {
-            try{
-                int sleepTimer = 4300;
-                int sleepTimer2= 6000;
-                wagenblussen.playBrandspuitBedienen4AP();
-                sleep(sleepTimer);
-                wagenblussen.playBrandspuitbedienerKost2AP();
-                sleep(sleepTimer);
-                wagenblussen.playBrandspuitbedienerReroll();
-                sleep(sleepTimer2);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        imgRijden.setOnContextMenuRequested  (event -> {
-            try{
-                int sleepTimer = 4500;
-                int sleepTimer2 = 5500;
-                rijden.playRijdenKost2AP();
-                sleep(sleepTimer);
-                rijden.playRijdenMeerijdenKostGeenAP();
-                sleep(sleepTimer2);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        imgHakken.setOnContextMenuRequested  (event -> {
-            try{
-                int sleepTimer = 3000;
-                hak.playHakken2AP();
-                sleep(sleepTimer);
-                hak.playHakken1APReddingsspecialist();
-                sleep(sleepTimer);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        imgOpenendeur.setOnContextMenuRequested  (event -> {
-            try {
-                int sleepTimer = 4500;
-                deur.playDeurOpenenSluiten1AP();
-                sleep(sleepTimer);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        imgBrandblusser.setOnContextMenuRequested  (event -> {
-            try {
-                int sleepTimer = 3000;
-                blussen.playVuurBlussen2AP();
-                sleep(sleepTimer);
-                blussen.playVuurNaarRook1AP();
-                sleep(sleepTimer);
-                blussen.playRookBlussen1AP();
-                sleep(sleepTimer);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        btnUP.setOnContextMenuRequested  (event -> {
-            try {
-                int sleepTimer1 = 2501;
-                int sleepTimer2 = 7500;
-                int sleepTimer3 = 9500;
-                int sleepTimer4 = 3500;
-                up.playBewegen1AP();
-                sleep(sleepTimer1);
-                up.playBewegenPvaGS2AP();
-                sleep(sleepTimer2);
-                up.playBewegenReddingsspecialist3EP();
-                sleep(sleepTimer2);
-                up.playDokterBehandelenBewegenGeenExtraAP();
-                sleep(sleepTimer3);
-                up.playVuurBewegen2AP();
-                sleep(sleepTimer4);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        btnDOWN.setOnContextMenuRequested  (event -> {
-            try {
-                int sleepTimer1 = 2501;
-                int sleepTimer2 = 7500;
-                int sleepTimer3 = 9500;
-                int sleepTimer4 = 3500;
-                down.playBewegen1AP();
-                sleep(sleepTimer1);
-                down.playBewegenPvaGS2AP();
-                sleep(sleepTimer2);
-                down.playBewegenReddingsspecialist3EP();
-                sleep(sleepTimer2);
-                down.playDokterBehandelenBewegenGeenExtraAP();
-                sleep(sleepTimer3);
-                down.playVuurBewegen2AP();
-                sleep(sleepTimer4);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        btnLEFT.setOnContextMenuRequested(event -> {
-            try{
-                int sleepTimer1 = 2501;
-                int sleepTimer2 = 7500;
-                int sleepTimer3 = 9500;
-                int sleepTimer4 = 3500;
-                left.playBewegen1AP();
-                sleep(sleepTimer1);
-                left.playBewegenPvaGS2AP();
-                sleep(sleepTimer2);
-                left.playBewegenReddingsspecialist3EP();
-                sleep(sleepTimer2);
-                left.playDokterBehandelenBewegenGeenExtraAP();
-                sleep(sleepTimer3);
-                left.playVuurBewegen2AP();
-                sleep(sleepTimer4);
-            }   catch (Exception e){
-        e.printStackTrace();
-    }
-});
-
-        btnRIGHT.setOnContextMenuRequested(event -> {
-        try{
-            int sleepTimer1 = 2501;
-            int sleepTimer2 = 7500;
-            int sleepTimer3 = 9500;
-            int sleepTimer4 = 3500;
-            right.playBewegen1AP();
-            sleep(sleepTimer1);
-            right.playBewegenPvaGS2AP();
-            sleep(sleepTimer2);
-            right.playBewegenReddingsspecialist3EP();
-            sleep(sleepTimer2);
-            right.playDokterBehandelenBewegenGeenExtraAP();
-            sleep(sleepTimer3);
-            right.playVuurBewegen2AP();
-            sleep(sleepTimer4);
-        }   catch (Exception e){
-        e.printStackTrace();
-        }
-        });
-
-        btnUP.setOnAction(event -> {
-            if(hakken) {
-                speler.muurInteractie(Richting.BOVEN);
-            }else if(deurinteractie){
-                speler.deurInteractie(Richting.BOVEN);
-            }else if(brandblusser){
-                speler.blusActie(Richting.BOVEN);
-            } else {
-                speler.beweegwActie(Richting.BOVEN);
-            }
-            view.imageSetter(veld,speler);
-        });
-
-        btnLEFT.setOnAction(event -> {
-            if(hakken) {
-                speler.muurInteractie(Richting.LINKS);
-            }else if(deurinteractie){
-                speler.deurInteractie(Richting.LINKS);
-            }else if(brandblusser){
-                speler.blusActie(Richting.LINKS);
-            } else {
-                speler.beweegwActie(Richting.LINKS);
-            }
-            view.imageSetter(veld,speler);
-        });
-
-        btnRIGHT.setOnAction(event -> {
-            if(hakken) {
-                speler.muurInteractie(Richting.RECHTS);
-            }else if(deurinteractie){
-                speler.deurInteractie(Richting.RECHTS);
-            }else if(brandblusser){
-                speler.blusActie(Richting.RECHTS);
-            } else {
-                speler.beweegwActie(Richting.RECHTS);
-            }
-            view.imageSetter(veld,speler);
-        });
-
-        btnDOWN.setOnAction(event -> {
-            if(hakken) {
-                speler.muurInteractie(Richting.ONDER);
-            }else if(deurinteractie){
-                speler.deurInteractie(Richting.ONDER);
-            }else if(brandblusser){
-                speler.blusActie(Richting.ONDER);
-            } else {
-                speler.beweegwActie(Richting.ONDER);
-            }
-            view.imageSetter(veld,speler);
-        });
-
-        imgHakken.setOnMouseClicked(event -> {
-            if(hakken) {
-                hakken = false;
-                System.out.println("Hakken is uitgeschakeld");
-            } else {
-                hakken = true;
-                deurinteractie = false;
-                brandblusser = false;
-                System.out.println("Hakken is ingeschakeld");
-            }
-
-        });
-
-        imgOpenendeur.setOnMouseClicked(event -> {
-            if(deurinteractie) {
-                deurinteractie = false;
-            } else {
-                hakken = false;
-                deurinteractie = true;
-                brandblusser = false;
-            }
-            System.out.println(deurinteractie);
-        });
-
-        imgBrandblusser.setOnMouseClicked(event -> {
-            if(brandblusser) {
-                brandblusser = false;
-            } else {
-                hakken = false;
-                deurinteractie = false;
-                brandblusser = true;
-            }
-            System.out.println(deurinteractie);
-        });
-
-        btnSpecial.setOnAction(event -> {
-//            for (int vaak = 0; vaak < 3; vaak++) {
-//
-//                ba.nieuwRook();
-//                ba.hanteerVonkoverslag();
-//                ba.hanteerStoffen();
-//                view.imageSetter(veld,speler);
-//            }
-            ba.nieuwRook();
-            view.imageSetter(veld,speler);
-        });
-
-
-
     }
 }

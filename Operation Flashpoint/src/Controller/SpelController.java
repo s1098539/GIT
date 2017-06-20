@@ -22,6 +22,7 @@ import java.util.ResourceBundle;
 
 import static Model.Rol.BRANDSPUITBEDIENER;
 import static Model.Rol.REDDINGSSPECIALIST;
+import static java.lang.Thread.sleep;
 
 public class SpelController implements Initializable {
 
@@ -181,9 +182,223 @@ public class SpelController implements Initializable {
 
     }
 
+    public void disableSpraak (){
+        btnLEFT.setDisable(true);
+    }
+
     // Lion, Alle set on action komt hier in
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        Spraak up = new Spraak();
+        Spraak down = new Spraak();
+        Spraak left = new Spraak();
+        Spraak right = new Spraak();
+        Spraak hak = new Spraak();
+        Spraak deur = new Spraak();
+        Spraak blussen = new Spraak();
+        Spraak rijden = new Spraak();
+        Spraak wagenblussen = new Spraak();
+        Spraak pickup = new Spraak();
+        Spraak rolswap = new Spraak();
+        Spraak special = new Spraak();
+        Spraak et = new Spraak();
+
+        btnET.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 3000;
+                et.playEindigtZetKnop();
+                sleep(sleepTimer);
+                et.playEindigZetAPOvergebleven();
+                sleep(sleepTimer);
+                et.playEindigZetVolgendeSpelerKrijgtBeurt();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnSpecial.setOnContextMenuRequested(event -> {
+            try {
+                int sleepTimer=4000;
+                special.playKlasseSpecial();
+                sleep(sleepTimer);
+            } catch(Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgRolswap.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 4000;
+                rolswap.playRolWisselen2AP();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgPickup.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 4000;
+                pickup.playOppakkenKostGeenAP();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgWagenblussen.setOnContextMenuRequested  (event -> {
+            try{
+//                int sleepTimer = 4300;
+//                int sleepTimer2= 6000;
+                wagenblussen.playBrandspuitBedienen4AP();
+//                sleep(sleepTimer);
+                wagenblussen.playBrandspuitbedienerKost2AP();
+//                sleep(sleepTimer);
+                wagenblussen.playBrandspuitbedienerReroll();
+//                sleep(sleepTimer2);
+            } catch (Exception e){
+                e.printStackTrace();
+            } finally {
+
+            }
+        });
+
+        imgRijden.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 4500;
+                int sleepTimer2 = 5500;
+                rijden.playRijdenKost2AP();
+                sleep(sleepTimer);
+                rijden.playRijdenMeerijdenKostGeenAP();
+                sleep(sleepTimer2);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgHakken.setOnContextMenuRequested  (event -> {
+            try{
+                int sleepTimer = 3000;
+                hak.playHakken2AP();
+                sleep(sleepTimer);
+                hak.playHakken1APReddingsspecialist();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgOpenendeur.setOnContextMenuRequested  (event -> {
+            try {
+                int sleepTimer = 4500;
+                deur.playDeurOpenenSluiten1AP();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgBrandblusser.setOnContextMenuRequested  (event -> {
+            try {
+                int sleepTimer = 3000;
+                blussen.playVuurBlussen2AP();
+                sleep(sleepTimer);
+                blussen.playVuurNaarRook1AP();
+                sleep(sleepTimer);
+                blussen.playRookBlussen1AP();
+                sleep(sleepTimer);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnUP.setOnContextMenuRequested  (event -> {
+            try {
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
+                up.playBewegen1AP();
+                sleep(sleepTimer1);
+                up.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                up.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                up.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                up.playVuurBewegen2AP();
+                sleep(sleepTimer4);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+
+        btnDOWN.setOnContextMenuRequested  (event -> {
+            try {
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
+                down.playBewegen1AP();
+                sleep(sleepTimer1);
+                down.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                down.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                down.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                down.playVuurBewegen2AP();
+                sleep(sleepTimer4);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnLEFT.setOnContextMenuRequested(event -> {
+            try{
+                disableSpraak();
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
+                left.playBewegen1AP();
+                sleep(sleepTimer1);
+                left.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                left.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                left.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                left.playVuurBewegen2AP();
+                sleep(sleepTimer4);
+            }   catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnRIGHT.setOnContextMenuRequested(event -> {
+            try{
+                int sleepTimer1 = 2501;
+                int sleepTimer2 = 7500;
+                int sleepTimer3 = 9500;
+                int sleepTimer4 = 3500;
+                right.playBewegen1AP();
+                sleep(sleepTimer1);
+                right.playBewegenPvaGS2AP();
+                sleep(sleepTimer2);
+                right.playBewegenReddingsspecialist3EP();
+                sleep(sleepTimer2);
+                right.playDokterBehandelenBewegenGeenExtraAP();
+                sleep(sleepTimer3);
+                right.playVuurBewegen2AP();
+                sleep(sleepTimer4);
+            }   catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
         btnET.setOnAction(event -> {
             endTurn();
         });
