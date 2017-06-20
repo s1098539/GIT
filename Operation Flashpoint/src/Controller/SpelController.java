@@ -181,6 +181,107 @@ public class SpelController implements Initializable {
     // Lion, Alle set on action komt hier in
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        SpraakController audio = new SpraakController();
+
+        btnET.setOnContextMenuRequested(event -> {
+            try{
+                audio.playEindigZet();
+            } catch(Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnLEFT.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+              e.printStackTrace();
+            }
+        });
+
+        btnRIGHT.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnUP.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnDOWN.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnSpecial.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgHakken.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgWagenblussen.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgOpenendeur.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgPickup.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgRijden.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgRolswap.setOnContextMenuRequested(event ->{
+            try{
+
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+
+
         btnET.setOnAction(event -> {
             endTurn();
         });
