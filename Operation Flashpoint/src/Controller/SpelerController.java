@@ -237,7 +237,13 @@ public class SpelerController {
     }
 
     private void hakActie(Richting richting) {
-        veldC.doeBeschadiging(speler.getX(),speler.getY(),richting);
+        if(speler.getRol()==REDDINGSSPECIALIST) {
+            if(speler.getActiepunten()>0 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
+                speler.setActiepunten(speler.getActiepunten()-1);
+            }
+        } else if(speler.getActiepunten()>1 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
+                    speler.setActiepunten(speler.getActiepunten()-2);
+        }
     }
 
     private void deurActie(Richting richting) {

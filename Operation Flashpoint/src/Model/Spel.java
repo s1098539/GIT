@@ -69,14 +69,6 @@ public class Spel {
         this.beschadigingCounter = beschadigingCounter;
     }
 
-    public void addBeschadiging(){
-        beschadigingCounter++;
-    }
-
-    public void deductBeschadiging(){
-        beschadigingCounter--;
-    }
-
     public int getGeredCounter() {
         return geredCounter;
     }

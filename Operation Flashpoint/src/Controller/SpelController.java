@@ -320,7 +320,6 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x][y-teller];
                 if (!vak.boven.isBegaanbaar()){
                     veldC.doeBeschadiging(x, y-teller, richting);
-                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -339,7 +338,6 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x+teller][y];
                 if (!vak.rechts.isBegaanbaar()){
                     veldC.doeBeschadiging((x+teller), y, richting);
-                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -358,7 +356,6 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x][y+teller];
                 if (!vak.onder.isBegaanbaar()){
                     veldC.doeBeschadiging(x, (y + teller), richting);
-                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -377,7 +374,6 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x-teller][y];
                 if (!vak.links.isBegaanbaar()){
                     veldC.doeBeschadiging((x-teller), y, richting);
-                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -529,6 +525,10 @@ public class SpelController implements Initializable {
             String klasse = keuzeKlasse.get();
             System.out.println("Je hebt gekozen voor de klasse: " + klasse);
         }
+    }
+
+    public void addBeschadiging() {
+        spel.setBeschadigingCounter(spel.getBeschadigingCounter()+1);
     }
 }
 
