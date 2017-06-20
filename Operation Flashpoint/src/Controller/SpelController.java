@@ -13,12 +13,9 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.*;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.util.Collections;
-import java.util.Random;
-import java.util.ResourceBundle;
 
 import static Model.Rol.BRANDSPUITBEDIENER;
 import static Model.Rol.REDDINGSSPECIALIST;
@@ -215,24 +212,35 @@ public class SpelController implements Initializable {
         imgHakken.setOnMouseClicked(event -> {
             spelerC.btnhakken();
         });
+
         stuur.setOnAction(event -> {
             chatC.stuurBericht();
         });
+
         textInput.setOnAction(e -> {
             chatC.stuurBericht();
         });
+
         groterChat.setOnAction(event -> {
             chatC.groterChat();
         });
+
         kleinerChat.setOnAction(event -> {
             chatC.kleinerChat();
         });
+
         gebruikershandleiding.setOnAction(event -> {
             spelerC.openHandleiding();
         });
+
         btnSpecial.setOnAction(event -> {
             spelerC.special();
         });
+
+        imgRolswap.setOnMouseClicked(event -> {
+            veranderKlasse();
+        });
+
     }
     //Door: Sam, don't hate if its wrong ok
     Spel spel = new Spel(6,0,0);
@@ -495,7 +503,32 @@ public class SpelController implements Initializable {
         for(int i = 0; i>count; i++) addPersoon();
     }
 
+    public void veranderKlasse() {
+        List<String> choices = new ArrayList<>();
+
+        choices.add("Commandant");
+        choices.add("Verkenner");
+        choices.add("Mannetjesputter");
+        choices.add("Reddingsspecialist");
+        choices.add("SpecialistG.S");
+        choices.add("BrandspuitBediener");
+        choices.add("Gaspakdrager");
+        choices.add("Dokter");
+
+        //De choicedialog maken
+        ChoiceDialog<String> dialog3 = new ChoiceDialog<>("Keuze", choices);
+        dialog3.setTitle("Choice Dialog");
+        dialog3.setHeaderText("Kies je klasse");
+        dialog3.setContentText("Klasse:");
+
+        Optional<String> keuzeKlasse = dialog3.showAndWait();
+        if (keuzeKlasse.isPresent() && keuzeKlasse.get() != "Keuze"){
+            String klasse = keuzeKlasse.get();
+            System.out.println("Je hebt gekozen voor de klasse: " + klasse);
+        }
+    }
+}
+
     // checkWin()
 
     //TODO checkVerlies()
-}

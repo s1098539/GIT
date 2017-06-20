@@ -12,9 +12,6 @@ import static Model.Richting.*;
 import static Model.Rol.*;
 
 
-/**
- * Created by Sam van Schaik on 14-6-2017.
- */
 public class SpelerController {
     Speler speler=new Speler("sjaak", Kleur.BLAUW);
 
@@ -323,7 +320,7 @@ public class SpelerController {
         BorderPane borderPane = new BorderPane();
         ScrollPane scrollpane = new ScrollPane();
 
-        Image gebruikershandleiding = new Image("Resources/GFX/gebruikershandleiding.jpg",2390,796,true,true);
+        Image gebruikershandleiding = new Image("Resources/GFX/GebruikersHandleiding.jpg",2390,796,true,true);
         ImageView imageview = new ImageView(gebruikershandleiding);
         scrollpane.setContent(imageview);
         borderPane.setCenter(scrollpane);
