@@ -49,7 +49,7 @@ public class SpelerController {
     public void noord(){
         if(!openendeur && !brandblusser && !hakken) {
             System.out.println("Beweeg: Noord");
-            beweegwActie(BOVEN);
+            beweegActie(BOVEN);
         }
         else if(openendeur) {
             System.out.println("DeurOS: Noord");
@@ -72,7 +72,7 @@ public class SpelerController {
     public void west(){
         if(!openendeur && !brandblusser && !hakken) {
             System.out.println("Beweeg: West");
-            beweegwActie(LINKS);
+            beweegActie(LINKS);
         }
         else if(openendeur) {
             System.out.println("DeurOS: West");
@@ -94,7 +94,7 @@ public class SpelerController {
     public void zuid(){
         if(!openendeur && !brandblusser && !hakken) {
             System.out.println("Beweeg: Zuid");
-            beweegwActie(ONDER);
+            beweegActie(ONDER);
         }
         else if(openendeur) {
             System.out.println("DeurOS: Zuid");
@@ -116,7 +116,7 @@ public class SpelerController {
     public void oost(){
         if(!openendeur && !brandblusser && !hakken) {
             System.out.println("Beweeg: Oost");
-            beweegwActie(RECHTS);
+            beweegActie(RECHTS);
         }
         else if(openendeur) {
             System.out.println("DeurOS: Oost");
@@ -143,14 +143,19 @@ public class SpelerController {
                 break;
             case COMMANDANT:    //TODO
                 break;
-            case DOKTER:        //TODO
+            case DOKTER: helen();        //TODO
                 break;
             case SPECSTOFFEN: onschadelijkMaken();
                 break;
-            default: System.out.println("Mom things im special :(");
+            default: System.out.println("Mom thinks im special :(");
         }
     }
-
+    private void helen(){
+        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
+        if (!vak.getPersonen().isEmpty()){
+            vak.getPersonen().get(0).setGeheeld();
+        }
+    }
     // Lion, dit is de special methode van specStoffen, indien mogelijk word een stoffen fiche verwijderd.
     private void onschadelijkMaken() {
         int x = speler.getX();
@@ -297,7 +302,7 @@ public class SpelerController {
     }
 
     // Lion, verplaats de speler in de gewenste richting indien mogelijk.
-    private void beweegwActie(Richting richting) {
+    private void beweegActie(Richting richting) {//TODO prijs met object bewegen afhandelen, kijken of persoon geheeld is
         Vak vak = veldC.veldD.getVakken()[speler.getX()][speler.getY()];
         veldC.removeSpeler(speler.getKleur(),speler.getX(),speler.getY());
         veldC.ImageSetter(speler.getX(),speler.getY());
