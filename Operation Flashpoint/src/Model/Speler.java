@@ -21,7 +21,7 @@ public class Speler {
     int actiepunten;
     int extrapunten;
 
-    Rol rol;
+    Rol rol = Rol.MANNETJESPUTTER;
 
     boolean slechtziendmodus;
 
