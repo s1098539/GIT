@@ -2,7 +2,10 @@ package Controller;
 
 import javafx.scene.control.TextField;
 
+import java.net.MalformedURLException;
+import java.rmi.Naming;
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,9 +34,6 @@ public class ChatController {
         this.chatC = chatC;
 
     }
-
-    /* moet nog chatlisten en chatserver object maken, hiervoor moeten we eerst een textinputdialog maken/lobby maken
-    om de host in een string op te kunnen slaan */
 
 
     //chat groter maken
