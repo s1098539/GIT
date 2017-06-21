@@ -264,7 +264,6 @@ public class SpelerController {
         int x = speler.getX();
         int y = speler.getY();
         veldC.doeDeur(x,y,richting);
-        veldC.ImageSetter(x,y);
     }
 
 

@@ -10,7 +10,7 @@ public class SpeelveldData {
     Vak [][] vakken;
     Richting ambulance = Richting.BOVEN;
     Richting brandweerwagen = Richting.BOVEN;
-    ArrayList<Persoon> personenlijst = new ArrayList<Persoon>();
+    ArrayList<Persoon> personenlijst = new ArrayList<>();
 
     public Vak[][] getVakken() {
         return vakken;

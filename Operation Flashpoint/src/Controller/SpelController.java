@@ -394,8 +394,10 @@ public class SpelController implements Initializable {
         }
         checkVonkoverslag();
         checkStoffen();
-        veldC.veldD.getVakken()[spelerC.speler.getX()][spelerC.speler.getY()].setPersonen(spelerC.speler.getPersoon());
-        spelerC.speler.setPersoon(null);
+        if (spelerC.speler.getPersoon() != null){
+            veldC.veldD.getVakken()[spelerC.speler.getX()][spelerC.speler.getY()].setPersonen(spelerC.speler.getPersoon());
+            spelerC.speler.setPersoon(null);
+        }
         checkPersonen();
         veldC.ImageSetterALL();
         spelerC.resetPunten();
@@ -590,7 +592,9 @@ public class SpelController implements Initializable {
         int[] locatie;
         boolean tweedekeer = false;
         vak = veldC.veldD.getVakken()[x][y];
-        while(vak.isVuur()){
+        int killSwitch = 0;
+        while(vak.isVuur() && killSwitch<500){
+            killSwitch++;
             locatie = veldC.volgPijl(x,y);
             x = locatie[0];
             y = locatie[1];
@@ -606,8 +610,11 @@ public class SpelController implements Initializable {
             }
             vak = veldC.veldD.getVakken()[x][y];
         }
-        vak.getPersonen().add(veldC.getVeldD().getPersonenlijst().get(0));
-        veldC.getVeldD().getPersonenlijst().remove(0);
+        if(veldC.getVeldD().getPersonenlijst().size()>0){
+            vak.setPersonen(veldC.getVeldD().getPersonenlijst().get(0));
+            veldC.getVeldD().getPersonenlijst().remove(0);
+        }
+
     }
 
     public void updatePunten() {
@@ -650,10 +657,10 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x][y];
                 if (vak.getPersonen().size() > 0 && vak.isVuur()) {
                     for(int i = 0; i < vak.getPersonen().size(); i++) {
-                        if (vak.getPersonen().get(i) != Persoon.NOPE1 ||
-                                vak.getPersonen().get(i) != Persoon.NOPE2 ||
-                                vak.getPersonen().get(i) != Persoon.NOPE3 ||
-                                vak.getPersonen().get(i) != Persoon.NOPE4 ||
+                        if (vak.getPersonen().get(i) != Persoon.NOPE1 &&
+                                vak.getPersonen().get(i) != Persoon.NOPE2 &&
+                                vak.getPersonen().get(i) != Persoon.NOPE3 &&
+                                vak.getPersonen().get(i) != Persoon.NOPE4 &&
                                 vak.getPersonen().get(i) != Persoon.NOPE5) {
                             spel.addDood();
                         }
