@@ -74,8 +74,8 @@ public class Spraak {
     String hakken2 = "./src/Resources/Audio/Hakken2AP.wav";
     String klasse = "./src/Resources/Audio/KlasseSpecial.wav";
     String oppakken = "./src/Resources/Audio/OppakkenKostGeenAP.wav";
-    String rijden1  = "./src/Resources/Audio/RijdenMeerijdenKostGeenAP.wav";
-    String rijden2 = "./src/Resources/Audio/RijdenKost2AP.wav";
+    String rijden1 = "./src/Resources/Audio/RijdenKost2AP.wav";
+    String rijden2  = "./src/Resources/Audio/RijdenMeerijdenKostGeenAP.wav";
     String rookBlussen = "./src/Resources/Audio/RookBlussen1AP.wav";
     String vuurNaarRook = "./src/Resources/Audio/VuurNaarRook1AP.wav";
     String vuurBewegen = "./src/Resources/Audio/VuurBewegen2AP.wav";

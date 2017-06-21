@@ -43,54 +43,55 @@ public class SpraakController {
     public synchronized void playDeurActies() throws Exception{
         int waitTime=4500;
         audioPlayer(audio.getDeur());
-        audio.wait(waitTime);
+        wait(waitTime);
     }
 
     public synchronized void playEindigZet() throws Exception{
         int waitTime = 3000;
         audioPlayer(audio.getEindig1());
-        audio.wait(waitTime);
+        wait(waitTime);
         audioPlayer(audio.getEindig2());
-        audio.wait(waitTime);
+        wait(waitTime);
         audioPlayer(audio.getEindig3());
-        audio.wait(waitTime);
+        wait(waitTime);
     }
 
     public synchronized void playHakken() throws Exception{
         int waitTime = 3000;
         audioPlayer(audio.getHakken2());
-        audio.wait(waitTime);
+        wait(waitTime);
         audioPlayer(audio.getHakken1());
-        audio.wait(waitTime);
+        wait(waitTime);
 
     }
 
     public synchronized void playOppakken() throws Exception{
         int waitTime=4000;
         audioPlayer(audio.getOppakken());
-        audio.wait(waitTime);
+        wait(waitTime);
     }
 
 
     public synchronized void playBlussen() throws Exception{
         int waitTime=3000;
+        int waitTime2=5000;
         audioPlayer(audio.getVuurBlussen());
-        audio.wait(waitTime);
+        wait(waitTime);
         audioPlayer(audio.getVuurNaarRook());
-        audio.wait(waitTime);
+        wait(waitTime);
         audioPlayer(audio.getRookBlussen());
-        audio.wait(waitTime);
+        wait(waitTime);
         audioPlayer(audio.getDokterBlussen());
-        audio.wait(waitTime);
+        wait(waitTime);
     }
 
     public synchronized void playRijden() throws Exception{
-        int waitTime=4500;
+        int waitTime=3000;
         int waitTime2=5500;
         audioPlayer(audio.getRijden1());
-        audio.wait(waitTime);
+        wait(waitTime);
         audioPlayer(audio.getRijden2());
-        audio.wait(waitTime2);
+        wait(waitTime2);
     }
 
     public synchronized void playBewegen() throws Exception{
@@ -99,17 +100,38 @@ public class SpraakController {
         int waitTime3=9000;
         int waitTime4=3500;
         audioPlayer(audio.getBewegen1());
-        audio.wait(waitTime);
+        wait(waitTime);
         audioPlayer(audio.getBewegen2());
-        audio.wait(waitTime);
+        wait(waitTime2);
         audioPlayer(audio.getBewegen3());
-        audio.wait(waitTime);
+        wait(waitTime2);
+        audioPlayer(audio.getDokterBehandeld());
+        wait(waitTime3);
+        audioPlayer(audio.getVuurBewegen());
+        wait(waitTime4);
     }
 
     public synchronized void playSpecial () throws Exception{
         int waitTime=4000;
         audioPlayer(audio.getKlasse());
-        audio.wait(waitTime);
+        wait(waitTime);
+    }
+
+    public synchronized void playRolWissel() throws Exception{
+        int waitTime=4000;
+        audioPlayer(audio.getRolWissel());
+        wait(waitTime);
+    }
+
+    public synchronized void playWagenBlussen() throws Exception{
+        int waitTime=4300;
+        int waitTime2=8000;
+        audioPlayer(audio.getBrandspuit1());
+        wait(waitTime);
+        audioPlayer(audio.getBrandspuit2());
+        wait(waitTime);
+        audioPlayer(audio.getBrandspuit3());
+        wait(waitTime2);
     }
 
 }

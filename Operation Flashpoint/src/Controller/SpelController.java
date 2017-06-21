@@ -250,7 +250,7 @@ public class SpelController implements Initializable {
 
         imgHakken.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playHakken();
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -258,7 +258,7 @@ public class SpelController implements Initializable {
 
         imgWagenblussen.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playWagenBlussen();
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -266,7 +266,7 @@ public class SpelController implements Initializable {
 
         imgOpenendeur.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playDeurActies();
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -274,7 +274,7 @@ public class SpelController implements Initializable {
 
         imgPickup.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playOppakken();
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -282,7 +282,7 @@ public class SpelController implements Initializable {
 
         imgRijden.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playRijden();
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -290,7 +290,7 @@ public class SpelController implements Initializable {
 
         imgRolswap.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playRolWissel();
             } catch ( Exception e){
                 e.printStackTrace();
             }
