@@ -259,8 +259,10 @@ public class SpelController implements Initializable {
         }
         checkVonkoverslag();
         checkStoffen();
-        veldC.veldD.getVakken()[spelerC.speler.getX()][spelerC.speler.getY()].setPersonen(spelerC.speler.getPersoon());
-        spelerC.speler.setPersoon(null);
+        if (spelerC.speler.getPersoon() != null){
+            veldC.veldD.getVakken()[spelerC.speler.getX()][spelerC.speler.getY()].setPersonen(spelerC.speler.getPersoon());
+            spelerC.speler.setPersoon(null);
+        }
         checkPersonen();
         veldC.ImageSetterALL();
         spelerC.resetPunten();
