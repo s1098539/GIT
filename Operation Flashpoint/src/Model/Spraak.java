@@ -93,7 +93,7 @@ public class Spraak {
     String bewegenSpel1 = "./src/Resources/Audio/BewegenSpel1.wav";
     String bewegenSpel2 = "./src/Resources/Audio/BewegenSpel2.wav";
     String bewegenSpel3 = "./src/Resources/Audio/BewegenSpel3.wav";
-    String deurActies = "./src/Resources/Audio/DeurOpenenSluiten1AP.wav";
+    String deurRegels = "./src/Resources/Audio/DeurOpenenSluiten1AP.wav";
     String doelSpel = "./src/Resources/Audio/DoelVanHetSpel.wav";
     String doven  = "./src/Resources/Audio/Doven.wav";
     String spelEinde = "./src/Resources/Audio/HetSpeleinde.wav";
@@ -455,8 +455,8 @@ public class Spraak {
         return bewegenSpel3;
     }
 
-    public String getDeurActies() {
-        return deurActies;
+    public String getDeurRegels() {
+        return deurRegels;
     }
 
     public String getDoelSpel() {

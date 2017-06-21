@@ -182,27 +182,43 @@ public class SpelController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        SpraakController audio = new SpraakController();
+        SpraakController audioPlayer = new SpraakController();
 
         btnET.setOnContextMenuRequested(event -> {
-            try{
-                audio.playEindigZet();
+            try {
+                audioPlayer.playEindigZet();
             } catch(Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgBrandblusser.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playBlussen();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgPickup.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playOppakken();
+            } catch ( Exception e){
                 e.printStackTrace();
             }
         });
 
         btnLEFT.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playBewegen();
             } catch ( Exception e){
-              e.printStackTrace();
+                e.printStackTrace();
             }
         });
 
         btnRIGHT.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playBewegen();
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -210,7 +226,7 @@ public class SpelController implements Initializable {
 
         btnUP.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playBewegen();
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -218,7 +234,7 @@ public class SpelController implements Initializable {
 
         btnDOWN.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playBewegen();
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -226,7 +242,7 @@ public class SpelController implements Initializable {
 
         btnSpecial.setOnContextMenuRequested(event ->{
             try{
-
+                audioPlayer.playSpecial();
             } catch ( Exception e){
                 e.printStackTrace();
             }
