@@ -17,11 +17,17 @@ import static Model.Rol.*;
 
 
 public class SpelerController {
+
     Speler speler=new Speler("sjaak", Kleur.BLAUW);
 
-    public void setSpeler() {
+    public void setHuidigeSpeler() {
         speler = spelC.getHuidigeSpeler();
     }
+
+    public void setSpeler(Speler speler) {
+        this.speler = speler;
+    }
+
 
     Vak vak;
 
@@ -257,6 +263,7 @@ public class SpelerController {
         int x = speler.getX();
         int y = speler.getY();
         veldC.doeDeur(x,y,richting);
+        veldC.ImageSetter(x,y);
     }
 
 

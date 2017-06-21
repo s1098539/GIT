@@ -413,6 +413,8 @@ public class SpeelveldController {
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Boven)");
                     }
+                    ImageSetter(x, y);
+                    ImageSetter(x, y-1);
                 }
                 break;
             case RECHTS:
@@ -427,34 +429,40 @@ public class SpeelveldController {
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Rechts)");
                     }
+                    ImageSetter(x, y);
+                    ImageSetter(x+1, y);
                 }
                 break;
             case LINKS:
-                if (y<7) {
-                    switch(vak.getOnder()) {
-                        case DEURD: vak.setRechts(DEURO);
-                            veldD.getVakken()[x][y+1].setLinks(DEURO);
+                if (x>0) {
+                    switch(vak.getLinks()) {
+                        case DEURD: vak.setLinks(DEURO);
+                            veldD.getVakken()[x-1][y].setRechts(DEURO);
                             break;
-                        case DEURO: vak.setRechts(DEURD);
-                            veldD.getVakken()[x][y+1].setLinks(DEURD);
+                        case DEURO: vak.setLinks(DEURD);
+                            veldD.getVakken()[x-1][y].setRechts(DEURD);
                             break;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Links)");
                     }
+                    ImageSetter(x, y);
+                    ImageSetter(x-1, y);
                 }
                 break;
             case ONDER:
-                if (x>0) {
-                    switch(vak.getLinks()) {
-                        case DEURD: vak.setRechts(DEURO);
-                            veldD.getVakken()[x-1][y].setLinks(DEURO);
+                if (y<7) {
+                    switch(vak.getOnder()) {
+                        case DEURD: vak.setOnder(DEURO);
+                            veldD.getVakken()[x][y+1].setBoven(DEURO);
                             break;
-                        case DEURO: vak.setRechts(DEURD);
-                            veldD.getVakken()[x-1][y].setLinks(DEURD);
+                        case DEURO: vak.setOnder(DEURD);
+                            veldD.getVakken()[x][y+1].setBoven(DEURD);
                             break;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Onder)");
                     }
+                    ImageSetter(x, y);
+                    ImageSetter(x, y+1);
                 }
                 break;
             default:
