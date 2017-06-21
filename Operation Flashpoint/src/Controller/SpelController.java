@@ -182,6 +182,123 @@ public class SpelController implements Initializable {
     // Lion, Alle set on action komt hier in
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        SpraakController audioPlayer = new SpraakController();
+
+        btnET.setOnContextMenuRequested(event -> {
+            try {
+                audioPlayer.playEindigZet();
+            } catch(Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgBrandblusser.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playBlussen();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgPickup.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playOppakken();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnLEFT.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playBewegen();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnRIGHT.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playBewegen();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnUP.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playBewegen();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnDOWN.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playBewegen();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        btnSpecial.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playSpecial();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgHakken.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playHakken();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgWagenblussen.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playWagenBlussen();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgOpenendeur.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playDeurActies();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgPickup.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playOppakken();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgRijden.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playRijden();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgRolswap.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playRolWissel();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+
+
         btnET.setOnAction(event -> {
             endTurn();
         });
