@@ -70,6 +70,7 @@ public class Send {
 	/**
 	 * Send message object to server
 	 */
+	
 	void sendMessageObject(String user, String  message) throws RemoteException {
 
 		Message messageObject = new Message(user,  message); // serialized object
