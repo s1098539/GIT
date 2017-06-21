@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Speler;
 import Model.Spraak;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
@@ -9,13 +10,17 @@ import java.io.InputStream;
 
 public class SpraakController {
     SpelController spelC;
+    SpelerController spelerC;
 
-    public void setController(SpelController spelC) {
+    public void setControllers(SpelController spelC, SpelerController spelerC) {
         this.spelC = spelC;
+        this.spelerC = spelerC;
     }
+
 
     public SpraakController() {
     }
+
 
     Spraak audio = new Spraak();
 //    boolean play=false;
@@ -132,6 +137,73 @@ public class SpraakController {
         wait(waitTime);
         audioPlayer(audio.getBrandspuit3());
         wait(waitTime2);
+    }
+
+    public void playAP(int actiepunten) throws Exception{
+        if(actiepunten>=0 && actiepunten<=9){
+            switch(actiepunten) {
+               case 0:audioPlayer(audio.getAp0());
+               break;
+               case 1: audioPlayer(audio.getAp1());
+               break;
+               case 2: audioPlayer(audio.getAp2());
+               break;
+               case 3: audioPlayer(audio.getAp3());
+               break;
+               case 4: audioPlayer(audio.getAp4());
+               break;
+               case 5: audioPlayer(audio.getAp5());
+               break;
+               case 6: audioPlayer(audio.getAp6());
+               break;
+               case 7: audioPlayer(audio.getAp7());
+               break;
+               case 8: audioPlayer(audio.getAp8());
+               break;
+               case 9: audioPlayer(audio.getAp9());
+               break;
+            }
+        }
+    }
+
+    public void playEP(int extrapunten) throws Exception{
+        if (extrapunten>=0 && extrapunten<=3) {
+            switch (extrapunten) {
+                //default WAV moet nog gemaakt worden.
+                case 0: audioPlayer(audio.getEp0());
+                break;
+                case 1: audioPlayer(audio.getEp1());
+                break;
+                case 2: audioPlayer(audio.getEp2());
+                break;
+                case 3: audioPlayer(audio.getEp3());
+                break;
+            }
+        }
+    }
+
+    public void playPva(int extrapunten) throws Exception{
+        if (extrapunten>=1 && extrapunten<=3) {
+            switch (extrapunten) {
+                //default moet 0 worden WAV komt er nog aan.
+                default: audioPlayer(audio.getPva1());
+                break;
+                case 1: audioPlayer(audio.getPva1());
+                break;
+                case 2: audioPlayer(audio.getPva2());
+                break;
+                case 3: audioPlayer(audio.getPva3());
+                break;
+                case 4: audioPlayer(audio.getPva4());
+                break;
+                case 5: audioPlayer(audio.getPva5());
+                break;
+                case 6: audioPlayer(audio.getPva6());
+                break;
+                case 7: audioPlayer(audio.getPva7());
+                break;
+            }
+        }
     }
 
 }

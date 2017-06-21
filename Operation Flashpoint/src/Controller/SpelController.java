@@ -40,7 +40,9 @@ public class SpelController implements Initializable {
     @FXML private ImageView imgRijden;
     @FXML private ImageView imgWagenblussen;
     @FXML private ImageView imgPickup;
+    @FXML private ImageView imgPickup1;
     @FXML private ImageView imgRolswap;
+    @FXML private ImageView imgOpenendeur1;
     @FXML private Button btnSpecial;
     @FXML private TextArea chatArea;
     @FXML private TextField textInput;
@@ -184,6 +186,22 @@ public class SpelController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         SpraakController audioPlayer = new SpraakController();
+
+        imgPickup1.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playAP(spelerC.speler.getActiepunten());
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgOpenendeur1.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playEP(spelerC.speler.getExtrapunten());
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
 
         btnET.setOnContextMenuRequested(event -> {
             try {
