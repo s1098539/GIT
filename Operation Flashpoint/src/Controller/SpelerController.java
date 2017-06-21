@@ -381,6 +381,7 @@ public class SpelerController {
         if(speler.getActiepunten()>7) speler.setActiepunten(7);
         if(speler.getRol()==GASPAKDRAGER) speler.setActiepunten(speler.getActiepunten()-1);
         if(speler.getRol()==MANNETJESPUTTER) speler.setActiepunten(speler.getActiepunten()+1);
+        if(speler.getRol()==GODMODE) speler.setActiepunten(9001);
 
         switch(speler.getRol()) {
             case REDDINGSSPECIALIST: speler.setExtraPunten(3);
