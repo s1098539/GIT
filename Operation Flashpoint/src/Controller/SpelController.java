@@ -590,8 +590,11 @@ public class SpelController implements Initializable {
             }
             vak = veldC.veldD.getVakken()[x][y];
         }
-        vak.getPersonen().add(veldC.getVeldD().getPersonenlijst().get(0));
-        veldC.getVeldD().getPersonenlijst().remove(0);
+        if(veldC.getVeldD().getPersonenlijst().size()>0){
+            vak.setPersonen(veldC.getVeldD().getPersonenlijst().get(0));
+            veldC.getVeldD().getPersonenlijst().remove(0);
+        }
+
     }
 
     public void updatePunten() {
