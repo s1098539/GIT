@@ -146,7 +146,7 @@ public class SpelerController {
     // Er word gekeken welke rol een speler heeft en verwijst verolgens door naar de bijpassende specla methode.
     public void special() {
         switch(speler.getRol()) {
-            case VERKENNER:     //TODO
+            case VERKENNER:
                 break;
             case COMMANDANT:    //TODO
                 break;

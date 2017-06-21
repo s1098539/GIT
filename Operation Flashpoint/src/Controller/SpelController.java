@@ -62,6 +62,7 @@ public class SpelController implements Initializable {
     @FXML private Label BeschadigingLabel;
     @FXML private Label HotspotLabel;
     @FXML private Label GeredLabel;
+    @FXML private Label GeredLabel1;
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -375,6 +376,8 @@ public class SpelController implements Initializable {
         }
         checkVonkoverslag();
         checkStoffen();
+        veldC.veldD.getVakken()[spelerC.speler.getX()][spelerC.speler.getY()].setPersonen(spelerC.speler.getPersoon());
+        spelerC.speler.setPersoon(null);
         checkPersonen();
         veldC.ImageSetterALL();
         spelerC.resetPunten();
@@ -566,12 +569,23 @@ public class SpelController implements Initializable {
         dobbelC.d8.gooi();
         int x = dobbelC.d8.getWaarde();
         int y = dobbelC.d6.getWaarde();
-        int[] locatie = new int[2];
+        int[] locatie;
+        boolean tweedekeer = false;
         vak = veldC.veldD.getVakken()[x][y];
         while(vak.isVuur()){
             locatie = veldC.volgPijl(x,y);
             x = locatie[0];
             y = locatie[1];
+            if (x == 3 && y == 3){
+                if (tweedekeer){
+                    dobbelC.d6.gooi();
+                    dobbelC.d8.gooi();
+                    x = dobbelC.d8.getWaarde();
+                    y = dobbelC.d6.getWaarde();
+                    tweedekeer = false;
+                }
+                tweedekeer = true;
+            }
             vak = veldC.veldD.getVakken()[x][y];
         }
         vak.getPersonen().add(veldC.getVeldD().getPersonenlijst().get(0));
@@ -591,6 +605,8 @@ public class SpelController implements Initializable {
             hakTxt.setText(" 2");
             blusTxt.setText(" 1");
         }
+        GeredLabel.setText(Integer.toString(spel.getGeredCounter())+ " / 7");
+        GeredLabel1.setText(Integer.toString(spel.getDoodCounter())+ " / 3");
 
 
 
@@ -634,7 +650,7 @@ public class SpelController implements Initializable {
                 count += vak.getPersonen().size();
             }
         }
-//        for(int i = count; i< 3; i++) addPersoon();
+        for(int i = count; i< 3; i++) addPersoon();
 
     }
 
