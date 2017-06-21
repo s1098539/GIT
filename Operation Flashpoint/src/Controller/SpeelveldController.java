@@ -46,8 +46,11 @@ public class SpeelveldController {
         flowpanesAndImageViewsFactory();
         flowpanesAndImageViewsPlaatser();
         setMap();
-        ImageSetterALL();
         spelC.run();
+        for(int i = 0; i<3; i++) {
+            spelC.addPersoon();
+        }
+        ImageSetterALL();
     }
 
     // Lion, maakt alle flowpanes en imageviews aan

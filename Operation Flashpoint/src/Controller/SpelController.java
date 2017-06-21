@@ -495,12 +495,27 @@ public class SpelController implements Initializable {
             for (int y = 0; y < 8; y++) {
                 vak = veldC.veldD.getVakken()[x][y];
                 if (vak.getPersonen().size() > 0 && vak.isVuur()) {
-                    count += vak.getPersonen().size();
+                    for(int i = 0; i < vak.getPersonen().size(); i++) {
+                        if (vak.getPersonen().get(i) != Persoon.NOPE1 ||
+                                vak.getPersonen().get(i) != Persoon.NOPE2 ||
+                                vak.getPersonen().get(i) != Persoon.NOPE3 ||
+                                vak.getPersonen().get(i) != Persoon.NOPE4 ||
+                                vak.getPersonen().get(i) != Persoon.NOPE5) {
+                            spel.addDood();
+                        }
+                    }
                     vak.getPersonen().clear();
                 }
             }
         }
-        for(int i = 0; i>count; i++) addPersoon();
+        for(int x = 0; x < 10; x++) {
+            for (int y = 0; y < 8; y++) {
+                vak = veldC.veldD.getVakken()[x][y];
+                count += vak.getPersonen().size();
+            }
+        }
+//        for(int i = count; i< 3; i++) addPersoon();
+
     }
 
     public void veranderKlasse() {

@@ -56,6 +56,7 @@ public class SpelerController {
         if(!openendeur && !brandblusser && !hakken) {
             System.out.println("Beweeg: Noord");
             beweegActie(BOVEN);
+
         }
         else if(openendeur) {
             System.out.println("DeurOS: Noord");
@@ -355,10 +356,21 @@ public class SpelerController {
     }
 
     private void persoonOmdraaien() {
-        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
+        int x = speler.getX();
+        int y = speler.getY();
+        vak = veldC.getVeldD().getVakken()[x][y];
         if(!vak.getPersonen().isEmpty()) {
             for(int i = 0; i < vak.getPersonen().size(); i++) {
                 vak.getPersonen().get(0).setOmgedraaid(true);
+            }
+        }
+        ArrayList<Persoon> personen = veldC.getVeldD().getVakken()[x][y].getPersonen();
+        for(int i = 0; i < personen.size(); i++) {
+            if (personen.get(i) == Persoon.NOPE1 || personen.get(i) == Persoon.NOPE2 ||
+                    personen.get(i) == Persoon.NOPE3 || personen.get(i) == Persoon.NOPE4 ||
+                    personen.get(i) == Persoon.NOPE5) {
+                personen.remove(i);
+                i--;
             }
         }
     }
