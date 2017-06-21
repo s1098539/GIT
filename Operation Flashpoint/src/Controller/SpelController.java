@@ -574,7 +574,9 @@ public class SpelController implements Initializable {
         int[] locatie;
         boolean tweedekeer = false;
         vak = veldC.veldD.getVakken()[x][y];
-        while(vak.isVuur()){
+        int killSwitch = 0;
+        while(vak.isVuur() && killSwitch<500){
+            killSwitch++;
             locatie = veldC.volgPijl(x,y);
             x = locatie[0];
             y = locatie[1];
