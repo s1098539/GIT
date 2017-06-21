@@ -46,34 +46,34 @@ public class Main2 extends Application{
         chatC.setControllers(spelC,veldC,spelerC,dobbelC,chatC);
         spraakC.setController(spelC);
 
-        /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
-        system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
-//        String serverAddress = "145.101.88.129";
-//        String host = serverAddress;
-//        String username = "test";
-//        String localMessage = "";
-//        try {
-//            Server server = new Server();
-//            Listen chatlisten = new Listen(host);
-//            Send sender = new Send(host, username, localMessage);
-//        } catch (RemoteException e) {
-//            e.printStackTrace();
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        } catch (NotBoundException e) {
-//            e.printStackTrace();
-//        }
-//
-//        System.setOut(new PrintStream(System.out) {
-//            @Override
-//            public void write(byte[] buf, int off, int len) {
-//                super.write(buf, off, len);
-//
-//                String msg = new String(buf, off, len);
-//
-//                spelC.getChatArea().appendText(msg);
-//            }
-//        });
+       // printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
+        //system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
+        String serverAddress = "127.0.0.1";
+        String host = serverAddress;
+        String username = "test";
+        String localMessage = "";
+        try {
+            Server server = new Server();
+            Listen chatlisten = new Listen(host);
+            Send sender = new Send(host, username, localMessage);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (NotBoundException e) {
+            e.printStackTrace();
+        }
+
+        System.setOut(new PrintStream(System.out) {
+            @Override
+            public void write(byte[] buf, int off, int len) {
+                super.write(buf, off, len);
+
+                String msg = new String(buf, off, len);
+
+                spelC.getChatArea().appendText(msg);
+            }
+        });
 
         veldC.run();
 
