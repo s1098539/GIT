@@ -62,6 +62,7 @@ public class SpelController implements Initializable {
     @FXML private Label BeschadigingLabel;
     @FXML private Label HotspotLabel;
     @FXML private Label GeredLabel;
+    @FXML private Label GeredLabel1;
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -487,6 +488,8 @@ public class SpelController implements Initializable {
             hakTxt.setText(" 2");
             blusTxt.setText(" 1");
         }
+        GeredLabel.setText(Integer.toString(spel.getGeredCounter())+ " / 7");
+        GeredLabel1.setText(Integer.toString(spel.getDoodCounter())+ " / 3");
 
 
 
