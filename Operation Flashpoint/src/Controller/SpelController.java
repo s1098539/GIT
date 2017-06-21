@@ -258,6 +258,8 @@ public class SpelController implements Initializable {
         }
         checkVonkoverslag();
         checkStoffen();
+        veldC.veldD.getVakken()[spelerC.speler.getX()][spelerC.speler.getY()].setPersonen(spelerC.speler.getPersoon());
+        spelerC.speler.setPersoon(null);
         checkPersonen();
         veldC.ImageSetterALL();
         spelerC.resetPunten();
@@ -528,7 +530,7 @@ public class SpelController implements Initializable {
                 count += vak.getPersonen().size();
             }
         }
-//        for(int i = count; i< 3; i++) addPersoon();
+        for(int i = count; i< 3; i++) addPersoon();
 
     }
 
