@@ -580,6 +580,7 @@ public class SpeelveldController {
 
 
     public int[] volgPijl(int x, int y){
+
         if(y==1 && x < 9 && x > 0){
             y = 2;
         }
