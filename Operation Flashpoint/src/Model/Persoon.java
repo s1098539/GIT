@@ -9,6 +9,15 @@ public enum Persoon {
     VIS(false, false), NOPE1(false), NOPE2(false), NOPE3(false), NOPE4(false), NOPE5(false);
     private boolean gered;
     private boolean omgedraaid;
+    private boolean geheeld = false;
+
+    public boolean isGeheeld() {
+        return geheeld;
+    }
+
+    public void setGeheeld() {
+        this.geheeld = true;
+    }
 
     Persoon(boolean omgedraaid, boolean gered) {
         this.gered = gered;

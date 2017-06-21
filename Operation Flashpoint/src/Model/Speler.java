@@ -25,6 +25,11 @@ public class Speler {
 
     boolean slechtziendmodus;
 
+    Boolean stof = false;
+    Persoon persoon = null;
+
+
+
     public Speler(String naam, Kleur kleur) {
         this.naam = naam;
         this.kleur = kleur;
@@ -104,7 +109,21 @@ public class Speler {
         this.slechtziendmodus = slechtziendmodus;
     }
 
+    public Boolean isStof() {
+        return stof;
+    }
 
+    public void setStof(Boolean stof) {
+        this.stof = stof;
+    }
+
+    public Persoon getPersoon() {
+        return persoon;
+    }
+
+    public void setPersoon(Persoon persoon) {
+        this.persoon = persoon;
+    }
 
 
 }

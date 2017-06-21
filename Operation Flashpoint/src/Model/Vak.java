@@ -81,8 +81,8 @@ public class Vak{
         return personen;
     }
 
-    public void setPersonen(ArrayList<Persoon> personen) {
-        this.personen = personen;
+    public void setPersonen(Persoon persoon) {
+        this.personen.add(persoon);
     }
 
     public Status getBoven() {

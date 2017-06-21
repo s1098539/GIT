@@ -341,6 +341,9 @@ public class SpelController implements Initializable {
         imgRolswap.setOnMouseClicked(event -> {
             veranderKlasse();
         });
+        imgPickup.setOnMouseClicked(event -> {
+            spelerC.oppakkenActie();
+        });
 
     }
     //Door: Sam, don't hate if its wrong ok
@@ -418,7 +421,6 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x][y-teller];
                 if (!vak.boven.isBegaanbaar()){
                     veldC.doeBeschadiging(x, y-teller, richting);
-                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -437,7 +439,6 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x+teller][y];
                 if (!vak.rechts.isBegaanbaar()){
                     veldC.doeBeschadiging((x+teller), y, richting);
-                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -456,7 +457,6 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x][y+teller];
                 if (!vak.onder.isBegaanbaar()){
                     veldC.doeBeschadiging(x, (y + teller), richting);
-                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -475,7 +475,6 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x-teller][y];
                 if (!vak.links.isBegaanbaar()){
                     veldC.doeBeschadiging((x-teller), y, richting);
-                    spel.addBeschadiging();
                     doorgaan = false;
                 }
 
@@ -563,6 +562,7 @@ public class SpelController implements Initializable {
     public void updatePunten() {
         APLabel.setText(" " + Integer.toString(spelerC.getSpeler().getActiepunten()));
         EPLabel.setText(" " + Integer.toString(spelerC.getSpeler().getExtrapunten()));
+        BeschadigingLabel.setText(" " + Integer.toString((int)spelC.spel.getBeschadigingCounter())+" / 24");
         if(spelerC.getSpeler().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
         else spuitTxt.setText(" 4");
         if(spelerC.getSpeler().getRol()==REDDINGSSPECIALIST) {
@@ -627,6 +627,9 @@ public class SpelController implements Initializable {
             String klasse = keuzeKlasse.get();
             System.out.println("Je hebt gekozen voor de klasse: " + klasse);
         }
+    }
+    public void addBeschadigingCount() {
+        spel.setBeschadigingCounter(spel.getBeschadigingCounter()+.5);
     }
 }
 

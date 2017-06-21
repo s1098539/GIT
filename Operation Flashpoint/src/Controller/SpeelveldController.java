@@ -413,6 +413,8 @@ public class SpeelveldController {
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Boven)");
                     }
+                    ImageSetter(x, y);
+                    ImageSetter(x, y-1);
                 }
                 break;
             case RECHTS:
@@ -427,34 +429,40 @@ public class SpeelveldController {
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Rechts)");
                     }
+                    ImageSetter(x, y);
+                    ImageSetter(x+1, y);
                 }
                 break;
             case LINKS:
-                if (y<7) {
-                    switch(vak.getOnder()) {
-                        case DEURD: vak.setRechts(DEURO);
-                            veldD.getVakken()[x][y+1].setLinks(DEURO);
+                if (x>0) {
+                    switch(vak.getLinks()) {
+                        case DEURD: vak.setLinks(DEURO);
+                            veldD.getVakken()[x-1][y].setRechts(DEURO);
                             break;
-                        case DEURO: vak.setRechts(DEURD);
-                            veldD.getVakken()[x][y+1].setLinks(DEURD);
+                        case DEURO: vak.setLinks(DEURD);
+                            veldD.getVakken()[x-1][y].setRechts(DEURD);
                             break;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Links)");
                     }
+                    ImageSetter(x, y);
+                    ImageSetter(x-1, y);
                 }
                 break;
             case ONDER:
-                if (x>0) {
-                    switch(vak.getLinks()) {
-                        case DEURD: vak.setRechts(DEURO);
-                            veldD.getVakken()[x-1][y].setLinks(DEURO);
+                if (y<7) {
+                    switch(vak.getOnder()) {
+                        case DEURD: vak.setOnder(DEURO);
+                            veldD.getVakken()[x][y+1].setBoven(DEURO);
                             break;
-                        case DEURO: vak.setRechts(DEURD);
-                            veldD.getVakken()[x-1][y].setLinks(DEURD);
+                        case DEURO: vak.setOnder(DEURD);
+                            veldD.getVakken()[x][y+1].setBoven(DEURD);
                             break;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Onder)");
                     }
+                    ImageSetter(x, y);
+                    ImageSetter(x, y+1);
                 }
                 break;
             default:
@@ -464,109 +472,109 @@ public class SpeelveldController {
 
 
     // Lion, handeld obstakels voor explosies en hakken
-    public void doeBeschadiging(int x, int y, Richting richting) {
+    public boolean doeBeschadiging(int x, int y, Richting richting) {
         Vak vak = veldD.getVakken()[x][y];
-        if(spelerC.getSpeler().getActiepunten()>1 || (spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST && spelerC.getSpeler().getActiepunten()>0)) {
-            spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-2);
-            if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+1);
-            switch (richting) {
-                case BOVEN:
-                    if (y > 0) {
-                        switch (vak.getBoven()) {
-                            case MUUR:
-                                vak.setBoven(MUUR1);
-                                veldD.getVakken()[x][y - 1].setOnder(MUUR1);
-                                spelC.spel.addBeschadiging();
-                                break;
-                            case MUUR1:
-                                vak.setBoven(MUUR2);
-                                veldD.getVakken()[x][y - 1].setOnder(MUUR2);
-                                spelC.spel.addBeschadiging();
-                                break;
-                            case DEURD:
-                                vak.setBoven(LEEG);
-                                veldD.getVakken()[x][y - 1].setOnder(LEEG);
-                                break;
-                            default:
-                                System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Boven)");
-                                spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
-                                if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
-                        }
+        switch (richting) {
+            case BOVEN:
+                if (y > 0) {
+                    switch (vak.getBoven()) {
+                        case MUUR:
+                            vak.setBoven(MUUR1);
+                            veldD.getVakken()[x][y - 1].setOnder(MUUR1);
+                            spelC.addBeschadigingCount();
+                            return true;
+                        case MUUR1:
+                            vak.setBoven(MUUR2);
+                            veldD.getVakken()[x][y - 1].setOnder(MUUR2);
+                            spelC.addBeschadigingCount();
+                            return true;
+                        case DEURD:
+                            vak.setBoven(LEEG);
+                            veldD.getVakken()[x][y - 1].setOnder(LEEG);
+                            return true;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Boven)");
+                            return false;
                     }
-                    break;
-                case RECHTS:
-                    if (x < 9) {
-                        switch (vak.getRechts()) {
-                            case MUUR:
-                                vak.setRechts(MUUR1);
-                                veldD.getVakken()[x + 1][y].setLinks(MUUR1);
-                                break;
-                            case MUUR1:
-                                vak.setRechts(MUUR2);
-                                veldD.getVakken()[x + 1][y].setLinks(MUUR2);
-                                break;
-                            case DEURD:
-                                vak.setRechts(LEEG);
-                                veldD.getVakken()[x + 1][y].setLinks(LEEG);
-                                break;
-                            default:
-                                System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Rechts)");
-                                spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
-                                if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
-                        }
+                }
+                return false;
+            case RECHTS:
+                if (x < 9) {
+                    switch (vak.getRechts()) {
+                        case MUUR:
+                            vak.setRechts(MUUR1);
+                            veldD.getVakken()[x + 1][y].setLinks(MUUR1);
+                            spelC.addBeschadigingCount();
+                            return true;
+                        case MUUR1:
+                            vak.setRechts(MUUR2);
+                            veldD.getVakken()[x + 1][y].setLinks(MUUR2);
+                            spelC.addBeschadigingCount();
+                            return true;
+                        case DEURD:
+                            vak.setRechts(LEEG);
+                            veldD.getVakken()[x + 1][y].setLinks(LEEG);
+                            return true;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Rechts)");
+                            return false;
                     }
-                    break;
-                case LINKS:
-                    if (x>0) {
-                        switch (vak.getLinks()) {
-                            case MUUR:
-                                vak.setLinks(MUUR1);
-                                veldD.getVakken()[x-1][y].setRechts(MUUR1);
-                                break;
-                            case MUUR1:
-                                vak.setLinks(MUUR2);
-                                veldD.getVakken()[x-1][y].setRechts(MUUR2);
-                                break;
-                            case DEURD:
-                                vak.setLinks(LEEG);
-                                veldD.getVakken()[x-1][y].setRechts(LEEG);
-                                break;
-                            default:
-                                System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Links)");
-                                spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
-                                if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
-                        }
+                }
+                return false;
+            case LINKS:
+                if (x > 0) {
+                    switch (vak.getLinks()) {
+                        case MUUR:
+                            vak.setLinks(MUUR1);
+                            veldD.getVakken()[x - 1][y].setRechts(MUUR1);
+                            spelC.addBeschadigingCount();
+                            return true;
+                        case MUUR1:
+                            vak.setLinks(MUUR2);
+                            veldD.getVakken()[x - 1][y].setRechts(MUUR2);
+                            spelC.addBeschadigingCount();
+                            return true;
+                        case DEURD:
+                            vak.setLinks(LEEG);
+                            veldD.getVakken()[x - 1][y].setRechts(LEEG);
+                            spelC.addBeschadigingCount();
+                            return true;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Links)");
+                            return false;
                     }
-                    break;
-                case ONDER:
-                    if (y < 7) {
-                        switch (vak.getOnder()) {
-                            case MUUR:
-                                vak.setOnder(MUUR1);
-                                veldD.getVakken()[x][y+1].setBoven(MUUR1);
-                                break;
-                            case MUUR1:
-                                vak.setOnder(MUUR2);
-                                veldD.getVakken()[x][y+1].setBoven(MUUR2);
-                                break;
-                            case DEURD:
-                                vak.setOnder(LEEG);
-                                veldD.getVakken()[x][y+1].setBoven(LEEG);
-                                break;
-                            default:
-                                System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Onder)");
-                                spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
-                                if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
-                        }
+                }
+                return false;
+            case ONDER:
+                if (y < 7) {
+                    switch (vak.getOnder()) {
+                        case MUUR:
+                            vak.setOnder(MUUR1);
+                            veldD.getVakken()[x][y + 1].setBoven(MUUR1);
+                            spelC.addBeschadigingCount();
+                            return true;
+                        case MUUR1:
+                            vak.setOnder(MUUR2);
+                            veldD.getVakken()[x][y + 1].setBoven(MUUR2);
+                            spelC.addBeschadigingCount();
+                            return true;
+                        case DEURD:
+                            vak.setOnder(LEEG);
+                            veldD.getVakken()[x][y + 1].setBoven(LEEG);
+                            return true;
+                        default:
+                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Onder)");
+                            return false;
                     }
-                    break;
-                default:
-                    System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeBeschadiging.default");
-                    spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()+2);
-                    if(spelerC.getSpeler().getRol()==Rol.REDDINGSSPECIALIST) spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-1);
-            }
+                }
+                return false;
+            default:
+                System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeBeschadiging.default");
+                return false;
         }
     }
+
+
 
     public int[] volgPijl(int x, int y){
         if(y==1 && x < 9 && x > 0){

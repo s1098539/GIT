@@ -2,22 +2,32 @@ package Controller;
 
 import Model.*;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.Optional;
+
 import static Model.Richting.*;
 import static Model.Rol.*;
 
 
 public class SpelerController {
+
     Speler speler=new Speler("sjaak", Kleur.BLAUW);
 
-    public void setSpeler() {
+    public void setHuidigeSpeler() {
         speler = spelC.getHuidigeSpeler();
     }
+
+    public void setSpeler(Speler speler) {
+        this.speler = speler;
+    }
+
 
     Vak vak;
 
@@ -45,7 +55,7 @@ public class SpelerController {
     public void noord(){
         if(!openendeur && !brandblusser && !hakken) {
             System.out.println("Beweeg: Noord");
-            beweegwActie(BOVEN);
+            beweegActie(BOVEN);
         }
         else if(openendeur) {
             System.out.println("DeurOS: Noord");
@@ -68,7 +78,7 @@ public class SpelerController {
     public void west(){
         if(!openendeur && !brandblusser && !hakken) {
             System.out.println("Beweeg: West");
-            beweegwActie(LINKS);
+            beweegActie(LINKS);
         }
         else if(openendeur) {
             System.out.println("DeurOS: West");
@@ -90,7 +100,7 @@ public class SpelerController {
     public void zuid(){
         if(!openendeur && !brandblusser && !hakken) {
             System.out.println("Beweeg: Zuid");
-            beweegwActie(ONDER);
+            beweegActie(ONDER);
         }
         else if(openendeur) {
             System.out.println("DeurOS: Zuid");
@@ -112,7 +122,7 @@ public class SpelerController {
     public void oost(){
         if(!openendeur && !brandblusser && !hakken) {
             System.out.println("Beweeg: Oost");
-            beweegwActie(RECHTS);
+            beweegActie(RECHTS);
         }
         else if(openendeur) {
             System.out.println("DeurOS: Oost");
@@ -139,14 +149,19 @@ public class SpelerController {
                 break;
             case COMMANDANT:    //TODO
                 break;
-            case DOKTER:        //TODO
+            case DOKTER: helen();        //TODO
                 break;
             case SPECSTOFFEN: onschadelijkMaken();
                 break;
-            default: System.out.println("Mom things im special :(");
+            default: System.out.println("Mom thinks im special :(");
         }
     }
-
+    private void helen(){
+        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
+        if (!vak.getPersonen().isEmpty()){
+            vak.getPersonen().get(0).setGeheeld();
+        }
+    }
     // Lion, dit is de special methode van specStoffen, indien mogelijk word een stoffen fiche verwijderd.
     private void onschadelijkMaken() {
         int x = speler.getX();
@@ -185,18 +200,70 @@ public class SpelerController {
     private void brandweerwagenActie(){
         System.out.println("Actie: Gebruik brandweerwagen");
     }
-    private void oppakkenActie(){
-        System.out.println("Actie: Oppakken");
+
+    public void oppakkenActie(){
+        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
+        if(speler.isStof() || speler.getPersoon() !=null){
+            if(speler.isStof()){
+                speler.setStof(false);
+                vak.setStoffen(true);
+            }
+            else{
+                vak.setPersonen(speler.getPersoon());
+                speler.setPersoon(null);
+            }
+        }
+
+        else if(vak.isStoffen() && !vak.getPersonen().isEmpty()){
+            ArrayList<String> keuzes = new ArrayList<>();
+            keuzes.add("Gevaarlijke stoffen");
+            keuzes.add("Persoon van aandacht");
+            //De choicedialog maken
+            ChoiceDialog<String> oppakkeus = new ChoiceDialog<>("Oppak object", keuzes);
+            oppakkeus.setTitle("Object kiezen");
+            oppakkeus.setHeaderText("Kies het object dat je wilt oppakken");
+            oppakkeus.setContentText("Object:");
+
+            Optional<String> keuzeObject = oppakkeus.showAndWait();
+            if (keuzeObject.isPresent() && keuzeObject.get() != "Oppak object"){
+                if (keuzeObject.get() == "Gevaarlijke stoffen"){
+                    speler.setStof(true);
+                    vak.setStoffen(false);
+                }
+                else {
+                    speler.setPersoon(vak.getPersonen().get(0));
+                    vak.getPersonen().remove(0);
+                }
+            }
+        }
+        else if (vak.isStoffen()){
+            speler.setStof(true);
+            vak.setStoffen(false);
+        }
+        else if (!vak.getPersonen().isEmpty()){
+            speler.setPersoon(vak.getPersonen().get(0));
+            vak.getPersonen().remove(0);
+        }
+        veldC.ImageSetter(speler.getX(),speler.getY());
     }
 
     private void hakActie(Richting richting) {
-        veldC.doeBeschadiging(speler.getX(),speler.getY(),richting);
+        if(speler.getRol()==REDDINGSSPECIALIST) {
+            if(speler.getActiepunten()>0 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
+                speler.setActiepunten(speler.getActiepunten()-1);
+                spelC.addBeschadigingCount();
+            }
+        } else if(speler.getActiepunten()>1 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
+                    speler.setActiepunten(speler.getActiepunten()-2);
+                    spelC.addBeschadigingCount();
+        }
     }
 
     private void deurActie(Richting richting) {
         int x = speler.getX();
         int y = speler.getY();
         veldC.doeDeur(x,y,richting);
+        veldC.ImageSetter(x,y);
     }
 
 
@@ -244,7 +311,7 @@ public class SpelerController {
     }
 
     // Lion, verplaats de speler in de gewenste richting indien mogelijk.
-    private void beweegwActie(Richting richting) {
+    private void beweegActie(Richting richting) {//TODO prijs met object bewegen afhandelen, kijken of persoon geheeld is
         Vak vak = veldC.veldD.getVakken()[speler.getX()][speler.getY()];
         veldC.removeSpeler(speler.getKleur(),speler.getX(),speler.getY());
         veldC.ImageSetter(speler.getX(),speler.getY());
