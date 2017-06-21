@@ -639,10 +639,10 @@ public class SpelController implements Initializable {
                 vak = veldC.veldD.getVakken()[x][y];
                 if (vak.getPersonen().size() > 0 && vak.isVuur()) {
                     for(int i = 0; i < vak.getPersonen().size(); i++) {
-                        if (vak.getPersonen().get(i) != Persoon.NOPE1 ||
-                                vak.getPersonen().get(i) != Persoon.NOPE2 ||
-                                vak.getPersonen().get(i) != Persoon.NOPE3 ||
-                                vak.getPersonen().get(i) != Persoon.NOPE4 ||
+                        if (vak.getPersonen().get(i) != Persoon.NOPE1 &&
+                                vak.getPersonen().get(i) != Persoon.NOPE2 &&
+                                vak.getPersonen().get(i) != Persoon.NOPE3 &&
+                                vak.getPersonen().get(i) != Persoon.NOPE4 &&
                                 vak.getPersonen().get(i) != Persoon.NOPE5) {
                             spel.addDood();
                         }
