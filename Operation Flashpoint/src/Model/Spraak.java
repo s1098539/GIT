@@ -63,6 +63,10 @@ public class Spraak {
     private String pva5 = "./src/Resources/Audio/5pva.wav";
     private String pva6 = "./src/Resources/Audio/6pva.wav";
     private String pva7 = "./src/Resources/Audio/7pva.wav";
+    private String vermist0 = "./src/Resources/Audio/0vermist.wav";
+    private String vermist1 = "./src/Resources/Audio/1vermist.wav";
+    private String vermist2 = "./src/Resources/Audio/2vermist.wav";
+    private String vermist3 = "./src/Resources/Audio/3vermist.wav";
     private String brandhaarden1 = "./src/Resources/Audio/1Haard.wav";
     private String brandhaarden2 = "./src/Resources/Audio/2haard.wav";
     private String brandhaarden3 = "./src/Resources/Audio/3haard.wav";
@@ -73,7 +77,7 @@ public class Spraak {
     // De audiobestanden van de kosten van alle acties kunt u hier vinden.
     private String bewegen1 = "./src/Resources/Audio/Bewegen1AP.wav";
     private String bewegen2 = "./src/Resources/Audio/BewegenPvaGS2AP.wav";
-    private String bewegenReddingsspecialist = "./src/Resources/Audio/BewegenReddingsspecialist3EP.wav";
+    private String bewegenReddingsSpecialist = "./src/Resources/Audio/BewegenReddingsspecialist3EP.wav";
     private String brandspuit1 = "./src/Resources/Audio/BrandspuitBedienen4AP.wav";
     private String brandspuit2 = "./src/Resources/Audio/BrandspuitbedienerKost2AP.wav";
     private String brandspuit3 = "./src/Resources/Audio/BrandspuitbedienerReroll.wav";
@@ -91,7 +95,6 @@ public class Spraak {
     private String rookBlussen = "./src/Resources/Audio/RookBlussen1AP.wav";
     private String vuurNaarRook = "./src/Resources/Audio/VuurNaarRook1AP.wav";
     private String vuurBewegen = "./src/Resources/Audio/VuurBewegen2AP.wav";
-    private String vuurBlussen = "./src/Resources/Audio/VuurBlussen2AP.wav";
 
     // De audiobestanden van de unieke mogelijkheden van de verschillende specialisten stan hier.
 
@@ -343,6 +346,23 @@ public class Spraak {
         return pva7;
     }
 
+    public String getVermist0() {
+        return vermist0;
+    }
+
+    public String getVermist1() {
+        return vermist1;
+    }
+
+    public String getVermist2() {
+        return vermist2;
+    }
+
+    public String getVermist3() {
+        return vermist3;
+    }
+
+
     // Getters van de brandhaarden Counter
     // Hier kan je de audio getten wat uitleest hoeveel brandhaarden op het speelveld staan
 
@@ -386,7 +406,7 @@ public class Spraak {
     }
 
     public String getBewegenReddingsSpecialist() {
-        return bewegenReddingsspecialist;
+        return bewegenReddingsSpecialist;
     }
 
     // Getters van de knop brandspuit

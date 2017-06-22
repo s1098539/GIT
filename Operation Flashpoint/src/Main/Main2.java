@@ -85,7 +85,7 @@ public class Main2 extends Application{
 
         //This is where the client makes a connection to the server.
         String naam = "Rafe"; //NAAM CLIENT
-        String ip = "localhost"; //IP SERVER
+        String ip = "127.0.0.1"; //IP SERVER
         Speler s = new Speler("DEBUG", Kleur.ZWART);
 
         try {

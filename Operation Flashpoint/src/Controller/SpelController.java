@@ -41,7 +41,11 @@ public class SpelController implements Initializable {
     @FXML private ImageView imgPickup;
     @FXML private ImageView imgPickup1;
     @FXML private ImageView imgRolswap;
+    @FXML private ImageView imgPva;
+    @FXML private ImageView imgBrandHaard;
+    @FXML private ImageView imgSchade;
     @FXML private ImageView imgOpenendeur1;
+    @FXML private ImageView doodCounter;
     @FXML private Button btnSpecial;
     @FXML private TextArea chatArea;
     @FXML private TextField textInput;
@@ -186,6 +190,30 @@ public class SpelController implements Initializable {
 
         SpraakController audioPlayer = new SpraakController();
 
+        imgSchade.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playSchade(spelC.spel.getBeschadigingCounter());
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgPva.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playPva(spelC.spel.getGeredCounter());
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        imgBrandHaard.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playBrandHaard(spelC.spel.getHotspotCounter());
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
         imgPickup1.setOnContextMenuRequested(event ->{
             try{
                 audioPlayer.playAP(spelerC.speler.getActiepunten());
@@ -212,7 +240,7 @@ public class SpelController implements Initializable {
 
         imgBrandblusser.setOnContextMenuRequested(event ->{
             try{
-                audioPlayer.playBlussen();
+                audioPlayer.playBlussen(spelC.spelerC.speler.getRol());
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -228,7 +256,7 @@ public class SpelController implements Initializable {
 
         btnLEFT.setOnContextMenuRequested(event ->{
             try{
-                audioPlayer.playBewegen();
+                audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -236,7 +264,7 @@ public class SpelController implements Initializable {
 
         btnRIGHT.setOnContextMenuRequested(event ->{
             try{
-                audioPlayer.playBewegen();
+                audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -244,7 +272,7 @@ public class SpelController implements Initializable {
 
         btnUP.setOnContextMenuRequested(event ->{
             try{
-                audioPlayer.playBewegen();
+                audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -252,7 +280,7 @@ public class SpelController implements Initializable {
 
         btnDOWN.setOnContextMenuRequested(event ->{
             try{
-                audioPlayer.playBewegen();
+                audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -276,7 +304,7 @@ public class SpelController implements Initializable {
 
         imgWagenblussen.setOnContextMenuRequested(event ->{
             try{
-                audioPlayer.playWagenBlussen();
+                audioPlayer.playWagenBlussen(spelC.spelerC.speler.getRol());
             } catch ( Exception e){
                 e.printStackTrace();
             }
@@ -309,6 +337,14 @@ public class SpelController implements Initializable {
         imgRolswap.setOnContextMenuRequested(event ->{
             try{
                 audioPlayer.playRolWissel();
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
+
+        doodCounter.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playDood(spelC.spel.getDoodCounter());
             } catch ( Exception e){
                 e.printStackTrace();
             }
