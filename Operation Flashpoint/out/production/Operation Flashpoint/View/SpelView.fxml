@@ -37,7 +37,7 @@
                             <children>
                                 <HBox prefHeight="50.0" prefWidth="125.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgBrandHaard" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@../Resources/GFX/Hotspot.png" />
                                             </image>
@@ -51,7 +51,7 @@
                                 </HBox>
                                 <HBox prefHeight="100.0" prefWidth="175.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgSchade" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@../Resources/GFX/Muur1kapot.png" />
                                             </image>
@@ -68,7 +68,7 @@
                                 </HBox>
                                 <HBox prefHeight="50.0" prefWidth="125.0">
                                     <children>
-                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="imgPva" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@../Resources/GFX/Vraagteken_gered.png" />
                                             </image>
