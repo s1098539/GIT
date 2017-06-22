@@ -72,13 +72,8 @@ public class Spel {
     public int getGeredCounter() {
         return geredCounter;
     }
-
-    public void setGeredCounter(int geredCounter) {
-        this.geredCounter = geredCounter;
-    }
-
     public void addGered(){
-
+        geredCounter++;
     }
 
     public Spel(int hotspotCounter) {
