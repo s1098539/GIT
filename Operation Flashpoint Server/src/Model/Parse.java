@@ -7,12 +7,6 @@ import java.io.Serializable;
  */
 public class Parse implements Serializable {
     public String message;
-    private SpeelveldData veldD;
-
-    public Parse(String message, SpeelveldData veldD) {
-        this.message = message;
-        this.veldD = veldD;
-    }
 
     public String getMessage() {
         return message;
@@ -22,11 +16,10 @@ public class Parse implements Serializable {
         this.message = message;
     }
 
-    public SpeelveldData getVeldD() {
-        return veldD;
+    public Parse(String message) {
+        this.message = message;
+
     }
 
-    public void setVeldD(SpeelveldData veldD) {
-        veldD = veldD;
-    }
+
 }
