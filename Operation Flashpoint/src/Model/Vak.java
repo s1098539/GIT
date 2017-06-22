@@ -97,6 +97,7 @@ public class Vak{
         return rechts;
     }
 
+
     public void setRechts(Status rechts) {
         this.rechts = rechts;
     }

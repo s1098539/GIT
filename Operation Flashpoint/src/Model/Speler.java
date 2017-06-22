@@ -2,11 +2,12 @@ package Model;
 
 import Controller.SpelerController;
 
+import java.io.Serializable;
+
 /**
  * Created by Sam van Schaik
  */
-public class Speler {
-
+public class Speler implements Serializable {
 
     //Speler informatie
     String naam;
@@ -21,7 +22,7 @@ public class Speler {
     int actiepunten;
     int extrapunten;
 
-    Rol rol = Rol.MANNETJESPUTTER;
+    Rol rol = Rol.GODMODE;
 
     boolean slechtziendmodus;
 

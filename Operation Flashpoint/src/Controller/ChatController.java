@@ -50,13 +50,13 @@ public class ChatController {
 
     //berichten sturen
     public void stuurBericht() {
-        spelC.setLocalMessage(spelC.getTextInput().getText());
-        try {
-            spelC.getSender().sendMessageObject(spelC.getUsername(), spelC.getLocalMessage());
-        } catch (Exception e1) {
-            e1.printStackTrace();
-        }
-        spelC.getTextInput().setText("");
+//        spelC.setLocalMessage(spelC.getTextInput().getText());
+//        try {
+//            spelC.getSender().sendMessageObject(spelC.getUsername(), spelC.getLocalMessage());
+//        } catch (Exception e1) {
+//            e1.printStackTrace();
+//        }
+//        spelC.getTextInput().setText("");
     }
 
 }
