@@ -620,7 +620,7 @@ public class SpelController implements Initializable {
     public void updatePunten() {
         APLabel.setText(" " + Integer.toString(spelerC.getSpeler().getActiepunten()));
         EPLabel.setText(" " + Integer.toString(spelerC.getSpeler().getExtrapunten()));
-        BeschadigingLabel.setText(" " + Integer.toString((int)spelC.spel.getBeschadigingCounter())+" / 24");
+        BeschadigingLabel.setText(" " + Integer.toString(spelC.spel.getBeschadigingCounter())+" / 24");
         if(spelerC.getSpeler().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
         else spuitTxt.setText(" 4");
         if(spelerC.getSpeler().getRol()==REDDINGSSPECIALIST) {
@@ -756,7 +756,7 @@ public class SpelController implements Initializable {
         }
     }
     public void addBeschadigingCount() {
-        spel.setBeschadigingCounter(spel.getBeschadigingCounter()+.5);
+        spel.setBeschadigingCounter(spel.getBeschadigingCounter()+1);
     }
 }
 

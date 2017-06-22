@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Spel {
     int hotspotCounter;
-    double beschadigingCounter;
+    int beschadigingCounter;
     int geredCounter;
     ArrayList<Speler> spelers = new ArrayList<>();
     Speler huidigeSpeler;
@@ -61,11 +61,11 @@ public class Spel {
         this.hotspotCounter = hotspotCounter;
     }
 
-    public double getBeschadigingCounter() {
+    public int getBeschadigingCounter() {
         return beschadigingCounter;
     }
 
-    public void setBeschadigingCounter(double beschadigingCounter) {
+    public void setBeschadigingCounter(int beschadigingCounter) {
         this.beschadigingCounter = beschadigingCounter;
     }
 
