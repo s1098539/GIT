@@ -425,6 +425,7 @@ public class SpelController implements Initializable {
 
     // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
     public void endTurn() {
+        checkWin();
         nieuwRook();
         checkVonkoverslag();
         checkStoffen();
@@ -782,14 +783,34 @@ public class SpelController implements Initializable {
         spel.setBeschadigingCounter(spel.getBeschadigingCounter()+1);
     }
 
+    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    Boolean lost = false;
     public void checkVerlies() {
-        if(spel.getDoodCounter()>2) System.out.println("Helaas, er zijn te veel mensen vermist, je het spel hebt verloren");
-        if(spel.getBeschadigingCounter()>23) System.out.println("Helaas, het huis is ingestord, je hebt het spel verloren");
+        if(spel.getDoodCounter()>2) {
+            alert.setContentText("Er zijn te veel mensen vermist");
+            lost = true;
+        }
+        else if(spel.getBeschadigingCounter()>23) {
+            alert.setContentText("Het huis is ingestord.");
+            lost = true;
+
+        }
+        if(lost) {
+            alert.setTitle("Helaas, je hebt verloren");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+            System.exit(0);
+        }
+    }
+
+    public void checkWin() {
+        if(spel.getGeredCounter()>7) {
+            alert.setContentText("Je hebt " + spel.getGeredCounter() + " personen gered");
+            alert.setTitle("Gefeliciteerd, je hebt gewonnen");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+            System.exit(0);
+        }
     }
 }
 
-
-
-    // checkWin()
-
-    //TODO checkVerlies()
