@@ -61,6 +61,12 @@ public class SpelController implements Initializable {
     @FXML private Label HotspotLabel;
     @FXML private Label GeredLabel;
     @FXML private Label GeredLabel1;
+    @FXML private Label user1;
+    @FXML private Label user2;
+    @FXML private Label user3;
+    @FXML private Label user4;
+    @FXML private Label user5;
+    @FXML private Label user6;
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -86,6 +92,7 @@ public class SpelController implements Initializable {
         spel.setSpelers(new Speler("Calvin", Kleur.ROOD, 4, 0));
         spel.setSpelers(new Speler("Lion", Kleur.ZWART, 5, 0));
         veldC.nieuweSpelersToevoegen();
+        setNamen();
     }
 
     public void switchSpeler() {
@@ -808,6 +815,15 @@ public class SpelController implements Initializable {
             alert.showAndWait();
             System.exit(0);
         }
+    }
+
+    public void setNamen() {
+        user1.setText(spel.getSpelers().get(0).getNaam());
+        user2.setText(spel.getSpelers().get(1).getNaam());
+        user3.setText(spel.getSpelers().get(2).getNaam());
+        user4.setText(spel.getSpelers().get(3).getNaam());
+        user5.setText(spel.getSpelers().get(4).getNaam());
+        user6.setText(spel.getSpelers().get(5).getNaam());
     }
 
     public void checkWin() {
