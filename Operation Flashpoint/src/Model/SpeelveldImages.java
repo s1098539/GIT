@@ -13,6 +13,7 @@ public class SpeelveldImages {
     GridPane gridPane;
     FlowPane[][]flowPanes = new FlowPane[10][8];
     ImageView[][][]imageViews = new ImageView[10][8][9];
+    ImageView[]carViews = new ImageView[2];
 
     Image empty = new Image("Resources/GFX/Empty.png",20,20,false,true);
     Image hotspot = new Image("Resources/GFX/Hotspot.png",20,20,false,true);
@@ -57,7 +58,14 @@ public class SpeelveldImages {
     Image obamanigua = new Image("Resources/GFX/Obamanigua.png",20,20,false,true);
     Image hipstersnor = new Image("Resources/GFX/Hipstersnor.png",20,20,false,true);
     Image medkit = new Image("Resources/GFX/Medkit.png",20,20,false,true);
-
+    Image ambuBoven = new Image("Resources/GFX/ambulanceLayerboven.png");
+    Image ambuLinks = new Image("Resources/GFX/ambulanceLayerlinks.png");
+    Image ambuOnder = new Image("Resources/GFX/ambulanceLayeronder.png");
+    Image ambuRechts = new Image("Resources/GFX/ambulanceLayerrechts.png");
+    Image brandweerBoven = new Image("Resources/GFX/brandweerLayerboven.png");
+    Image brandweerLinks = new Image("Resources/GFX/brandweerLayerlinks.png");
+    Image brandweerOnder = new Image("Resources/GFX/brandweerLayeronder.png");
+    Image brandweerRechts = new Image("Resources/GFX/brandweerLayerrechts.png");
 
     public GridPane getGridPane() {
         return gridPane;
@@ -81,6 +89,14 @@ public class SpeelveldImages {
 
     public void setImageViews(ImageView[][][] imageViews) {
         this.imageViews = imageViews;
+    }
+
+    public ImageView[] getCarViews() {
+        return carViews;
+    }
+
+    public void setCarViews(ImageView[] carViews) {
+        this.carViews = carViews;
     }
 
     public Image getEmpty() {
@@ -425,5 +441,69 @@ public class SpeelveldImages {
 
     public void setMedkit(Image medkit) {
         this.medkit = medkit;
+    }
+
+    public Image getAmbuBoven() {
+        return ambuBoven;
+    }
+
+    public void setAmbuBoven(Image ambuBoven) {
+        this.ambuBoven = ambuBoven;
+    }
+
+    public Image getAmbuLinks() {
+        return ambuLinks;
+    }
+
+    public void setAmbuLinks(Image ambuLinks) {
+        this.ambuLinks = ambuLinks;
+    }
+
+    public Image getAmbuOnder() {
+        return ambuOnder;
+    }
+
+    public void setAmbuOnder(Image ambuOnder) {
+        this.ambuOnder = ambuOnder;
+    }
+
+    public Image getAmbuRechts() {
+        return ambuRechts;
+    }
+
+    public void setAmbuRechts(Image ambuRechts) {
+        this.ambuRechts = ambuRechts;
+    }
+
+    public Image getBrandweerBoven() {
+        return brandweerBoven;
+    }
+
+    public void setBrandweerBoven(Image brandweerBoven) {
+        this.brandweerBoven = brandweerBoven;
+    }
+
+    public Image getBrandweerLinks() {
+        return brandweerLinks;
+    }
+
+    public void setBrandweerLinks(Image brandweerLinks) {
+        this.brandweerLinks = brandweerLinks;
+    }
+
+    public Image getBrandweerOnder() {
+        return brandweerOnder;
+    }
+
+    public void setBrandweerOnder(Image brandweerOnder) {
+        this.brandweerOnder = brandweerOnder;
+    }
+
+    public Image getBrandweerRechts() {
+        return brandweerRechts;
+    }
+
+    public void setBrandweerRechts(Image brandweerRechts) {
+        this.brandweerRechts = brandweerRechts;
     }
 }

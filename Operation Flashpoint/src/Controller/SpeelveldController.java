@@ -95,6 +95,35 @@ public class SpeelveldController {
         if(y>0)ImageSetter(x,y-1);
     }
 
+    public void carViewFactory() {
+        veldI.getCarViews()[0] = new ImageView();
+        veldI.getCarViews()[1] = new ImageView();
+    }
+
+    public void carSetter() {
+        switch (veldD.getAmbulance()) {
+            case BOVEN: veldI.getCarViews()[0].setImage(veldI.getAmbuBoven());
+                break;
+            case ONDER: veldI.getCarViews()[0].setImage(veldI.getAmbuOnder());
+                break;
+            case LINKS: veldI.getCarViews()[0].setImage(veldI.getAmbuLinks());
+                break;
+            case RECHTS: veldI.getCarViews()[0].setImage(veldI.getAmbuRechts());
+                break;
+        }
+
+        switch (veldD.getAmbulance()) {
+            case BOVEN: veldI.getCarViews()[1].setImage(veldI.getBrandweerBoven());
+                break;
+            case RECHTS: veldI.getCarViews()[1].setImage(veldI.getBrandweerRechts());
+                break;
+            case LINKS: veldI.getCarViews()[1].setImage(veldI.getBrandweerLinks());
+                break;
+            case ONDER: veldI.getCarViews()[1].setImage(veldI.getBrandweerOnder());
+                break;
+        }
+    }
+
     // Lion, gaat de eigenschappen af van een bepaald vak en laad het goede plaatje in de image View
     public void ImageSetter(int x, int y) {
         // Hotspot

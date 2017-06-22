@@ -167,10 +167,15 @@ public class SpelController implements Initializable {
 
     // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
+        veldC.carViewFactory();
+        veldC.carSetter();
         stackPane.getChildren().add(veldC.getVeldI().getGridPane());
+        stackPane.getChildren().add(veldC.veldI.getCarViews()[0]);
+        stackPane.getChildren().add(veldC.veldI.getCarViews()[1]);
         maakSpelers();
         spel.setHuidigeSpeler(spel.getSpelers().get(0));
         spelerC.setHuidigeSpeler();
+
         spelerC.resetPunten();
 
 //        try {
