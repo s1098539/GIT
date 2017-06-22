@@ -486,12 +486,10 @@ public class SpeelveldController {
                             vak.setBoven(MUUR1);
                             veldD.getVakken()[x][y - 1].setOnder(MUUR1);
                             spelC.addBeschadigingCount();
-                            spelC.addBeschadigingCount();
                             return true;
                         case MUUR1:
                             vak.setBoven(MUUR2);
                             veldD.getVakken()[x][y - 1].setOnder(MUUR2);
-                            spelC.addBeschadigingCount();
                             spelC.addBeschadigingCount();
                             return true;
                         case DEURD:
@@ -511,12 +509,10 @@ public class SpeelveldController {
                             vak.setRechts(MUUR1);
                             veldD.getVakken()[x + 1][y].setLinks(MUUR1);
                             spelC.addBeschadigingCount();
-                            spelC.addBeschadigingCount();
                             return true;
                         case MUUR1:
                             vak.setRechts(MUUR2);
                             veldD.getVakken()[x + 1][y].setLinks(MUUR2);
-                            spelC.addBeschadigingCount();
                             spelC.addBeschadigingCount();
                             return true;
                         case DEURD:
@@ -536,12 +532,10 @@ public class SpeelveldController {
                             vak.setLinks(MUUR1);
                             veldD.getVakken()[x - 1][y].setRechts(MUUR1);
                             spelC.addBeschadigingCount();
-                            spelC.addBeschadigingCount();
                             return true;
                         case MUUR1:
                             vak.setLinks(MUUR2);
                             veldD.getVakken()[x - 1][y].setRechts(MUUR2);
-                            spelC.addBeschadigingCount();
                             spelC.addBeschadigingCount();
                             return true;
                         case DEURD:
@@ -561,12 +555,10 @@ public class SpeelveldController {
                             vak.setOnder(MUUR1);
                             veldD.getVakken()[x][y + 1].setBoven(MUUR1);
                             spelC.addBeschadigingCount();
-                            spelC.addBeschadigingCount();
                             return true;
                         case MUUR1:
                             vak.setOnder(MUUR2);
                             veldD.getVakken()[x][y + 1].setBoven(MUUR2);
-                            spelC.addBeschadigingCount();
                             spelC.addBeschadigingCount();
                             return true;
                         case DEURD:
