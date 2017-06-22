@@ -4,7 +4,15 @@ public class Spraak {
 
     public Spraak() {
     }
+    //Calvin, De methodes die dit model aanroepen vind u in de spraakcontroller klasse
 
+    //Hier zijn de Guide User Interface ondersteunde geluiden te vinden.
+    //Dit model bevat de paden naar de audio bestanden.
+    // De view kan getallen(ook wel counters) uitlezen door middel van de onderstaande geluiden.
+    // De view kan ook actieknoppen uilezen, bijvoorbeeld: bewegen, oppakken en blussen.
+
+
+    // Counters op de view
     private String schade0 = "./src/Resources/Audio/0schade.wav";
     private String schade1 = "./src/Resources/Audio/1schade.wav";
     private String schade2 = "./src/Resources/Audio/2schade.wav";
@@ -55,18 +63,17 @@ public class Spraak {
     private String pva5 = "./src/Resources/Audio/5pva.wav";
     private String pva6 = "./src/Resources/Audio/6pva.wav";
     private String pva7 = "./src/Resources/Audio/7pva.wav";
-    private String pva8 = "./src/Resources/Audio/8pva.wav";
-    private String pva9 = "./src/Resources/Audio/9pva.wav";
-    private String pva10 = "./src/Resources/Audio/10pva.wav";
     private String brandhaarden1 = "./src/Resources/Audio/1Haard.wav";
     private String brandhaarden2 = "./src/Resources/Audio/2haard.wav";
     private String brandhaarden3 = "./src/Resources/Audio/3haard.wav";
     private String brandhaarden4 = "./src/Resources/Audio/4haard.wav";
     private String brandhaarden5 = "./src/Resources/Audio/5haard.wav";
     private String brandhaarden6 = "./src/Resources/Audio/6haard.wav";
+
+    // De audiobestanden van de kosten van alle acties kunt u hier vinden.
     private String bewegen1 = "./src/Resources/Audio/Bewegen1AP.wav";
     private String bewegen2 = "./src/Resources/Audio/BewegenPvaGS2AP.wav";
-    private String bewegen3 = "./src/Resources/Audio/BewegenReddingsspecialist3EP.wav";
+    private String bewegenReddingsspecialist = "./src/Resources/Audio/BewegenReddingsspecialist3EP.wav";
     private String brandspuit1 = "./src/Resources/Audio/BrandspuitBedienen4AP.wav";
     private String brandspuit2 = "./src/Resources/Audio/BrandspuitbedienerKost2AP.wav";
     private String brandspuit3 = "./src/Resources/Audio/BrandspuitbedienerReroll.wav";
@@ -74,6 +81,7 @@ public class Spraak {
     private String rolWissel = "./src/Resources/Audio/RolWisselen2AP.wav";
     private String dokterBehandeld = "./src/Resources/Audio/DokterBehandelenBewegenGeenExtraAP.wav";
     private String dokterBlussen = "./src/Resources/Audio/DokterBlussenBetaaltDubbelAP.wav";
+    private String reddingsSpecialistBlussen = "./src/Resources/Audio/ReddingsspecialistBlussenBetaaltDubbelAP.wav";
     private String hakken1 = "./src/Resources/Audio/Hakken1APReddingsspecialist.wav";
     private String hakken2 = "./src/Resources/Audio/Hakken2AP.wav";
     private String klasse = "./src/Resources/Audio/KlasseSpecial.wav";
@@ -84,6 +92,9 @@ public class Spraak {
     private String vuurNaarRook = "./src/Resources/Audio/VuurNaarRook1AP.wav";
     private String vuurBewegen = "./src/Resources/Audio/VuurBewegen2AP.wav";
     private String vuurBlussen = "./src/Resources/Audio/VuurBlussen2AP.wav";
+
+    // De audiobestanden van de unieke mogelijkheden van de verschillende specialisten stan hier.
+
     private String dokterSpecialist = "./src/Resources/Audio/DokterKlasse.wav";
     private String brandspuitbedienerSpecialist = "./src/Resources/Audio/BrandspuitbedienerKlasse.wav";
     private String kapiteinSpecialist = "./src/Resources/Audio/KapiteinKlasse.wav";
@@ -92,6 +103,10 @@ public class Spraak {
     private String gevaarlijkestoffenSpecialist = "./src/Resources/Audio/GevaarlijkeStoffenKlasse.wav";
     private String gaspakdragerSpecialist = "./src/Resources/Audio/GaspakdragerKlasse.wav";
     private String reddingsspecialistSpecialist = "./src/Resources/Audio/ReddingsspecialistKlasse.wav";
+
+    // Hier staan de audiobestanden van de relevante spelregels van onze versie van het spel.
+    // Deze dienen als ondersteuning van slechtziende die de regels niet kunnen lezen.
+
     private String aangrenzendeVakken = "./src/Resources/Audio/AangrenzendeVakken.wav";
     private String actieOndernemen = "./src/Resources/Audio/ActieOndernemen.wav";
     private String bewegenSpel1 = "./src/Resources/Audio/BewegenSpel1.wav";
@@ -108,16 +123,18 @@ public class Spraak {
     private String gevolgSchokgolf = "./src/Resources/Audio/OntploffingenGevolgSchokgolf.wav";
     private String overslaandeBrand = "./src/Resources/Audio/OverslaandeBrand.wav";
 
+    // Vanaf hier staan de getters.
+    // In dit bestand zal u geen setters vinden, omdat deze niet nodig zijn.
+    // In een ergere situatie kan het gebeuren dat de audiopaden worden aangepast en hier mee
+    // deze functionaliteit wegvalt.
+    // Hierom zijn alleen getters van belang.
+    // Je wil alleen aan het systeem melden waar deze heen de audio kan vinden.
+
+    // Getters van de SchadeCounter
+    // Hier kan je de audio getten wat uitleest hoeveel schadeblokjes op het speelveld staan
+
     public String getSchade0() {
         return schade0;
-    }
-
-    public String getEp0() {
-        return ep0;
-    }
-
-    public String getPva0() {
-        return pva0;
     }
 
     public String getSchade1() {
@@ -216,6 +233,9 @@ public class Spraak {
         return schade24;
     }
 
+    // Getters van de Eindig zet knop
+    // Hier kan je de audio getten wat uitleest wat de eindig zet knop onder andere doet.
+
     public String getEindig1() {
         return eindig1;
     }
@@ -227,6 +247,9 @@ public class Spraak {
     public String getEindig3() {
         return eindig3;
     }
+
+    // Getters van de Actiepunten Counter
+    // Hier kan je de audio getten wat uitleest hoeveel actiepunten je speler
 
     public String getAp0() { return ap0; }
 
@@ -266,6 +289,13 @@ public class Spraak {
         return ap9;
     }
 
+    // Getters van de Extrapunten
+    // Hier kan je de audio getten wat uitleest hoeveel extrapunten een speler bezit
+
+    public String getEp0() {
+        return ep0;
+    }
+
     public String getEp1() {
         return ep1;
     }
@@ -276,6 +306,13 @@ public class Spraak {
 
     public String getEp3() {
         return ep3;
+    }
+
+    // Getters van de geredde personen van aandacht Counter
+    // Hier kan je de audio getten wat uitleest hoeveel personen van aandacht gered zijn.
+
+    public String getPva0() {
+        return pva0;
     }
 
     public String getPva1() {
@@ -306,17 +343,8 @@ public class Spraak {
         return pva7;
     }
 
-    public String getPva8() {
-        return pva8;
-    }
-
-    public String getPva9() {
-        return pva9;
-    }
-
-    public String getPva10() {
-        return pva10;
-    }
+    // Getters van de brandhaarden Counter
+    // Hier kan je de audio getten wat uitleest hoeveel brandhaarden op het speelveld staan
 
     public String getBrandhaarden1() {
         return brandhaarden1;
@@ -342,6 +370,9 @@ public class Spraak {
         return brandhaarden6;
     }
 
+    // Getters van de beweegknoppen
+    // Hier kan je de audio getten wat de mogelijkheden van de beweegknoppen uitleest.
+
     public String getBewegen1() {
         return bewegen1;
     }
@@ -350,9 +381,16 @@ public class Spraak {
         return bewegen2;
     }
 
-    public String getBewegen3() {
-        return bewegen3;
+    public String getVuurBewegen() {
+        return vuurBewegen;
     }
+
+    public String getBewegenReddingsSpecialist() {
+        return bewegenReddingsspecialist;
+    }
+
+    // Getters van de knop brandspuit
+    // Hier kan je de audio getten wat de mogelijkheden van de brandspuit uitleest.
 
     public String getBrandspuit1() {
         return brandspuit1;
@@ -366,20 +404,14 @@ public class Spraak {
         return brandspuit3;
     }
 
+    // getters audio actiepunten kosten.
+
     public String getDeur() {
         return deur;
     }
 
     public String getRolWissel() {
         return rolWissel;
-    }
-
-    public String getDokterBehandeld() {
-        return dokterBehandeld;
-    }
-
-    public String getDokterBlussen() {
-        return dokterBlussen;
     }
 
     public String getHakken1() {
@@ -414,13 +446,21 @@ public class Spraak {
         return vuurNaarRook;
     }
 
-    public String getVuurBewegen() {
-        return vuurBewegen;
+    // getters audio Klasseuitzonderingen wat het bedrag van de actiepunten beïnvoed.
+
+    public String getDokterBehandeld() {
+        return dokterBehandeld;
     }
 
-    public String getVuurBlussen() {
-        return vuurBlussen;
+    public String getDokterBlussen() {
+        return dokterBlussen;
     }
+
+    public String getReddingsSpecialistBlussen() {
+        return reddingsSpecialistBlussen;
+    }
+
+    // Getters van de audio van de unieke en klassespecifieke handelingen
 
     public String getDokterSpecialist() {
         return dokterSpecialist;
@@ -453,6 +493,8 @@ public class Spraak {
     public String getReddingsspecialistSpecialist() {
         return reddingsspecialistSpecialist;
     }
+
+    // getters van de audio van de spelregels
 
     public String getAangrenzendeVakken() {
         return aangrenzendeVakken;
