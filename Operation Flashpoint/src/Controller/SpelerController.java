@@ -443,7 +443,7 @@ public class SpelerController {
     // Lion, reset AP en EP bij het eindigen van een beurt.
     public void resetPunten() {
         speler.setActiepunten(speler.getActiepunten()+4);
-        if(speler.getActiepunten()>7) speler.setActiepunten(7);
+        if(speler.getActiepunten()>8) speler.setActiepunten(8);
         if(speler.getRol()==GASPAKDRAGER || speler.getRol() == REDDINGSSPECIALIST) speler.setActiepunten(speler.getActiepunten()-1);
         if(speler.getRol()==MANNETJESPUTTER) speler.setActiepunten(speler.getActiepunten()+1);
         if(speler.getRol()==GODMODE) speler.setActiepunten(9001);
