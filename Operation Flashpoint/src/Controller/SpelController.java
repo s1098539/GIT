@@ -17,8 +17,7 @@ import java.util.*;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
-import static Model.Rol.BRANDSPUITBEDIENER;
-import static Model.Rol.REDDINGSSPECIALIST;
+import static Model.Rol.*;
 
 public class SpelController implements Initializable {
 
@@ -679,29 +678,81 @@ public class SpelController implements Initializable {
         for(int i = count; i< 3; i++) addPersoon();
 
     }
-
+    // L, Veranderd de klasse voor de speler bij voldoende AP. Rollen die al in gebruik zijn kunnen niet worden gekozen.
     public void veranderKlasse() {
-        List<String> choices = new ArrayList<>();
+        if(spelerC.getSpeler().getActiepunten()>1) {
+            List<String> choices = new ArrayList<>();
+            Boolean[]booleans = new Boolean[8];
+            for(int i = 0; i < 8; i++) {
+                booleans[i] = true;
+            }
+            for(int i = 0; i <spel.getSpelers().size(); i++)
+            switch(spel.getSpelers().get(i).getRol()) {
+                case COMMANDANT: booleans[0] = false;
+                    break;
+                case VERKENNER: booleans[1] = false;
+                    break;
+                case MANNETJESPUTTER: booleans[2] = false;
+                    break;
+                case REDDINGSSPECIALIST: booleans[3] = false;
+                    break;
+                case SPECSTOFFEN: booleans[4] = false;
+                    break;
+                case BRANDSPUITBEDIENER: booleans[5] = false;
+                    break;
+                case GASPAKDRAGER: booleans[6] = false;
+                    break;
+                case DOKTER: booleans[7] = false;
+                    break;
+            }
 
-        choices.add("Commandant");
-        choices.add("Verkenner");
-        choices.add("Mannetjesputter");
-        choices.add("Reddingsspecialist");
-        choices.add("SpecialistG.S");
-        choices.add("BrandspuitBediener");
-        choices.add("Gaspakdrager");
-        choices.add("Dokter");
+            if(booleans[0])choices.add("Commandant");
+            if(booleans[1])choices.add("Verkenner");
+            if(booleans[2])choices.add("Mannetjesputter");
+            if(booleans[3])choices.add("Reddingsspecialist");
+            if(booleans[4])choices.add("SpecialistG.S");
+            if(booleans[5])choices.add("BrandspuitBediener");
+            if(booleans[6])choices.add("Gaspakdrager");
+            if(booleans[7])choices.add("Dokter");
 
-        //De choicedialog maken
-        ChoiceDialog<String> dialog3 = new ChoiceDialog<>("Keuze", choices);
-        dialog3.setTitle("Choice Dialog");
-        dialog3.setHeaderText("Kies je klasse");
-        dialog3.setContentText("Klasse:");
+            //De choicedialog maken
+            ChoiceDialog<String> dialog3 = new ChoiceDialog<>("Keuze", choices);
+            dialog3.setTitle("Choice Dialog");
+            dialog3.setHeaderText("Kies je klasse");
+            dialog3.setContentText("Klasse:");
 
-        Optional<String> keuzeKlasse = dialog3.showAndWait();
-        if (keuzeKlasse.isPresent() && keuzeKlasse.get() != "Keuze"){
-            String klasse = keuzeKlasse.get();
-            System.out.println("Je hebt gekozen voor de klasse: " + klasse);
+            Optional<String> keuzeKlasse = dialog3.showAndWait();
+            if (keuzeKlasse.isPresent() && keuzeKlasse.get() != "Keuze") {
+                String klasse = keuzeKlasse.get();
+                System.out.println("Je hebt gekozen voor de klasse: " + klasse);
+                switch (klasse) {
+                    case "Commandant":
+                        spelerC.getSpeler().setRol(COMMANDANT);
+                        break;
+                    case "Verkenner":
+                        spelerC.getSpeler().setRol(VERKENNER);
+                        break;
+                    case "Mannetjesputter":
+                        spelerC.getSpeler().setRol(MANNETJESPUTTER);
+                        break;
+                    case "Reddingsspecialist":
+                        spelerC.getSpeler().setRol(REDDINGSSPECIALIST);
+                        break;
+                    case "SpecialistG.S":
+                        spelerC.getSpeler().setRol(SPECSTOFFEN);
+                        break;
+                    case "BrandspuitBediener":
+                        spelerC.getSpeler().setRol(BRANDSPUITBEDIENER);
+                        break;
+                    case "Gaspakdrager":
+                        spelerC.getSpeler().setRol(GASPAKDRAGER);
+                        break;
+                    case "Dokter":
+                        spelerC.getSpeler().setRol(DOKTER);
+                        break;
+                }
+                spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-2);
+            }
         }
     }
     public void addBeschadigingCount() {
