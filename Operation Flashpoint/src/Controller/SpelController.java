@@ -79,7 +79,7 @@ public class SpelController implements Initializable {
     SpelController spelC;
 
     public void maakSpelers() {
-        spel.setSpelers(new Speler("Sjaak", Kleur.BLAUW, 0, 0));
+        spel.setSpelers(new Speler("Michiel", Kleur.BLAUW, 0, 0));
         spel.setSpelers(new Speler("Joep", Kleur.GEEL, 1, 0));
         spel.setSpelers(new Speler("Norddin", Kleur.GROEN, 2, 0));
         spel.setSpelers(new Speler("Sam", Kleur.ORANJE, 3, 0));
@@ -90,13 +90,16 @@ public class SpelController implements Initializable {
     public void switchSpeler() {
         for(int i = 0; i < spel.getSpelers().size(); i++){
             if(spel.getHuidigeSpeler()==spel.getSpelers().get(i)){
-                if (i==spel.getSpelers().size()){
+                if (i==(spel.getSpelers().size()-1)){
                     spel.setHuidigeSpeler(spel.getSpelers().get(0));
                     spelerC.setHuidigeSpeler();
+                    break;
                 }
                 else{
-                    spel.setHuidigeSpeler(spel.getSpelers().get(i++));
+                    System.out.println(spel.getSpelers().size());
+                    spel.setHuidigeSpeler(spel.getSpelers().get(i+1));
                     spelerC.setHuidigeSpeler();
+                    break;
                 }
 
             }
