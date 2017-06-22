@@ -11,11 +11,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
-import java.rmi.NotBoundException;
-import java.rmi.RemoteException;
 
 import static Model.Rol.*;
 
@@ -81,26 +78,18 @@ public class SpelController implements Initializable {
     SpraakController spraakC;
     SpelController spelC;
 
-//    ArrayList<Speler>spelers = new ArrayList<>();
-//
-//    public void maakSpelers() {
-//        spelers.add(new Speler("Sjaak", Kleur.BLAUW));
-//        spelers.add(new Speler("Joep", Kleur.GEEL));
-//        spelers.add(new Speler("Norddin", Kleur.GROEN));
-//        spelers.add(new Speler("Sam", Kleur.ORANJE));
-//        spelers.add(new Speler("Calvin", Kleur.ROOD));
-//        spelers.add(new Speler("Lion", Kleur.ZWART));
-//    }
-//
-//    public void switchSpeler() {
-//        int i;
-//        for(i = 0; i < 5; i++) {
-//            if(speler==spelers.get(i)) {
-//                speler = spelers.get(i+1);
-//                i+=spelers.size();
-//            }
-//        }
-//    }
+    public void maakSpelers() {
+        spel.setSpelers(new Speler("Sjaak", Kleur.BLAUW, 0, 0));
+        spel.setSpelers(new Speler("Joep", Kleur.GEEL, 1, 0));
+        spel.setSpelers(new Speler("Norddin", Kleur.GROEN, 2, 0));
+        spel.setSpelers(new Speler("Sam", Kleur.ORANJE, 3, 0));
+        spel.setSpelers(new Speler("Calvin", Kleur.ROOD, 4, 0));
+        spel.setSpelers(new Speler("Lion", Kleur.ZWART, 5, 0));
+    }
+
+    public void switchSpeler() {
+
+    }
 
     public Send getSender() {
         return sender;
@@ -162,6 +151,8 @@ public class SpelController implements Initializable {
 
     public SpelController() throws IOException {
         spel = new Spel(6);
+
+
     }
 
     // Lion, verbind deze controller met 3 andere
@@ -177,6 +168,9 @@ public class SpelController implements Initializable {
     // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
         stackPane.getChildren().add(veldC.getVeldI().getGridPane());
+        maakSpelers();
+        spel.setHuidigeSpeler(spel.getSpelers().get(0));
+        spelerC.setHuidigeSpeler();
         spelerC.resetPunten();
 
 //        try {
@@ -367,11 +361,11 @@ public class SpelController implements Initializable {
         });
 
         imgHakken.setOnMouseClicked(event -> {
-            spelerC.btnhakken();
+            spelerC.btnHakken();
         });
 
         imgRijden.setOnMouseClicked(event -> {
-            spelerC.kiezenVoertuig();
+            spelerC.btnRijden();
         });
 
         stuur.setOnAction(event -> {
@@ -657,13 +651,7 @@ public class SpelController implements Initializable {
 
 
     }
-    public void maakSpeler(String naam, Kleur kleur){
-        spel.setSpelers(new Speler(naam, kleur));
-    }
 
-    public Speler getHuidigeSpeler(){
-        return spel.getHuidigeSpeler();
-    }
     public void setHuidigeSpeler(Speler speler){
         spel.setHuidigeSpeler(speler);
     }

@@ -31,9 +31,11 @@ public class Speler implements Serializable {
 
 
 
-    public Speler(String naam, Kleur kleur) {
+    public Speler(String naam, Kleur kleur, int x, int y) {
         this.naam = naam;
         this.kleur = kleur;
+        this.x = x;
+        this.y = y;
     }
 
     //Getters

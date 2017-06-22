@@ -94,7 +94,6 @@ public class LobbyController extends Application {
     }
     @FXML
     public void setNaam() throws IOException{
-        spelC.maakSpeler(naamText.getText(), getSpelerKleur());
         Parent root = FXMLLoader.load(getClass().getResource("/View/ReadyView.fxml"));
         stage = (Stage) btnNaam.getScene().getWindow();
         Scene scene = new Scene(root);
@@ -105,7 +104,7 @@ public class LobbyController extends Application {
     @FXML
     public void setReady() throws IOException{
         spelC.setHuidigeSpeler(spelC.getSpelers().get(spelC.getSpelers().size()-1));
-        model.setReady(spelC.getHuidigeSpeler());
+        model.setReady(spelC.spel.getHuidigeSpeler());
         btnReady.setText("Ready");
         System.out.println("oke");
         if(checkReady()){

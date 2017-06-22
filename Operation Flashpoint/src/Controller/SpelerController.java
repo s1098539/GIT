@@ -21,36 +21,13 @@ import static Model.Rol.*;
 
 public class SpelerController {
 
-    Speler speler = new Speler("hoi", Kleur.BLAUW);
-//    ArrayList<Speler>spelers = new ArrayList<>();
-//
-//    public void maakSpelers() {
-//        spelers.add(new Speler("Sjaak", Kleur.BLAUW));
-//        spelers.add(new Speler("Joep", Kleur.GEEL));
-//        spelers.add(new Speler("Norddin", Kleur.GROEN));
-//        spelers.add(new Speler("Sam", Kleur.ORANJE));
-//        spelers.add(new Speler("Calvin", Kleur.ROOD));
-//        spelers.add(new Speler("Lion", Kleur.ZWART));
-//    }
-//
-//    public void switchSpeler() {
-//        int i;
-//        for(i = 0; i < 5; i++) {
-//            if(speler==spelers.get(i)) {
-//                speler = spelers.get(i+1);
-//                i+=spelers.size();
-//            }
-//        }
-//    }
+    Speler speler;
 
 
     public void setHuidigeSpeler() {
-        speler = spelC.getHuidigeSpeler();
+        speler = spelC.spel.getHuidigeSpeler();
     }
 
-    public void setSpeler(Speler speler) {
-        this.speler = speler;
-    }
 
 
     Vak vak;
@@ -59,6 +36,7 @@ public class SpelerController {
     boolean openendeur = false;
     boolean brandblusser = false;
     boolean hakken = false;
+    boolean rijden = false;
 
     public SpelerController() {
     }
@@ -95,6 +73,11 @@ public class SpelerController {
             System.out.println("Hakken: Noord");
             hakActie(BOVEN);
             veldC.ImageSetterAround(speler.getX(),speler.getY());
+//            spelC.updatePunten();
+        }
+        else if(rijden){
+            System.out.println("Hakken: Noord");
+            rijden(BOVEN);
             spelC.updatePunten();
         }
         spelC.updatePunten();
@@ -250,22 +233,32 @@ public class SpelerController {
         openendeur ^= true;
         brandblusser = false;
         hakken = false;
+        rijden = false;
+    }
+
+    public void btnRijden() {
+        openendeur = false;
+        brandblusser = false;
+        hakken = false;
+        rijden ^= true;
     }
 
     public void btnBrandblusser() {
         openendeur = false;
         brandblusser ^= true;
         hakken = false;
+        rijden = false;
     }
 
-    public void btnhakken() {
+    public void btnHakken() {
         openendeur = false;
         brandblusser = false;
         hakken ^= true;
+        rijden = false;
     }
 
     //TODO beweegVoertuig, brandweerwagenActie
-    public void kiezenVoertuig(){
+    private String kiezenVoertuig(){
         ArrayList<String> keuzes = new ArrayList<>();
         keuzes.add("Brandweerwagen");
         keuzes.add("Ambulance");
@@ -278,19 +271,71 @@ public class SpelerController {
         Optional<String> keuzeObject = oppakkeus.showAndWait();
         if (keuzeObject.isPresent() && keuzeObject.get() != "Kies een Voertuig"){
             if (keuzeObject.get() == "Ambulance"){
-                rijden("Ambulance");
+                return keuzeObject.get();
             }
             else {
-                rijden("Brandweerwagen");
+                return keuzeObject.get();
             }
         }
+        return ("als je dit ziet is er iets mis met voertuig kiezen");
     }
-    private void rijden(String wagen){
-        if (wagen.equals("Ambulance")){
-            System.out.println("lololol");
-        }
-        else if (wagen.equals("Brandweerwagen")){
-            System.out.println("ik wil geen ambulance");
+    public void rijden(Richting richting) {
+        String wagen = kiezenVoertuig();
+        Richting kant;
+        if (wagen.equals("Ambulance")) {
+            kant = veldC.veldD.getAmbulance();
+            switch (kant) {
+                case BOVEN:
+                    if (richting == Richting.ONDER) {
+                        System.out.println("Dit mag niet, kies een aanliggende kant");
+                        break;
+                    }
+                case RECHTS:
+                    if (richting == Richting.LINKS) {
+                        System.out.println("Dit mag niet, kies een aanliggende kant");
+                        break;
+                    }
+                case ONDER:
+                    if (richting == Richting.BOVEN) {
+                        System.out.println("Dit mag niet, kies een aanliggende kant");
+                        break;
+                    }
+                case LINKS:
+                    if (richting == Richting.RECHTS) {
+                        System.out.println("Dit mag niet, kies een aanliggende kant");
+                        break;
+                    }
+                    veldC.veldD.setAmbulance(richting);
+                    speler.setActiepunten(speler.getActiepunten() - 2);
+                    break;
+            }
+        } else if (wagen.equals("Brandweerwagen")) {
+            kant = veldC.veldD.getBrandweerwagen();
+            switch (kant) {
+                case BOVEN:
+                    if (richting == Richting.ONDER) {
+                        System.out.println("Dit mag niet, kies een aanliggende kant");
+                        break;
+                    }
+                case RECHTS:
+                    if (richting == Richting.LINKS) {
+                        System.out.println("Dit mag niet, kies een aanliggende kant");
+                        break;
+                    }
+                case ONDER:
+                    if (richting == Richting.BOVEN) {
+                        System.out.println("Dit mag niet, kies een aanliggende kant");
+                        break;
+                    }
+                case LINKS:
+                    if (richting == Richting.RECHTS) {
+                        System.out.println("Dit mag niet, kies een aanliggende kant");
+                        break;
+                    }
+                    veldC.veldD.setBrandweerwagen(richting);
+                    speler.setActiepunten(speler.getActiepunten() - 2);
+                    break;
+            }
         }
     }
     private void brandweerwagenActie(){
