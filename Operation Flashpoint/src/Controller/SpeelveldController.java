@@ -353,6 +353,14 @@ public class SpeelveldController {
             y = dobbelC.getD6().getWaarde();
             veldD.getVakken()[x][y].setHotspot(true);
         }
+        for(int gs=0; gs<3; gs++) {
+            dobbelC.getD8().gooi();
+            dobbelC.getD6().gooi();
+            x = dobbelC.getD8().getWaarde();
+            y = dobbelC.getD6().getWaarde();
+            veldD.getVakken()[x][y].setStoffen(true);
+        }
+
 
 
 
@@ -446,6 +454,14 @@ public class SpeelveldController {
 
         veldD.getVakken()[3][7].setBoven(LEEG);
         veldD.getVakken()[3][6].setOnder(LEEG);
+
+        for(int explosies=0; explosies<3; explosies++) {
+            dobbelC.getD8().gooi();
+            dobbelC.getD6().gooi();
+            x = dobbelC.getD8().getWaarde();
+            y = dobbelC.getD6().getWaarde();
+            spelC.checkExplosie(x,y);
+        }
     }
 
     public void doeDeur(int x, int y, Richting richting) {

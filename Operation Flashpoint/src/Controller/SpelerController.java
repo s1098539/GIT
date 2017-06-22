@@ -462,18 +462,55 @@ public class SpelerController {
     private void brandweerwagenActie(){
         System.out.println("Actie: Gebruik brandweerwagen");
     }
-
-    public void oppakkenActie(){
-        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
-        if(speler.isStof() || speler.getPersoon() !=null){
-            if(speler.isStof()){
+    public void dropItem(){
+        if(speler.isStof()){
+            if(speler.getX()==0 || speler.getX()==9 || speler.getY()==0 || speler.getY()== 7){
+                speler.setStof(false);
+                vak.setStoffen(false);
+            }
+            else{
                 speler.setStof(false);
                 vak.setStoffen(true);
             }
-            else{
+
+        }
+        else if (speler.getPersoon() != null){
+            Richting kant = veldC.veldD.getAmbulance();
+            boolean opAmbulance= false;
+            switch(kant){
+                case BOVEN: if(speler.getY()==0 && (speler.getX()== 5 || speler.getX()== 6) ){
+                    opAmbulance = true;
+                    break;
+                }
+                case RECHTS: if(speler.getX()==9 && (speler.getY()== 4 || speler.getY()== 5) ){
+                    opAmbulance = true;
+                    break;
+                }
+                case ONDER: if(speler.getY()==7 && (speler.getX()== 3 || speler.getX()== 4) ){
+                    opAmbulance = true;
+                    break;
+                }
+                case LINKS: if(speler.getX()==0 && (speler.getY()== 2 || speler.getY()== 3) ){
+                    opAmbulance = true;
+                    break;
+                }
+            }
+            if(opAmbulance){
+                speler.setPersoon(null);
+                spelC.spel.addGered();
+            }
+            else {
                 vak.setPersonen(speler.getPersoon());
                 speler.setPersoon(null);
             }
+            spelC.updatePunten();
+        }
+
+    }
+    public void oppakkenActie(){
+        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
+        if(speler.isStof() || speler.getPersoon() !=null){
+           dropItem();
         }
 
         else if(vak.isStoffen() && !vak.getPersonen().isEmpty()){

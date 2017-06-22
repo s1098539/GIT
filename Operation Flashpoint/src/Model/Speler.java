@@ -25,7 +25,7 @@ public class Speler implements Serializable {
 
     Rol rol = Rol.GODMODE;
 
-    boolean slechtziendmodus;
+    boolean slechtziendmodus = false;
 
     Boolean stof = false;
     Persoon persoon = null;

@@ -222,135 +222,163 @@ public class SpelController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         SpraakController audioPlayer = new SpraakController();
+            imgPickup1.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playAP(spelerC.speler.getActiepunten());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgPickup1.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playAP(spelerC.speler.getActiepunten());
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgOpenendeur1.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playEP(spelerC.speler.getExtrapunten());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgOpenendeur1.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playEP(spelerC.speler.getExtrapunten());
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            btnET.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playEindigZet();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        btnET.setOnContextMenuRequested(event -> {
-            try {
-                audioPlayer.playEindigZet();
-            } catch(Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgBrandblusser.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playBlussen();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgBrandblusser.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBlussen();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgPickup.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playOppakken();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgPickup.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playOppakken();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            btnLEFT.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playBewegen();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        btnLEFT.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBewegen();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            btnRIGHT.setOnContextMenuRequested(event -> {
+                try {
+                    audioPlayer.playBewegen();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
 
-        btnRIGHT.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBewegen();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            btnUP.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playBewegen();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        btnUP.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBewegen();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            btnDOWN.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playBewegen();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        btnDOWN.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBewegen();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            btnSpecial.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playSpecial();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        btnSpecial.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playSpecial();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgHakken.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playHakken();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgHakken.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playHakken();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgWagenblussen.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playWagenBlussen();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgWagenblussen.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playWagenBlussen();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgOpenendeur.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playDeurActies();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgOpenendeur.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playDeurActies();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgPickup.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playOppakken();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgPickup.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playOppakken();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgRijden.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playRijden();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgRijden.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playRijden();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
-
-        imgRolswap.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playRolWissel();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
-
+            imgRolswap.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playRolWissel();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
 
         btnET.setOnAction(event -> {
@@ -426,6 +454,24 @@ public class SpelController implements Initializable {
         imgPickup.setOnMouseClicked(event -> {
             spelerC.oppakkenActie();
         });
+        options.setOnAction(event -> {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Slechtziendmodus");
+            alert.setHeaderText("Wilt u slechtziendheids-modus toggelen?");
+            alert.setContentText("Druk dan op Oke");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK){
+                if(spelerC.speler.isSlechtziendmodus()){
+                    spelerC.speler.setSlechtziendmodus(false);
+                }
+                else{
+                    spelerC.speler.setSlechtziendmodus(true);
+                }
+            } else {
+                alert.close();
+            }
+        });
 
     }
 
@@ -436,10 +482,7 @@ public class SpelController implements Initializable {
         nieuwRook();
         checkVonkoverslag();
         checkStoffen();
-        if (spelerC.speler.getPersoon() != null){
-            veldC.veldD.getVakken()[spelerC.speler.getX()][spelerC.speler.getY()].setPersonen(spelerC.speler.getPersoon());
-            spelerC.speler.setPersoon(null);
-        }
+        spelerC.dropItem();
         checkPersonen();
         switchSpeler();
         veldC.ImageSetterALL();
@@ -506,6 +549,7 @@ public class SpelController implements Initializable {
             doorgaan = true;
             while (richting == Richting.BOVEN && doorgaan && ((y - teller) >= 1)) {
                 vak = veldC.veldD.getVakken()[x][y-teller];
+                vak.setVuur(true);
                 if (!vak.boven.isBegaanbaar()){
                     veldC.doeBeschadiging(x, y-teller, richting);
                     doorgaan = false;
@@ -524,6 +568,7 @@ public class SpelController implements Initializable {
             }
             while (richting == Richting.RECHTS && doorgaan && ((x + teller) <= 8)) {
                 vak = veldC.veldD.getVakken()[x+teller][y];
+                vak.setVuur(true);
                 if (!vak.rechts.isBegaanbaar()){
                     veldC.doeBeschadiging((x+teller), y, richting);
                     doorgaan = false;
@@ -542,6 +587,7 @@ public class SpelController implements Initializable {
             }
             while (richting == Richting.ONDER && doorgaan && ((y + teller) <= 6)) {
                 vak = veldC.veldD.getVakken()[x][y+teller];
+                vak.setVuur(true);
                 if (!vak.onder.isBegaanbaar()){
                     veldC.doeBeschadiging(x, (y + teller), richting);
                     doorgaan = false;
@@ -560,6 +606,7 @@ public class SpelController implements Initializable {
             }
             while (richting == Richting.LINKS && doorgaan && ((x - teller) >= 1)) {
                 vak = veldC.veldD.getVakken()[x-teller][y];
+                vak.setVuur(true);
                 if (!vak.links.isBegaanbaar()){
                     veldC.doeBeschadiging((x-teller), y, richting);
                     doorgaan = false;
