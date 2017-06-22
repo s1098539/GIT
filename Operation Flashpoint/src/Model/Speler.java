@@ -21,11 +21,11 @@ public class Speler {
     int actiepunten;
     int extrapunten;
 
-    Rol rol = Rol.REDDINGSSPECIALIST;
+    Rol rol = Rol.GODMODE;
 
     boolean slechtziendmodus;
 
-    boolean stof = false;
+    Boolean stof = false;
     Persoon persoon = null;
 
 
