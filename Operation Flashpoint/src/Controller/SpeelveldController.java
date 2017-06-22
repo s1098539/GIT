@@ -123,7 +123,10 @@ public class SpeelveldController {
         // Persoon
         if(veldD.getVakken()[x][y].getPersonen().isEmpty()) {
             veldI.getImageViews()[x][y][2].setImage(veldI.getEmpty());
-        } else {
+        } else if(veldD.getVakken()[x][y].getPersonen().get(0).isGeheeld()) {
+            veldI.getImageViews()[x][y][2].setImage(veldI.getMedkit());
+        }
+        else {
             if (!veldD.getVakken()[x][y].getPersonen().get(0).isOmgedraaid()) {
                 veldI.getImageViews()[x][y][2].setImage(veldI.getPersoon());
             } else {

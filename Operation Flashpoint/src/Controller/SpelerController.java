@@ -210,6 +210,7 @@ public class SpelerController {
         if (!vak.getPersonen().isEmpty()){
             vak.getPersonen().get(0).setGeheeld();
         }
+        veldC.ImageSetter(speler.getX(),speler.getY());
     }
     // Lion, dit is de special methode van specStoffen, indien mogelijk word een stoffen fiche verwijderd.
     private void onschadelijkMaken() {
@@ -391,11 +392,11 @@ public class SpelerController {
         if (speler.getRol() == REDDINGSSPECIALIST && (speler.getExtrapunten() > 1 || (speler.getExtrapunten() > 0 && !draagt()))) {
             speler.setExtraPunten(speler.getExtrapunten() - 1);
             if(draagt()) speler.setExtraPunten(speler.getExtrapunten() - 1);
-            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setExtraPunten(speler.getExtrapunten()+2);
+            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setExtraPunten(speler.getExtrapunten()+1);
         } else {
             speler.setActiepunten(speler.getActiepunten() - 1);
             if(draagt())speler.setActiepunten(speler.getActiepunten() - 1);
-            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setActiepunten(speler.getActiepunten()+2);
+            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setActiepunten(speler.getActiepunten()+1);
         }
     }
 
@@ -437,10 +438,10 @@ public class SpelerController {
                     }
                     break;
             }
-            veldC.addSpeler(speler.getKleur(), speler.getX(), speler.getY());
-            persoonOmdraaien();
-            veldC.ImageSetter(speler.getX(), speler.getY());
         }
+        veldC.addSpeler(speler.getKleur(), speler.getX(), speler.getY());
+        persoonOmdraaien();
+        veldC.ImageSetter(speler.getX(), speler.getY());
     }
 
     private void persoonOmdraaien(int x, int y) {
