@@ -310,6 +310,7 @@ public class SpeelveldController {
         veldD.getVakken()[9][7].setHotspot(true);
         veldD.getVakken()[9][7].setStoffen(true);
         veldD.getVakken()[9][7].setVuur(true);
+        veldD.getVakken()[9][7].setPersonen(Persoon.EGEL);
         for(int x = 1; x <9; x++) {
             veldD.getVakken()[x][0].setOnder(MUUR);
             veldD.getVakken()[x][1].setBoven(MUUR);
@@ -540,7 +541,6 @@ public class SpeelveldController {
                         case DEURD:
                             vak.setLinks(LEEG);
                             veldD.getVakken()[x - 1][y].setRechts(LEEG);
-                            spelC.addBeschadigingCount();
                             return true;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Links)");

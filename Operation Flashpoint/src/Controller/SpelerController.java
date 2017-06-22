@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.*;
+import com.sun.org.apache.regexp.internal.RE;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.ScrollPane;
@@ -9,7 +10,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import static Model.Richting.*;
@@ -146,7 +149,7 @@ public class SpelerController {
     // Er word gekeken welke rol een speler heeft en verwijst verolgens door naar de bijpassende specla methode.
     public void special() {
         switch(speler.getRol()) {
-            case VERKENNER:
+            case VERKENNER:     verken();
                 break;
             case COMMANDANT:    //TODO
                 break;
@@ -156,7 +159,52 @@ public class SpelerController {
                 break;
             default: System.out.println("Mom thinks im special :(");
         }
+        spelC.updatePunten();
     }
+
+    // L (dialog template gejat van Norddin), speciale actie van de verkenner, geeft een popup met alle niet ? personen en draait de gekeuze persoon om.
+    private void verken() {
+        if(speler.getActiepunten()>0) {
+            ArrayList<String> keuzes = new ArrayList<>();
+            ArrayList<Persoon> personen = new ArrayList<>();
+            int[][] xEnY = new int[3][2];
+            int count = 0;
+            for (int y = 1; y < 7; y++) {
+                for (int x = 1; x < 9; x++) {
+                    personen = veldC.getVeldD().getVakken()[x][y].getPersonen();
+                    if (!personen.isEmpty()) {
+                        for (int i = 0; i < personen.size(); i++) {
+                            if (!personen.get(i).isOmgedraaid()) {
+                                keuzes.add("PVA: X: " + Integer.toString(x) + " Y: " + Integer.toString(y));
+                                xEnY[count][0] = x;
+                                xEnY[count][1] = y;
+                                count++;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //De choicedialog maken
+            ChoiceDialog<String> dialog = new ChoiceDialog<>("Keuze", keuzes);
+            dialog.setTitle("Choice Dialog");
+            dialog.setHeaderText("Kies je klasse");
+            dialog.setContentText("Persoon:");
+
+            Optional<String> keuzePersoon = dialog.showAndWait();
+            if (keuzePersoon.isPresent() && keuzePersoon.get() != "Keuze") {
+                for (int i = 0; i < keuzes.size(); i++) {
+                    if (keuzePersoon.get() == keuzes.get(i)) {
+                        persoonOmdraaien(xEnY[i][0], xEnY[i][1]);
+                        veldC.ImageSetter(xEnY[i][0], xEnY[i][1]);
+                        speler.setActiepunten(speler.getActiepunten()-1);
+
+                    }
+                }
+            }
+        }
+    }
+
     private void helen(){
         vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
         if (!vak.getPersonen().isEmpty()){
@@ -194,7 +242,7 @@ public class SpelerController {
         hakken ^= true;
     }
 
-    //TODO beweegVoertuig, brandweerwagenActie, oppakkenActie
+    //TODO beweegVoertuig, brandweerwagenActie
     private void beweegVoertuig(){
         System.out.println("Actie: Beweeg Voertuig");
     }
@@ -310,48 +358,84 @@ public class SpelerController {
 
     }
 
+    private boolean draagt() {
+        if(speler.isStof()) return true;
+        if(speler.getPersoon() != null) return true;
+        return false;
+    }
+
+    private void beweegActieKosten() {
+        if (speler.getRol() == REDDINGSSPECIALIST && (speler.getExtrapunten() > 1 || (speler.getExtrapunten() > 0 && !draagt()))) {
+            speler.setExtraPunten(speler.getExtrapunten() - 1);
+            if(draagt()) speler.setExtraPunten(speler.getExtrapunten() - 1);
+            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setExtraPunten(speler.getExtrapunten()+2);
+        } else {
+            speler.setActiepunten(speler.getActiepunten() - 1);
+            if(draagt())speler.setActiepunten(speler.getActiepunten() - 1);
+            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setActiepunten(speler.getActiepunten()+2);
+        }
+    }
+
     // Lion, verplaats de speler in de gewenste richting indien mogelijk.
     private void beweegActie(Richting richting) {//TODO prijs met object bewegen afhandelen, kijken of persoon geheeld is
         Vak vak = veldC.veldD.getVakken()[speler.getX()][speler.getY()];
-        veldC.removeSpeler(speler.getKleur(),speler.getX(),speler.getY());
-        veldC.ImageSetter(speler.getX(),speler.getY());
-        switch(richting) {
-            case BOVEN: if(speler.getY()>0 && vak.boven.isBegaanbaar() && (speler.getActiepunten()>0 ||
-                    (speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0))) {
-                if(speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0) {
-                    speler.setExtraPunten(speler.getExtrapunten()-1);
-                } else speler.setActiepunten(speler.getActiepunten()-1);
-                speler.setY(speler.getY()-1);
-                System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
-            }   break;
-            case RECHTS: if(speler.getX()<9 && vak.rechts.isBegaanbaar() && (speler.getActiepunten()>0 ||
-                    (speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0))) {
-                if(speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0) {
-                    speler.setExtraPunten(speler.getExtrapunten()-1);
-                } else speler.setActiepunten(speler.getActiepunten()-1);
-                speler.setX(speler.getX()+1);
-                System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
-            }   break;
-            case ONDER: if(speler.getY()<7 && vak.onder.isBegaanbaar() && (speler.getActiepunten()>0 ||
-                    (speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0))) {
-                if(speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0) {
-                    speler.setExtraPunten(speler.getExtrapunten()-1);
-                } else speler.setActiepunten(speler.getActiepunten()-1);
-                speler.setY(speler.getY()+1);
-                System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
-            }   break;
-            case LINKS: if(speler.getX()>0 && vak.links.isBegaanbaar() && (speler.getActiepunten()>0 ||
-                    (speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0))) {
-                if(speler.getRol()== REDDINGSSPECIALIST && speler.getExtrapunten()>0) {
-                    speler.setExtraPunten(speler.getExtrapunten()-1);
-                } else speler.setActiepunten(speler.getActiepunten()-1);
-                speler.setX(speler.getX()-1);
-                System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
-            }   break;
+        veldC.removeSpeler(speler.getKleur(), speler.getX(), speler.getY());
+        veldC.ImageSetter(speler.getX(), speler.getY());
+        if ((speler.getActiepunten() > 0 && !draagt()) || (speler.getRol() == REDDINGSSPECIALIST && speler.getExtrapunten() > 0 && !draagt()) ||
+                (speler.getActiepunten() > 1 && draagt()) || (speler.getRol() == REDDINGSSPECIALIST && speler.getExtrapunten() > 0 && !draagt())  ||
+                (speler.getActiepunten() > 0 && speler.getPersoon() != null && speler.getPersoon().isGeheeld()) || (speler.getRol() == REDDINGSSPECIALIST && speler.getExtrapunten() > 0 && speler.getPersoon() != null && speler.getPersoon().isGeheeld())) {
+            switch (richting) {
+                case BOVEN:
+                    if (speler.getY() > 0 && vak.boven.isBegaanbaar()) {
+                        beweegActieKosten();
+                        speler.setY(speler.getY() - 1);
+                        System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                    }
+                    break;
+                case RECHTS:
+                    if (speler.getX() < 9 && vak.rechts.isBegaanbaar()) {
+                        beweegActieKosten();
+                        speler.setX(speler.getX() + 1);
+                        System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                    }
+                    break;
+                case ONDER:
+                    if (speler.getY() < 7 && vak.onder.isBegaanbaar()) {
+                        beweegActieKosten();
+                        speler.setY(speler.getY() + 1);
+                        System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                    }
+                    break;
+                case LINKS:
+                    if (speler.getX() > 0 && vak.links.isBegaanbaar()) {
+                        beweegActieKosten();
+                        speler.setX(speler.getX() - 1);
+                        System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                    }
+                    break;
+            }
+            veldC.addSpeler(speler.getKleur(), speler.getX(), speler.getY());
+            persoonOmdraaien();
+            veldC.ImageSetter(speler.getX(), speler.getY());
         }
-        veldC.addSpeler(speler.getKleur(),speler.getX(),speler.getY());
-        persoonOmdraaien();
-        veldC.ImageSetter(speler.getX(),speler.getY());
+    }
+
+    private void persoonOmdraaien(int x, int y) {
+        vak = veldC.getVeldD().getVakken()[x][y];
+        if(!vak.getPersonen().isEmpty()) {
+            for(int i = 0; i < vak.getPersonen().size(); i++) {
+                vak.getPersonen().get(0).setOmgedraaid(true);
+            }
+        }
+        ArrayList<Persoon> personen = veldC.getVeldD().getVakken()[x][y].getPersonen();
+        for(int i = 0; i < personen.size(); i++) {
+            if (personen.get(i) == Persoon.NOPE1 || personen.get(i) == Persoon.NOPE2 ||
+                    personen.get(i) == Persoon.NOPE3 || personen.get(i) == Persoon.NOPE4 ||
+                    personen.get(i) == Persoon.NOPE5) {
+                personen.remove(i);
+                i--;
+            }
+        }
     }
 
     private void persoonOmdraaien() {
@@ -377,8 +461,8 @@ public class SpelerController {
     // Lion, reset AP en EP bij het eindigen van een beurt.
     public void resetPunten() {
         speler.setActiepunten(speler.getActiepunten()+4);
-        if(speler.getActiepunten()>7) speler.setActiepunten(7);
-        if(speler.getRol()==GASPAKDRAGER) speler.setActiepunten(speler.getActiepunten()-1);
+        if(speler.getActiepunten()>8) speler.setActiepunten(8);
+        if(speler.getRol()==GASPAKDRAGER || speler.getRol() == REDDINGSSPECIALIST) speler.setActiepunten(speler.getActiepunten()-1);
         if(speler.getRol()==MANNETJESPUTTER) speler.setActiepunten(speler.getActiepunten()+1);
         if(speler.getRol()==GODMODE) speler.setActiepunten(9001);
 
