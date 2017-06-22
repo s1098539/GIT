@@ -93,8 +93,6 @@ public class Main2 extends Application{
 
             //TODO DEBUGLINES
             System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n............................." );
-            clientStub.sendParse().setVeldD(veldC.getVeldD());
-            System.out.println(clientStub.sendParse().getVeldD());
         } catch (Exception e) {
             System.out.println("EXCEPTION: " + e);
         }
