@@ -1,10 +1,7 @@
 package Main;
 
 import Controller.*;
-import Model.Kleur;
-import Model.Rol;
-import Model.Spel;
-import Model.Speler;
+import Model.*;
 import View.SpelView;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -86,7 +83,7 @@ public class Main2 extends Application{
         //This is where the client makes a connection to the server.
         String naam = "Rafe"; //NAAM CLIENT
         String ip = "localhost"; //IP SERVER
-        Speler s = new Speler("DEBUG", Kleur.ZWART);
+
 
         try {
             System.out.println("Getting access to the registry ...");
@@ -96,8 +93,8 @@ public class Main2 extends Application{
 
             //TODO DEBUGLINES
             System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n............................." );
-
-            System.out.println(clientStub.getString());
+            clientStub.sendParse().setVeldD(veldC.getVeldD());
+            System.out.println(clientStub.sendParse().getVeldD());
         } catch (Exception e) {
             System.out.println("EXCEPTION: " + e);
         }
