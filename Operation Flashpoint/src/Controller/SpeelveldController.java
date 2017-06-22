@@ -310,6 +310,7 @@ public class SpeelveldController {
         veldD.getVakken()[9][7].setHotspot(true);
         veldD.getVakken()[9][7].setStoffen(true);
         veldD.getVakken()[9][7].setVuur(true);
+        veldD.getVakken()[9][7].setPersonen(Persoon.EGEL);
         for(int x = 1; x <9; x++) {
             veldD.getVakken()[x][0].setOnder(MUUR);
             veldD.getVakken()[x][1].setBoven(MUUR);
@@ -485,10 +486,12 @@ public class SpeelveldController {
                             vak.setBoven(MUUR1);
                             veldD.getVakken()[x][y - 1].setOnder(MUUR1);
                             spelC.addBeschadigingCount();
+                            spelC.addBeschadigingCount();
                             return true;
                         case MUUR1:
                             vak.setBoven(MUUR2);
                             veldD.getVakken()[x][y - 1].setOnder(MUUR2);
+                            spelC.addBeschadigingCount();
                             spelC.addBeschadigingCount();
                             return true;
                         case DEURD:
@@ -508,10 +511,12 @@ public class SpeelveldController {
                             vak.setRechts(MUUR1);
                             veldD.getVakken()[x + 1][y].setLinks(MUUR1);
                             spelC.addBeschadigingCount();
+                            spelC.addBeschadigingCount();
                             return true;
                         case MUUR1:
                             vak.setRechts(MUUR2);
                             veldD.getVakken()[x + 1][y].setLinks(MUUR2);
+                            spelC.addBeschadigingCount();
                             spelC.addBeschadigingCount();
                             return true;
                         case DEURD:
@@ -531,16 +536,17 @@ public class SpeelveldController {
                             vak.setLinks(MUUR1);
                             veldD.getVakken()[x - 1][y].setRechts(MUUR1);
                             spelC.addBeschadigingCount();
+                            spelC.addBeschadigingCount();
                             return true;
                         case MUUR1:
                             vak.setLinks(MUUR2);
                             veldD.getVakken()[x - 1][y].setRechts(MUUR2);
                             spelC.addBeschadigingCount();
+                            spelC.addBeschadigingCount();
                             return true;
                         case DEURD:
                             vak.setLinks(LEEG);
                             veldD.getVakken()[x - 1][y].setRechts(LEEG);
-                            spelC.addBeschadigingCount();
                             return true;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Links)");
@@ -555,10 +561,12 @@ public class SpeelveldController {
                             vak.setOnder(MUUR1);
                             veldD.getVakken()[x][y + 1].setBoven(MUUR1);
                             spelC.addBeschadigingCount();
+                            spelC.addBeschadigingCount();
                             return true;
                         case MUUR1:
                             vak.setOnder(MUUR2);
                             veldD.getVakken()[x][y + 1].setBoven(MUUR2);
+                            spelC.addBeschadigingCount();
                             spelC.addBeschadigingCount();
                             return true;
                         case DEURD:

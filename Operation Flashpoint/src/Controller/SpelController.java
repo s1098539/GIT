@@ -590,31 +590,32 @@ public class SpelController implements Initializable {
         int x = dobbelC.d8.getWaarde();
         int y = dobbelC.d6.getWaarde();
         int[] locatie;
+        int killSwitch = 0;
         boolean tweedekeer = false;
         vak = veldC.veldD.getVakken()[x][y];
-        int killSwitch = 0;
-        while(vak.isVuur() && killSwitch<500){
+        while(vak.isVuur()){
             killSwitch++;
             locatie = veldC.volgPijl(x,y);
             x = locatie[0];
             y = locatie[1];
-            if (x == 3 && y == 3){
-                if (tweedekeer){
-                    dobbelC.d6.gooi();
-                    dobbelC.d8.gooi();
-                    x = dobbelC.d8.getWaarde();
-                    y = dobbelC.d6.getWaarde();
-                    tweedekeer = false;
-                }
+            if (killSwitch > 48 && !tweedekeer){
                 tweedekeer = true;
+            }
+            else if (tweedekeer) {
+                dobbelC.d6.gooi();
+                dobbelC.d8.gooi();
+                x = dobbelC.d8.getWaarde();
+                y = dobbelC.d6.getWaarde();
+                tweedekeer = false;
+                killSwitch = 0;
             }
             vak = veldC.veldD.getVakken()[x][y];
         }
-        if(veldC.getVeldD().getPersonenlijst().size()>0){
+        if(veldC.getVeldD().getPersonenlijst().size()>1 && vak.getPersonen() != null){
+
             vak.setPersonen(veldC.getVeldD().getPersonenlijst().get(0));
             veldC.getVeldD().getPersonenlijst().remove(0);
         }
-
     }
 
     public void updatePunten() {
