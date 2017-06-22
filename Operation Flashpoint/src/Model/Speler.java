@@ -2,11 +2,12 @@ package Model;
 
 import Controller.SpelerController;
 
+import java.io.Serializable;
+
 /**
  * Created by Sam van Schaik
  */
-public class Speler {
-
+public class Speler implements Serializable {
 
     //Speler informatie
     String naam;

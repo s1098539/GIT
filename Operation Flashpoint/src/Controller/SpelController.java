@@ -158,16 +158,16 @@ public class SpelController implements Initializable {
         stackPane.getChildren().add(veldC.getVeldI().getGridPane());
         spelerC.resetPunten();
 
-        try {
-            Send sender = new Send(host, username, localMessage);
-            setSender(sender);
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (NotBoundException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Send sender = new Send(host, username, localMessage);
+//            setSender(sender);
+//        } catch (RemoteException e) {
+//            e.printStackTrace();
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        } catch (NotBoundException e) {
+//            e.printStackTrace();
+//        }
 
         for(Persoon persoon: Persoon.values()){
             veldC.getVeldD().getPersonenlijst().add(persoon);

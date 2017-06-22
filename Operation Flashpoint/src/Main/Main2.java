@@ -14,6 +14,8 @@ import java.io.PrintStream;
 import java.net.MalformedURLException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 
 import static javafx.application.Application.launch;
 
@@ -44,6 +46,7 @@ public class Main2 extends Application{
         spelerC.setControllers(veldC,spelC,dobbelC,chatC);
         dobbelC.setControllers(veldC,spelC,spelerC,chatC);
         chatC.setControllers(spelC,veldC,spelerC,dobbelC,chatC);
+
         spraakC.setControllers(spelC, spelerC);
         /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
         system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
@@ -63,6 +66,10 @@ public class Main2 extends Application{
 //            e.printStackTrace();
 //        }
 //
+
+//        spraakC.setController(spelC);
+
+
 //        System.setOut(new PrintStream(System.out) {
 //            @Override
 //            public void write(byte[] buf, int off, int len) {
@@ -76,8 +83,23 @@ public class Main2 extends Application{
 
         veldC.run();
 
-//        Speler test = new Speler("Sam", Kleur.ROOD, "127", 0, 0, 0, 0, Rol.COMMANDANT, true);
+        //This is where the client makes a connection to the server.
+        String naam = "Rafe"; //NAAM CLIENT
+        String ip = "localhost"; //IP SERVER
+        Speler s = new Speler("DEBUG", Kleur.ZWART);
 
+        try {
+            System.out.println("Getting access to the registry ...");
+            Registry registry = LocateRegistry.getRegistry(ip);
+            System.out.println("Getting the Main.Interface stub from registry ...");
+            Interface clientStub = (Interface) registry.lookup("Main.Interface");
+
+            //TODO DEBUGLINES
+            System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n............................." );
+
+            System.out.println(clientStub.getString());
+        } catch (Exception e) {
+            System.out.println("EXCEPTION: " + e);
+        }
     }
-
 }
