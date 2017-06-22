@@ -55,7 +55,7 @@ public class SpelerController {
     }
 
     public void noord(){
-        if(!openendeur && !brandblusser && !hakken) {
+        if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Noord");
             beweegActie(BOVEN);
 
@@ -76,15 +76,14 @@ public class SpelerController {
 //            spelC.updatePunten();
         }
         else if(rijden){
-            System.out.println("Hakken: Noord");
+            System.out.println("rijden");
             rijden(BOVEN);
-            spelC.updatePunten();
         }
         spelC.updatePunten();
     }
 
     public void west(){
-        if(!openendeur && !brandblusser && !hakken) {
+        if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: West");
             beweegActie(LINKS);
         }
@@ -102,11 +101,15 @@ public class SpelerController {
             hakActie(LINKS);
             veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
+        else if(rijden){
+            System.out.println("rijden");
+            rijden(LINKS);
+        }
         spelC.updatePunten();
     }
 
     public void zuid(){
-        if(!openendeur && !brandblusser && !hakken) {
+        if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Zuid");
             beweegActie(ONDER);
         }
@@ -124,11 +127,15 @@ public class SpelerController {
             hakActie(ONDER);
             veldC.ImageSetterAround(speler.getX(),speler.getY());
         }
+        else if(rijden){
+            System.out.println("rijden");
+            rijden(ONDER);
+        }
         spelC.updatePunten();
     }
 
     public void oost(){
-        if(!openendeur && !brandblusser && !hakken) {
+        if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Oost");
             beweegActie(RECHTS);
         }
@@ -145,6 +152,10 @@ public class SpelerController {
             System.out.println("Hakken: Oost");
             hakActie(RECHTS);
             veldC.ImageSetterAround(speler.getX(),speler.getY());
+        }
+        else if(rijden){
+            System.out.println("rijden");
+            rijden(RECHTS);
         }
         spelC.updatePunten();
     }
@@ -281,61 +292,72 @@ public class SpelerController {
     }
     public void rijden(Richting richting) {
         String wagen = kiezenVoertuig();
+        System.out.println(wagen);
         Richting kant;
+        boolean verkeerdeKant = false;
         if (wagen.equals("Ambulance")) {
             kant = veldC.veldD.getAmbulance();
             switch (kant) {
                 case BOVEN:
-                    if (richting == Richting.ONDER) {
-                        System.out.println("Dit mag niet, kies een aanliggende kant");
-                        break;
+                    if (richting == Richting.ONDER && richting != kant) {
+                        verkeerdeKant = true;
                     }
+                    break;
                 case RECHTS:
-                    if (richting == Richting.LINKS) {
-                        System.out.println("Dit mag niet, kies een aanliggende kant");
-                        break;
+                    if (richting == Richting.LINKS && richting != kant) {
+                        verkeerdeKant = true;
                     }
+                    break;
                 case ONDER:
-                    if (richting == Richting.BOVEN) {
-                        System.out.println("Dit mag niet, kies een aanliggende kant");
-                        break;
+                    if (richting == Richting.BOVEN && richting != kant) {
+                        verkeerdeKant = true;
                     }
+                    break;
                 case LINKS:
-                    if (richting == Richting.RECHTS) {
-                        System.out.println("Dit mag niet, kies een aanliggende kant");
-                        break;
+                    if (richting == Richting.RECHTS && richting != kant) {
+                        verkeerdeKant = true;
                     }
-                    veldC.veldD.setAmbulance(richting);
-                    speler.setActiepunten(speler.getActiepunten() - 2);
                     break;
             }
-        } else if (wagen.equals("Brandweerwagen")) {
+            if(!verkeerdeKant) {
+                veldC.veldD.setAmbulance(richting);
+                speler.setActiepunten(speler.getActiepunten() - 2);
+                veldC.carSetter();
+            }
+
+
+        }
+        else if (wagen.equals("Brandweerwagen")) {
             kant = veldC.veldD.getBrandweerwagen();
             switch (kant) {
                 case BOVEN:
-                    if (richting == Richting.ONDER) {
-                        System.out.println("Dit mag niet, kies een aanliggende kant");
-                        break;
+                    if (richting == Richting.ONDER && richting != kant) {
+                        verkeerdeKant = true;
                     }
+                    break;
                 case RECHTS:
-                    if (richting == Richting.LINKS) {
-                        System.out.println("Dit mag niet, kies een aanliggende kant");
-                        break;
+                    if (richting == Richting.LINKS && richting != kant) {
+                        verkeerdeKant = true;
                     }
+                    break;
                 case ONDER:
-                    if (richting == Richting.BOVEN) {
-                        System.out.println("Dit mag niet, kies een aanliggende kant");
-                        break;
+                    if (richting == Richting.BOVEN && richting != kant) {
+                        verkeerdeKant = true;
                     }
+                    break;
                 case LINKS:
-                    if (richting == Richting.RECHTS) {
-                        System.out.println("Dit mag niet, kies een aanliggende kant");
-                        break;
+                    if (richting == Richting.RECHTS && richting != kant) {
+                        verkeerdeKant = true;
                     }
-                    veldC.veldD.setBrandweerwagen(richting);
-                    speler.setActiepunten(speler.getActiepunten() - 2);
                     break;
             }
+
+            if(!verkeerdeKant) {
+                veldC.veldD.setBrandweerwagen(richting);
+                speler.setActiepunten(speler.getActiepunten() - 2);
+                veldC.carSetter();
+            }
+
         }
     }
     private void brandweerwagenActie(){

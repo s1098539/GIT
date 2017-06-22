@@ -88,7 +88,20 @@ public class SpelController implements Initializable {
     }
 
     public void switchSpeler() {
+        for(int i = 0; i < spel.getSpelers().size(); i++){
+            if(spel.getHuidigeSpeler()==spel.getSpelers().get(i)){
+                if (i==spel.getSpelers().size()){
+                    spel.setHuidigeSpeler(spel.getSpelers().get(0));
+                    spelerC.setHuidigeSpeler();
+                }
+                else{
+                    spel.setHuidigeSpeler(spel.getSpelers().get(i++));
+                    spelerC.setHuidigeSpeler();
+                }
 
+            }
+
+        }
     }
 
     public Send getSender() {
@@ -420,6 +433,7 @@ public class SpelController implements Initializable {
             spelerC.speler.setPersoon(null);
         }
         checkPersonen();
+        switchSpeler();
         veldC.ImageSetterALL();
         spelerC.resetPunten();
         checkVerlies();
@@ -656,13 +670,6 @@ public class SpelController implements Initializable {
 
 
 
-    }
-
-    public void setHuidigeSpeler(Speler speler){
-        spel.setHuidigeSpeler(speler);
-    }
-    public ArrayList<Speler> getSpelers(){
-        return spel.getSpelers();
     }
 
     // L, verwijderd personen die op vuur staan en vervangd deze met nieuwe.
