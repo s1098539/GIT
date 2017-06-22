@@ -72,7 +72,6 @@ public class SpelController implements Initializable {
     String host = "127.0.0.1";
     String username = "";
     Send sender;
-
     Spel spel;
 
     SpeelveldController veldC;
@@ -81,6 +80,27 @@ public class SpelController implements Initializable {
     ChatController chatC;
     SpraakController spraakC;
     SpelController spelC;
+
+//    ArrayList<Speler>spelers = new ArrayList<>();
+//
+//    public void maakSpelers() {
+//        spelers.add(new Speler("Sjaak", Kleur.BLAUW));
+//        spelers.add(new Speler("Joep", Kleur.GEEL));
+//        spelers.add(new Speler("Norddin", Kleur.GROEN));
+//        spelers.add(new Speler("Sam", Kleur.ORANJE));
+//        spelers.add(new Speler("Calvin", Kleur.ROOD));
+//        spelers.add(new Speler("Lion", Kleur.ZWART));
+//    }
+//
+//    public void switchSpeler() {
+//        int i;
+//        for(i = 0; i < 5; i++) {
+//            if(speler==spelers.get(i)) {
+//                speler = spelers.get(i+1);
+//                i+=spelers.size();
+//            }
+//        }
+//    }
 
     public Send getSender() {
         return sender;
@@ -640,6 +660,7 @@ public class SpelController implements Initializable {
     public void maakSpeler(String naam, Kleur kleur){
         spel.setSpelers(new Speler(naam, kleur));
     }
+
     public Speler getHuidigeSpeler(){
         return spel.getHuidigeSpeler();
     }

@@ -21,7 +21,28 @@ import static Model.Rol.*;
 
 public class SpelerController {
 
-    Speler speler=new Speler("sjaak", Kleur.BLAUW);
+    Speler speler = new Speler("hoi", Kleur.BLAUW);
+//    ArrayList<Speler>spelers = new ArrayList<>();
+//
+//    public void maakSpelers() {
+//        spelers.add(new Speler("Sjaak", Kleur.BLAUW));
+//        spelers.add(new Speler("Joep", Kleur.GEEL));
+//        spelers.add(new Speler("Norddin", Kleur.GROEN));
+//        spelers.add(new Speler("Sam", Kleur.ORANJE));
+//        spelers.add(new Speler("Calvin", Kleur.ROOD));
+//        spelers.add(new Speler("Lion", Kleur.ZWART));
+//    }
+//
+//    public void switchSpeler() {
+//        int i;
+//        for(i = 0; i < 5; i++) {
+//            if(speler==spelers.get(i)) {
+//                speler = spelers.get(i+1);
+//                i+=spelers.size();
+//            }
+//        }
+//    }
+
 
     public void setHuidigeSpeler() {
         speler = spelC.getHuidigeSpeler();
