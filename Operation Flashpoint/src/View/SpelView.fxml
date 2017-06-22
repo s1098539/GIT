@@ -498,7 +498,7 @@
                     <children>
                         <HBox fx:id="minMaxknoppen" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="360.0">
                             <children>
-                                <Button fx:id="chatTop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="285.0" text="Chat" wrapText="true">
+                                <Button fx:id="chatTop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="285.0" text="Chat" wrapText="true">
                                     <effect>
                                         <ColorAdjust brightness="-0.3">
                                             <input>
@@ -507,7 +507,7 @@
                                         </ColorAdjust>
                                     </effect>
                         </Button>
-                                <Button fx:id="kleinerChat" minWidth="-Infinity" mnemonicParsing="false" prefWidth="35.0" text="_">
+                                <Button fx:id="kleinerChat" minWidth="-Infinity" mnemonicParsing="false" prefHeight="54.0" prefWidth="35.0" text="_">
                                     <HBox.margin>
                                         <Insets />
                                     </HBox.margin>
@@ -519,7 +519,7 @@
                                         </ColorAdjust>
                                     </effect>
                                 </Button>
-                                <Button fx:id="groterChat" mnemonicParsing="false" text="❐">
+                                <Button fx:id="groterChat" mnemonicParsing="false" prefHeight="55.0" prefWidth="36.0" text="❐">
                                     <HBox.margin>
                                         <Insets />
                                     </HBox.margin>
@@ -545,7 +545,7 @@
                                         <Insets />
                                     </HBox.margin>
                         </TextField>
-                                <Button fx:id="stuur" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" text="stuur">
+                                <Button fx:id="stuur" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="54.0" text="stuur">
                                     <HBox.margin>
                                         <Insets left="1.0" />
                                     </HBox.margin>

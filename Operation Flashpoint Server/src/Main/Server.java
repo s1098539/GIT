@@ -17,8 +17,6 @@ public class Server {
 
     private void runServer() {
         //TODO REMOVE THE DEBUG OBJECTS
-
-
         try {
             //Basically, don't touch this unless you know what you're doing.
             InterfaceImpl impl = new InterfaceImpl();

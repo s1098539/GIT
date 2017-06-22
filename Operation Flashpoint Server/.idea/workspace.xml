@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa791b91-80fa-4f39-958f-8de519105891" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;Operation Flashpoint/out/production/Operation Flashpoint/Main/Main2.class">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/Parse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Parse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Interface.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Interface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/InterfaceImpl.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/InterfaceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Server.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Server.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpraakController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpraakController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Interface.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Interface.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Main2.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Main2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/SpeelveldImages.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/SpeelveldImages.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Spel.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Spel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Speler.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Speler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Spraak.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Spraak.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Interface.java" afterPath="$PROJECT_DIR$/src/Main/Interface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/InterfaceImpl.java" afterPath="$PROJECT_DIR$/src/Main/InterfaceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Server.java" afterPath="$PROJECT_DIR$/src/Main/Server.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Operation Flashpoint/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpeelveldController.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpeelveldController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelController.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelerController.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Spel.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Spel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Speler.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Speler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/View/SpelView.fxml" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/View/SpelView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Interface.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Interface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Main2.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Main2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/View/SpelView.fxml" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/View/SpelView.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +40,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
+            <state relative-caret-position="0">
               <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
               <folding />
             </state>
@@ -34,8 +54,8 @@
       <file leaf-file-name="Interface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InterfaceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InterfaceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/InterfaceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+            <state relative-caret-position="238">
+              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,31 +75,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Speler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SpeelveldData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/SpeelveldData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scrapbook.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Scrapbook.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Speler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/Speler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="362">
-              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-              <folding />
+              <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+              <folding>
+                <element signature="e#1966#1967#0" expanded="true" />
+                <element signature="e#1996#1997#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpeelveldController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SpeelveldController.java">
+      <file leaf-file-name="Parse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Parse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-306">
-              <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            <state relative-caret-position="119">
+              <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -100,8 +145,8 @@
       <find>abstract</find>
       <find>setnaa</find>
       <find>run()</find>
-      <find>abstra</find>
       <find>setnaam</find>
+      <find>abstra</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,10 +163,11 @@
         <option value="$PROJECT_DIR$/src/Model/Vak.java" />
         <option value="$PROJECT_DIR$/src/Model/Spel.java" />
         <option value="$PROJECT_DIR$/src/Model/Speler.java" />
-        <option value="$PROJECT_DIR$/src/Main/Server.java" />
         <option value="$PROJECT_DIR$/src/Controller/SpeelveldController.java" />
         <option value="$PROJECT_DIR$/src/Model/MASTER.java" />
+        <option value="$PROJECT_DIR$/src/Main/Server.java" />
         <option value="$PROJECT_DIR$/src/Main/Interface.java" />
+        <option value="$PROJECT_DIR$/src/Model/Parse.java" />
         <option value="$PROJECT_DIR$/src/Main/InterfaceImpl.java" />
       </list>
     </option>
@@ -133,8 +179,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="75" />
-    <option name="y" value="248" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -154,8 +199,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -224,15 +268,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="SearchEverywhereHistoryKey" value="Speler&#9;FILE&#9;file://C:/Users/Lenovo/GIT/Operation Flashpoint Server/src/Model/Speler.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\GIT\Operation Flashpoint Server\src" />
     </key>
@@ -507,6 +556,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -635,6 +685,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -672,7 +728,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1498041923398</updated>
-      <workItem from="1498041926631" duration="17129000" />
+      <workItem from="1498041926631" duration="22034000" />
+      <workItem from="1498146152522" duration="602000" />
     </task>
     <task id="LOCAL-00001" summary="HELLO RMI TEAM&#10;&#10;ITS ME RAFE AGAIN&#10;&#10;BACK IT AGAIN WITH ALL THE RMI">
       <created>1498138489861</created>
@@ -685,41 +742,41 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17129000" />
+    <option name="totallyTimeSpent" value="22636000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="248" width="974" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.50417536" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.49582464" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.50417536" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.49582464" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -774,6 +831,79 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Controller/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Interface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/InterfaceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/SpeelveldData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Scrapbook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Parse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Speler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="119" column="13" lean-forward="false" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
+          <folding>
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Fiche.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -842,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,25 +1010,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/SpeelveldData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -915,7 +1023,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
+        <state relative-caret-position="0">
           <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding />
         </state>
@@ -929,46 +1037,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/MASTER.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Speler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/MASTER.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        <state relative-caret-position="356">
+          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Parse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/InterfaceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+        <state relative-caret-position="238">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/SpeelveldData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Scrapbook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Speler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+          <folding>
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -11,37 +11,24 @@ public class InterfaceImpl implements Interface {
     //DONT GET RID OF THIS ---------------------------
     protected InterfaceImpl() throws RemoteException {
     }
+    SpeelveldData veldD;
     Server s = new Server();
-
+    Parse p = new Parse("DEBUG_SERVER",veldD);
     // --
 
 
     //--Speler
-    Speler s2 = new Speler("DEBUG_SERVER", Kleur.ROOD);
-
-    public Speler getSpeler() throws RemoteException{
-        return s2;
-    }
-
-    public Speler getSpecificSpeler(Speler speler) throws RemoteException{
-        return speler;
-    }
-
-    @Override
-    public String getString() throws RemoteException{
-        return s2.getNaam();
-    }
-
-    @Override
-    public void setAP(int ap) throws RemoteException {
-        getSpeler();
-    }
-
     //--
 
     //--Speelveld & Vakken
-    SpelController VeldC;
-    //--x
+    //--
+
+    //Message?
+    @Override
+    public Parse sendParse() throws RemoteException {
+        return p;
+    }
+    //--
 }
 
 
