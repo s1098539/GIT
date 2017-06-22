@@ -182,9 +182,9 @@ public class SpelController implements Initializable {
     public void run() {
         veldC.carViewFactory();
         veldC.carSetter();
-        stackPane.getChildren().add(veldC.getVeldI().getGridPane());
         stackPane.getChildren().add(veldC.veldI.getCarViews()[0]);
         stackPane.getChildren().add(veldC.veldI.getCarViews()[1]);
+        stackPane.getChildren().add(veldC.getVeldI().getGridPane());
         maakSpelers();
         spel.setHuidigeSpeler(spel.getSpelers().get(0));
         spelerC.setHuidigeSpeler();
