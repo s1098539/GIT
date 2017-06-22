@@ -1,34 +1,33 @@
 package Main;
 
-import Controller.SpeelveldController;
-import Controller.SpelController;
 import Model.*;
 
 import java.rmi.RemoteException;
-import java.util.ArrayList;
 
 public class InterfaceImpl implements Interface {
     //DONT GET RID OF THIS ---------------------------
     protected InterfaceImpl() throws RemoteException {
     }
-    SpeelveldData veldD;
-    Server s = new Server();
-    Parse p = new Parse("DEBUG_SERVER",veldD);
-    // --
 
+    Parse p = new Parse("SERVER SIDE");
 
-    //--Speler
-    //--
-
-    //--Speelveld & Vakken
-    //--
-
-    //Message?
     @Override
-    public Parse sendParse() throws RemoteException {
+    public Parse getParse() throws RemoteException {
         return p;
     }
-    //--
+
+    @Override
+    public String getMessage() throws RemoteException {
+        return p.getMessage();
+    }
+
+    @Override
+    public void setMessage(String string) throws RemoteException {
+        p.setMessage(string);
+    }
+
+
+    // -----------------
 }
 
 
