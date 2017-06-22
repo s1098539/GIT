@@ -73,6 +73,8 @@ public class SpelController implements Initializable {
     String username = "";
     Send sender;
 
+    Spel spel;
+
     SpeelveldController veldC;
     SpelerController spelerC;
     DobbelsteenController dobbelC;
@@ -139,7 +141,7 @@ public class SpelController implements Initializable {
 
 
     public SpelController() throws IOException {
-
+        spel = new Spel(6);
     }
 
     // Lion, verbind deze controller met 3 andere
@@ -348,6 +350,10 @@ public class SpelController implements Initializable {
             spelerC.btnhakken();
         });
 
+        imgRijden.setOnMouseClicked(event -> {
+            spelerC.kiezenVoertuig();
+        });
+
         stuur.setOnAction(event -> {
             chatC.stuurBericht();
         });
@@ -383,14 +389,11 @@ public class SpelController implements Initializable {
         });
 
     }
-    //Door: Sam, don't hate if its wrong ok
-    Spel spel = new Spel(6,0,0);
+
 
     // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
     public void endTurn() {
-        for(int i = 0; i<3; i++) {
-            nieuwRook();
-        }
+        nieuwRook();
         checkVonkoverslag();
         checkStoffen();
         if (spelerC.speler.getPersoon() != null){
@@ -433,6 +436,7 @@ public class SpelController implements Initializable {
         } else if(spawnBrandhaard){
             if(spel.getHotspotCounter() > 0) {
                 vak.setHotspot(true);
+                spelC.spel.setHotspotCounter(spelC.spel.getHotspotCounter()-1);
             }
             spawnBrandhaard = false;
         }
@@ -592,20 +596,16 @@ public class SpelController implements Initializable {
         int killSwitch = 0;
         boolean tweedekeer = false;
         vak = veldC.veldD.getVakken()[x][y];
-        while(vak.isVuur()){
-            killSwitch++;
+        while(vak.isVuur() || !vak.getPersonen().isEmpty()){
             locatie = veldC.volgPijl(x,y);
+            killSwitch++;
             x = locatie[0];
             y = locatie[1];
-            if (killSwitch > 48 && !tweedekeer){
-                tweedekeer = true;
-            }
-            else if (tweedekeer) {
+            if (killSwitch == 12){
                 dobbelC.d6.gooi();
                 dobbelC.d8.gooi();
                 x = dobbelC.d8.getWaarde();
                 y = dobbelC.d6.getWaarde();
-                tweedekeer = false;
                 killSwitch = 0;
             }
             vak = veldC.veldD.getVakken()[x][y];
@@ -621,6 +621,7 @@ public class SpelController implements Initializable {
         APLabel.setText(" " + Integer.toString(spelerC.getSpeler().getActiepunten()));
         EPLabel.setText(" " + Integer.toString(spelerC.getSpeler().getExtrapunten()));
         BeschadigingLabel.setText(" " + Integer.toString(spelC.spel.getBeschadigingCounter())+" / 24");
+        HotspotLabel.setText(" " + Integer.toString(spelC.spel.getHotspotCounter())+" / 6");
         if(spelerC.getSpeler().getRol()== BRANDSPUITBEDIENER) spuitTxt.setText("2");
         else spuitTxt.setText(" 4");
         if(spelerC.getSpeler().getRol()==REDDINGSSPECIALIST) {

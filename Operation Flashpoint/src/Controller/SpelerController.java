@@ -243,8 +243,33 @@ public class SpelerController {
     }
 
     //TODO beweegVoertuig, brandweerwagenActie
-    private void beweegVoertuig(){
-        System.out.println("Actie: Beweeg Voertuig");
+    public void kiezenVoertuig(){
+        ArrayList<String> keuzes = new ArrayList<>();
+        keuzes.add("Brandweerwagen");
+        keuzes.add("Ambulance");
+        //De choicedialog maken
+        ChoiceDialog<String> oppakkeus = new ChoiceDialog<>("Kies een voertuig", keuzes);
+        oppakkeus.setTitle("Voertuig kiezen");
+        oppakkeus.setHeaderText("Kies het voertuig dat je wilt verplaatsen");
+        oppakkeus.setContentText("Voertuig");
+
+        Optional<String> keuzeObject = oppakkeus.showAndWait();
+        if (keuzeObject.isPresent() && keuzeObject.get() != "Kies een Voertuig"){
+            if (keuzeObject.get() == "Ambulance"){
+                rijden("Ambulance");
+            }
+            else {
+                rijden("Brandweerwagen");
+            }
+        }
+    }
+    private void rijden(String wagen){
+        if (wagen.equals("Ambulance")){
+            System.out.println("lololol");
+        }
+        else if (wagen.equals("Brandweerwagen")){
+            System.out.println("ik wil geen ambulance");
+        }
     }
     private void brandweerwagenActie(){
         System.out.println("Actie: Gebruik brandweerwagen");
@@ -300,11 +325,9 @@ public class SpelerController {
         if(speler.getRol()==REDDINGSSPECIALIST) {
             if(speler.getActiepunten()>0 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
                 speler.setActiepunten(speler.getActiepunten()-1);
-                spelC.addBeschadigingCount();
             }
         } else if(speler.getActiepunten()>1 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
                     speler.setActiepunten(speler.getActiepunten()-2);
-                    spelC.addBeschadigingCount();
         }
     }
 

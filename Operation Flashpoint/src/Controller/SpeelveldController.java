@@ -306,12 +306,20 @@ public class SpeelveldController {
 
     //Lion/Joep, Zet alle muren en deuren op de goeie plek om het spel te beginnen
     public void setMap(){
+        int x;
+        int y;
+        for(int brandhaarden=0; brandhaarden<3; brandhaarden++) {
+            dobbelC.getD8().gooi();
+            dobbelC.getD6().gooi();
+            x = dobbelC.getD8().getWaarde();
+            y = dobbelC.getD6().getWaarde();
+            veldD.getVakken()[x][y].setHotspot(true);
+        }
+
+
+
         //buitenmuren horizontaal
-        veldD.getVakken()[9][7].setHotspot(true);
-        veldD.getVakken()[9][7].setStoffen(true);
-        veldD.getVakken()[9][7].setVuur(true);
-        veldD.getVakken()[9][7].setPersonen(Persoon.EGEL);
-        for(int x = 1; x <9; x++) {
+        for(x = 1; x <9; x++) {
             veldD.getVakken()[x][0].setOnder(MUUR);
             veldD.getVakken()[x][1].setBoven(MUUR);
             veldD.getVakken()[x][6].setOnder(MUUR);
@@ -319,7 +327,7 @@ public class SpeelveldController {
 
         }
         //buitenmuren verticaal
-        for (int y = 1; y < 7; y++) {
+        for (y = 1; y < 7; y++) {
             veldD.getVakken()[0][y].setRechts(MUUR);
             veldD.getVakken()[1][y].setLinks(MUUR);
             veldD.getVakken()[8][y].setRechts(MUUR);
