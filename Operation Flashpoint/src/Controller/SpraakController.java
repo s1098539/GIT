@@ -80,8 +80,6 @@ public class SpraakController {
     public synchronized void playBlussen() throws Exception{
         int waitTime=3000;
         int waitTime2=5000;
-        audioPlayer(audio.getVuurBlussen());
-        wait(waitTime);
         audioPlayer(audio.getVuurNaarRook());
         wait(waitTime);
         audioPlayer(audio.getRookBlussen());
@@ -108,7 +106,7 @@ public class SpraakController {
         wait(waitTime);
         audioPlayer(audio.getBewegen2());
         wait(waitTime2);
-        audioPlayer(audio.getBewegen3());
+        audioPlayer(audio.getBewegenReddingsSpecialist());
         wait(waitTime2);
         audioPlayer(audio.getDokterBehandeld());
         wait(waitTime3);
