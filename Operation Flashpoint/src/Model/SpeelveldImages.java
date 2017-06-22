@@ -56,6 +56,8 @@ public class SpeelveldImages {
     Image groenhaar = new Image("Resources/GFX/Groenhaar.png",20,20,false,true);
     Image obamanigua = new Image("Resources/GFX/Obamanigua.png",20,20,false,true);
     Image hipstersnor = new Image("Resources/GFX/Hipstersnor.png",20,20,false,true);
+    Image medkit = new Image("Resources/GFX/Medkit.png",20,20,false,true);
+
 
     public GridPane getGridPane() {
         return gridPane;
@@ -415,5 +417,13 @@ public class SpeelveldImages {
 
     public void setHipstersnor(Image hipstersnor) {
         this.hipstersnor = hipstersnor;
+    }
+
+    public Image getMedkit() {
+        return medkit;
+    }
+
+    public void setMedkit(Image medkit) {
+        this.medkit = medkit;
     }
 }

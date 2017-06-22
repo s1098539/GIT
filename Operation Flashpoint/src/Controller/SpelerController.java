@@ -21,7 +21,28 @@ import static Model.Rol.*;
 
 public class SpelerController {
 
-    Speler speler=new Speler("sjaak", Kleur.BLAUW);
+    Speler speler = new Speler("hoi", Kleur.BLAUW);
+//    ArrayList<Speler>spelers = new ArrayList<>();
+//
+//    public void maakSpelers() {
+//        spelers.add(new Speler("Sjaak", Kleur.BLAUW));
+//        spelers.add(new Speler("Joep", Kleur.GEEL));
+//        spelers.add(new Speler("Norddin", Kleur.GROEN));
+//        spelers.add(new Speler("Sam", Kleur.ORANJE));
+//        spelers.add(new Speler("Calvin", Kleur.ROOD));
+//        spelers.add(new Speler("Lion", Kleur.ZWART));
+//    }
+//
+//    public void switchSpeler() {
+//        int i;
+//        for(i = 0; i < 5; i++) {
+//            if(speler==spelers.get(i)) {
+//                speler = spelers.get(i+1);
+//                i+=spelers.size();
+//            }
+//        }
+//    }
+
 
     public void setHuidigeSpeler() {
         speler = spelC.getHuidigeSpeler();
@@ -210,6 +231,7 @@ public class SpelerController {
         if (!vak.getPersonen().isEmpty()){
             vak.getPersonen().get(0).setGeheeld();
         }
+        veldC.ImageSetter(speler.getX(),speler.getY());
     }
     // Lion, dit is de special methode van specStoffen, indien mogelijk word een stoffen fiche verwijderd.
     private void onschadelijkMaken() {
@@ -243,8 +265,33 @@ public class SpelerController {
     }
 
     //TODO beweegVoertuig, brandweerwagenActie
-    private void beweegVoertuig(){
-        System.out.println("Actie: Beweeg Voertuig");
+    public void kiezenVoertuig(){
+        ArrayList<String> keuzes = new ArrayList<>();
+        keuzes.add("Brandweerwagen");
+        keuzes.add("Ambulance");
+        //De choicedialog maken
+        ChoiceDialog<String> oppakkeus = new ChoiceDialog<>("Kies een voertuig", keuzes);
+        oppakkeus.setTitle("Voertuig kiezen");
+        oppakkeus.setHeaderText("Kies het voertuig dat je wilt verplaatsen");
+        oppakkeus.setContentText("Voertuig");
+
+        Optional<String> keuzeObject = oppakkeus.showAndWait();
+        if (keuzeObject.isPresent() && keuzeObject.get() != "Kies een Voertuig"){
+            if (keuzeObject.get() == "Ambulance"){
+                rijden("Ambulance");
+            }
+            else {
+                rijden("Brandweerwagen");
+            }
+        }
+    }
+    private void rijden(String wagen){
+        if (wagen.equals("Ambulance")){
+            System.out.println("lololol");
+        }
+        else if (wagen.equals("Brandweerwagen")){
+            System.out.println("ik wil geen ambulance");
+        }
     }
     private void brandweerwagenActie(){
         System.out.println("Actie: Gebruik brandweerwagen");
@@ -300,11 +347,9 @@ public class SpelerController {
         if(speler.getRol()==REDDINGSSPECIALIST) {
             if(speler.getActiepunten()>0 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
                 speler.setActiepunten(speler.getActiepunten()-1);
-                spelC.addBeschadigingCount();
             }
         } else if(speler.getActiepunten()>1 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
                     speler.setActiepunten(speler.getActiepunten()-2);
-                    spelC.addBeschadigingCount();
         }
     }
 
@@ -368,11 +413,11 @@ public class SpelerController {
         if (speler.getRol() == REDDINGSSPECIALIST && (speler.getExtrapunten() > 1 || (speler.getExtrapunten() > 0 && !draagt()))) {
             speler.setExtraPunten(speler.getExtrapunten() - 1);
             if(draagt()) speler.setExtraPunten(speler.getExtrapunten() - 1);
-            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setExtraPunten(speler.getExtrapunten()+2);
+            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setExtraPunten(speler.getExtrapunten()+1);
         } else {
             speler.setActiepunten(speler.getActiepunten() - 1);
             if(draagt())speler.setActiepunten(speler.getActiepunten() - 1);
-            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setActiepunten(speler.getActiepunten()+2);
+            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setActiepunten(speler.getActiepunten()+1);
         }
     }
 
@@ -414,10 +459,10 @@ public class SpelerController {
                     }
                     break;
             }
-            veldC.addSpeler(speler.getKleur(), speler.getX(), speler.getY());
-            persoonOmdraaien();
-            veldC.ImageSetter(speler.getX(), speler.getY());
         }
+        veldC.addSpeler(speler.getKleur(), speler.getX(), speler.getY());
+        persoonOmdraaien();
+        veldC.ImageSetter(speler.getX(), speler.getY());
     }
 
     private void persoonOmdraaien(int x, int y) {
