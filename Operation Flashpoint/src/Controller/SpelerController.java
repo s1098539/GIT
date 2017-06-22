@@ -177,6 +177,105 @@ public class SpelerController {
         spelC.updatePunten();
     }
 
+    public void BrandweerwagenSpuitActie() {
+        System.out.println("BLUS BLUS");
+        Boolean opBWagen = false;
+        switch(veldC.getVeldD().getBrandweerwagen()) {
+            case BOVEN: if(speler.getY()==0 && (speler.getX() == 3|| speler.getX() == 4)) {
+                opBWagen = true;
+            }
+                break;
+            case ONDER: if(speler.getY()==7 && (speler.getX() == 5|| speler.getX() == 6)) {
+                opBWagen = true;
+            }
+                break;
+            case LINKS: if(speler.getX()==0 && (speler.getY() == 4|| speler.getY() == 5))
+                opBWagen = true;
+                break;
+            case RECHTS: if(speler.getX()==9 && (speler.getY() == 2|| speler.getY() == 3))
+                opBWagen = true;
+                break;
+        }
+        if(opBWagen) {
+            System.out.println("Ik ga nu blussen");
+            if (speler.getActiepunten() > 3 || (speler.getRol() == BRANDSPUITBEDIENER && speler.getActiepunten() > 1)) {
+                speler.setActiepunten(speler.getActiepunten() - 4);
+                if (speler.getRol() == BRANDSPUITBEDIENER) speler.setActiepunten(speler.getActiepunten() + 2);
+                Richting kwadrant = veldC.getVeldD().getBrandweerwagen();
+                dobbelC.d6.gooi();
+                dobbelC.d8.gooi();
+                switch (kwadrant) {
+                    case ONDER:
+                        if (dobbelC.d6.getWaarde() < 4) {
+                            dobbelC.d6.flip();
+                        }
+                        if (dobbelC.d8.getWaarde() < 5) {
+                            dobbelC.d8.flip();
+                        }
+
+                        break;
+                    case LINKS:
+                        if (dobbelC.d6.getWaarde() < 4) {
+                            dobbelC.d6.flip();
+                        }
+                        if (dobbelC.d8.getWaarde() > 4) {
+                            dobbelC.d8.flip();
+                        }
+                        break;
+                    case BOVEN:
+                        if (dobbelC.d6.getWaarde() > 3) {
+                            dobbelC.d6.flip();
+                        }
+                        if (dobbelC.d8.getWaarde() > 4) {
+                            dobbelC.d8.flip();
+                        }
+                        break;
+                    case RECHTS:
+                        if (dobbelC.d6.getWaarde() > 3) {
+                            dobbelC.d6.flip();
+                        }
+                        if (dobbelC.d8.getWaarde() < 5) {
+                            dobbelC.d8.flip();
+                        }
+                        break;
+                }
+                int x = dobbelC.d8.getWaarde();
+                int y = dobbelC.d6.getWaarde();
+                System.out.println(x);
+                System.out.println(y);
+                vak = veldC.getVeldD().getVakken()[x][y];
+
+                vak.setNiks(true);
+                vak.setRook(false);
+                vak.setVuur(false);
+                for (Richting richting : Richting.values()) {
+                    if (vak.getObstakelRichting(richting).isBegaanbaar()) {
+                        switch (richting) {
+                            case BOVEN:
+                                setNiks(x, y - 1);
+                                break;
+                            case RECHTS:
+                                setNiks(x + 1, y);
+                                break;
+                            case ONDER:
+                                setNiks(x, y + 1);
+                                break;
+                            case LINKS:
+                                setNiks(x - 1, y);
+                        }
+                    }
+                }
+                veldC.ImageSetterALL();
+            }
+        }
+    }
+
+    private void setNiks(int x, int y) {
+        veldC.getVeldD().getVakken()[x][y].setNiks(true);
+        veldC.getVeldD().getVakken()[x][y].setRook(false);
+        veldC.getVeldD().getVakken()[x][y].setVuur(false);
+    }
+
     // L (dialog template gejat van Norddin), speciale actie van de verkenner, geeft een popup met alle niet ? personen en draait de gekeuze persoon om.
     private void verken() {
         if(speler.getActiepunten()>0) {
@@ -425,6 +524,7 @@ public class SpelerController {
         int y = speler.getY();
         veldC.doeDeur(x,y,richting);
     }
+
 
 
 

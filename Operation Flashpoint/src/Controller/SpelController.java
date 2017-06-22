@@ -389,6 +389,10 @@ public class SpelController implements Initializable {
             spelerC.btnRijden();
         });
 
+        imgWagenblussen.setOnMouseClicked(event -> {
+            spelerC.BrandweerwagenSpuitActie();
+        });
+
         stuur.setOnAction(event -> {
             chatC.stuurBericht();
         });
