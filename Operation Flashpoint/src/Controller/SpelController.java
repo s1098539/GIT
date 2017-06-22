@@ -422,6 +422,7 @@ public class SpelController implements Initializable {
         checkPersonen();
         veldC.ImageSetterALL();
         spelerC.resetPunten();
+        checkVerlies();
     }
 
     public void nieuwRook() {
@@ -773,7 +774,14 @@ public class SpelController implements Initializable {
     public void addBeschadigingCount() {
         spel.setBeschadigingCounter(spel.getBeschadigingCounter()+1);
     }
+
+    public void checkVerlies() {
+        if(spel.getDoodCounter()>2) System.out.println("Helaas, er zijn te veel mensen vermist, je het spel hebt verloren");
+        if(spel.getBeschadigingCounter()>23) System.out.println("Helaas, het huis is ingestord, je hebt het spel verloren");
+    }
 }
+
+
 
     // checkWin()
 

@@ -62,10 +62,10 @@ public class SpeelveldImages {
     Image ambuLinks = new Image("Resources/GFX/ambulanceLayerlinks.png");
     Image ambuOnder = new Image("Resources/GFX/ambulanceLayeronder.png");
     Image ambuRechts = new Image("Resources/GFX/ambulanceLayerrechts.png");
-    Image brandweerBoven = new Image("Resources/GFX/brandweerLayerboven.png");
-    Image brandweerLinks = new Image("Resources/GFX/brandweerLayerlinks.png");
-    Image brandweerOnder = new Image("Resources/GFX/brandweerLayeronder.png");
-    Image brandweerRechts = new Image("Resources/GFX/brandweerLayerrechts.png");
+    Image brandweerBoven = new Image("Resources/GFX/brandweerlayerboven.png");
+    Image brandweerLinks = new Image("Resources/GFX/brandweerlayerlinks.png");
+    Image brandweerOnder = new Image("Resources/GFX/brandweerlayeronder.png");
+    Image brandweerRechts = new Image("Resources/GFX/brandweerlayerrechts.png");
 
     public GridPane getGridPane() {
         return gridPane;

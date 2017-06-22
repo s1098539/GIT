@@ -112,7 +112,7 @@ public class SpeelveldController {
                 break;
         }
 
-        switch (veldD.getAmbulance()) {
+        switch (veldD.getBrandweerwagen()) {
             case BOVEN: veldI.getCarViews()[1].setImage(veldI.getBrandweerBoven());
                 break;
             case RECHTS: veldI.getCarViews()[1].setImage(veldI.getBrandweerRechts());
