@@ -64,7 +64,13 @@ public class SpeelveldController {
             }
         }
     }
+    public void nieuweSpelersToevoegen(){
+        for(Speler speler: spelC.spel.getSpelers()){
+            addSpeler(speler.getKleur(), speler.getX(), speler.getY());
+        }
 
+
+    }
     //Lion, zet in elke gridpane spot(op het veld) een flowpane, en in elke flowpane 9 image views
     private void flowpanesAndImageViewsPlaatser() {
         for(int y = 0; y<8; y++) {

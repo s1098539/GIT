@@ -85,6 +85,7 @@ public class SpelController implements Initializable {
         spel.setSpelers(new Speler("Sam", Kleur.ORANJE, 3, 0));
         spel.setSpelers(new Speler("Calvin", Kleur.ROOD, 4, 0));
         spel.setSpelers(new Speler("Lion", Kleur.ZWART, 5, 0));
+        veldC.nieuweSpelersToevoegen();
     }
 
     public void switchSpeler() {
@@ -191,7 +192,6 @@ public class SpelController implements Initializable {
         maakSpelers();
         spel.setHuidigeSpeler(spel.getSpelers().get(0));
         spelerC.setHuidigeSpeler();
-
         spelerC.resetPunten();
 
 //        try {
