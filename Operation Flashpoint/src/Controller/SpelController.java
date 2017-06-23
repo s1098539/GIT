@@ -11,11 +11,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
-import java.rmi.NotBoundException;
-import java.rmi.RemoteException;
 
 import static Model.Rol.*;
 
@@ -68,6 +65,12 @@ public class SpelController implements Initializable {
     @FXML private Label HotspotLabel;
     @FXML private Label GeredLabel;
     @FXML private Label GeredLabel1;
+    @FXML private Label user1;
+    @FXML private Label user2;
+    @FXML private Label user3;
+    @FXML private Label user4;
+    @FXML private Label user5;
+    @FXML private Label user6;
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -85,26 +88,36 @@ public class SpelController implements Initializable {
     SpraakController spraakC;
     SpelController spelC;
 
-//    ArrayList<Speler>spelers = new ArrayList<>();
-//
-//    public void maakSpelers() {
-//        spelers.add(new Speler("Sjaak", Kleur.BLAUW));
-//        spelers.add(new Speler("Joep", Kleur.GEEL));
-//        spelers.add(new Speler("Norddin", Kleur.GROEN));
-//        spelers.add(new Speler("Sam", Kleur.ORANJE));
-//        spelers.add(new Speler("Calvin", Kleur.ROOD));
-//        spelers.add(new Speler("Lion", Kleur.ZWART));
-//    }
-//
-//    public void switchSpeler() {
-//        int i;
-//        for(i = 0; i < 5; i++) {
-//            if(speler==spelers.get(i)) {
-//                speler = spelers.get(i+1);
-//                i+=spelers.size();
-//            }
-//        }
-//    }
+    public void maakSpelers() {
+        spel.setSpelers(new Speler("Michiel", Kleur.BLAUW, 0, 0));
+        spel.setSpelers(new Speler("Joep", Kleur.GEEL, 1, 0));
+        spel.setSpelers(new Speler("Norddin", Kleur.GROEN, 2, 0));
+        spel.setSpelers(new Speler("Sam", Kleur.ORANJE, 3, 0));
+        spel.setSpelers(new Speler("Calvin", Kleur.ROOD, 4, 0));
+        spel.setSpelers(new Speler("Lion", Kleur.ZWART, 5, 0));
+        veldC.nieuweSpelersToevoegen();
+        setNamen();
+    }
+
+    public void switchSpeler() {
+        for(int i = 0; i < spel.getSpelers().size(); i++){
+            if(spel.getHuidigeSpeler()==spel.getSpelers().get(i)){
+                if (i==(spel.getSpelers().size()-1)){
+                    spel.setHuidigeSpeler(spel.getSpelers().get(0));
+                    spelerC.setHuidigeSpeler();
+                    break;
+                }
+                else{
+                    System.out.println(spel.getSpelers().size());
+                    spel.setHuidigeSpeler(spel.getSpelers().get(i+1));
+                    spelerC.setHuidigeSpeler();
+                    break;
+                }
+
+            }
+
+        }
+    }
 
     public Send getSender() {
         return sender;
@@ -166,6 +179,8 @@ public class SpelController implements Initializable {
 
     public SpelController() throws IOException {
         spel = new Spel(6);
+
+
     }
 
     // Lion, verbind deze controller met 3 andere
@@ -180,7 +195,14 @@ public class SpelController implements Initializable {
 
     // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
+        veldC.carViewFactory();
+        veldC.carSetter();
+        stackPane.getChildren().add(veldC.veldI.getCarViews()[0]);
+        stackPane.getChildren().add(veldC.veldI.getCarViews()[1]);
         stackPane.getChildren().add(veldC.getVeldI().getGridPane());
+        maakSpelers();
+        spel.setHuidigeSpeler(spel.getSpelers().get(0));
+        spelerC.setHuidigeSpeler();
         spelerC.resetPunten();
 
 //        try {
@@ -211,6 +233,15 @@ public class SpelController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         SpraakController audioPlayer = new SpraakController();
+            imgPickup1.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playSchade(spelerC.speler.getActiepunten());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
         imgSchade.setOnContextMenuRequested(event ->{
             try{
@@ -244,22 +275,35 @@ public class SpelController implements Initializable {
             }
         });
 
-        imgOpenendeur1.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playEP(spelerC.speler.getExtrapunten());
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgOpenendeur1.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playEP(spelerC.speler.getExtrapunten());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        btnET.setOnContextMenuRequested(event -> {
-            try {
-                audioPlayer.playEindigZet();
-            } catch(Exception e){
-                e.printStackTrace();
-            }
-        });
+            btnET.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playEindigZet();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
+            imgBrandblusser.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playBlussen();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
         imgBrandblusser.setOnContextMenuRequested(event ->{
             try{
                 audioPlayer.playBlussen(spelC.spelerC.speler.getRol());
@@ -268,99 +312,132 @@ public class SpelController implements Initializable {
             }
         });
 
-        imgPickup.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playOppakken();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgPickup.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playOppakken();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
+            btnLEFT.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
         btnLEFT.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
-            } catch ( Exception e){
-                e.printStackTrace();
+            if(spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
         btnRIGHT.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
-            } catch ( Exception e){
-                e.printStackTrace();
+            if(spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
         btnUP.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
-            } catch ( Exception e){
-                e.printStackTrace();
+            if(spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
         btnDOWN.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
-            } catch ( Exception e){
-                e.printStackTrace();
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
-        btnSpecial.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playSpecial();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            btnSpecial.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playSpecial();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgHakken.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playHakken();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgHakken.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playHakken();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgWagenblussen.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playWagenBlussen(spelC.spelerC.speler.getRol());
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgWagenblussen.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playWagenBlussen(spelC.spelerC.speler.getRol());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgOpenendeur.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playDeurActies();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgOpenendeur.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playDeurActies();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgPickup.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playOppakken();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgPickup.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playOppakken();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
-        imgRijden.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playRijden();
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
-        });
+            imgRijden.setOnContextMenuRequested(event -> {
+                if (spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playRijden();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
         imgRolswap.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playRolWissel();
-            } catch ( Exception e){
-                e.printStackTrace();
+            if(spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playRolWissel();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -403,11 +480,15 @@ public class SpelController implements Initializable {
         });
 
         imgHakken.setOnMouseClicked(event -> {
-            spelerC.btnhakken();
+            spelerC.btnHakken();
         });
 
         imgRijden.setOnMouseClicked(event -> {
-            spelerC.kiezenVoertuig();
+            spelerC.btnRijden();
+        });
+
+        imgWagenblussen.setOnMouseClicked(event -> {
+            spelerC.BrandweerwagenSpuitActie();
         });
 
         stuur.setOnAction(event -> {
@@ -443,22 +524,40 @@ public class SpelController implements Initializable {
         imgPickup.setOnMouseClicked(event -> {
             spelerC.oppakkenActie();
         });
+        options.setOnAction(event -> {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Slechtziendmodus");
+            alert.setHeaderText("Wilt u slechtziendheids-modus toggelen?");
+            alert.setContentText("Druk dan op Oke");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK){
+                if(spelerC.speler.isSlechtziendmodus()){
+                    spelerC.speler.setSlechtziendmodus(false);
+                }
+                else{
+                    spelerC.speler.setSlechtziendmodus(true);
+                }
+            } else {
+                alert.close();
+            }
+        });
 
     }
 
 
     // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
     public void endTurn() {
+        checkWin();
         nieuwRook();
         checkVonkoverslag();
         checkStoffen();
-        if (spelerC.speler.getPersoon() != null){
-            veldC.veldD.getVakken()[spelerC.speler.getX()][spelerC.speler.getY()].setPersonen(spelerC.speler.getPersoon());
-            spelerC.speler.setPersoon(null);
-        }
+        spelerC.dropItem();
         checkPersonen();
+        switchSpeler();
         veldC.ImageSetterALL();
         spelerC.resetPunten();
+        checkVerlies();
     }
 
     public void nieuwRook() {
@@ -520,6 +619,7 @@ public class SpelController implements Initializable {
             doorgaan = true;
             while (richting == Richting.BOVEN && doorgaan && ((y - teller) >= 1)) {
                 vak = veldC.veldD.getVakken()[x][y-teller];
+                vak.setVuur(true);
                 if (!vak.boven.isBegaanbaar()){
                     veldC.doeBeschadiging(x, y-teller, richting);
                     doorgaan = false;
@@ -538,6 +638,7 @@ public class SpelController implements Initializable {
             }
             while (richting == Richting.RECHTS && doorgaan && ((x + teller) <= 8)) {
                 vak = veldC.veldD.getVakken()[x+teller][y];
+                vak.setVuur(true);
                 if (!vak.rechts.isBegaanbaar()){
                     veldC.doeBeschadiging((x+teller), y, richting);
                     doorgaan = false;
@@ -556,6 +657,7 @@ public class SpelController implements Initializable {
             }
             while (richting == Richting.ONDER && doorgaan && ((y + teller) <= 6)) {
                 vak = veldC.veldD.getVakken()[x][y+teller];
+                vak.setVuur(true);
                 if (!vak.onder.isBegaanbaar()){
                     veldC.doeBeschadiging(x, (y + teller), richting);
                     doorgaan = false;
@@ -574,6 +676,7 @@ public class SpelController implements Initializable {
             }
             while (richting == Richting.LINKS && doorgaan && ((x - teller) >= 1)) {
                 vak = veldC.veldD.getVakken()[x-teller][y];
+                vak.setVuur(true);
                 if (!vak.links.isBegaanbaar()){
                     veldC.doeBeschadiging((x-teller), y, richting);
                     doorgaan = false;
@@ -693,19 +796,6 @@ public class SpelController implements Initializable {
 
 
     }
-    public void maakSpeler(String naam, Kleur kleur){
-        spel.setSpelers(new Speler(naam, kleur));
-    }
-
-    public Speler getHuidigeSpeler(){
-        return spel.getHuidigeSpeler();
-    }
-    public void setHuidigeSpeler(Speler speler){
-        spel.setHuidigeSpeler(speler);
-    }
-    public ArrayList<Speler> getSpelers(){
-        return spel.getSpelers();
-    }
 
     // L, verwijderd personen die op vuur staan en vervangd deze met nieuwe.
     public void checkPersonen() {
@@ -816,8 +906,44 @@ public class SpelController implements Initializable {
     public void addBeschadigingCount() {
         spel.setBeschadigingCounter(spel.getBeschadigingCounter()+1);
     }
+
+    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    Boolean lost = false;
+    public void checkVerlies() {
+        if(spel.getDoodCounter()>2) {
+            alert.setContentText("Er zijn te veel mensen vermist");
+            lost = true;
+        }
+        else if(spel.getBeschadigingCounter()>23) {
+            alert.setContentText("Het huis is ingestord.");
+            lost = true;
+
+        }
+        if(lost) {
+            alert.setTitle("Helaas, je hebt verloren");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+            System.exit(0);
+        }
+    }
+
+    public void setNamen() {
+        user1.setText(spel.getSpelers().get(0).getNaam());
+        user2.setText(spel.getSpelers().get(1).getNaam());
+        user3.setText(spel.getSpelers().get(2).getNaam());
+        user4.setText(spel.getSpelers().get(3).getNaam());
+        user5.setText(spel.getSpelers().get(4).getNaam());
+        user6.setText(spel.getSpelers().get(5).getNaam());
+    }
+
+    public void checkWin() {
+        if(spel.getGeredCounter()>7) {
+            alert.setContentText("Je hebt " + spel.getGeredCounter() + " personen gered");
+            alert.setTitle("Gefeliciteerd, je hebt gewonnen");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+            System.exit(0);
+        }
+    }
 }
 
-    // checkWin()
-
-    //TODO checkVerlies()

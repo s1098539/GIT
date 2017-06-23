@@ -8,6 +8,7 @@ import java.io.Serializable;
  * Created by Sam van Schaik
  */
 public class Speler implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     //Speler informatie
     String naam;
@@ -22,18 +23,20 @@ public class Speler implements Serializable {
     int actiepunten;
     int extrapunten;
 
-    Rol rol = Rol.GODMODE;
+    Rol rol = Rol.DOKTER;
 
-    boolean slechtziendmodus;
+    boolean slechtziendmodus = false;
 
     Boolean stof = false;
     Persoon persoon = null;
 
 
 
-    public Speler(String naam, Kleur kleur) {
+    public Speler(String naam, Kleur kleur, int x, int y) {
         this.naam = naam;
         this.kleur = kleur;
+        this.x = x;
+        this.y = y;
     }
 
     //Getters

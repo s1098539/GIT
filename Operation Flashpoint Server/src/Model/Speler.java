@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by Sam van Schaik
  */
 public class Speler implements Serializable{
-
+    private static final long serialVersionUID = 1L;
 
     //Speler informatie
     String naam;

@@ -158,7 +158,7 @@
                                 <Image url="@../Resources/GFX/Brandweerblauw50px.png" />
                             </image>
                         </ImageView>
-                        <Label fx:id="user1" prefHeight="50.0" prefWidth="100.0" text="USER1" HBox.hgrow="ALWAYS">
+                        <Label fx:id="user1" prefHeight="50.0" prefWidth="98.0" text="USER1" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="25.0" />
                             </font>

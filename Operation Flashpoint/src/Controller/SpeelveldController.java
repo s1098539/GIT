@@ -64,7 +64,13 @@ public class SpeelveldController {
             }
         }
     }
+    public void nieuweSpelersToevoegen(){
+        for(Speler speler: spelC.spel.getSpelers()){
+            addSpeler(speler.getKleur(), speler.getX(), speler.getY());
+        }
 
+
+    }
     //Lion, zet in elke gridpane spot(op het veld) een flowpane, en in elke flowpane 9 image views
     private void flowpanesAndImageViewsPlaatser() {
         for(int y = 0; y<8; y++) {
@@ -93,6 +99,35 @@ public class SpeelveldController {
         if(x>0)ImageSetter(x-1,y);
         if(y<7)ImageSetter(x,y+1);
         if(y>0)ImageSetter(x,y-1);
+    }
+
+    public void carViewFactory() {
+        veldI.getCarViews()[0] = new ImageView();
+        veldI.getCarViews()[1] = new ImageView();
+    }
+
+    public void carSetter() {
+        switch (veldD.getAmbulance()) {
+            case BOVEN: veldI.getCarViews()[0].setImage(veldI.getAmbuBoven());
+                break;
+            case ONDER: veldI.getCarViews()[0].setImage(veldI.getAmbuOnder());
+                break;
+            case LINKS: veldI.getCarViews()[0].setImage(veldI.getAmbuLinks());
+                break;
+            case RECHTS: veldI.getCarViews()[0].setImage(veldI.getAmbuRechts());
+                break;
+        }
+
+        switch (veldD.getBrandweerwagen()) {
+            case BOVEN: veldI.getCarViews()[1].setImage(veldI.getBrandweerBoven());
+                break;
+            case RECHTS: veldI.getCarViews()[1].setImage(veldI.getBrandweerRechts());
+                break;
+            case LINKS: veldI.getCarViews()[1].setImage(veldI.getBrandweerLinks());
+                break;
+            case ONDER: veldI.getCarViews()[1].setImage(veldI.getBrandweerOnder());
+                break;
+        }
     }
 
     // Lion, gaat de eigenschappen af van een bepaald vak en laad het goede plaatje in de image View
@@ -318,6 +353,14 @@ public class SpeelveldController {
             y = dobbelC.getD6().getWaarde();
             veldD.getVakken()[x][y].setHotspot(true);
         }
+        for(int gs=0; gs<3; gs++) {
+            dobbelC.getD8().gooi();
+            dobbelC.getD6().gooi();
+            x = dobbelC.getD8().getWaarde();
+            y = dobbelC.getD6().getWaarde();
+            veldD.getVakken()[x][y].setStoffen(true);
+        }
+
 
 
 
@@ -411,6 +454,14 @@ public class SpeelveldController {
 
         veldD.getVakken()[3][7].setBoven(LEEG);
         veldD.getVakken()[3][6].setOnder(LEEG);
+
+        for(int explosies=0; explosies<3; explosies++) {
+            dobbelC.getD8().gooi();
+            dobbelC.getD6().gooi();
+            x = dobbelC.getD8().getWaarde();
+            y = dobbelC.getD6().getWaarde();
+            spelC.checkExplosie(x,y);
+        }
     }
 
     public void doeDeur(int x, int y, Richting richting) {

@@ -67,16 +67,16 @@ public class Main2 extends Application{
 //        spraakC.setController(spelC);
 
 
-//        System.setOut(new PrintStream(System.out) {
-//            @Override
-//            public void write(byte[] buf, int off, int len) {
-//                super.write(buf, off, len);
-//
-//                String msg = new String(buf, off, len);
-//
-//                spelC.getChatArea().appendText(msg);
-//            }
-//        });
+        System.setOut(new PrintStream(System.out) {
+            @Override
+            public void write(byte[] buf, int off, int len) {
+                super.write(buf, off, len);
+
+                String msg = new String(buf, off, len);
+
+                spelC.getChatArea().appendText(msg);
+            }
+        });
 
         veldC.run();
 
@@ -91,6 +91,34 @@ public class Main2 extends Application{
             System.out.println("Getting the Main.Interface stub from registry ...");
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
 
+            String naam1 = "Norddin1";
+            String naam2 = "Norddin2";
+            String naam3 = "Norddin3";
+            String naam4 = "Norddin4";
+            String naam5 = "Norddin5";
+            String naam6 = "Norddin6";
+
+            Kleur kleur = clientStub.addSpeler(naam1);
+            Kleur kleur1 = clientStub.addSpeler(naam2);
+            Kleur kleur2 = clientStub.addSpeler(naam3);
+            Kleur kleur3 = clientStub.addSpeler(naam4);
+            Kleur kleur4 = clientStub.addSpeler(naam5);
+            Kleur kleur5 = clientStub.addSpeler(naam6);
+
+            System.out.println(clientStub.GetSpeler(kleur));
+            System.out.println(kleur);
+            System.out.println(clientStub.GetSpeler(kleur1));
+            System.out.println(kleur1);
+            System.out.println(clientStub.GetSpeler(kleur2));
+            System.out.println(kleur2);
+            System.out.println(clientStub.GetSpeler(kleur3));
+            System.out.println(kleur3);
+            System.out.println(clientStub.GetSpeler(kleur4));
+            System.out.println(kleur4);
+            System.out.println(clientStub.GetSpeler(kleur5));
+            System.out.println(kleur5);
+
+
             //TODO DEBUGLINES
             System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n............................." );
             clientStub.sendParse().setVeldD(veldC.getVeldD());
@@ -98,5 +126,6 @@ public class Main2 extends Application{
         } catch (Exception e) {
             System.out.println("EXCEPTION: " + e);
         }
+
     }
 }
