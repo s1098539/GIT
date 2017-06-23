@@ -1,8 +1,5 @@
 package Controller;
 
-//import Model.Persoon;
-//import Model.Speler;
-
 // imports van de modellen Rol en Spraak
 import Model.Rol;
 import Model.Spraak;
@@ -20,14 +17,12 @@ public class SpraakController {
     // aangemaakt van de Controllers die van belang zijn voor spraakafhandeling
     SpelController spelC;
     SpelerController spelerC;
-//    Persoon persoon;
 
     public void setControllers(SpelController spelC, SpelerController spelerC) {
         // Hiermee wordt de link aangemaakt tussen andere controllers zodat
         // er functies van deze controller in kunnen worden aangeroepen.
         this.spelC = spelC;
         this.spelerC = spelerC;
-//        this.persoon= persoon;
     }
 
     public SpraakController() {
@@ -40,13 +35,16 @@ public class SpraakController {
     // Er wordt een object aangemaakt van het model Spraak zodat
     // Deze benaderd kan worden door deze Controller
     Spraak audio = new Spraak();
+    private boolean play=false;
 
     private void audioPlayer(String s) throws Exception {
         // In deze functie wordt een inputStream aangemaakt die de parameter String s
         // gebruikt om een audiobestand op te sporen
         InputStream in = new FileInputStream(s);
+
         // Dit audiobestand word ingeladen in de audiostream
         AudioStream audioStream = new AudioStream(in);
+
         // vervolgens word de ingeladen audio afgespeeld.
         AudioPlayer.player.start(audioStream);
     }
@@ -115,7 +113,7 @@ public class SpraakController {
         }
     }
 
-    // Leest schadeCounter(model) uit
+    // Leest mogelijkheden van de deur knop uit
     public synchronized void playDeurActies() throws Exception{
         int waitTime=4500;
         audioPlayer(audio.getDeur());
@@ -303,6 +301,7 @@ public class SpraakController {
         }
     }
 
+    // Speelt hoeveel vermiste ofwel dode personen van aandacht er zijn.
     public void playDood(int dood) throws Exception{
         switch (dood) {
             case 0: audioPlayer(audio.getVermist0());
@@ -315,14 +314,67 @@ public class SpraakController {
         }
     }
 
+    //speelt af hoeveel brandhaarden er op het spel aanwezig zijn.
     public void playBrandHaard(int haard) throws Exception{
         switch (haard) {
             case 1: audioPlayer(audio.getBrandhaarden1());
-                break;
+            break;
             case 2: audioPlayer(audio.getBrandhaarden2());
-                break;
+            break;
             case 3: audioPlayer(audio.getBrandhaarden3());
+            break;
+            case 4: audioPlayer(audio.getBrandhaarden4());
+            break;
+            case 5: audioPlayer(audio.getBrandhaarden5());
+            break;
+            case 6: audioPlayer(audio.getBrandhaarden6());
+            break;
         }
     }
 
+    // Tweede audiospeler gedeelte.
+    // nadere toelichting binnen de methoden
+    AudioStream audioStream;
+
+    public void spelRegelAudioPlayer(String s) throws Exception {
+
+        // Deze functie is een aparte audiospeler voor de spelregels
+        // Deze heeft wat extra logica.
+        // Deze audiospeler heeft een stop functie.
+        // Wanneer de audio afspeelt, gaat play naar false en daarmee word dan
+        // de audio ook gestopt. Wanneer de play op false is dan word de audio weer gestart.
+        // Deze functie heeft echter nog meer aandacht nodig, omdat deze nooit werkt.
+        // De reden is nog onbekend.
+
+        InputStream in = new FileInputStream(s);
+
+        audioStream = new AudioStream(in);
+
+        if (play) {
+            //
+            AudioPlayer.player.start(audioStream);
+        } else {
+            AudioPlayer.player.start(audioStream);
+        }
+    }
+
+    private void handleSpelregels(){
+
+        // Regelaar voor de stop en startmethode van de spelregelaudio.
+        // Work in progress
+
+        if(play){
+            play=false;
+        }
+
+        if(!play){
+            play=true;
+        }
+    }
+
+    // de spelController roept deze methode aan om audio af te spelen en te stoppen.
+    public void playSpelRegels(String s) throws Exception{
+        handleSpelregels();
+        spelRegelAudioPlayer(s);
+    }
 }

@@ -126,6 +126,14 @@ public class Spraak {
     private String gevolgSchokgolf = "./src/Resources/Audio/OntploffingenGevolgSchokgolf.wav";
     private String overslaandeBrand = "./src/Resources/Audio/OverslaandeBrand.wav";
 
+    // Eenvoudige samenvoeging van alle audiobestanden tot één bestand zodat deze met gemak
+    // volledig beluisterd kan worden.
+    // Audiobestand bevat de bovenstaande audio spelregelaudio.
+    // Hiermee is de mogelijkheid om specifieke stukken af te spelen, en het geheel.
+    // Dit moet echter nog geïmplementeerd worden.
+
+    private String spelRegels = "./src/Resources/Audio/Spelregels.wav";
+
     // Vanaf hier staan de getters.
     // In dit bestand zal u geen setters vinden, omdat deze niet nodig zijn.
     // In een ergere situatie kan het gebeuren dat de audiopaden worden aangepast en hier mee
@@ -362,7 +370,6 @@ public class Spraak {
         return vermist3;
     }
 
-
     // Getters van de brandhaarden Counter
     // Hier kan je de audio getten wat uitleest hoeveel brandhaarden op het speelveld staan
 
@@ -574,6 +581,10 @@ public class Spraak {
 
     public String getOverslaandeBrand() {
         return overslaandeBrand;
+    }
+
+    public String getSpelRegels() {
+        return spelRegels;
     }
 
 }

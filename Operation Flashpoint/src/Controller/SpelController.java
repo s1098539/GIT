@@ -298,7 +298,7 @@ public class SpelController implements Initializable {
             imgBrandblusser.setOnContextMenuRequested(event -> {
                 if (spelerC.speler.isSlechtziendmodus()) {
                     try {
-                        audioPlayer.playBlussen();
+                        audioPlayer.playBlussen(spelerC.speler.getRol());
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -449,7 +449,13 @@ public class SpelController implements Initializable {
             }
         });
 
-
+        gebruikershandleiding.setOnContextMenuRequested(event ->{
+            try{
+                audioPlayer.playSpelRegels(spraakC.audio.getSpelRegels());
+            } catch ( Exception e){
+                e.printStackTrace();
+            }
+        });
 
         btnET.setOnAction(event -> {
             endTurn();
