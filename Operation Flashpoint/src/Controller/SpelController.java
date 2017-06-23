@@ -244,46 +244,55 @@ public class SpelController implements Initializable {
             });
 
         imgSchade.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playSchade(spelC.spel.getBeschadigingCounter());
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
+                    if(spelerC.speler.isSlechtziendmodus()) {
+                        try {
+                            audioPlayer.playSchade(spelC.spel.getBeschadigingCounter());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
         });
 
         imgPva.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playPva(spelC.spel.getGeredCounter());
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
+                    if(spelerC.speler.isSlechtziendmodus()) {
+                        try {
+                            audioPlayer.playPva(spelC.spel.getGeredCounter());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
         });
 
         imgBrandHaard.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBrandHaard(spelC.spel.getHotspotCounter());
-            } catch ( Exception e){
-                e.printStackTrace();
+                if(spelerC.speler.isSlechtziendmodus()) {
+                    try {
+                        audioPlayer.playBrandHaard(spelC.spel.getHotspotCounter());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                }
             }
         });
 
         imgPickup1.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playAP(spelerC.speler.getActiepunten());
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
+                    if(spelerC.speler.isSlechtziendmodus()) {
+
+                        try {
+                            audioPlayer.playAP(spelerC.speler.getActiepunten());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
         });
 
-            imgOpenendeur1.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playEP(spelerC.speler.getExtrapunten());
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        imgOpenendeur1.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playEP(spelerC.speler.getExtrapunten());
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
 
             btnET.setOnContextMenuRequested(event -> {
                 if (spelerC.speler.isSlechtziendmodus()) {
@@ -295,42 +304,47 @@ public class SpelController implements Initializable {
                 }
             });
 
-            imgBrandblusser.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playBlussen(spelerC.speler.getRol());
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        imgBrandblusser.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playBlussen(spelerC.speler.getRol());
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
-        imgBrandblusser.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playBlussen(spelC.spelerC.speler.getRol());
-            } catch ( Exception e){
-                e.printStackTrace();
             }
         });
 
-            imgPickup.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playOppakken();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
+        imgBrandblusser.setOnContextMenuRequested(event ->{
+                    if(spelerC.speler.isSlechtziendmodus()) {
 
-            btnLEFT.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                        try {
+                            audioPlayer.playBlussen(spelC.spelerC.speler.getRol());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
+        });
+
+        imgPickup.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+               try {
+                  audioPlayer.playOppakken();
+               } catch (Exception e) {
+                 e.printStackTrace();
+               }
+             }
+         });
+
+        btnLEFT.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
+
         btnLEFT.setOnContextMenuRequested(event ->{
             if(spelerC.speler.isSlechtziendmodus()) {
                 try {
@@ -371,65 +385,65 @@ public class SpelController implements Initializable {
             }
         });
 
-            btnSpecial.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playSpecial();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        btnSpecial.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playSpecial();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
 
-            imgHakken.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playHakken();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        imgHakken.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playHakken();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
 
-            imgWagenblussen.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playWagenBlussen(spelC.spelerC.speler.getRol());
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        imgWagenblussen.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playWagenBlussen(spelC.spelerC.speler.getRol());
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
 
-            imgOpenendeur.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playDeurActies();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        imgOpenendeur.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playDeurActies();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
 
-            imgPickup.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playOppakken();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        imgPickup.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playOppakken();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
 
-            imgRijden.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playRijden();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        imgRijden.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playRijden();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
 
         imgRolswap.setOnContextMenuRequested(event ->{
             if(spelerC.speler.isSlechtziendmodus()) {
@@ -442,18 +456,23 @@ public class SpelController implements Initializable {
         });
 
         doodCounter.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playDood(spelC.spel.getDoodCounter());
-            } catch ( Exception e){
-                e.printStackTrace();
-            }
+                    if(spelerC.speler.isSlechtziendmodus()) {
+
+                        try {
+                            audioPlayer.playDood(spelC.spel.getDoodCounter());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
         });
 
         gebruikershandleiding.setOnContextMenuRequested(event ->{
-            try{
-                audioPlayer.playSpelRegels(spraakC.audio.getSpelRegels());
-            } catch ( Exception e){
-                e.printStackTrace();
+            if(spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playSpelRegels(spraakC.audio.getSpelRegels());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
