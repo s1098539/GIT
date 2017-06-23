@@ -23,7 +23,7 @@ public class Speler implements Serializable {
     int actiepunten;
     int extrapunten;
 
-    Rol rol = Rol.DOKTER;
+    Rol rol = Rol.MANNETJESPUTTER;
 
     boolean slechtziendmodus = false;
 

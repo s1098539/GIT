@@ -390,73 +390,74 @@ public class SpelerController {
         return ("als je dit ziet is er iets mis met voertuig kiezen");
     }
     public void rijden(Richting richting) {
-        String wagen = kiezenVoertuig();
-        System.out.println(wagen);
-        Richting kant;
-        boolean verkeerdeKant = false;
-        if (wagen.equals("Ambulance")) {
-            kant = veldC.veldD.getAmbulance();
-            switch (kant) {
-                case BOVEN:
-                    if (richting == Richting.ONDER && richting != kant) {
-                        verkeerdeKant = true;
-                    }
-                    break;
-                case RECHTS:
-                    if (richting == Richting.LINKS && richting != kant) {
-                        verkeerdeKant = true;
-                    }
-                    break;
-                case ONDER:
-                    if (richting == Richting.BOVEN && richting != kant) {
-                        verkeerdeKant = true;
-                    }
-                    break;
-                case LINKS:
-                    if (richting == Richting.RECHTS && richting != kant) {
-                        verkeerdeKant = true;
-                    }
-                    break;
-            }
-            if(!verkeerdeKant) {
-                veldC.veldD.setAmbulance(richting);
-                speler.setActiepunten(speler.getActiepunten() - 2);
-                veldC.carSetter();
-            }
+        if(speler.getActiepunten()>1) {
+            String wagen = kiezenVoertuig();
+            System.out.println(wagen);
+            Richting kant;
+            boolean verkeerdeKant = false;
+            if (wagen.equals("Ambulance")) {
+                kant = veldC.veldD.getAmbulance();
+                switch (kant) {
+                    case BOVEN:
+                        if (richting == Richting.ONDER && richting != kant) {
+                            verkeerdeKant = true;
+                        }
+                        break;
+                    case RECHTS:
+                        if (richting == Richting.LINKS && richting != kant) {
+                            verkeerdeKant = true;
+                        }
+                        break;
+                    case ONDER:
+                        if (richting == Richting.BOVEN && richting != kant) {
+                            verkeerdeKant = true;
+                        }
+                        break;
+                    case LINKS:
+                        if (richting == Richting.RECHTS && richting != kant) {
+                            verkeerdeKant = true;
+                        }
+                        break;
+                }
+                if (!verkeerdeKant) {
+                    veldC.veldD.setAmbulance(richting);
+                    speler.setActiepunten(speler.getActiepunten() - 2);
+                    veldC.carSetter();
+                }
 
 
-        }
-        else if (wagen.equals("Brandweerwagen")) {
-            kant = veldC.veldD.getBrandweerwagen();
-            switch (kant) {
-                case BOVEN:
-                    if (richting == Richting.ONDER && richting != kant) {
-                        verkeerdeKant = true;
-                    }
-                    break;
-                case RECHTS:
-                    if (richting == Richting.LINKS && richting != kant) {
-                        verkeerdeKant = true;
-                    }
-                    break;
-                case ONDER:
-                    if (richting == Richting.BOVEN && richting != kant) {
-                        verkeerdeKant = true;
-                    }
-                    break;
-                case LINKS:
-                    if (richting == Richting.RECHTS && richting != kant) {
-                        verkeerdeKant = true;
-                    }
-                    break;
-            }
+            } else if (wagen.equals("Brandweerwagen")) {
+                kant = veldC.veldD.getBrandweerwagen();
+                switch (kant) {
+                    case BOVEN:
+                        if (richting == Richting.ONDER && richting != kant) {
+                            verkeerdeKant = true;
+                        }
+                        break;
+                    case RECHTS:
+                        if (richting == Richting.LINKS && richting != kant) {
+                            verkeerdeKant = true;
+                        }
+                        break;
+                    case ONDER:
+                        if (richting == Richting.BOVEN && richting != kant) {
+                            verkeerdeKant = true;
+                        }
+                        break;
+                    case LINKS:
+                        if (richting == Richting.RECHTS && richting != kant) {
+                            verkeerdeKant = true;
+                        }
+                        break;
+                }
 
-            if(!verkeerdeKant) {
-                veldC.veldD.setBrandweerwagen(richting);
-                speler.setActiepunten(speler.getActiepunten() - 2);
-                veldC.carSetter();
-            }
+                if (!verkeerdeKant) {
+                    veldC.veldD.setBrandweerwagen(richting);
+                    speler.setActiepunten(speler.getActiepunten() - 2);
+                    veldC.carSetter();
+                }
 
+            }
         }
     }
     private void brandweerwagenActie(){
@@ -561,9 +562,6 @@ public class SpelerController {
         int y = speler.getY();
         veldC.doeDeur(x,y,richting);
     }
-
-
-
 
     public void blussenActie(Richting richting) {
         int x = speler.getX();

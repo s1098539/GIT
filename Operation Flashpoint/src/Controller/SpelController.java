@@ -5,11 +5,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.*;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
@@ -18,6 +18,7 @@ import static Model.Rol.*;
 
 public class SpelController implements Initializable {
 
+    @FXML private BorderPane thePane;
     @FXML private Label blusTxt;
     @FXML private Label hakTxt;
     @FXML private Label spuitTxt;
@@ -483,6 +484,41 @@ public class SpelController implements Initializable {
         btnUP.setOnAction(event -> {
             spelerC.noord();
         });
+
+        thePane.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.A) {
+                spelerC.west();
+            }
+            if (e.getCode() == KeyCode.D) {
+                spelerC.oost();
+            }
+            if (e.getCode() == KeyCode.W) {
+                spelerC.noord();
+            }
+            if (e.getCode() == KeyCode.S) {
+                spelerC.zuid();
+            }
+            if (e.getCode() == KeyCode.ENTER) {
+                endTurn();
+            }
+            if (e.getCode() == KeyCode.SPACE) {
+                spelerC.special();
+            }
+            if (e.getCode() == KeyCode.Q) {
+                spelerC.btnHakken();
+            }
+            if (e.getCode() == KeyCode.E) {
+                spelerC.btnOpenenDeur();
+            }
+            if (e.getCode() == KeyCode.G) {
+                for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
+                    spelC.spel.getSpelers().get(i).setRol(GODMODE);
+                }
+            }
+
+
+        });
+
 
         btnRIGHT.setOnAction(event -> {
             spelerC.oost();
