@@ -940,7 +940,7 @@ public class SpelController implements Initializable {
             lost = true;
         }
         else if(spel.getBeschadigingCounter()>23) {
-            alert.setContentText("Het huis is ingestord.");
+            alert.setContentText("Het huis is ingestort.");
             lost = true;
 
         }

@@ -302,7 +302,7 @@ public class SpelerController {
             //De choicedialog maken
             ChoiceDialog<String> dialog = new ChoiceDialog<>("Keuze", keuzes);
             dialog.setTitle("Choice Dialog");
-            dialog.setHeaderText("Kies je klasse");
+            dialog.setHeaderText("Kies de PVA die je wilt omdraaien");
             dialog.setContentText("Persoon:");
 
             Optional<String> keuzePersoon = dialog.showAndWait();
