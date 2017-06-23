@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
+import sun.plugin.javascript.navig.Anchor;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
@@ -18,7 +19,7 @@ import static Model.Rol.*;
 
 public class SpelController implements Initializable {
 
-    @FXML private BorderPane thePane;
+    @FXML private AnchorPane thePane;
     @FXML private Label blusTxt;
     @FXML private Label hakTxt;
     @FXML private Label spuitTxt;
