@@ -516,7 +516,7 @@ public class SpelController implements Initializable {
                     spelC.spel.getSpelers().get(i).setRol(GODMODE);
                 }
             }
-
+            toggleViewUpdate();
 
         });
 
@@ -535,18 +535,22 @@ public class SpelController implements Initializable {
 
         imgOpenendeur.setOnMouseClicked(event -> {
             spelerC.btnOpenenDeur();
+            toggleViewUpdate();
         });
 
         imgBrandblusser.setOnMouseClicked(event -> {
             spelerC.btnBrandblusser();
+            toggleViewUpdate();
         });
 
         imgHakken.setOnMouseClicked(event -> {
             spelerC.btnHakken();
+            toggleViewUpdate();
         });
 
         imgRijden.setOnMouseClicked(event -> {
             spelerC.btnRijden();
+            toggleViewUpdate();
         });
 
         imgWagenblussen.setOnMouseClicked(event -> {
@@ -585,6 +589,7 @@ public class SpelController implements Initializable {
         });
         imgPickup.setOnMouseClicked(event -> {
             spelerC.oppakkenActie();
+            toggleViewUpdate();
         });
         options.setOnAction(event -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -607,10 +612,26 @@ public class SpelController implements Initializable {
 
     }
 
+    public void toggleViewUpdate() {
+        if(spelerC.openendeur) imgOpenendeur.setImage(veldC.veldI.getVraagteken());
+        else imgOpenendeur.setImage(veldC.veldI.getOpenenDeur());
+        if(spelerC.hakken) imgHakken.setImage(veldC.veldI.getVraagteken());
+        else imgHakken.setImage(veldC.veldI.getHakken());
+        if(spelerC.brandblusser) imgBrandblusser.setImage(veldC.veldI.getVraagteken());
+        else imgBrandblusser.setImage(veldC.getVeldI().getBrandBlusser());
+        if(spelerC.rijden) imgRijden.setImage(veldC.veldI.getVraagteken());
+        else imgRijden.setImage(veldC.getVeldI().getRijden());
+        if(spelerC.speler.isStof() || spelerC.speler.getPersoon() != null) {
+            imgPickup.setImage(veldC.veldI.getVraagteken());
+        } else imgPickup.setImage(veldC.veldI.getPickup());
+    }
+
 
     // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
     public void endTurn() {
         checkWin();
+        spelerC.togglesOff();
+        toggleViewUpdate();
         nieuwRook();
         checkVonkoverslag();
         checkStoffen();
@@ -999,8 +1020,8 @@ public class SpelController implements Initializable {
     }
 
     public void checkWin() {
-        if(spel.getGeredCounter()>7) {
-            alert.setContentText("Je hebt " + spel.getGeredCounter() + " personen gered");
+        if(spel.getGeredCounter()>6) {
+            alert.setContentText(spel.getGeredCounter() + " personen zijn gered");
             alert.setTitle("Gefeliciteerd, je hebt gewonnen");
             alert.setHeaderText(null);
             alert.showAndWait();

@@ -338,6 +338,13 @@ public class SpelerController {
         }
     }
 
+    public void togglesOff() {
+        openendeur = false;
+        brandblusser = false;
+        hakken = false;
+        rijden = false;
+        spelC.toggleViewUpdate();
+    }
 
     public void btnOpenenDeur() {
         openendeur ^= true;
