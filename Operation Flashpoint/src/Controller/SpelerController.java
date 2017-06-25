@@ -631,7 +631,7 @@ public class SpelerController {
     }
 
     // verplaats de speler in de gewenste richting indien mogelijk.
-    private void beweegActie(Richting richting) {//TODO prijs met object bewegen afhandelen, kijken of persoon geheeld is
+    private void beweegActie(Richting richting) {
         Vak vak = veldC.veldD.getVakken()[speler.getX()][speler.getY()];
         veldC.removeSpeler(speler.getKleur(), speler.getX(), speler.getY());
         veldC.ImageSetter(speler.getX(), speler.getY());

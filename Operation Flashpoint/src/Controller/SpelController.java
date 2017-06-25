@@ -509,7 +509,7 @@ public class SpelController implements Initializable {
             if (e.getCode() == KeyCode.ENTER) {
                 endTurn();
             }
-            if (e.getCode() == KeyCode.SPACE) {
+            if (e.getCode() == KeyCode.R) {
                 spelerC.special();
             }
             if (e.getCode() == KeyCode.Q) {
@@ -522,9 +522,28 @@ public class SpelController implements Initializable {
                 for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
                     spelC.spel.getSpelers().get(i).setRol(GODMODE);
                 }
+                setRollen();
+                spelerC.resetPunten();
+                updatePunten();
             }
+            if (e.getCode() == KeyCode.DIGIT1) {
+                spelerC.oppakkenActie();
+            }
+            if (e.getCode() == KeyCode.DIGIT2) {
+                spelerC.btnBrandblusser();
+            }
+            if (e.getCode() == KeyCode.DIGIT3) {
+                spelerC.btnRijden();
+            }
+            if (e.getCode() == KeyCode.DIGIT4) {
+                spelerC.BrandweerwagenSpuitActie();
+            }
+            if (e.getCode() == KeyCode.DIGIT5) {
+                veranderKlasse();
+            }
+
+
             toggleViewUpdate();
-            setRollen();
 
         });
 
@@ -992,6 +1011,7 @@ public class SpelController implements Initializable {
                 }
                 spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-2);
                 setRollen();
+                updatePunten();
             }
         }
     }

@@ -312,12 +312,12 @@
                            <children>
                               <HBox prefHeight="50.0" prefWidth="200.0">
                                  <children>
-                                    <ImageView fx:id="imgPickup" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgHakken" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/GFX/Pickup.png" />
+                                          <Image url="@../Resources/GFX/Hakken.png" />
                                        </image>
                                     </ImageView>
-                                    <Label prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
+                                    <Label fx:id="hakTxt" prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -350,12 +350,12 @@
                            <children>
                               <HBox prefHeight="50.0" prefWidth="200.0">
                                  <children>
-                                    <ImageView fx:id="imgBrandblusser" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgPickup" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/GFX/Brandblusser.png" />
+                                          <Image url="@../Resources/GFX/Pickup.png" />
                                        </image>
                                     </ImageView>
-                                    <Label fx:id="blusTxt" prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
+                                    <Label prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -364,12 +364,12 @@
                               </HBox>
                               <HBox prefHeight="50.0" prefWidth="200.0">
                                  <children>
-                                    <ImageView fx:id="imgHakken" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgBrandblusser" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/GFX/Hakken.png" />
+                                          <Image url="@../Resources/GFX/Brandblusser.png" />
                                        </image>
                                     </ImageView>
-                                    <Label fx:id="hakTxt" prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
+                                    <Label fx:id="blusTxt" prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
