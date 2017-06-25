@@ -73,6 +73,12 @@ public class SpelController implements Initializable {
     @FXML private Label user4;
     @FXML private Label user5;
     @FXML private Label user6;
+    @FXML private Label rol1;
+    @FXML private Label rol2;
+    @FXML private Label rol3;
+    @FXML private Label rol4;
+    @FXML private Label rol5;
+    @FXML private Label rol6;
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -99,6 +105,7 @@ public class SpelController implements Initializable {
         spel.setSpelers(new Speler("Lion", Kleur.ZWART, 5, 0));
         veldC.nieuweSpelersToevoegen();
         setNamen();
+        setRollen();
     }
 
     public void switchSpeler() {
@@ -185,7 +192,7 @@ public class SpelController implements Initializable {
 
     }
 
-    // Lion, verbind deze controller met 3 andere
+    // verbind deze controller met 3 andere
     public void setControllers(SpeelveldController veldC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC, SpelController spelC, SpraakController spraakC) {
         this.veldC = veldC;
         this.spelerC = spelerC;
@@ -195,7 +202,7 @@ public class SpelController implements Initializable {
         this.spraakC = spraakC;
     }
 
-    // Lion, dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
+    // dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
         veldC.carViewFactory();
         veldC.carSetter();
@@ -225,12 +232,12 @@ public class SpelController implements Initializable {
         Collections.shuffle(veldC.getVeldD().getPersonenlijst(), new Random(seed));
     }
 
-    // Lion, keep this one EMPTY and DON'T REMOVE
+    // keep this one EMPTY and DON'T REMOVE
     public void initialize() throws Exception {
 
     }
 
-    // Lion, Alle set on action komt hier in
+    // Alle set on action komt hier in
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -517,6 +524,7 @@ public class SpelController implements Initializable {
                 }
             }
             toggleViewUpdate();
+            setRollen();
 
         });
 
@@ -627,7 +635,7 @@ public class SpelController implements Initializable {
     }
 
 
-    // Lion, word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
+    // word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
     public void endTurn() {
         checkWin();
         spelerC.togglesOff();
@@ -880,7 +888,7 @@ public class SpelController implements Initializable {
 
     }
 
-    // L, verwijderd personen die op vuur staan en vervangd deze met nieuwe.
+    // verwijderd personen die op vuur staan en vervangd deze met nieuwe.
     public void checkPersonen() {
         int count = 0;
         for(int x = 0; x < 10; x++) {
@@ -909,7 +917,7 @@ public class SpelController implements Initializable {
         for(int i = count; i< 3; i++) addPersoon();
 
     }
-    // L, Veranderd de klasse voor de speler bij voldoende AP. Rollen die al in gebruik zijn kunnen niet worden gekozen.
+    // Veranderd de klasse voor de speler bij voldoende AP. Rollen die al in gebruik zijn kunnen niet worden gekozen.
     public void veranderKlasse() {
         if(spelerC.getSpeler().getActiepunten()>1) {
             List<String> choices = new ArrayList<>();
@@ -983,6 +991,7 @@ public class SpelController implements Initializable {
                         break;
                 }
                 spelerC.getSpeler().setActiepunten(spelerC.getSpeler().getActiepunten()-2);
+                setRollen();
             }
         }
     }
@@ -1011,12 +1020,21 @@ public class SpelController implements Initializable {
     }
 
     public void setNamen() {
-        user1.setText(spel.getSpelers().get(0).getNaam());
-        user2.setText(spel.getSpelers().get(1).getNaam());
-        user3.setText(spel.getSpelers().get(2).getNaam());
-        user4.setText(spel.getSpelers().get(3).getNaam());
-        user5.setText(spel.getSpelers().get(4).getNaam());
-        user6.setText(spel.getSpelers().get(5).getNaam());
+        user1.setText(" " + spel.getSpelers().get(0).getNaam());
+        user2.setText(" " + spel.getSpelers().get(1).getNaam());
+        user3.setText(" " + spel.getSpelers().get(2).getNaam());
+        user4.setText(" " + spel.getSpelers().get(3).getNaam());
+        user5.setText(" " + spel.getSpelers().get(4).getNaam());
+        user6.setText(" " + spel.getSpelers().get(5).getNaam());
+    }
+
+    public void setRollen() {
+        rol1.setText(" " + spel.getSpelers().get(0).getRol());
+        rol2.setText(" " + spel.getSpelers().get(1).getRol());
+        rol3.setText(" " + spel.getSpelers().get(2).getRol());
+        rol4.setText(" " + spel.getSpelers().get(3).getRol());
+        rol5.setText(" " + spel.getSpelers().get(4).getRol());
+        rol6.setText(" " + spel.getSpelers().get(5).getRol());
     }
 
     public void checkWin() {

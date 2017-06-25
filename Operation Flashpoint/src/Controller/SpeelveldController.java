@@ -23,7 +23,7 @@ public class SpeelveldController {
 
     }
 
-    // Lion, verbind deze controller met 3 andere
+    // verbind deze controller met 3 andere
     public void setControllers(SpelController spelC, SpelerController spelerC, DobbelsteenController dobbelC, ChatController chatC) {
         this.spelC = spelC;
         this.spelerC = spelerC;
@@ -31,7 +31,7 @@ public class SpeelveldController {
         this.chatC = chatC;
     }
 
-    // Lion, dit is het eerste wat deze controller doet, dit stond eerst in de constructor maar dit gaf problemen
+    // dit is het eerste wat deze controller doet, dit stond eerst in de constructor maar dit gaf problemen
     //          aangezien de controller bij het aanmaken nog niet was verbonden met de andere controllers
     public void run() throws Exception {
         FactoryVakken fv = new FactoryVakken();
@@ -53,7 +53,7 @@ public class SpeelveldController {
         ImageSetterALL();
     }
 
-    // Lion, maakt alle flowpanes en imageviews aan
+    // maakt alle flowpanes en imageviews aan
     private void flowpanesAndImageViewsFactory() {
         for(int y = 0; y<8; y++) {
             for (int x = 0; x < 10; x++) {
@@ -71,7 +71,7 @@ public class SpeelveldController {
 
 
     }
-    //Lion, zet in elke gridpane spot(op het veld) een flowpane, en in elke flowpane 9 image views
+    //zet in elke gridpane spot(op het veld) een flowpane, en in elke flowpane 9 image views
     private void flowpanesAndImageViewsPlaatser() {
         for(int y = 0; y<8; y++) {
             for(int x = 0; x<10; x++) {
@@ -83,7 +83,7 @@ public class SpeelveldController {
         }
     }
 
-    // Lion, update de volledige view van het speelveld
+    // update de volledige view van het speelveld
     public void ImageSetterALL() {
         for(int y = 0; y<8; y++) {
             for (int x = 0; x < 10; x++) {
@@ -92,7 +92,7 @@ public class SpeelveldController {
         }
     }
 
-    // Lion, update het vak dat is gegeven en alles dat hier tegen aan ligt
+    // update het vak dat is gegeven en alles dat hier tegen aan ligt
     public void ImageSetterAround(int x, int y) {
         ImageSetter(x,y);
         if(x<9)ImageSetter(x+1,y);
@@ -130,7 +130,7 @@ public class SpeelveldController {
         }
     }
 
-    // Lion, gaat de eigenschappen af van een bepaald vak en laad het goede plaatje in de image View
+    // gaat de eigenschappen af van een bepaald vak en laad het goede plaatje in de image View
     public void ImageSetter(int x, int y) {
         // Hotspot
         if(veldD.getVakken()[x][y].isHotspot()) {
@@ -284,7 +284,7 @@ public class SpeelveldController {
 
     }
 
-    // Lion, geeft terug of een vak een bepaalde eigenschap heeft of niet.
+    // geeft terug of een vak een bepaalde eigenschap heeft of niet.
     private boolean checkVakEigenschappen(int x, int y, Fiche fiche) {
         switch(fiche) {
             case STOFFEN: return veldD.getVakken()[x][y].isStoffen();
@@ -301,7 +301,7 @@ public class SpeelveldController {
 
     }
 
-    // Lion, geeft terug welke obstakels een vak heeft in een gegeven richting
+    // geeft terug welke obstakels een vak heeft in een gegeven richting
     private Status checkVakObstakel(int x, int y, Richting richting) {
         switch(richting) {
             case BOVEN: return veldD.getVakken()[x][y].getBoven();
@@ -314,7 +314,7 @@ public class SpeelveldController {
         }
     }
 
-    // Lion, kijkt of een speler zich op een bepaald vak bevind en geeft al die speler kleuren terug in een arraylist
+    // kijkt of een speler zich op een bepaald vak bevind en geeft al die speler kleuren terug in een arraylist
     private ArrayList<Kleur> checkVakSpeler(int x, int y) {
         ArrayList<Kleur> kleuren= new ArrayList<>();
         for (int i = 0; i < 6; i++) {
@@ -325,7 +325,7 @@ public class SpeelveldController {
         return kleuren;
     }
 
-    // Lion, geeft true als de gekozen richting geen hinderend obstakel bevat.
+    // geeft true als de gekozen richting geen hinderend obstakel bevat.
     private boolean checkDoorgaanbaar(int x, int y, Richting richting) {
         switch(richting) {
             case BOVEN:
@@ -537,7 +537,7 @@ public class SpeelveldController {
     }
 
 
-    // Lion, handeld obstakels voor explosies en hakken
+    // handeld obstakels voor explosies en hakken
     public boolean doeBeschadiging(int x, int y, Richting richting) {
         Vak vak = veldD.getVakken()[x][y];
         switch (richting) {

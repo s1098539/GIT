@@ -46,7 +46,7 @@ public class SpelerController {
     ChatController chatC;
     SpelController spelC;
 
-    // Lion, verbind deze controller met 3 andere
+    // verbind deze controller met 3 andere
     public void setControllers(SpeelveldController veldC, SpelController spelC, DobbelsteenController dobbelC, ChatController chatC) {
         this.veldC = veldC;
         this.spelC = spelC;
@@ -160,7 +160,7 @@ public class SpelerController {
         spelC.updatePunten();
     }
 
-    // Lion, Als in SpelC op de special knop word gedrukt gaat deze functie lopen
+    // Als in SpelC op de special knop word gedrukt gaat deze functie lopen
     // Er word gekeken welke rol een speler heeft en verwijst verolgens door naar de bijpassende specla methode.
     public void special() {
         switch(speler.getRol()) {
@@ -326,7 +326,7 @@ public class SpelerController {
         }
         veldC.ImageSetter(speler.getX(),speler.getY());
     }
-    // Lion, dit is de special methode van specStoffen, indien mogelijk word een stoffen fiche verwijderd.
+    // dit is de special methode van specStoffen, indien mogelijk word een stoffen fiche verwijderd.
     private void onschadelijkMaken() {
         int x = speler.getX();
         int y = speler.getY();
@@ -630,7 +630,7 @@ public class SpelerController {
         }
     }
 
-    // Lion, verplaats de speler in de gewenste richting indien mogelijk.
+    // verplaats de speler in de gewenste richting indien mogelijk.
     private void beweegActie(Richting richting) {//TODO prijs met object bewegen afhandelen, kijken of persoon geheeld is
         Vak vak = veldC.veldD.getVakken()[speler.getX()][speler.getY()];
         veldC.removeSpeler(speler.getKleur(), speler.getX(), speler.getY());
@@ -712,7 +712,7 @@ public class SpelerController {
         }
     }
 
-    // Lion, reset AP en EP bij het eindigen van een beurt.
+    // reset AP en EP bij het eindigen van een beurt.
     public void resetPunten() {
         speler.setActiepunten(speler.getActiepunten()+4);
         if(speler.getActiepunten()>8) speler.setActiepunten(8);
