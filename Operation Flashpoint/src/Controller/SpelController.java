@@ -4,6 +4,7 @@ import Model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -79,6 +80,12 @@ public class SpelController implements Initializable {
     @FXML private Label rol4;
     @FXML private Label rol5;
     @FXML private Label rol6;
+    @FXML private ImageView user1Img;
+    @FXML private ImageView user2Img;
+    @FXML private ImageView user3Img;
+    @FXML private ImageView user4Img;
+    @FXML private ImageView user5Img;
+    @FXML private ImageView user6Img;
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -212,6 +219,7 @@ public class SpelController implements Initializable {
         maakSpelers();
         spel.setHuidigeSpeler(spel.getSpelers().get(0));
         spelerC.setHuidigeSpeler();
+        setActiveSpelerPlaatje();
         spelerC.resetPunten();
 
 //        try {
@@ -640,16 +648,16 @@ public class SpelController implements Initializable {
     }
 
     public void toggleViewUpdate() {
-        if(spelerC.openendeur) imgOpenendeur.setImage(veldC.veldI.getVraagteken());
+        if(spelerC.openendeur) imgOpenendeur.setImage(veldC.veldI.getOpenenDeurSelect());
         else imgOpenendeur.setImage(veldC.veldI.getOpenenDeur());
-        if(spelerC.hakken) imgHakken.setImage(veldC.veldI.getVraagteken());
+        if(spelerC.hakken) imgHakken.setImage(veldC.veldI.getHakkenSelect());
         else imgHakken.setImage(veldC.veldI.getHakken());
-        if(spelerC.brandblusser) imgBrandblusser.setImage(veldC.veldI.getVraagteken());
+        if(spelerC.brandblusser) imgBrandblusser.setImage(veldC.veldI.getBrandBlusserSelect());
         else imgBrandblusser.setImage(veldC.getVeldI().getBrandBlusser());
-        if(spelerC.rijden) imgRijden.setImage(veldC.veldI.getVraagteken());
+        if(spelerC.rijden) imgRijden.setImage(veldC.veldI.getRijdenSelect());
         else imgRijden.setImage(veldC.getVeldI().getRijden());
         if(spelerC.speler.isStof() || spelerC.speler.getPersoon() != null) {
-            imgPickup.setImage(veldC.veldI.getVraagteken());
+            imgPickup.setImage(veldC.veldI.getPickIpSelect());
         } else imgPickup.setImage(veldC.veldI.getPickup());
     }
 
@@ -668,6 +676,7 @@ public class SpelController implements Initializable {
         veldC.ImageSetterALL();
         spelerC.resetPunten();
         checkVerlies();
+        setActiveSpelerPlaatje();
     }
 
     public void nieuwRook() {
@@ -1040,21 +1049,48 @@ public class SpelController implements Initializable {
     }
 
     public void setNamen() {
-        user1.setText(" " + spel.getSpelers().get(0).getNaam());
-        user2.setText(" " + spel.getSpelers().get(1).getNaam());
-        user3.setText(" " + spel.getSpelers().get(2).getNaam());
-        user4.setText(" " + spel.getSpelers().get(3).getNaam());
-        user5.setText(" " + spel.getSpelers().get(4).getNaam());
-        user6.setText(" " + spel.getSpelers().get(5).getNaam());
+        switch(spel.getSpelers().size()) {
+            case 6 : user6.setText(" " + spel.getSpelers().get(5).getNaam());
+            case 5 : user5.setText(" " + spel.getSpelers().get(4).getNaam());
+            case 4 : user4.setText(" " + spel.getSpelers().get(3).getNaam());
+            case 3 : user3.setText(" " + spel.getSpelers().get(2).getNaam());
+            case 2 : user2.setText(" " + spel.getSpelers().get(1).getNaam());
+            case 1 : user1.setText(" " + spel.getSpelers().get(0).getNaam());
+        }
+    }
+
+    public void setActiveSpelerPlaatje() {
+        switch(spel.getSpelers().size()) {
+            case 6 :if(spel.getSpelers().get(5) == spel.getHuidigeSpeler()) {
+                    user6Img.setImage(veldC.veldI.getBrandweerZwart50pxActive());
+            }   else user6Img.setImage(veldC.veldI.getBrandweerZwart50px());
+            case 5 :if(spel.getSpelers().get(4) == spel.getHuidigeSpeler()) {
+                user5Img.setImage(veldC.veldI.getBrandweerRood50pxActive());
+            }   else user5Img.setImage(veldC.veldI.getBrandweerRood50px());
+            case 4 :if(spel.getSpelers().get(3) == spel.getHuidigeSpeler()) {
+                user4Img.setImage(veldC.veldI.getBrandweerOranje50pxActive());
+            }   else user4Img.setImage(veldC.veldI.getBrandweerOranje50px());
+            case 3 :if(spel.getSpelers().get(2) == spel.getHuidigeSpeler()) {
+                user3Img.setImage(veldC.veldI.getBrandweerGroen50pxActive());
+            }   else user3Img.setImage(veldC.veldI.getBrandweerGroen50px());
+            case 2 :if(spel.getSpelers().get(1) == spel.getHuidigeSpeler()) {
+                user2Img.setImage(veldC.veldI.getBrandweerGeel50pxActive());
+            }   else user2Img.setImage(veldC.veldI.getBrandweerGeel50px());
+            case 1 :if(spel.getSpelers().get(0) == spel.getHuidigeSpeler()) {
+                user1Img.setImage(veldC.veldI.getBrandweerBlauw50pxActive());
+            }   else user1Img.setImage(veldC.veldI.getBrandweerBlauw50px());
+        }
     }
 
     public void setRollen() {
-        rol1.setText(" " + spel.getSpelers().get(0).getRol());
-        rol2.setText(" " + spel.getSpelers().get(1).getRol());
-        rol3.setText(" " + spel.getSpelers().get(2).getRol());
-        rol4.setText(" " + spel.getSpelers().get(3).getRol());
-        rol5.setText(" " + spel.getSpelers().get(4).getRol());
-        rol6.setText(" " + spel.getSpelers().get(5).getRol());
+        switch(spel.getSpelers().size()) {
+            case 6: rol6.setText(" " + spel.getSpelers().get(5).getRol());
+            case 5: rol5.setText(" " + spel.getSpelers().get(4).getRol());
+            case 4: rol4.setText(" " + spel.getSpelers().get(3).getRol());
+            case 3: rol3.setText(" " + spel.getSpelers().get(2).getRol());
+            case 2: rol2.setText(" " + spel.getSpelers().get(1).getRol());
+            case 1: rol1.setText(" " + spel.getSpelers().get(0).getRol());
+        }
     }
 
     public void checkWin() {

@@ -15,6 +15,23 @@ public class SpeelveldImages {
     private ImageView[][][]imageViews = new ImageView[10][8][9];
     private ImageView[]carViews = new ImageView[2];
 
+    private Image BrandweerBlauw50pxActive = new Image("Resources/GFX/Brandweerblauwselect.png");
+    private Image BrandweerGeel50pxActive = new Image("Resources/GFX/Brandweergeelselect.png");
+    private Image BrandweerGroen50pxActive = new Image("Resources/GFX/Brandweergroenselect.png");
+    private Image BrandweerOranje50pxActive = new Image("Resources/GFX/Brandweeroranjeselect.png");
+    private Image BrandweerRood50pxActive = new Image("Resources/GFX/Brandweerroodselect.png");
+    private Image BrandweerZwart50pxActive = new Image("Resources/GFX/Brandweerzwartselect.png");
+    private Image brandBlusserSelect = new Image("Resources/GFX/Brandblusserselect.png");
+    private Image hakkenSelect = new Image("Resources/GFX/Hakkenselect.png");
+    private Image openenDeurSelect = new Image("Resources/GFX/Openendeurselect.png");
+    private Image pickIpSelect = new Image("Resources/GFX/Pickupselect.png");
+    private Image rijdenSelect = new Image("Resources/GFX/Rijdenselect.png");
+    private Image brandweerBlauw50px = new Image("Resources/GFX/Brandweerblauw50px.png");
+    private Image brandweerGeel50px = new Image("Resources/GFX/Brandweergeel50px.png");
+    private Image brandweerGroen50px = new Image("Resources/GFX/Brandweergroen50px.png");
+    private Image brandweerOranje50px = new Image("Resources/GFX/Brandweeroranje50px.png");
+    private Image brandweerRood50px = new Image("Resources/GFX/Brandweerrood50px.png");
+    private Image brandweerZwart50px = new Image("Resources/GFX/Brandweerzwart50px.png");
     private Image pickup = new Image("Resources/GFX/Pickup.png");
     private Image openenDeur = new Image("Resources/GFX/Openendeur.png");
     private Image hakken = new Image("Resources/GFX/Hakken.png");
@@ -319,5 +336,73 @@ public class SpeelveldImages {
 
     public Image getPickup() {
         return pickup;
+    }
+
+    public Image getBrandweerBlauw50px() {
+        return brandweerBlauw50px;
+    }
+
+    public Image getBrandweerGeel50px() {
+        return brandweerGeel50px;
+    }
+
+    public Image getBrandweerGroen50px() {
+        return brandweerGroen50px;
+    }
+
+    public Image getBrandweerOranje50px() {
+        return brandweerOranje50px;
+    }
+
+    public Image getBrandweerRood50px() {
+        return brandweerRood50px;
+    }
+
+    public Image getBrandweerZwart50px() {
+        return brandweerZwart50px;
+    }
+
+    public Image getBrandBlusserSelect() {
+        return brandBlusserSelect;
+    }
+
+    public Image getHakkenSelect() {
+        return hakkenSelect;
+    }
+
+    public Image getOpenenDeurSelect() {
+        return openenDeurSelect;
+    }
+
+    public Image getPickIpSelect() {
+        return pickIpSelect;
+    }
+
+    public Image getRijdenSelect() {
+        return rijdenSelect;
+    }
+
+    public Image getBrandweerBlauw50pxActive() {
+        return BrandweerBlauw50pxActive;
+    }
+
+    public Image getBrandweerGeel50pxActive() {
+        return BrandweerGeel50pxActive;
+    }
+
+    public Image getBrandweerGroen50pxActive() {
+        return BrandweerGroen50pxActive;
+    }
+
+    public Image getBrandweerOranje50pxActive() {
+        return BrandweerOranje50pxActive;
+    }
+
+    public Image getBrandweerRood50pxActive() {
+        return BrandweerRood50pxActive;
+    }
+
+    public Image getBrandweerZwart50pxActive() {
+        return BrandweerZwart50pxActive;
     }
 }

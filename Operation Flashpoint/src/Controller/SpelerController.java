@@ -168,7 +168,7 @@ public class SpelerController {
                 break;
             case COMMANDANT:    //TODO
                 break;
-            case DOKTER: helen();        //TODO
+            case DOKTER: helen();
                 break;
             case SPECSTOFFEN: onschadelijkMaken();
                 break;
@@ -266,6 +266,7 @@ public class SpelerController {
                     }
                 }
                 veldC.ImageSetterALL();
+                spelC.updatePunten();
             }
         }
     }
