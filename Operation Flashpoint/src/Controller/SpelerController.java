@@ -3,8 +3,7 @@ package Controller;
 import Model.*;
 import com.sun.org.apache.regexp.internal.RE;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceDialog;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -197,52 +196,94 @@ public class SpelerController {
                 break;
         }
         if(opBWagen) {
+            Boolean eersteLoop = true;
+            Boolean loop = true;
+            Boolean asignX = true;
+            Boolean asignY = true;
+            int x = 0;
+            int y = 0;
             System.out.println("Ik ga nu blussen");
             if (speler.getActiepunten() > 3 || (speler.getRol() == BRANDSPUITBEDIENER && speler.getActiepunten() > 1)) {
                 speler.setActiepunten(speler.getActiepunten() - 4);
                 if (speler.getRol() == BRANDSPUITBEDIENER) speler.setActiepunten(speler.getActiepunten() + 2);
                 Richting kwadrant = veldC.getVeldD().getBrandweerwagen();
-                dobbelC.d6.gooi();
-                dobbelC.d8.gooi();
-                switch (kwadrant) {
-                    case ONDER:
-                        if (dobbelC.d6.getWaarde() < 4) {
-                            dobbelC.d6.flip();
-                        }
-                        if (dobbelC.d8.getWaarde() < 5) {
-                            dobbelC.d8.flip();
-                        }
+                while(loop) {
+                    loop = false;
+                    dobbelC.d6.gooi();
+                    dobbelC.d8.gooi();
+                    switch (kwadrant) {
+                        case ONDER:
+                            if (dobbelC.d6.getWaarde() < 4) {
+                                dobbelC.d6.flip();
+                            }
+                            if (dobbelC.d8.getWaarde() < 5) {
+                                dobbelC.d8.flip();
+                            }
 
-                        break;
-                    case LINKS:
-                        if (dobbelC.d6.getWaarde() < 4) {
-                            dobbelC.d6.flip();
+                            break;
+                        case LINKS:
+                            if (dobbelC.d6.getWaarde() < 4) {
+                                dobbelC.d6.flip();
+                            }
+                            if (dobbelC.d8.getWaarde() > 4) {
+                                dobbelC.d8.flip();
+                            }
+                            break;
+                        case BOVEN:
+                            if (dobbelC.d6.getWaarde() > 3) {
+                                dobbelC.d6.flip();
+                            }
+                            if (dobbelC.d8.getWaarde() > 4) {
+                                dobbelC.d8.flip();
+                            }
+                            break;
+                        case RECHTS:
+                            if (dobbelC.d6.getWaarde() > 3) {
+                                dobbelC.d6.flip();
+                            }
+                            if (dobbelC.d8.getWaarde() < 5) {
+                                dobbelC.d8.flip();
+                            }
+                            break;
+                    }
+
+                    if (speler.getRol() == BRANDSPUITBEDIENER && eersteLoop) {
+                        eersteLoop = false;
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setTitle("Opnieuw gooien");
+                        alert.setHeaderText("Je hebt " + dobbelC.d8.getWaarde() + " en " + dobbelC.d6.getWaarde() + " gegooid.");
+                        alert.setContentText("Wil je opnieuw gooien?");
+
+                        ButtonType buttonTypeOne = new ButtonType("X");
+                        ButtonType buttonTypeTwo = new ButtonType("Y");
+                        ButtonType buttonTypeThree = new ButtonType("Allebei");
+                        ButtonType buttonTypeCancel = new ButtonType("Blus", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+                        alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeThree, buttonTypeCancel);
+
+                        Optional<ButtonType> result = alert.showAndWait();
+                        if (result.get() == buttonTypeOne) {
+                            asignY = false;
+                            y = dobbelC.d6.getWaarde();
+                            loop = true;
+                        } else if (result.get() == buttonTypeTwo) {
+                            asignX = false;
+                            x = dobbelC.d8.getWaarde();
+                            loop = true;
+                        } else if (result.get() == buttonTypeThree) {
+                            loop = true;
+                        } else {
+                            loop = false;
                         }
-                        if (dobbelC.d8.getWaarde() > 4) {
-                            dobbelC.d8.flip();
-                        }
-                        break;
-                    case BOVEN:
-                        if (dobbelC.d6.getWaarde() > 3) {
-                            dobbelC.d6.flip();
-                        }
-                        if (dobbelC.d8.getWaarde() > 4) {
-                            dobbelC.d8.flip();
-                        }
-                        break;
-                    case RECHTS:
-                        if (dobbelC.d6.getWaarde() > 3) {
-                            dobbelC.d6.flip();
-                        }
-                        if (dobbelC.d8.getWaarde() < 5) {
-                            dobbelC.d8.flip();
-                        }
-                        break;
+                    }
                 }
-                int x = dobbelC.d8.getWaarde();
-                int y = dobbelC.d6.getWaarde();
+
+                if(asignX) x = dobbelC.d8.getWaarde();
+                if(asignY) y = dobbelC.d6.getWaarde();
+
                 System.out.println(x);
                 System.out.println(y);
+
                 vak = veldC.getVeldD().getVakken()[x][y];
 
                 vak.setNiks(true);
