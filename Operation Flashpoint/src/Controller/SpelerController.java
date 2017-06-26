@@ -1,7 +1,6 @@
 package Controller;
 
 import Model.*;
-import com.sun.org.apache.regexp.internal.RE;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -9,7 +8,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -57,16 +55,7 @@ public class SpelerController {
 
     public void noord(){
         if(commandeer) {
-            Speler spelerhuidig = speler;
-            for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
-                if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
-                    speler = spelC.spel.getSpelers().get(i);
-                }
-            }
-            beweegActie(BOVEN);
-            commandeer = false;
-            speler = spelerhuidig;
-            speler.setExtraPunten(speler.getExtrapunten()-1);
+            commandeerActie(BOVEN);
         }
         else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Noord");
@@ -86,7 +75,6 @@ public class SpelerController {
             System.out.println("Hakken: Noord");
             hakActie(BOVEN);
             veldC.ImageSetterAround(speler.getX(),speler.getY());
-//            spelC.updatePunten();
         }
         else if(rijden){
             System.out.println("rijden");
@@ -97,16 +85,7 @@ public class SpelerController {
 
     public void west(){
         if(commandeer) {
-            Speler spelerhuidig = speler;
-            for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
-                if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
-                    speler = spelC.spel.getSpelers().get(i);
-                }
-            }
-            beweegActie(LINKS);
-            commandeer = false;
-            speler = spelerhuidig;
-            speler.setExtraPunten(speler.getExtrapunten()-1);
+          commandeerActie(LINKS);
         }
          else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: West");
@@ -135,16 +114,7 @@ public class SpelerController {
 
     public void zuid(){
         if(commandeer) {
-            Speler spelerhuidig = speler;
-            for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
-                if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
-                    speler = spelC.spel.getSpelers().get(i);
-                }
-            }
-            beweegActie(ONDER);
-            commandeer = false;
-            speler = spelerhuidig;
-            speler.setExtraPunten(speler.getExtrapunten()-1);
+            commandeerActie(ONDER);
         }
          else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Zuid");
@@ -173,16 +143,7 @@ public class SpelerController {
 
     public void oost(){
         if(commandeer) {
-            Speler spelerhuidig = speler;
-            for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
-                if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
-                    speler = spelC.spel.getSpelers().get(i);
-                }
-            }
-            beweegActie(RECHTS);
-            commandeer = false;
-            speler = spelerhuidig;
-            speler.setExtraPunten(speler.getExtrapunten()-1);
+            commandeerActie(RECHTS);
         }
         else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Oost");
@@ -226,39 +187,68 @@ public class SpelerController {
         spelC.updatePunten();
     }
 
+
+    // Als een commandant op special klikt kan hij een andere speler kiezen om te bewegen
     Kleur commandKeuze;
     public void commandeer() {
         if (speler.getExtrapunten() > 0) {
-            commandeer = true;
-            List<String> choices = new ArrayList<>();
-            Speler speler2;
-            for (int i = 0; i < spelC.spel.getSpelers().size(); i++) {
-                speler2 = spelC.spel.getSpelers().get(i);
-                if (speler != speler2) choices.add(speler2.getKleur().getString());
-            }
+            commandeer ^= true;
+            if(commandeer) {
+                List<String> choices = new ArrayList<>();
+                Speler speler2;
+                for (int i = 0; i < spelC.spel.getSpelers().size(); i++) {
+                    speler2 = spelC.spel.getSpelers().get(i);
+                    if (speler != speler2) choices.add(speler2.getKleur().getString());
+                }
 
-            ChoiceDialog<String> dialog = new ChoiceDialog<>("Kies een mede speler", choices);
-            dialog.setTitle("Choice Dialog");
-            dialog.setHeaderText("Look, a Choice Dialog");
-            dialog.setContentText("Choose your letter:");
+                ChoiceDialog<String> dialog = new ChoiceDialog<>("Kies een mede speler", choices);
+                dialog.setTitle("Commandant special");
+                dialog.setHeaderText("De commandant kan een andere speler commanderen te bewegen");
+                dialog.setContentText("Kies een mede speler:");
 
-            Optional<String> result = dialog.showAndWait();
-            if (result.isPresent()) {
-                System.out.println("Your choice: " + result.get());
-                switch(result.get()) {
-                    case "Blauw" : commandKeuze = BLAUW;
-                        break;
-                    case "Geel" : commandKeuze = GEEL;
-                        break;
-                    case "Groen" : commandKeuze = GROEN;
-                        break;
-                    case "Oranje" : commandKeuze = ORANJE;
-                        break;
-                    case "Rood" : commandKeuze = ROOD;
-                        break;
-                    case "Zwart" : commandKeuze = ZWART;
+                Optional<String> result = dialog.showAndWait();
+                if (result.isPresent()) {
+                    System.out.println("Your choice: " + result.get());
+                    switch (result.get()) {
+                        case "Blauw":
+                            commandKeuze = BLAUW;
+                            break;
+                        case "Geel":
+                            commandKeuze = GEEL;
+                            break;
+                        case "Groen":
+                            commandKeuze = GROEN;
+                            break;
+                        case "Oranje":
+                            commandKeuze = ORANJE;
+                            break;
+                        case "Rood":
+                            commandKeuze = ROOD;
+                            break;
+                        case "Zwart":
+                            commandKeuze = ZWART;
+                    }
                 }
             }
+        }
+    }
+
+    // De daadwerkelijke beweeg actie van de commandant word hier afgehandeld.
+    private void commandeerActie(Richting richting) {
+        Speler spelerhuidig = speler;
+        for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
+            if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
+                speler = spelC.spel.getSpelers().get(i);
+            }
+        }
+        if(speler.getRol() == REDDINGSSPECIALIST) speler.setExtraPunten(speler.getExtrapunten()+1);
+        else speler.setActiepunten(speler.getActiepunten()+1);
+        boolean bewogen = beweegActie(richting);
+        if(!bewogen && speler.getRol() != REDDINGSSPECIALIST) speler.setActiepunten(speler.getActiepunten()-1);
+        speler = spelerhuidig;
+        if(bewogen) speler.setExtraPunten(speler.getExtrapunten()-1);
+        if(speler.getExtrapunten()<1) {
+            commandeer = false;
         }
     }
 
@@ -502,7 +492,6 @@ public class SpelerController {
         rijden = false;
     }
 
-    //TODO beweegVoertuig, brandweerwagenActie
     private String kiezenVoertuig(){
         ArrayList<String> keuzes = new ArrayList<>();
         keuzes.add("Brandweerwagen");
@@ -763,7 +752,8 @@ public class SpelerController {
     }
 
     // verplaats de speler in de gewenste richting indien mogelijk.
-    private void beweegActie(Richting richting) {
+    private boolean beweegActie(Richting richting) {
+        boolean returnValue = false;
         Vak vak = veldC.veldD.getVakken()[speler.getX()][speler.getY()];
         veldC.removeSpeler(speler.getKleur(), speler.getX(), speler.getY());
         veldC.ImageSetter(speler.getX(), speler.getY());
@@ -776,6 +766,7 @@ public class SpelerController {
                         beweegActieKosten();
                         speler.setY(speler.getY() - 1);
                         System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                        returnValue = true;
                     }
                     break;
                 case RECHTS:
@@ -783,6 +774,7 @@ public class SpelerController {
                         beweegActieKosten();
                         speler.setX(speler.getX() + 1);
                         System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                        returnValue = true;
                     }
                     break;
                 case ONDER:
@@ -790,6 +782,7 @@ public class SpelerController {
                         beweegActieKosten();
                         speler.setY(speler.getY() + 1);
                         System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                        returnValue = true;
                     }
                     break;
                 case LINKS:
@@ -797,6 +790,7 @@ public class SpelerController {
                         beweegActieKosten();
                         speler.setX(speler.getX() - 1);
                         System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                        returnValue = true;
                     }
                     break;
             }
@@ -804,6 +798,7 @@ public class SpelerController {
         veldC.addSpeler(speler.getKleur(), speler.getX(), speler.getY());
         persoonOmdraaien();
         veldC.ImageSetter(speler.getX(), speler.getY());
+        return returnValue;
     }
 
     private void persoonOmdraaien(int x, int y) {
