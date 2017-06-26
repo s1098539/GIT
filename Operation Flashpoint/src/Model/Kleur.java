@@ -1,8 +1,14 @@
 package Model;
 
-/**
- * Created by lion on 14-06-17.
- */
 public enum Kleur {
-    BLAUW,GEEL,GROEN,ORANJE,ROOD,ZWART
+    BLAUW("Blauw"),GEEL("Geel"),GROEN("Groen"),ORANJE("Oranje"),ROOD("Rood"),ZWART("Zwart");
+    private final String string;
+
+    Kleur(String string) {
+        this.string = string;
+    }
+
+    public String getString() {
+        return string;
+    }
 }

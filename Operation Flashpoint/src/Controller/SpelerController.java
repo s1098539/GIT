@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static Model.Kleur.*;
 import static Model.Richting.*;
 import static Model.Rol.*;
 
@@ -36,6 +37,7 @@ public class SpelerController {
     boolean brandblusser = false;
     boolean hakken = false;
     boolean rijden = false;
+    boolean commandeer = false;
 
     public SpelerController() {
     }
@@ -54,7 +56,19 @@ public class SpelerController {
     }
 
     public void noord(){
-        if(!openendeur && !brandblusser && !hakken && !rijden) {
+        if(commandeer) {
+            Speler spelerhuidig = speler;
+            for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
+                if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
+                    speler = spelC.spel.getSpelers().get(i);
+                }
+            }
+            beweegActie(BOVEN);
+            commandeer = false;
+            speler = spelerhuidig;
+            speler.setExtraPunten(speler.getExtrapunten()-1);
+        }
+        else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Noord");
             beweegActie(BOVEN);
 
@@ -82,7 +96,19 @@ public class SpelerController {
     }
 
     public void west(){
-        if(!openendeur && !brandblusser && !hakken && !rijden) {
+        if(commandeer) {
+            Speler spelerhuidig = speler;
+            for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
+                if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
+                    speler = spelC.spel.getSpelers().get(i);
+                }
+            }
+            beweegActie(LINKS);
+            commandeer = false;
+            speler = spelerhuidig;
+            speler.setExtraPunten(speler.getExtrapunten()-1);
+        }
+         else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: West");
             beweegActie(LINKS);
         }
@@ -108,7 +134,19 @@ public class SpelerController {
     }
 
     public void zuid(){
-        if(!openendeur && !brandblusser && !hakken && !rijden) {
+        if(commandeer) {
+            Speler spelerhuidig = speler;
+            for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
+                if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
+                    speler = spelC.spel.getSpelers().get(i);
+                }
+            }
+            beweegActie(ONDER);
+            commandeer = false;
+            speler = spelerhuidig;
+            speler.setExtraPunten(speler.getExtrapunten()-1);
+        }
+         else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Zuid");
             beweegActie(ONDER);
         }
@@ -134,7 +172,19 @@ public class SpelerController {
     }
 
     public void oost(){
-        if(!openendeur && !brandblusser && !hakken && !rijden) {
+        if(commandeer) {
+            Speler spelerhuidig = speler;
+            for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
+                if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
+                    speler = spelC.spel.getSpelers().get(i);
+                }
+            }
+            beweegActie(RECHTS);
+            commandeer = false;
+            speler = spelerhuidig;
+            speler.setExtraPunten(speler.getExtrapunten()-1);
+        }
+        else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Oost");
             beweegActie(RECHTS);
         }
@@ -165,15 +215,51 @@ public class SpelerController {
         switch(speler.getRol()) {
             case VERKENNER:     verken();
                 break;
-            case COMMANDANT:    //TODO
+            case COMMANDANT:    commandeer();
                 break;
-            case DOKTER: helen();
+            case DOKTER:        helen();
                 break;
             case SPECSTOFFEN: onschadelijkMaken();
                 break;
             default: System.out.println("Mom thinks im special :(");
         }
         spelC.updatePunten();
+    }
+
+    Kleur commandKeuze;
+    public void commandeer() {
+        if (speler.getExtrapunten() > 0) {
+            commandeer = true;
+            List<String> choices = new ArrayList<>();
+            Speler speler2;
+            for (int i = 0; i < spelC.spel.getSpelers().size(); i++) {
+                speler2 = spelC.spel.getSpelers().get(i);
+                if (speler != speler2) choices.add(speler2.getKleur().getString());
+            }
+
+            ChoiceDialog<String> dialog = new ChoiceDialog<>("Kies een mede speler", choices);
+            dialog.setTitle("Choice Dialog");
+            dialog.setHeaderText("Look, a Choice Dialog");
+            dialog.setContentText("Choose your letter:");
+
+            Optional<String> result = dialog.showAndWait();
+            if (result.isPresent()) {
+                System.out.println("Your choice: " + result.get());
+                switch(result.get()) {
+                    case "Blauw" : commandKeuze = BLAUW;
+                        break;
+                    case "Geel" : commandKeuze = GEEL;
+                        break;
+                    case "Groen" : commandKeuze = GROEN;
+                        break;
+                    case "Oranje" : commandKeuze = ORANJE;
+                        break;
+                    case "Rood" : commandKeuze = ROOD;
+                        break;
+                    case "Zwart" : commandKeuze = ZWART;
+                }
+            }
+        }
     }
 
     public void BrandweerwagenSpuitActie() {
