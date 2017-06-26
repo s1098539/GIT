@@ -3,8 +3,10 @@ package Controller;
 // imports van de modellen Rol en Spraak
 import Model.Rol;
 import Model.Spraak;
+import Model.SpeelveldData;
 
 //imports die nodig zijn om audiobestanden af te spelen.
+import Model.Vak;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 
@@ -35,6 +37,8 @@ public class SpraakController {
     // Er wordt een object aangemaakt van het model Spraak zodat
     // Deze benaderd kan worden door deze Controller
     Spraak audio = new Spraak();
+    SpeelveldData speelveld = new SpeelveldData();
+    Vak vak = new Vak();
     private boolean play=false;
 
     private void audioPlayer(String s) throws Exception {
@@ -183,6 +187,7 @@ public class SpraakController {
         int waitTime2=7500;
         int waitTime3=9000;
         int waitTime4=3500;
+        speelveld.getVakken();
 
         audioPlayer(audio.getBewegen1());
         wait(waitTime);
@@ -205,9 +210,43 @@ public class SpraakController {
 
     // leest de informatie van de klassepecifieke handlinge uit
 
-    public synchronized void playSpecial () throws Exception{
+    public synchronized void playSpecial (Rol rol) throws Exception{
         int waitTime=4000;
         audioPlayer(audio.getKlasse());
+        wait(waitTime);
+
+        if(rol.equals(Rol.DOKTER)){
+            audioPlayer(audio.getDokterSpecialist());
+        }
+
+        if(rol.equals(Rol.REDDINGSSPECIALIST)){
+            audioPlayer(audio.getReddingsspecialistSpecialist());
+        }
+
+        if(rol.equals(Rol.VERKENNER)){
+            audioPlayer(audio.getVerkennerSpecialist());
+        }
+
+        if(rol.equals(Rol.MANNETJESPUTTER)){
+            audioPlayer(audio.getMannetjesputterSpecialist());
+        }
+
+        if(rol.equals(Rol.COMMANDANT)){
+            audioPlayer(audio.getKapiteinSpecialist());
+        }
+
+        if(rol.equals(Rol.BRANDSPUITBEDIENER)){
+            audioPlayer(audio.getBrandspuitbedienerSpecialist());
+        }
+
+        if(rol.equals(Rol.SPECSTOFFEN)){
+            audioPlayer(audio.getGevaarlijkestoffenSpecialist());
+        }
+
+        if(rol.equals(Rol.GASPAKDRAGER)){
+            audioPlayer(audio.getGaspakdragerSpecialist());
+        }
+
         wait(waitTime);
     }
 
@@ -354,7 +393,7 @@ public class SpraakController {
             //
             AudioPlayer.player.start(audioStream);
         } else {
-            AudioPlayer.player.start(audioStream);
+            AudioPlayer.player.stop(audioStream);
         }
     }
 
@@ -376,5 +415,9 @@ public class SpraakController {
     public void playSpelRegels(String s) throws Exception{
         handleSpelregels();
         spelRegelAudioPlayer(s);
+    }
+
+    public void playVakToestand(){
+        System.out.println(speelveld.getVakken());
     }
 }

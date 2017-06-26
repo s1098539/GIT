@@ -101,7 +101,7 @@ public class Spraak {
     private String dokterSpecialist = "./src/Resources/Audio/DokterKlasse.wav";
     private String brandspuitbedienerSpecialist = "./src/Resources/Audio/BrandspuitbedienerKlasse.wav";
     private String kapiteinSpecialist = "./src/Resources/Audio/KapiteinKlasse.wav";
-    private String verkennerSpecialist  = "./src/Resources/Audio/Verkenner.wav";
+    private String verkennerSpecialist  = "./src/Resources/Audio/VerkennerKlasse.wav";
     private String mannetjesputterSpecialist= "./src/Resources/Audio/MannetjesputterKlasse.wav";
     private String gevaarlijkestoffenSpecialist = "./src/Resources/Audio/GevaarlijkeStoffenKlasse.wav";
     private String gaspakdragerSpecialist = "./src/Resources/Audio/GaspakdragerKlasse.wav";
