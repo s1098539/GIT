@@ -397,7 +397,7 @@ public class SpelController implements Initializable {
         btnSpecial.setOnContextMenuRequested(event -> {
             if (spelerC.speler.isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playSpecial();
+                    audioPlayer.playSpecial(spelerC.speler.getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
