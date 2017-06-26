@@ -486,22 +486,26 @@ public class SpelerController {
             Richting kant = veldC.veldD.getAmbulance();
             boolean opAmbulance= false;
             switch(kant){
-                case BOVEN: if(speler.getY()==0 && (speler.getX()== 5 || speler.getX()== 6) ){
+                case BOVEN:
+                    if(speler.getY()==0 && (speler.getX()== 5 || speler.getX()== 6) ){
                     opAmbulance = true;
+                    }
                     break;
-                }
-                case RECHTS: if(speler.getX()==9 && (speler.getY()== 4 || speler.getY()== 5) ){
+                case RECHTS:
+                    if(speler.getX()==9 && (speler.getY()== 4 || speler.getY()== 5) ){
                     opAmbulance = true;
+                    }
                     break;
-                }
-                case ONDER: if(speler.getY()==7 && (speler.getX()== 3 || speler.getX()== 4) ){
+                case ONDER:
+                    if(speler.getY()==7 && (speler.getX()== 3 || speler.getX()== 4) ){
                     opAmbulance = true;
+                    }
                     break;
-                }
-                case LINKS: if(speler.getX()==0 && (speler.getY()== 2 || speler.getY()== 3) ){
+                case LINKS:
+                    if(speler.getX()==0 && (speler.getY()== 2 || speler.getY()== 3) ){
                     opAmbulance = true;
+                    }
                     break;
-                }
             }
             if(opAmbulance){
                 speler.setPersoon(null);
