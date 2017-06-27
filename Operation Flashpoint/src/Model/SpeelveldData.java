@@ -11,6 +11,7 @@ public class SpeelveldData {
     Richting ambulance = Richting.ONDER;
     Richting brandweerwagen = Richting.RECHTS;
     ArrayList<Persoon> personenlijst = new ArrayList<>();
+    ArrayList<Rol> rollenlijst = new ArrayList<>();
 
     public Vak[][] getVakken() {
         return vakken;
@@ -42,5 +43,13 @@ public class SpeelveldData {
 
     public void setPersonenlijst(ArrayList<Persoon> personenlijst) {
         this.personenlijst = personenlijst;
+    }
+
+    public ArrayList<Rol> getRollenlijst() {
+        return rollenlijst;
+    }
+
+    public void setRollenlijst(ArrayList<Rol> rollenlijst) {
+        this.rollenlijst = rollenlijst;
     }
 }

@@ -112,7 +112,7 @@ public class SpelController implements Initializable {
         spel.setSpelers(new Speler("Lion", Kleur.ZWART, 5, 0));
         veldC.nieuweSpelersToevoegen();
         setNamen();
-        setRollen();
+//        setRollen();
     }
 
     public void switchSpeler() {
@@ -222,6 +222,22 @@ public class SpelController implements Initializable {
         setActiveSpelerPlaatje();
         spelerC.resetPunten();
 
+        long seed = System.nanoTime();
+        for (Rol rol : Rol.values()) {
+            veldC.getVeldD().getRollenlijst().add(rol);
+        }
+        Collections.shuffle(veldC.getVeldD().getRollenlijst(), new Random(seed));
+        for (int i = 0; i < spel.getSpelers().size(); i++) {
+            if(veldC.getVeldD().getRollenlijst().get(i) == GODMODE) {
+                spel.getSpelers().get(i).setRol(veldC.getVeldD().getRollenlijst().get(i+1));
+            } else spel.getSpelers().get(i).setRol(veldC.getVeldD().getRollenlijst().get(i));
+        }
+        setRollen();
+        for (Persoon persoon : Persoon.values()) {
+            veldC.getVeldD().getPersonenlijst().add(persoon);
+        }
+        Collections.shuffle(veldC.getVeldD().getPersonenlijst(), new Random(seed));
+
 //        try {
 //            Send sender = new Send(host, username, localMessage);
 //            setSender(sender);
@@ -232,12 +248,6 @@ public class SpelController implements Initializable {
 //        } catch (NotBoundException e) {
 //            e.printStackTrace();
 //        }
-
-        for(Persoon persoon: Persoon.values()){
-            veldC.getVeldD().getPersonenlijst().add(persoon);
-        }
-        long seed = System.nanoTime();
-        Collections.shuffle(veldC.getVeldD().getPersonenlijst(), new Random(seed));
     }
 
     // keep this one EMPTY and DON'T REMOVE
