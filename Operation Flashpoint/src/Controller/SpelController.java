@@ -159,6 +159,7 @@ public class SpelController implements Initializable {
                     int y = Integer.parseInt(pair.getValue());
                     spelerC.speler.setX(x);
                     spelerC.speler.setY(y);
+                    if(y<10 || x<8 || x>-1 || y>-1) invalidCoordinates = true;
                     for (int y1 = 1; y1 < 7; y1++) {
                         for (int x1 = 1; x1 < 9; x1++) {
                             if (x == x1 && y == y1) invalidCoordinates = true;
