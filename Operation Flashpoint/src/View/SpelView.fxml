@@ -501,7 +501,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox prefHeight="50.0" prefWidth="805.0">
+                  <HBox prefHeight="50.0" prefWidth="981.0">
                      <children>
                         <HBox prefHeight="50.0" prefWidth="745.0" HBox.hgrow="ALWAYS">
                            <children>
@@ -594,6 +594,13 @@
                               </HBox>
                            </children>
                         </HBox>
+                        <Button fx:id="btnRefresh" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="↺">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="22.0" />
+                           </font></Button>
                      </children>
                      <opaqueInsets>
                         <Insets />

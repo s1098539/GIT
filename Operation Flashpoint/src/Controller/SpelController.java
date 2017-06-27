@@ -1,5 +1,6 @@
 package Controller;
 
+import Main.Interface;
 import Model.*;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -21,6 +22,10 @@ import sun.plugin.javascript.navig.Anchor;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.*;
 import java.util.List;
 
@@ -94,6 +99,7 @@ public class SpelController implements Initializable {
     @FXML private ImageView user4Img;
     @FXML private ImageView user5Img;
     @FXML private ImageView user6Img;
+    @FXML private Button btnRefresh;
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -727,6 +733,10 @@ public class SpelController implements Initializable {
             }
         });
 
+        btnRefresh.setOnAction(event -> {
+            System.out.println("REFRESH");
+            veldC.ImageSetterALL();
+        });
     }
 
     public void toggleViewUpdate() {
