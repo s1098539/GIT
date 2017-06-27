@@ -1,16 +1,19 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class SpeelveldData {
+public class SpeelveldData implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     public SpeelveldData() {
     }
 
     Vak [][] vakken;
-    Richting ambulance = Richting.BOVEN;
-    Richting brandweerwagen = Richting.BOVEN;
-    ArrayList<Persoon> personenlijst = new ArrayList<Persoon>();
+    Richting ambulance = Richting.ONDER;
+    Richting brandweerwagen = Richting.RECHTS;
+    ArrayList<Persoon> personenlijst = new ArrayList<>();
+    ArrayList<Rol> rollenlijst = new ArrayList<>();
 
     public Vak[][] getVakken() {
         return vakken;
@@ -42,5 +45,13 @@ public class SpeelveldData {
 
     public void setPersonenlijst(ArrayList<Persoon> personenlijst) {
         this.personenlijst = personenlijst;
+    }
+
+    public ArrayList<Rol> getRollenlijst() {
+        return rollenlijst;
+    }
+
+    public void setRollenlijst(ArrayList<Rol> rollenlijst) {
+        this.rollenlijst = rollenlijst;
     }
 }

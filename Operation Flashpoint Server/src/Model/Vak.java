@@ -1,11 +1,15 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Joep Oonk on 14-6-2017.
  */
-public class Vak{
+public class Vak implements Serializable{
+    private static final long serialVersionUID = 1L;
+
+
     boolean hotspot = false;
     boolean vuur = false;
     boolean rook = false;
@@ -96,6 +100,7 @@ public class Vak{
     public Status getRechts() {
         return rechts;
     }
+
 
     public void setRechts(Status rechts) {
         this.rechts = rechts;

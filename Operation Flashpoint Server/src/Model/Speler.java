@@ -1,11 +1,13 @@
 package Model;
 
+import Controller.SpelerController;
+
 import java.io.Serializable;
 
 /**
  * Created by Sam van Schaik
  */
-public class Speler implements Serializable{
+public class Speler implements Serializable {
     private static final long serialVersionUID = 1L;
 
     //Speler informatie
@@ -23,16 +25,18 @@ public class Speler implements Serializable{
 
     Rol rol = Rol.MANNETJESPUTTER;
 
-    boolean slechtziendmodus;
+    boolean slechtziendmodus = false;
 
     Boolean stof = false;
     Persoon persoon = null;
 
 
 
-    public Speler(String naam, Kleur kleur) {
+    public Speler(String naam, Kleur kleur, int x, int y) {
         this.naam = naam;
         this.kleur = kleur;
+//        this.x = x;
+//        this.y = y;
     }
 
     //Getters

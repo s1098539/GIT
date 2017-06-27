@@ -109,6 +109,9 @@ public class SpelController implements Initializable {
     String username = "";
     Send sender;
     Spel spel;
+    int i = 0;
+    int b = 0;
+    Registry registry = null;
 
     SpeelveldController veldC;
     SpelerController spelerC;
@@ -208,6 +211,14 @@ public class SpelController implements Initializable {
             }
 
         }
+    }
+
+    public Spel getSpel() {
+        return spel;
+    }
+
+    public void setSpel(Spel spel) {
+        this.spel = spel;
     }
 
     public Send getSender() {
@@ -707,9 +718,23 @@ public class SpelController implements Initializable {
         imgRolswap.setOnMouseClicked(event -> {
             veranderKlasse();
         });
+
         quit.setOnAction(event -> {
-            System.exit(0);
+
+            try {
+                registry = LocateRegistry.getRegistry("localhost");
+                Interface clientStub = (Interface) registry.lookup("Main.Interface");
+                setSpel(clientStub.updateGetSpel());
+                veldC.setVeldD(clientStub.updateGetData());
+                veldC.ImageSetterALL();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            } catch (NotBoundException e) {
+                e.printStackTrace();
+            }
+            //System.exit(0);
         });
+
         imgPickup.setOnMouseClicked(event -> {
             spelerC.oppakkenActie();
             toggleViewUpdate();
@@ -770,7 +795,22 @@ public class SpelController implements Initializable {
         setActiveSpelerPlaatje();
         eersteBeurt();
         veldC.ImageSetterALL();
+
+        try {
+            registry = LocateRegistry.getRegistry("localhost");
+            Interface clientStub = (Interface) registry.lookup("Main.Interface");
+            clientStub.setSpelData(spel, veldC.getVeldD());
+
+            clientStub.setSpelData(spel, veldC.getVeldD());
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (NotBoundException e) {
+            e.printStackTrace();
+        }
     }
+
+
+
 
     public void nieuwRook() {
         dobbelC.d6.gooi();

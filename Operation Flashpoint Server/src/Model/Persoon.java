@@ -6,7 +6,7 @@ package Model;
 public enum Persoon {
     HOND(false, false), EGEL(false, false), GROENHAAR(false, false), HIPSTERSNOR(false, false), LATIFAH(false, false),
     OBAMANIGUA(false, false), OMA(false, false), ROODHAAR(false, false), SNEK(false, false),
-    VIS(false, false), NOPE1(false), NOPE2(false), NOPE3(false), NOPE4(false), NOPE5(false);
+    VIS(false, false), NOPE1(false, false), NOPE2(false, false), NOPE3(false, false), NOPE4(false, false), NOPE5(false, false);
     private boolean gered;
     private boolean omgedraaid;
     private boolean geheeld = false;

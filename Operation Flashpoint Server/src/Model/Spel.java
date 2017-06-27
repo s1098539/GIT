@@ -8,9 +8,12 @@ import java.util.ArrayList;
  */
 
 public class Spel implements Serializable {
-    int hotspotCounter;
-    double beschadigingCounter;
-    int geredCounter;
+    private static final long serialVersionUID = 1L; //Necessary for RMI Marshalling
+
+
+    int hotspotCounter = 0;
+    int beschadigingCounter = 0;
+    int geredCounter = 0;
     ArrayList<Speler> spelers = new ArrayList<>();
     Speler huidigeSpeler;
 
@@ -62,30 +65,23 @@ public class Spel implements Serializable {
         this.hotspotCounter = hotspotCounter;
     }
 
-    public double getBeschadigingCounter() {
+    public int getBeschadigingCounter() {
         return beschadigingCounter;
     }
 
-    public void setBeschadigingCounter(double beschadigingCounter) {
+    public void setBeschadigingCounter(int beschadigingCounter) {
         this.beschadigingCounter = beschadigingCounter;
     }
 
     public int getGeredCounter() {
         return geredCounter;
     }
-
-    public void setGeredCounter(int geredCounter) {
-        this.geredCounter = geredCounter;
-    }
-
     public void addGered(){
-
+        geredCounter++;
     }
 
-    public Spel(int hotspotCounter, int beschadigingCounter, int geredCounter) {
+    public Spel(int hotspotCounter) {
         this.hotspotCounter = hotspotCounter;
-        this.beschadigingCounter = beschadigingCounter;
-        this.geredCounter = geredCounter;
     }
 
 

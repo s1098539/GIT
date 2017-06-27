@@ -1,8 +1,10 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class SpeelveldData {
+public class SpeelveldData implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     public SpeelveldData() {
     }

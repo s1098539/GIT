@@ -4,10 +4,13 @@ import javafx.scene.control.TextField;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.ArrayList;
 import java.util.List;
+import Main.*;
 
 //delete knoppen hier en maak er methodes van, dan kan je de methodes gebruiken met de knoppen in spelcontroller
 
@@ -22,7 +25,7 @@ public class ChatController {
     DobbelsteenController dobbelC;
     SpelController spelC;
     ChatController chatC;
-
+    Registry registry = null;
 
 
     // Lion, verbind deze controller met 3 andere
@@ -48,16 +51,23 @@ public class ChatController {
         spelC.getChatArea().setScrollTop(Double.MAX_VALUE);
     }
 
-    //berichten sturen
-    public void stuurBericht() {
-//        spelC.setLocalMessage(spelC.getTextInput().getText());
-//        try {
-//            spelC.getSender().sendMessageObject(spelC.getUsername(), spelC.getLocalMessage());
-//        } catch (Exception e1) {
-//            e1.printStackTrace();
-//        }
-//        spelC.getTextInput().setText("");
-    }
+    public void stuurBericht(){
+        spelC.setLocalMessage(spelC.getTextInput().getText());
 
+        try {
+            registry = LocateRegistry.getRegistry("localhost");
+            Interface clientStub = (Interface) registry.lookup("Main.Interface");
+            clientStub.sendMessageObject(spelC.getUsername(), spelC.getLocalMessage());
+
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (NotBoundException e) {
+            e.printStackTrace();
+        }
+
+        spelC.getTextInput().setText("");
+    }
 }
+
+
 

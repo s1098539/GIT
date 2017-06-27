@@ -1,12 +1,16 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Sam van Schaik
  */
 
-public class Spel {
+public class Spel implements Serializable {
+    private static final long serialVersionUID = 1L; //Necessary for RMI Marshalling
+
+
     int hotspotCounter = 0;
     int beschadigingCounter = 0;
     int geredCounter = 0;

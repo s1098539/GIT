@@ -17,14 +17,16 @@ import java.rmi.registry.Registry;
 import static javafx.application.Application.launch;
 
 
-public class Main2 extends Application{
+public class Main2 extends Application {
+    SpelController spelC;
+
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        SpelController spelC = new SpelController();
+        spelC = new SpelController();
         SpelView spelView = new SpelView(spelC);
         primaryStage.setScene(spelView.getScene());
         primaryStage.setTitle("Flash point");
@@ -38,11 +40,11 @@ public class Main2 extends Application{
         SpraakController spraakC = new SpraakController();
         LobbyController lobbyC = new LobbyController(spelerC, spelC);
 
-        veldC.setControllers(spelC,spelerC,dobbelC,chatC);
-        spelC.setControllers(veldC,spelerC,dobbelC,chatC,spelC,spraakC);
-        spelerC.setControllers(veldC,spelC,dobbelC,chatC);
-        dobbelC.setControllers(veldC,spelC,spelerC,chatC);
-        chatC.setControllers(spelC,veldC,spelerC,dobbelC,chatC);
+        veldC.setControllers(spelC, spelerC, dobbelC, chatC);
+        spelC.setControllers(veldC, spelerC, dobbelC, chatC, spelC, spraakC);
+        spelerC.setControllers(veldC, spelC, dobbelC, chatC);
+        dobbelC.setControllers(veldC, spelC, spelerC, chatC);
+        chatC.setControllers(spelC, veldC, spelerC, dobbelC, chatC);
 
         spraakC.setControllers(spelC, spelerC);
         /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
@@ -81,15 +83,19 @@ public class Main2 extends Application{
         veldC.run();
 
         //This is where the client makes a connection to the server.
-        String naam = "Rafe"; //NAAM CLIENT
-        String ip = "localhost"; //IP SERVER
 
 
+//        String naam = "Rafe"; //NAAM CLIENT
+//        String ip = "localhost"; //IP SERVER
         try {
             System.out.println("Getting access to the registry ...");
-            Registry registry = LocateRegistry.getRegistry(ip);
+            Registry registry = LocateRegistry.getRegistry("localhost");
             System.out.println("Getting the Main.Interface stub from registry ...");
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
+
+
+           // clientStub.registerObserver(impl);
+
 
             String naam1 = "Norddin1";
             String naam2 = "Norddin2";
@@ -118,14 +124,26 @@ public class Main2 extends Application{
             System.out.println(clientStub.GetSpeler(kleur5));
             System.out.println(kleur5);
 
+            String host = "127.0.0.1";
+ChatListen listen = new ChatListen(host);
+
+            //Eerste client set de spel en speelvelddata op server
+            clientStub.setFirstTimeSpel(spelC.getSpel());
+            clientStub.setFirstTimeData(veldC.getVeldD());
+            spelC.setSpel(clientStub.updateGetSpel());
+            veldC.setVeldD(clientStub.updateGetData());
+            veldC.ImageSetterALL();
+
+InterfaceImpl impl = new InterfaceImpl();
+clientStub.registerObserverSpel(impl);
 
             //TODO DEBUGLINES
-            System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n............................." );
-//            clientStub.sendParse().setVeldD(veldC.getVeldD());
-//            System.out.println(clientStub.sendParse().getVeldD());
+            System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n.............................");
+            //System.out.println(clientStub.updateGetSpel());
+//            clientStub.updateSetSpel(spelC.getSpel());
+//            System.out.println(clientStub.updateGetSpel());
         } catch (Exception e) {
             System.out.println("EXCEPTION: " + e);
         }
-
     }
 }

@@ -741,6 +741,10 @@ public class SpeelveldController {
         return veldD;
     }
 
+    public void setVeldD(SpeelveldData veldD) {
+        this.veldD = veldD;
+    }
+
     public SpeelveldImages getVeldI() {
         return veldI;
     }

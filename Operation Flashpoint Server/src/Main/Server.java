@@ -1,8 +1,5 @@
 package Main;
 
-import Model.Kleur;
-import Model.Speler;
-
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
@@ -12,12 +9,11 @@ public class Server {
     public Server() {}
     int port = 1099;
 
-    Speler speler1 = new Speler("Rafe", Kleur.ROOD);
-    Speler speler2 = new Speler("Sam", Kleur.BLAUW);
-
     private void runServer() {
         //TODO REMOVE THE DEBUG OBJECTS
         try {
+            //
+
             //Basically, don't touch this unless you know what you're doing.
             InterfaceImpl impl = new InterfaceImpl();
             Interface serverSkeleton = (Interface) UnicastRemoteObject.exportObject(impl, port);
@@ -27,6 +23,9 @@ public class Server {
             registry.rebind("Main.Interface", serverSkeleton);
             System.out.println("Main.Interface skeleton bound ...");
             System.out.println("Main.Server running ...");
+
+
+
 
         } catch (Exception e) {
             System.out.println("EXCEPTION: " + e);
