@@ -1,7 +1,6 @@
 package Main;
 
-import Controller.SpeelveldController;
-import Controller.SpelController;
+import Controller.*;
 import Model.Message;
 import Model.SpeelveldData;
 import Model.Spel;
@@ -18,10 +17,10 @@ import java.rmi.server.UnicastRemoteObject;
 public class ChatListen extends UnicastRemoteObject implements ChatListenInterface {
     SpelController spelC;
     SpeelveldController veldC;
-
+    Registry registry = null;
 
     protected ChatListen(String host) throws RemoteException {
-        Registry registry = null;
+
 
 
         try {
@@ -47,8 +46,17 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
 
     @Override
     public void receiveGame(Spel spelServer, SpeelveldData veldServer) throws RemoteException {
-        spelC.setSpel(spelServer);
-        veldC.setVeldD(veldServer);
-        veldC.ImageSetterALL();
+
+//        try {
+//            registry = LocateRegistry.getRegistry("localhost");
+//            Interface clientStub = (Interface) registry.lookup("Main.Interface");
+//            spelC.setSpel(clientStub.updateGetSpel());
+//            veldC.setVeldD(clientStub.updateGetData());
+//            veldC.ImageSetterALL();
+//        } catch (NotBoundException e) {
+//            e.printStackTrace();
+//        }
+//
     }
     }
+

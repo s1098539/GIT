@@ -26,7 +26,8 @@ public class InterfaceImpl implements Interface, Serializable {
     }
 
     Map<Kleur, Speler> mMap = new HashMap<Kleur, Speler>();
-    int i = 0;
+    int i = 1;
+    int a = 0;
     int b = 0;
     private ArrayList<ChatListenInterface> Listeners = new ArrayList<ChatListenInterface>();
     private ArrayList<Interface> gameListeners = new ArrayList<Interface>();
@@ -83,7 +84,7 @@ public class InterfaceImpl implements Interface, Serializable {
     }
     @Override
     public void setFirstTimeSpel(Spel spel) throws RemoteException {
-        if (i == 0) {
+        if (a == 0) {
             this.spelServer = spel;
             i++;
         }

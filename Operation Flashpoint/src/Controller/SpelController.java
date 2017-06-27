@@ -325,7 +325,7 @@ public class SpelController implements Initializable {
             veldC.getVeldD().getPersonenlijst().add(persoon);
         }
         Collections.shuffle(veldC.getVeldD().getPersonenlijst(), new Random(seed));
-        eersteBeurt();
+        //eersteBeurt();
 
 //        try {
 //            Send sender = new Send(host, username, localMessage);
@@ -720,19 +720,7 @@ public class SpelController implements Initializable {
         });
 
         quit.setOnAction(event -> {
-
-            try {
-                registry = LocateRegistry.getRegistry("localhost");
-                Interface clientStub = (Interface) registry.lookup("Main.Interface");
-                setSpel(clientStub.updateGetSpel());
-                veldC.setVeldD(clientStub.updateGetData());
-                veldC.ImageSetterALL();
-            } catch (RemoteException e) {
-                e.printStackTrace();
-            } catch (NotBoundException e) {
-                e.printStackTrace();
-            }
-            //System.exit(0);
+            System.exit(0);
         });
 
         imgPickup.setOnMouseClicked(event -> {
@@ -759,8 +747,7 @@ public class SpelController implements Initializable {
         });
 
         btnRefresh.setOnAction(event -> {
-            System.out.println("REFRESH");
-            veldC.ImageSetterALL();
+            refreshSpel();
         });
     }
 
@@ -793,7 +780,7 @@ public class SpelController implements Initializable {
         spelerC.resetPunten();
         checkVerlies();
         setActiveSpelerPlaatje();
-        eersteBeurt();
+        //eersteBeurt();
         veldC.ImageSetterALL();
 
         try {
@@ -1233,6 +1220,20 @@ public class SpelController implements Initializable {
             alert.setHeaderText(null);
             alert.showAndWait();
             System.exit(0);
+        }
+    }
+    public void refreshSpel() {
+        System.out.println("REFRESH");
+        try {
+            registry = LocateRegistry.getRegistry("localhost");
+            Interface clientStub = (Interface) registry.lookup("Main.Interface");
+            setSpel(clientStub.updateGetSpel());
+            veldC.setVeldD(clientStub.updateGetData());
+            veldC.ImageSetterALL();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (NotBoundException e) {
+            e.printStackTrace();
         }
     }
 }

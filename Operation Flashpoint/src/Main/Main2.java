@@ -97,35 +97,37 @@ public class Main2 extends Application {
            // clientStub.registerObserver(impl);
 
 
-            String naam1 = "Norddin1";
-            String naam2 = "Norddin2";
-            String naam3 = "Norddin3";
-            String naam4 = "Norddin4";
-            String naam5 = "Norddin5";
-            String naam6 = "Norddin6";
+            String naam1 = "Norddin";
+//            String naam2 = "Norddin2";
+//            String naam3 = "Norddin3";
+//            String naam4 = "Norddin4";
+//            String naam5 = "Norddin5";
+//            String naam6 = "Norddin6";
 
             Kleur kleur = clientStub.addSpeler(naam1);
-            Kleur kleur1 = clientStub.addSpeler(naam2);
-            Kleur kleur2 = clientStub.addSpeler(naam3);
-            Kleur kleur3 = clientStub.addSpeler(naam4);
-            Kleur kleur4 = clientStub.addSpeler(naam5);
-            Kleur kleur5 = clientStub.addSpeler(naam6);
+//            Kleur kleur1 = clientStub.addSpeler(naam2);
+//            Kleur kleur2 = clientStub.addSpeler(naam3);
+//            Kleur kleur3 = clientStub.addSpeler(naam4);
+//            Kleur kleur4 = clientStub.addSpeler(naam5);
+//            Kleur kleur5 = clientStub.addSpeler(naam6);
 
             System.out.println(clientStub.GetSpeler(kleur));
             System.out.println(kleur);
-            System.out.println(clientStub.GetSpeler(kleur1));
-            System.out.println(kleur1);
-            System.out.println(clientStub.GetSpeler(kleur2));
-            System.out.println(kleur2);
-            System.out.println(clientStub.GetSpeler(kleur3));
-            System.out.println(kleur3);
-            System.out.println(clientStub.GetSpeler(kleur4));
-            System.out.println(kleur4);
-            System.out.println(clientStub.GetSpeler(kleur5));
-            System.out.println(kleur5);
+//            System.out.println(clientStub.GetSpeler(kleur1));
+//            System.out.println(kleur1);
+//            System.out.println(clientStub.GetSpeler(kleur2));
+//            System.out.println(kleur2);
+//            System.out.println(clientStub.GetSpeler(kleur3));
+//            System.out.println(kleur3);
+//            System.out.println(clientStub.GetSpeler(kleur4));
+//            System.out.println(kleur4);
+//            System.out.println(clientStub.GetSpeler(kleur5));
+//            System.out.println(kleur5);
 
             String host = "127.0.0.1";
-ChatListen listen = new ChatListen(host);
+            ChatListen listen = new ChatListen(host);
+            InterfaceImpl impl = new InterfaceImpl();
+            clientStub.registerObserverSpel(impl);
 
             //Eerste client set de spel en speelvelddata op server
             clientStub.setFirstTimeSpel(spelC.getSpel());
@@ -134,8 +136,6 @@ ChatListen listen = new ChatListen(host);
             veldC.setVeldD(clientStub.updateGetData());
             veldC.ImageSetterALL();
 
-InterfaceImpl impl = new InterfaceImpl();
-clientStub.registerObserverSpel(impl);
 
             //TODO DEBUGLINES
             System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n.............................");
