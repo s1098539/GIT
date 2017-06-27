@@ -1,20 +1,28 @@
 package Controller;
 
 import Model.*;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
+import javafx.util.Pair;
 import sun.plugin.javascript.navig.Anchor;
-
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import java.util.List;
 
 import static Model.Rol.*;
 
@@ -103,6 +111,68 @@ public class SpelController implements Initializable {
     SpraakController spraakC;
     SpelController spelC;
 
+    int beurtCount = 0;
+    Boolean invalidCoordinates;
+    private void eersteBeurt() {
+        invalidCoordinates = true;
+        if(beurtCount<spelC.spel.getSpelers().size()) {
+            Dialog<Pair<String, String>> dialog = new Dialog<>();
+            dialog.setTitle("Kies een start positie buiten het huis");
+
+            // Set the button types.
+            ButtonType loginButtonType = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
+            dialog.getDialogPane().getButtonTypes().add(loginButtonType);
+
+            GridPane gridPane = new GridPane();
+            gridPane.setHgap(10);
+            gridPane.setVgap(10);
+            gridPane.setPadding(new Insets(20, 150, 10, 10));
+
+            TextField from = new TextField();
+            from.setPromptText("From");
+            TextField to = new TextField();
+            to.setPromptText("To");
+
+            gridPane.add(new Label("X:"), 0, 0);
+            gridPane.add(from, 1, 0);
+            gridPane.add(new Label("Y:"), 2, 0);
+            gridPane.add(to, 3, 0);
+
+            dialog.getDialogPane().setContent(gridPane);
+            while(invalidCoordinates) {
+                invalidCoordinates = false;
+                // Request focus on the username field by default.
+                Platform.runLater(() -> from.requestFocus());
+
+//         Convert the result to a username-password-pair when the login button is clicked.
+                dialog.setResultConverter(dialogButton -> {
+                    if (dialogButton == loginButtonType) {
+                        return new Pair<>(from.getText(), to.getText());
+                    }
+                    return null;
+                });
+
+                Optional<Pair<String, String>> result = dialog.showAndWait();
+
+                result.ifPresent(pair -> {
+                    int x = Integer.parseInt(pair.getKey());
+                    int y = Integer.parseInt(pair.getValue());
+                    spelerC.speler.setX(x);
+                    spelerC.speler.setY(y);
+                    for (int y1 = 1; y1 < 7; y1++) {
+                        for (int x1 = 1; x1 < 9; x1++) {
+                            if (x == x1 && y == y1) invalidCoordinates = true;
+                        }
+                    }
+                    if (!invalidCoordinates)
+                        veldC.addSpeler(spelerC.speler.getKleur(), spelerC.speler.getX(), spelerC.speler.getY());
+                });
+            }
+
+        }
+        beurtCount++;
+    }
+
     public void maakSpelers() {
         spel.setSpelers(new Speler("Michiel", Kleur.BLAUW, 0, 0));
         spel.setSpelers(new Speler("Joep", Kleur.GEEL, 1, 0));
@@ -110,9 +180,7 @@ public class SpelController implements Initializable {
         spel.setSpelers(new Speler("Sam", Kleur.ORANJE, 3, 0));
         spel.setSpelers(new Speler("Calvin", Kleur.ROOD, 4, 0));
         spel.setSpelers(new Speler("Lion", Kleur.ZWART, 5, 0));
-        veldC.nieuweSpelersToevoegen();
         setNamen();
-//        setRollen();
     }
 
     public void switchSpeler() {
@@ -220,23 +288,24 @@ public class SpelController implements Initializable {
         spel.setHuidigeSpeler(spel.getSpelers().get(0));
         spelerC.setHuidigeSpeler();
         setActiveSpelerPlaatje();
-        spelerC.resetPunten();
-
         long seed = System.nanoTime();
         for (Rol rol : Rol.values()) {
             veldC.getVeldD().getRollenlijst().add(rol);
         }
         Collections.shuffle(veldC.getVeldD().getRollenlijst(), new Random(seed));
+        int z = 0;
         for (int i = 0; i < spel.getSpelers().size(); i++) {
-            if(veldC.getVeldD().getRollenlijst().get(i) == GODMODE) {
-                spel.getSpelers().get(i).setRol(veldC.getVeldD().getRollenlijst().get(i+1));
-            } else spel.getSpelers().get(i).setRol(veldC.getVeldD().getRollenlijst().get(i));
+            if(veldC.getVeldD().getRollenlijst().get(z) == GODMODE) z++;
+            else spel.getSpelers().get(i).setRol(veldC.getVeldD().getRollenlijst().get(z));
+            z++;
         }
         setRollen();
+        spelerC.resetPunten();
         for (Persoon persoon : Persoon.values()) {
             veldC.getVeldD().getPersonenlijst().add(persoon);
         }
         Collections.shuffle(veldC.getVeldD().getPersonenlijst(), new Random(seed));
+        eersteBeurt();
 
 //        try {
 //            Send sender = new Send(host, username, localMessage);
@@ -683,10 +752,11 @@ public class SpelController implements Initializable {
         spelerC.dropItem();
         checkPersonen();
         switchSpeler();
-        veldC.ImageSetterALL();
         spelerC.resetPunten();
         checkVerlies();
         setActiveSpelerPlaatje();
+        eersteBeurt();
+        veldC.ImageSetterALL();
     }
 
     public void nieuwRook() {
