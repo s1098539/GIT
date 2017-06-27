@@ -155,13 +155,11 @@ public class SpelController implements Initializable {
                 Optional<Pair<String, String>> result = dialog.showAndWait();
 
                 result.ifPresent(pair -> {
-
                     int x = Integer.parseInt(pair.getKey());
                     int y = Integer.parseInt(pair.getValue());
-                    System.out.println(x + "/t" + y);
                     spelerC.speler.setX(x);
                     spelerC.speler.setY(y);
-                    if(y<10 || x<8 || x>-1 || y>-1) invalidCoordinates = true;
+                    if(y>7 || x>9 || y<0 || x<0) invalidCoordinates = true;
                     for (int y1 = 1; y1 < 7; y1++) {
                         for (int x1 = 1; x1 < 9; x1++) {
                             if (x == x1 && y == y1) invalidCoordinates = true;
@@ -297,7 +295,7 @@ public class SpelController implements Initializable {
         }
         Collections.shuffle(veldC.getVeldD().getRollenlijst(), new Random(seed));
         int z = 0;
-        for (Speler speler: spel.getSpelers()) {
+        for (Speler speler: spelC.spel.getSpelers()) {
             if(veldC.getVeldD().getRollenlijst().get(z) == GODMODE) {
                 veldC.getVeldD().getRollenlijst().remove(z);
             }
@@ -334,55 +332,55 @@ public class SpelController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         SpraakController audioPlayer = new SpraakController();
-            imgPickup1.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playSchade(spelerC.speler.getActiepunten());
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        imgPickup1.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playSchade(spelerC.speler.getActiepunten());
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
 
         imgSchade.setOnContextMenuRequested(event ->{
-                    if(spelerC.speler.isSlechtziendmodus()) {
-                        try {
-                            audioPlayer.playSchade(spelC.spel.getBeschadigingCounter());
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
+            if(spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playSchade(spelC.spel.getBeschadigingCounter());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         });
 
         imgPva.setOnContextMenuRequested(event ->{
-                    if(spelerC.speler.isSlechtziendmodus()) {
-                        try {
-                            audioPlayer.playPva(spelC.spel.getGeredCounter());
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
+            if(spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playPva(spelC.spel.getGeredCounter());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         });
 
         imgBrandHaard.setOnContextMenuRequested(event ->{
-                if(spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playBrandHaard(spelC.spel.getHotspotCounter());
-                    } catch (Exception e) {
-                        e.printStackTrace();
+            if(spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playBrandHaard(spelC.spel.getHotspotCounter());
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         });
 
         imgPickup1.setOnContextMenuRequested(event ->{
-                    if(spelerC.speler.isSlechtziendmodus()) {
+            if(spelerC.speler.isSlechtziendmodus()) {
 
-                        try {
-                            audioPlayer.playAP(spelerC.speler.getActiepunten());
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
+                try {
+                    audioPlayer.playAP(spelerC.speler.getActiepunten());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         });
 
         imgOpenendeur1.setOnContextMenuRequested(event -> {
@@ -395,15 +393,15 @@ public class SpelController implements Initializable {
             }
         });
 
-            btnET.setOnContextMenuRequested(event -> {
-                if (spelerC.speler.isSlechtziendmodus()) {
-                    try {
-                        audioPlayer.playEindigZet();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        btnET.setOnContextMenuRequested(event -> {
+            if (spelerC.speler.isSlechtziendmodus()) {
+                try {
+                    audioPlayer.playEindigZet();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            });
+            }
+        });
 
         imgBrandblusser.setOnContextMenuRequested(event -> {
             if (spelerC.speler.isSlechtziendmodus()) {
@@ -416,25 +414,25 @@ public class SpelController implements Initializable {
         });
 
         imgBrandblusser.setOnContextMenuRequested(event ->{
-                    if(spelerC.speler.isSlechtziendmodus()) {
+            if(spelerC.speler.isSlechtziendmodus()) {
 
-                        try {
-                            audioPlayer.playBlussen(spelC.spelerC.speler.getRol());
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
+                try {
+                    audioPlayer.playBlussen(spelC.spelerC.speler.getRol());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         });
 
         imgPickup.setOnContextMenuRequested(event -> {
             if (spelerC.speler.isSlechtziendmodus()) {
-               try {
-                  audioPlayer.playOppakken();
-               } catch (Exception e) {
-                 e.printStackTrace();
-               }
-             }
-         });
+                try {
+                    audioPlayer.playOppakken();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
         btnLEFT.setOnContextMenuRequested(event -> {
             if (spelerC.speler.isSlechtziendmodus()) {
@@ -557,14 +555,14 @@ public class SpelController implements Initializable {
         });
 
         doodCounter.setOnContextMenuRequested(event ->{
-                    if(spelerC.speler.isSlechtziendmodus()) {
+            if(spelerC.speler.isSlechtziendmodus()) {
 
-                        try {
-                            audioPlayer.playDood(spelC.spel.getDoodCounter());
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
+                try {
+                    audioPlayer.playDood(spelC.spel.getDoodCounter());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         });
 
         gebruikershandleiding.setOnContextMenuRequested(event ->{
@@ -1039,24 +1037,24 @@ public class SpelController implements Initializable {
                 booleans[i] = true;
             }
             for(int i = 0; i <spel.getSpelers().size(); i++)
-            switch(spel.getSpelers().get(i).getRol()) {
-                case COMMANDANT: booleans[0] = false;
-                    break;
-                case VERKENNER: booleans[1] = false;
-                    break;
-                case MANNETJESPUTTER: booleans[2] = false;
-                    break;
-                case REDDINGSSPECIALIST: booleans[3] = false;
-                    break;
-                case SPECSTOFFEN: booleans[4] = false;
-                    break;
-                case BRANDSPUITBEDIENER: booleans[5] = false;
-                    break;
-                case GASPAKDRAGER: booleans[6] = false;
-                    break;
-                case DOKTER: booleans[7] = false;
-                    break;
-            }
+                switch(spel.getSpelers().get(i).getRol()) {
+                    case COMMANDANT: booleans[0] = false;
+                        break;
+                    case VERKENNER: booleans[1] = false;
+                        break;
+                    case MANNETJESPUTTER: booleans[2] = false;
+                        break;
+                    case REDDINGSSPECIALIST: booleans[3] = false;
+                        break;
+                    case SPECSTOFFEN: booleans[4] = false;
+                        break;
+                    case BRANDSPUITBEDIENER: booleans[5] = false;
+                        break;
+                    case GASPAKDRAGER: booleans[6] = false;
+                        break;
+                    case DOKTER: booleans[7] = false;
+                        break;
+                }
 
             if(booleans[0])choices.add("Commandant");
             if(booleans[1])choices.add("Verkenner");
@@ -1147,7 +1145,7 @@ public class SpelController implements Initializable {
     public void setActiveSpelerPlaatje() {
         switch(spel.getSpelers().size()) {
             case 6 :if(spel.getSpelers().get(5) == spel.getHuidigeSpeler()) {
-                    user6Img.setImage(veldC.veldI.getBrandweerZwart50pxActive());
+                user6Img.setImage(veldC.veldI.getBrandweerZwart50pxActive());
             }   else user6Img.setImage(veldC.veldI.getBrandweerZwart50px());
             case 5 :if(spel.getSpelers().get(4) == spel.getHuidigeSpeler()) {
                 user5Img.setImage(veldC.veldI.getBrandweerRood50pxActive());
@@ -1188,4 +1186,3 @@ public class SpelController implements Initializable {
         }
     }
 }
-
