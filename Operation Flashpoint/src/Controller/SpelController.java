@@ -30,7 +30,7 @@ import java.util.*;
 import java.util.List;
 
 import static Model.Rol.*;
-
+import Main.*;
 public class SpelController implements Initializable {
 
     @FXML private AnchorPane thePane;
@@ -105,7 +105,7 @@ public class SpelController implements Initializable {
     boolean spawnBrandhaard;
     int hotspots = 6;
     String localMessage = "";
-    String host = "127.0.0.1";
+    String host;
     String username = "";
     Send sender;
     Spel spel;
@@ -297,6 +297,20 @@ public class SpelController implements Initializable {
 
     // dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
+
+        //Dialoog 1(ip adress)
+        dialog.setHeaderText("Voer het IP-adres van de host in");
+        dialog.setContentText("IP-adres:");
+        Optional<String> ipadress = dialog.showAndWait();
+        setHost(ipadress.get());
+
+        //Dialoog 2(naam)
+        dialog2.setHeaderText("Voer je naam in");
+        dialog2.setContentText("Naam: ");
+        Optional<String> naam = dialog2.showAndWait();
+        setUsername(naam.get());
+
+
         veldC.carViewFactory();
         veldC.carSetter();
         stackPane.getChildren().add(veldC.veldI.getCarViews()[0]);
@@ -784,7 +798,7 @@ public class SpelController implements Initializable {
         veldC.ImageSetterALL();
 
         try {
-            registry = LocateRegistry.getRegistry("localhost");
+            registry = LocateRegistry.getRegistry(getHost());
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
             clientStub.setSpelData(spel, veldC.getVeldD());
 
@@ -1225,7 +1239,7 @@ public class SpelController implements Initializable {
     public void refreshSpel() {
         System.out.println("REFRESH");
         try {
-            registry = LocateRegistry.getRegistry("localhost");
+            registry = LocateRegistry.getRegistry(getHost());
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
             setSpel(clientStub.updateGetSpel());
             veldC.setVeldD(clientStub.updateGetData());

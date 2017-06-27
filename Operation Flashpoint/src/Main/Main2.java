@@ -68,7 +68,8 @@ public class Main2 extends Application {
 
 //        spraakC.setController(spelC);
 
-
+ /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
+  system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
         System.setOut(new PrintStream(System.out) {
             @Override
             public void write(byte[] buf, int off, int len) {
@@ -89,7 +90,7 @@ public class Main2 extends Application {
 //        String ip = "localhost"; //IP SERVER
         try {
             System.out.println("Getting access to the registry ...");
-            Registry registry = LocateRegistry.getRegistry("localhost");
+            Registry registry = LocateRegistry.getRegistry(spelC.getHost());
             System.out.println("Getting the Main.Interface stub from registry ...");
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
 
@@ -124,8 +125,8 @@ public class Main2 extends Application {
 //            System.out.println(clientStub.GetSpeler(kleur5));
 //            System.out.println(kleur5);
 
-            String host = "127.0.0.1";
-            ChatListen listen = new ChatListen(host);
+
+            ChatListen listen = new ChatListen(spelC.getHost());
             InterfaceImpl impl = new InterfaceImpl();
             clientStub.registerObserverSpel(impl);
 
