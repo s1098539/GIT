@@ -208,28 +208,35 @@ public class SpeelveldController {
         }
 
         // Spelers
-        veldI.getImageViews()[x][y][4].setImage(veldI.getEmpty());
-        for(int i = 0; i < 6; i++) {
-            if (veldD.getVakken()[x][y].getKleuren()[i]!=null) {
-                switch(veldD.getVakken()[x][y].getKleuren()[i]) {
-                    case GEEL: veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerGeel());
-                        i+=5;
-                        break;
-                    case ROOD: veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerRood());
-                        i+=5;
-                        break;
-                    case BLAUW: veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerBlauw());
-                        i+=5;
-                        break;
-                    case GROEN: veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerGroen());
-                        i+=5;
-                        break;
-                    case ZWART: veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerZwart());
-                        i+=5;
-                        break;
-                    case ORANJE: veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerOranje());
-                        i+=5;
-                        break;
+        veldI.getImageViews()[x][y][4].setImage(veldI.getEmpty()); {
+            for (int i = 5; i >-1; i--) {
+                if (veldD.getVakken()[x][y].getKleuren()[i] != null) {
+                    switch (veldD.getVakken()[x][y].getKleuren()[i]) {
+                        case BLAUW:
+                            veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerBlauw());
+                            i -= 5;
+                            break;
+                        case GEEL:
+                            veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerGeel());
+                            i -= 5;
+                            break;
+                        case GROEN:
+                            veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerGroen());
+                            i -= 5;
+                            break;
+                        case ORANJE:
+                            veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerOranje());
+                            i -= 5;
+                            break;
+                        case ROOD:
+                            veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerRood());
+                            i -= 5;
+                            break;
+                        case ZWART:
+                            veldI.getImageViews()[x][y][4].setImage(veldI.getBrandweerZwart());
+                            i -= 5;
+                            break;
+                    }
                 }
             }
         }
