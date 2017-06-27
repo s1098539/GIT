@@ -155,8 +155,10 @@ public class SpelController implements Initializable {
                 Optional<Pair<String, String>> result = dialog.showAndWait();
 
                 result.ifPresent(pair -> {
+
                     int x = Integer.parseInt(pair.getKey());
                     int y = Integer.parseInt(pair.getValue());
+                    System.out.println(x + "/t" + y);
                     spelerC.speler.setX(x);
                     spelerC.speler.setY(y);
                     if(y<10 || x<8 || x>-1 || y>-1) invalidCoordinates = true;
@@ -295,9 +297,11 @@ public class SpelController implements Initializable {
         }
         Collections.shuffle(veldC.getVeldD().getRollenlijst(), new Random(seed));
         int z = 0;
-        for (int i = 0; i < spel.getSpelers().size(); i++) {
-            if(veldC.getVeldD().getRollenlijst().get(z) == GODMODE) z++;
-            else spel.getSpelers().get(i).setRol(veldC.getVeldD().getRollenlijst().get(z));
+        for (Speler speler: spel.getSpelers()) {
+            if(veldC.getVeldD().getRollenlijst().get(z) == GODMODE) {
+                veldC.getVeldD().getRollenlijst().remove(z);
+            }
+            speler.setRol(veldC.getVeldD().getRollenlijst().get(z));
             z++;
         }
         setRollen();
