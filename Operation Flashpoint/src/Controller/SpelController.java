@@ -831,6 +831,149 @@ public class SpelController implements Initializable {
             refreshSpel();
         });
     }
+    public void meerijden(Richting richting, String wagen) {
+        boolean verplaatsbaar;
+        ArrayList<Speler> passagiers = new ArrayList<>();
+            for (Speler speler : spel.getSpelers()) {
+                verplaatsbaar = false;
+                if (wagen.equals("Ambulance")) {
+                    switch (veldC.veldD.getAmbulance()) {
+                        case BOVEN:
+                            if (speler.getY() == 0 && (speler.getX() == 5 || speler.getX() == 6)) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case RECHTS:
+                            if (speler.getX() == 9 && (speler.getY() == 4 || speler.getY() == 5)) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case ONDER:
+                            if (speler.getY() == 7 && (speler.getX() == 3 || speler.getX() == 4)) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case LINKS:
+                            if (speler.getX() == 0 && (speler.getY() == 2 || speler.getY() == 3)) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                    }
+                }
+                else if (wagen.equals("Brandweerwagen")) {
+                    switch (veldC.veldD.getBrandweerwagen()) {
+                        case BOVEN:
+                            if ((speler.getX()==3 || speler.getX()==4) && speler.getY()==0) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case RECHTS:
+                            if ((speler.getY()==2 || speler.getY()==3) && speler.getX()==9) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case ONDER:
+                            if ((speler.getX()==5 || speler.getX()==6) && speler.getY()==7) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case LINKS:
+                            if ((speler.getY()==4 || speler.getY()==5) && speler.getX()==0) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                    }
+                }
+                if (verplaatsbaar) {
+                    if (wagen.equals("Brandweerwagen") && speler.equals(spel.getHuidigeSpeler())) {
+                        veldC.removeSpeler(speler.getKleur(),speler.getX(),speler.getY());
+                        passagiers.add(speler);
+                    }
+                    else{
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setTitle("Meerijden");
+                        alert.setHeaderText("Wil je dat " + speler.getNaam() + " mee rijdt?");
+                        alert.setContentText("Klik in dat geval op Ja");
+
+                        ButtonType ja = new ButtonType("Ja");
+                        ButtonType nee = new ButtonType("Nee", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+                        alert.getButtonTypes().setAll(ja, nee);
+
+                        Optional<ButtonType> resultaat = alert.showAndWait();
+                        if (resultaat.get() == ja) {
+                            veldC.removeSpeler(speler.getKleur(), speler.getX(), speler.getY());
+                            passagiers.add(speler);
+                        }
+                    }
+                }
+            }
+            for (Speler speler : passagiers) {
+                switch (richting) {
+                    case BOVEN:
+                        speler.setY(0);
+                        if (wagen.equals("Ambulance")) {
+                            speler.setX(5);
+                        }
+                        else {
+                            speler.setX(3);
+                        }
+                        break;
+                    case RECHTS:
+                        speler.setX(9);
+                        if (wagen.equals("Ambulance")) {
+                            speler.setY(4);
+                        }
+                        else {
+                            speler.setY(2);
+                        }
+                        break;
+                    case ONDER:
+                        speler.setY(7);
+                        if (wagen.equals("Ambulance")) {
+                            speler.setX(3);
+                        }
+                        else {
+                            speler.setX(5);
+                        }
+                        break;
+                    case LINKS:
+                        speler.setX(0);
+                        if (wagen.equals("Ambulance")) {
+                            speler.setY(2);
+                        }
+                        else {
+                            speler.setY(4);
+                        }
+                        break;
+                }
+                veldC.addSpeler(speler.getKleur(), speler.getX(), speler.getY());
+            }
+            veldC.ImageSetterALL();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+/*        if (result.get() == buttonTypeOne) {
+            // ... user chose "One"
+        } else if (result.get() == buttonTypeTwo) {
+            // ... user chose "Two"
+        } else if (result.get() == buttonTypeThree) {
+            // ... user chose "Three"
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }*/
+
+
 
     public void toggleViewUpdate() {
         if(spelerC.openendeur) imgOpenendeur.setImage(veldC.veldI.getOpenenDeurSelect());
