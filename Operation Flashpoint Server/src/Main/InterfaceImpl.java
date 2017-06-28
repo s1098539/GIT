@@ -177,7 +177,7 @@ public class InterfaceImpl implements Interface, Serializable {
     @Override
     public synchronized void notifyObserversSpel() throws RemoteException {
         for (ChatListenInterface client : Listeners) {
-            client.receiveGame();
+            client.receiveGame(getSpelServer(),getVeldServer());
         }
         System.out.println("Notified observers");
     }

@@ -610,32 +610,40 @@ public class SpelController implements Initializable {
 
         btnUP.setOnAction(event -> {
             spelerC.noord();
+            updateSpel();
         });
 
         thePane.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.A) {
                 spelerC.west();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.D) {
                 spelerC.oost();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.W) {
                 spelerC.noord();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.S) {
                 spelerC.zuid();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.ENTER) {
                 endTurn();
             }
             if (e.getCode() == KeyCode.R) {
                 spelerC.special();
+
             }
             if (e.getCode() == KeyCode.Q) {
                 spelerC.btnHakken();
+
             }
             if (e.getCode() == KeyCode.E) {
                 spelerC.btnOpenenDeur();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.G) {
                 for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
@@ -644,21 +652,27 @@ public class SpelController implements Initializable {
                 setRollen();
                 spelerC.resetPunten();
                 updatePunten();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.DIGIT1) {
                 spelerC.oppakkenActie();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.DIGIT2) {
                 spelerC.btnBrandblusser();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.DIGIT3) {
                 spelerC.btnRijden();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.DIGIT4) {
                 spelerC.BrandweerwagenSpuitActie();
+                updateSpel();
             }
             if (e.getCode() == KeyCode.DIGIT5) {
                 veranderKlasse();
+                updateSpel();
             }
 
 
@@ -669,38 +683,46 @@ public class SpelController implements Initializable {
 
         btnRIGHT.setOnAction(event -> {
             spelerC.oost();
+            updateSpel();
         });
 
         btnDOWN.setOnAction(event -> {
             spelerC.zuid();
+            updateSpel();
         });
 
         btnLEFT.setOnAction(event -> {
             spelerC.west();
+            updateSpel();
         });
 
         imgOpenendeur.setOnMouseClicked(event -> {
             spelerC.btnOpenenDeur();
             toggleViewUpdate();
+            updateSpel();
         });
 
         imgBrandblusser.setOnMouseClicked(event -> {
             spelerC.btnBrandblusser();
             toggleViewUpdate();
+            updateSpel();
         });
 
         imgHakken.setOnMouseClicked(event -> {
             spelerC.btnHakken();
             toggleViewUpdate();
+            updateSpel();
         });
 
         imgRijden.setOnMouseClicked(event -> {
             spelerC.btnRijden();
             toggleViewUpdate();
+            updateSpel();
         });
 
         imgWagenblussen.setOnMouseClicked(event -> {
             spelerC.BrandweerwagenSpuitActie();
+            updateSpel();
         });
 
         stuur.setOnAction(event -> {
@@ -725,10 +747,12 @@ public class SpelController implements Initializable {
 
         btnSpecial.setOnAction(event -> {
             spelerC.special();
+            updateSpel();
         });
 
         imgRolswap.setOnMouseClicked(event -> {
             veranderKlasse();
+            updateSpel();
         });
 
         quit.setOnAction(event -> {
@@ -738,6 +762,7 @@ public class SpelController implements Initializable {
         imgPickup.setOnMouseClicked(event -> {
             spelerC.oppakkenActie();
             toggleViewUpdate();
+            updateSpel();
         });
         options.setOnAction(event -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -796,6 +821,7 @@ public class SpelController implements Initializable {
         veldC.ImageSetterALL();
 
         updateSpel();
+        veldC.ImageSetterALL();
     }
 
 
@@ -1226,17 +1252,17 @@ public class SpelController implements Initializable {
     }
     public void refreshSpel() {
         System.out.println("REFRESH");
-        try {
-            registry = LocateRegistry.getRegistry(getHost(), port);
-            Interface clientStub = (Interface) registry.lookup("Main.Interface");
-            setSpel(clientStub.updateGetSpel());
-            veldC.setVeldD(clientStub.updateGetData());
+//        try {
+//            registry = LocateRegistry.getRegistry(getHost(), port);
+//            Interface clientStub = (Interface) registry.lookup("Main.Interface");
+//            setSpel(clientStub.updateGetSpel());
+//            veldC.setVeldD(clientStub.updateGetData());
             veldC.ImageSetterALL();
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        } catch (NotBoundException e) {
-            e.printStackTrace();
-        }
+//        } catch (RemoteException e) {
+//            e.printStackTrace();
+//        } catch (NotBoundException e) {
+//            e.printStackTrace();
+//        }
     }
     public void Lobby() {
         //Dialoog 1(ip adress)

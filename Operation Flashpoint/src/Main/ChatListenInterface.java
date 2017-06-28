@@ -11,5 +11,5 @@ public interface ChatListenInterface extends Remote {
 
     // Registry ChatClient with server, to be able to receive message from the server
     void update(Message message)  throws RemoteException;
-    void receiveGame() throws RemoteException;
+    void receiveGame(Spel spelServer, SpeelveldData veldServer) throws RemoteException;
 }

@@ -16,18 +16,35 @@ import java.rmi.server.UnicastRemoteObject;
  * Created by School on 27-6-2017.
  */
 public class ChatListen extends UnicastRemoteObject implements ChatListenInterface {
-    SpelController spelC;
-    SpeelveldController veldC;
     Registry registry = null;
     String host;
     int port;
+    SpelController spelC1;
+    SpeelveldController veldC1;
+
+
+    public SpelController getSpelC1() {
+        return spelC1;
+    }
+
+    public void setSpelC1(SpelController spelC1) {
+        this.spelC1 = spelC1;
+    }
+
+    public SpeelveldController getVeldC1() {
+        return veldC1;
+    }
+
+    public void setVeldC1(SpeelveldController veldC1) {
+        this.veldC1 = veldC1;
+    }
 
     public String getHost() {return host;}
     public void setHost(String host) {this.host = host;    }
     public int getPort() {return port;}
     public void setPort(int port) {this.port = port;}
 
-    public ChatListen(String host, int port) throws RemoteException {
+    public ChatListen(String host, int port, SpelController spelC, SpeelveldController veldC) throws RemoteException {
 
         setHost(host);
         setPort(port);
@@ -39,13 +56,8 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
         } catch (NotBoundException e) {
             e.printStackTrace();
         }
-
-        try {
-            spelC = new SpelController();
-            veldC = new SpeelveldController();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            setSpelC1(spelC);
+            setVeldC1(veldC);
     }
 
     public static void main(String[] args) throws Exception {
@@ -60,9 +72,13 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
     }
 
     @Override
-    public void receiveGame() throws RemoteException {
+    public void receiveGame(Spel spelServer, SpeelveldData veldServer) throws RemoteException {
 
-spelC.updateSpel();
+        spelC1.setSpel(spelServer);
+        veldC1.setVeldD(veldServer);
+        veldC1.ImageSetterALL();
+
+        // spelC.updateSpel();
 
     }
     }

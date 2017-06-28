@@ -33,8 +33,8 @@ public class Main2 extends Application {
         primaryStage.setTitle("Flash point");
         primaryStage.show();
         System.out.println("The Application has started.");
-
         SpeelveldController veldC = new SpeelveldController();
+        ChatListen listen = new ChatListen(spelC.getHost(), spelC.getPort(), spelC, veldC);
         SpelerController spelerC = new SpelerController();
         DobbelsteenController dobbelC = new DobbelsteenController();
         ChatController chatC = new ChatController();
@@ -108,7 +108,7 @@ public class Main2 extends Application {
 //            String naam6 = "Norddin6";
 
             Kleur kleur = clientStub.addSpeler(naam);
-            System.out.println(clientStub.GetSpeler(kleur).getNaam());
+            //System.out.println(clientStub.GetSpeler(kleur).getNaam());
             //clientStub.GetSpeler(kleur);
 //            Kleur kleur1 = clientStub.addSpeler(naam2);
 //            Kleur kleur2 = clientStub.addSpeler(naam3);
@@ -127,7 +127,7 @@ public class Main2 extends Application {
 //            System.out.println(kleur5);
 
 
-            ChatListen listen = new ChatListen(spelC.getHost(), spelC.getPort());
+
             InterfaceImpl impl = new InterfaceImpl();
             clientStub.registerObserverSpel(impl);
 
