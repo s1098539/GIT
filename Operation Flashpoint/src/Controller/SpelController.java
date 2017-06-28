@@ -12,11 +12,13 @@ import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.util.Pair;
 import sun.plugin.javascript.navig.Anchor;
 import java.awt.event.ActionEvent;
@@ -100,6 +102,8 @@ public class SpelController implements Initializable {
     @FXML private ImageView user5Img;
     @FXML private ImageView user6Img;
     @FXML private Button btnRefresh;
+    @FXML private ImageView background;
+
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -112,6 +116,7 @@ public class SpelController implements Initializable {
     int i = 0;
     int b = 0;
     Registry registry = null;
+    Interface clientStub = null;
     int port = 1099;
 
     SpeelveldController veldC;
@@ -180,12 +185,11 @@ public class SpelController implements Initializable {
                         veldC.addSpeler(spelerC.speler.getKleur(), spelerC.speler.getX(), spelerC.speler.getY());
                 });
             }
-
         }
         beurtCount++;
     }
 
-    public void maakSpelers() {
+    public void maakSpelers() throws RemoteException {
         spel.setSpelers(new Speler("Michiel", Kleur.BLAUW, 0, 0));
         spel.setSpelers(new Speler("Joep", Kleur.GEEL, 1, 0));
         spel.setSpelers(new Speler("Norddin", Kleur.GROEN, 2, 0));
@@ -306,9 +310,10 @@ public class SpelController implements Initializable {
     }
 
     // dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
-    public void run() {
+    public void run() throws RemoteException, NotBoundException {
 
-
+        Registry registry = LocateRegistry.getRegistry(spelC.getHost());
+        Interface clientStub = (Interface) registry.lookup("Main.Interface");
         veldC.carViewFactory();
         veldC.carSetter();
         stackPane.getChildren().add(veldC.veldI.getCarViews()[0]);
@@ -766,20 +771,59 @@ public class SpelController implements Initializable {
         });
         options.setOnAction(event -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Slechtziendmodus");
-            alert.setHeaderText("Wilt u slechtziendheids-modus toggelen?");
-            alert.setContentText("Druk dan op Oke");
+            alert.setTitle("Confirmation Dialog with Custom Actions");
+            alert.setHeaderText("Look, a Confirmation Dialog with Custom Actions");
+            alert.setContentText("Choose your option.");
+
+            ButtonType buttonTypeOne = new ButtonType("Slechtzienmodes");
+            ButtonType buttonTypeTwo = new ButtonType("Save/Load");
+            ButtonType buttonTypeCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
 
             Optional<ButtonType> result = alert.showAndWait();
-            if (result.get() == ButtonType.OK){
-                if(spelerC.speler.isSlechtziendmodus()){
-                    spelerC.speler.setSlechtziendmodus(false);
+            if (result.get() == buttonTypeOne){
+                alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Slechtziendmodus");
+                alert.setHeaderText("Wilt u slechtziendheids-modus toggelen?");
+                alert.setContentText("Druk dan op Oke");
+
+                result = alert.showAndWait();
+                if (result.get() == ButtonType.OK){
+                    if(spelerC.speler.isSlechtziendmodus()){
+                        spelerC.speler.setSlechtziendmodus(false);
+                    }
+                    else{
+                        spelerC.speler.setSlechtziendmodus(true);
+                    }
+                } else {
+                    alert.close();
                 }
-                else{
-                    spelerC.speler.setSlechtziendmodus(true);
+            } else if (result.get() == buttonTypeTwo) {
+                alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Bestaand spel openen/opslaan.");
+                alert.setHeaderText("Wil je het spel openen of opslaan.");
+                alert.setContentText("Maak uw keuze.");
+
+                ButtonType knop1 = new ButtonType("Save");
+                ButtonType knop2 = new ButtonType("Load");
+                ButtonType cancelKnop = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+                alert.getButtonTypes().setAll(knop1, knop2, cancelKnop);
+
+                result = alert.showAndWait();
+                if (result.get() == knop1) {
+                    save();
                 }
+                if (result.get() == knop2){
+                    read();
+                }
+                else {
+                    alert.close();
+                }
+
             } else {
-                alert.close();
+                // ... user chose CANCEL or closed the dialog
             }
         });
 
@@ -818,8 +862,6 @@ public class SpelController implements Initializable {
         checkVerlies();
         setActiveSpelerPlaatje();
         //eersteBeurt();
-        veldC.ImageSetterALL();
-
         updateSpel();
         veldC.ImageSetterALL();
     }
@@ -1196,8 +1238,10 @@ public class SpelController implements Initializable {
         }
     }
 
-    public void setNamen() {
+    public void setNamen() throws RemoteException {
+
         switch(spel.getSpelers().size()) {
+
             case 6 : user6.setText(" " + spel.getSpelers().get(5).getNaam());
             case 5 : user5.setText(" " + spel.getSpelers().get(4).getNaam());
             case 4 : user4.setText(" " + spel.getSpelers().get(3).getNaam());
@@ -1360,8 +1404,10 @@ public class SpelController implements Initializable {
     }
 
     public void read(){
-        readSpel();
-        readVeld();
+        spel = readSpel();
+        veldC.veldD = readVeld();
+        veldC.ImageSetterALL();
+        updatePunten();
     }
 }
 

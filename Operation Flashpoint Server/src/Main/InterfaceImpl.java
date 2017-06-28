@@ -30,6 +30,10 @@ public class InterfaceImpl implements Interface, Serializable {
     protected InterfaceImpl() throws IOException {
     }
 
+    public Map<Kleur, Speler> getmMap() {
+        return mMap;
+    }
+
     Map<Kleur, Speler> mMap = new HashMap<Kleur, Speler>();
     int i = 1;
     int a = 0;

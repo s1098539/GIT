@@ -5,6 +5,7 @@ import Model.*;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.Map;
 
 public interface Interface extends Remote {
     public Kleur addSpeler(String naam) throws RemoteException;
@@ -43,5 +44,7 @@ public interface Interface extends Remote {
     public SpeelveldData updateGetData() throws RemoteException;
 
     public void notifyObserversSpel() throws RemoteException;
+
+    public Map<Kleur, Speler> getmMap() throws RemoteException;
 
 }

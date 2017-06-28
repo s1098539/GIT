@@ -30,6 +30,10 @@ public class InterfaceImpl implements Interface, Serializable {
     protected InterfaceImpl() throws IOException {
     }
 
+    public Map<Kleur, Speler> getmMap() {
+        return mMap;
+    }
+
     Map<Kleur, Speler> mMap = new HashMap<Kleur, Speler>();
     int i = 1;
     int a = 0;
@@ -144,11 +148,13 @@ public class InterfaceImpl implements Interface, Serializable {
     @Override
     public synchronized void unregisterObserver(Interface gameListener) throws RemoteException {
         this.gameListeners.remove(gameListener);
+        System.out.println("Interface listener removed.");
     }
 
     @Override
     public synchronized void unregisterObserver(ChatListenInterface listener) throws RemoteException {
         this.Listeners.remove(listener);
+        System.out.println("ChatListenerInterface removed");
     }
 
 
