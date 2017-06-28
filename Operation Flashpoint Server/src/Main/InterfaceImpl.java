@@ -137,6 +137,7 @@ public class InterfaceImpl implements Interface, Serializable {
     public void registerObserverSpel(Interface gameListener) throws RemoteException {
         this.gameListeners.add(gameListener);
         System.out.println("Listener added" + gameListener);
+        notifyObserversSpel();
 
     }
 

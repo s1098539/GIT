@@ -129,15 +129,15 @@ public class Main2 extends Application {
 
 
 
-            InterfaceImpl impl = new InterfaceImpl();
-            clientStub.registerObserverSpel(impl);
-
             //Eerste client set de spel en speelvelddata op server
             clientStub.setFirstTimeSpel(spelC.getSpel());
             clientStub.setFirstTimeData(veldC.getVeldD());
             spelC.setSpel(clientStub.updateGetSpel());
             veldC.setVeldD(clientStub.updateGetData());
             veldC.ImageSetterALL();
+
+            InterfaceImpl impl = new InterfaceImpl();
+            clientStub.registerObserverSpel(impl);
 
             //System.out.println(clientStub.getmMap());
 

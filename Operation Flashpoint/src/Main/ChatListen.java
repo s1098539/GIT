@@ -80,6 +80,7 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
         spelC1.setActiveSpelerPlaatje();
         spelC1.setRollen();
 
+
         // spelC.updateSpel();
 
     }
