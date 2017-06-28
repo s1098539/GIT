@@ -12,15 +12,17 @@ import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.util.Pair;
 import sun.plugin.javascript.navig.Anchor;
 import java.awt.event.ActionEvent;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -100,6 +102,8 @@ public class SpelController implements Initializable {
     @FXML private ImageView user5Img;
     @FXML private ImageView user6Img;
     @FXML private Button btnRefresh;
+    @FXML private ImageView background;
+
 
     Vak vak;
     boolean spawnBrandhaard;
@@ -182,7 +186,6 @@ public class SpelController implements Initializable {
                         veldC.addSpeler(spel.getHuidigeSpeler().getKleur(), spel.getHuidigeSpeler().getX(), spel.getHuidigeSpeler().getY());
                 });
             }
-
         }
         beurtCount++;
     }
@@ -621,7 +624,6 @@ public class SpelController implements Initializable {
         btnUP.setOnAction(event -> {
             spelerC.noord();
             updateSpel();
-
         });
 
         thePane.setOnKeyPressed(e -> {
@@ -777,31 +779,209 @@ public class SpelController implements Initializable {
         });
         options.setOnAction(event -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Slechtziendmodus");
-            alert.setHeaderText("Wilt u slechtziendheids-modus toggelen?");
-            alert.setContentText("Druk dan op Oke");
+            alert.setTitle("Options");
+            alert.setHeaderText("Wilt u opslaan/laden of de slechtzienmodes toggelen.");
+            alert.setContentText("Maak uw keuze.");
+
+            ButtonType buttonTypeOne = new ButtonType("slechtziend");
+            ButtonType buttonTypeTwo = new ButtonType("Save/Load");
+            ButtonType buttonTypeCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
 
             Optional<ButtonType> result = alert.showAndWait();
-            if (result.get() == ButtonType.OK){
-                if(spel.getHuidigeSpeler().isSlechtziendmodus()){
-                    spel.getHuidigeSpeler().setSlechtziendmodus(false);
+            if (result.get() == buttonTypeOne){
+                alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Slechtziendmodus");
+                alert.setHeaderText("Wilt u slechtziendheids-modus toggelen?");
+                alert.setContentText("Druk dan op Oke");
+
+                result = alert.showAndWait();
+                if (result.get() == ButtonType.OK){
+                    if(spelerC.speler.isSlechtziendmodus()){
+                        spelerC.speler.setSlechtziendmodus(false);
+                    }
+                    else{
+                        spelerC.speler.setSlechtziendmodus(true);
+                    }
+                } else {
+                    alert.close();
                 }
-                else{
-                    spel.getHuidigeSpeler().setSlechtziendmodus(true);
+            } else if (result.get() == buttonTypeTwo) {
+                alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Bestaand spel openen/opslaan.");
+                alert.setHeaderText("Wil je het spel openen of opslaan.");
+                alert.setContentText("Maak uw keuze.");
+
+                ButtonType knop1 = new ButtonType("Save");
+                ButtonType knop2 = new ButtonType("Load");
+                ButtonType cancelKnop = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+                alert.getButtonTypes().setAll(knop1, knop2, cancelKnop);
+
+                result = alert.showAndWait();
+                if (result.get() == knop1) {
+                    save();
                 }
+                if (result.get() == knop2){
+                    read();
+                }
+                else {
+                    alert.close();
+                }
+
             } else {
-                alert.close();
+                // ... user chose CANCEL or closed the dialog
             }
         });
 
         btnRefresh.setOnAction(event -> {
-            try {
                 refreshSpel();
-            } catch (RemoteException e) {
-                e.printStackTrace();
-            }
         });
     }
+    public void meerijden(Richting richting, String wagen) {
+        boolean verplaatsbaar;
+        ArrayList<Speler> passagiers = new ArrayList<>();
+            for (Speler speler : spel.getSpelers()) {
+                verplaatsbaar = false;
+                if (wagen.equals("Ambulance")) {
+                    switch (veldC.veldD.getAmbulance()) {
+                        case BOVEN:
+                            if (speler.getY() == 0 && (speler.getX() == 5 || speler.getX() == 6)) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case RECHTS:
+                            if (speler.getX() == 9 && (speler.getY() == 4 || speler.getY() == 5)) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case ONDER:
+                            if (speler.getY() == 7 && (speler.getX() == 3 || speler.getX() == 4)) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case LINKS:
+                            if (speler.getX() == 0 && (speler.getY() == 2 || speler.getY() == 3)) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                    }
+                }
+                else if (wagen.equals("Brandweerwagen")) {
+                    switch (veldC.veldD.getBrandweerwagen()) {
+                        case BOVEN:
+                            if ((speler.getX()==3 || speler.getX()==4) && speler.getY()==0) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case RECHTS:
+                            if ((speler.getY()==2 || speler.getY()==3) && speler.getX()==9) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case ONDER:
+                            if ((speler.getX()==5 || speler.getX()==6) && speler.getY()==7) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                        case LINKS:
+                            if ((speler.getY()==4 || speler.getY()==5) && speler.getX()==0) {
+                                verplaatsbaar = true;
+                            }
+                            break;
+                    }
+                }
+                if (verplaatsbaar) {
+                    if (wagen.equals("Brandweerwagen") && speler.equals(spel.getHuidigeSpeler())) {
+                        veldC.removeSpeler(speler.getKleur(),speler.getX(),speler.getY());
+                        passagiers.add(speler);
+                    }
+                    else{
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setTitle("Meerijden");
+                        alert.setHeaderText("Wil je dat " + speler.getNaam() + " mee rijdt?");
+                        alert.setContentText("Klik in dat geval op Ja");
+
+                        ButtonType ja = new ButtonType("Ja");
+                        ButtonType nee = new ButtonType("Nee", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+                        alert.getButtonTypes().setAll(ja, nee);
+
+                        Optional<ButtonType> resultaat = alert.showAndWait();
+                        if (resultaat.get() == ja) {
+                            veldC.removeSpeler(speler.getKleur(), speler.getX(), speler.getY());
+                            passagiers.add(speler);
+                        }
+                    }
+                }
+            }
+            for (Speler speler : passagiers) {
+                switch (richting) {
+                    case BOVEN:
+                        speler.setY(0);
+                        if (wagen.equals("Ambulance")) {
+                            speler.setX(5);
+                        }
+                        else {
+                            speler.setX(3);
+                        }
+                        break;
+                    case RECHTS:
+                        speler.setX(9);
+                        if (wagen.equals("Ambulance")) {
+                            speler.setY(4);
+                        }
+                        else {
+                            speler.setY(2);
+                        }
+                        break;
+                    case ONDER:
+                        speler.setY(7);
+                        if (wagen.equals("Ambulance")) {
+                            speler.setX(3);
+                        }
+                        else {
+                            speler.setX(5);
+                        }
+                        break;
+                    case LINKS:
+                        speler.setX(0);
+                        if (wagen.equals("Ambulance")) {
+                            speler.setY(2);
+                        }
+                        else {
+                            speler.setY(4);
+                        }
+                        break;
+                }
+                veldC.addSpeler(speler.getKleur(), speler.getX(), speler.getY());
+            }
+            veldC.ImageSetterALL();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+/*        if (result.get() == buttonTypeOne) {
+            // ... user chose "One"
+        } else if (result.get() == buttonTypeTwo) {
+            // ... user chose "Two"
+        } else if (result.get() == buttonTypeThree) {
+            // ... user chose "Three"
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }*/
+
+
 
     public void toggleViewUpdate() {
         if(spelerC.openendeur) imgOpenendeur.setImage(veldC.veldI.getOpenenDeurSelect());
@@ -1212,8 +1392,10 @@ public class SpelController implements Initializable {
         }
     }
 
-    public void setNamen() {
+    public void setNamen() throws RemoteException {
+
         switch(spel.getSpelers().size()) {
+
             case 6 : user6.setText(" " + spel.getSpelers().get(5).getNaam());
             case 5 : user5.setText(" " + spel.getSpelers().get(4).getNaam());
             case 4 : user4.setText(" " + spel.getSpelers().get(3).getNaam());
@@ -1277,9 +1459,7 @@ public class SpelController implements Initializable {
         }
         setActiveSpelerPlaatje();
         setRollen();
-        System.out.println(spelerC.getSpeler().getKleur());
-        System.out.println(spelerC.getSpeler().getX());
-        System.out.println(spelerC.getSpeler().getY());
+
     }
     public void Lobby() {
         //Dialoog 1(ip adress)
@@ -1303,4 +1483,83 @@ public class SpelController implements Initializable {
             e.printStackTrace();
         }
     }
+
+        //TODO SAVESTATES AND SHIT
+    String spelfile = "spel.ser";
+    String veldfile =  "veld.ser";
+
+    public void writeSpel() {
+        try {
+            //Write
+            FileOutputStream fos = new FileOutputStream(spelfile);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(spel);
+            oos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void writeVeld(){
+        try {
+            FileOutputStream fos = new FileOutputStream(veldfile);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(veldC.veldD);
+            oos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Spel readSpel() {
+        Spel ss = null;
+        try {
+            //Read spel
+            FileInputStream fis = new FileInputStream(spelfile);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            Spel SpelSave = (Spel) ois.readObject();
+            ss = SpelSave;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return ss;
+    }
+
+    public SpeelveldData readVeld() {
+        SpeelveldData svd = null;
+        try {
+            //Read veld
+            FileInputStream fis = new FileInputStream(veldfile);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            SpeelveldData VeldSave = (SpeelveldData) ois.readObject();
+            svd = VeldSave;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return svd;
+    }
+
+    public void save(){
+        writeSpel();
+        writeVeld();
+    }
+
+    public void read(){
+        spel = readSpel();
+        veldC.veldD = readVeld();
+        veldC.ImageSetterALL();
+        updatePunten();
+    }
 }
+
+
