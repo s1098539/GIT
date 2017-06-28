@@ -5,11 +5,13 @@ import Model.*;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.Map;
 
 public interface Interface extends Remote {
-    public Kleur addSpeler(String naam) throws RemoteException;
+    public void addSpeler(String naam) throws RemoteException;
 
-    public Speler GetSpeler(Kleur kleur) throws RemoteException;
+    public ArrayList<Speler> GetSpeler() throws RemoteException;
 
     public Spel updateGetSpel() throws RemoteException;
 
@@ -44,4 +46,5 @@ public interface Interface extends Remote {
 
     public void notifyObserversSpel() throws RemoteException;
 
+    //public Map<Kleur, Speler> getmMap() throws RemoteException;
 }

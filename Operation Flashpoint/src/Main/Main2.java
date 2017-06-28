@@ -90,9 +90,7 @@ public class Main2 extends Application {
 //        String naam = "Rafe"; //NAAM CLIENT
 //        String ip = "localhost"; //IP SERVER
         try {
-//            System.out.println("Getting access to the registry ...");
             Registry registry = LocateRegistry.getRegistry(spelC.getHost());
-//            System.out.println("Getting the Main.Interface stub from registry ...");
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
 
 
@@ -106,9 +104,11 @@ public class Main2 extends Application {
 //            String naam5 = "Norddin5";
 //            String naam6 = "Norddin6";
 
-            Kleur kleur = clientStub.addSpeler(naam);
+            //clientStub.addSpeler(naam);
+            //Kleur kleur = clientStub.addSpeler(naam);
             //System.out.println(clientStub.GetSpeler(kleur).getNaam());
             //clientStub.GetSpeler(kleur);
+            //spelC.getSpel().setSpelers(clientStub.GetSpeler(kleur));
 //            Kleur kleur1 = clientStub.addSpeler(naam2);
 //            Kleur kleur2 = clientStub.addSpeler(naam3);
 //            Kleur kleur3 = clientStub.addSpeler(naam4);
@@ -116,7 +116,7 @@ public class Main2 extends Application {
 //            Kleur kleur5 = clientStub.addSpeler(naam6);
 
 //            System.out.println(clientStub.GetSpeler(kleur));
-            System.out.println("Je naam is " + clientStub.GetSpeler(kleur).getNaam() + " en je kleur is " + kleur + ".");
+            ////System.out.println("Je naam is " + clientStub.GetSpeler(kleur).getNaam() + " en je kleur is " + kleur + ".");
 //            System.out.println(kleur2);
 //            System.out.println(clientStub.GetSpeler(kleur3));
 //            System.out.println(kleur3);
@@ -124,6 +124,8 @@ public class Main2 extends Application {
 //            System.out.println(kleur4);
 //            System.out.println(clientStub.GetSpeler(kleur5));
 //            System.out.println(kleur5);
+            //System.out.println(clientStub.getmMap().values());
+            //System.out.println(clientStub.getmMap().size());
 
 
 
@@ -137,6 +139,7 @@ public class Main2 extends Application {
             veldC.setVeldD(clientStub.updateGetData());
             veldC.ImageSetterALL();
 
+            //System.out.println(clientStub.getmMap());
 
             //TODO DEBUGLINES
 //            System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n.............................");

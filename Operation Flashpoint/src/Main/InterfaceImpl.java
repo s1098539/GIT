@@ -27,10 +27,16 @@ public class InterfaceImpl implements Interface, Serializable {
     public SpeelveldData getVeldServer() {return veldServer;}
     public void setVeldServer(SpeelveldData veldServer) {this.veldServer = veldServer;}
 
+//    public Map<Kleur, Speler> getmMap() {
+//        return mMap;
+//    }
+
     protected InterfaceImpl() throws IOException {
     }
 
-    Map<Kleur, Speler> mMap = new HashMap<Kleur, Speler>();
+    //Map<Kleur, Speler> mMap = new HashMap<Kleur, Speler>();
+    ArrayList<Speler> spelers = new ArrayList<Speler>();
+
     int i = 1;
     int a = 0;
     int b = 0;
@@ -38,54 +44,46 @@ public class InterfaceImpl implements Interface, Serializable {
     private ArrayList<Interface> gameListeners = new ArrayList<Interface>();
 
     @Override
-    public Kleur addSpeler(String naam) throws RemoteException {
+    public void addSpeler(String naam) throws RemoteException {
         Kleur kleur;
         switch (i) {
             case 1:
-                Speler speler = new Speler(naam, Kleur.GROEN, 1, 1);
-                mMap.put(Kleur.GROEN, speler);
+                Speler speler = new Speler(naam, Kleur.BLAUW, 1, 1);
+                spelers.add(speler);
                 i++;
-                kleur = Kleur.GROEN;
                 break;
             case 2:
-                Speler speler2 = new Speler(naam, Kleur.ZWART, 1, 2);
-                mMap.put(Kleur.ZWART, speler2);
+                Speler speler2 = new Speler(naam, Kleur.GEEL, 1, 2);
+                spelers.add(speler2);
                 i++;
-                kleur = Kleur.ZWART;
                 break;
             case 3:
-                Speler speler3 = new Speler(naam, Kleur.GEEL, 1, 3);
-                mMap.put(Kleur.GEEL, speler3);
+                Speler speler3 = new Speler(naam, Kleur.GROEN, 1, 3);
+                spelers.add(speler3);
                 i++;
-                kleur = Kleur.GEEL;
                 break;
             case 4:
-                Speler speler4 = new Speler(naam, Kleur.BLAUW, 1, 4);
-                mMap.put(Kleur.BLAUW, speler4);
+                Speler speler4 = new Speler(naam, Kleur.ORANJE, 1, 4);
+                spelers.add(speler4);
                 i++;
-                kleur = Kleur.BLAUW;
                 break;
             case 5:
-                Speler speler5 = new Speler(naam, Kleur.ORANJE, 1, 5);
-                mMap.put(Kleur.ORANJE, speler5);
+                Speler speler5 = new Speler(naam, Kleur.ROOD, 1, 5);
+                spelers.add(speler5);
                 i++;
-                kleur = Kleur.ORANJE;
                 break;
             case 6:
-                Speler speler6 = new Speler(naam, Kleur.ROOD, 1, 6);
-                mMap.put(Kleur.ROOD, speler6);
+                Speler speler6 = new Speler(naam, Kleur.ZWART, 1, 6);
+                spelers.add(speler6);
                 i++;
-                kleur = Kleur.ROOD;
                 break;
             default:
-                return null;
         }
-        return kleur;
     }
 
     @Override
-    public Speler GetSpeler(Kleur kleur) throws RemoteException {
-        return mMap.get(kleur);
+    public ArrayList<Speler> GetSpeler() throws RemoteException {
+        return spelers;
     }
     @Override
     public void setFirstTimeSpel(Spel spel) throws RemoteException {
@@ -144,11 +142,13 @@ public class InterfaceImpl implements Interface, Serializable {
     @Override
     public synchronized void unregisterObserver(Interface gameListener) throws RemoteException {
         this.gameListeners.remove(gameListener);
+        System.out.println("Interface listener removed.");
     }
 
     @Override
     public synchronized void unregisterObserver(ChatListenInterface listener) throws RemoteException {
         this.Listeners.remove(listener);
+        System.out.println("ChatListenerInterface removed");
     }
 
 

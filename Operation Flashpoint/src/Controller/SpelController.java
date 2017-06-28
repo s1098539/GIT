@@ -113,6 +113,8 @@ public class SpelController implements Initializable {
     int b = 0;
     Registry registry = null;
     int port = 1099;
+    Interface clientStub;
+
 
     SpeelveldController veldC;
     SpelerController spelerC;
@@ -168,8 +170,8 @@ public class SpelController implements Initializable {
                 result.ifPresent(pair -> {
                     int x = Integer.parseInt(pair.getKey());
                     int y = Integer.parseInt(pair.getValue());
-                    spelerC.speler.setX(x);
-                    spelerC.speler.setY(y);
+                    spel.getHuidigeSpeler().setX(x);
+                    spel.getHuidigeSpeler().setY(y);
                     if(y>7 || x>9 || y<0 || x<0) invalidCoordinates = true;
                     for (int y1 = 1; y1 < 7; y1++) {
                         for (int x1 = 1; x1 < 9; x1++) {
@@ -177,7 +179,7 @@ public class SpelController implements Initializable {
                         }
                     }
                     if (!invalidCoordinates)
-                        veldC.addSpeler(spelerC.speler.getKleur(), spelerC.speler.getX(), spelerC.speler.getY());
+                        veldC.addSpeler(spel.getHuidigeSpeler().getKleur(), spel.getHuidigeSpeler().getX(), spel.getHuidigeSpeler().getY());
                 });
             }
 
@@ -185,14 +187,20 @@ public class SpelController implements Initializable {
         beurtCount++;
     }
 
-    public void maakSpelers() {
-        spel.setSpelers(new Speler("Michiel", Kleur.BLAUW, 0, 0));
-        spel.setSpelers(new Speler("Joep", Kleur.GEEL, 1, 0));
-        spel.setSpelers(new Speler("Norddin", Kleur.GROEN, 2, 0));
-        spel.setSpelers(new Speler("Sam", Kleur.ORANJE, 3, 0));
-        spel.setSpelers(new Speler("Calvin", Kleur.ROOD, 4, 0));
-        spel.setSpelers(new Speler("Lion", Kleur.ZWART, 5, 0));
+    public void maakSpelers() throws RemoteException {
+
+        for(int i = 0; i < clientStub.GetSpeler().size(); i++) {
+            spel.setSpelers(clientStub.GetSpeler());
+            spel.setHuidigeSpeler(spel.getSpelers().get(0));
+        }
+//            spel.setSpelers(new Speler("Michiel", Kleur.BLAUW, 0, 0));
+//            spel.setSpelers(new Speler("Joep", Kleur.GEEL, 1, 0));
+//            spel.setSpelers(new Speler("Norddin", Kleur.GROEN, 2, 0));
+//            spel.setSpelers(new Speler("Sam", Kleur.ORANJE, 3, 0));
+//            spel.setSpelers(new Speler("Calvin", Kleur.ROOD, 4, 0));
+//            spel.setSpelers(new Speler("Lion", Kleur.ZWART, 5, 0));
         setNamen();
+        spel.setHuidigeSpeler(spel.getSpelers().get(0));
     }
 
     public void switchSpeler() {
@@ -200,13 +208,13 @@ public class SpelController implements Initializable {
             if(spel.getHuidigeSpeler()==spel.getSpelers().get(i)){
                 if (i==(spel.getSpelers().size()-1)){
                     spel.setHuidigeSpeler(spel.getSpelers().get(0));
-                    spelerC.setHuidigeSpeler();
+
                     break;
                 }
                 else{
                     System.out.println(spel.getSpelers().size());
                     spel.setHuidigeSpeler(spel.getSpelers().get(i+1));
-                    spelerC.setHuidigeSpeler();
+
                     break;
                 }
 
@@ -306,9 +314,11 @@ public class SpelController implements Initializable {
     }
 
     // dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
-    public void run() {
-
-
+    public void run() throws RemoteException, NotBoundException {
+        registry = LocateRegistry.getRegistry(spelC.getHost());
+        clientStub = (Interface) registry.lookup("Main.Interface");
+        String naam = getUsername();
+        clientStub.addSpeler(naam);
         veldC.carViewFactory();
         veldC.carSetter();
         stackPane.getChildren().add(veldC.veldI.getCarViews()[0]);
@@ -316,7 +326,7 @@ public class SpelController implements Initializable {
         stackPane.getChildren().add(veldC.getVeldI().getGridPane());
         maakSpelers();
         spel.setHuidigeSpeler(spel.getSpelers().get(0));
-        spelerC.setHuidigeSpeler();
+
         setActiveSpelerPlaatje();
         long seed = System.nanoTime();
         for (Rol rol : Rol.values()) {
@@ -362,9 +372,9 @@ public class SpelController implements Initializable {
 
         SpraakController audioPlayer = new SpraakController();
         imgPickup1.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playSchade(spelerC.speler.getActiepunten());
+                    audioPlayer.playSchade(spel.getHuidigeSpeler().getActiepunten());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -372,7 +382,7 @@ public class SpelController implements Initializable {
         });
 
         imgSchade.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playSchade(spelC.spel.getBeschadigingCounter());
                 } catch (Exception e) {
@@ -382,7 +392,7 @@ public class SpelController implements Initializable {
         });
 
         imgPva.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playPva(spelC.spel.getGeredCounter());
                 } catch (Exception e) {
@@ -392,7 +402,7 @@ public class SpelController implements Initializable {
         });
 
         imgBrandHaard.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playBrandHaard(spelC.spel.getHotspotCounter());
                 } catch (Exception e) {
@@ -402,10 +412,10 @@ public class SpelController implements Initializable {
         });
 
         imgPickup1.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
 
                 try {
-                    audioPlayer.playAP(spelerC.speler.getActiepunten());
+                    audioPlayer.playAP(spel.getHuidigeSpeler().getActiepunten());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -413,9 +423,9 @@ public class SpelController implements Initializable {
         });
 
         imgOpenendeur1.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playEP(spelerC.speler.getExtrapunten());
+                    audioPlayer.playEP(spel.getHuidigeSpeler().getExtrapunten());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -423,7 +433,7 @@ public class SpelController implements Initializable {
         });
 
         btnET.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playEindigZet();
                 } catch (Exception e) {
@@ -433,9 +443,9 @@ public class SpelController implements Initializable {
         });
 
         imgBrandblusser.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playBlussen(spelerC.speler.getRol());
+                    audioPlayer.playBlussen(spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -443,10 +453,10 @@ public class SpelController implements Initializable {
         });
 
         imgBrandblusser.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
 
                 try {
-                    audioPlayer.playBlussen(spelC.spelerC.speler.getRol());
+                    audioPlayer.playBlussen(spelC.spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -454,7 +464,7 @@ public class SpelController implements Initializable {
         });
 
         imgPickup.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playOppakken();
                 } catch (Exception e) {
@@ -464,9 +474,9 @@ public class SpelController implements Initializable {
         });
 
         btnLEFT.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                    audioPlayer.playBewegen(spelC.spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -474,9 +484,9 @@ public class SpelController implements Initializable {
         });
 
         btnLEFT.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                    audioPlayer.playBewegen(spelC.spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -484,9 +494,9 @@ public class SpelController implements Initializable {
         });
 
         btnRIGHT.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                    audioPlayer.playBewegen(spelC.spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -494,9 +504,9 @@ public class SpelController implements Initializable {
         });
 
         btnUP.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                    audioPlayer.playBewegen(spelC.spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -504,9 +514,9 @@ public class SpelController implements Initializable {
         });
 
         btnDOWN.setOnContextMenuRequested(event ->{
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playBewegen(spelC.spelerC.speler.getRol());
+                    audioPlayer.playBewegen(spelC.spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -514,9 +524,9 @@ public class SpelController implements Initializable {
         });
 
         btnSpecial.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playSpecial(spelerC.speler.getRol());
+                    audioPlayer.playSpecial(spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -524,7 +534,7 @@ public class SpelController implements Initializable {
         });
 
         imgHakken.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playHakken();
                 } catch (Exception e) {
@@ -534,9 +544,9 @@ public class SpelController implements Initializable {
         });
 
         imgWagenblussen.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playWagenBlussen(spelC.spelerC.speler.getRol());
+                    audioPlayer.playWagenBlussen(spelC.spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -544,7 +554,7 @@ public class SpelController implements Initializable {
         });
 
         imgOpenendeur.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playDeurActies();
                 } catch (Exception e) {
@@ -554,7 +564,7 @@ public class SpelController implements Initializable {
         });
 
         imgPickup.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playOppakken();
                 } catch (Exception e) {
@@ -564,7 +574,7 @@ public class SpelController implements Initializable {
         });
 
         imgRijden.setOnContextMenuRequested(event -> {
-            if (spelerC.speler.isSlechtziendmodus()) {
+            if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playRijden();
                 } catch (Exception e) {
@@ -574,7 +584,7 @@ public class SpelController implements Initializable {
         });
 
         imgRolswap.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playRolWissel();
                 } catch (Exception e) {
@@ -584,7 +594,7 @@ public class SpelController implements Initializable {
         });
 
         doodCounter.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
 
                 try {
                     audioPlayer.playDood(spelC.spel.getDoodCounter());
@@ -595,7 +605,7 @@ public class SpelController implements Initializable {
         });
 
         gebruikershandleiding.setOnContextMenuRequested(event ->{
-            if(spelerC.speler.isSlechtziendmodus()) {
+            if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
                     audioPlayer.playSpelRegels(spraakC.audio.getSpelRegels());
                 } catch (Exception e) {
@@ -611,6 +621,7 @@ public class SpelController implements Initializable {
         btnUP.setOnAction(event -> {
             spelerC.noord();
             updateSpel();
+
         });
 
         thePane.setOnKeyPressed(e -> {
@@ -772,11 +783,11 @@ public class SpelController implements Initializable {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
-                if(spelerC.speler.isSlechtziendmodus()){
-                    spelerC.speler.setSlechtziendmodus(false);
+                if(spel.getHuidigeSpeler().isSlechtziendmodus()){
+                    spel.getHuidigeSpeler().setSlechtziendmodus(false);
                 }
                 else{
-                    spelerC.speler.setSlechtziendmodus(true);
+                    spel.getHuidigeSpeler().setSlechtziendmodus(true);
                 }
             } else {
                 alert.close();
@@ -784,7 +795,11 @@ public class SpelController implements Initializable {
         });
 
         btnRefresh.setOnAction(event -> {
-            refreshSpel();
+            try {
+                refreshSpel();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
         });
     }
 
@@ -797,7 +812,7 @@ public class SpelController implements Initializable {
         else imgBrandblusser.setImage(veldC.getVeldI().getBrandBlusser());
         if(spelerC.rijden) imgRijden.setImage(veldC.veldI.getRijdenSelect());
         else imgRijden.setImage(veldC.getVeldI().getRijden());
-        if(spelerC.speler.isStof() || spelerC.speler.getPersoon() != null) {
+        if(spel.getHuidigeSpeler().isStof() || spel.getHuidigeSpeler().getPersoon() != null) {
             imgPickup.setImage(veldC.veldI.getPickIpSelect());
         } else imgPickup.setImage(veldC.veldI.getPickup());
     }
@@ -818,9 +833,10 @@ public class SpelController implements Initializable {
         checkVerlies();
         setActiveSpelerPlaatje();
         //eersteBeurt();
-        veldC.ImageSetterALL();
 
         updateSpel();
+        setNamen();
+        setRollen();
         veldC.ImageSetterALL();
     }
 
@@ -1250,19 +1266,20 @@ public class SpelController implements Initializable {
             System.exit(0);
         }
     }
-    public void refreshSpel() {
+    public void refreshSpel() throws RemoteException {
         System.out.println("REFRESH");
-//        try {
-//            registry = LocateRegistry.getRegistry(getHost(), port);
-//            Interface clientStub = (Interface) registry.lookup("Main.Interface");
-//            setSpel(clientStub.updateGetSpel());
-//            veldC.setVeldD(clientStub.updateGetData());
+        try {
+            setSpel(clientStub.updateGetSpel());
+            veldC.setVeldD(clientStub.updateGetData());
             veldC.ImageSetterALL();
-//        } catch (RemoteException e) {
-//            e.printStackTrace();
-//        } catch (NotBoundException e) {
-//            e.printStackTrace();
-//        }
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+        setActiveSpelerPlaatje();
+        setRollen();
+        System.out.println(spelerC.getSpeler().getKleur());
+        System.out.println(spelerC.getSpeler().getX());
+        System.out.println(spelerC.getSpeler().getY());
     }
     public void Lobby() {
         //Dialoog 1(ip adress)
@@ -1279,12 +1296,10 @@ public class SpelController implements Initializable {
     }
     public void updateSpel() {
         try {
-            registry = LocateRegistry.getRegistry(getHost(), getPort());
-            Interface clientStub = (Interface) registry.lookup("Main.Interface");
             clientStub.setSpelData(getSpel(), veldC.getVeldD());
+            setActiveSpelerPlaatje();
+            setRollen();
         } catch (RemoteException e) {
-            e.printStackTrace();
-        } catch (NotBoundException e) {
             e.printStackTrace();
         }
     }

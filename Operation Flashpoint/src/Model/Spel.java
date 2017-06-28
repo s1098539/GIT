@@ -25,10 +25,14 @@ public class Spel implements Serializable {
         this.huidigeSpeler = huidigeSpeler;
     }
 
+    public void setSpelers(ArrayList<Speler> spelers) {
+        this.spelers = spelers;
+    }
+
     public void setSpelers(Speler speler) {
-        if (spelers.size()<7) {
+
             this.spelers.add(speler);
-        }
+
     }
     public ArrayList<Speler> getSpelers(){
         return spelers;

@@ -19,12 +19,10 @@ import static Model.Rol.*;
 
 public class SpelerController {
 
-    Speler speler;
 
 
-    public void setHuidigeSpeler() {
-        speler = spelC.spel.getHuidigeSpeler();
-    }
+
+
 
 
 
@@ -69,12 +67,12 @@ public class SpelerController {
         else if(brandblusser) {
             System.out.println("Blussen: Noord");
             blussenActie(BOVEN);
-            veldC.ImageSetterAround(speler.getX(),speler.getY());
+            veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(hakken) {
             System.out.println("Hakken: Noord");
             hakActie(BOVEN);
-            veldC.ImageSetterAround(speler.getX(),speler.getY());
+            veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(rijden){
             System.out.println("rijden");
@@ -85,9 +83,9 @@ public class SpelerController {
 
     public void west(){
         if(commandeer) {
-          commandeerActie(LINKS);
+            commandeerActie(LINKS);
         }
-         else if(!openendeur && !brandblusser && !hakken && !rijden) {
+        else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: West");
             beweegActie(LINKS);
         }
@@ -98,12 +96,12 @@ public class SpelerController {
         else if(brandblusser) {
             System.out.println("Blussen: West");
             blussenActie(LINKS);
-            veldC.ImageSetterAround(speler.getX(),speler.getY());
+            veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(hakken) {
             System.out.println("Hakken: West");
             hakActie(LINKS);
-            veldC.ImageSetterAround(speler.getX(),speler.getY());
+            veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(rijden){
             System.out.println("rijden");
@@ -116,7 +114,7 @@ public class SpelerController {
         if(commandeer) {
             commandeerActie(ONDER);
         }
-         else if(!openendeur && !brandblusser && !hakken && !rijden) {
+        else if(!openendeur && !brandblusser && !hakken && !rijden) {
             System.out.println("Beweeg: Zuid");
             beweegActie(ONDER);
         }
@@ -127,12 +125,12 @@ public class SpelerController {
         else if(brandblusser) {
             System.out.println("Blussen: Zuid");
             blussenActie(ONDER);
-            veldC.ImageSetterAround(speler.getX(),speler.getY());
+            veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(hakken) {
             System.out.println("Hakken: Zuid");
             hakActie(ONDER);
-            veldC.ImageSetterAround(speler.getX(),speler.getY());
+            veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(rijden){
             System.out.println("rijden");
@@ -156,12 +154,12 @@ public class SpelerController {
         else if(brandblusser) {
             System.out.println("Blussen: Oost");
             blussenActie(RECHTS);
-            veldC.ImageSetterAround(speler.getX(),speler.getY());
+            veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(hakken) {
             System.out.println("Hakken: Oost");
             hakActie(RECHTS);
-            veldC.ImageSetterAround(speler.getX(),speler.getY());
+            veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(rijden){
             System.out.println("rijden");
@@ -171,9 +169,9 @@ public class SpelerController {
     }
 
     // Als in SpelC op de special knop word gedrukt gaat deze functie lopen
-    // Er word gekeken welke rol een speler heeft en verwijst verolgens door naar de bijpassende specla methode.
+    // Er word gekeken welke rol een spelC.spel.getHuidigeSpeler() heeft en verwijst verolgens door naar de bijpassende specla methode.
     public void special() {
-        switch(speler.getRol()) {
+        switch(spelC.spel.getHuidigeSpeler().getRol()) {
             case VERKENNER:     verken();
                 break;
             case COMMANDANT:    commandeer();
@@ -188,23 +186,23 @@ public class SpelerController {
     }
 
 
-    // Als een commandant op special klikt kan hij een andere speler kiezen om te bewegen
+    // Als een commandant op special klikt kan hij een andere spelC.spel.getHuidigeSpeler() kiezen om te bewegen
     Kleur commandKeuze;
     public void commandeer() {
-        if (speler.getExtrapunten() > 0) {
+        if (spelC.spel.getHuidigeSpeler().getExtrapunten() > 0) {
             commandeer ^= true;
             if(commandeer) {
                 List<String> choices = new ArrayList<>();
                 Speler speler2;
                 for (int i = 0; i < spelC.spel.getSpelers().size(); i++) {
                     speler2 = spelC.spel.getSpelers().get(i);
-                    if (speler != speler2) choices.add(speler2.getKleur().getString());
+                    if (spelC.spel.getHuidigeSpeler() != speler2) choices.add(speler2.getKleur().getString());
                 }
 
-                ChoiceDialog<String> dialog = new ChoiceDialog<>("Kies een mede speler", choices);
+                ChoiceDialog<String> dialog = new ChoiceDialog<>("Kies een mede spelC.spel.getHuidigeSpeler()", choices);
                 dialog.setTitle("Commandant special");
-                dialog.setHeaderText("De commandant kan een andere speler commanderen te bewegen");
-                dialog.setContentText("Kies een mede speler:");
+                dialog.setHeaderText("De commandant kan een andere spelC.spel.getHuidigeSpeler() commanderen te bewegen");
+                dialog.setContentText("Kies een mede spelC.spel.getHuidigeSpeler():");
 
                 Optional<String> result = dialog.showAndWait();
                 if (result.isPresent()) {
@@ -235,19 +233,19 @@ public class SpelerController {
 
     // De daadwerkelijke beweeg actie van de commandant word hier afgehandeld.
     private void commandeerActie(Richting richting) {
-        Speler spelerhuidig = speler;
+        Speler spelerhuidig = spelC.spel.getHuidigeSpeler();
         for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
             if(spelC.spel.getSpelers().get(i).getKleur() == commandKeuze) {
-                speler = spelC.spel.getSpelers().get(i);
+                spelC.spel.setHuidigeSpeler(spelC.spel.getSpelers().get(i));
             }
         }
-        if(speler.getRol() == REDDINGSSPECIALIST) speler.setExtraPunten(speler.getExtrapunten()+1);
-        else speler.setActiepunten(speler.getActiepunten()+1);
+        if(spelC.spel.getHuidigeSpeler().getRol() == REDDINGSSPECIALIST) spelC.spel.getHuidigeSpeler().setExtraPunten(spelC.spel.getHuidigeSpeler().getExtrapunten()+1);
+        else spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()+1);
         boolean bewogen = beweegActie(richting);
-        if(!bewogen && speler.getRol() != REDDINGSSPECIALIST) speler.setActiepunten(speler.getActiepunten()-1);
-        speler = spelerhuidig;
-        if(bewogen) speler.setExtraPunten(speler.getExtrapunten()-1);
-        if(speler.getExtrapunten()<1) {
+        if(!bewogen && spelC.spel.getHuidigeSpeler().getRol() != REDDINGSSPECIALIST) spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()-1);
+        spelC.spel.setHuidigeSpeler(spelerhuidig);
+        if(bewogen) spelC.spel.getHuidigeSpeler().setExtraPunten(spelC.spel.getHuidigeSpeler().getExtrapunten()-1);
+        if(spelC.spel.getHuidigeSpeler().getExtrapunten()<1) {
             commandeer = false;
         }
     }
@@ -256,18 +254,18 @@ public class SpelerController {
         System.out.println("BLUS BLUS");
         Boolean opBWagen = false;
         switch(veldC.getVeldD().getBrandweerwagen()) {
-            case BOVEN: if(speler.getY()==0 && (speler.getX() == 3|| speler.getX() == 4)) {
+            case BOVEN: if(spelC.spel.getHuidigeSpeler().getY()==0 && (spelC.spel.getHuidigeSpeler().getX() == 3|| spelC.spel.getHuidigeSpeler().getX() == 4)) {
                 opBWagen = true;
             }
                 break;
-            case ONDER: if(speler.getY()==7 && (speler.getX() == 5|| speler.getX() == 6)) {
+            case ONDER: if(spelC.spel.getHuidigeSpeler().getY()==7 && (spelC.spel.getHuidigeSpeler().getX() == 5|| spelC.spel.getHuidigeSpeler().getX() == 6)) {
                 opBWagen = true;
             }
                 break;
-            case LINKS: if(speler.getX()==0 && (speler.getY() == 4|| speler.getY() == 5))
+            case LINKS: if(spelC.spel.getHuidigeSpeler().getX()==0 && (spelC.spel.getHuidigeSpeler().getY() == 4|| spelC.spel.getHuidigeSpeler().getY() == 5))
                 opBWagen = true;
                 break;
-            case RECHTS: if(speler.getX()==9 && (speler.getY() == 2|| speler.getY() == 3))
+            case RECHTS: if(spelC.spel.getHuidigeSpeler().getX()==9 && (spelC.spel.getHuidigeSpeler().getY() == 2|| spelC.spel.getHuidigeSpeler().getY() == 3))
                 opBWagen = true;
                 break;
         }
@@ -279,9 +277,9 @@ public class SpelerController {
             int x = 0;
             int y = 0;
             System.out.println("Ik ga nu blussen");
-            if (speler.getActiepunten() > 3 || (speler.getRol() == BRANDSPUITBEDIENER && speler.getActiepunten() > 1)) {
-                speler.setActiepunten(speler.getActiepunten() - 4);
-                if (speler.getRol() == BRANDSPUITBEDIENER) speler.setActiepunten(speler.getActiepunten() + 2);
+            if (spelC.spel.getHuidigeSpeler().getActiepunten() > 3 || (spelC.spel.getHuidigeSpeler().getRol() == BRANDSPUITBEDIENER && spelC.spel.getHuidigeSpeler().getActiepunten() > 1)) {
+                spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 4);
+                if (spelC.spel.getHuidigeSpeler().getRol() == BRANDSPUITBEDIENER) spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() + 2);
                 Richting kwadrant = veldC.getVeldD().getBrandweerwagen();
                 while(loop) {
                     loop = false;
@@ -323,7 +321,7 @@ public class SpelerController {
                             break;
                     }
 
-                    if (speler.getRol() == BRANDSPUITBEDIENER && eersteLoop) {
+                    if (spelC.spel.getHuidigeSpeler().getRol() == BRANDSPUITBEDIENER && eersteLoop) {
                         eersteLoop = false;
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                         alert.setTitle("Opnieuw gooien");
@@ -396,7 +394,7 @@ public class SpelerController {
 
     // L (dialog template gejat van Norddin), speciale actie van de verkenner, geeft een popup met alle niet ? personen en draait de gekeuze persoon om.
     private void verken() {
-        if(speler.getActiepunten()>0) {
+        if(spelC.spel.getHuidigeSpeler().getActiepunten()>0) {
             ArrayList<String> keuzes = new ArrayList<>();
             ArrayList<Persoon> personen = new ArrayList<>();
             int[][] xEnY = new int[3][2];
@@ -429,7 +427,7 @@ public class SpelerController {
                     if (keuzePersoon.get() == keuzes.get(i)) {
                         persoonOmdraaien(xEnY[i][0], xEnY[i][1]);
                         veldC.ImageSetter(xEnY[i][0], xEnY[i][1]);
-                        speler.setActiepunten(speler.getActiepunten()-1);
+                        spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()-1);
 
                     }
                 }
@@ -438,19 +436,19 @@ public class SpelerController {
     }
 
     private void helen(){
-        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
+        vak = veldC.getVeldD().getVakken()[spelC.spel.getHuidigeSpeler().getX()][spelC.spel.getHuidigeSpeler().getY()];
         if (!vak.getPersonen().isEmpty()){
             vak.getPersonen().get(0).setGeheeld();
         }
-        veldC.ImageSetter(speler.getX(),speler.getY());
+        veldC.ImageSetter(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
     }
     // dit is de special methode van specStoffen, indien mogelijk word een stoffen fiche verwijderd.
     private void onschadelijkMaken() {
-        int x = speler.getX();
-        int y = speler.getY();
-        if(speler.getActiepunten()>1 && veldC.getVeldD().getVakken()[x][y].isStoffen()) {
+        int x = spelC.spel.getHuidigeSpeler().getX();
+        int y = spelC.spel.getHuidigeSpeler().getY();
+        if(spelC.spel.getHuidigeSpeler().getActiepunten()>1 && veldC.getVeldD().getVakken()[x][y].isStoffen()) {
             veldC.getVeldD().getVakken()[x][y].setStoffen(false);
-            speler.setActiepunten(speler.getActiepunten()-2);
+            spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()-2);
             spelC.updatePunten();
             veldC.ImageSetter(x,y);
         }
@@ -514,7 +512,7 @@ public class SpelerController {
         return ("als je dit ziet is er iets mis met voertuig kiezen");
     }
     public void rijden(Richting richting) {
-        if(speler.getActiepunten()>1) {
+        if(spelC.spel.getHuidigeSpeler().getActiepunten()>1) {
             String wagen = kiezenVoertuig();
             System.out.println(wagen);
             Richting kant;
@@ -545,7 +543,7 @@ public class SpelerController {
                 }
                 if (!verkeerdeKant) {
                     veldC.veldD.setAmbulance(richting);
-                    speler.setActiepunten(speler.getActiepunten() - 2);
+                    spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 2);
                     veldC.carSetter();
                 }
 
@@ -577,7 +575,7 @@ public class SpelerController {
 
                 if (!verkeerdeKant) {
                     veldC.veldD.setBrandweerwagen(richting);
-                    speler.setActiepunten(speler.getActiepunten() - 2);
+                    spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 2);
                     veldC.carSetter();
                 }
 
@@ -588,58 +586,58 @@ public class SpelerController {
         System.out.println("Actie: Gebruik brandweerwagen");
     }
     public void dropItem(){
-        if(speler.isStof()){
-            if(speler.getX()==0 || speler.getX()==9 || speler.getY()==0 || speler.getY()== 7){
-                speler.setStof(false);
+        if(spelC.spel.getHuidigeSpeler().isStof()){
+            if(spelC.spel.getHuidigeSpeler().getX()==0 || spelC.spel.getHuidigeSpeler().getX()==9 || spelC.spel.getHuidigeSpeler().getY()==0 || spelC.spel.getHuidigeSpeler().getY()== 7){
+                spelC.spel.getHuidigeSpeler().setStof(false);
                 vak.setStoffen(false);
             }
             else{
-                speler.setStof(false);
+                spelC.spel.getHuidigeSpeler().setStof(false);
                 vak.setStoffen(true);
             }
 
         }
-        else if (speler.getPersoon() != null){
+        else if (spelC.spel.getHuidigeSpeler().getPersoon() != null){
             Richting kant = veldC.veldD.getAmbulance();
             boolean opAmbulance= false;
             switch(kant){
                 case BOVEN:
-                    if(speler.getY()==0 && (speler.getX()== 5 || speler.getX()== 6) ){
-                    opAmbulance = true;
+                    if(spelC.spel.getHuidigeSpeler().getY()==0 && (spelC.spel.getHuidigeSpeler().getX()== 5 || spelC.spel.getHuidigeSpeler().getX()== 6) ){
+                        opAmbulance = true;
                     }
                     break;
                 case RECHTS:
-                    if(speler.getX()==9 && (speler.getY()== 4 || speler.getY()== 5) ){
-                    opAmbulance = true;
+                    if(spelC.spel.getHuidigeSpeler().getX()==9 && (spelC.spel.getHuidigeSpeler().getY()== 4 || spelC.spel.getHuidigeSpeler().getY()== 5) ){
+                        opAmbulance = true;
                     }
                     break;
                 case ONDER:
-                    if(speler.getY()==7 && (speler.getX()== 3 || speler.getX()== 4) ){
-                    opAmbulance = true;
+                    if(spelC.spel.getHuidigeSpeler().getY()==7 && (spelC.spel.getHuidigeSpeler().getX()== 3 || spelC.spel.getHuidigeSpeler().getX()== 4) ){
+                        opAmbulance = true;
                     }
                     break;
                 case LINKS:
-                    if(speler.getX()==0 && (speler.getY()== 2 || speler.getY()== 3) ){
-                    opAmbulance = true;
+                    if(spelC.spel.getHuidigeSpeler().getX()==0 && (spelC.spel.getHuidigeSpeler().getY()== 2 || spelC.spel.getHuidigeSpeler().getY()== 3) ){
+                        opAmbulance = true;
                     }
                     break;
             }
             if(opAmbulance){
-                speler.setPersoon(null);
+                spelC.spel.getHuidigeSpeler().setPersoon(null);
                 spelC.spel.addGered();
             }
             else {
-                vak.setPersonen(speler.getPersoon());
-                speler.setPersoon(null);
+                vak.setPersonen(spelC.spel.getHuidigeSpeler().getPersoon());
+                spelC.spel.getHuidigeSpeler().setPersoon(null);
             }
             spelC.updatePunten();
         }
 
     }
     public void oppakkenActie(){
-        vak = veldC.getVeldD().getVakken()[speler.getX()][speler.getY()];
-        if(speler.isStof() || speler.getPersoon() !=null){
-           dropItem();
+        vak = veldC.getVeldD().getVakken()[spelC.spel.getHuidigeSpeler().getX()][spelC.spel.getHuidigeSpeler().getY()];
+        if(spelC.spel.getHuidigeSpeler().isStof() || spelC.spel.getHuidigeSpeler().getPersoon() !=null){
+            dropItem();
         }
 
         else if(vak.isStoffen() && !vak.getPersonen().isEmpty()){
@@ -655,52 +653,52 @@ public class SpelerController {
             Optional<String> keuzeObject = oppakkeus.showAndWait();
             if (keuzeObject.isPresent() && keuzeObject.get() != "Oppak object"){
                 if (keuzeObject.get() == "Gevaarlijke stoffen"){
-                    speler.setStof(true);
+                    spelC.spel.getHuidigeSpeler().setStof(true);
                     vak.setStoffen(false);
                 }
                 else {
-                    speler.setPersoon(vak.getPersonen().get(0));
+                    spelC.spel.getHuidigeSpeler().setPersoon(vak.getPersonen().get(0));
                     vak.getPersonen().remove(0);
                 }
             }
         }
         else if (vak.isStoffen()){
-            speler.setStof(true);
+            spelC.spel.getHuidigeSpeler().setStof(true);
             vak.setStoffen(false);
         }
         else if (!vak.getPersonen().isEmpty()){
-            speler.setPersoon(vak.getPersonen().get(0));
+            spelC.spel.getHuidigeSpeler().setPersoon(vak.getPersonen().get(0));
             vak.getPersonen().remove(0);
         }
-        veldC.ImageSetter(speler.getX(),speler.getY());
+        veldC.ImageSetter(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
     }
 
     private void hakActie(Richting richting) {
-        if(speler.getRol()==REDDINGSSPECIALIST) {
-            if(speler.getActiepunten()>0 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
-                speler.setActiepunten(speler.getActiepunten()-1);
+        if(spelC.spel.getHuidigeSpeler().getRol()==REDDINGSSPECIALIST) {
+            if(spelC.spel.getHuidigeSpeler().getActiepunten()>0 && veldC.doeBeschadiging(spelC.spel.getHuidigeSpeler().getX(), spelC.spel.getHuidigeSpeler().getY(), richting)) {
+                spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()-1);
             }
-        } else if(speler.getActiepunten()>1 && veldC.doeBeschadiging(speler.getX(), speler.getY(), richting)) {
-                    speler.setActiepunten(speler.getActiepunten()-2);
+        } else if(spelC.spel.getHuidigeSpeler().getActiepunten()>1 && veldC.doeBeschadiging(spelC.spel.getHuidigeSpeler().getX(), spelC.spel.getHuidigeSpeler().getY(), richting)) {
+            spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()-2);
         }
     }
 
     private void deurActie(Richting richting) {
-        int x = speler.getX();
-        int y = speler.getY();
+        int x = spelC.spel.getHuidigeSpeler().getX();
+        int y = spelC.spel.getHuidigeSpeler().getY();
         veldC.doeDeur(x,y,richting);
     }
 
     public void blussenActie(Richting richting) {
-        int x = speler.getX();
-        int y = speler.getY();
+        int x = spelC.spel.getHuidigeSpeler().getX();
+        int y = spelC.spel.getHuidigeSpeler().getY();
         vak = veldC.veldD.getVakken()[x][y];
-        if (vak.getObstakelRichting(richting).isBegaanbaar() && (speler.getActiepunten()>0 ||
-                (speler.getRol()== GASPAKDRAGER && speler.getExtrapunten()>0)) && ((speler.getRol()!=REDDINGSSPECIALIST
-                && speler.getRol()!=DOKTER) || speler.getActiepunten()>1)){
-            if(speler.getRol()==REDDINGSSPECIALIST || speler.getRol()==DOKTER) speler.setActiepunten(speler.getActiepunten()-1);
-            if(speler.getRol()==GASPAKDRAGER && speler.getExtrapunten()>0) speler.setExtraPunten(speler.getExtrapunten()-1);
-            else speler.setActiepunten(speler.getActiepunten()-1);
+        if (vak.getObstakelRichting(richting).isBegaanbaar() && (spelC.spel.getHuidigeSpeler().getActiepunten()>0 ||
+                (spelC.spel.getHuidigeSpeler().getRol()== GASPAKDRAGER && spelC.spel.getHuidigeSpeler().getExtrapunten()>0)) && ((spelC.spel.getHuidigeSpeler().getRol()!=REDDINGSSPECIALIST
+                && spelC.spel.getHuidigeSpeler().getRol()!=DOKTER) || spelC.spel.getHuidigeSpeler().getActiepunten()>1)){
+            if(spelC.spel.getHuidigeSpeler().getRol()==REDDINGSSPECIALIST || spelC.spel.getHuidigeSpeler().getRol()==DOKTER) spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()-1);
+            if(spelC.spel.getHuidigeSpeler().getRol()==GASPAKDRAGER && spelC.spel.getHuidigeSpeler().getExtrapunten()>0) spelC.spel.getHuidigeSpeler().setExtraPunten(spelC.spel.getHuidigeSpeler().getExtrapunten()-1);
+            else spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()-1);
 
             switch (richting) {
                 case BOVEN:
@@ -734,70 +732,70 @@ public class SpelerController {
     }
 
     private boolean draagt() {
-        if(speler.isStof()) return true;
-        if(speler.getPersoon() != null) return true;
+        if(spelC.spel.getHuidigeSpeler().isStof()) return true;
+        if(spelC.spel.getHuidigeSpeler().getPersoon() != null) return true;
         return false;
     }
 
     private void beweegActieKosten() {
-        if (speler.getRol() == REDDINGSSPECIALIST && (speler.getExtrapunten() > 1 || (speler.getExtrapunten() > 0 && !draagt()))) {
-            speler.setExtraPunten(speler.getExtrapunten() - 1);
-            if(draagt()) speler.setExtraPunten(speler.getExtrapunten() - 1);
-            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setExtraPunten(speler.getExtrapunten()+1);
+        if (spelC.spel.getHuidigeSpeler().getRol() == REDDINGSSPECIALIST && (spelC.spel.getHuidigeSpeler().getExtrapunten() > 1 || (spelC.spel.getHuidigeSpeler().getExtrapunten() > 0 && !draagt()))) {
+            spelC.spel.getHuidigeSpeler().setExtraPunten(spelC.spel.getHuidigeSpeler().getExtrapunten() - 1);
+            if(draagt()) spelC.spel.getHuidigeSpeler().setExtraPunten(spelC.spel.getHuidigeSpeler().getExtrapunten() - 1);
+            if(spelC.spel.getHuidigeSpeler().getPersoon()!=null && spelC.spel.getHuidigeSpeler().getPersoon().isGeheeld()) spelC.spel.getHuidigeSpeler().setExtraPunten(spelC.spel.getHuidigeSpeler().getExtrapunten()+1);
         } else {
-            speler.setActiepunten(speler.getActiepunten() - 1);
-            if(draagt())speler.setActiepunten(speler.getActiepunten() - 1);
-            if(speler.getPersoon()!=null && speler.getPersoon().isGeheeld()) speler.setActiepunten(speler.getActiepunten()+1);
+            spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 1);
+            if(draagt())spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 1);
+            if(spelC.spel.getHuidigeSpeler().getPersoon()!=null && spelC.spel.getHuidigeSpeler().getPersoon().isGeheeld()) spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()+1);
         }
     }
 
-    // verplaats de speler in de gewenste richting indien mogelijk.
+    // verplaats de spelC.spel.getHuidigeSpeler() in de gewenste richting indien mogelijk.
     private boolean beweegActie(Richting richting) {
         boolean returnValue = false;
-        Vak vak = veldC.veldD.getVakken()[speler.getX()][speler.getY()];
-        veldC.removeSpeler(speler.getKleur(), speler.getX(), speler.getY());
-        veldC.ImageSetter(speler.getX(), speler.getY());
-        if ((speler.getActiepunten() > 0 && !draagt()) || (speler.getRol() == REDDINGSSPECIALIST && speler.getExtrapunten() > 0 && !draagt()) ||
-                (speler.getActiepunten() > 1 && draagt()) || (speler.getRol() == REDDINGSSPECIALIST && speler.getExtrapunten() > 0 && !draagt())  ||
-                (speler.getActiepunten() > 0 && speler.getPersoon() != null && speler.getPersoon().isGeheeld()) || (speler.getRol() == REDDINGSSPECIALIST && speler.getExtrapunten() > 0 && speler.getPersoon() != null && speler.getPersoon().isGeheeld())) {
+        Vak vak = veldC.veldD.getVakken()[spelC.spel.getHuidigeSpeler().getX()][spelC.spel.getHuidigeSpeler().getY()];
+        veldC.removeSpeler(spelC.spel.getHuidigeSpeler().getKleur(), spelC.spel.getHuidigeSpeler().getX(), spelC.spel.getHuidigeSpeler().getY());
+        veldC.ImageSetter(spelC.spel.getHuidigeSpeler().getX(), spelC.spel.getHuidigeSpeler().getY());
+        if ((spelC.spel.getHuidigeSpeler().getActiepunten() > 0 && !draagt()) || (spelC.spel.getHuidigeSpeler().getRol() == REDDINGSSPECIALIST && spelC.spel.getHuidigeSpeler().getExtrapunten() > 0 && !draagt()) ||
+                (spelC.spel.getHuidigeSpeler().getActiepunten() > 1 && draagt()) || (spelC.spel.getHuidigeSpeler().getRol() == REDDINGSSPECIALIST && spelC.spel.getHuidigeSpeler().getExtrapunten() > 0 && !draagt())  ||
+                (spelC.spel.getHuidigeSpeler().getActiepunten() > 0 && spelC.spel.getHuidigeSpeler().getPersoon() != null && spelC.spel.getHuidigeSpeler().getPersoon().isGeheeld()) || (spelC.spel.getHuidigeSpeler().getRol() == REDDINGSSPECIALIST && spelC.spel.getHuidigeSpeler().getExtrapunten() > 0 && spelC.spel.getHuidigeSpeler().getPersoon() != null && spelC.spel.getHuidigeSpeler().getPersoon().isGeheeld())) {
             switch (richting) {
                 case BOVEN:
-                    if (speler.getY() > 0 && vak.boven.isBegaanbaar()) {
+                    if (spelC.spel.getHuidigeSpeler().getY() > 0 && vak.boven.isBegaanbaar()) {
                         beweegActieKosten();
-                        speler.setY(speler.getY() - 1);
-                        System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                        spelC.spel.getHuidigeSpeler().setY(spelC.spel.getHuidigeSpeler().getY() - 1);
+                        System.out.println("*De spelC.spel.getHuidigeSpeler() loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
                 case RECHTS:
-                    if (speler.getX() < 9 && vak.rechts.isBegaanbaar()) {
+                    if (spelC.spel.getHuidigeSpeler().getX() < 9 && vak.rechts.isBegaanbaar()) {
                         beweegActieKosten();
-                        speler.setX(speler.getX() + 1);
-                        System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                        spelC.spel.getHuidigeSpeler().setX(spelC.spel.getHuidigeSpeler().getX() + 1);
+                        System.out.println("*De spelC.spel.getHuidigeSpeler() loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
                 case ONDER:
-                    if (speler.getY() < 7 && vak.onder.isBegaanbaar()) {
+                    if (spelC.spel.getHuidigeSpeler().getY() < 7 && vak.onder.isBegaanbaar()) {
                         beweegActieKosten();
-                        speler.setY(speler.getY() + 1);
-                        System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                        spelC.spel.getHuidigeSpeler().setY(spelC.spel.getHuidigeSpeler().getY() + 1);
+                        System.out.println("*De spelC.spel.getHuidigeSpeler() loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
                 case LINKS:
-                    if (speler.getX() > 0 && vak.links.isBegaanbaar()) {
+                    if (spelC.spel.getHuidigeSpeler().getX() > 0 && vak.links.isBegaanbaar()) {
                         beweegActieKosten();
-                        speler.setX(speler.getX() - 1);
-                        System.out.println("*De speler loopt naar: " + speler.getX() + "," + speler.getY() + "*");
+                        spelC.spel.getHuidigeSpeler().setX(spelC.spel.getHuidigeSpeler().getX() - 1);
+                        System.out.println("*De spelC.spel.getHuidigeSpeler() loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
             }
         }
-        veldC.addSpeler(speler.getKleur(), speler.getX(), speler.getY());
+        veldC.addSpeler(spelC.spel.getHuidigeSpeler().getKleur(), spelC.spel.getHuidigeSpeler().getX(), spelC.spel.getHuidigeSpeler().getY());
         persoonOmdraaien();
-        veldC.ImageSetter(speler.getX(), speler.getY());
+        veldC.ImageSetter(spelC.spel.getHuidigeSpeler().getX(), spelC.spel.getHuidigeSpeler().getY());
         return returnValue;
     }
 
@@ -820,8 +818,8 @@ public class SpelerController {
     }
 
     private void persoonOmdraaien() {
-        int x = speler.getX();
-        int y = speler.getY();
+        int x = spelC.spel.getHuidigeSpeler().getX();
+        int y = spelC.spel.getHuidigeSpeler().getY();
         vak = veldC.getVeldD().getVakken()[x][y];
         if(!vak.getPersonen().isEmpty()) {
             for(int i = 0; i < vak.getPersonen().size(); i++) {
@@ -841,20 +839,20 @@ public class SpelerController {
 
     // reset AP en EP bij het eindigen van een beurt.
     public void resetPunten() {
-        speler.setActiepunten(speler.getActiepunten()+4);
-        if(speler.getActiepunten()>8) speler.setActiepunten(8);
-        if(speler.getRol()==GASPAKDRAGER || speler.getRol() == REDDINGSSPECIALIST) speler.setActiepunten(speler.getActiepunten()-1);
-        if(speler.getRol()==MANNETJESPUTTER) speler.setActiepunten(speler.getActiepunten()+1);
-        if(speler.getRol()==GODMODE) speler.setActiepunten(9001);
+        spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()+4);
+        if(spelC.spel.getHuidigeSpeler().getActiepunten()>8) spelC.spel.getHuidigeSpeler().setActiepunten(8);
+        if(spelC.spel.getHuidigeSpeler().getRol()==GASPAKDRAGER || spelC.spel.getHuidigeSpeler().getRol() == REDDINGSSPECIALIST) spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()-1);
+        if(spelC.spel.getHuidigeSpeler().getRol()==MANNETJESPUTTER) spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()+1);
+        if(spelC.spel.getHuidigeSpeler().getRol()==GODMODE) spelC.spel.getHuidigeSpeler().setActiepunten(9001);
 
-        switch(speler.getRol()) {
-            case REDDINGSSPECIALIST: speler.setExtraPunten(3);
+        switch(spelC.spel.getHuidigeSpeler().getRol()) {
+            case REDDINGSSPECIALIST: spelC.spel.getHuidigeSpeler().setExtraPunten(3);
                 break;
-            case GASPAKDRAGER: speler.setExtraPunten(3);
+            case GASPAKDRAGER: spelC.spel.getHuidigeSpeler().setExtraPunten(3);
                 break;
-            case COMMANDANT: speler.setExtraPunten(2);
+            case COMMANDANT: spelC.spel.getHuidigeSpeler().setExtraPunten(2);
                 break;
-            default: speler.setExtraPunten(0);
+            default: spelC.spel.getHuidigeSpeler().setExtraPunten(0);
         }
         spelC.updatePunten();
     }
@@ -874,7 +872,7 @@ public class SpelerController {
         stage.show();
     }
     public Speler getSpeler() {
-        return speler;
+        return spelC.spel.getHuidigeSpeler();
     }
 
 }
