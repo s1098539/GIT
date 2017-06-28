@@ -798,11 +798,11 @@ public class SpelController implements Initializable {
 
                 result = alert.showAndWait();
                 if (result.get() == ButtonType.OK){
-                    if(spelerC.speler.isSlechtziendmodus()){
-                        spelerC.speler.setSlechtziendmodus(false);
+                    if(spel.getHuidigeSpeler().isSlechtziendmodus()){
+                        spel.getHuidigeSpeler().setSlechtziendmodus(false);
                     }
                     else{
-                        spelerC.speler.setSlechtziendmodus(true);
+                        spel.getHuidigeSpeler().setSlechtziendmodus(true);
                     }
                 } else {
                     alert.close();
@@ -836,7 +836,11 @@ public class SpelController implements Initializable {
         });
 
         btnRefresh.setOnAction(event -> {
+            try {
                 refreshSpel();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
         });
     }
     public void meerijden(Richting richting, String wagen) {
@@ -1015,7 +1019,11 @@ public class SpelController implements Initializable {
         //eersteBeurt();
 
         updateSpel();
-        setNamen();
+        try {
+            setNamen();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         setRollen();
         veldC.ImageSetterALL();
     }
@@ -1450,13 +1458,10 @@ public class SpelController implements Initializable {
     }
     public void refreshSpel() throws RemoteException {
         System.out.println("REFRESH");
-        try {
-            setSpel(clientStub.updateGetSpel());
-            veldC.setVeldD(clientStub.updateGetData());
-            veldC.ImageSetterALL();
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
+
+        setSpel(clientStub.updateGetSpel());
+        veldC.setVeldD(clientStub.updateGetData());
+        veldC.ImageSetterALL();
         setActiveSpelerPlaatje();
         setRollen();
 

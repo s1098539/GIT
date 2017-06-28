@@ -516,34 +516,32 @@ public class SpelerController {
             String wagen = kiezenVoertuig();
             System.out.println(wagen);
             Richting kant;
-            boolean goedeRichting = true;
-            boolean zelfdePlaats = false;
+            boolean verkeerdeKant = false;
             if (wagen.equals("Ambulance")) {
                 kant = veldC.veldD.getAmbulance();
                 switch (kant) {
                     case BOVEN:
                         if (richting == Richting.ONDER && richting != kant) {
-                            goedeRichting = false;
+                            verkeerdeKant = true;
                         }
                         break;
                     case RECHTS:
                         if (richting == Richting.LINKS && richting != kant) {
-                            goedeRichting = false;
+                            verkeerdeKant = true;
                         }
                         break;
                     case ONDER:
                         if (richting == Richting.BOVEN && richting != kant) {
-                            goedeRichting = false;
+                            verkeerdeKant = true;
                         }
                         break;
                     case LINKS:
                         if (richting == Richting.RECHTS && richting != kant) {
-                            goedeRichting = false;
+                            verkeerdeKant = true;
                         }
                         break;
                 }
-                if (goedeRichting) {
-                    spelC.meerijden(richting, wagen);
+                if (!verkeerdeKant) {
                     veldC.veldD.setAmbulance(richting);
                     spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 2);
                     veldC.carSetter();
@@ -555,40 +553,27 @@ public class SpelerController {
                 switch (kant) {
                     case BOVEN:
                         if (richting == Richting.ONDER && richting != kant) {
-                            goedeRichting = false;
-                        }
-                        else if ((speler.getX()==3 || speler.getX()==4) && speler.getY()==0){
-                            zelfdePlaats = true;
+                            verkeerdeKant = true;
                         }
                         break;
                     case RECHTS:
-                        if (richting == Richting.LINKS && richting != kant ) {
-                            goedeRichting = false;
-                        }
-                        else if ((speler.getY()==2 || speler.getY()==3) && speler.getX()==9){
-                            zelfdePlaats = true;
+                        if (richting == Richting.LINKS && richting != kant) {
+                            verkeerdeKant = true;
                         }
                         break;
                     case ONDER:
                         if (richting == Richting.BOVEN && richting != kant) {
-                            goedeRichting = false;
-                        }
-                        else if ((speler.getX()==5 || speler.getX()==6) && speler.getY()==7){
-                            zelfdePlaats = true;
+                            verkeerdeKant = true;
                         }
                         break;
                     case LINKS:
                         if (richting == Richting.RECHTS && richting != kant) {
-                            goedeRichting = false;
-                        }
-                        else if ((speler.getY()==4 || speler.getY()==5) && speler.getX()==0){
-                            zelfdePlaats = true;
+                            verkeerdeKant = true;
                         }
                         break;
                 }
 
-                if (goedeRichting && zelfdePlaats) {
-                    spelC.meerijden(richting, wagen);
+                if (!verkeerdeKant) {
                     veldC.veldD.setBrandweerwagen(richting);
                     spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 2);
                     veldC.carSetter();
@@ -597,7 +582,9 @@ public class SpelerController {
             }
         }
     }
-
+    private void brandweerwagenActie(){
+        System.out.println("Actie: Gebruik brandweerwagen");
+    }
     public void dropItem(){
         if(spelC.spel.getHuidigeSpeler().isStof()){
             if(spelC.spel.getHuidigeSpeler().getX()==0 || spelC.spel.getHuidigeSpeler().getX()==9 || spelC.spel.getHuidigeSpeler().getY()==0 || spelC.spel.getHuidigeSpeler().getY()== 7){
