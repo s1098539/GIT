@@ -100,14 +100,16 @@ public class Main2 extends Application {
            // clientStub.registerObserver(impl);
 
 
-            String naam1 = "Norddin";
+            String naam = spelC.getUsername();
 //            String naam2 = "Norddin2";
 //            String naam3 = "Norddin3";
 //            String naam4 = "Norddin4";
 //            String naam5 = "Norddin5";
 //            String naam6 = "Norddin6";
 
-            Kleur kleur = clientStub.addSpeler(naam1);
+            Kleur kleur = clientStub.addSpeler(naam);
+            System.out.println(clientStub.GetSpeler(kleur).getNaam());
+            //clientStub.GetSpeler(kleur);
 //            Kleur kleur1 = clientStub.addSpeler(naam2);
 //            Kleur kleur2 = clientStub.addSpeler(naam3);
 //            Kleur kleur3 = clientStub.addSpeler(naam4);
@@ -115,10 +117,7 @@ public class Main2 extends Application {
 //            Kleur kleur5 = clientStub.addSpeler(naam6);
 
 //            System.out.println(clientStub.GetSpeler(kleur));
-            System.out.println("De spelerkleur " + kleur + " is aan je toegewezen.");
-//            System.out.println(clientStub.GetSpeler(kleur1));
-//            System.out.println(kleur1);
-//            System.out.println(clientStub.GetSpeler(kleur2));
+            System.out.println("Je naam is " + clientStub.GetSpeler(kleur).getNaam() + " en je kleur is " + kleur + ".");
 //            System.out.println(kleur2);
 //            System.out.println(clientStub.GetSpeler(kleur3));
 //            System.out.println(kleur3);
