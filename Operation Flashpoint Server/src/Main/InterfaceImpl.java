@@ -144,11 +144,13 @@ public class InterfaceImpl implements Interface, Serializable {
     @Override
     public synchronized void unregisterObserver(Interface gameListener) throws RemoteException {
         this.gameListeners.remove(gameListener);
+        System.out.println("Interface listener removed.");
     }
 
     @Override
     public synchronized void unregisterObserver(ChatListenInterface listener) throws RemoteException {
         this.Listeners.remove(listener);
+        System.out.println("ChatListenerInterface removed");
     }
 
 
