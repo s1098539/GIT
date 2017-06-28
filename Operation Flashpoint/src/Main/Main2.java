@@ -34,7 +34,6 @@ public class Main2 extends Application {
         primaryStage.show();
         System.out.println("The Application has started.");
         SpeelveldController veldC = new SpeelveldController();
-        ChatListen listen = new ChatListen(spelC.getHost(), spelC.getPort(), spelC, veldC);
         SpelerController spelerC = new SpelerController();
         DobbelsteenController dobbelC = new DobbelsteenController();
         ChatController chatC = new ChatController();
@@ -82,7 +81,7 @@ public class Main2 extends Application {
                 spelC.getChatArea().appendText(msg);
             }
         });
-
+        ChatListen listen = new ChatListen(spelC.getHost(), spelC.getPort(), spelC, veldC);
         veldC.run();
 
         //This is where the client makes a connection to the server.

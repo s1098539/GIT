@@ -672,7 +672,7 @@ public class SpelController implements Initializable {
             }
             if (e.getCode() == KeyCode.DIGIT5) {
                 veranderKlasse();
-                updateSpel();
+
             }
 
 
