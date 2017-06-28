@@ -20,6 +20,7 @@ import static javafx.application.Application.launch;
 public class Main2 extends Application {
     SpelController spelC;
 
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -47,6 +48,7 @@ public class Main2 extends Application {
         chatC.setControllers(spelC, veldC, spelerC, dobbelC, chatC);
 
         spraakC.setControllers(spelC, spelerC);
+        spelC.Lobby();
         /*printwriter om alles wat in de console uitgeprint wordt in de chat te zetten. Messages worden returned via
         system.out.println en gameberichten ook dus zo kan je ze allebij in de chat zetten.*/
 //        String serverAddress = "145.101.88.129";
@@ -89,9 +91,9 @@ public class Main2 extends Application {
 //        String naam = "Rafe"; //NAAM CLIENT
 //        String ip = "localhost"; //IP SERVER
         try {
-            System.out.println("Getting access to the registry ...");
+//            System.out.println("Getting access to the registry ...");
             Registry registry = LocateRegistry.getRegistry(spelC.getHost());
-            System.out.println("Getting the Main.Interface stub from registry ...");
+//            System.out.println("Getting the Main.Interface stub from registry ...");
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
 
 
@@ -112,8 +114,8 @@ public class Main2 extends Application {
 //            Kleur kleur4 = clientStub.addSpeler(naam5);
 //            Kleur kleur5 = clientStub.addSpeler(naam6);
 
-            System.out.println(clientStub.GetSpeler(kleur));
-            System.out.println(kleur);
+//            System.out.println(clientStub.GetSpeler(kleur));
+            System.out.println("De spelerkleur " + kleur + " is aan je toegewezen.");
 //            System.out.println(clientStub.GetSpeler(kleur1));
 //            System.out.println(kleur1);
 //            System.out.println(clientStub.GetSpeler(kleur2));
@@ -126,7 +128,7 @@ public class Main2 extends Application {
 //            System.out.println(kleur5);
 
 
-            ChatListen listen = new ChatListen(spelC.getHost());
+            ChatListen listen = new ChatListen(spelC.getHost(), spelC.getPort());
             InterfaceImpl impl = new InterfaceImpl();
             clientStub.registerObserverSpel(impl);
 
@@ -139,7 +141,7 @@ public class Main2 extends Application {
 
 
             //TODO DEBUGLINES
-            System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n.............................");
+//            System.out.println("DEBUGGING STARTED\n \n \nRESPONSES BELOW THIS LINE. \n.............................");
             //System.out.println(clientStub.updateGetSpel());
 //            clientStub.updateSetSpel(spelC.getSpel());
 //            System.out.println(clientStub.updateGetSpel());

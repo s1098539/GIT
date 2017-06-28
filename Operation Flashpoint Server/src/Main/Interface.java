@@ -42,6 +42,6 @@ public interface Interface extends Remote {
 
     public SpeelveldData updateGetData() throws RemoteException;
 
-    public void notifyObserversSpel(Spel spelServer, SpeelveldData veldServer) throws RemoteException;
+    public void notifyObserversSpel() throws RemoteException;
 
 }

@@ -105,13 +105,14 @@ public class SpelController implements Initializable {
     boolean spawnBrandhaard;
     int hotspots = 6;
     String localMessage = "";
-    String host;
+    String host = "127.0.0.1";
     String username = "";
     Send sender;
     Spel spel;
     int i = 0;
     int b = 0;
     Registry registry = null;
+    int port = 1099;
 
     SpeelveldController veldC;
     SpelerController spelerC;
@@ -119,6 +120,7 @@ public class SpelController implements Initializable {
     ChatController chatC;
     SpraakController spraakC;
     SpelController spelC;
+
 
     int beurtCount = 0;
     Boolean invalidCoordinates;
@@ -213,6 +215,14 @@ public class SpelController implements Initializable {
         }
     }
 
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
     public Spel getSpel() {
         return spel;
     }
@@ -297,18 +307,6 @@ public class SpelController implements Initializable {
 
     // dit is de eerste methode die deze klasse runt, de stackpane wordt uit de fxml view gehaald en een gridpane word toegevoegd.
     public void run() {
-
-        //Dialoog 1(ip adress)
-        dialog.setHeaderText("Voer het IP-adres van de host in");
-        dialog.setContentText("IP-adres:");
-        Optional<String> ipadress = dialog.showAndWait();
-        setHost(ipadress.get());
-
-        //Dialoog 2(naam)
-        dialog2.setHeaderText("Voer je naam in");
-        dialog2.setContentText("Naam: ");
-        Optional<String> naam = dialog2.showAndWait();
-        setUsername(naam.get());
 
 
         veldC.carViewFactory();
@@ -797,17 +795,7 @@ public class SpelController implements Initializable {
         //eersteBeurt();
         veldC.ImageSetterALL();
 
-        try {
-            registry = LocateRegistry.getRegistry(getHost());
-            Interface clientStub = (Interface) registry.lookup("Main.Interface");
-            clientStub.setSpelData(spel, veldC.getVeldD());
-
-            clientStub.setSpelData(spel, veldC.getVeldD());
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        } catch (NotBoundException e) {
-            e.printStackTrace();
-        }
+        updateSpel();
     }
 
 
@@ -1239,11 +1227,35 @@ public class SpelController implements Initializable {
     public void refreshSpel() {
         System.out.println("REFRESH");
         try {
-            registry = LocateRegistry.getRegistry(getHost());
+            registry = LocateRegistry.getRegistry(getHost(), port);
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
             setSpel(clientStub.updateGetSpel());
             veldC.setVeldD(clientStub.updateGetData());
             veldC.ImageSetterALL();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (NotBoundException e) {
+            e.printStackTrace();
+        }
+    }
+    public void Lobby() {
+        //Dialoog 1(ip adress)
+        dialog.setHeaderText("Voer het IP-adres van de host in");
+        dialog.setContentText("IP-adres:");
+        Optional<String> ipadress = dialog.showAndWait();
+        setHost(ipadress.get());
+
+        //Dialoog 2(naam)
+        dialog2.setHeaderText("Voer je naam in");
+        dialog2.setContentText("Naam: ");
+        Optional<String> naam = dialog2.showAndWait();
+        setUsername(naam.get());
+    }
+    public void updateSpel() {
+        try {
+            registry = LocateRegistry.getRegistry(getHost(), getPort());
+            Interface clientStub = (Interface) registry.lookup("Main.Interface");
+            clientStub.setSpelData(getSpel(), veldC.getVeldD());
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (NotBoundException e) {

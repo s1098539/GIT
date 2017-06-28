@@ -55,7 +55,7 @@ public class ChatController {
         spelC.setLocalMessage(spelC.getTextInput().getText());
 
         try {
-            registry = LocateRegistry.getRegistry("localhost");
+            registry = LocateRegistry.getRegistry(spelC.getHost());
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
             clientStub.sendMessageObject(spelC.getUsername(), spelC.getLocalMessage());
 

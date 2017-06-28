@@ -5,6 +5,7 @@ import Model.Message;
 import Model.SpeelveldData;
 import Model.Spel;
 
+import java.io.IOException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -18,19 +19,33 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
     SpelController spelC;
     SpeelveldController veldC;
     Registry registry = null;
+    String host;
+    int port;
 
-    protected ChatListen(String host) throws RemoteException {
+    public String getHost() {return host;}
+    public void setHost(String host) {this.host = host;    }
+    public int getPort() {return port;}
+    public void setPort(int port) {this.port = port;}
 
+    public ChatListen(String host, int port) throws RemoteException {
 
+        setHost(host);
+        setPort(port);
 
         try {
-            registry = LocateRegistry.getRegistry("localhost");
+            registry = LocateRegistry.getRegistry(host,port);
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
             clientStub.registerObserver(this);
         } catch (NotBoundException e) {
             e.printStackTrace();
         }
 
+        try {
+            spelC = new SpelController();
+            veldC = new SpeelveldController();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) throws Exception {
@@ -45,18 +60,10 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
     }
 
     @Override
-    public void receiveGame(Spel spelServer, SpeelveldData veldServer) throws RemoteException {
+    public void receiveGame() throws RemoteException {
 
-//        try {
-//            registry = LocateRegistry.getRegistry("localhost");
-//            Interface clientStub = (Interface) registry.lookup("Main.Interface");
-//            spelC.setSpel(clientStub.updateGetSpel());
-//            veldC.setVeldD(clientStub.updateGetData());
-//            veldC.ImageSetterALL();
-//        } catch (NotBoundException e) {
-//            e.printStackTrace();
-//        }
-//
+spelC.updateSpel();
+
     }
     }
 

@@ -22,6 +22,11 @@ public class InterfaceImpl implements Interface, Serializable {
     Spel spelServer;
     SpeelveldData veldServer;
 
+    public Spel getSpelServer() {return spelServer;}
+    public void setSpelServer(Spel spelServer) {this.spelServer = spelServer;}
+    public SpeelveldData getVeldServer() {return veldServer;}
+    public void setVeldServer(SpeelveldData veldServer) {this.veldServer = veldServer;}
+
     protected InterfaceImpl() throws IOException {
     }
 
@@ -100,20 +105,20 @@ public class InterfaceImpl implements Interface, Serializable {
     @Override
     public void setSpelData(Spel spel, SpeelveldData veldD) throws RemoteException {
 
-        this.veldServer = veldD;
-        this.spelServer = spel;
-        this.notifyObserversSpel(spel, veldD);
+        setVeldServer(veldD);
+        setSpelServer(spel);
+        this.notifyObserversSpel();
 
     }
 
     @Override
     public Spel updateGetSpel() throws RemoteException {
-        return this.spelServer;
+        return getSpelServer();
     }
 
     @Override
     public SpeelveldData updateGetData() throws RemoteException {
-        return this.veldServer;
+        return getVeldServer();
     }
 
     //---------------------------------->
@@ -170,14 +175,14 @@ public class InterfaceImpl implements Interface, Serializable {
         System.out.println("Notified observers");
     }
     @Override
-    public synchronized void notifyObserversSpel(Spel spelServer, SpeelveldData veldServer) throws RemoteException {
+    public synchronized void notifyObserversSpel() throws RemoteException {
         for (ChatListenInterface client : Listeners) {
-            client.receiveGame(spelServer, veldServer);
+            client.receiveGame();
         }
         System.out.println("Notified observers");
     }
     public static void main(String[] args) throws Exception{
-        InterfaceImpl impl = new InterfaceImpl();
+
     }
 }
 
