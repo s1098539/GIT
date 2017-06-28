@@ -20,7 +20,7 @@ import javafx.scene.layout.*;
 import javafx.util.Pair;
 import sun.plugin.javascript.navig.Anchor;
 import java.awt.event.ActionEvent;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -104,8 +104,8 @@ public class SpelController implements Initializable {
     Vak vak;
     boolean spawnBrandhaard;
     int hotspots = 6;
-    String localMessage = "";
-    String host = "127.0.0.1";
+    String localMessage = "127.0.0.1";
+    String host = "";
     String username = "";
     Send sender;
     Spel spel;
@@ -1288,4 +1288,81 @@ public class SpelController implements Initializable {
             e.printStackTrace();
         }
     }
+
+        //TODO SAVESTATES AND SHIT
+    String spelfile = "spel.ser";
+    String veldfile =  "veld.ser";
+
+    public void writeSpel() {
+        try {
+            //Write
+            FileOutputStream fos = new FileOutputStream(spelfile);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(spel);
+            oos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void writeVeld(){
+        try {
+            FileOutputStream fos = new FileOutputStream(veldfile);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(veldC.veldD);
+            oos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Spel readSpel() {
+        Spel ss = null;
+        try {
+            //Read spel
+            FileInputStream fis = new FileInputStream(spelfile);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            Spel SpelSave = (Spel) ois.readObject();
+            ss = SpelSave;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return ss;
+    }
+
+    public SpeelveldData readVeld() {
+        SpeelveldData svd = null;
+        try {
+            //Read veld
+            FileInputStream fis = new FileInputStream(veldfile);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            SpeelveldData VeldSave = (SpeelveldData) ois.readObject();
+            svd = VeldSave;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return svd;
+    }
+
+    public void save(){
+        writeSpel();
+        writeVeld();
+    }
+
+    public void read(){
+        readSpel();
+        readVeld();
+    }
 }
+
+
