@@ -771,11 +771,11 @@ public class SpelController implements Initializable {
         });
         options.setOnAction(event -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirmation Dialog with Custom Actions");
-            alert.setHeaderText("Look, a Confirmation Dialog with Custom Actions");
-            alert.setContentText("Choose your option.");
+            alert.setTitle("Options");
+            alert.setHeaderText("Wilt u opslaan/laden of de slechtzienmodes toggelen.");
+            alert.setContentText("Maak uw keuze.");
 
-            ButtonType buttonTypeOne = new ButtonType("Slechtzienmodes");
+            ButtonType buttonTypeOne = new ButtonType("slechtziend");
             ButtonType buttonTypeTwo = new ButtonType("Save/Load");
             ButtonType buttonTypeCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
 
