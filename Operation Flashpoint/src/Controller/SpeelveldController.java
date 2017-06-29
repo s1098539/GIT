@@ -353,23 +353,7 @@ public class SpeelveldController {
     public void setMap(){
         int x;
         int y;
-        for(int brandhaarden=0; brandhaarden<3; brandhaarden++) {
-            dobbelC.getD8().gooi();
-            dobbelC.getD6().gooi();
-            x = dobbelC.getD8().getWaarde();
-            y = dobbelC.getD6().getWaarde();
-            veldD.getVakken()[x][y].setHotspot(true);
-        }
-        for(int gs=0; gs<3; gs++) {
-            dobbelC.getD8().gooi();
-            dobbelC.getD6().gooi();
-            x = dobbelC.getD8().getWaarde();
-            y = dobbelC.getD6().getWaarde();
-            veldD.getVakken()[x][y].setStoffen(true);
-        }
-
-
-
+        int GS = 3;
 
         //buitenmuren horizontaal
         for(x = 1; x <9; x++) {
@@ -462,12 +446,69 @@ public class SpeelveldController {
         veldD.getVakken()[3][7].setBoven(LEEG);
         veldD.getVakken()[3][6].setOnder(LEEG);
 
-        for(int explosies=0; explosies<3; explosies++) {
+        dobbelC.getD8().gooi();
+        x = dobbelC.getD8().getWaarde();
+        int a = 3, b = 3;
+        switch(x){
+            case 1:
+                break;
+            case 2:
+                b++;
+                break;
+            case 3:
+                b+=2;
+                break;
+            case 4:
+                b+=3;
+                break;
+            case 5:
+                a++;
+                b+=3;
+                break;
+            case 6:
+                a++;
+                b+=2;
+                break;
+            case 7:
+                a++;
+                b++;
+                break;
+            case 8:
+                a++;
+                break;
+
+        }
+        spelC.checkExplosie(a,b);
+        veldD.getVakken()[a][b].setHotspot(true);
+
+        do {
             dobbelC.getD8().gooi();
             dobbelC.getD6().gooi();
             x = dobbelC.getD8().getWaarde();
             y = dobbelC.getD6().getWaarde();
-            spelC.checkExplosie(x,y);
+
+        }while(veldD.getVakken()[x][y].isVuur());
+        spelC.checkExplosie(x,y);
+        veldD.getVakken()[x][y].setHotspot(true);
+
+        dobbelC.getD8().flip();
+        x = dobbelC.getD8().getWaarde();
+        do {
+            dobbelC.getD6().gooi();
+            y = dobbelC.getD6().getWaarde();
+        }while(veldD.getVakken()[x][y].isVuur());
+        spelC.checkExplosie(x,y);
+        veldD.getVakken()[x][y].setHotspot(true);
+
+        while (GS > 0) {
+            do {
+                dobbelC.getD8().gooi();
+                dobbelC.getD6().gooi();
+                x = dobbelC.getD8().getWaarde();
+                y = dobbelC.getD6().getWaarde();
+            } while (veldD.getVakken()[x][y].isVuur());
+            veldD.getVakken()[x][y].setStoffen(true);
+            GS--;
         }
     }
 

@@ -153,17 +153,6 @@ public class InterfaceImpl implements Interface, Serializable {
         System.out.println("ChatListenerInterface removed");
     }
 
-
-//    public void update(Spel spel) throws RemoteException {
-//        spelC.setSpel(spel);
-//    }
-
-
-//    @Override
-//    public void updateMessage(Message message) throws RemoteException {
-//        System.out.println(message.getSenderName() + ": " + message.getMessage());
-//    }
-
     @Override
     public void sendMessageObject(String user, String message) throws RemoteException {
         Message messageObject = new Message(user, message);

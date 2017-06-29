@@ -30,10 +30,9 @@ public class Spel implements Serializable {
     }
 
     public void setSpelers(Speler speler) {
-
             this.spelers.add(speler);
-
     }
+
     public ArrayList<Speler> getSpelers(){
         return spelers;
     }
