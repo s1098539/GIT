@@ -390,8 +390,6 @@ public class SpraakController {
         clip = AudioSystem.getClip();
         clip.open(audioInputStream);
         clip.start();
-        wait(1000);
-        clip.stop();
 
 
 //        InputStream in = new FileInputStream(s);
@@ -417,10 +415,12 @@ public class SpraakController {
 
         if(play){
             play=false;
+            clip.stop();
         }
 
         if(!play){
             play=true;
+            clip.start();
         }
     }
 
