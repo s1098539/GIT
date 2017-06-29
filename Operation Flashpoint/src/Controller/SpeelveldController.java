@@ -471,7 +471,7 @@ public class SpeelveldController {
         }
     }
 
-    public void doeDeur(int x, int y, Richting richting) {
+    public boolean doeDeur(int x, int y, Richting richting) {
         Vak vak = veldD.getVakken()[x][y];
         switch(richting) {
             case BOVEN:
@@ -485,6 +485,7 @@ public class SpeelveldController {
                             break;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Boven)");
+                            return false;
                     }
                     ImageSetter(x, y);
                     ImageSetter(x, y-1);
@@ -501,6 +502,7 @@ public class SpeelveldController {
                             break;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Rechts)");
+                            return false;
                     }
                     ImageSetter(x, y);
                     ImageSetter(x+1, y);
@@ -517,6 +519,7 @@ public class SpeelveldController {
                             break;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Links)");
+                            return false;
                     }
                     ImageSetter(x, y);
                     ImageSetter(x-1, y);
@@ -533,6 +536,7 @@ public class SpeelveldController {
                             break;
                         default:
                             System.out.println("Unexpected obstakel (SpeelveldController.doeDeur.Onder)");
+                            return false;
                     }
                     ImageSetter(x, y);
                     ImageSetter(x, y+1);
@@ -540,7 +544,9 @@ public class SpeelveldController {
                 break;
             default:
                 System.out.println("Unexpected Richting: " + richting + "SpeelveldController.doeDeur.default");
+                return false;
         }
+        return true;
     }
 
 

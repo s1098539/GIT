@@ -686,7 +686,12 @@ public class SpelerController {
     private void deurActie(Richting richting) {
         int x = spelC.spel.getHuidigeSpeler().getX();
         int y = spelC.spel.getHuidigeSpeler().getY();
-        veldC.doeDeur(x,y,richting);
+        if(spelC.spel.getHuidigeSpeler().getActiepunten()>0) {
+            if(veldC.doeDeur(x,y,richting)) {
+                spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten()-1);
+            }
+        }
+
     }
 
     public void blussenActie(Richting richting) {
