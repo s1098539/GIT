@@ -1002,12 +1002,12 @@ public class SpelController implements Initializable {
     }
 
 
-    // word aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
+    // wordt aangeroepen als op de end turn knop word gedrukt en handeld alle relevante methodes hier voor af.
     public void endTurn() {
         checkWin();
-        spelerC.togglesOff();
-        toggleViewUpdate();
-        nieuwRook();
+        spelerC.togglesOff(); //Zet alle geactiveerde knoppen uit.
+        toggleViewUpdate(); //Updates button-toggle view.
+        nieuwRook(); //Spawned nieuw rook element.
         checkVonkoverslag();
         checkStoffen();
         spelerC.dropItem();
@@ -1028,28 +1028,28 @@ public class SpelController implements Initializable {
         veldC.ImageSetterALL();
     }
 
-
-
-
     public void nieuwRook() {
         dobbelC.d6.gooi();
         dobbelC.d8.gooi();
         int x = dobbelC.d8.getWaarde();
         int y = dobbelC.d6.getWaarde();
         vak = veldC.veldD.getVakken()[x][y];
-        System.out.println(x+" "+y);
+        System.out.println("Het geselecteerde vak is: x:" + x + " y: " + y);
         if (vak.isNiks()) {
+            //Wordt gehanteerd als het gekozen vak geen rook of vuur element heeft.
             vak.setNiks(false);
             vak.setRook(true);
             vak.setVuur(false);
-            System.out.println("nieuwRook " + x + " " + y);
+            System.out.println("Spel: Ik spawn rook op; x: " + x + " y: " + y);
         } else if (vak.isRook()) {
+            //Wordt gehandteerd als er rook op het gekozen vak staat.
             vak.setNiks(false);
             vak.setRook(false);
             vak.setVuur(true);
-            System.out.println("nieuwVuur " + x + " " + y);
+            System.out.println("Spel: Ik zet het rook om naar vuur op; x: " + x + " y: " + y);
         } else if (vak.isVuur()){
-            System.out.println("newExplosie " + x + " " + y);
+            //Wordt gehanteerd als er vuur op het gekozen vak staat.
+            System.out.println("Spel: Ik zet een explosie op; x: " + x + " y:  " + y);
             checkExplosie(x,y);
         }
         checkBrandhaard();
@@ -1081,7 +1081,7 @@ public class SpelController implements Initializable {
         }
     }
 
-    public void checkExplosie(int x, int y) {// Joep
+    public void checkExplosie(int x, int y) {
         boolean doorgaan;
         int teller;
         Vak vak;
@@ -1107,15 +1107,14 @@ public class SpelController implements Initializable {
                     }
                 }
             }
+
             while (richting == Richting.RECHTS && doorgaan && ((x + teller) <= 8)) {
                 vak = veldC.veldD.getVakken()[x+teller][y];
                 vak.setVuur(true);
                 if (!vak.rechts.isBegaanbaar()){
                     veldC.doeBeschadiging((x+teller), y, richting);
                     doorgaan = false;
-                }
-
-                else {
+                } else {
                     teller++;
                     vak = veldC.veldD.getVakken()[x+teller][y];
                     if (!vak.isVuur()) {
@@ -1126,15 +1125,14 @@ public class SpelController implements Initializable {
                     }
                 }
             }
+
             while (richting == Richting.ONDER && doorgaan && ((y + teller) <= 6)) {
                 vak = veldC.veldD.getVakken()[x][y+teller];
                 vak.setVuur(true);
-                if (!vak.onder.isBegaanbaar()){
+                if (!vak.onder.isBegaanbaar()) {
                     veldC.doeBeschadiging(x, (y + teller), richting);
                     doorgaan = false;
-                }
-
-                else {
+                } else {
                     teller++;
                     vak = veldC.veldD.getVakken()[x][y+teller];
                     if (!vak.isVuur()) {
@@ -1145,15 +1143,14 @@ public class SpelController implements Initializable {
                     }
                 }
             }
+
             while (richting == Richting.LINKS && doorgaan && ((x - teller) >= 1)) {
                 vak = veldC.veldD.getVakken()[x-teller][y];
                 vak.setVuur(true);
                 if (!vak.links.isBegaanbaar()){
                     veldC.doeBeschadiging((x-teller), y, richting);
                     doorgaan = false;
-                }
-
-                else {
+                } else {
                     teller++;
                     vak = veldC.veldD.getVakken()[x-teller][y];
                     if (!vak.isVuur()) {
@@ -1167,6 +1164,7 @@ public class SpelController implements Initializable {
         }
     }
 
+    //Hanteerd de spelregels bij een rook en een vuur element die naast elkaar staan.
     public void checkVonkoverslag() {
         Vak vak;
         Vak vak2 = null;
@@ -1217,6 +1215,7 @@ public class SpelController implements Initializable {
         }
     }
 
+    //Dit breekt wanneer het spel vol staat met vuur, maar dat is niet te behalen met de gebruikte spelregels.
     public void addPersoon() {
         dobbelC.d6.gooi();
         dobbelC.d8.gooi();
@@ -1247,6 +1246,7 @@ public class SpelController implements Initializable {
         }
     }
 
+    //Zet de labels van de gebruikte fiches.
     public void updatePunten() {
         APLabel.setText(" " + Integer.toString(spelerC.getSpeler().getActiepunten()));
         EPLabel.setText(" " + Integer.toString(spelerC.getSpeler().getExtrapunten()));
@@ -1263,9 +1263,6 @@ public class SpelController implements Initializable {
         }
         GeredLabel.setText(Integer.toString(spel.getGeredCounter())+ " / 7");
         GeredLabel1.setText(Integer.toString(spel.getDoodCounter())+ " / 3");
-
-
-
     }
 
     // verwijderd personen die op vuur staan en vervangd deze met nieuwe.
@@ -1295,7 +1292,6 @@ public class SpelController implements Initializable {
             }
         }
         for(int i = count; i< 3; i++) addPersoon();
-
     }
     // Veranderd de klasse voor de speler bij voldoende AP. Rollen die al in gebruik zijn kunnen niet worden gekozen.
     public void veranderKlasse() {
@@ -1376,6 +1372,7 @@ public class SpelController implements Initializable {
             }
         }
     }
+
     public void addBeschadigingCount() {
         spel.setBeschadigingCounter(spel.getBeschadigingCounter()+1);
     }
@@ -1401,9 +1398,7 @@ public class SpelController implements Initializable {
     }
 
     public void setNamen() throws RemoteException {
-
         switch(spel.getSpelers().size()) {
-
             case 6 : user6.setText(" " + spel.getSpelers().get(5).getNaam());
             case 5 : user5.setText(" " + spel.getSpelers().get(4).getNaam());
             case 4 : user4.setText(" " + spel.getSpelers().get(3).getNaam());
@@ -1457,15 +1452,14 @@ public class SpelController implements Initializable {
         }
     }
     public void refreshSpel() throws RemoteException {
-        System.out.println("REFRESH");
-
+        System.out.println("Spel: Ik refresh de view.");
         setSpel(clientStub.updateGetSpel());
         veldC.setVeldD(clientStub.updateGetData());
         veldC.ImageSetterALL();
         setActiveSpelerPlaatje();
         setRollen();
-
     }
+
     public void Lobby() {
         //Dialoog 1(ip adress)
         dialog.setHeaderText("Voer het IP-adres van de host in");
