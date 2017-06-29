@@ -38,9 +38,9 @@ public interface Interface extends Remote {
 
     public void setSpelData(Spel spel, SpeelveldData veldD) throws RemoteException;
 
-    public void setFirstTimeSpel(Spel spel) throws RemoteException;
+    //public void setFirstTimeSpel(Spel spel) throws RemoteException;
 
-    public void setFirstTimeData(SpeelveldData veldD) throws RemoteException;
+    //public void setFirstTimeData(SpeelveldData veldD) throws RemoteException;
 
     public SpeelveldData updateGetData() throws RemoteException;
 

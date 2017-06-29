@@ -92,20 +92,20 @@ public class InterfaceImpl implements Interface, Serializable {
     public ArrayList<Speler> GetSpeler() throws RemoteException {
         return spelers;
     }
-    @Override
-    public void setFirstTimeSpel(Spel spel) throws RemoteException {
-        if (a == 0) {
-            this.spelServer = spel;
-            i++;
-        }
-    }
-    @Override
-    public void setFirstTimeData(SpeelveldData veldD) throws RemoteException {
-        if (b == 0) {
-            this.veldServer = veldD;
-            b++;
-        }
-    }
+//    @Override
+//    public void setFirstTimeSpel(Spel spel) throws RemoteException {
+//        if (a == 0) {
+//            this.spelServer = spel;
+//            i++;
+//        }
+//    }
+//    @Override
+//    public void setFirstTimeData(SpeelveldData veldD) throws RemoteException {
+//        if (b == 0) {
+//            this.veldServer = veldD;
+//            b++;
+//        }
+//    }
 
     @Override
     public void setSpelData(Spel spel, SpeelveldData veldD) throws RemoteException {

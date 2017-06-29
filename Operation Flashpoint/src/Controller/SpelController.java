@@ -227,6 +227,8 @@ public class SpelController implements Initializable {
         }
     }
 
+
+
     public Kleur getKleur() {return kleur;}
 
     public void setKleur(Kleur kleur) {this.kleur = kleur;}
@@ -325,6 +327,7 @@ public class SpelController implements Initializable {
     public void run() throws RemoteException, NotBoundException {
         registry = LocateRegistry.getRegistry(spelC.getHost());
         clientStub = (Interface) registry.lookup("Main.Interface");
+        getChatArea().setEditable(false);
         String naam = getUsername();
         setKleur(clientStub.addSpeler(naam));
         veldC.carViewFactory();
@@ -1621,7 +1624,7 @@ public class SpelController implements Initializable {
         btnUP.setDisable(true);
         btnDOWN.setDisable(true);
         btnLEFT.setDisable(true);
-        // btnET.setDisable(true);
+        btnET.setDisable(true);
     }
     public void enableKnoppen() {
         imgHakken.setDisable(false);
@@ -1638,7 +1641,7 @@ public class SpelController implements Initializable {
         btnUP.setDisable(false);
         btnDOWN.setDisable(false);
         btnLEFT.setDisable(false);
-        //btnET.setDisable(false);
+        btnET.setDisable(false);
     }
 }
 

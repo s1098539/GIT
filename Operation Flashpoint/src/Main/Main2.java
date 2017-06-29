@@ -68,8 +68,7 @@ public class Main2 extends Application {
             Interface clientStub = (Interface) registry.lookup("Main.Interface");
 
             //Eerste client set de spel en speelvelddata op server
-            clientStub.setFirstTimeSpel(spelC.getSpel());
-            clientStub.setFirstTimeData(veldC.getVeldD());
+            clientStub.setSpelData(spelC.getSpel(), veldC.getVeldD());
             spelC.setSpel(clientStub.updateGetSpel());
             veldC.setVeldD(clientStub.updateGetData());
             veldC.ImageSetterALL();
