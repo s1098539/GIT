@@ -9,6 +9,10 @@ import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 
 // imports die nodig zijn om audiobestanden aan te roepen
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
@@ -35,6 +39,7 @@ public class SpraakController {
     // Er wordt een object aangemaakt van het model Spraak zodat
     // Deze benaderd kan worden door deze Controller
     Spraak audio = new Spraak();
+
     private boolean play=false;
 
     private void audioPlayer(String s) throws Exception {
@@ -58,57 +63,57 @@ public class SpraakController {
     // Leest uit hoeveel schade er toegebracht is in het gebouw.
     public void playSchade(int schade) throws Exception {
         if (schade >= 0 && schade <= 24) {
-        switch (schade) {
-            case 0: audioPlayer(audio.getSchade0());
-            break;
-            case 1: audioPlayer(audio.getSchade1());
-            break;
-            case 2: audioPlayer(audio.getSchade2());
-            break;
-            case 3: audioPlayer(audio.getSchade3());
-            break;
-            case 4: audioPlayer(audio.getSchade4());
-            break;
-            case 5: audioPlayer(audio.getSchade5());
-            break;
-            case 6: audioPlayer(audio.getSchade6());
-            break;
-            case 7: audioPlayer(audio.getSchade7());
-            break;
-            case 8: audioPlayer(audio.getSchade8());
-            break;
-            case 9: audioPlayer(audio.getSchade9());
-            break;
-            case 10: audioPlayer(audio.getSchade10());
-            break;
-            case 11: audioPlayer(audio.getSchade11());
-            break;
-            case 12: audioPlayer(audio.getSchade12());
-            break;
-            case 13: audioPlayer(audio.getSchade13());
-            break;
-            case 14: audioPlayer(audio.getSchade14());
-            break;
-            case 15: audioPlayer(audio.getSchade15());
-            break;
-            case 16: audioPlayer(audio.getSchade16());
-            break;
-            case 17: audioPlayer(audio.getSchade17());
-            break;
-            case 18: audioPlayer(audio.getSchade18());
-            break;
-            case 19: audioPlayer(audio.getSchade19());
-            break;
-            case 20: audioPlayer(audio.getSchade20());
-            break;
-            case 21: audioPlayer(audio.getSchade21());
-            break;
-            case 22: audioPlayer(audio.getSchade22());
-            break;
-            case 23: audioPlayer(audio.getSchade23());
-            break;
-            case 24: audioPlayer(audio.getSchade24());
-            break;
+            switch (schade) {
+                case 0: audioPlayer(audio.getSchade0());
+                break;
+                case 1: audioPlayer(audio.getSchade1());
+                break;
+                case 2: audioPlayer(audio.getSchade2());
+                break;
+                case 3: audioPlayer(audio.getSchade3());
+                break;
+                case 4: audioPlayer(audio.getSchade4());
+                break;
+                case 5: audioPlayer(audio.getSchade5());
+                break;
+                case 6: audioPlayer(audio.getSchade6());
+                break;
+                case 7: audioPlayer(audio.getSchade7());
+                break;
+                case 8: audioPlayer(audio.getSchade8());
+                break;
+                case 9: audioPlayer(audio.getSchade9());
+                break;
+                case 10: audioPlayer(audio.getSchade10());
+                break;
+                case 11: audioPlayer(audio.getSchade11());
+                break;
+                case 12: audioPlayer(audio.getSchade12());
+                break;
+                case 13: audioPlayer(audio.getSchade13());
+                break;
+                case 14: audioPlayer(audio.getSchade14());
+                break;
+                case 15: audioPlayer(audio.getSchade15());
+                break;
+                case 16: audioPlayer(audio.getSchade16());
+                break;
+                case 17: audioPlayer(audio.getSchade17());
+                break;
+                case 18: audioPlayer(audio.getSchade18());
+                break;
+                case 19: audioPlayer(audio.getSchade19());
+                break;
+                case 20: audioPlayer(audio.getSchade20());
+                break;
+                case 21: audioPlayer(audio.getSchade21());
+                break;
+                case 22: audioPlayer(audio.getSchade22());
+                break;
+                case 23: audioPlayer(audio.getSchade23());
+                break;
+                case 24: audioPlayer(audio.getSchade24());
+                break;
             }
         }
     }
@@ -315,23 +320,23 @@ public class SpraakController {
     }
     // speelt de hoeveelheid geredde personen van aandacht uit
     public void playPva(int gered) throws Exception{
-            switch (gered) {
-                case 0: audioPlayer(audio.getPva0());
-                break;
-                case 1: audioPlayer(audio.getPva1());
-                break;
-                case 2: audioPlayer(audio.getPva2());
-                break;
-                case 3: audioPlayer(audio.getPva3());
-                break;
-                case 4: audioPlayer(audio.getPva4());
-                break;
-                case 5: audioPlayer(audio.getPva5());
-                break;
-                case 6: audioPlayer(audio.getPva6());
-                break;
-                case 7: audioPlayer(audio.getPva7());
-                break;
+        switch (gered) {
+            case 0: audioPlayer(audio.getPva0());
+            break;
+            case 1: audioPlayer(audio.getPva1());
+            break;
+            case 2: audioPlayer(audio.getPva2());
+            break;
+            case 3: audioPlayer(audio.getPva3());
+            break;
+            case 4: audioPlayer(audio.getPva4());
+            break;
+            case 5: audioPlayer(audio.getPva5());
+            break;
+            case 6: audioPlayer(audio.getPva6());
+            break;
+            case 7: audioPlayer(audio.getPva7());
+            break;
         }
     }
 
@@ -369,8 +374,10 @@ public class SpraakController {
     // Tweede audiospeler gedeelte.
     // nadere toelichting binnen de methoden
     AudioStream audioStream;
+    AudioInputStream audioInputStream;
+    Clip clip;
 
-    public void spelRegelAudioPlayer(String s) throws Exception {
+    private synchronized void audioSpelregels(File s) throws Exception {
 
         // Deze functie is een aparte audiospeler voor de spelregels
         // Deze heeft wat extra logica.
@@ -378,18 +385,29 @@ public class SpraakController {
         // Wanneer de audio afspeelt, gaat play naar false en daarmee word dan
         // de audio ook gestopt. Wanneer de play op false is dan word de audio weer gestart.
         // Deze functie heeft echter nog meer aandacht nodig, omdat deze nooit werkt.
-        // De reden is nog onbekend.
 
-        InputStream in = new FileInputStream(s);
+        audioInputStream = AudioSystem.getAudioInputStream(s);
+        clip = AudioSystem.getClip();
+        clip.open(audioInputStream);
+        clip.start();
+        wait(1000);
+        clip.stop();
 
-        audioStream = new AudioStream(in);
 
-        if (play) {
-            //
-            AudioPlayer.player.start(audioStream);
-        } else {
-            AudioPlayer.player.stop(audioStream);
-        }
+//        InputStream in = new FileInputStream(s);
+//
+//        audioStream = new AudioStream(in);
+//
+//        if (play) {
+//            //
+//            AudioPlayer.player.start(audioStream);
+//        }
+//        if(!play){
+//            AudioPlayer.player.stop(audioStream);
+//        }
+
+
+
     }
 
     private void handleSpelregels(){
@@ -407,9 +425,9 @@ public class SpraakController {
     }
 
     // de spelController roept deze methode aan om audio af te spelen en te stoppen.
-    public void playSpelRegels(String s) throws Exception{
+    public void playSpelRegels(File s) throws Exception{
         handleSpelregels();
-        spelRegelAudioPlayer(s);
+        audioSpelregels(s);
     }
 
 }

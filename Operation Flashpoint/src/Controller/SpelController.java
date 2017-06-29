@@ -374,6 +374,7 @@ public class SpelController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         SpraakController audioPlayer = new SpraakController();
+
         imgPickup1.setOnContextMenuRequested(event -> {
             if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
@@ -610,7 +611,7 @@ public class SpelController implements Initializable {
         gebruikershandleiding.setOnContextMenuRequested(event ->{
             if(spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playSpelRegels(spraakC.audio.getSpelRegels());
+                    audioPlayer.playSpelRegels(spraakC.audio.getSpelregels());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -687,7 +688,6 @@ public class SpelController implements Initializable {
                 veranderKlasse();
 
             }
-
 
             toggleViewUpdate();
 

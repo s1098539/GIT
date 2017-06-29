@@ -1,5 +1,7 @@
 package Model;
 
+import java.io.File;
+
 public class Spraak {
 
     public Spraak() {
@@ -133,6 +135,12 @@ public class Spraak {
     // Dit moet echter nog geïmplementeerd worden.
 
     private String spelRegels = "./src/Resources/Audio/Spelregels.wav";
+
+    private File spelregels = new File("./src/Resources/Audio/Spelregels.wav");
+
+    public File getSpelregels() {
+        return spelregels;
+    }
 
     // Vanaf hier staan de getters.
     // In dit bestand zal u geen setters vinden, omdat deze niet nodig zijn.
