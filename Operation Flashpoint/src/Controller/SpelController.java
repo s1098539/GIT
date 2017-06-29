@@ -790,11 +790,16 @@ public class SpelController implements Initializable {
             alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
 
             Optional<ButtonType> result = alert.showAndWait();
-            if (result.get() == buttonTypeOne){
+            if (result.get() == buttonTypeOne) {
                 alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Slechtziendmodus");
                 alert.setHeaderText("Wilt u slechtziendheids-modus toggelen?");
                 alert.setContentText("Druk dan op Oke");
+                if (spel.getHuidigeSpeler().isSlechtziendmodus()){
+                    alert.setContentText("U bevind zich op de slechtziendenmodus");
+                } else {
+                    alert.setContentText("U bevind zich niet op de slechtziendenmodus.");
+                }
 
                 result = alert.showAndWait();
                 if (result.get() == ButtonType.OK){
