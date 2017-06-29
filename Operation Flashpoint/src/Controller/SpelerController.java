@@ -972,7 +972,7 @@ public class SpelerController {
                     if (spelC.spel.getHuidigeSpeler().getX() > 0 && vak.links.isBegaanbaar()) {
                         beweegActieKosten(LINKS);
                         spelC.spel.getHuidigeSpeler().setX(spelC.spel.getHuidigeSpeler().getX() - 1);
-                        System.out.println("De " + spelC.spel.getHuidigeSpeler()+ " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
+                        System.out.println("De " + spelC.spel.getHuidigeSpeler().getNaam()+ " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
