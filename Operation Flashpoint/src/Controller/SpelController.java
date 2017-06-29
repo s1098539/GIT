@@ -119,6 +119,7 @@ public class SpelController implements Initializable {
     int port = 1099;
     Interface clientStub;
     Kleur kleur;
+    boolean myTurn;
 
     SpeelveldController veldC;
     SpelerController spelerC;
@@ -623,69 +624,70 @@ public class SpelController implements Initializable {
         });
 
         thePane.setOnKeyPressed(e -> {
-            if (e.getCode() == KeyCode.A) {
-                spelerC.west();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.D) {
-                spelerC.oost();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.W) {
-                spelerC.noord();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.S) {
-                spelerC.zuid();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.ENTER) {
-                endTurn();
-            }
-            if (e.getCode() == KeyCode.R) {
-                spelerC.special();
-
-            }
-            if (e.getCode() == KeyCode.Q) {
-                spelerC.btnHakken();
-
-            }
-            if (e.getCode() == KeyCode.E) {
-                spelerC.btnOpenenDeur();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.G) {
-                for(int i = 0; i < spelC.spel.getSpelers().size(); i++) {
-                    spelC.spel.getSpelers().get(i).setRol(GODMODE);
+            if(myTurn) {
+                if (e.getCode() == KeyCode.A) {
+                    spelerC.west();
+                    updateSpel();
                 }
-                setRollen();
-                spelerC.resetPunten();
-                updatePunten();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.DIGIT1) {
-                spelerC.oppakkenActie();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.DIGIT2) {
-                spelerC.btnBrandblusser();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.DIGIT3) {
-                spelerC.btnRijden();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.DIGIT4) {
-                spelerC.BrandweerwagenSpuitActie();
-                updateSpel();
-            }
-            if (e.getCode() == KeyCode.DIGIT5) {
-                veranderKlasse();
+                if (e.getCode() == KeyCode.D) {
+                    spelerC.oost();
+                    updateSpel();
+                }
+                if (e.getCode() == KeyCode.W) {
+                    spelerC.noord();
+                    updateSpel();
+                }
+                if (e.getCode() == KeyCode.S) {
+                    spelerC.zuid();
+                    updateSpel();
+                }
+                if (e.getCode() == KeyCode.ENTER) {
+                    endTurn();
+                }
+                if (e.getCode() == KeyCode.R) {
+                    spelerC.special();
 
+                }
+                if (e.getCode() == KeyCode.Q) {
+                    spelerC.btnHakken();
+
+                }
+                if (e.getCode() == KeyCode.E) {
+                    spelerC.btnOpenenDeur();
+                    updateSpel();
+                }
+                if (e.getCode() == KeyCode.G) {
+                    for (int i = 0; i < spelC.spel.getSpelers().size(); i++) {
+                        spelC.spel.getSpelers().get(i).setRol(GODMODE);
+                    }
+                    setRollen();
+                    spelerC.resetPunten();
+                    updatePunten();
+                    updateSpel();
+                }
+                if (e.getCode() == KeyCode.DIGIT1) {
+                    spelerC.oppakkenActie();
+                    updateSpel();
+                }
+                if (e.getCode() == KeyCode.DIGIT2) {
+                    spelerC.btnBrandblusser();
+                    updateSpel();
+                }
+                if (e.getCode() == KeyCode.DIGIT3) {
+                    spelerC.btnRijden();
+                    updateSpel();
+                }
+                if (e.getCode() == KeyCode.DIGIT4) {
+                    spelerC.BrandweerwagenSpuitActie();
+                    updateSpel();
+                }
+                if (e.getCode() == KeyCode.DIGIT5) {
+                    veranderKlasse();
+
+                }
+
+                toggleViewUpdate();
             }
-
-            toggleViewUpdate();
-
         });
 
 
@@ -1598,8 +1600,10 @@ public class SpelController implements Initializable {
     public void checkTurn() {
         if(spel.getHuidigeSpeler().getKleur() != getKleur()) {
             disableKnoppen();
+            myTurn = false;
         } else {
             enableKnoppen();
+            myTurn = true;
         }
     }
     public void disableKnoppen() {
