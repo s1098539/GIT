@@ -869,13 +869,21 @@ public class SpelerController {
         Vak[][]vakken = veldC.getVeldD().getVakken();
         Boolean naarVuur = false;
         switch(richting) {
-            case BOVEN: naarVuur = vakken[speler.getX()][speler.getY()-1].isVuur();
+            case BOVEN: if(speler.getY()>0) {
+                naarVuur = vakken[speler.getX()][speler.getY() - 1].isVuur();
+            } else return false;
                 break;
-            case ONDER: naarVuur = vakken[speler.getX()][speler.getY()+1].isVuur();
+            case ONDER: if(speler.getY()<7) {
+                naarVuur = vakken[speler.getX()][speler.getY()+1].isVuur();
+            } else return false;
                 break;
-            case LINKS: naarVuur = vakken[speler.getX()-1][speler.getY()].isVuur();
+            case LINKS: if(speler.getX()>0) {
+                naarVuur = vakken[speler.getX()-1][speler.getY()].isVuur();
+            } else return false;
                 break;
-            case RECHTS: naarVuur = vakken[speler.getX()+1][speler.getY()].isVuur();
+            case RECHTS: if(speler.getX()<9) {
+                naarVuur = vakken[speler.getX()+1][speler.getY()].isVuur();
+            } else return false;
                 break;
         }
 
