@@ -516,6 +516,8 @@ public class SpelerController {
             String wagen = kiezenVoertuig();
             System.out.println(wagen);
             Richting kant;
+            Vak vak1 = null;
+            Vak vak2 = null;
             boolean verkeerdeKant = false;
             if (wagen.equals("Ambulance")) {
                 kant = veldC.veldD.getAmbulance();
@@ -546,6 +548,34 @@ public class SpelerController {
                     veldC.veldD.setAmbulance(richting);
                     spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 2);
                     veldC.carSetter();
+                    switch(richting){
+                        case BOVEN:
+                            vak1 = veldC.veldD.getVakken()[5][0];
+                            vak2 = veldC.veldD.getVakken()[6][0];
+                            break;
+                        case RECHTS:
+                            vak1 = veldC.veldD.getVakken()[9][4];
+                            vak2 = veldC.veldD.getVakken()[9][5];
+                            break;
+                        case ONDER:
+                            vak1 = veldC.veldD.getVakken()[3][7];
+                            vak2 = veldC.veldD.getVakken()[4][7];
+                            break;
+                        case LINKS:
+                            vak1 = veldC.veldD.getVakken()[0][2];
+                            vak2 = veldC.veldD.getVakken()[0][3];
+                            break;
+                    }
+                    while(vak1.getPersonen().size()>0) {
+                        vak1.getPersonen().remove(0);
+                        spelC.spel.addGered();
+                    }
+                    while(vak2.getPersonen().size()>0) {
+                        vak2.getPersonen().remove(0);
+                        spelC.spel.addGered();
+                    }
+
+
                 }
 
 
@@ -584,9 +614,6 @@ public class SpelerController {
 
             }
         }
-    }
-    private void brandweerwagenActie(){
-        System.out.println("Actie: Gebruik brandweerwagen");
     }
     public void dropItem(){
         if(spelC.spel.getHuidigeSpeler().isStof()){
