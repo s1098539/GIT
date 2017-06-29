@@ -84,5 +84,5 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
         // spelC.updateSpel();
 
     }
-    }
+}
 

@@ -768,7 +768,7 @@ public class SpelerController {
                     if (spelC.spel.getHuidigeSpeler().getY() > 0 && vak.boven.isBegaanbaar()) {
                         beweegActieKosten();
                         spelC.spel.getHuidigeSpeler().setY(spelC.spel.getHuidigeSpeler().getY() - 1);
-                        System.out.println("*De spelC.spel.getHuidigeSpeler() loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
+                        System.out.println("*De speler " + spelC.spel.getHuidigeSpeler().getNaam() + " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
@@ -776,7 +776,7 @@ public class SpelerController {
                     if (spelC.spel.getHuidigeSpeler().getX() < 9 && vak.rechts.isBegaanbaar()) {
                         beweegActieKosten();
                         spelC.spel.getHuidigeSpeler().setX(spelC.spel.getHuidigeSpeler().getX() + 1);
-                        System.out.println("*De spelC.spel.getHuidigeSpeler() loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
+                        System.out.println("*De speler " + spelC.spel.getHuidigeSpeler().getNaam() + " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
@@ -784,7 +784,7 @@ public class SpelerController {
                     if (spelC.spel.getHuidigeSpeler().getY() < 7 && vak.onder.isBegaanbaar()) {
                         beweegActieKosten();
                         spelC.spel.getHuidigeSpeler().setY(spelC.spel.getHuidigeSpeler().getY() + 1);
-                        System.out.println("*De spelC.spel.getHuidigeSpeler() loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
+                        System.out.println("*De speler " + spelC.spel.getHuidigeSpeler().getNaam() + " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
@@ -792,7 +792,7 @@ public class SpelerController {
                     if (spelC.spel.getHuidigeSpeler().getX() > 0 && vak.links.isBegaanbaar()) {
                         beweegActieKosten();
                         spelC.spel.getHuidigeSpeler().setX(spelC.spel.getHuidigeSpeler().getX() - 1);
-                        System.out.println("*De spelC.spel.getHuidigeSpeler() loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
+                        System.out.println("*De speler " + spelC.spel.getHuidigeSpeler().getNaam() + " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;

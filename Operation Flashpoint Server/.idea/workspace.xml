@@ -2,33 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa791b91-80fa-4f39-958f-8de519105891" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;Operation Flashpoint/out/production/Operation Flashpoint/Main/Main2.class">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Interface.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Interface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/InterfaceImpl.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/InterfaceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/ChatController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/ChatController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/LobbyController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/LobbyController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpraakController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpraakController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Interface.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Interface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Main2.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Main2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Kleur.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Kleur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/SpeelveldData.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/SpeelveldData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/SpeelveldImages.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/SpeelveldImages.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Spel.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Spel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Speler.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Speler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Spraak.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Spraak.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Vak$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Vak$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Vak.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Vak.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/InterfaceImpl.java" afterPath="$PROJECT_DIR$/src/Main/InterfaceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Operation Flashpoint/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/View/SpelView.fxml" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/View/SpelView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelerController.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/ChatListen.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/ChatListen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Main2.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Main2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Spel.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Spel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +30,7 @@
       <file leaf-file-name="Interface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
+            <state relative-caret-position="731">
               <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="false" />
@@ -56,9 +42,13 @@
       <file leaf-file-name="InterfaceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/InterfaceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="139" column="30" lean-forward="false" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="425">
+              <caret line="162" column="54" lean-forward="true" selection-start-line="162" selection-start-column="54" selection-end-line="162" selection-end-column="54" />
+              <folding>
+                <element signature="e#1180#1188#0" expanded="true" />
+                <element signature="e#1306#1327#0" expanded="true" />
+                <element signature="e#1393#1404#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,7 +56,7 @@
       <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="255">
               <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
@@ -76,7 +66,7 @@
       <file leaf-file-name="Kleur.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Kleur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
+            <state relative-caret-position="34">
               <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
               <folding>
                 <element signature="e#188#189#0" expanded="false" />
@@ -91,7 +81,7 @@
       <file leaf-file-name="SpeelveldController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/SpeelveldController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
+            <state relative-caret-position="221">
               <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="false" />
@@ -107,7 +97,7 @@
       <file leaf-file-name="ChatListenInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/ChatListenInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="204">
               <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
@@ -117,7 +107,7 @@
       <file leaf-file-name="Scrapbook.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Scrapbook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
+            <state relative-caret-position="51">
               <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding>
                 <element signature="e#253#254#0" expanded="false" />
@@ -132,7 +122,7 @@
       <file leaf-file-name="Spel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="136">
               <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="false" />
@@ -174,7 +164,7 @@
       <file leaf-file-name="Speler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Speler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1323">
+            <state relative-caret-position="1071">
               <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
               <folding />
             </state>
@@ -184,13 +174,9 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="255">
               <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1064#1065#0" expanded="false" />
-                <element signature="e#1104#1105#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -250,9 +236,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1032" />
-    <option name="width" value="896" />
-    <option name="height" value="1038" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -270,7 +256,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -339,6 +324,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
@@ -808,6 +794,7 @@
       <workItem from="1498641384551" duration="19178000" />
       <workItem from="1498670925725" duration="4095000" />
       <workItem from="1498676030700" duration="2889000" />
+      <workItem from="1498736833066" duration="1156000" />
     </task>
     <task id="LOCAL-00001" summary="HELLO RMI TEAM&#10;&#10;ITS ME RAFE AGAIN&#10;&#10;BACK IT AGAIN WITH ALL THE RMI">
       <created>1498138489861</created>
@@ -820,11 +807,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59810000" />
+    <option name="totallyTimeSpent" value="60966000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1032" y="0" width="896" height="1038" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -836,12 +822,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.50417536" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.209622" sideWeight="0.49582464" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20917822" sideWeight="0.49582464" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27195123" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27139875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -988,11 +975,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1064#1065#0" expanded="false" />
-            <element signature="e#1104#1105#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +993,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#1180#1188#0" expanded="true" />
+            <element signature="e#1306#1327#0" expanded="true" />
+            <element signature="e#1393#1404#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1104,7 +1091,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#1180#1188#0" expanded="true" />
+            <element signature="e#1306#1327#0" expanded="true" />
+            <element signature="e#1393#1404#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1264,7 +1255,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Scrapbook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
+        <state relative-caret-position="51">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding>
             <element signature="e#253#254#0" expanded="false" />
@@ -1277,7 +1268,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Speler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
+        <state relative-caret-position="1071">
           <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
           <folding />
         </state>
@@ -1285,7 +1276,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="136">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -1325,7 +1316,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SpeelveldController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
+        <state relative-caret-position="221">
           <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -1340,7 +1331,7 @@
     <entry file="file://$PROJECT_DIR$/src/Main/ChatListen.java" />
     <entry file="file://$PROJECT_DIR$/src/Model/Kleur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
+        <state relative-caret-position="34">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
           <folding>
             <element signature="e#188#189#0" expanded="false" />
@@ -1353,19 +1344,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="255">
           <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1064#1065#0" expanded="false" />
-            <element signature="e#1104#1105#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
@@ -1373,7 +1360,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ChatListenInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="204">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
@@ -1381,7 +1368,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
+        <state relative-caret-position="731">
           <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -1391,9 +1378,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/InterfaceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="139" column="30" lean-forward="false" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="425">
+          <caret line="162" column="54" lean-forward="true" selection-start-line="162" selection-start-column="54" selection-end-line="162" selection-end-column="54" />
+          <folding>
+            <element signature="e#1180#1188#0" expanded="true" />
+            <element signature="e#1306#1327#0" expanded="true" />
+            <element signature="e#1393#1404#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
