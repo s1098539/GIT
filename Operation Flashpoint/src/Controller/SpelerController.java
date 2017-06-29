@@ -542,13 +542,15 @@ public class SpelerController {
                         break;
                 }
                 if (!verkeerdeKant) {
+                    spelC.meerijden(richting, wagen);
                     veldC.veldD.setAmbulance(richting);
                     spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 2);
                     veldC.carSetter();
                 }
 
 
-            } else if (wagen.equals("Brandweerwagen")) {
+            }
+            else if (wagen.equals("Brandweerwagen")) {
                 kant = veldC.veldD.getBrandweerwagen();
                 switch (kant) {
                     case BOVEN:
@@ -574,6 +576,7 @@ public class SpelerController {
                 }
 
                 if (!verkeerdeKant) {
+                    spelC.meerijden(richting, wagen);
                     veldC.veldD.setBrandweerwagen(richting);
                     spelC.spel.getHuidigeSpeler().setActiepunten(spelC.spel.getHuidigeSpeler().getActiepunten() - 2);
                     veldC.carSetter();

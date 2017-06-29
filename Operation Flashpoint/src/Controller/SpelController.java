@@ -848,6 +848,34 @@ public class SpelController implements Initializable {
             }
         });
     }
+
+    public void spelerDood(){
+        Speler speler = spel.getHuidigeSpeler();
+        if (veldC.veldD.getVakken()[speler.getX()][speler.getY()].isVuur()){
+            veldC.removeSpeler(speler.getKleur(), speler.getX(), speler.getY());
+            switch (veldC.veldD.getAmbulance()) {
+                case BOVEN:
+                    speler.setY(0);
+                    speler.setX(5);
+                    break;
+                case RECHTS:
+                    speler.setX(9);
+                    speler.setY(4);
+                    break;
+                case ONDER:
+                    speler.setY(7);
+                    speler.setX(3);
+                    break;
+                case LINKS:
+                    speler.setX(0);
+                    speler.setY(2);
+                    break;
+            }
+            veldC.addSpeler(speler.getKleur(),speler.getX(),speler.getY());
+        }
+    }
+
+
     public void meerijden(Richting richting, String wagen) {
         boolean verplaatsbaar;
         ArrayList<Speler> passagiers = new ArrayList<>();
@@ -1022,6 +1050,7 @@ public class SpelController implements Initializable {
         checkVerlies();
         setActiveSpelerPlaatje();
         //eersteBeurt();
+        spelerDood();
 
         updateSpel();
         try {
