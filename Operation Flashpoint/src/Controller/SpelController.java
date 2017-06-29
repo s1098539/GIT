@@ -1045,13 +1045,17 @@ public class SpelController implements Initializable {
         checkStoffen();
         spelerC.dropItem();
         checkPersonen();
-        switchSpeler();
-        checkTurn();
+        spelerDood();
         spelerC.resetPunten();
+
+        switchSpeler();
+
+        checkTurn();
+
         checkVerlies();
         setActiveSpelerPlaatje();
         //eersteBeurt();
-        spelerDood();
+
 
         updateSpel();
         try {
