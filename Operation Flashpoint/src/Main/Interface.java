@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public interface Interface extends Remote {
-    public void addSpeler(String naam) throws RemoteException;
+    public Kleur addSpeler(String naam) throws RemoteException;
 
     public ArrayList<Speler> GetSpeler() throws RemoteException;
 

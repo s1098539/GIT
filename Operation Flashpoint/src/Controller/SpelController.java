@@ -118,7 +118,7 @@ public class SpelController implements Initializable {
     Registry registry = null;
     int port = 1099;
     Interface clientStub;
-
+    Kleur kleur;
 
     SpeelveldController veldC;
     SpelerController spelerC;
@@ -226,6 +226,10 @@ public class SpelController implements Initializable {
         }
     }
 
+    public Kleur getKleur() {return kleur;}
+
+    public void setKleur(Kleur kleur) {this.kleur = kleur;}
+
     public int getPort() {
         return port;
     }
@@ -321,7 +325,7 @@ public class SpelController implements Initializable {
         registry = LocateRegistry.getRegistry(spelC.getHost());
         clientStub = (Interface) registry.lookup("Main.Interface");
         String naam = getUsername();
-        clientStub.addSpeler(naam);
+        setKleur(clientStub.addSpeler(naam));
         veldC.carViewFactory();
         veldC.carSetter();
         stackPane.getChildren().add(veldC.veldI.getCarViews()[0]);
@@ -352,16 +356,7 @@ public class SpelController implements Initializable {
         Collections.shuffle(veldC.getVeldD().getPersonenlijst(), new Random(seed));
         //eersteBeurt();
 
-//        try {
-//            Send sender = new Send(host, username, localMessage);
-//            setSender(sender);
-//        } catch (RemoteException e) {
-//            e.printStackTrace();
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        } catch (NotBoundException e) {
-//            e.printStackTrace();
-//        }
+        checkTurn();
     }
 
     // keep this one EMPTY and DON'T REMOVE
@@ -1046,6 +1041,7 @@ public class SpelController implements Initializable {
         spelerC.dropItem();
         checkPersonen();
         switchSpeler();
+        checkTurn();
         spelerC.resetPunten();
         checkVerlies();
         setActiveSpelerPlaatje();
@@ -1588,10 +1584,57 @@ public class SpelController implements Initializable {
     }
 
     public void read(){
-        spel = readSpel();
-        veldC.veldD = readVeld();
-        veldC.ImageSetterALL();
-        updatePunten();
+        try {
+            spelC.setSpel(readSpel());
+            veldC.setVeldD(readVeld());
+            clientStub.setSpelData(getSpel(), veldC.getVeldD());
+            updateSpel();
+            veldC.ImageSetterALL();
+            updatePunten();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+    public void checkTurn() {
+        if(spel.getHuidigeSpeler().getKleur() != getKleur()) {
+            disableKnoppen();
+        } else {
+            enableKnoppen();
+        }
+    }
+    public void disableKnoppen() {
+        imgHakken.setDisable(true);
+        imgOpenendeur.setDisable(true);
+        imgPickup.setDisable(true);
+        imgPickup1.setDisable(true);
+        imgBrandblusser.setDisable(true);
+        imgRijden.setDisable(true);
+        imgWagenblussen.setDisable(true);
+        imgRolswap.setDisable(true);
+        btnRefresh.setDisable(true);
+        btnSpecial.setDisable(true);
+        btnRIGHT.setDisable(true);
+        btnUP.setDisable(true);
+        btnDOWN.setDisable(true);
+        btnLEFT.setDisable(true);
+        // btnET.setDisable(true);
+    }
+    public void enableKnoppen() {
+        imgHakken.setDisable(false);
+        imgOpenendeur.setDisable(false);
+        imgPickup.setDisable(false);
+        imgPickup1.setDisable(false);
+        imgBrandblusser.setDisable(false);
+        imgRijden.setDisable(false);
+        imgWagenblussen.setDisable(false);
+        imgRolswap.setDisable(false);
+        btnRefresh.setDisable(false);
+        btnSpecial.setDisable(false);
+        btnRIGHT.setDisable(false);
+        btnUP.setDisable(false);
+        btnDOWN.setDisable(false);
+        btnLEFT.setDisable(false);
+        //btnET.setDisable(false);
     }
 }
 

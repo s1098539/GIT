@@ -146,6 +146,7 @@ public class Main2 extends Application {
             //System.out.println(clientStub.updateGetSpel());
 //            clientStub.updateSetSpel(spelC.getSpel());
 //            System.out.println(clientStub.updateGetSpel());
+
         } catch (Exception e) {
             System.out.println("EXCEPTION: " + e);
         }

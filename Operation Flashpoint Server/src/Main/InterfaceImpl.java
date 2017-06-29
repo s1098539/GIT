@@ -40,45 +40,52 @@ public class InterfaceImpl implements Interface, Serializable {
     int i = 1;
     int a = 0;
     int b = 0;
+    Kleur kleur;
     private ArrayList<ChatListenInterface> Listeners = new ArrayList<ChatListenInterface>();
     private ArrayList<Interface> gameListeners = new ArrayList<Interface>();
 
     @Override
-    public void addSpeler(String naam) throws RemoteException {
-        Kleur kleur;
+    public Kleur addSpeler(String naam) throws RemoteException {
         switch (i) {
             case 1:
                 Speler speler = new Speler(naam, Kleur.BLAUW, 1, 1);
                 spelers.add(speler);
                 i++;
+                kleur = Kleur.BLAUW;
                 break;
             case 2:
                 Speler speler2 = new Speler(naam, Kleur.GEEL, 1, 2);
                 spelers.add(speler2);
                 i++;
+                kleur = Kleur.GEEL;
                 break;
             case 3:
                 Speler speler3 = new Speler(naam, Kleur.GROEN, 1, 3);
                 spelers.add(speler3);
                 i++;
+                kleur = Kleur.GROEN;
                 break;
             case 4:
                 Speler speler4 = new Speler(naam, Kleur.ORANJE, 1, 4);
                 spelers.add(speler4);
                 i++;
+                kleur = Kleur.ORANJE;
                 break;
             case 5:
                 Speler speler5 = new Speler(naam, Kleur.ROOD, 1, 5);
                 spelers.add(speler5);
                 i++;
+                kleur = Kleur.ROOD;
                 break;
             case 6:
                 Speler speler6 = new Speler(naam, Kleur.ZWART, 1, 6);
                 spelers.add(speler6);
                 i++;
+                kleur = Kleur.ZWART;
                 break;
             default:
         }
+        return kleur;
     }
 
     @Override
