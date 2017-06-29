@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7894ff97-f602-4224-9dfa-f07b8509e6e9" name="Default" comment="PLAATJES">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint Server/out/production/Operation Flashpoint Server/Main/Interface.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint Server/out/production/Operation Flashpoint Server/Main/Interface.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint Server/out/production/Operation Flashpoint Server/Main/InterfaceImpl.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint Server/out/production/Operation Flashpoint Server/Main/InterfaceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpeelveldController.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpeelveldController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpelController$1.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpelController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpelController.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpelController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpelerController.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpelerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpraakController.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Controller/SpraakController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Model/Spel.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Model/Spel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Model/Spraak.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Model/Spraak.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Main/Interface.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Main/Interface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Main/Main2.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Main/Main2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Resources/GFX/Egel.png" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Resources/GFX/Egel.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint/Resources/GFX/Vis.png" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint/Resources/GFX/Vis.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Operation Flashpoint Server/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint Server/src/Main/InterfaceImpl.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint Server/src/Main/InterfaceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/SpelerController.java" afterPath="$PROJECT_DIR$/src/Controller/SpelerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/ChatListen.java" afterPath="$PROJECT_DIR$/src/Main/ChatListen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Spel.java" afterPath="$PROJECT_DIR$/src/Model/Spel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Main2.java" afterPath="$PROJECT_DIR$/src/Main/Main2.java" />
     </list>
     <list id="434e31fd-c5a9-4937-af37-732d9c26c914" name="nope" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,22 +29,38 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main2.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/Main2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="139" column="50" lean-forward="false" selection-start-line="139" selection-start-column="50" selection-end-line="139" selection-end-column="50" />
+            <state relative-caret-position="204">
+              <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpelerController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SpelerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/SpelerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="778" column="111" lean-forward="false" selection-start-line="778" selection-start-column="111" selection-end-line="778" selection-end-column="111" />
-              <folding />
+            <state relative-caret-position="390">
+              <caret line="819" column="20" lean-forward="false" selection-start-line="819" selection-start-column="20" selection-end-line="819" selection-end-column="20" />
+              <folding>
+                <marker date="1498747793959" expanded="false" signature="24574:24580" ph=" }" />
+                <marker date="1498747793959" expanded="true" signature="24607:26791" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="26823:28570" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="28617:29300" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="29348:29708" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="29758:31801" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="31832:32001" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="32037:32149" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="32185:32297" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="32353:35031" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="35095:37194" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="37338:40395" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="40445:41151" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="41189:42003" ph="{...}" />
+                <marker date="1498747793959" expanded="true" signature="42089:43292" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,10 +68,11 @@
       <file leaf-file-name="SpelController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/SpelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="1030" column="29" lean-forward="false" selection-start-line="1030" selection-start-column="29" selection-end-line="1030" selection-end-column="29" />
+            <state relative-caret-position="16915">
+              <caret line="1027" column="29" lean-forward="false" selection-start-line="1027" selection-start-column="29" selection-end-line="1027" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1498747215708" expanded="true" signature="58502:58510" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -64,8 +81,8 @@
       <file leaf-file-name="Spel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="40" column="4" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+            <state relative-caret-position="493">
+              <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
               <folding>
                 <element signature="e#445#446#0" expanded="true" />
                 <element signature="e#481#482#0" expanded="true" />
@@ -79,15 +96,9 @@
       <file leaf-file-name="SpeelveldController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/SpeelveldController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
+            <state relative-caret-position="12410">
               <caret line="737" column="20" lean-forward="false" selection-start-line="737" selection-start-column="20" selection-end-line="737" selection-end-column="20" />
-              <folding>
-                <marker date="1498737989491" expanded="true" signature="20074:23340" ph="{...}" />
-                <marker date="1498737989491" expanded="true" signature="23461:28005" ph="{...}" />
-                <marker date="1498737989491" expanded="true" signature="28048:29478" ph="{...}" />
-                <marker date="1498737989491" expanded="true" signature="29533:29755" ph="{...}" />
-                <marker date="1498737989491" expanded="true" signature="29813:30035" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,11 +174,11 @@
         <option value="$PROJECT_DIR$/src/Main/ChatListenInterface.java" />
         <option value="$PROJECT_DIR$/src/Main/Interface.java" />
         <option value="$PROJECT_DIR$/src/Main/InterfaceImpl.java" />
-        <option value="$PROJECT_DIR$/src/Main/Main2.java" />
         <option value="$PROJECT_DIR$/src/Controller/SpelController.java" />
         <option value="$PROJECT_DIR$/src/Main/ChatListen.java" />
         <option value="$PROJECT_DIR$/src/Model/Spel.java" />
         <option value="$PROJECT_DIR$/src/Controller/SpelerController.java" />
+        <option value="$PROJECT_DIR$/src/Main/Main2.java" />
       </list>
     </option>
   </component>
@@ -360,7 +371,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Controller/SpeelveldController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Controller/SpelerController.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -910,6 +921,7 @@
       <workItem from="1498670911598" duration="4480000" />
       <workItem from="1498676044070" duration="3114000" />
       <workItem from="1498736848617" duration="1141000" />
+      <workItem from="1498747148533" duration="648000" />
     </task>
     <task id="LOCAL-00001" summary="Made SpelController and Spel follow MVC (For the most part)">
       <created>1497860820908</created>
@@ -1013,7 +1025,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81904000" />
+    <option name="totallyTimeSpent" value="82552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="961" y="0" width="966" height="1047" extended-state="0" />
@@ -1034,7 +1046,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32142857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1123,14 +1135,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/SpelView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Vak.java">
@@ -1158,27 +1169,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/SpelView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SpeelveldController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4680">
           <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
-          <folding>
-            <marker date="1498737989491" expanded="true" signature="20074:23340" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="23461:28005" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="28048:29478" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="29533:29755" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="29813:30035" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1209,6 +1213,7 @@
           <caret line="501" column="0" lean-forward="false" selection-start-line="501" selection-start-column="0" selection-end-line="501" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1498747215708" expanded="true" signature="58502:58510" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1217,7 +1222,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="195" column="29" lean-forward="false" selection-start-line="195" selection-start-column="29" selection-end-line="195" selection-end-column="29" />
-          <folding />
+          <folding>
+            <marker date="1498747793959" expanded="false" signature="24574:24580" ph=" }" />
+            <marker date="1498747793959" expanded="true" signature="24607:26791" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="26823:28570" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="28617:29300" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="29348:29708" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="29758:31801" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="31832:32001" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="32037:32149" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="32185:32297" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="32353:35031" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="35095:37194" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="37338:40395" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="40445:41151" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="41189:42003" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="42089:43292" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1234,6 +1255,7 @@
           <caret line="501" column="0" lean-forward="true" selection-start-line="501" selection-start-column="0" selection-end-line="501" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1498747215708" expanded="true" signature="58502:58510" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1242,13 +1264,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5304">
           <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
-          <folding>
-            <marker date="1498737989491" expanded="true" signature="20074:23340" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="23461:28005" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="28048:29478" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="29533:29755" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="29813:30035" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,7 +1272,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3009">
           <caret line="195" column="29" lean-forward="false" selection-start-line="195" selection-start-column="29" selection-end-line="195" selection-end-column="29" />
-          <folding />
+          <folding>
+            <marker date="1498747793959" expanded="false" signature="24574:24580" ph=" }" />
+            <marker date="1498747793959" expanded="true" signature="24607:26791" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="26823:28570" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="28617:29300" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="29348:29708" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="29758:31801" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="31832:32001" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="32037:32149" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="32185:32297" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="32353:35031" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="35095:37194" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="37338:40395" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="40445:41151" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="41189:42003" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="42089:43292" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1281,14 +1313,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/SpelView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Vak.java">
@@ -1300,14 +1331,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/SpelView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Resources/GFX/Openendeur.png">
@@ -1394,10 +1424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="861">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#779#796#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1405,9 +1431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="21" column="92" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1432,7 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1448,7 +1470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="39" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1464,7 +1485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1476,32 +1496,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="139" column="50" lean-forward="false" selection-start-line="139" selection-start-column="50" selection-end-line="139" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SpeelveldController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
+        <state relative-caret-position="12410">
           <caret line="737" column="20" lean-forward="false" selection-start-line="737" selection-start-column="20" selection-end-line="737" selection-end-column="20" />
-          <folding>
-            <marker date="1498737989491" expanded="true" signature="20074:23340" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="23461:28005" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="28048:29478" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="29533:29755" ph="{...}" />
-            <marker date="1498737989491" expanded="true" signature="29813:30035" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="40" column="4" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        <state relative-caret-position="493">
+          <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
           <folding>
             <element signature="e#445#446#0" expanded="true" />
             <element signature="e#481#482#0" expanded="true" />
@@ -1513,18 +1519,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SpelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="1030" column="29" lean-forward="false" selection-start-line="1030" selection-start-column="29" selection-end-line="1030" selection-end-column="29" />
+        <state relative-caret-position="16915">
+          <caret line="1027" column="29" lean-forward="false" selection-start-line="1027" selection-start-column="29" selection-end-line="1027" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1498747215708" expanded="true" signature="58502:58510" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SpelerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="778" column="111" lean-forward="false" selection-start-line="778" selection-start-column="111" selection-end-line="778" selection-end-column="111" />
+        <state relative-caret-position="390">
+          <caret line="819" column="20" lean-forward="false" selection-start-line="819" selection-start-column="20" selection-end-line="819" selection-end-column="20" />
+          <folding>
+            <marker date="1498747793959" expanded="false" signature="24574:24580" ph=" }" />
+            <marker date="1498747793959" expanded="true" signature="24607:26791" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="26823:28570" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="28617:29300" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="29348:29708" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="29758:31801" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="31832:32001" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="32037:32149" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="32185:32297" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="32353:35031" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="35095:37194" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="37338:40395" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="40445:41151" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="41189:42003" ph="{...}" />
+            <marker date="1498747793959" expanded="true" signature="42089:43292" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
           <folding />
         </state>
       </provider>
