@@ -353,6 +353,7 @@ public class SpeelveldController {
     public void setMap(){
         int x;
         int y;
+        int GS = 3;
 
         //buitenmuren horizontaal
         for(x = 1; x <9; x++) {
@@ -478,7 +479,7 @@ public class SpeelveldController {
 
         }
         spelC.checkExplosie(a,b);
-        veldD.getVakken()[a][b].setStoffen(true);
+        veldD.getVakken()[a][b].setHotspot(true);
 
         do {
             dobbelC.getD8().gooi();
@@ -488,7 +489,7 @@ public class SpeelveldController {
 
         }while(veldD.getVakken()[x][y].isVuur());
         spelC.checkExplosie(x,y);
-        veldD.getVakken()[x][y].setStoffen(true);
+        veldD.getVakken()[x][y].setHotspot(true);
 
         dobbelC.getD8().flip();
         x = dobbelC.getD8().getWaarde();
@@ -497,8 +498,18 @@ public class SpeelveldController {
             y = dobbelC.getD6().getWaarde();
         }while(veldD.getVakken()[x][y].isVuur());
         spelC.checkExplosie(x,y);
-        veldD.getVakken()[x][y].setStoffen(true);
+        veldD.getVakken()[x][y].setHotspot(true);
 
+        while (GS > 0) {
+            do {
+                dobbelC.getD8().gooi();
+                dobbelC.getD6().gooi();
+                x = dobbelC.getD8().getWaarde();
+                y = dobbelC.getD6().getWaarde();
+            } while (veldD.getVakken()[x][y].isVuur());
+            veldD.getVakken()[x][y].setStoffen(true);
+            GS--;
+        }
     }
 
     public boolean doeDeur(int x, int y, Richting richting) {
