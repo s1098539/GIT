@@ -106,7 +106,6 @@ public class SpelController implements Initializable {
     String localMessage = "";
     String host = "127.0.0.1";
     String username = "";
-    Send sender;
     Spel spel;
     int i = 0;
     int b = 0;
@@ -249,14 +248,6 @@ public class SpelController implements Initializable {
 
     public void setSpel(Spel spel) {
         this.spel = spel;
-    }
-
-    public Send getSender() {
-        return sender;
-    }
-
-    public void setSender(Send sender) {
-        this.sender = sender;
     }
 
     public String getLocalMessage() {
