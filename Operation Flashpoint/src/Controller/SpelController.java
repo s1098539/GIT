@@ -170,8 +170,14 @@ public class SpelController implements Initializable {
                 result.ifPresent(pair -> {
                     int x = Integer.parseInt(pair.getKey());
                     int y = Integer.parseInt(pair.getValue());
-                    spel.getHuidigeSpeler().setX(x);
-                    spel.getHuidigeSpeler().setY(y);
+                    Speler speler = null;
+                    for(int i = 0; i < spel.getSpelers().size(); i++) {
+                        if(spel.getSpelers().get(i).getKleur() == kleur) {
+                            speler = spel.getSpelers().get(i);
+                        }
+                    }
+                    speler.setX(x);
+                    speler.setY(y);
                     if(y>7 || x>9 || y<0 || x<0) invalidCoordinates = true;
                     for (int y1 = 1; y1 < 7; y1++) {
                         for (int x1 = 1; x1 < 9; x1++) {
@@ -179,7 +185,8 @@ public class SpelController implements Initializable {
                         }
                     }
                     if (!invalidCoordinates)
-                        veldC.addSpeler(spel.getHuidigeSpeler().getKleur(), spel.getHuidigeSpeler().getX(), spel.getHuidigeSpeler().getY());
+//                        veldC.addSpeler(spel.getHuidigeSpeler().getKleur(), spel.getHuidigeSpeler().getX(), spel.getHuidigeSpeler().getY());
+                        veldC.addSpeler(kleur, x, y);
                 });
             }
         }
@@ -343,7 +350,7 @@ public class SpelController implements Initializable {
             veldC.getVeldD().getPersonenlijst().add(persoon);
         }
         Collections.shuffle(veldC.getVeldD().getPersonenlijst(), new Random(seed));
-        //eersteBeurt();
+        eersteBeurt();
 
         checkTurn();
     }
