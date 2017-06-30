@@ -1617,7 +1617,6 @@ public class SpelController implements Initializable {
         imgRijden.setDisable(true);
         imgWagenblussen.setDisable(true);
         imgRolswap.setDisable(true);
-        btnRefresh.setDisable(true);
         btnSpecial.setDisable(true);
         btnRIGHT.setDisable(true);
         btnUP.setDisable(true);
@@ -1634,7 +1633,6 @@ public class SpelController implements Initializable {
         imgRijden.setDisable(false);
         imgWagenblussen.setDisable(false);
         imgRolswap.setDisable(false);
-        btnRefresh.setDisable(false);
         btnSpecial.setDisable(false);
         btnRIGHT.setDisable(false);
         btnUP.setDisable(false);
