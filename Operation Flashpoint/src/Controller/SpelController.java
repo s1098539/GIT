@@ -12,16 +12,11 @@ import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.util.Pair;
-import sun.plugin.javascript.navig.Anchor;
-import java.awt.event.ActionEvent;
+
 import java.io.*;
 import java.net.URL;
 import java.rmi.NotBoundException;
@@ -32,7 +27,7 @@ import java.util.*;
 import java.util.List;
 
 import static Model.Rol.*;
-import Main.*;
+
 public class SpelController implements Initializable {
 
     @FXML private AnchorPane thePane;
@@ -340,18 +335,8 @@ public class SpelController implements Initializable {
 
         setActiveSpelerPlaatje();
         long seed = System.nanoTime();
-        for (Rol rol : Rol.values()) {
-            veldC.getVeldD().getRollenlijst().add(rol);
-        }
-        Collections.shuffle(veldC.getVeldD().getRollenlijst(), new Random(seed));
-        int z = 0;
-        for (Speler speler: spelC.spel.getSpelers()) {
-            if(veldC.getVeldD().getRollenlijst().get(z) == GODMODE) {
-                veldC.getVeldD().getRollenlijst().remove(z);
-            }
-            speler.setRol(veldC.getVeldD().getRollenlijst().get(z));
-            z++;
-        }
+
+        toewijzenRollen();
         setRollen();
         spelerC.resetPunten();
         for (Persoon persoon : Persoon.values()) {
@@ -1467,6 +1452,17 @@ public class SpelController implements Initializable {
             case 1 :if(spel.getSpelers().get(0) == spel.getHuidigeSpeler()) {
                 user1Img.setImage(veldC.veldI.getBrandweerBlauw50pxActive());
             }   else user1Img.setImage(veldC.veldI.getBrandweerBlauw50px());
+        }
+    }
+
+    private void toewijzenRollen() {
+        switch(spel.getSpelers().size()) {
+            case 6: spel.getSpelers().get(5).setRol(BRANDSPUITBEDIENER);
+            case 5: spel.getSpelers().get(4).setRol(GASPAKDRAGER);
+            case 4: spel.getSpelers().get(3).setRol(SPECSTOFFEN);
+            case 3: spel.getSpelers().get(2).setRol(COMMANDANT);
+            case 2: spel.getSpelers().get(1).setRol(VERKENNER);
+            case 1: spel.getSpelers().get(0).setRol(DOKTER);
         }
     }
 
