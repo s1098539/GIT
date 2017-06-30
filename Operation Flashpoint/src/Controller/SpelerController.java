@@ -984,6 +984,7 @@ public class SpelerController {
         spelC.spel.getHuidigeSpeler().setX(x);
         spelC.spel.getHuidigeSpeler().setY(y);
         persoonOmdraaien();
+        spelC.updateSpel();
         spelC.spel.getHuidigeSpeler().setX(oudX);
         spelC.spel.getHuidigeSpeler().setY(oudY);
     }
