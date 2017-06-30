@@ -194,10 +194,10 @@ public class SpelerController {
                     if (spelC.spel.getHuidigeSpeler() != speler2) choices.add(speler2.getKleur().getString());
                 }
 
-                ChoiceDialog<String> dialog = new ChoiceDialog<>("Kies een mede spelC.spel.getHuidigeSpeler()", choices);
+                ChoiceDialog<String> dialog = new ChoiceDialog<>("Kies een mede speler", choices);
                 dialog.setTitle("Commandant special");
-                dialog.setHeaderText("De commandant kan een andere spelC.spel.getHuidigeSpeler() commanderen te bewegen");
-                dialog.setContentText("Kies een mede spelC.spel.getHuidigeSpeler():");
+                dialog.setHeaderText("De commandant kan een andere speler commanderen te bewegen");
+                dialog.setContentText("Kies een mede speler:");
 
                 Optional<String> result = dialog.showAndWait();
                 if (result.isPresent()) {
