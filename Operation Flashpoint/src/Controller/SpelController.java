@@ -124,13 +124,10 @@ public class SpelController implements Initializable {
     ChatController chatC;
     SpraakController spraakC;
     SpelController spelC;
-
-
-    int beurtCount = 0;
     Boolean invalidCoordinates;
+
     private void eersteBeurt() {
-        invalidCoordinates = true;
-        if(beurtCount<spelC.spel.getSpelers().size()) {
+            invalidCoordinates = false;
             Dialog<Pair<String, String>> dialog = new Dialog<>();
             dialog.setTitle("Kies een start positie buiten het huis");
 
@@ -144,9 +141,9 @@ public class SpelController implements Initializable {
             gridPane.setPadding(new Insets(20, 150, 10, 10));
 
             TextField from = new TextField();
-            from.setPromptText("From");
+            from.setPromptText("X");
             TextField to = new TextField();
-            to.setPromptText("To");
+            to.setPromptText("Y");
 
             gridPane.add(new Label("X:"), 0, 0);
             gridPane.add(from, 1, 0);
@@ -154,12 +151,8 @@ public class SpelController implements Initializable {
             gridPane.add(to, 3, 0);
 
             dialog.getDialogPane().setContent(gridPane);
-            while(invalidCoordinates) {
-                invalidCoordinates = false;
-                // Request focus on the username field by default.
                 Platform.runLater(() -> from.requestFocus());
 
-//         Convert the result to a username-password-pair when the login button is clicked.
                 dialog.setResultConverter(dialogButton -> {
                     if (dialogButton == loginButtonType) {
                         return new Pair<>(from.getText(), to.getText());
@@ -170,8 +163,12 @@ public class SpelController implements Initializable {
                 Optional<Pair<String, String>> result = dialog.showAndWait();
 
                 result.ifPresent(pair -> {
-                    int x = Integer.parseInt(pair.getKey());
-                    int y = Integer.parseInt(pair.getValue());
+                    int x;
+                    int y;
+                    if(pair.getKey().equals("")) x = 0;
+                    else x = Integer.parseInt(pair.getKey());
+                    if(pair.getValue().equals("")) y = 0;
+                    else y = Integer.parseInt(pair.getValue());
                     Speler speler = null;
                     for(int i = 0; i < spel.getSpelers().size(); i++) {
                         if(spel.getSpelers().get(i).getKleur() == kleur) {
@@ -186,13 +183,9 @@ public class SpelController implements Initializable {
                             if (x == x1 && y == y1) invalidCoordinates = true;
                         }
                     }
-                    if (!invalidCoordinates)
-//                        veldC.addSpeler(spel.getHuidigeSpeler().getKleur(), spel.getHuidigeSpeler().getX(), spel.getHuidigeSpeler().getY());
-                        veldC.addSpeler(kleur, x, y);
+                    if (!invalidCoordinates) veldC.addSpeler(kleur, x, y);
+                    else veldC.addSpeler(kleur, 0, 0);
                 });
-            }
-        }
-        beurtCount++;
     }
 
     public void maakSpelers() throws RemoteException {
@@ -1519,7 +1512,6 @@ public class SpelController implements Initializable {
         }
     }
 
-        //TODO SAVESTATES AND SHIT
     String spelfile = "spel.ser";
     String veldfile =  "veld.ser";
 
