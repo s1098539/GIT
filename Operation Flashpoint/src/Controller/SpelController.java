@@ -1031,9 +1031,8 @@ public class SpelController implements Initializable {
         spelerC.dropItem();
         checkPersonen();
         spelerDood();
-        spelerC.resetPunten();
-
         switchSpeler();
+        spelerC.resetPunten();
 
         checkTurn();
 
