@@ -251,7 +251,7 @@ public class SpelerController {
     }
 
     public void BrandweerwagenSpuitActie() {
-        System.out.println("BLUS BLUS");
+        System.out.println("-- Spel: De brandweerwagen blust in zijn kwadrant. ");
         Boolean opBWagen = false;
         switch(veldC.getVeldD().getBrandweerwagen()) {
             case BOVEN: if(spelC.spel.getHuidigeSpeler().getY()==0 && (spelC.spel.getHuidigeSpeler().getX() == 3|| spelC.spel.getHuidigeSpeler().getX() == 4)) {
@@ -320,7 +320,6 @@ public class SpelerController {
                             }
                             break;
                     }
-
                     if (spelC.spel.getHuidigeSpeler().getRol() == BRANDSPUITBEDIENER && eersteLoop) {
                         eersteLoop = false;
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -760,7 +759,7 @@ public class SpelerController {
             }
         }
         else{
-            System.out.println("hier zit een muur oid");
+            System.out.println("-- Spel: Er staat hier een muur.");
         }
 
     }
@@ -948,7 +947,7 @@ public class SpelerController {
                     if (spelC.spel.getHuidigeSpeler().getY() > 0 && vak.boven.isBegaanbaar()) {
                         beweegActieKosten(BOVEN);
                         spelC.spel.getHuidigeSpeler().setY(spelC.spel.getHuidigeSpeler().getY() - 1);
-                        System.out.println("De " + spelC.spel.getHuidigeSpeler()+ " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
+                        System.out.println("De " + spelC.spel.getHuidigeSpeler().getNaam()+ " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
@@ -956,7 +955,7 @@ public class SpelerController {
                     if (spelC.spel.getHuidigeSpeler().getX() < 9 && vak.rechts.isBegaanbaar()) {
                         beweegActieKosten(RECHTS);
                         spelC.spel.getHuidigeSpeler().setX(spelC.spel.getHuidigeSpeler().getX() + 1);
-                        System.out.println("De " + spelC.spel.getHuidigeSpeler()+ " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
+                        System.out.println("De " + spelC.spel.getHuidigeSpeler().getNaam()+ " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
@@ -964,7 +963,7 @@ public class SpelerController {
                     if (spelC.spel.getHuidigeSpeler().getY() < 7 && vak.onder.isBegaanbaar()) {
                         beweegActieKosten(ONDER);
                         spelC.spel.getHuidigeSpeler().setY(spelC.spel.getHuidigeSpeler().getY() + 1);
-                        System.out.println("De " + spelC.spel.getHuidigeSpeler()+ " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
+                        System.out.println("De " + spelC.spel.getHuidigeSpeler().getNaam()+ " loopt naar: " + spelC.spel.getHuidigeSpeler().getX() + "," + spelC.spel.getHuidigeSpeler().getY() + "*");
                         returnValue = true;
                     }
                     break;
