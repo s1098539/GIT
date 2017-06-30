@@ -1,6 +1,6 @@
 package Model;
 
-import javafx.scene.paint.Color;
+import enumerators.Kleur;
 
 import java.util.ArrayList;
 

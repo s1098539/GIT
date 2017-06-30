@@ -2,6 +2,9 @@ package Controller;
 
 import Main.Interface;
 import Model.*;
+import enumerators.Kleur;
+import enumerators.Persoon;
+import enumerators.Richting;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,7 +29,7 @@ import java.rmi.registry.Registry;
 import java.util.*;
 import java.util.List;
 
-import static Model.Rol.*;
+import static enumerators.Rol.*;
 
 public class SpelController implements Initializable {
 

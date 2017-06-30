@@ -1,6 +1,8 @@
 package Model;
 
-import Controller.SpelerController;
+import enumerators.Kleur;
+import enumerators.Persoon;
+import enumerators.Rol;
 
 import java.io.Serializable;
 

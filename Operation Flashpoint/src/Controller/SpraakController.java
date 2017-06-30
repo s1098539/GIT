@@ -1,7 +1,7 @@
 package Controller;
 
 // imports van de modellen Rol en Spraak
-import Model.Rol;
+import enumerators.Rol;
 import Model.Spraak;
 
 //imports die nodig zijn om audiobestanden af te spelen.

@@ -1,5 +1,9 @@
 package Model;
 
+import enumerators.Persoon;
+import enumerators.Richting;
+import enumerators.Rol;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 

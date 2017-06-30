@@ -1,12 +1,11 @@
 package Main;
 
-import Controller.SpelController;
 import Model.*;
+import enumerators.Kleur;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.Map;
 
 public interface Interface extends Remote {
     public Kleur addSpeler(String naam) throws RemoteException;

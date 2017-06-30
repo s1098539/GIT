@@ -1,21 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa791b91-80fa-4f39-958f-8de519105891" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;Operation Flashpoint/out/production/Operation Flashpoint/Main/Main2.class">
+    <list default="true" id="aa791b91-80fa-4f39-958f-8de519105891" name="Default" comment="Moving stuff around and deleting old stuff -&#10;&#10;BLAME THIS COMMIT IF STUFF CHANGES.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/enumerators/Fiche.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/enumerators/Kleur.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/enumerators/Persoon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/enumerators/Richting.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/enumerators/Rol.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/enumerators/Status.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/enumerators/Fiche.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/enumerators/Kleur.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/enumerators/Persoon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/enumerators/Richting.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/enumerators/Rol.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/enumerators/Status.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Fiche.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Kleur.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Persoon.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Richting.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Rol.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Status.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/Fiche.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/Kleur.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/Persoon.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/Richting.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/Rol.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/Status.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/Listen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/ListenInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/Send.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/Server.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/ServerInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Ambulance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Brandweerwagen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Fiche.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Kleur.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Persoon.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Richting.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Rol.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Status.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/sample/Scrapbook.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Fiche.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Kleur.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Persoon.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Richting.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Rol.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Status.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Controller/SpeelveldController.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Controller/SpeelveldController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Controller/SpelController.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Controller/SpelController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Controller/SpelerController.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Controller/SpelerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Interface.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Interface.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/InterfaceImpl.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/InterfaceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Server.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Main/Server.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Lobby.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Lobby.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/SpeelveldData.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/SpeelveldData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Speler.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Speler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Vak$1.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Vak$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Vak.class" afterPath="$PROJECT_DIR$/out/production/Operation Flashpoint Server/Model/Vak.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/LobbyController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/LobbyController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpeelveldController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpelerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpraakController.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Controller/SpraakController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Interface.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Interface.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Main2.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Main/Main2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Resources/GFX/Egel.png" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Resources/GFX/Egel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Resources/GFX/Vis.png" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Resources/GFX/Vis.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Lobby.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Lobby.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/SpeelveldData.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/SpeelveldData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Speler.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Speler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Vak$1.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Vak$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Vak.class" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/Model/Vak.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/SpeelveldController.java" afterPath="$PROJECT_DIR$/src/Controller/SpeelveldController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/SpelController.java" afterPath="$PROJECT_DIR$/src/Controller/SpelController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/SpelerController.java" afterPath="$PROJECT_DIR$/src/Controller/SpelerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Interface.java" afterPath="$PROJECT_DIR$/src/Main/Interface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/InterfaceImpl.java" afterPath="$PROJECT_DIR$/src/Main/InterfaceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Server.java" afterPath="$PROJECT_DIR$/src/Main/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Lobby.java" afterPath="$PROJECT_DIR$/src/Model/Lobby.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/SpeelveldData.java" afterPath="$PROJECT_DIR$/src/Model/SpeelveldData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Speler.java" afterPath="$PROJECT_DIR$/src/Model/Speler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Vak.java" afterPath="$PROJECT_DIR$/src/Model/Vak.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Operation Flashpoint/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Main2.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Main2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/View/SpelView.fxml" afterPath="$PROJECT_DIR$/../Operation Flashpoint/out/production/Operation Flashpoint/View/SpelView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/LobbyController.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/LobbyController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpeelveldController.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpeelveldController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelController.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelerController.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpelerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpraakController.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Controller/SpraakController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Interface.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/Interface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/InterfaceImpl.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Main/InterfaceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Lobby.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Lobby.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/SpeelveldData.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/SpeelveldData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Speler.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Speler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Vak.java" afterPath="$PROJECT_DIR$/../Operation Flashpoint/src/Model/Vak.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,34 +125,31 @@
         <entry file="file://$PROJECT_DIR$/src/Main/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="731">
-              <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-              <folding />
+              <caret line="48" column="1" lean-forward="false" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InterfaceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InterfaceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/InterfaceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="221">
+              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#873#881#0" expanded="true" />
+                <element signature="e#1016#1037#0" expanded="true" />
+                <element signature="e#1103#1114#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Kleur.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Kleur.java">
+        <entry file="file://$PROJECT_DIR$/src/enumerators/Kleur.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
@@ -80,56 +158,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpeelveldController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SpeelveldController.java">
+      <file leaf-file-name="Persoon.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/enumerators/Persoon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="0">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatListenInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/ChatListenInterface.java">
+      <file leaf-file-name="Richting.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/enumerators/Richting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scrapbook.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Scrapbook.java">
+      <file leaf-file-name="Rol.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/enumerators/Rol.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding>
-                <element signature="e#253#254#0" expanded="false" />
-                <element signature="e#289#290#0" expanded="false" />
-                <element signature="e#333#334#0" expanded="false" />
-                <element signature="e#373#374#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Spel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="85">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Speler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Speler.java">
+      <file leaf-file-name="Status.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/enumerators/Status.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,8 +201,28 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="425">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FactoryVakken.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/FactoryVakken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fiche.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/enumerators/Fiche.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -166,6 +249,7 @@
       <find>unregisterObserver</find>
       <find>GetSpeler</find>
       <find>getSpeler</find>
+      <find>Registry</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,11 +269,16 @@
         <option value="$PROJECT_DIR$/src/Model/MASTER.java" />
         <option value="$PROJECT_DIR$/src/Model/Parse.java" />
         <option value="$PROJECT_DIR$/src/Model/Speler.java" />
-        <option value="$PROJECT_DIR$/src/Main/Server.java" />
         <option value="$PROJECT_DIR$/src/Main/ChatListen.java" />
         <option value="$PROJECT_DIR$/src/Main/ChatListenInterface.java" />
         <option value="$PROJECT_DIR$/src/Main/Interface.java" />
         <option value="$PROJECT_DIR$/src/Main/InterfaceImpl.java" />
+        <option value="$PROJECT_DIR$/src/Main/Server.java" />
+        <option value="$PROJECT_DIR$/src/enumerators/FactoryVakken.java" />
+        <option value="$PROJECT_DIR$/src/Model/FactoryVakken.java" />
+        <option value="$PROJECT_DIR$/src/enumerators/Kleur.java" />
+        <option value="$PROJECT_DIR$/src/enumerators/Rol.java" />
+        <option value="$PROJECT_DIR$/src/enumerators/Status.java" />
       </list>
     </option>
   </component>
@@ -200,10 +289,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="10" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-7" />
+    <option name="width" value="941" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -236,6 +324,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operation Flashpoint Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operation Flashpoint Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operation Flashpoint Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operation Flashpoint Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operation Flashpoint Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operation Flashpoint Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enumerators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operation Flashpoint Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operation Flashpoint Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -253,6 +413,118 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\GIT\Operation Flashpoint Server\src" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Model/Ambulance.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Model/Brandweerwagen.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Model/Scrapbook.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -706,7 +978,7 @@
       <workItem from="1498670925725" duration="4095000" />
       <workItem from="1498676030700" duration="2889000" />
       <workItem from="1498736833066" duration="1156000" />
-      <workItem from="1498747058618" duration="738000" />
+      <workItem from="1498747058618" duration="7205000" />
     </task>
     <task id="LOCAL-00001" summary="HELLO RMI TEAM&#10;&#10;ITS ME RAFE AGAIN&#10;&#10;BACK IT AGAIN WITH ALL THE RMI">
       <created>1498138489861</created>
@@ -719,7 +991,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61704000" />
+    <option name="totallyTimeSpent" value="68171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -731,7 +1003,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="10" width="974" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="941" height="1087" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -747,14 +1020,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20917822" sideWeight="0.49582464" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20061412" sideWeight="0.49582464" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27139875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28108108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -804,7 +1077,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="HELLO RMI TEAM&#10;&#10;ITS ME RAFE AGAIN&#10;&#10;BACK IT AGAIN WITH ALL THE RMI" />
-    <option name="LAST_COMMIT_MESSAGE" value="HELLO RMI TEAM&#10;&#10;ITS ME RAFE AGAIN&#10;&#10;BACK IT AGAIN WITH ALL THE RMI" />
+    <MESSAGE value="Moving stuff around and deleting old stuff -&#10;&#10;BLAME THIS COMMIT IF STUFF CHANGES." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moving stuff around and deleting old stuff -&#10;&#10;BLAME THIS COMMIT IF STUFF CHANGES." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -817,39 +1091,57 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Model/SpeelveldData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Scrapbook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="e#253#254#0" expanded="false" />
-            <element signature="e#289#290#0" expanded="false" />
-            <element signature="e#333#334#0" expanded="false" />
-            <element signature="e#373#374#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Spel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Speler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1323">
           <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#768#769#0" expanded="false" />
+            <element signature="e#795#796#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#883#884#0" expanded="false" />
+            <element signature="e#908#909#0" expanded="false" />
+            <element signature="e#933#934#0" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
+            <element signature="e#982#983#0" expanded="false" />
+            <element signature="e#1006#1007#0" expanded="false" />
+            <element signature="e#1041#1042#0" expanded="false" />
+            <element signature="e#1075#1076#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1144#1145#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1197#1198#0" expanded="false" />
+            <element signature="e#1240#1241#0" expanded="false" />
+            <element signature="e#1279#1280#0" expanded="false" />
+            <element signature="e#1333#1334#0" expanded="false" />
+            <element signature="e#1365#1366#0" expanded="false" />
+            <element signature="e#1406#1407#0" expanded="false" />
+            <element signature="e#1440#1441#0" expanded="false" />
+            <element signature="e#1476#1477#0" expanded="false" />
+            <element signature="e#1504#1505#0" expanded="false" />
+            <element signature="e#1535#1536#0" expanded="false" />
+            <element signature="e#1561#1562#0" expanded="false" />
+            <element signature="e#1592#1593#0" expanded="false" />
+            <element signature="e#1618#1619#0" expanded="false" />
+            <element signature="e#1669#1670#0" expanded="false" />
+            <element signature="e#1715#1716#0" expanded="false" />
+            <element signature="e#1766#1767#0" expanded="false" />
+            <element signature="e#1812#1813#0" expanded="false" />
+            <element signature="e#1847#1848#0" expanded="false" />
+            <element signature="e#1877#1878#0" expanded="false" />
+            <element signature="e#1942#1943#0" expanded="false" />
+            <element signature="e#1998#1999#0" expanded="false" />
+            <element signature="e#2029#2030#0" expanded="false" />
+            <element signature="e#2056#2057#0" expanded="false" />
+            <element signature="e#2097#2098#0" expanded="false" />
+            <element signature="e#2129#2130#0" expanded="false" />
+            <element signature="e#2164#2165#0" expanded="false" />
+            <element signature="e#2194#2195#0" expanded="false" />
+            <element signature="e#2241#2242#0" expanded="false" />
+            <element signature="e#2279#2280#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -872,7 +1164,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -880,7 +1174,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#873#881#0" expanded="true" />
+            <element signature="e#1016#1037#0" expanded="true" />
+            <element signature="e#1103#1114#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -895,12 +1194,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="e#253#254#0" expanded="false" />
-            <element signature="e#289#290#0" expanded="false" />
-            <element signature="e#333#334#0" expanded="false" />
-            <element signature="e#373#374#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +1202,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#445#446#0" expanded="false" />
+            <element signature="e#481#482#0" expanded="false" />
+            <element signature="e#539#540#0" expanded="false" />
+            <element signature="e#589#590#0" expanded="false" />
+            <element signature="e#763#764#0" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#902#903#0" expanded="false" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#999#1000#0" expanded="false" />
+            <element signature="e#1027#1028#0" expanded="false" />
+            <element signature="e#1057#1058#0" expanded="false" />
+            <element signature="e#1088#1089#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1155#1156#0" expanded="false" />
+            <element signature="e#1188#1189#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="false" />
+            <element signature="e#1263#1264#0" expanded="false" />
+            <element signature="e#1320#1321#0" expanded="false" />
+            <element signature="e#1372#1373#0" expanded="false" />
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1457#1458#0" expanded="false" />
+            <element signature="e#1524#1525#0" expanded="false" />
+            <element signature="e#1586#1587#0" expanded="false" />
+            <element signature="e#1622#1623#0" expanded="false" />
+            <element signature="e#1657#1658#0" expanded="false" />
+            <element signature="e#1685#1686#0" expanded="false" />
+            <element signature="e#1715#1716#0" expanded="false" />
+            <element signature="e#1754#1755#0" expanded="false" />
+            <element signature="e#1806#1807#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -923,7 +1249,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1323">
           <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#768#769#0" expanded="false" />
+            <element signature="e#795#796#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#883#884#0" expanded="false" />
+            <element signature="e#908#909#0" expanded="false" />
+            <element signature="e#933#934#0" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
+            <element signature="e#982#983#0" expanded="false" />
+            <element signature="e#1006#1007#0" expanded="false" />
+            <element signature="e#1041#1042#0" expanded="false" />
+            <element signature="e#1075#1076#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1144#1145#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1197#1198#0" expanded="false" />
+            <element signature="e#1240#1241#0" expanded="false" />
+            <element signature="e#1279#1280#0" expanded="false" />
+            <element signature="e#1333#1334#0" expanded="false" />
+            <element signature="e#1365#1366#0" expanded="false" />
+            <element signature="e#1406#1407#0" expanded="false" />
+            <element signature="e#1440#1441#0" expanded="false" />
+            <element signature="e#1476#1477#0" expanded="false" />
+            <element signature="e#1504#1505#0" expanded="false" />
+            <element signature="e#1535#1536#0" expanded="false" />
+            <element signature="e#1561#1562#0" expanded="false" />
+            <element signature="e#1592#1593#0" expanded="false" />
+            <element signature="e#1618#1619#0" expanded="false" />
+            <element signature="e#1669#1670#0" expanded="false" />
+            <element signature="e#1715#1716#0" expanded="false" />
+            <element signature="e#1766#1767#0" expanded="false" />
+            <element signature="e#1812#1813#0" expanded="false" />
+            <element signature="e#1847#1848#0" expanded="false" />
+            <element signature="e#1877#1878#0" expanded="false" />
+            <element signature="e#1942#1943#0" expanded="false" />
+            <element signature="e#1998#1999#0" expanded="false" />
+            <element signature="e#2029#2030#0" expanded="false" />
+            <element signature="e#2056#2057#0" expanded="false" />
+            <element signature="e#2097#2098#0" expanded="false" />
+            <element signature="e#2129#2130#0" expanded="false" />
+            <element signature="e#2164#2165#0" expanded="false" />
+            <element signature="e#2194#2195#0" expanded="false" />
+            <element signature="e#2241#2242#0" expanded="false" />
+            <element signature="e#2279#2280#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -932,7 +1304,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -940,7 +1314,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#873#881#0" expanded="true" />
+            <element signature="e#1016#1037#0" expanded="true" />
+            <element signature="e#1103#1114#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -955,12 +1334,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="e#253#254#0" expanded="false" />
-            <element signature="e#289#290#0" expanded="false" />
-            <element signature="e#333#334#0" expanded="false" />
-            <element signature="e#373#374#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -968,7 +1342,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#445#446#0" expanded="false" />
+            <element signature="e#481#482#0" expanded="false" />
+            <element signature="e#539#540#0" expanded="false" />
+            <element signature="e#589#590#0" expanded="false" />
+            <element signature="e#763#764#0" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#902#903#0" expanded="false" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#999#1000#0" expanded="false" />
+            <element signature="e#1027#1028#0" expanded="false" />
+            <element signature="e#1057#1058#0" expanded="false" />
+            <element signature="e#1088#1089#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1155#1156#0" expanded="false" />
+            <element signature="e#1188#1189#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="false" />
+            <element signature="e#1263#1264#0" expanded="false" />
+            <element signature="e#1320#1321#0" expanded="false" />
+            <element signature="e#1372#1373#0" expanded="false" />
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1457#1458#0" expanded="false" />
+            <element signature="e#1524#1525#0" expanded="false" />
+            <element signature="e#1586#1587#0" expanded="false" />
+            <element signature="e#1622#1623#0" expanded="false" />
+            <element signature="e#1657#1658#0" expanded="false" />
+            <element signature="e#1685#1686#0" expanded="false" />
+            <element signature="e#1715#1716#0" expanded="false" />
+            <element signature="e#1754#1755#0" expanded="false" />
+            <element signature="e#1806#1807#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -983,21 +1389,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1343">
           <caret line="119" column="13" lean-forward="false" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Fiche.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Persoon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#768#769#0" expanded="false" />
+            <element signature="e#795#796#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#883#884#0" expanded="false" />
+            <element signature="e#908#909#0" expanded="false" />
+            <element signature="e#933#934#0" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
+            <element signature="e#982#983#0" expanded="false" />
+            <element signature="e#1006#1007#0" expanded="false" />
+            <element signature="e#1041#1042#0" expanded="false" />
+            <element signature="e#1075#1076#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1144#1145#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1197#1198#0" expanded="false" />
+            <element signature="e#1240#1241#0" expanded="false" />
+            <element signature="e#1279#1280#0" expanded="false" />
+            <element signature="e#1333#1334#0" expanded="false" />
+            <element signature="e#1365#1366#0" expanded="false" />
+            <element signature="e#1406#1407#0" expanded="false" />
+            <element signature="e#1440#1441#0" expanded="false" />
+            <element signature="e#1476#1477#0" expanded="false" />
+            <element signature="e#1504#1505#0" expanded="false" />
+            <element signature="e#1535#1536#0" expanded="false" />
+            <element signature="e#1561#1562#0" expanded="false" />
+            <element signature="e#1592#1593#0" expanded="false" />
+            <element signature="e#1618#1619#0" expanded="false" />
+            <element signature="e#1669#1670#0" expanded="false" />
+            <element signature="e#1715#1716#0" expanded="false" />
+            <element signature="e#1766#1767#0" expanded="false" />
+            <element signature="e#1812#1813#0" expanded="false" />
+            <element signature="e#1847#1848#0" expanded="false" />
+            <element signature="e#1877#1878#0" expanded="false" />
+            <element signature="e#1942#1943#0" expanded="false" />
+            <element signature="e#1998#1999#0" expanded="false" />
+            <element signature="e#2029#2030#0" expanded="false" />
+            <element signature="e#2056#2057#0" expanded="false" />
+            <element signature="e#2097#2098#0" expanded="false" />
+            <element signature="e#2129#2130#0" expanded="false" />
+            <element signature="e#2164#2165#0" expanded="false" />
+            <element signature="e#2194#2195#0" expanded="false" />
+            <element signature="e#2241#2242#0" expanded="false" />
+            <element signature="e#2279#2280#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,13 +1447,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/SpeelveldImages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/FactoryVakken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1070,12 +1501,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="e#253#254#0" expanded="false" />
-            <element signature="e#289#290#0" expanded="false" />
-            <element signature="e#333#334#0" expanded="false" />
-            <element signature="e#373#374#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,7 +1509,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#768#769#0" expanded="false" />
+            <element signature="e#795#796#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#883#884#0" expanded="false" />
+            <element signature="e#908#909#0" expanded="false" />
+            <element signature="e#933#934#0" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
+            <element signature="e#982#983#0" expanded="false" />
+            <element signature="e#1006#1007#0" expanded="false" />
+            <element signature="e#1041#1042#0" expanded="false" />
+            <element signature="e#1075#1076#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1144#1145#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1197#1198#0" expanded="false" />
+            <element signature="e#1240#1241#0" expanded="false" />
+            <element signature="e#1279#1280#0" expanded="false" />
+            <element signature="e#1333#1334#0" expanded="false" />
+            <element signature="e#1365#1366#0" expanded="false" />
+            <element signature="e#1406#1407#0" expanded="false" />
+            <element signature="e#1440#1441#0" expanded="false" />
+            <element signature="e#1476#1477#0" expanded="false" />
+            <element signature="e#1504#1505#0" expanded="false" />
+            <element signature="e#1535#1536#0" expanded="false" />
+            <element signature="e#1561#1562#0" expanded="false" />
+            <element signature="e#1592#1593#0" expanded="false" />
+            <element signature="e#1618#1619#0" expanded="false" />
+            <element signature="e#1669#1670#0" expanded="false" />
+            <element signature="e#1715#1716#0" expanded="false" />
+            <element signature="e#1766#1767#0" expanded="false" />
+            <element signature="e#1812#1813#0" expanded="false" />
+            <element signature="e#1847#1848#0" expanded="false" />
+            <element signature="e#1877#1878#0" expanded="false" />
+            <element signature="e#1942#1943#0" expanded="false" />
+            <element signature="e#1998#1999#0" expanded="false" />
+            <element signature="e#2029#2030#0" expanded="false" />
+            <element signature="e#2056#2057#0" expanded="false" />
+            <element signature="e#2097#2098#0" expanded="false" />
+            <element signature="e#2129#2130#0" expanded="false" />
+            <element signature="e#2164#2165#0" expanded="false" />
+            <element signature="e#2194#2195#0" expanded="false" />
+            <element signature="e#2241#2242#0" expanded="false" />
+            <element signature="e#2279#2280#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1091,7 +1563,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#445#446#0" expanded="false" />
+            <element signature="e#481#482#0" expanded="false" />
+            <element signature="e#539#540#0" expanded="false" />
+            <element signature="e#589#590#0" expanded="false" />
+            <element signature="e#763#764#0" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#902#903#0" expanded="false" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#999#1000#0" expanded="false" />
+            <element signature="e#1027#1028#0" expanded="false" />
+            <element signature="e#1057#1058#0" expanded="false" />
+            <element signature="e#1088#1089#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1155#1156#0" expanded="false" />
+            <element signature="e#1188#1189#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="false" />
+            <element signature="e#1263#1264#0" expanded="false" />
+            <element signature="e#1320#1321#0" expanded="false" />
+            <element signature="e#1372#1373#0" expanded="false" />
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1457#1458#0" expanded="false" />
+            <element signature="e#1524#1525#0" expanded="false" />
+            <element signature="e#1586#1587#0" expanded="false" />
+            <element signature="e#1622#1623#0" expanded="false" />
+            <element signature="e#1657#1658#0" expanded="false" />
+            <element signature="e#1685#1686#0" expanded="false" />
+            <element signature="e#1715#1716#0" expanded="false" />
+            <element signature="e#1754#1755#0" expanded="false" />
+            <element signature="e#1806#1807#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1099,32 +1603,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#222#223#0" expanded="false" />
+            <element signature="e#250#251#0" expanded="false" />
+            <element signature="e#299#300#0" expanded="false" />
+            <element signature="e#333#334#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ChatListen.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/Kleur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#321#322#0" expanded="false" />
+            <element signature="e#342#343#0" expanded="false" />
+            <element signature="e#385#386#0" expanded="false" />
+            <element signature="e#414#415#0" expanded="false" />
+            <element signature="e#448#449#0" expanded="false" />
+            <element signature="e#472#473#0" expanded="false" />
+            <element signature="e#521#522#0" expanded="false" />
+            <element signature="e#556#557#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1132,22 +1635,95 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
-          <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding />
+          <caret line="48" column="1" lean-forward="false" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/InterfaceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#873#881#0" expanded="true" />
+            <element signature="e#1016#1037#0" expanded="true" />
+            <element signature="e#1103#1114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/FactoryVakken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/enumerators/Fiche.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/enumerators/Kleur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/enumerators/Persoon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/enumerators/Richting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/enumerators/Rol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/enumerators/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>

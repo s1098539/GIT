@@ -1,6 +1,9 @@
 package Controller;
 
 import Model.*;
+import enumerators.Kleur;
+import enumerators.Persoon;
+import enumerators.Richting;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -12,20 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static Model.Kleur.*;
-import static Model.Richting.*;
-import static Model.Rol.*;
+import static enumerators.Kleur.*;
+import static enumerators.Richting.*;
+import static enumerators.Rol.*;
 
 
 public class SpelerController {
-
-
-
-
-
-
-
-
     Vak vak;
 
     // Toggles waar door de richting toetsen voor andere functies kunnen worden gebruikt.

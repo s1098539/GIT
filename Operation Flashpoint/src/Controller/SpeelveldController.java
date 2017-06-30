@@ -2,13 +2,17 @@ package Controller;
 
 
 import Model.*;
+import enumerators.Fiche;
+import enumerators.Kleur;
+import enumerators.Richting;
+import enumerators.Status;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
 
-import static Model.Status.*;
+import static enumerators.Status.*;
 
 public class SpeelveldController {
 

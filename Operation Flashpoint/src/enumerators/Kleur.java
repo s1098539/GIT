@@ -1,4 +1,4 @@
-package Model;
+package enumerators;
 
 public enum Kleur {
     BLAUW("Blauw"),GEEL("Geel"),GROEN("Groen"),ORANJE("Oranje"),ROOD("Rood"),ZWART("Zwart");

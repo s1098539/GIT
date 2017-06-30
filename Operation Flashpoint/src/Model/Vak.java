@@ -1,5 +1,10 @@
 package Model;
 
+import enumerators.Kleur;
+import enumerators.Persoon;
+import enumerators.Richting;
+import enumerators.Status;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 

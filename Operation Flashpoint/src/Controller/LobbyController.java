@@ -1,5 +1,5 @@
 package Controller;
-import Model.Kleur;
+import enumerators.Kleur;
 import Model.Lobby;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -11,8 +11,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 
 /**

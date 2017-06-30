@@ -8,12 +8,8 @@ public class Server {
 
     public Server() {}
     int port = 1099;
-
-    private void runServer() {
-        //TODO REMOVE THE DEBUG OBJECTS
+        private void runServer() {
         try {
-            //
-
             //Basically, don't touch this unless you know what you're doing.
             InterfaceImpl impl = new InterfaceImpl();
             Interface serverSkeleton = (Interface) UnicastRemoteObject.exportObject(impl, port);
@@ -23,16 +19,10 @@ public class Server {
             registry.rebind("Main.Interface", serverSkeleton);
             System.out.println("Main.Interface skeleton bound ...");
             System.out.println("Main.Server running ...");
-
-
-
-
         } catch (Exception e) {
             System.out.println("EXCEPTION: " + e);
         }
-
     }
-
     public static void main(String[] args) {
         new Server().runServer();
     }
