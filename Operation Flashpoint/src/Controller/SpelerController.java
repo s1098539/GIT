@@ -978,25 +978,18 @@ public class SpelerController {
         return returnValue;
     }
 
-    private void persoonOmdraaien(int x, int y) {
-        vak = veldC.getVeldD().getVakken()[x][y];
-        if(!vak.getPersonen().isEmpty()) {
-            for(int i = 0; i < vak.getPersonen().size(); i++) {
-                vak.getPersonen().get(0).setOmgedraaid(true);
-            }
-        }
-        ArrayList<Persoon> personen = veldC.getVeldD().getVakken()[x][y].getPersonen();
-        for(int i = 0; i < personen.size(); i++) {
-            if (personen.get(i) == Persoon.NOPE1 || personen.get(i) == Persoon.NOPE2 ||
-                    personen.get(i) == Persoon.NOPE3 || personen.get(i) == Persoon.NOPE4 ||
-                    personen.get(i) == Persoon.NOPE5) {
-                personen.remove(i);
-                i--;
-            }
-        }
+    public void persoonOmdraaien(int x, int y) {
+        int oudX = spelC.spel.getHuidigeSpeler().getX();
+        int oudY = spelC.spel.getHuidigeSpeler().getY();
+        spelC.spel.getHuidigeSpeler().setX(x);
+        spelC.spel.getHuidigeSpeler().setY(y);
+        persoonOmdraaien();
+        spelC.spel.getHuidigeSpeler().setX(oudX);
+        spelC.spel.getHuidigeSpeler().setY(oudY);
     }
 
-    private void persoonOmdraaien() {
+
+    public void persoonOmdraaien() {
         int x = spelC.spel.getHuidigeSpeler().getX();
         int y = spelC.spel.getHuidigeSpeler().getY();
         vak = veldC.getVeldD().getVakken()[x][y];
@@ -1014,6 +1007,7 @@ public class SpelerController {
                 i--;
             }
         }
+
     }
 
     // reset AP en EP bij het eindigen van een beurt.

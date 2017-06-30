@@ -175,16 +175,22 @@ public class SpelController implements Initializable {
                             speler = spel.getSpelers().get(i);
                         }
                     }
-                    speler.setX(x);
-                    speler.setY(y);
                     if(y>7 || x>9 || y<0 || x<0) invalidCoordinates = true;
                     for (int y1 = 1; y1 < 7; y1++) {
                         for (int x1 = 1; x1 < 9; x1++) {
                             if (x == x1 && y == y1) invalidCoordinates = true;
                         }
                     }
-                    if (!invalidCoordinates) veldC.addSpeler(kleur, x, y);
-                    else veldC.addSpeler(kleur, 0, 0);
+                    if (!invalidCoordinates) {
+                        veldC.addSpeler(kleur, x, y);
+                        speler.setX(x);
+                        speler.setY(y);
+                    }
+                    else {
+                        veldC.addSpeler(kleur, 0, 0);
+                        speler.setX(0);
+                        speler.setY(0);
+                    }
                 });
     }
 

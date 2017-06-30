@@ -5,7 +5,6 @@ import Model.Message;
 import Model.SpeelveldData;
 import Model.Spel;
 
-import java.io.IOException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -21,6 +20,7 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
     int port;
     SpelController spelC1;
     SpeelveldController veldC1;
+    SpelerController spelerC1;
 
 
     public SpelController getSpelC1() {
@@ -43,8 +43,15 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
     public void setHost(String host) {this.host = host;    }
     public int getPort() {return port;}
     public void setPort(int port) {this.port = port;}
+    public SpelerController getSpelerC1() {
+        return spelerC1;
+    }
 
-    public ChatListen(String host, int port, SpelController spelC, SpeelveldController veldC) throws RemoteException {
+    public void setSpelerC1(SpelerController spelerC1) {
+        this.spelerC1 = spelerC1;
+    }
+
+    public ChatListen(String host, int port, SpelController spelC, SpeelveldController veldC, SpelerController spelerC) throws RemoteException {
 
         setHost(host);
         setPort(port);
@@ -58,6 +65,7 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
         }
             setSpelC1(spelC);
             setVeldC1(veldC);
+            setSpelerC1(spelerC);
     }
 
     public static void main(String[] args) throws Exception {
@@ -76,10 +84,12 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
 
         spelC1.setSpel(spelServer);
         veldC1.setVeldD(veldServer);
+        spelerC1.persoonOmdraaien();
         veldC1.ImageSetterALL();
         spelC1.setActiveSpelerPlaatje();
         spelC1.setRollen();
         spelC1.checkTurn();
+
 
 
         // spelC.updateSpel();

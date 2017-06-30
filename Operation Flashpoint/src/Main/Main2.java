@@ -58,7 +58,7 @@ public class Main2 extends Application {
                 spelC.getChatArea().appendText(msg);
             }
         });
-        ChatListen listen = new ChatListen(spelC.getHost(), spelC.getPort(), spelC, veldC);
+        ChatListen listen = new ChatListen(spelC.getHost(), spelC.getPort(), spelC, veldC, spelerC);
         veldC.run();
 
         //This is where the client makes a connection to the server.
@@ -75,6 +75,8 @@ public class Main2 extends Application {
             //Verbind interface met de implementatie.
             InterfaceImpl impl = new InterfaceImpl();
             clientStub.registerObserverSpel(impl);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(":^)");
         } catch (Exception e) {
             System.out.println("EXCEPTION: " + e);
         }
