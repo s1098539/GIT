@@ -75,7 +75,7 @@ public class SpelerController {
             veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(rijden){
-            System.out.println("rijden");
+            System.out.println("Actie: Rijden");
             rijden(BOVEN);
         }
         spelC.updatePunten();
@@ -104,7 +104,7 @@ public class SpelerController {
             veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(rijden){
-            System.out.println("rijden");
+            System.out.println("Actie: Rijden");
             rijden(LINKS);
         }
         spelC.updatePunten();
@@ -133,7 +133,7 @@ public class SpelerController {
             veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(rijden){
-            System.out.println("rijden");
+            System.out.println("Actie: Rijden");
             rijden(ONDER);
         }
         spelC.updatePunten();
@@ -162,7 +162,7 @@ public class SpelerController {
             veldC.ImageSetterAround(spelC.spel.getHuidigeSpeler().getX(),spelC.spel.getHuidigeSpeler().getY());
         }
         else if(rijden){
-            System.out.println("rijden");
+            System.out.println("Actie: Rijden");
             rijden(RECHTS);
         }
         spelC.updatePunten();
@@ -180,7 +180,7 @@ public class SpelerController {
                 break;
             case SPECSTOFFEN: onschadelijkMaken();
                 break;
-            default: System.out.println("Mom thinks im special :(");
+            default: System.out.println("-- Spel: Jouw rol heeft geen speciale actie.");
         }
         spelC.updatePunten();
     }
