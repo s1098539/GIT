@@ -617,7 +617,7 @@ public class SpeelveldController {
                             veldD.getVakken()[x][y - 1].setOnder(LEEG);
                             return true;
                         default:
-                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Boven)");
+                            System.out.println("Je kan geen lucht hakken!");
                             return false;
                     }
                 }
@@ -640,7 +640,7 @@ public class SpeelveldController {
                             veldD.getVakken()[x + 1][y].setLinks(LEEG);
                             return true;
                         default:
-                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Rechts)");
+                            System.out.println("Je kan geen lucht hakken!");
                             return false;
                     }
                 }
@@ -663,7 +663,7 @@ public class SpeelveldController {
                             veldD.getVakken()[x - 1][y].setRechts(LEEG);
                             return true;
                         default:
-                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Links)");
+                            System.out.println("Je kan geen lucht hakken!");
                             return false;
                     }
                 }
@@ -686,7 +686,7 @@ public class SpeelveldController {
                             veldD.getVakken()[x][y + 1].setBoven(LEEG);
                             return true;
                         default:
-                            System.out.println("Unexpected obstakel (SpeelveldController.doeBeschadiging.Onder)");
+                            System.out.println("Je kan geen lucht hakken!");
                             return false;
                     }
                 }
