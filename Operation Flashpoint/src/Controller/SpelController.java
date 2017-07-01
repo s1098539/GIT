@@ -1505,7 +1505,7 @@ public class SpelController implements Initializable {
         dialog2.setHeaderText("Voer je naam in");
         dialog2.setContentText("Naam: ");
         Optional<String> naam = dialog2.showAndWait();
-        setUsername(naam.get());
+        setUsername(naam.get().substring(0, Math.min(naam.get().length(), 6)));
     }
     public void updateSpel() {
         try {
