@@ -181,7 +181,7 @@ public class SpelerController {
     }
 
 
-    // Als een commandant op special klikt kan hij een andere spelC.spel.getHuidigeSpeler() kiezen om te bewegen
+    // Als een commandant op special klikt kan hij een andere speler kiezen om te bewegen
     Kleur commandKeuze;
     public void commandeer() {
         if (spelC.spel.getHuidigeSpeler().getExtrapunten() > 0) {
@@ -386,7 +386,7 @@ public class SpelerController {
         veldC.getVeldD().getVakken()[x][y].setVuur(false);
     }
 
-    // L (dialog template gejat van Norddin), speciale actie van de verkenner, geeft een popup met alle niet ? personen en draait de gekeuze persoon om.
+    // Speciale actie van de verkenner, geeft een popup met alle niet ? personen en draait de gekeuze persoon om.
     private void verken() {
         if(spelC.spel.getHuidigeSpeler().getActiepunten()>0) {
             ArrayList<String> keuzes = new ArrayList<>();
