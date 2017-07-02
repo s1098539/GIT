@@ -27,7 +27,7 @@
    <children>
       <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true">
          <image>
-            <Image url="@../Resources/gfx/achtergrond2.jpg" />
+            <Image url="@../resources/gfx/achtergrond2.jpg" />
          </image>
       </ImageView>
       <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0">
@@ -209,7 +209,7 @@
                                  <children>
                                     <ImageView fx:id="imgHakken" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Hakken.png" />
+                                          <Image url="@../resources/gfx/Hakken.png" />
                                        </image>
                                     </ImageView>
                                     <Label fx:id="hakTxt" prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
@@ -223,7 +223,7 @@
                                  <children>
                                     <ImageView fx:id="imgOpenendeur" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Openendeur.png" />
+                                          <Image url="@../resources/gfx/Openendeur.png" />
                                        </image>
                                     </ImageView>
                                     <Label prefHeight="50.0" prefWidth="50.0" text=" 1" textFill="WHITE">
@@ -247,7 +247,7 @@
                                  <children>
                                     <ImageView fx:id="imgPickup" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Pickup.png" />
+                                          <Image url="@../resources/gfx/Pickup.png" />
                                        </image>
                                     </ImageView>
                                     <Label prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
@@ -261,7 +261,7 @@
                                  <children>
                                     <ImageView fx:id="imgBrandblusser" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Brandblusser.png" />
+                                          <Image url="@../resources/gfx/Brandblusser.png" />
                                        </image>
                                     </ImageView>
                                     <Label fx:id="blusTxt" prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
@@ -282,7 +282,7 @@
                                  <children>
                                     <ImageView fx:id="imgRijden" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Rijden.png" />
+                                          <Image url="@../resources/gfx/Rijden.png" />
                                        </image>
                                     </ImageView>
                                     <Label prefHeight="50.0" prefWidth="50.0" text=" 2" textFill="WHITE">
@@ -296,7 +296,7 @@
                                  <children>
                                     <ImageView fx:id="imgWagenblussen" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Wagenblussen.png" />
+                                          <Image url="@../resources/gfx/Wagenblussen.png" />
                                        </image>
                                     </ImageView>
                                     <Label fx:id="spuitTxt" prefHeight="50.0" prefWidth="50.0" text=" 0" textFill="WHITE">
@@ -318,7 +318,7 @@
                                     <HBox prefHeight="50.0" prefWidth="50.0" />
                                     <ImageView fx:id="imgRolswap" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Rolswap.png" />
+                                          <Image url="@../resources/gfx/Rolswap.png" />
                                        </image>
                                     </ImageView>
                                     <Label prefHeight="50.0" prefWidth="50.0" text=" 2" textFill="WHITE">
@@ -436,7 +436,7 @@
                                  <children>
                                     <ImageView fx:id="imgBrandHaard" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Hotspot.png" />
+                                          <Image url="@../resources/gfx/Hotspot.png" />
                                        </image>
                                     </ImageView>
                                     <Label fx:id="HotspotLabel" prefHeight="50.0" prefWidth="75.0" text="0 / 6" textFill="WHITE">
@@ -450,7 +450,7 @@
                                  <children>
                                     <ImageView fx:id="imgSchade" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Muur1kapot.png" />
+                                          <Image url="@../resources/gfx/Muur1kapot.png" />
                                        </image>
                                     </ImageView>
                                     <Label fx:id="BeschadigingLabel" prefHeight="50.0" prefWidth="125.0" text="00 / 24" textFill="WHITE">
@@ -467,7 +467,7 @@
                                  <children>
                                     <ImageView fx:id="imgPva" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Vraagteken_gered.png" />
+                                          <Image url="@../resources/gfx/Vraagteken_gered.png" />
                                        </image>
                                     </ImageView>
                                     <Label fx:id="GeredLabel" minWidth="74.0" prefHeight="50.0" prefWidth="74.0" text="0 / 7" textFill="WHITE">
@@ -481,7 +481,7 @@
                                  <children>
                                     <ImageView fx:id="doodCounter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/Vraagteken_dood.png" />
+                                          <Image url="@../resources/gfx/Vraagteken_dood.png" />
                                        </image>
                                     </ImageView>
                                     <Label fx:id="GeredLabel1" prefHeight="50.0" prefWidth="92.0" text="0 / 3" textFill="WHITE">
@@ -495,7 +495,7 @@
                                  <children>
                                     <ImageView fx:id="imgOpenendeur1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/EP.png" />
+                                          <Image url="@../resources/gfx/EP.png" />
                                        </image>
                                     </ImageView>
                                     <Label fx:id="EPLabel" prefHeight="50.0" prefWidth="79.0" text=" 0" textFill="WHITE">
@@ -509,7 +509,7 @@
                                  <children>
                                     <ImageView fx:id="imgPickup1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Resources/gfx/AP.png" />
+                                          <Image url="@../resources/gfx/AP.png" />
                                        </image>
                                     </ImageView>
                                     <Label fx:id="APLabel" prefHeight="50.0" prefWidth="72.0" text=" 0" textFill="WHITE">
@@ -547,7 +547,7 @@
                <children>
                   <ImageView fitHeight="480.0" fitWidth="600.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../Resources/gfx/Bord.jpg" />
+                        <Image url="@../resources/gfx/Bord.jpg" />
                      </image>
                      <StackPane.margin>
                         <Insets />

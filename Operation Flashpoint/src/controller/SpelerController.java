@@ -1036,7 +1036,7 @@ public class SpelerController {
         BorderPane borderPane = new BorderPane();
         ScrollPane scrollpane = new ScrollPane();
 
-        Image gebruikershandleiding = new Image("Resources/gfx/GebruikersHandleiding.jpg",2390,796,true,true);
+        Image gebruikershandleiding = new Image("resources/gfx/GebruikersHandleiding.jpg",2390,796,true,true);
         ImageView imageview = new ImageView(gebruikershandleiding);
         scrollpane.setContent(imageview);
         borderPane.setCenter(scrollpane);

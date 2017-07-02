@@ -15,118 +15,118 @@ public class Spraak {
 
 
     // Counters op de view
-    private String schade0 = "./src/Resources/audio/0schade.wav";
-    private String schade1 = "./src/Resources/audio/1schade.wav";
-    private String schade2 = "./src/Resources/audio/2schade.wav";
-    private String schade3 = "./src/Resources/audio/3schade.wav";
-    private String schade4 = "./src/Resources/audio/4schade.wav";
-    private String schade5 = "./src/Resources/audio/5schade.wav";
-    private String schade6 = "./src/Resources/audio/6schade.wav";
-    private String schade7 = "./src/Resources/audio/7schade.wav";
-    private String schade8 = "./src/Resources/audio/8schade.wav";
-    private String schade9 = "./src/Resources/audio/9schade.wav";
-    private String schade10 = "./src/Resources/audio/10schade.wav";
-    private String schade11 = "./src/Resources/audio/11schade.wav";
-    private String schade12 = "./src/Resources/audio/12schade.wav";
-    private String schade13 = "./src/Resources/audio/13schade.wav";
-    private String schade14 = "./src/Resources/audio/14schade.wav";
-    private String schade15 = "./src/Resources/audio/15schade.wav";
-    private String schade16 = "./src/Resources/audio/16schade.wav";
-    private String schade17 = "./src/Resources/audio/17schade.wav";
-    private String schade18 = "./src/Resources/audio/18schade.wav";
-    private String schade19 = "./src/Resources/audio/19schade.wav";
-    private String schade20 = "./src/Resources/audio/20schade.wav";
-    private String schade21 = "./src/Resources/audio/21schade.wav";
-    private String schade22 = "./src/Resources/audio/22schade.wav";
-    private String schade23 = "./src/Resources/audio/23schade.wav";
-    private String schade24 = "./src/Resources/audio/24schade.wav";
-    private String eindig1 = "./src/Resources/audio/EindigtZetKnop.wav";
-    private String eindig2 = "./src/Resources/audio/EindigZetAPOvergebleven.wav";
-    private String eindig3 = "./src/Resources/audio/EindigZetVolgendeSpelerKrijgtBeurt.wav";
-    private String ap0 = "./src/Resources/audio/0AP.wav";
-    private String ap1 = "./src/Resources/audio/1AP.wav";
-    private String ap2 = "./src/Resources/audio/2AP.wav";
-    private String ap3 = "./src/Resources/audio/3AP.wav";
-    private String ap4 = "./src/Resources/audio/4AP.wav";
-    private String ap5 = "./src/Resources/audio/5AP.wav";
-    private String ap6 = "./src/Resources/audio/6AP.wav";
-    private String ap7 = "./src/Resources/audio/7AP.wav";
-    private String ap8 = "./src/Resources/audio/8AP.wav";
-    private String ap9 = "./src/Resources/audio/9AP.wav";
-    private String ep0 = "./src/Resources/audio/0EP.wav";
-    private String ep1 = "./src/Resources/audio/1EP.wav";
-    private String ep2 = "./src/Resources/audio/2EP.wav";
-    private String ep3 = "./src/Resources/audio/3EP.wav";
-    private String pva0 = "./src/Resources/audio/0pva.wav";
-    private String pva1 = "./src/Resources/audio/1pva.wav";
-    private String pva2 = "./src/Resources/audio/2pva.wav";
-    private String pva3 = "./src/Resources/audio/3pva.wav";
-    private String pva4 = "./src/Resources/audio/4pva.wav";
-    private String pva5 = "./src/Resources/audio/5pva.wav";
-    private String pva6 = "./src/Resources/audio/6pva.wav";
-    private String pva7 = "./src/Resources/audio/7pva.wav";
-    private String vermist0 = "./src/Resources/audio/0vermist.wav";
-    private String vermist1 = "./src/Resources/audio/1vermist.wav";
-    private String vermist2 = "./src/Resources/audio/2vermist.wav";
-    private String vermist3 = "./src/Resources/audio/3vermist.wav";
-    private String brandhaarden1 = "./src/Resources/audio/1Haard.wav";
-    private String brandhaarden2 = "./src/Resources/audio/2haard.wav";
-    private String brandhaarden3 = "./src/Resources/audio/3haard.wav";
-    private String brandhaarden4 = "./src/Resources/audio/4haard.wav";
-    private String brandhaarden5 = "./src/Resources/audio/5haard.wav";
-    private String brandhaarden6 = "./src/Resources/audio/6haard.wav";
+    private String schade0 = "./src/resources/audio/0schade.wav";
+    private String schade1 = "./src/resources/audio/1schade.wav";
+    private String schade2 = "./src/resources/audio/2schade.wav";
+    private String schade3 = "./src/resources/audio/3schade.wav";
+    private String schade4 = "./src/resources/audio/4schade.wav";
+    private String schade5 = "./src/resources/audio/5schade.wav";
+    private String schade6 = "./src/resources/audio/6schade.wav";
+    private String schade7 = "./src/resources/audio/7schade.wav";
+    private String schade8 = "./src/resources/audio/8schade.wav";
+    private String schade9 = "./src/resources/audio/9schade.wav";
+    private String schade10 = "./src/resources/audio/10schade.wav";
+    private String schade11 = "./src/resources/audio/11schade.wav";
+    private String schade12 = "./src/resources/audio/12schade.wav";
+    private String schade13 = "./src/resources/audio/13schade.wav";
+    private String schade14 = "./src/resources/audio/14schade.wav";
+    private String schade15 = "./src/resources/audio/15schade.wav";
+    private String schade16 = "./src/resources/audio/16schade.wav";
+    private String schade17 = "./src/resources/audio/17schade.wav";
+    private String schade18 = "./src/resources/audio/18schade.wav";
+    private String schade19 = "./src/resources/audio/19schade.wav";
+    private String schade20 = "./src/resources/audio/20schade.wav";
+    private String schade21 = "./src/resources/audio/21schade.wav";
+    private String schade22 = "./src/resources/audio/22schade.wav";
+    private String schade23 = "./src/resources/audio/23schade.wav";
+    private String schade24 = "./src/resources/audio/24schade.wav";
+    private String eindig1 = "./src/resources/audio/EindigtZetKnop.wav";
+    private String eindig2 = "./src/resources/audio/EindigZetAPOvergebleven.wav";
+    private String eindig3 = "./src/resources/audio/EindigZetVolgendeSpelerKrijgtBeurt.wav";
+    private String ap0 = "./src/resources/audio/0AP.wav";
+    private String ap1 = "./src/resources/audio/1AP.wav";
+    private String ap2 = "./src/resources/audio/2AP.wav";
+    private String ap3 = "./src/resources/audio/3AP.wav";
+    private String ap4 = "./src/resources/audio/4AP.wav";
+    private String ap5 = "./src/resources/audio/5AP.wav";
+    private String ap6 = "./src/resources/audio/6AP.wav";
+    private String ap7 = "./src/resources/audio/7AP.wav";
+    private String ap8 = "./src/resources/audio/8AP.wav";
+    private String ap9 = "./src/resources/audio/9AP.wav";
+    private String ep0 = "./src/resources/audio/0EP.wav";
+    private String ep1 = "./src/resources/audio/1EP.wav";
+    private String ep2 = "./src/resources/audio/2EP.wav";
+    private String ep3 = "./src/resources/audio/3EP.wav";
+    private String pva0 = "./src/resources/audio/0pva.wav";
+    private String pva1 = "./src/resources/audio/1pva.wav";
+    private String pva2 = "./src/resources/audio/2pva.wav";
+    private String pva3 = "./src/resources/audio/3pva.wav";
+    private String pva4 = "./src/resources/audio/4pva.wav";
+    private String pva5 = "./src/resources/audio/5pva.wav";
+    private String pva6 = "./src/resources/audio/6pva.wav";
+    private String pva7 = "./src/resources/audio/7pva.wav";
+    private String vermist0 = "./src/resources/audio/0vermist.wav";
+    private String vermist1 = "./src/resources/audio/1vermist.wav";
+    private String vermist2 = "./src/resources/audio/2vermist.wav";
+    private String vermist3 = "./src/resources/audio/3vermist.wav";
+    private String brandhaarden1 = "./src/resources/audio/1Haard.wav";
+    private String brandhaarden2 = "./src/resources/audio/2haard.wav";
+    private String brandhaarden3 = "./src/resources/audio/3haard.wav";
+    private String brandhaarden4 = "./src/resources/audio/4haard.wav";
+    private String brandhaarden5 = "./src/resources/audio/5haard.wav";
+    private String brandhaarden6 = "./src/resources/audio/6haard.wav";
 
     // De audiobestanden van de kosten van alle acties kunt u hier vinden.
-    private String bewegen1 = "./src/Resources/audio/Bewegen1AP.wav";
-    private String bewegen2 = "./src/Resources/audio/BewegenPvaGS2AP.wav";
-    private String bewegenReddingsSpecialist = "./src/Resources/audio/BewegenReddingsspecialist3EP.wav";
-    private String brandspuit1 = "./src/Resources/audio/BrandspuitBedienen4AP.wav";
-    private String brandspuit2 = "./src/Resources/audio/BrandspuitbedienerKost2AP.wav";
-    private String brandspuit3 = "./src/Resources/audio/BrandspuitbedienerReroll.wav";
-    private String deur = "./src/Resources/audio/DeurOpenenSluiten1AP.wav";
-    private String rolWissel = "./src/Resources/audio/RolWisselen2AP.wav";
-    private String dokterBehandeld = "./src/Resources/audio/DokterBehandelenBewegenGeenExtraAP.wav";
-    private String dokterBlussen = "./src/Resources/audio/DokterBlussenBetaaltDubbelAP.wav";
-    private String reddingsSpecialistBlussen = "./src/Resources/audio/ReddingsspecialistBlussenBetaaltDubbelAP.wav";
-    private String hakken1 = "./src/Resources/audio/Hakken1APReddingsspecialist.wav";
-    private String hakken2 = "./src/Resources/audio/Hakken2AP.wav";
-    private String klasse = "./src/Resources/audio/KlasseSpecial.wav";
-    private String oppakken = "./src/Resources/audio/OppakkenKostGeenAP.wav";
-    private String rijden1 = "./src/Resources/audio/RijdenKost2AP.wav";
-    private String rijden2  = "./src/Resources/audio/RijdenMeerijdenKostGeenAP.wav";
-    private String rookBlussen = "./src/Resources/audio/RookBlussen1AP.wav";
-    private String vuurNaarRook = "./src/Resources/audio/VuurNaarRook1AP.wav";
-    private String vuurBewegen = "./src/Resources/audio/VuurBewegen2AP.wav";
+    private String bewegen1 = "./src/resources/audio/Bewegen1AP.wav";
+    private String bewegen2 = "./src/resources/audio/BewegenPvaGS2AP.wav";
+    private String bewegenReddingsSpecialist = "./src/resources/audio/BewegenReddingsspecialist3EP.wav";
+    private String brandspuit1 = "./src/resources/audio/BrandspuitBedienen4AP.wav";
+    private String brandspuit2 = "./src/resources/audio/BrandspuitbedienerKost2AP.wav";
+    private String brandspuit3 = "./src/resources/audio/BrandspuitbedienerReroll.wav";
+    private String deur = "./src/resources/audio/DeurOpenenSluiten1AP.wav";
+    private String rolWissel = "./src/resources/audio/RolWisselen2AP.wav";
+    private String dokterBehandeld = "./src/resources/audio/DokterBehandelenBewegenGeenExtraAP.wav";
+    private String dokterBlussen = "./src/resources/audio/DokterBlussenBetaaltDubbelAP.wav";
+    private String reddingsSpecialistBlussen = "./src/resources/audio/ReddingsspecialistBlussenBetaaltDubbelAP.wav";
+    private String hakken1 = "./src/resources/audio/Hakken1APReddingsspecialist.wav";
+    private String hakken2 = "./src/resources/audio/Hakken2AP.wav";
+    private String klasse = "./src/resources/audio/KlasseSpecial.wav";
+    private String oppakken = "./src/resources/audio/OppakkenKostGeenAP.wav";
+    private String rijden1 = "./src/resources/audio/RijdenKost2AP.wav";
+    private String rijden2  = "./src/resources/audio/RijdenMeerijdenKostGeenAP.wav";
+    private String rookBlussen = "./src/resources/audio/RookBlussen1AP.wav";
+    private String vuurNaarRook = "./src/resources/audio/VuurNaarRook1AP.wav";
+    private String vuurBewegen = "./src/resources/audio/VuurBewegen2AP.wav";
 
     // De audiobestanden van de unieke mogelijkheden van de verschillende specialisten stan hier.
 
-    private String dokterSpecialist = "./src/Resources/audio/DokterKlasse.wav";
-    private String brandspuitbedienerSpecialist = "./src/Resources/audio/BrandspuitbedienerKlasse.wav";
-    private String kapiteinSpecialist = "./src/Resources/audio/KapiteinKlasse.wav";
-    private String verkennerSpecialist  = "./src/Resources/audio/VerkennerKlasse.wav";
-    private String mannetjesputterSpecialist= "./src/Resources/audio/MannetjesputterKlasse.wav";
-    private String gevaarlijkestoffenSpecialist = "./src/Resources/audio/GevaarlijkeStoffenKlasse.wav";
-    private String gaspakdragerSpecialist = "./src/Resources/audio/GaspakdragerKlasse.wav";
-    private String reddingsspecialistSpecialist = "./src/Resources/audio/ReddingsspecialistKlasse.wav";
+    private String dokterSpecialist = "./src/resources/audio/DokterKlasse.wav";
+    private String brandspuitbedienerSpecialist = "./src/resources/audio/BrandspuitbedienerKlasse.wav";
+    private String kapiteinSpecialist = "./src/resources/audio/KapiteinKlasse.wav";
+    private String verkennerSpecialist  = "./src/resources/audio/VerkennerKlasse.wav";
+    private String mannetjesputterSpecialist= "./src/resources/audio/MannetjesputterKlasse.wav";
+    private String gevaarlijkestoffenSpecialist = "./src/resources/audio/GevaarlijkeStoffenKlasse.wav";
+    private String gaspakdragerSpecialist = "./src/resources/audio/GaspakdragerKlasse.wav";
+    private String reddingsspecialistSpecialist = "./src/resources/audio/ReddingsspecialistKlasse.wav";
 
     // Hier staan de audiobestanden van de relevante spelregels van onze versie van het spel.
     // Deze dienen als ondersteuning van slechtziende die de regels niet kunnen lezen.
 
-    private String aangrenzendeVakken = "./src/Resources/audio/AangrenzendeVakken.wav";
-    private String actieOndernemen = "./src/Resources/audio/ActieOndernemen.wav";
-    private String bewegenSpel1 = "./src/Resources/audio/BewegenSpel1.wav";
-    private String bewegenSpel2 = "./src/Resources/audio/BewegenSpel2.wav";
-    private String bewegenSpel3 = "./src/Resources/audio/BewegenSpel3.wav";
-    private String deurRegels = "./src/Resources/audio/DeurOpenenSluiten1AP.wav";
-    private String doelSpel = "./src/Resources/audio/DoelVanHetSpel.wav";
-    private String doven  = "./src/Resources/audio/Doven.wav";
-    private String spelEinde = "./src/Resources/audio/HetSpeleinde.wav";
-    private String houwen = "./src/Resources/audio/Houwen.wav";
-    private String omvergeblazenBrandweermannen = "./src/Resources/audio/OmvergeblazenBrandweermannen.wav";
-    private String ontploffingen1 = "./src/Resources/audio/Ontploffingen1.wav";
-    private String ontploffingen2  = "./src/Resources/audio/Ontploffingen2.wav";
-    private String gevolgSchokgolf = "./src/Resources/audio/OntploffingenGevolgSchokgolf.wav";
-    private String overslaandeBrand = "./src/Resources/audio/OverslaandeBrand.wav";
+    private String aangrenzendeVakken = "./src/resources/audio/AangrenzendeVakken.wav";
+    private String actieOndernemen = "./src/resources/audio/ActieOndernemen.wav";
+    private String bewegenSpel1 = "./src/resources/audio/BewegenSpel1.wav";
+    private String bewegenSpel2 = "./src/resources/audio/BewegenSpel2.wav";
+    private String bewegenSpel3 = "./src/resources/audio/BewegenSpel3.wav";
+    private String deurRegels = "./src/resources/audio/DeurOpenenSluiten1AP.wav";
+    private String doelSpel = "./src/resources/audio/DoelVanHetSpel.wav";
+    private String doven  = "./src/resources/audio/Doven.wav";
+    private String spelEinde = "./src/resources/audio/HetSpeleinde.wav";
+    private String houwen = "./src/resources/audio/Houwen.wav";
+    private String omvergeblazenBrandweermannen = "./src/resources/audio/OmvergeblazenBrandweermannen.wav";
+    private String ontploffingen1 = "./src/resources/audio/Ontploffingen1.wav";
+    private String ontploffingen2  = "./src/resources/audio/Ontploffingen2.wav";
+    private String gevolgSchokgolf = "./src/resources/audio/OntploffingenGevolgSchokgolf.wav";
+    private String overslaandeBrand = "./src/resources/audio/OverslaandeBrand.wav";
 
     // Eenvoudige samenvoeging van alle audiobestanden tot één bestand zodat deze met gemak
     // volledig beluisterd kan worden.
@@ -134,9 +134,9 @@ public class Spraak {
     // Hiermee is de mogelijkheid om specifieke stukken af te spelen, en het geheel.
     // Dit moet echter nog geïmplementeerd worden.
 
-    private String spelRegels = "./src/Resources/audio/Spelregels.wav";
+    private String spelRegels = "./src/resources/audio/Spelregels.wav";
 
-    private File spelregels = new File("./src/Resources/audio/Spelregels.wav");
+    private File spelregels = new File("./src/resources/audio/Spelregels.wav");
 
     public File getSpelregels() {
         return spelregels;
