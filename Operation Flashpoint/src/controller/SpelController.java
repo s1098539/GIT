@@ -1,5 +1,6 @@
 package controller;
 
+import enumerators.Rol;
 import main.Interface;
 import model.*;
 import enumerators.Kleur;
@@ -671,6 +672,7 @@ public class SpelController implements Initializable {
                 }
                 if (e.getCode() == KeyCode.DIGIT5) {
                     veranderKlasse();
+                    enableKnoppen();
 
                 }
 
@@ -751,6 +753,7 @@ public class SpelController implements Initializable {
         imgRolswap.setOnMouseClicked(event -> {
             veranderKlasse();
             updateSpel();
+            enableKnoppen();
         });
 
         quit.setOnAction(event -> {
@@ -1038,7 +1041,6 @@ public class SpelController implements Initializable {
 
         checkVerlies();
         setActiveSpelerPlaatje();
-        //eersteBeurt();
 
 
         updateSpel();
@@ -1048,6 +1050,7 @@ public class SpelController implements Initializable {
             e.printStackTrace();
         }
         setRollen();
+        updatePunten();
         veldC.ImageSetterALL();
     }
 
@@ -1286,7 +1289,20 @@ public class SpelController implements Initializable {
         }
         GeredLabel.setText(Integer.toString(spel.getGeredCounter())+ " / 7");
         GeredLabel1.setText(Integer.toString(spel.getDoodCounter())+ " / 3");
+        switch(spel.getHuidigeSpeler().getRol()) {
+            case VERKENNER: btnSpecial.setText("Verken (1AP)");
+            break;
+            case COMMANDANT: btnSpecial.setText("Commandeer (1 EP)");
+            break;
+            case DOKTER: btnSpecial.setText("Helen (1 AP)");
+            break;
+            case SPECSTOFFEN: btnSpecial.setText("Disarm (1 AP)");
+            break;
+            default: btnSpecial.setText("Special");
+        }
     }
+
+    // if(rol == VERKENNER || rol == COMMANDANT || rol == DOKTER || rol == SPECSTOFFEN) {
 
     // verwijderd personen die op vuur staan en vervangd deze met nieuwe.
     public void checkPersonen() {
@@ -1489,6 +1505,7 @@ public class SpelController implements Initializable {
         System.out.println("Spel: Ik refresh de view.");
         setSpel(clientStub.updateGetSpel());
         veldC.setVeldD(clientStub.updateGetData());
+        updatePunten();
         veldC.ImageSetterALL();
         setActiveSpelerPlaatje();
         setRollen();
@@ -1512,6 +1529,7 @@ public class SpelController implements Initializable {
             clientStub.setSpelData(getSpel(), veldC.getVeldD());
             setActiveSpelerPlaatje();
             setRollen();
+            updatePunten();
         } catch (RemoteException e) {
             e.printStackTrace();
         }
@@ -1616,12 +1634,12 @@ public class SpelController implements Initializable {
         imgRijden.setDisable(true);
         imgWagenblussen.setDisable(true);
         imgRolswap.setDisable(true);
-        btnSpecial.setDisable(true);
         btnRIGHT.setDisable(true);
         btnUP.setDisable(true);
         btnDOWN.setDisable(true);
         btnLEFT.setDisable(true);
         btnET.setDisable(true);
+        btnSpecial.setDisable(true);
     }
     public void enableKnoppen() {
         imgHakken.setDisable(false);
@@ -1632,12 +1650,15 @@ public class SpelController implements Initializable {
         imgRijden.setDisable(false);
         imgWagenblussen.setDisable(false);
         imgRolswap.setDisable(false);
-        btnSpecial.setDisable(false);
         btnRIGHT.setDisable(false);
         btnUP.setDisable(false);
         btnDOWN.setDisable(false);
         btnLEFT.setDisable(false);
         btnET.setDisable(false);
+        Rol rol = spel.getHuidigeSpeler().getRol();
+        if(rol == VERKENNER || rol == COMMANDANT || rol == DOKTER || rol == SPECSTOFFEN) {
+            btnSpecial.setDisable(false);
+        } else btnSpecial.setDisable(true);
     }
 }
 
