@@ -1045,6 +1045,15 @@ public class SpelerController {
         stage.setTitle("Gebruikershandleiding");
         stage.show();
     }
+    public Speler getUniekeSpeler() {
+        for (Speler speler : spelC.getSpel().getSpelers()) {
+            if (speler.getKleur() == spelC.getKleur()) {
+                return speler;
+            }
+        } return null;
+    }
+
+
     public Speler getSpeler() {
         return spelC.spel.getHuidigeSpeler();
     }

@@ -1289,7 +1289,7 @@ public class SpelController implements Initializable {
         }
         GeredLabel.setText(Integer.toString(spel.getGeredCounter())+ " / 7");
         GeredLabel1.setText(Integer.toString(spel.getDoodCounter())+ " / 3");
-        switch(spel.getHuidigeSpeler().getRol()) {
+        switch(spelerC.getUniekeSpeler().getRol()) {
             case VERKENNER: btnSpecial.setText("Verken (1AP)");
             break;
             case COMMANDANT: btnSpecial.setText("Commandeer (1 EP)");
