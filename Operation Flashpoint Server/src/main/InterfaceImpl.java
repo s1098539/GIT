@@ -105,7 +105,7 @@ public class InterfaceImpl implements Interface, Serializable {
         setVeldServer(veldD);
         setSpelServer(spel);
         this.notifyObserversSpel();
-        System.out.println("Speldata is opgeslagen.");
+        System.out.println("Speldata is opgeslagen aan de serverkant.");
 
     }
 
@@ -130,13 +130,13 @@ public class InterfaceImpl implements Interface, Serializable {
     @Override
     public synchronized void registerObserver(ListenInterface listener) throws RemoteException {
         this.Listeners.add(listener);
-        System.out.println("Listener added" + listener);
+        System.out.println("ChatListener added");
     }
 
     @Override
     public void registerObserverSpel(Interface gameListener) throws RemoteException {
         this.gameListeners.add(gameListener);
-        System.out.println("Listener added" + gameListener);
+        System.out.println("GameListener added");
         notifyObserversSpel();
 
     }
