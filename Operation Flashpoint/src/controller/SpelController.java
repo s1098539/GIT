@@ -535,7 +535,7 @@ public class SpelController implements Initializable {
         imgHakken.setOnContextMenuRequested(event -> {
             if (spel.getHuidigeSpeler().isSlechtziendmodus()) {
                 try {
-                    audioPlayer.playHakken();
+                    audioPlayer.playHakken(spelC.spel.getHuidigeSpeler().getRol());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

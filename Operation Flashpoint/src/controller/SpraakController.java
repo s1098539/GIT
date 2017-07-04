@@ -137,11 +137,15 @@ public class SpraakController {
     }
 
     // Leest de hakinformatie uit
-    public synchronized void playHakken() throws Exception{
+    public synchronized void playHakken(Rol rol) throws Exception{
         int waitTime = 3000;
-        audioPlayer(audio.getHakken2());
-        wait(waitTime);
-        audioPlayer(audio.getHakken1());
+
+        if(rol.equals(Rol.REDDINGSSPECIALIST)) {
+            audioPlayer(audio.getReddingsSpecialistHakken());
+            wait(waitTime);
+        }
+
+        audioPlayer(audio.getHakken());
         wait(waitTime);
     }
 
@@ -279,25 +283,25 @@ public class SpraakController {
         if(actiepunten>=0 && actiepunten<=9){
             switch(actiepunten) {
                 case 0:audioPlayer(audio.getAp0());
-                    break;
+                break;
                 case 1: audioPlayer(audio.getAp1());
-                    break;
+                break;
                 case 2: audioPlayer(audio.getAp2());
-                    break;
+                break;
                 case 3: audioPlayer(audio.getAp3());
-                    break;
+                break;
                 case 4: audioPlayer(audio.getAp4());
-                    break;
+                break;
                 case 5: audioPlayer(audio.getAp5());
-                    break;
+                break;
                 case 6: audioPlayer(audio.getAp6());
-                    break;
+                break;
                 case 7: audioPlayer(audio.getAp7());
-                    break;
+                break;
                 case 8: audioPlayer(audio.getAp8());
-                    break;
+                break;
                 case 9: audioPlayer(audio.getAp9());
-                    break;
+                break;
             }
         }
     }
@@ -308,13 +312,13 @@ public class SpraakController {
             switch (extrapunten) {
                 //default WAV moet nog gemaakt worden.
                 case 0: audioPlayer(audio.getEp0());
-                    break;
+                break;
                 case 1: audioPlayer(audio.getEp1());
-                    break;
+                break;
                 case 2: audioPlayer(audio.getEp2());
-                    break;
+                break;
                 case 3: audioPlayer(audio.getEp3());
-                    break;
+                break;
             }
         }
     }
@@ -344,11 +348,11 @@ public class SpraakController {
     public void playDood(int dood) throws Exception{
         switch (dood) {
             case 0: audioPlayer(audio.getVermist0());
-                break;
+            break;
             case 1: audioPlayer(audio.getVermist1());
-                break;
+            break;
             case 2: audioPlayer(audio.getVermist2());
-                break;
+            break;
             case 3: audioPlayer(audio.getVermist3());
         }
     }
@@ -389,23 +393,12 @@ public class SpraakController {
         audioInputStream = AudioSystem.getAudioInputStream(s);
         clip = AudioSystem.getClip();
         clip.open(audioInputStream);
-        clip.start();
 
-
-//        InputStream in = new FileInputStream(s);
-//
-//        audioStream = new AudioStream(in);
-//
-//        if (play) {
-//            //
-//            AudioPlayer.player.start(audioStream);
-//        }
-//        if(!play){
-//            AudioPlayer.player.stop(audioStream);
-//        }
-
-
-
+        if(play) {
+            clip.start();
+        } else {
+            clip.stop();
+        }
     }
 
     private void handleSpelregels(){
@@ -416,9 +409,7 @@ public class SpraakController {
         if(play){
             play=false;
 
-        }
-
-        if(!play){
+        } else {
             play=true;
         }
     }
