@@ -14,7 +14,7 @@ import java.rmi.server.UnicastRemoteObject;
 /**
  * Created by School on 27-6-2017.
  */
-public class ChatListen extends UnicastRemoteObject implements ChatListenInterface {
+public class Listen extends UnicastRemoteObject implements ListenInterface {
     Registry registry = null;
     String host;
     int port;
@@ -51,7 +51,7 @@ public class ChatListen extends UnicastRemoteObject implements ChatListenInterfa
         this.spelerC1 = spelerC1;
     }
 
-    public ChatListen(String host, int port, SpelController spelC, SpeelveldController veldC, SpelerController spelerC) throws RemoteException {
+    public Listen(String host, int port, SpelController spelC, SpeelveldController veldC, SpelerController spelerC) throws RemoteException {
 
         setHost(host);
         setPort(port);

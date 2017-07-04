@@ -53,7 +53,8 @@ public class Main2 extends Application {
                 spelC.getChatArea().appendText(msg);
             }
         });
-        ChatListen listen = new ChatListen(spelC.getHost(), spelC.getPort(), spelC, veldC, spelerC);
+        Listen listen = new Listen(spelC.getHost(), spelC.getPort(), spelC, veldC, spelerC);
+        spelC.setListen(listen);
         veldC.run();
 
         //This is where the client makes a connection to the server.
@@ -61,7 +62,7 @@ public class Main2 extends Application {
             Registry registry = LocateRegistry.getRegistry(spelC.getHost());
             Interface clientStub = (Interface) registry.lookup("main.Interface");
 
-            //Eerste client set de spel en speelvelddata op server
+            //clients setten de spel en speelvelddata voor iedereen op server
             clientStub.setSpelData(spelC.getSpel(), veldC.getVeldD());
             spelC.setSpel(clientStub.updateGetSpel());
             veldC.setVeldD(clientStub.updateGetData());
@@ -69,11 +70,13 @@ public class Main2 extends Application {
 
             //Verbind interface met de implementatie.
             InterfaceImpl impl = new InterfaceImpl();
-            clientStub.registerObserverSpel(impl);
+            spelC.setImpl(impl);
+            clientStub.registerObserverSpel(spelC.getImpl());
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(":^)");
         } catch (Exception e) {
             System.out.println("EXCEPTION: " + e);
         }
     }
+
 }

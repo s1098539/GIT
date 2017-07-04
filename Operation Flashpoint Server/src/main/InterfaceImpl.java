@@ -33,7 +33,7 @@ public class InterfaceImpl implements Interface, Serializable {
     int a = 0;
     int b = 0;
     Kleur kleur;
-    private ArrayList<ChatListenInterface> Listeners = new ArrayList<ChatListenInterface>();
+    private ArrayList<ListenInterface> Listeners = new ArrayList<ListenInterface>();
     private ArrayList<Interface> gameListeners = new ArrayList<Interface>();
 
     @Override
@@ -127,7 +127,7 @@ public class InterfaceImpl implements Interface, Serializable {
 //        System.out.println("Notified observers");
 //    }
     @Override
-    public synchronized void registerObserver(ChatListenInterface listener) throws RemoteException {
+    public synchronized void registerObserver(ListenInterface listener) throws RemoteException {
         this.Listeners.add(listener);
         System.out.println("Listener added" + listener);
     }
@@ -147,7 +147,7 @@ public class InterfaceImpl implements Interface, Serializable {
     }
 
     @Override
-    public synchronized void unregisterObserver(ChatListenInterface listener) throws RemoteException {
+    public synchronized void unregisterObserver(ListenInterface listener) throws RemoteException {
         this.Listeners.remove(listener);
         System.out.println("ChatListenerInterface removed");
     }
@@ -159,14 +159,14 @@ public class InterfaceImpl implements Interface, Serializable {
     }
     @Override
     public synchronized void notifyObserversMessage(Message message) throws RemoteException {
-        for (ChatListenInterface client : Listeners) {
+        for (ListenInterface client : Listeners) {
             client.update(message);
         }
         System.out.println("Notified observers");
     }
     @Override
     public synchronized void notifyObserversSpel() throws RemoteException {
-        for (ChatListenInterface client : Listeners) {
+        for (ListenInterface client : Listeners) {
             client.receiveGame(getSpelServer(),getVeldServer());
         }
         System.out.println("Notified observers");

@@ -1,7 +1,9 @@
 package controller;
 
 import enumerators.Rol;
+import main.Listen;
 import main.Interface;
+import main.InterfaceImpl;
 import model.*;
 import enumerators.Kleur;
 import enumerators.Persoon;
@@ -118,6 +120,8 @@ public class SpelController implements Initializable {
     Interface clientStub;
     Kleur kleur;
     boolean myTurn;
+    InterfaceImpl impl;
+    Listen listen;
 
     SpeelveldController veldC;
     SpelerController spelerC;
@@ -231,7 +235,13 @@ public class SpelController implements Initializable {
         }
     }
 
+    public Listen getListen() {return listen;}
 
+    public void setListen(Listen listen) {this.listen = listen;}
+
+    public InterfaceImpl getImpl() {return impl;}
+
+    public void setImpl(InterfaceImpl impl) {this.impl = impl;}
 
     public Kleur getKleur() {return kleur;}
 
@@ -759,6 +769,14 @@ public class SpelController implements Initializable {
         });
 
         quit.setOnAction(event -> {
+            try {
+                clientStub.unregisterObserver(getListen());
+                clientStub.unregisterObserver(getImpl());
+                //spelerC.removeSpeler();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            updateSpel();
             System.exit(0);
         });
 

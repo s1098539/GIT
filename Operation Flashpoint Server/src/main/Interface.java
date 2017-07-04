@@ -18,12 +18,12 @@ public interface Interface extends Remote {
 
     public void notifyObserversMessage(Message message) throws RemoteException;
 
-    public void registerObserver(ChatListenInterface listener) throws RemoteException;
+    public void registerObserver(ListenInterface listener) throws RemoteException;
 
     public void registerObserverSpel(Interface listener) throws RemoteException;
 
 
-    public void unregisterObserver(ChatListenInterface listener) throws RemoteException;
+    public void unregisterObserver(ListenInterface listener) throws RemoteException;
 
     public void unregisterObserver(Interface gameListener) throws RemoteException;
 

@@ -1052,6 +1052,14 @@ public class SpelerController {
             }
         } return null;
     }
+//    public void removeSpeler() {
+//       for (Speler speler : spelC.getSpel().getSpelers()) {
+//           if (speler.getKleur() == spelC.getKleur()) {
+//               spelC.getSpel().getSpelers().remove(speler);
+//
+//           }
+//       }
+//    }
 
 
     public Speler getSpeler() {
