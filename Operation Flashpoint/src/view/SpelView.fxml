@@ -42,12 +42,12 @@
                               <Insets />
                            </HBox.margin>
                            <children>
-                              <Label fx:id="user1" prefHeight="31.0" prefWidth="226.0" textFill="WHITE">
+                              <Label fx:id="user1" prefHeight="31.0" prefWidth="226.0" textFill="RED">
                                  <font>
                                     <Font size="25.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="rol1" textFill="WHITE">
+                              <Label fx:id="rol1" textFill="RED">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -67,12 +67,12 @@
                         <ImageView fx:id="user2Img" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
                         <VBox HBox.hgrow="ALWAYS">
                            <children>
-                              <Label fx:id="user2" prefHeight="31.0" prefWidth="247.0" textFill="WHITE">
+                              <Label fx:id="user2" prefHeight="31.0" prefWidth="247.0" textFill="RED">
                                  <font>
                                     <Font size="25.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="rol2" textFill="WHITE">
+                              <Label fx:id="rol2" textFill="RED">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -89,12 +89,12 @@
                         <ImageView fx:id="user3Img" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
                         <VBox HBox.hgrow="ALWAYS">
                            <children>
-                              <Label fx:id="user3" prefHeight="31.0" prefWidth="255.0" textFill="WHITE">
+                              <Label fx:id="user3" prefHeight="31.0" prefWidth="255.0" textFill="RED">
                                  <font>
                                     <Font size="25.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="rol3" textFill="WHITE">
+                              <Label fx:id="rol3" textFill="RED">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -111,7 +111,7 @@
                         <ImageView fx:id="user4Img" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
                         <VBox HBox.hgrow="ALWAYS">
                            <children>
-                              <Label fx:id="user4" prefHeight="31.0" prefWidth="268.0" textFill="WHITE">
+                              <Label fx:id="user4" prefHeight="31.0" prefWidth="268.0" textFill="RED">
                                  <font>
                                     <Font size="25.0" />
                                  </font>
