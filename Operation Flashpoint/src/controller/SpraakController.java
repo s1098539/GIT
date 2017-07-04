@@ -415,12 +415,11 @@ public class SpraakController {
 
         if(play){
             play=false;
-            clip.stop();
+
         }
 
         if(!play){
             play=true;
-            clip.start();
         }
     }
 

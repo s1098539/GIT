@@ -136,7 +136,7 @@ public class Spraak {
 
     private String spelRegels = "./src/resources/audio/Spelregels.wav";
 
-    private File spelregels = new File("./src/resources/audio/Spelregels.wav");
+    private File spelregels = new File("./src/Resources/audio/Spelregels.wav");
 
     public File getSpelregels() {
         return spelregels;
@@ -144,7 +144,7 @@ public class Spraak {
 
     // Vanaf hier staan de getters.
     // In dit bestand zal u geen setters vinden, omdat deze niet nodig zijn.
-    // In een ergere situatie kan het gebeuren dat de audiopaden worden aangepast en hier mee
+    // In een ergere situatie kan het gebeuren dat dze audiopaden worden aangepast en hier mee
     // deze functionaliteit wegvalt.
     // Hierom zijn alleen getters van belang.
     // Je wil alleen aan het systeem melden waar deze heen de audio kan vinden.
