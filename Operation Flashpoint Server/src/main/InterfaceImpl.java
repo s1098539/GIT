@@ -105,6 +105,7 @@ public class InterfaceImpl implements Interface, Serializable {
         setVeldServer(veldD);
         setSpelServer(spel);
         this.notifyObserversSpel();
+        System.out.println("Speldata is opgeslagen.");
 
     }
 
@@ -162,14 +163,14 @@ public class InterfaceImpl implements Interface, Serializable {
         for (ListenInterface client : Listeners) {
             client.update(message);
         }
-        System.out.println("Notified observers");
+        System.out.println("Notified observers with chatmessage.");
     }
     @Override
     public synchronized void notifyObserversSpel() throws RemoteException {
         for (ListenInterface client : Listeners) {
             client.receiveGame(getSpelServer(),getVeldServer());
         }
-        System.out.println("Notified observers");
+        System.out.println("Notified observers with updated game.");
     }
     public static void main(String[] args) throws Exception{
 
