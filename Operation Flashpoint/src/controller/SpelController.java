@@ -613,6 +613,9 @@ public class SpelController implements Initializable {
         });
 
         thePane.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.P) {
+                endTurn();
+            }
             if(myTurn) {
                 if (e.getCode() == KeyCode.A) {
                     spelerC.west();
@@ -673,7 +676,6 @@ public class SpelController implements Initializable {
                 if (e.getCode() == KeyCode.DIGIT5) {
                     veranderKlasse();
                     enableKnoppen();
-
                 }
 
                 toggleViewUpdate();
