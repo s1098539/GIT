@@ -1,0 +1,8 @@
+package Enumerators;
+
+/**
+ * Created by lion on 14-06-17.
+ */
+public enum Rol {
+    DOKTER, VERKENNER, COMMANDANT, SPECSTOFFEN, GASPAKDRAGER, BRANDSPUITBEDIENER, REDDINGSSPECIALIST, MANNETJESPUTTER, GODMODE
+            }
