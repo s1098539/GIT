@@ -140,12 +140,13 @@ public class SpraakController {
     public synchronized void playHakken(Rol rol) throws Exception{
         int waitTime = 3000;
 
+        //TODO the two files below are probably the incorrect soundbits.
         if(rol.equals(Rol.REDDINGSSPECIALIST)) {
-            audioPlayer(audio.getReddingsSpecialistHakken());
+            audioPlayer(audio.getBewegenReddingsSpecialist());
             wait(waitTime);
         }
 
-        audioPlayer(audio.getHakken());
+        audioPlayer(audio.getHakken1());
         wait(waitTime);
     }
 
